@@ -1,7 +1,5 @@
 # Design from purpose, then audit the result
 
-Adapted on 2026-09-28 from **Samuel Berthe (samber)**, [frontend-design-deslop](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop), version 1.2.2, under [MIT](deslop-LICENSE.txt). This adaptation integrates only that folder's framework. The upstream repository's other skills, installers, agents and configuration are not dependencies.
-
 Use this workflow for a substantial new interface, a redesign, or a request to make an interface less generic. For a small component or styling fix, use only the relevant craft and audit guidance. Explicit user direction, accessibility needs, established brand choices and the project's existing design system take precedence over stylistic novelty.
 
 ## 1. Establish purpose and constraints
@@ -67,3 +65,7 @@ Use external component catalogs only when they materially help the implementatio
 Use [the design audit](design-audit.md). Compare the actual render with the stated direction in a separate review pass. Strip color, texture and typography mentally or in a wireframe: does the information structure serve the task, or is the chosen identity only surface decoration? A familiar structure is acceptable when it is the right one; do not destroy working conventions just to be different.
 
 Record concrete observations, fixes and unverified checks. A subjective score is not accessibility evidence. Revise specific failures within scope, then stop when the brief and relevant checks are satisfied rather than redesigning indefinitely.
+
+## Notes and credits
+
+Adapted on 2026-09-28 from **Samuel Berthe (samber)**, [frontend-design-deslop](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop), version 1.2.2, under [MIT](deslop-LICENSE.txt). This adaptation integrates only that folder's framework. The upstream repository's other skills, installers, agents and configuration are not dependencies.

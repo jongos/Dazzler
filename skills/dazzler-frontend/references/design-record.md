@@ -1,7 +1,5 @@
 # Durable design decisions
 
-Adapted from Samuel Berthe's [frontend-design-deslop/design-md.md](https://github.com/samber/cc-skills/blob/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/references/design-md.md), under [MIT](deslop-LICENSE.txt). Modified for the project's existing source of truth and this skill's font/color tools.
-
 For substantial projects, read the existing design document and token implementation before designing. Extend that record in place. If none exists and a durable record will help future work, create `DESIGN.md` in the authorized project alongside implementation. Do not require it for small edits, read-only reviews, isolated components or one-off snippets. Do not put client design records in the plugin repository.
 
 Use only applicable sections; replace every example with actual decisions. Link to authoritative token files rather than maintaining duplicate value tables that will drift. Describe any unresolved disagreement between the record and implementation; neither silently overrides the user or an established design system.
@@ -69,3 +67,7 @@ Use only applicable sections; replace every example with actual decisions. Link 
 ```
 
 Do not prefill review sections with “pass” or claim screen-reader testing from a screenshot. Distinguish a contrast report from a complete interface audit. If the user wants only a critique, deliver findings without editing their record or implementation.
+
+## Notes and credits
+
+Adapted from Samuel Berthe's [frontend-design-deslop/design-md.md](https://github.com/samber/cc-skills/blob/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/references/design-md.md), under [MIT](deslop-LICENSE.txt). Modified for the project's existing source of truth and this skill's font/color tools.

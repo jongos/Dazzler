@@ -8,8 +8,6 @@
 
 **Dazzler gives your frontend a visual voice.** Describe what you want to make and who it’s for. The skill chooses suitable fonts, measured colors, layout, and interactions, then implements and reviews the result using the tools available in your ChatGPT/Codex host.
 
-Created by **Jon Gosier** and named after **Dazzler, one of his favorite X-Men characters**. The name celebrates a love of expressive design. This is an independent project, with no affiliation to Disney/Marvel, OpenAI, or Anthropic.
-
 ## ✨ Start with an idea
 
 ```text
@@ -33,7 +31,7 @@ Keep our brand colors, React components, and existing behavior.
 | | What Dazzler brings | What it means for your project |
 |---|---|---|
 | **Aa · Typography** | 25 cataloged families; 24 bundled families containing 124 unmodified font files | Fonts chosen for real characters, styles, technical needs, reading comfort, and personality. |
-| **● · Color** | 88 attributed mood palettes, perceptual ramps, semantic light/dark tokens | Contextual inspiration plus measured contrast for specified role pairs. Brand locks remain exact. |
+| **● · Color** | 88 mood palettes, perceptual ramps, semantic light/dark tokens | Contextual choices plus measured contrast for specified role pairs. Brand locks remain exact. |
 | **↗ · Composition** | Purpose, audience, hierarchy, grouping, and component craft | A direction informed by the task rather than the same template everywhere. |
 | **✓ · Review** | Responsive inspection, relevant interactions, keyboard focus, and honest verification | A clear account of what was checked and what remains unverified. |
 
@@ -45,7 +43,7 @@ Browse the [font catalog](skills/dazzler-frontend/references/font-catalog.md), [
 
 ### Color Suite
 
-The [color workflow](skills/dazzler-frontend/references/color-workflow.md) connects curated inspiration to a bundled Ankhorage/Culori engine. It generates CSS tokens, provenance, contrast reports, and a portable preview. Conflicting locked colors produce an unresolved report instead of silently changing your brand.
+The [color workflow](skills/dazzler-frontend/references/color-workflow.md) turns a chosen palette into measured color roles. It generates CSS tokens, provenance, contrast reports, and a portable preview. Conflicting locked colors produce an unresolved report instead of silently changing your brand.
 
 A passing report covers its listed opaque-color pairs. It does **not** certify complete WCAG conformance, image backgrounds, charts, or a finished interface. Those require review in context.
 
@@ -76,7 +74,7 @@ Examples: “Match our existing site,” “Stress-test this dashboard,” “Ca
 
 ## ✦ Thirty templates — refined in 0.10.0
 
-**[Browse the live gallery](https://jongos.github.io/Dazzler/templates/)** · **[Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-templates.zip)**
+**Browse the live gallery** · **Download the template library**
 
 - **10 DOCX + 10 matching HTML documents:** professional, legal, business, fun, family, presentation, school, marketing, restaurant and technical.
 - **10 UI folders, each with HTML, CSS and JSON:** three general webapps, two data dashboards, four restaurant experiences and one business portal.
@@ -88,11 +86,7 @@ Ask for the result and Dazzler selects the starting point automatically. [Templa
 
 For a host that supports local Codex skills:
 
-1. Clone the repository:
-
-   ```shell
-   git clone https://github.com/jongos/Dazzler.git dazzler
-   ```
+1. Download and extract the Dazzler archive listed in the closing notes.
 
 2. Copy `skills/dazzler-frontend` into `$CODEX_HOME/skills`, or `~/.codex/skills` when `CODEX_HOME` is unset. The default Windows directory is `%USERPROFILE%\.codex\skills`.
 3. Start a new chat if your host hasn’t refreshed its skill catalog. Invoke **`$dazzler-frontend`**.
@@ -101,7 +95,7 @@ Review an existing installation before replacing it. A maintained checkout can u
 
 The plugin identifier is **`dazzler`**, its display name is **Dazzler**, and its skill is **`dazzler-frontend`**. Hosts exposing qualified names may show `dazzler:dazzler-frontend`. The repository includes `.codex-plugin/plugin.json`; plugin import depends on the host. Cloning alone does not install anything into a ChatGPT account.
 
-**Upgrading from ChatGPT Design Skills?** This is the same project, renamed in version 0.6.0. Update your Git remote to `git@github.com:jongos/Dazzler.git`, install/link the renamed skill folder, and use `$dazzler-frontend` in new prompts. Verify the new installation before retiring duplicate discovery entries. Historical release notes retain their original names.
+**Upgrading from ChatGPT Design Skills?** This is the same project, renamed in version 0.6.0. Use the remote listed in the closing notes, install/link the renamed skill folder, and use `$dazzler-frontend` in new prompts. Verify the new installation before retiring duplicate discovery entries. Historical release notes retain their original names.
 
 ## 🌍 Other AI platforms
 
@@ -139,18 +133,7 @@ Completed agent-driven maintenance includes validation, a commit, and a push, as
 
 ## 💌 Feedback, feature requests & ideas
 
-Have an idea for what Dazzler should do next? Contact **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)** or [open an issue](https://github.com/jongos/Dazzler/issues).
-
-## 🤝 Credits
-
-- **Original frontend guidance:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates), specifically its [creative-design/frontend-design folder](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design). Adapted with its original Apache-2.0 license and [provenance](skills/dazzler-frontend/PROVENANCE.md) retained.
-- **De-slop framework:** **Samuel Berthe ([samber](https://github.com/samber))**, from [frontend-design-deslop](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop). Only that folder’s framework was adapted, not the wider project. MIT notice and [source inventory](skills/dazzler-frontend/references/deslop-provenance.json) remain included.
-- **Font discovery and typography:** [Open Foundry](https://open-foundry.com/) and the individual font creators credited in the catalog and bundled notices.
-- **Color foundations:** [hue3](https://github.com/ktzzypo938/hue3), [Ankhorage color-theory](https://github.com/ankhorage/color-theory), and [Culori](https://github.com/Evercoder/culori). [bivex’s palette generator](https://github.com/bivex/brand-color-palette-generator) informed preview/export interactions; no code or external service from it is incorporated.
-
-## License
-
-Our original instructions, scripts, catalog annotations, and Dazzler artwork use [Apache License 2.0](LICENSE). **Fonts, upstream support files, adapted framework guidance, palette data, and vendored libraries retain their respective third-party licenses.** See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and adjacent notices. Renaming the project does not change those terms.
+Have an idea for what Dazzler should do next? Contact **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)** or open an issue.
 
 ### Templates with context
 
@@ -158,4 +141,29 @@ The 0.10.0 library replaces generic outlines with 30 worked starting points: pri
 
 ### Charts that share your design system
 
-Version 0.11.0 adds offline Vega/Vega-Lite rendering, selected D3 network/hierarchy/map layouts, Microcharts sparkline/area exports for React, and an optional mschart adapter for editable Word/PowerPoint charts. The skill selects the route and retains source data, labels, colors and provenance. [Visualization reference](skills/dazzler-frontend/references/visualization.md). Native Office requires an available R runtime; it was not executed on the maintenance host. [bkrsln/dataviz](https://github.com/bkrsln/dataviz) informed further resource discovery; its collection was not copied.
+Dazzler renders standard charts, network/hierarchy/map layouts, compact React trends, and optional editable Word/PowerPoint charts. The skill selects the route and retains source data, labels, colors and provenance. [Visualization reference](skills/dazzler-frontend/references/visualization.md). Native Office requires an available R runtime; it was not executed on the maintenance host.
+
+## Notes and credits
+
+Created by **Jon Gosier** and named after **Dazzler, one of his favorite X-Men characters**. The name celebrates a love of expressive design. This is an independent project, with no affiliation to Disney/Marvel, OpenAI, or Anthropic.
+
+### Attribution
+
+- **Original frontend guidance:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates), specifically its [creative-design/frontend-design folder](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design). Adapted with its original Apache-2.0 license and [provenance](skills/dazzler-frontend/PROVENANCE.md) retained.
+- **De-slop framework:** **Samuel Berthe ([samber](https://github.com/samber))**, from [frontend-design-deslop](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop). Only that folder’s framework was adapted, not the wider project. MIT notice and [source inventory](skills/dazzler-frontend/references/deslop-provenance.json) remain included.
+- **Font discovery and typography:** [Open Foundry](https://open-foundry.com/) and the individual font creators credited in the catalog and bundled notices.
+- **Color foundations:** [hue3](https://github.com/ktzzypo938/hue3), [Ankhorage color-theory](https://github.com/ankhorage/color-theory), and [Culori](https://github.com/Evercoder/culori). [bivex’s palette generator](https://github.com/bivex/brand-color-palette-generator) informed preview/export interactions; no code or external service from it is incorporated.
+
+### License
+
+Our original instructions, scripts, catalog annotations, and Dazzler artwork use [Apache License 2.0](LICENSE). **Fonts, upstream support files, adapted framework guidance, palette data, and vendored libraries retain their respective third-party licenses.** See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and adjacent notices. Renaming the project does not change those terms.
+
+### Downloads and maintenance links
+
+[Source archive](https://github.com/jongos/Dazzler/archive/refs/heads/main.zip). Maintainer remote: `git@github.com:jongos/Dazzler.git`.
+
+Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
+
+- [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-templates.zip)
+- [open an issue](https://github.com/jongos/Dazzler/issues)

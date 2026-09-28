@@ -2,10 +2,6 @@
 
 Read this only when maintaining the skill/plugin itself, not when using it to design a user's project.
 
-Canonical repository: https://github.com/jongos/Dazzler
-
-SSH remote: `git@github.com:jongos/Dazzler.git`
-
 On the owner's Windows installation, the permanent checkout is `C:\Users\jongo\Codex\dazzler`. The personal skill directory `C:\Users\jongo\.codex\skills\dazzler-frontend` links to its `skills\dazzler-frontend` directory. Edit the checkout so installed instructions and tracked source stay identical. On another machine, locate or clone the repository instead of assuming these paths exist. For a cached plugin installation, update its source and follow the host's reinstall procedure; do not edit a disposable cache.
 
 The owner explicitly authorized automatic commit and push as part of completed plugin updates on 2026-09-28. Carry this through without requesting separate push permission unless a later instruction changes the scope. This is an agent maintenance workflow, not a background file watcher: arbitrary manual saves do not trigger Git operations.
@@ -18,3 +14,11 @@ The owner explicitly authorized automatic commit and push as part of completed p
 6. Verify the remote branch SHA matches the intended local commit. Report the commit link, notable changes, and any unresolved limitation. Distinguish local commits from successfully pushed changes.
 
 Do not commit or publish generated websites, client assets, or unrelated repositories under this authorization.
+
+Keep implementation-source credits, repository links and inspiration acknowledgments in a closing notes or fine-print section of each human-readable document. Keep product explanations focused on current capabilities; do not add speculative addition lists. Preserve original license files, machine-readable provenance and functional identifiers.
+
+## Notes and credits
+
+Canonical repository: https://github.com/jongos/Dazzler
+
+SSH remote: `git@github.com:jongos/Dazzler.git`

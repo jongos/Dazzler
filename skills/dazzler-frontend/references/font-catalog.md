@@ -1,8 +1,8 @@
-# Open Foundry font catalog
+# Font catalog
 
 Checked 2026-09-28: **25 families; 24 bundled**.
 
-Scope: all font-detail pages linked by [Open Foundry](https://open-foundry.com/) at crawl time. This is a dated catalog, not a promise that the directory or repositories will never change.
+This is a dated inventory. Confirm suitability against the actual project text and requirements.
 
 Descriptions and suggested roles are editorial judgments. Site listings, audited distribution facts, and implementation mappings are separate. Script tags describe encoded characters, not guaranteed full language coverage or correct shaping. Check actual project text.
 
@@ -12,38 +12,36 @@ CSS weights/styles below follow named upstream styles, with explicit corrections
 
 Apache 2.0 covers our instructions and scripts. Fonts retain their individual licenses. Copy each selected font with its support files; see [typography.md](typography.md).
 
-| Family | Suggested roles | Distribution license | Bundle | Repository / source |
-|---|---|---|---|---|
-| [Aileron](#aileron) | ui, body, heading | Author No Rights Reserved dedication (directory: CC0-1.0) | bundled | No verified GitHub; [source](https://dotcolon.net/fonts/aileron/) |
-| [Archivo](#archivo) | ui, body, heading, display | OFL-1.1 | bundled | [GitHub](https://github.com/Omnibus-Type/Archivo) |
-| [Bagnard](#bagnard) | heading, display | OFL-1.1 | bundled | [GitHub](https://github.com/sebsan/bagnard) |
-| [Bluu Next](#bluu-next) | heading, display | OFL-1.1 | bundled | [GitHub](https://github.com/velvetyne/BluuNext) |
-| [Cooper Hewitt](#cooper-hewitt) | ui, heading, body | OFL-1.1 | bundled | [GitHub](https://github.com/cooperhewitt/cooperhewitt-typeface) |
-| [Cotham Sans](#cotham-sans) | body, heading | OFL-1.1 | bundled | [GitHub](https://github.com/sebsan/Cotham) |
-| [EB Garamond](#eb-garamond) | body, heading | OFL-1.1 | bundled | [GitHub](https://github.com/georgd/EB-Garamond) |
-| [Gap Sans](#gap-sans) | display, heading | OFL-1.1 | bundled | [GitHub](https://github.com/Interstices-/GapSans) |
-| [Inter](#inter) | ui, body, heading | OFL-1.1 | bundled | [GitHub](https://github.com/rsms/inter) |
-| [Junicode](#junicode) | body, heading | OFL-1.1 | bundled | [GitHub](https://github.com/psb1558/Junicode-font) |
-| [League Gothic](#league-gothic) | heading, display | OFL-1.1 | bundled | [GitHub](https://github.com/theleagueof/league-gothic) |
-| [Liberation Sans](#liberation-sans) | ui, body, heading | OFL-1.1 | bundled | [GitHub](https://github.com/liberationfonts/liberation-fonts) |
-| [Libre Baskerville](#libre-baskerville) | body, heading | OFL-1.1 | bundled | [GitHub](https://github.com/impallari/Libre-Baskerville) |
-| [M+ M Type-1](#mplus-mtype-1) | code, ui, body | OFL-1.1 | bundled | [GitHub](https://github.com/rayshan/mplus-fonts) |
-| [Nimbus Sans L](#nimbus-sans-l) | ui, body, heading | Downloaded archive: GPLv2 with document exception; not bundled | manual-review | No verified GitHub; [source](https://fontlibrary.org/en/font/nimbus-sans-l) |
-| [Office Code Pro](#office-code-pro) | code, ui | OFL-1.1 | bundled | [GitHub](https://github.com/case/font-office-code-pro-mirror) |
-| [Ostrich Sans](#ostrich-sans) | display, heading | OFL-1.1 | bundled | [GitHub](https://github.com/theleagueof/ostrich-sans) |
-| [Oswald](#oswald) | heading, display | OFL-1.1 | bundled | [GitHub](https://github.com/googlefonts/OswaldFont) |
-| [Poppins](#poppins) | ui, heading, body | OFL-1.1 | bundled | [GitHub](https://github.com/itfoundry/Poppins) |
-| [Reglo](#reglo) | heading, display | OFL-1.1 | bundled | [GitHub](https://github.com/sebsan/Reglo) |
-| [Roboto](#roboto) | ui, body, heading | Apache-2.0 | bundled | [GitHub](https://github.com/googlefonts/roboto-2) |
-| [Terminal Grotesque](#terminal-grotesque-open) | display, heading | OFL-1.1 | bundled | [GitHub](https://github.com/StudioTriple/Terminal-Grotesque) |
-| [Tex Gyre Heros](#tex-gyre-heros) | ui, body, heading | GUST Font License 1.0 / LPPL-1.3c-or-later | bundled | No verified GitHub; [source](https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros) |
-| [Work Sans](#work-sans) | ui, body, heading | OFL-1.1 | bundled | [GitHub](https://github.com/weiweihuanghuang/Work-Sans) |
-| [Young Serif](#young-serif) | heading, body, display | OFL-1.1 | bundled | [GitHub](https://github.com/noirblancrouge/YoungSerif) |
+| Family | Suggested roles | Distribution license | Bundle |
+|---|---|---|---|
+| [Aileron](#aileron) | ui, body, heading | Author No Rights Reserved dedication (directory: CC0-1.0) | bundled |
+| [Archivo](#archivo) | ui, body, heading, display | OFL-1.1 | bundled |
+| [Bagnard](#bagnard) | heading, display | OFL-1.1 | bundled |
+| [Bluu Next](#bluu-next) | heading, display | OFL-1.1 | bundled |
+| [Cooper Hewitt](#cooper-hewitt) | ui, heading, body | OFL-1.1 | bundled |
+| [Cotham Sans](#cotham-sans) | body, heading | OFL-1.1 | bundled |
+| [EB Garamond](#eb-garamond) | body, heading | OFL-1.1 | bundled |
+| [Gap Sans](#gap-sans) | display, heading | OFL-1.1 | bundled |
+| [Inter](#inter) | ui, body, heading | OFL-1.1 | bundled |
+| [Junicode](#junicode) | body, heading | OFL-1.1 | bundled |
+| [League Gothic](#league-gothic) | heading, display | OFL-1.1 | bundled |
+| [Liberation Sans](#liberation-sans) | ui, body, heading | OFL-1.1 | bundled |
+| [Libre Baskerville](#libre-baskerville) | body, heading | OFL-1.1 | bundled |
+| [M+ M Type-1](#mplus-mtype-1) | code, ui, body | OFL-1.1 | bundled |
+| [Nimbus Sans L](#nimbus-sans-l) | ui, body, heading | Downloaded archive: GPLv2 with document exception; not bundled | manual-review |
+| [Office Code Pro](#office-code-pro) | code, ui | OFL-1.1 | bundled |
+| [Ostrich Sans](#ostrich-sans) | display, heading | OFL-1.1 | bundled |
+| [Oswald](#oswald) | heading, display | OFL-1.1 | bundled |
+| [Poppins](#poppins) | ui, heading, body | OFL-1.1 | bundled |
+| [Reglo](#reglo) | heading, display | OFL-1.1 | bundled |
+| [Roboto](#roboto) | ui, body, heading | Apache-2.0 | bundled |
+| [Terminal Grotesque](#terminal-grotesque-open) | display, heading | OFL-1.1 | bundled |
+| [Tex Gyre Heros](#tex-gyre-heros) | ui, body, heading | GUST Font License 1.0 / LPPL-1.3c-or-later | bundled |
+| [Work Sans](#work-sans) | ui, body, heading | OFL-1.1 | bundled |
+| [Young Serif](#young-serif) | heading, body, display | OFL-1.1 | bundled |
 
 <a id="aileron"></a>
 ## Aileron
-
-[Directory page](https://open-foundry.com/fonts/aileron) · Creators listed: Sori Sagano.
 
 **Character and fit (editorial):** An airy neo-grotesque with softened details. A restrained choice for clear interfaces and understated identities.
 
@@ -52,14 +50,6 @@ Apache 2.0 covers our instructions and scripts. Fonts retain their individual li
 **Site listing:** sans-serif; CC0 1.0 Universal; Ultralight 100, Ultralight Italic 100, Thin 200, Thin Italic 200, Light 300, Light Italic 300, Regular 400, Italic 400, Semibold 600, Semibold Italic 600, Bold 700, Bold Italic 700, Heavy 800, Heavy Italic 800, Black 900, Black Italic 900.
 
 **Verified distribution:** Author No Rights Reserved dedication (directory: CC0-1.0). **Status:** bundled.
-
-**Notes:** The former ssagano/Aileron GitHub URL returns 404; the author's download is the source. No Rights Reserved is embedded; the site labels the dedication CC0.
-
-No working primary repository verified; the directory links only to github.com. Historical ssagano/Aileron returns 404.
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/
-
-**Pinned distribution:** `{"archive_url": "https://dotcolon.net/files/fonts/aileron_0102.zip", "archive_sha256": "a93a1327f44912a7b1410ad0056fec3e904074413b0bd9da550f6175587cf958"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -89,8 +79,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="archivo"></a>
 ## Archivo
 
-[Directory page](https://open-foundry.com/fonts/archivo) · Creators listed: Hector Gatti.
-
 **Character and fit (editorial):** A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.
 
 **Suggested contexts:** industrial, editorial, confident, modern. **Roles:** ui, body, heading, display.
@@ -98,12 +86,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Regular 400, Italic 400, Medium 500, Medium Italic 500, Semibold 600, Semibold Italic 600, Bold 700, Bold Italic 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.
-
-**GitHub repository:** https://github.com/Omnibus-Type/Archivo
-
-**Pinned distribution:** `{"repo": "Omnibus-Type/Archivo", "commit": "211127690e8ff106c36c935f7e5e697114cff103"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -119,8 +101,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="bagnard"></a>
 ## Bagnard
 
-[Directory page](https://open-foundry.com/fonts/bagnard) · Creators listed: Sebastien Sanfilippo.
-
 **Character and fit (editorial):** An irregular, carved-looking serif with a handmade historical voice. Useful for cultural identities and short expressive titles.
 
 **Suggested contexts:** historical, handmade, playful, cultural. **Roles:** heading, display.
@@ -128,12 +108,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** serif; SIL Open Font License v.1.1; Regular 400.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** One regular style. Do not invent bold or italic faces; test small text carefully.
-
-**GitHub repository:** https://github.com/sebsan/bagnard
-
-**Pinned distribution:** `{"repo": "sebsan/bagnard", "commit": "31415d5e03d2088941fecae2c4ea9f2e6ca0446a"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -148,8 +122,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="bluu-next"></a>
 ## Bluu Next
 
-[Directory page](https://open-foundry.com/fonts/bluu-next) · Creators listed: Jean-Baptiste Morizot.
-
 **Character and fit (editorial):** An angular, high-contrast serif with a forceful editorial presence. Suits large cultural or fashion headlines.
 
 **Suggested contexts:** dramatic, editorial, sharp, fashion. **Roles:** heading, display.
@@ -157,14 +129,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** serif; SIL Open Font License v.1.1; Bold 700, Bold Italic 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Bold, bold italic and titling files are bundled. This is not a broad-weight body-text family.
-
-**GitHub repository:** https://github.com/velvetyne/BluuNext
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/jbmorizot/BluuNext/
-
-**Pinned distribution:** `{"repo": "velvetyne/BluuNext", "commit": "a1d39f03faef4288ed99dca9f9a757b30e0b2627"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -181,8 +145,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="cooper-hewitt"></a>
 ## Cooper Hewitt
 
-[Directory page](https://open-foundry.com/fonts/cooper-hewitt) · Creators listed: Chester Jenkins.
-
 **Character and fit (editorial):** A compact, geometric sans with a composed institutional tone. Strong for museum, architecture, and exhibition identities.
 
 **Suggested contexts:** cultural, architectural, geometric, institutional. **Roles:** ui, heading, body.
@@ -190,12 +152,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Thin 100, Thin Italic 100, Light 300, Light Italic 300, Book 400, Book Italic 400, Medium 500, Medium Italic 500, Semibold 600, Semibold Italic 600, Bold 700, Bold Italic 700, Heavy 800, Heavy Italic 800.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Binaries are from Font Library because the museum's download returned 403. Source UFOs and license remain available in the museum's GitHub repository.
-
-**GitHub repository:** https://github.com/cooperhewitt/cooperhewitt-typeface
-
-**Pinned distribution:** `{"archive_url": "https://fontlibrary.org/assets/downloads/cooper-hewitt/cbff2bac99d77efd80f9b17689bcfc8c/cooper-hewitt.zip", "archive_sha256": "df5b0869296092fca85742a6295db8bbdedb4e1e19ecaafd195bbabd1ef22d4e"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -223,8 +179,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="cotham-sans"></a>
 ## Cotham Sans
 
-[Directory page](https://open-foundry.com/fonts/cotham-sans) · Creators listed: Sebastien Sanfilippo.
-
 **Character and fit (editorial):** A plainspoken grotesque with a slightly idiosyncratic rhythm. Useful when a quiet identity should avoid a polished corporate feel.
 
 **Suggested contexts:** quiet, independent, editorial, minimal. **Roles:** body, heading.
@@ -232,14 +186,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Regular 400.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** A single regular style; use another family when multiple weights or true italics are needed.
-
-**GitHub repository:** https://github.com/sebsan/Cotham
-
-Directory's repository field (may be historical, a mirror, or a placeholder): http://github.com/sebsan/Cotham
-
-**Pinned distribution:** `{"repo": "sebsan/Cotham", "commit": "eca5c6d0cdaea789e06a3118147c0ecbabe20e94"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -254,8 +200,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="eb-garamond"></a>
 ## EB Garamond
 
-[Directory page](https://open-foundry.com/fonts/eb-garamond) · Creators listed: Georg Duffner.
-
 **Character and fit (editorial):** A literary old-style serif with delicate rhythm and traditional proportions. A candidate for long reading, publishing, and heritage identities.
 
 **Suggested contexts:** literary, historical, elegant, editorial. **Roles:** body, heading.
@@ -263,12 +207,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** serif; SIL Open Font License v.1.1; Regular 400, Italic 400, Medium 500, Medium Italic 500, Semibold 600, Semibold Italic 600, Bold 700, Bold Italic 700, Extrabold 800, Extrabold Italic 800.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** The bundle uses Google Fonts' contemporary EB Garamond distribution, not every optical-size design in Georg Duffner's original project.
-
-**GitHub repository:** https://github.com/georgd/EB-Garamond
-
-**Pinned distribution:** `{"repo": "google/fonts", "commit": "23e54b51ddffbc7713c583748e3bd86f62b1fa4a"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -284,8 +222,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="gap-sans"></a>
 ## Gap Sans
 
-[Directory page](https://open-foundry.com/fonts/gap-sans) · Creators listed: Alexandre Liziard, Étienne Ozeray.
-
 **Character and fit (editorial):** A deliberately irregular display sans with a rough, experimental energy. Best for arts posters and short graphic statements.
 
 **Suggested contexts:** experimental, playful, cultural, rough. **Roles:** display, heading.
@@ -293,12 +229,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** display; SIL Open Font License v.1.1; Regular 400, Bold 700, Black 900.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Regular, bold and black are separate files. Avoid dense body copy and critical small UI labels.
-
-**GitHub repository:** https://github.com/Interstices-/GapSans
-
-**Pinned distribution:** `{"repo": "Interstices-/GapSans", "commit": "24e59f53bbfac3c7d8e4eb8db89ae828f9f8fba7"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -315,8 +245,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="inter"></a>
 ## Inter
 
-[Directory page](https://open-foundry.com/fonts/inter) · Creators listed: Rasmus Andersson.
-
 **Character and fit (editorial):** A highly legible contemporary sans with optical sizing and extensive interface features. Useful for dense product interfaces when clarity leads.
 
 **Suggested contexts:** technical, clean, neutral, modern. **Roles:** ui, body, heading.
@@ -324,14 +252,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Thin 100, Thin Italic 100, Extralight 200, Extralight Italic 200, Light 300, Light Italic 300, Regular 400, Italic 400, Medium 500, Medium Italic 500, Semibold 600, Semibold Italic 600, Bold 700, Bold Italic 700, Extrabold 800, Extrabold Italic 800, Black 900, Black Italic 900.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Use because it fits the task, not as an unconditional default. The bundle contains variable roman and italic webfonts.
-
-**GitHub repository:** https://github.com/rsms/inter
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/rsms/inter/
-
-**Pinned distribution:** `{"repo": "rsms/inter", "commit": "353b61b9f4430d5f420d56605a6e7993e0941470"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -347,8 +267,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="junicode"></a>
 ## Junicode
 
-[Directory page](https://open-foundry.com/fonts/junicode) · Creators listed: Peter Baker.
-
 **Character and fit (editorial):** A scholarly serif with historical texture and extensive specialist characters. A strong candidate for humanities and archival publishing.
 
 **Suggested contexts:** scholarly, historical, literary, cultural. **Roles:** body, heading.
@@ -356,14 +274,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** serif; SIL Open Font License v.1.1; Regular 400, Italic 400, Bold 700, Bold Italic 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** The bundle is current Junicode 2 variable webfonts. The site's old Fromager mirror and historical character counts are not the current distribution. Test specialist shaping and private-use characters explicitly.
-
-**GitHub repository:** https://github.com/psb1558/Junicode-font
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/Fromager/junicode
-
-**Pinned distribution:** `{"repo": "psb1558/Junicode-font", "commit": "6978714c2bb053861a68489c052b1c88e7596bfb"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -379,8 +289,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="league-gothic"></a>
 ## League Gothic
 
-[Directory page](https://open-foundry.com/fonts/league-gothic) · Creators listed: Tyler Finck, Caroline Hadilaksono, Micah Rich.
-
 **Character and fit (editorial):** A tall condensed grotesque with a direct, poster-like voice. Fits space-constrained headlines, sports, and bold editorial display.
 
 **Suggested contexts:** condensed, energetic, industrial, editorial. **Roles:** heading, display.
@@ -388,12 +296,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Regular 400, Condensed 400, Italic 400, Condensed Italic 400.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Four release webfonts include regular and condensed widths, each upright and italic. Condensed is a separate CSS family alias.
-
-**GitHub repository:** https://github.com/theleagueof/league-gothic
-
-**Pinned distribution:** `{"archive_url": "https://github.com/theleagueof/league-gothic/releases/download/1.601/LeagueGothic-1.601.zip", "archive_sha256": "bcb78e7edcba6fbfe56c855737ddf82c40f57f093ef3b7890667e25c69ac3a08"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -411,8 +313,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="liberation-sans"></a>
 ## Liberation Sans
 
-[Directory page](https://open-foundry.com/fonts/liberation-sans) · Creators listed: Steve Matteson.
-
 **Character and fit (editorial):** A familiar, pragmatic sans for office-style layouts and compatibility-sensitive documents. Its restrained voice keeps attention on content.
 
 **Suggested contexts:** neutral, institutional, practical, clean. **Roles:** ui, body, heading.
@@ -420,14 +320,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Regular 400, Italic 400, Bold 700, Bold Italic 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Liberation Sans targets Arial metrics. Times New Roman and Courier compatibility belong to other Liberation families, not this one.
-
-**GitHub repository:** https://github.com/liberationfonts/liberation-fonts
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/liberationfonts
-
-**Pinned distribution:** `{"archive_url": "https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz", "archive_sha256": "7191c669bf38899f73a2094ed00f7b800553364f90e2637010a69c0e268f25d0"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -445,8 +337,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="libre-baskerville"></a>
 ## Libre Baskerville
 
-[Directory page](https://open-foundry.com/fonts/libre-baskerville) · Creators listed: Pablo Impallari, Rodrigo Fuenzalida.
-
 **Character and fit (editorial):** An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.
 
 **Suggested contexts:** editorial, literary, trustworthy, traditional. **Roles:** body, heading.
@@ -454,12 +344,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** serif; SIL Open Font License v.1.1; Regular 400, Italic 400, Bold 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Current bundled variable files offer more styles than the three historically listed by Open Foundry.
-
-**GitHub repository:** https://github.com/impallari/Libre-Baskerville
-
-**Pinned distribution:** `{"repo": "impallari/Libre-Baskerville", "commit": "9852edf75ece3af500a5ec61245f94788c3d4633"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -475,8 +359,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="mplus-mtype-1"></a>
 ## M+ M Type-1
 
-[Directory page](https://open-foundry.com/fonts/mplus-mtype-1) · Creators listed: Coji Morishita.
-
 **Character and fit (editorial):** A clear, utilitarian monospaced design spanning Latin and Japanese text. Useful for technical, bilingual, and code-adjacent compositions.
 
 **Suggested contexts:** technical, japanese, monospaced, practical. **Roles:** code, ui, body.
@@ -484,14 +366,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Thin 100, Light 300, Regular 400, Medium 500, Bold 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** M+ 1m is the legacy M Type-1 family. Do not confuse it with newer proportional M PLUS 1/2 discussed in the site's description. Files come from a labeled legacy mirror; Japanese glyphs increase payload size.
-
-**GitHub repository:** https://github.com/rayshan/mplus-fonts
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/
-
-**Pinned distribution:** `{"repo": "rayshan/mplus-fonts", "commit": "0d4459efc913a91f33c3f08b219a5a95d282c7b8"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -510,8 +384,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="nimbus-sans-l"></a>
 ## Nimbus Sans L
 
-[Directory page](https://open-foundry.com/fonts/nimbus-sans-l) · Creators listed: URW Type Foundry.
-
 **Character and fit (editorial):** A neutral neo-grotesque in the Helvetica tradition. Its familiar proportions suit conventional editorial and information layouts.
 
 **Suggested contexts:** neutral, traditional, clean, institutional. **Roles:** ui, body, heading.
@@ -519,12 +391,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; GNU General Public License v.3.0; Regular 400, Italic 400, Bold 700, Bold Italic 700.
 
 **Verified distribution:** Downloaded archive: GPLv2 with document exception; not bundled. **Status:** manual-review.
-
-**Notes:** Not bundled. The downloaded Font Library archive contains GPLv2 plus a document exception, despite the site's GPLv3 label. Its README points to separate PfaEdit sources that were not verified. User approval alone cannot resolve missing redistribution evidence; use a verified alternative or obtain the corresponding sources and terms first.
-
-No repository for the exact downloaded legacy distribution verified. Font Library is the checked distribution source.
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://fontlibrary.org/en/font/nimbus-sans-l
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -546,8 +412,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="office-code-pro"></a>
 ## Office Code Pro
 
-[Directory page](https://open-foundry.com/fonts/office-code-pro) · Creators listed: Nathan Rutzky.
-
 **Character and fit (editorial):** A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.
 
 **Suggested contexts:** technical, monospaced, practical, clean. **Roles:** code, ui.
@@ -555,14 +419,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** monospace; SIL Open Font License v.1.1; Light 300, Light Italic 300, Regular 400, Italic 400, Medium 500, Medium Italic 500, Bold 700, Bold Italic 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.
-
-**GitHub repository:** https://github.com/case/font-office-code-pro-mirror
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/nathco/Office-Code-Pro
-
-**Pinned distribution:** `{"repo": "case/font-office-code-pro-mirror", "commit": "15154bcbb5fb90ce40c35810434045b715a15fca"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -584,8 +440,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="ostrich-sans"></a>
 ## Ostrich Sans
 
-[Directory page](https://open-foundry.com/fonts/ostrich-sans) · Creators listed: Tyler Finck.
-
 **Character and fit (editorial):** A very narrow, elongated display face with a range of decorative treatments. Suits poster lettering and brief playful headlines.
 
 **Suggested contexts:** condensed, playful, retro, decorative. **Roles:** display, heading.
@@ -593,12 +447,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** display; SIL Open Font License v.1.1; Light 300, Medium 500, Bold 700, Black 900, Heavy 900.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** Treat as display lettering, not a normal lowercase reading face. Dashed, rounded and inline designs are distinct variants; do not map them all onto one CSS weight axis.
-
-**GitHub repository:** https://github.com/theleagueof/ostrich-sans
-
-**Pinned distribution:** `{"repo": "theleagueof/ostrich-sans", "commit": "a949d40d0576d12ba26e2a45e19c91fd0228c964"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -621,8 +469,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="oswald"></a>
 ## Oswald
 
-[Directory page](https://open-foundry.com/fonts/oswald) · Creators listed: Vernon Adams, Cyreal, Kalapi Gajjar.
-
 **Character and fit (editorial):** A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.
 
 **Suggested contexts:** condensed, editorial, industrial, confident. **Roles:** heading, display.
@@ -630,12 +476,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Extralight 200, Light 300, Regular 400, Medium 500, Semibold 600, Bold 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.
-
-**GitHub repository:** https://github.com/googlefonts/OswaldFont
-
-**Pinned distribution:** `{"repo": "googlefonts/OswaldFont", "commit": "89795261ac9eeb9aa8cd99f43982c4e4b0e53261"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -650,8 +490,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="poppins"></a>
 ## Poppins
 
-[Directory page](https://open-foundry.com/fonts/poppins) · Creators listed: Jonny Pinhorn, ITF.
-
 **Character and fit (editorial):** A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.
 
 **Suggested contexts:** geometric, friendly, modern, playful. **Roles:** ui, heading, body.
@@ -659,14 +497,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Thin 100, Thin Italic 100, Extralight 200, Extralight Italic 200, Light 300, Light Italic 300, Regular 400, Italic 400, Medium 500, Medium Italic 500, Semibold 600, Semibold Italic 600, Bold 700, Bold Italic 700, Extrabold 800, Extrabold Italic 800, Black 900, Black Italic 900.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.
-
-**GitHub repository:** https://github.com/itfoundry/Poppins
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/itfoundry/poppins
-
-**Pinned distribution:** `{"repo": "google/fonts", "commit": "23e54b51ddffbc7713c583748e3bd86f62b1fa4a"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -698,8 +528,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="reglo"></a>
 ## Reglo
 
-[Directory page](https://open-foundry.com/fonts/reglo) · Creators listed: Sebastien Sanfilippo.
-
 **Character and fit (editorial):** A dense geometric sans with a punchy identity-led tone. Effective for concise headings, posters, and strong labels.
 
 **Suggested contexts:** geometric, confident, cultural, bold. **Roles:** heading, display.
@@ -707,12 +535,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Bold 700.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** One bold face. Do not use it as an all-purpose multi-weight text family.
-
-**GitHub repository:** https://github.com/sebsan/Reglo
-
-**Pinned distribution:** `{"repo": "sebsan/Reglo", "commit": "3b465388f0b45930e5217edc1fc82c5b6514e80c"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -727,8 +549,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="roboto"></a>
 ## Roboto
 
-[Directory page](https://open-foundry.com/fonts/roboto) · Creators listed: Christian Robertson.
-
 **Character and fit (editorial):** A practical sans balancing constructed forms with open reading shapes. Useful for familiar application interfaces and mixed-language text.
 
 **Suggested contexts:** practical, neutral, modern, technical. **Roles:** ui, body, heading.
@@ -736,12 +556,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Thin 100, Thin Italic 100, Extralight 200, Extralight Italic 200, Light 300, Light Italic 300, Regular 400, Italic 400, Medium 500, Medium Italic 500, Semibold 600, Semibold Italic 600, Bold 700, Bold Italic 700, Extrabold 800, Extrabold Italic 800, Black 900, Black Italic 900.
 
 **Verified distribution:** Apache-2.0. **Status:** bundled.
-
-**Notes:** The bundle follows the site's roboto-2 GitHub source: Apache 2.0, six upright weights plus italics. The site's OFL label and nine-weight listing refer to a different generation. Do not mix Roboto versions silently.
-
-**GitHub repository:** https://github.com/googlefonts/roboto-2
-
-**Pinned distribution:** `{"repo": "googlefonts/roboto-2", "commit": "38062f4b4a0be4346d07a928408da21602545e9e"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -767,8 +581,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="terminal-grotesque-open"></a>
 ## Terminal Grotesque
 
-[Directory page](https://open-foundry.com/fonts/terminal-grotesque-open) · Creators listed: Raphaël Bastide, Jérémy Landes.
-
 **Character and fit (editorial):** A pixel-derived experimental grotesque with a digital, rough-edged presence. Useful for expressive technology and arts display work.
 
 **Suggested contexts:** experimental, digital, rough, playful. **Roles:** display, heading.
@@ -776,14 +588,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** display; SIL Open Font License v.1.1; Regular 400.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** The site's slug emphasizes the Open variant. Both original and Open are bundled as separate faces. The GitHub license file contains an unrelated Blackout header; both font binaries carry their own full OFL and Terminal Grotesque notice, extracted and retained as the applicable evidence.
-
-**GitHub repository:** https://github.com/StudioTriple/Terminal-Grotesque
-
-Directory's repository field (may be historical, a mirror, or a placeholder): https://gitlab.com/raphaelbastide/Terminal-Grotesque
-
-**Pinned distribution:** `{"repo": "StudioTriple/Terminal-Grotesque", "commit": "40c09199041e81b17effa6da68ded63025df1cff"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -799,8 +603,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="tex-gyre-heros"></a>
 ## Tex Gyre Heros
 
-[Directory page](https://open-foundry.com/fonts/tex-gyre-heros) · Creators listed: Boguslaw Jackowski, Janusz Nowacki.
-
 **Character and fit (editorial):** A disciplined neo-grotesque with a conventional Swiss voice. Useful for neutral information design and standard or condensed layouts.
 
 **Suggested contexts:** neutral, institutional, clean, traditional. **Roles:** ui, body, heading.
@@ -808,12 +610,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; GUST Font License v.1.0; Regular 400, Condensed Regular 400, Italic 400, Condensed Italic 400, Bold 700, Condensed Bold 700, Bold Italic 700, Condensed Bold Italic 700.
 
 **Verified distribution:** GUST Font License 1.0 / LPPL-1.3c-or-later. **Status:** bundled.
-
-**Notes:** No official GitHub repository was verified. GUST is the primary distributor. Eight unmodified OTFs are bundled with GFL/LPPL terms, the manifest, and the complete upstream distribution archive; preserve these together.
-
-No official GitHub repository verified; use GUST.
-
-**Pinned distribution:** `{"archive_url": "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros/tg_heros-otf-2_609-31_03_2026.zip", "archive_sha256": "a5803bb6211202b0e52447bbcbd41a209716b0952224c1116a28b6d342225abe", "complete_archive_url": "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros/tg_heros-TDS_distr-2_609-31_03_2026.zip", "complete_archive_sha256": "1bf430dbb818c86d86881dadf9139790f8dd763f6d002e6a152f9c65b7bcb602"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -835,8 +631,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="work-sans"></a>
 ## Work Sans
 
-[Directory page](https://open-foundry.com/fonts/work-sans) · Creators listed: Wei Huang.
-
 **Character and fit (editorial):** A relaxed grotesque with a useful balance of personality and readability. Suitable for approachable editorial sites and product interfaces.
 
 **Suggested contexts:** friendly, editorial, practical, modern. **Roles:** ui, body, heading.
@@ -844,12 +638,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** sans-serif; SIL Open Font License v.1.1; Thin 100, Thin Italic 100, Extralight 200, Extralight Italic 200, Light 300, Light Italic 300, Regular 400, Italic 400, Medium 500, Medium Italic 500, Semibold 600, Semibold Italic 600, Bold 700, Bold Italic 700, Extrabold 800, Extrabold Italic 800, Black 900, Black Italic 900.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** The bundle uses variable upright and italic TTF files. Copy only the styles needed by a project and budget their full-file download sizes.
-
-**GitHub repository:** https://github.com/weiweihuanghuang/Work-Sans
-
-**Pinned distribution:** `{"repo": "weiweihuanghuang/Work-Sans", "commit": "b35c81086186162164947bd39574683073d9b268"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -865,8 +653,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 <a id="young-serif"></a>
 ## Young Serif
 
-[Directory page](https://open-foundry.com/fonts/young-serif) · Creators listed: Bastien Sozeau.
-
 **Character and fit (editorial):** A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.
 
 **Suggested contexts:** warm, friendly, editorial, expressive. **Roles:** heading, body, display.
@@ -874,12 +660,6 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **Site listing:** serif; SIL Open Font License v.1.1; Regular 400.
 
 **Verified distribution:** OFL-1.1. **Status:** bundled.
-
-**Notes:** The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.
-
-**GitHub repository:** https://github.com/noirblancrouge/YoungSerif
-
-**Pinned distribution:** `{"repo": "noirblancrouge/YoungSerif", "commit": "8a6c3ceeed5e52bd77b0dfad6b76e99096b9fd4b"}`
 
 | File / style | CSS weight / style | Format; size | Glyphs / codepoints | Variable axes |
 |---|---|---|---|---|
@@ -891,3 +671,339 @@ Use the JSON record for exact per-file ranges and metadata. Mere character prese
 **OpenType features (union; per-file availability varies):** aalt, c2sc, calt, case, ccmp, cpsp, dlig, dnom, frac, ital, kern, liga, lnum, locl, mark, numr, onum, ordn, pnum, rlig, sinf, smcp, ss01, ss03, ss04, ss05, subs, sups, tnum, zero.
 
 Use the JSON record for exact per-file ranges and metadata. Mere character presence does not establish language shaping quality.
+
+## Notes and credits
+
+Catalog discovery: [Open Foundry](https://open-foundry.com/). All linked font-detail pages were reviewed at the recorded date. Original font binaries and their legal notices remain unchanged. Repository URLs and distribution cautions below preserve the audit trail.
+
+### Aileron
+
+[Directory page](https://open-foundry.com/fonts/aileron) · Creators listed: Sori Sagano.
+
+**Distribution notes:** The former ssagano/Aileron GitHub URL returns 404; the author's download is the source. No Rights Reserved is embedded; the site labels the dedication CC0.
+
+**Project page:** https://dotcolon.net/fonts/aileron/
+
+No working primary repository verified; the directory links only to github.com. Historical ssagano/Aileron returns 404.
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/
+
+**Pinned distribution:** `{"archive_url": "https://dotcolon.net/files/fonts/aileron_0102.zip", "archive_sha256": "a93a1327f44912a7b1410ad0056fec3e904074413b0bd9da550f6175587cf958"}`
+
+
+### Archivo
+
+[Directory page](https://open-foundry.com/fonts/archivo) · Creators listed: Hector Gatti.
+
+**Distribution notes:** Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.
+
+**Project page:** https://www.omnibus-type.com/fonts/archivo/
+
+**GitHub repository:** https://github.com/Omnibus-Type/Archivo
+
+**Pinned distribution:** `{"repo": "Omnibus-Type/Archivo", "commit": "211127690e8ff106c36c935f7e5e697114cff103"}`
+
+
+### Bagnard
+
+[Directory page](https://open-foundry.com/fonts/bagnard) · Creators listed: Sebastien Sanfilippo.
+
+**Distribution notes:** One regular style. Do not invent bold or italic faces; test small text carefully.
+
+**Project page:** https://github.com/sebsan/bagnard
+
+**GitHub repository:** https://github.com/sebsan/bagnard
+
+**Pinned distribution:** `{"repo": "sebsan/bagnard", "commit": "31415d5e03d2088941fecae2c4ea9f2e6ca0446a"}`
+
+
+### Bluu Next
+
+[Directory page](https://open-foundry.com/fonts/bluu-next) · Creators listed: Jean-Baptiste Morizot.
+
+**Distribution notes:** Bold, bold italic and titling files are bundled. This is not a broad-weight body-text family.
+
+**Project page:** http://www.velvetyne.fr/fonts/bluu
+
+**GitHub repository:** https://github.com/velvetyne/BluuNext
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/jbmorizot/BluuNext/
+
+**Pinned distribution:** `{"repo": "velvetyne/BluuNext", "commit": "a1d39f03faef4288ed99dca9f9a757b30e0b2627"}`
+
+
+### Cooper Hewitt
+
+[Directory page](https://open-foundry.com/fonts/cooper-hewitt) · Creators listed: Chester Jenkins.
+
+**Distribution notes:** Binaries are from Font Library because the museum's download returned 403. Source UFOs and license remain available in the museum's GitHub repository.
+
+**Project page:** https://www.cooperhewitt.org/open-source-at-cooper-hewitt/cooper-hewitt-the-typeface-by-chester-jenkins/
+
+**GitHub repository:** https://github.com/cooperhewitt/cooperhewitt-typeface
+
+**Pinned distribution:** `{"archive_url": "https://fontlibrary.org/assets/downloads/cooper-hewitt/cbff2bac99d77efd80f9b17689bcfc8c/cooper-hewitt.zip", "archive_sha256": "df5b0869296092fca85742a6295db8bbdedb4e1e19ecaafd195bbabd1ef22d4e"}`
+
+
+### Cotham Sans
+
+[Directory page](https://open-foundry.com/fonts/cotham-sans) · Creators listed: Sebastien Sanfilippo.
+
+**Distribution notes:** A single regular style; use another family when multiple weights or true italics are needed.
+
+**GitHub repository:** https://github.com/sebsan/Cotham
+
+Directory's repository field (may be historical, a mirror, or a placeholder): http://github.com/sebsan/Cotham
+
+**Pinned distribution:** `{"repo": "sebsan/Cotham", "commit": "eca5c6d0cdaea789e06a3118147c0ecbabe20e94"}`
+
+
+### EB Garamond
+
+[Directory page](https://open-foundry.com/fonts/eb-garamond) · Creators listed: Georg Duffner.
+
+**Distribution notes:** The bundle uses Google Fonts' contemporary EB Garamond distribution, not every optical-size design in Georg Duffner's original project.
+
+**Project page:** http://www.georgduffner.at/ebgaramond/
+
+**GitHub repository:** https://github.com/georgd/EB-Garamond
+
+**Pinned distribution:** `{"repo": "google/fonts", "commit": "23e54b51ddffbc7713c583748e3bd86f62b1fa4a"}`
+
+
+### Gap Sans
+
+[Directory page](https://open-foundry.com/fonts/gap-sans) · Creators listed: Alexandre Liziard, Étienne Ozeray.
+
+**Distribution notes:** Regular, bold and black are separate files. Avoid dense body copy and critical small UI labels.
+
+**Project page:** https://github.com/Interstices-/GapSans
+
+**GitHub repository:** https://github.com/Interstices-/GapSans
+
+**Pinned distribution:** `{"repo": "Interstices-/GapSans", "commit": "24e59f53bbfac3c7d8e4eb8db89ae828f9f8fba7"}`
+
+
+### Inter
+
+[Directory page](https://open-foundry.com/fonts/inter) · Creators listed: Rasmus Andersson.
+
+**Distribution notes:** Use because it fits the task, not as an unconditional default. The bundle contains variable roman and italic webfonts.
+
+**Project page:** https://rsms.me/inter/
+
+**GitHub repository:** https://github.com/rsms/inter
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/rsms/inter/
+
+**Pinned distribution:** `{"repo": "rsms/inter", "commit": "353b61b9f4430d5f420d56605a6e7993e0941470"}`
+
+
+### Junicode
+
+[Directory page](https://open-foundry.com/fonts/junicode) · Creators listed: Peter Baker.
+
+**Distribution notes:** The bundle is current Junicode 2 variable webfonts. The site's old Fromager mirror and historical character counts are not the current distribution. Test specialist shaping and private-use characters explicitly.
+
+**Project page:** https://junicode.sourceforge.io/
+
+**GitHub repository:** https://github.com/psb1558/Junicode-font
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/Fromager/junicode
+
+**Pinned distribution:** `{"repo": "psb1558/Junicode-font", "commit": "6978714c2bb053861a68489c052b1c88e7596bfb"}`
+
+
+### League Gothic
+
+[Directory page](https://open-foundry.com/fonts/league-gothic) · Creators listed: Tyler Finck, Caroline Hadilaksono, Micah Rich.
+
+**Distribution notes:** Four release webfonts include regular and condensed widths, each upright and italic. Condensed is a separate CSS family alias.
+
+**Project page:** http://github.com/theleagueof/league-gothic
+
+**GitHub repository:** https://github.com/theleagueof/league-gothic
+
+**Pinned distribution:** `{"archive_url": "https://github.com/theleagueof/league-gothic/releases/download/1.601/LeagueGothic-1.601.zip", "archive_sha256": "bcb78e7edcba6fbfe56c855737ddf82c40f57f093ef3b7890667e25c69ac3a08"}`
+
+
+### Liberation Sans
+
+[Directory page](https://open-foundry.com/fonts/liberation-sans) · Creators listed: Steve Matteson.
+
+**Distribution notes:** Liberation Sans targets Arial metrics. Times New Roman and Courier compatibility belong to other Liberation families, not this one.
+
+**Project page:** https://github.com/liberationfonts
+
+**GitHub repository:** https://github.com/liberationfonts/liberation-fonts
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/liberationfonts
+
+**Pinned distribution:** `{"archive_url": "https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz", "archive_sha256": "7191c669bf38899f73a2094ed00f7b800553364f90e2637010a69c0e268f25d0"}`
+
+
+### Libre Baskerville
+
+[Directory page](https://open-foundry.com/fonts/libre-baskerville) · Creators listed: Pablo Impallari, Rodrigo Fuenzalida.
+
+**Distribution notes:** Current bundled variable files offer more styles than the three historically listed by Open Foundry.
+
+**GitHub repository:** https://github.com/impallari/Libre-Baskerville
+
+**Pinned distribution:** `{"repo": "impallari/Libre-Baskerville", "commit": "9852edf75ece3af500a5ec61245f94788c3d4633"}`
+
+
+### M+ M Type-1
+
+[Directory page](https://open-foundry.com/fonts/mplus-mtype-1) · Creators listed: Coji Morishita.
+
+**Distribution notes:** M+ 1m is the legacy M Type-1 family. Do not confuse it with newer proportional M PLUS 1/2 discussed in the site's description. Files come from a labeled legacy mirror; Japanese glyphs increase payload size.
+
+**Project page:** https://mplusfonts.github.io/
+
+**GitHub repository:** https://github.com/rayshan/mplus-fonts
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/
+
+**Pinned distribution:** `{"repo": "rayshan/mplus-fonts", "commit": "0d4459efc913a91f33c3f08b219a5a95d282c7b8"}`
+
+
+### Nimbus Sans L
+
+[Directory page](https://open-foundry.com/fonts/nimbus-sans-l) · Creators listed: URW Type Foundry.
+
+**Distribution notes:** Not bundled. The downloaded Font Library archive contains GPLv2 plus a document exception, despite the site's GPLv3 label. Its README points to separate PfaEdit sources that were not verified. User approval alone cannot resolve missing redistribution evidence; use a verified alternative or obtain the corresponding sources and terms first.
+
+**Project page:** https://fontlibrary.org/en/font/nimbus-sans-l
+
+No repository for the exact downloaded legacy distribution verified. Font Library is the checked distribution source.
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://fontlibrary.org/en/font/nimbus-sans-l
+
+
+### Office Code Pro
+
+[Directory page](https://open-foundry.com/fonts/office-code-pro) · Creators listed: Nathan Rutzky.
+
+**Distribution notes:** The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.
+
+**Project page:** https://www.fontsquirrel.com/fonts/office-code-pro
+
+**GitHub repository:** https://github.com/case/font-office-code-pro-mirror
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/nathco/Office-Code-Pro
+
+**Pinned distribution:** `{"repo": "case/font-office-code-pro-mirror", "commit": "15154bcbb5fb90ce40c35810434045b715a15fca"}`
+
+
+### Ostrich Sans
+
+[Directory page](https://open-foundry.com/fonts/ostrich-sans) · Creators listed: Tyler Finck.
+
+**Distribution notes:** Treat as display lettering, not a normal lowercase reading face. Dashed, rounded and inline designs are distinct variants; do not map them all onto one CSS weight axis.
+
+**GitHub repository:** https://github.com/theleagueof/ostrich-sans
+
+**Pinned distribution:** `{"repo": "theleagueof/ostrich-sans", "commit": "a949d40d0576d12ba26e2a45e19c91fd0228c964"}`
+
+
+### Oswald
+
+[Directory page](https://open-foundry.com/fonts/oswald) · Creators listed: Vernon Adams, Cyreal, Kalapi Gajjar.
+
+**Distribution notes:** The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.
+
+**GitHub repository:** https://github.com/googlefonts/OswaldFont
+
+**Pinned distribution:** `{"repo": "googlefonts/OswaldFont", "commit": "89795261ac9eeb9aa8cd99f43982c4e4b0e53261"}`
+
+
+### Poppins
+
+[Directory page](https://open-foundry.com/fonts/poppins) · Creators listed: Jonny Pinhorn, ITF.
+
+**Distribution notes:** The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.
+
+**Project page:** https://www.indiantypefoundry.com/fonts/poppins
+
+**GitHub repository:** https://github.com/itfoundry/Poppins
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://github.com/itfoundry/poppins
+
+**Pinned distribution:** `{"repo": "google/fonts", "commit": "23e54b51ddffbc7713c583748e3bd86f62b1fa4a"}`
+
+
+### Reglo
+
+[Directory page](https://open-foundry.com/fonts/reglo) · Creators listed: Sebastien Sanfilippo.
+
+**Distribution notes:** One bold face. Do not use it as an all-purpose multi-weight text family.
+
+**GitHub repository:** https://github.com/sebsan/Reglo
+
+**Pinned distribution:** `{"repo": "sebsan/Reglo", "commit": "3b465388f0b45930e5217edc1fc82c5b6514e80c"}`
+
+
+### Roboto
+
+[Directory page](https://open-foundry.com/fonts/roboto) · Creators listed: Christian Robertson.
+
+**Distribution notes:** The bundle follows the site's roboto-2 GitHub source: Apache 2.0, six upright weights plus italics. The site's OFL label and nine-weight listing refer to a different generation. Do not mix Roboto versions silently.
+
+**Project page:** https://github.com/googlefonts/roboto-2
+
+**GitHub repository:** https://github.com/googlefonts/roboto-2
+
+**Pinned distribution:** `{"repo": "googlefonts/roboto-2", "commit": "38062f4b4a0be4346d07a928408da21602545e9e"}`
+
+
+### Terminal Grotesque
+
+[Directory page](https://open-foundry.com/fonts/terminal-grotesque-open) · Creators listed: Raphaël Bastide, Jérémy Landes.
+
+**Distribution notes:** The site's slug emphasizes the Open variant. Both original and Open are bundled as separate faces. The GitHub license file contains an unrelated Blackout header; both font binaries carry their own full OFL and Terminal Grotesque notice, extracted and retained as the applicable evidence.
+
+**Project page:** https://velvetyne.fr/fonts/terminal-grotesque/
+
+**GitHub repository:** https://github.com/StudioTriple/Terminal-Grotesque
+
+Directory's repository field (may be historical, a mirror, or a placeholder): https://gitlab.com/raphaelbastide/Terminal-Grotesque
+
+**Pinned distribution:** `{"repo": "StudioTriple/Terminal-Grotesque", "commit": "40c09199041e81b17effa6da68ded63025df1cff"}`
+
+
+### Tex Gyre Heros
+
+[Directory page](https://open-foundry.com/fonts/tex-gyre-heros) · Creators listed: Boguslaw Jackowski, Janusz Nowacki.
+
+**Distribution notes:** No official GitHub repository was verified. GUST is the primary distributor. Eight unmodified OTFs are bundled with GFL/LPPL terms, the manifest, and the complete upstream distribution archive; preserve these together.
+
+**Project page:** https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros
+
+No official GitHub repository verified; use GUST.
+
+**Pinned distribution:** `{"archive_url": "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros/tg_heros-otf-2_609-31_03_2026.zip", "archive_sha256": "a5803bb6211202b0e52447bbcbd41a209716b0952224c1116a28b6d342225abe", "complete_archive_url": "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros/tg_heros-TDS_distr-2_609-31_03_2026.zip", "complete_archive_sha256": "1bf430dbb818c86d86881dadf9139790f8dd763f6d002e6a152f9c65b7bcb602"}`
+
+
+### Work Sans
+
+[Directory page](https://open-foundry.com/fonts/work-sans) · Creators listed: Wei Huang.
+
+**Distribution notes:** The bundle uses variable upright and italic TTF files. Copy only the styles needed by a project and budget their full-file download sizes.
+
+**GitHub repository:** https://github.com/weiweihuanghuang/Work-Sans
+
+**Pinned distribution:** `{"repo": "weiweihuanghuang/Work-Sans", "commit": "b35c81086186162164947bd39574683073d9b268"}`
+
+
+### Young Serif
+
+[Directory page](https://open-foundry.com/fonts/young-serif) · Creators listed: Bastien Sozeau.
+
+**Distribution notes:** The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.
+
+**Project page:** https://noirblancrouge.com/fonts/young-serif/
+
+**GitHub repository:** https://github.com/noirblancrouge/YoungSerif
+
+**Pinned distribution:** `{"repo": "noirblancrouge/YoungSerif", "commit": "8a6c3ceeed5e52bd77b0dfad6b76e99096b9fd4b"}`

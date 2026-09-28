@@ -57,14 +57,12 @@ Read `report.json`, check the source CSV against the input, inspect desktop/mobi
 
 For bars/areas keep a meaningful zero baseline; preserve missing observations and temporal order; distinguish actual, forecast and illustrative data. Use direct labels or non-color cues, meaningful units, a source, and an accessible data equivalent. A library's accessibility features do not certify the final artifact. Avoid inferring causation from correlation, reconstructing missing values without authorization, or generating chart geometry with an image model.
 
-## Sources and further additions
+## Notes and credits
 
 - [Vega](https://github.com/vega/vega) and [Vega-Lite](https://github.com/vega/vega-lite): BSD-3-Clause; University of Washington Interactive Data Lab and contributors.
 - [D3](https://github.com/d3): ISC; Mike Bostock and contributors. Selected hierarchy, force and geography modules only.
 - [Microcharts](https://github.com/ganapativs/microcharts): MIT; retain the package's author notice.
 - [mschart](https://github.com/ardata-fr/mschart): MIT; David Gohel/ArData and contributors. Runtime is optional and not redistributed here.
 - [bkrsln/dataviz](https://github.com/bkrsln/dataviz): credited discovery directory, not a runtime dependency or copied asset collection. Its linked [From Data to Viz](https://www.data-to-viz.com/) and [FT Visual Vocabulary](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary) are useful chart-selection references. Consult their original sources; no graphics or prose are vendored from them.
-
-Further candidates from that directory: Altair could provide a Python interface to the same Vega-Lite engine; Matplotlib/Seaborn could strengthen scientific figures; Charts.css could support simple CSS-only displays. These are considered but not bundled, because the current four routes cover the authorized addition without multiplying dependencies. Review each exact package and license before a future integration.
 
 Bundle versions, constituent licenses and hashes are in `scripts/vendor/viz/provenance.json`. Rebuild through repository `tools/build_visualization.mjs`; do not edit generated engines. Existing font/color notices remain separate.

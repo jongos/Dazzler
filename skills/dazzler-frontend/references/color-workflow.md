@@ -14,7 +14,7 @@ The helper preserves curated primary/secondary/accent hues when a palette alone 
 
 The agent operates this helper and integrates its output. The user does not need to supply a mood, seed, palette ID, harmony or configuration file. Keep candidate selection internal unless alternatives are requested; the standalone preview is an optional review aid, not a required approval step.
 
-Node.js 22 or newer is recommended. No npm installation, API key, network request or system settings change is needed for normal use. The vendored engine contains @ankhorage/color-theory 0.3.1 and Culori 4.0.2 under MIT. If Node is unavailable, use the guidance with available tools and report contrast as unverified until measured; do not fabricate numerical results or automatically install a runtime.
+Node.js 22 or newer is recommended. No npm installation, API key, network request or system settings change is needed for normal use. If Node is unavailable, use the guidance with available tools and report contrast as unverified until measured; do not fabricate numerical results or automatically install a runtime.
 
 From the project directory, replacing `/path/to/frontend-design` with the installed skill's absolute path:
 
@@ -68,7 +68,7 @@ Select fonts through [the typography workflow](typography.md). The generic previ
 
 Prefer a single contextual choice with a short rationale. Offer alternatives only when the decision is materially open. Keep generated brand artifacts in the user's project, not this plugin's source repository. Preserve provenance and license notices when exporting. Never describe a mathematical shortlist as an objectively best aesthetic or a passing role table as full WCAG compliance.
 
-## Attribution and standards
+## Notes and credits
 
 - [hue3, pinned source](https://github.com/ktzzypo938/hue3/tree/a306210b7240e183366998ce39fbe7543cc09b41): mood palette data, names and atmosphere descriptions retained under [MIT](hue3-LICENSE.txt). Mandatory three-color rules, inaccurate contrast advice and Claude-specific instructions were not adopted.
 - [Ankhorage color-theory](https://github.com/ankhorage/color-theory): pinned published 0.3.1 engine with [MIT notice](../scripts/vendor/ankhorage-color-theory-LICENSE.txt); [Culori](https://github.com/Evercoder/culori) 4.0.2 with [MIT notice](../scripts/vendor/culori-LICENSE.txt). Bundle hashes and versions: [provenance](../scripts/vendor/provenance.json).

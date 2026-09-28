@@ -6,9 +6,7 @@ license: Apache-2.0; see LICENSE.txt
 
 # Dazzler Frontend
 
-When asked to update this skill or its plugin, read [MAINTENANCE.md](MAINTENANCE.md) first. It identifies the canonical GitHub source and the owner-authorized workflow for pushing updates with developer notes. It does not apply to projects created using this skill.
-
-Adapted and modified on 2026-09-28 from davila7/claude-code-templates, creative-design/frontend-design. This version adds ChatGPT/Codex tool routing and verification, and revises the workflow to preserve existing brands and user scope. See [provenance](PROVENANCE.md).
+When asked to update this skill or its plugin, read [MAINTENANCE.md](MAINTENANCE.md) first. It identifies the canonical maintenance location and the owner-authorized workflow for pushing updates with developer notes. It does not apply to projects created using this skill.
 
 Create a usable interface whose visual identity follows its subject and audience. Make deliberate choices instead of applying the same aesthetic to every project. An explicit brief, reference, or established design system takes precedence over novelty.
 
@@ -22,7 +20,7 @@ Switch to [optional refinement controls](references/design-controls.md) only whe
 
 ## Design from purpose
 
-For substantial new interfaces, redesigns or requests to make a UI less generic, use [the adapted deslop framework](references/deslop.md), credited to **Samuel Berthe (samber)**. It connects artifact type and audience to a design direction, tokens, component states and a review of the actual result. Inspect existing design records and tokens first. Infer a useful direction from the brief without mandatory approval gates, preserve brand choices, and reuse the [design-record guide](references/design-record.md) when durable project documentation is warranted. For a small edit, apply only the relevant [interface craft](references/interface-craft.md); do not expand it into a redesign.
+For substantial new interfaces, redesigns or requests to make a UI less generic, use [the adapted deslop framework](references/deslop.md). It connects artifact type and audience to a design direction, tokens, component states and a review of the actual result. Inspect existing design records and tokens first. Infer a useful direction from the brief without mandatory approval gates, preserve brand choices, and reuse the [design-record guide](references/design-record.md) when durable project documentation is warranted. For a small edit, apply only the relevant [interface craft](references/interface-craft.md); do not expand it into a redesign.
 
 ## Make typography a design foundation
 
@@ -103,3 +101,9 @@ For implemented interfaces, use proportionate checks:
 - Run the project's relevant build, lint, or tests when justified by the change. A screenshot does not establish functional correctness, and a passing build does not establish visual quality.
 
 Deliver the implementation, preview, or requested artifact with a short account of what changed and what was actually checked. Distinguish completed checks from limitations; avoid unsupported claims of production readiness.
+
+## Notes and credits
+
+Design framework adapted from Samuel Berthe (samber); original frontend guidance from davila7/claude-code-templates. Retain the original license notices. See [adaptation notes](PROVENANCE.md) and [framework attribution](references/deslop.md#notes-and-credits).
+
+Adapted and modified on 2026-09-28 from davila7/claude-code-templates, creative-design/frontend-design. This version adds ChatGPT/Codex tool routing and verification, and revises the workflow to preserve existing brands and user scope. See [provenance](PROVENANCE.md).

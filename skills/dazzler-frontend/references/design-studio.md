@@ -35,7 +35,7 @@ node scripts/studio.mjs tokens --config system-input.json --out NEW_DIR
 
 Outputs `design-system.json`, `tokens.css`, `tokens.dtcg.json`, `tailwind.config.cjs` (v3-style config), and `tailwind-theme.css` (v4 theme aliases). Import the CSS before consuming variable aliases. Defaults cover type scale, spacing, radius, elevation, durations/easing and measured light/dark colors. `baseSize` is pixels, `typeRatio` is a multiplier, `spacing`/`radius` overrides are rem, and motion durations are milliseconds. Explicit `colors` uses the existing color-helper schema; when provided it takes precedence over `brand.seed`/`brand.locks`, so copy required locks into it.
 
-The DTCG file exports supported color, dimension, duration and font-family primitives, not every composite type. References: [DTCG 2025.10](https://www.designtokens.org/tr/2025.10/format/) and [Tailwind theme variables](https://tailwindcss.com/docs/theme). Review integration against the project's actual framework version. Font names alone are not font installation or license evidence.
+The DTCG file exports supported color, dimension, duration and font-family primitives, not every composite type. References: DTCG 2025.10 and Tailwind theme variables. Review integration against the project's actual framework version. Font names alone are not font installation or license evidence.
 
 ## 3. Rendered design inspector
 
@@ -125,3 +125,8 @@ The suite checks brand preservation, content resilience, system/chart output, an
 ## Optional runtimes
 
 Core project tools use Python stdlib. Tokens/charts use Node and the already bundled color engine. Browser tools need an existing Playwright/Chromium environment, optionally located with `DAZZLER_NODE_MODULES`; use host browser tools if absent. Native DOCX/PPTX need their respective existing Python libraries. The skill should select a supported path automatically and state concrete limitations; never report an unavailable check as passed.
+
+## Notes and credits
+
+- [DTCG 2025.10](https://www.designtokens.org/tr/2025.10/format/)
+- [Tailwind theme variables](https://tailwindcss.com/docs/theme)

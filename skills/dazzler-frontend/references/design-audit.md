@@ -1,7 +1,5 @@
 # Review the result against its purpose
 
-Adapted from Samuel Berthe's [slop-checklist.md](https://github.com/samber/cc-skills/blob/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/references/slop-checklist.md) and divergence guidance, under [MIT](deslop-LICENSE.txt). This is an evidence-based review, not a blacklist of fonts, hues or popular components.
-
 Before delivery, compare the actual implementation/render with the brief and recorded direction. For small edits, review the affected component and neighboring layout. For a full interface, examine narrow and wide layouts, real content extremes, the primary task and relevant states. Do not claim rendered inspection when only source is available.
 
 ## Review questions
@@ -33,3 +31,7 @@ For each material finding, record the observation, its consequence, the change m
 Use this in the existing design record for ongoing work, or in a concise delivery note for a small change. Do not assign an unexplained “10/10” or let an aesthetic score stand in for interaction or accessibility evidence. Do not claim every state exists because a checklist names it.
 
 Fix the affected area, recheck the relevant evidence, and stop when the authorized task is satisfied. Preserve deliberate brand choices, working behavior and project conventions. An attractive mockup remains a mockup until its interactions and integration are implemented and checked.
+
+## Notes and credits
+
+Adapted from Samuel Berthe's [slop-checklist.md](https://github.com/samber/cc-skills/blob/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/references/slop-checklist.md) and divergence guidance, under [MIT](deslop-LICENSE.txt). This is an evidence-based review, not a blacklist of fonts, hues or popular components.

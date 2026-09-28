@@ -46,10 +46,10 @@ Some legacy binaries have misleading weight/style/embedding fields. JSON preserv
 
 ## Licenses and cases requiring user action
 
-- **OFL 1.1:** Keep each font's copyright, license and provenance with redistributed files. Do not relicense it as Apache or sell the font by itself. Review the actual Reserved Font Names before modifying, subsetting or converting. The generated project does not become OFL merely because it uses an OFL font. [Official terms](https://openfontlicense.org/open-font-license-official-text/).
+- **OFL 1.1:** Keep each font's copyright, license and provenance with redistributed files. Do not relicense it as Apache or sell the font by itself. Review the actual Reserved Font Names before modifying, subsetting or converting. The generated project does not become OFL merely because it uses an OFL font. Official terms.
 - **Roboto 2:** This bundled generation is Apache 2.0. Retain its license and notices; different Roboto generations can have different licensing.
 - **Aileron:** Preserve the author's No Rights Reserved notice. Open Foundry labels it CC0; record that attribution rather than inventing a new copyright or license grant.
-- **TeX Gyre Heros:** Keep GFL, LPPL, manifest, copyright/source notice and complete upstream archive together. The bundle is unchanged. Do not treat GFL fonts as OFL fonts. [LPPL terms](https://www.latex-project.org/lppl/lppl-1-3c/).
+- **TeX Gyre Heros:** Keep GFL, LPPL, manifest, copyright/source notice and complete upstream archive together. The bundle is unchanged. Do not treat GFL fonts as OFL fonts. LPPL terms.
 - **Nimbus Sans L:** Cataloged but not bundled because the exact archive's source-distribution evidence is incomplete. Do not download, relicense or redistribute it automatically. Explain the issue and offer the bundled Liberation Sans or TeX Gyre Heros as alternatives. To use Nimbus, identify the exact source package and license exception first; user approval alone cannot cure missing rights or source obligations.
 - **Unavailable, paid or restricted fonts:** State the exact font/version, publisher URL, reason user action is needed, and a suitable bundled fallback. Obtain permission before purchases, account actions or accepting additional terms. Never imply every font on a site shares one license.
 - **Manual desktop installation:** If the user's application needs a system font, provide the exact trusted download and filename. WOFF/WOFF2 are web formats; obtain an audited TTF/OTF from the linked upstream source for desktop use. Ask before changing the OS font library unless already authorized. On Windows, the user can open a TTF/OTF and choose Install; on macOS use Font Book; on Linux use the user's font directory and font cache tooling. The helper performs project-local copying only. Keep a fallback while installation is pending and verify the application actually loads the selected font.
@@ -57,3 +57,8 @@ Some legacy binaries have misleading weight/style/embedding fields. JSON preserv
 ## Evidence boundaries
 
 This bundle contains a curated set of distributions, not all versions ever released. The catalog names mirrors and failed/historical links explicitly. Do not copy Open Foundry's specimen art or backgrounds: their inclusion on a font page does not grant redistribution rights. A family being open-source does not make every similarly named commercial release interchangeable.
+
+## Notes and credits
+
+- [Official terms](https://openfontlicense.org/open-font-license-official-text/)
+- [LPPL terms](https://www.latex-project.org/lppl/lppl-1-3c/)

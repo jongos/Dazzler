@@ -1,5 +1,9 @@
 # Source and adaptation
 
+This file contains attribution and licensing notes accompanying Dazzler.
+
+## Notes and credits
+
 Source: https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design
 
 Inspected on 2026-09-28 from the main branch. The source directory contained SKILL.md and LICENSE.txt only. No executable dependencies, bundled assets, linked helper scripts, or mandatory Claude tools were declared. The typography book mentioned in the source is guidance, not a runtime dependency. The surrounding repository's CLI installer is not required for this standalone skill.

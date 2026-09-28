@@ -1,5 +1,9 @@
 # Third-party notices
 
+This file contains attribution and licensing notes accompanying Dazzler.
+
+## Notes and credits
+
 ## Frontend design deslop framework
 
 Creator: **Samuel Berthe ([samber](https://github.com/samber))**, copyright 2026 Samuel Berthe. Adapted from only [`skills/frontend-design-deslop`](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop) in `samber/cc-skills`, upstream skill version 1.2.2, commit `f866b800353719270a9ea101a41c5e2a2618d460`.

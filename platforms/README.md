@@ -5,11 +5,11 @@ The core typography, color tools and design guidance are shared. Platform adapte
 | Host | Installation guide | Download |
 |---|---|---|
 | ChatGPT/Codex | [Existing native edition](../README.md#-install-dazzler) | Use `skills/dazzler-frontend` |
-| Claude Code / Claude chat, including Fable | [Claude guide](claude/README.md) | [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-claude.zip) · [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-claude-plugin.zip) |
-| Gemini CLI | [Gemini guide](gemini/README.md) | [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-gemini.zip) |
-| Cursor Agent | [Cursor guide](cursor/README.md) | [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-cursor.zip) |
-| GitHub Copilot agents | [Copilot guide](copilot/README.md) | [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-copilot.zip) |
-| Other chat hosts | [Portable instructions](portable/DAZZLER-PROMPT.md) | [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.11.0/DAZZLER-PROMPT.md) |
+| Claude Code / Claude chat, including Fable | [Claude guide](claude/README.md) | Skill ZIP · Code plugin ZIP |
+| Gemini CLI | [Gemini guide](gemini/README.md) | Skill ZIP |
+| Cursor Agent | [Cursor guide](cursor/README.md) | Skill ZIP |
+| GitHub Copilot agents | [Copilot guide](copilot/README.md) | Skill ZIP |
+| Other chat hosts | [Portable instructions](portable/DAZZLER-PROMPT.md) | Prompt file |
 
 Fable is an Anthropic Claude model and uses the Claude host's format, not a separate platform package. The portable prompt is guidance only: it cannot install skills or provide fonts, scripts, execution or verified measurements to a text-only chat.
 
@@ -25,8 +25,19 @@ Full packages now include brand import, system-token export, browser inspection,
 
 ## Template library
 
-Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Dazzler selects and copies a suitable starting point automatically. [Browse the gallery](https://jongos.github.io/Dazzler/templates/) or [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-templates.zip). Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
+Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Dazzler selects and copies a suitable starting point automatically. Browse the gallery or download only the templates. Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
 
 ## Visualization adapters in 0.11.0
 
 Every full package includes the same offline Vega/Vega-Lite, selected D3 and Microcharts rendering bundles, their license notices, and the optional mschart R adapter. Generated React components use the host project React runtime. Native Office export requires R, mschart >=0.5.1 and officer >=0.7.5; missing runtimes produce an explicit fallback report. Consult references/visualization.md in the package. No external model service is required.
+
+## Notes and credits
+
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-claude.zip)
+- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-claude-plugin.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-gemini.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-cursor.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-copilot.zip)
+- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.11.1/DAZZLER-PROMPT.md)
+- [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-templates.zip)

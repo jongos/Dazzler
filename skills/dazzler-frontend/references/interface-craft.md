@@ -1,7 +1,5 @@
 # Interface craft
 
-Adapted from Samuel Berthe's [frontend-design-deslop references](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/references), under [MIT](deslop-LICENSE.txt). Use the sections relevant to the requested change; these are not instructions to build unrelated features.
-
 ## Layout, density and typography
 
 Make grouping visible through relationships: tighter space within a unit, more space between units; aligned baselines and edges; stable reading order. Give high-priority content room without applying landing-page whitespace to operational tools. Let content and available width determine the grid instead of forcing every screen into three equal columns. Design narrow layouts around the task, not by shrinking desktop text.
@@ -46,6 +44,13 @@ Use [the color workflow](color-workflow.md) to derive and measure semantic roles
 
 Keep keyboard focus visible and unobscured. An outline is valid and often robust in forced-colors modes; do not replace it with box-shadow solely for stylistic reasons. If shadows supply focus treatment, provide an appropriate forced-colors fallback. Check modal focus, reading order, labels, error association and meaningful link names. Provide non-color cues for statuses and chart categories and non-drag alternatives where required.
 
-Use WCAG 2.2 AA as the normal design target where applicable, without claiming conformance from partial checks. [Target Size Minimum, 2.5.8](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) requires 24 CSS px targets or qualifying spacing/other exceptions; comfortable touch targets are often larger. [Focus Appearance, 2.4.13](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html) is AAA, not AA. Its stronger appearance criteria can be a useful design goal without being mislabeled as an AA requirement.
+Use WCAG 2.2 AA as the normal design target where applicable, without claiming conformance from partial checks. Target Size Minimum, 2.5.8 requires 24 CSS px targets or qualifying spacing/other exceptions; comfortable touch targets are often larger. Focus Appearance, 2.4.13 is AAA, not AA. Its stronger appearance criteria can be a useful design goal without being mislabeled as an AA requirement.
 
 Inspect reflow and zoom, reduced motion and forced-colors behavior where relevant. Perform keyboard and assistive-technology checks when the environment supports them; otherwise state exactly what remains untested. A clean automated scan, grayscale image or simulation alone does not prove accessibility.
+
+## Notes and credits
+
+Adapted from Samuel Berthe's [frontend-design-deslop references](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/references), under [MIT](deslop-LICENSE.txt). Use the sections relevant to the requested change; these are not instructions to build unrelated features.
+
+- [Target Size Minimum, 2.5.8](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)
+- [Focus Appearance, 2.4.13](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html)
