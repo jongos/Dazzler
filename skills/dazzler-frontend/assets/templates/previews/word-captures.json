@@ -2,7 +2,7 @@
   {
     "id": "docx-professional",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "139ce7af7dec704bf2245ae72e72ef7b08bbe2b1f69d8e6a0c01dc5aa1efa487",
+    "sourceSha256": "421626332bbd633f2ae9e565d1f620619889c69da24a01d0c3c4ae782324a909",
     "pages": [
       "docx-professional-p1.jpg",
       "docx-professional-p2.jpg"
@@ -11,7 +11,7 @@
   {
     "id": "docx-legal",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "d33f0d0c502c1f5f54297fab0c741eb8dccc5f504a919af307beddb77c119ba7",
+    "sourceSha256": "260894c6ac888b4987396a533ea3e9d0f6ee5b9e045f6071b19eb9518969662a",
     "pages": [
       "docx-legal-p1.jpg",
       "docx-legal-p2.jpg"
@@ -20,7 +20,7 @@
   {
     "id": "docx-business",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "1a1700291e02621fda6fd47cfed247fc1286fb2996346a41468ee1a22df17bc2",
+    "sourceSha256": "ae417d8a4bcdfa59fed0006a791d50220ac5e19c8b887175578361d4947a710c",
     "pages": [
       "docx-business-p1.jpg",
       "docx-business-p2.jpg"
@@ -29,7 +29,7 @@
   {
     "id": "docx-fun",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "8ecb92dcea81d92960a835a5ab8f947877cefac54e30b85aaefe870955e3a61b",
+    "sourceSha256": "992e2a663227e434b7429d4b757769d297e2d72aab748ea7b2333bea37137da0",
     "pages": [
       "docx-fun-p1.jpg",
       "docx-fun-p2.jpg"
@@ -38,7 +38,7 @@
   {
     "id": "docx-family",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "3e4cf60e08d79da43c263b62e807fa76528bad28be7b812497928d29f6a37aef",
+    "sourceSha256": "9700d0031056f0465490d9755867697cf44eb9b173b711d1464e84cf466d91cf",
     "pages": [
       "docx-family-p1.jpg"
     ]
@@ -46,7 +46,7 @@
   {
     "id": "docx-presentation",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "3f4d0ad8abd5815fc4caee90c6f8f9fedab006e132945da4f6397b8284c45050",
+    "sourceSha256": "00aaf5ca0b2e8786f22929fdf257d67321426c6d648ba431503c640cdaf6785d",
     "pages": [
       "docx-presentation-p1.jpg",
       "docx-presentation-p2.jpg",
@@ -56,7 +56,7 @@
   {
     "id": "docx-school",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "273c6e3f30b3411639527fef01d003762d25cc21609278075ac40c6b89dbc1a2",
+    "sourceSha256": "23dbd78c483d0bc0ed224f70800a7009b9e75bac1cfc4e3fe3eeb88946010158",
     "pages": [
       "docx-school-p1.jpg",
       "docx-school-p2.jpg"
@@ -65,7 +65,7 @@
   {
     "id": "docx-marketing",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "55cba2a326b8d50114b00adcb7bf1601066e2513b643d98619b5baa8fe5fdca2",
+    "sourceSha256": "3bc143216db07169214a4f6b82a59519d7e8d622ca15913e502ab479e22cbe12",
     "pages": [
       "docx-marketing-p1.jpg",
       "docx-marketing-p2.jpg"
@@ -74,7 +74,7 @@
   {
     "id": "docx-restaurant",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "46e96e53399735efff22a6f01764c904856b4ccda7705c31a6944e2c5cd28c62",
+    "sourceSha256": "155731b4d289759c24bcb4175b3d254c2ebe27c5337bb1ad921f16920d315a3a",
     "pages": [
       "docx-restaurant-p1.jpg",
       "docx-restaurant-p2.jpg"
@@ -83,7 +83,7 @@
   {
     "id": "docx-technical",
     "engine": "Microsoft Word PDF / PDFium raster",
-    "sourceSha256": "d2196a23476660247f6c8cafa6279aa18efe7c8d2d461dd73e29ae83692630ad",
+    "sourceSha256": "4fd1d08b7df8900de2ab9903edd094309fa6d161bbe03276b11af30fc359ffde",
     "pages": [
       "docx-technical-p1.jpg",
       "docx-technical-p2.jpg"

@@ -39,7 +39,7 @@ Keep our brand colors, React components, and existing behavior.
 
 Dazzler checks actual text coverage, required weights and italics, features, and file size before comparing character. It exports selected project-local files with their licenses and CSS. Web work normally requires no desktop font installation.
 
-Browse the [font catalog](skills/dazzler-frontend/references/font-catalog.md), [typography workflow](skills/dazzler-frontend/references/typography.md), or [technical inventory](skills/dazzler-frontend/references/font-catalog.json). 
+Browse the [font catalog](skills/dazzler-frontend/references/font-catalog.md), [typography workflow](skills/dazzler-frontend/references/typography.md), or [technical inventory](skills/dazzler-frontend/references/font-catalog.json).
 
 ### Color Suite
 
@@ -51,7 +51,7 @@ A passing report covers its listed opaque-color pairs. It does **not** certify c
 
 The adapted [design framework](skills/dazzler-frontend/references/deslop.md) connects purpose to visual decisions, supported by [interface craft](skills/dazzler-frontend/references/interface-craft.md), an optional [design record](skills/dazzler-frontend/references/design-record.md), and a [design audit](skills/dazzler-frontend/references/design-audit.md). It preserves your direction without universal font/color bans or compulsory approvals for aesthetic choices.
 
-## ✦ The Dazzler studio — new in 0.8.0
+## ✦ The Dazzler studio
 
 Ten connected tools extend the automatic workflow. Ask for the outcome; Dazzler selects the relevant tools internally.
 
@@ -150,7 +150,7 @@ python skills/dazzler-frontend/scripts/fonts.py export work-sans --dest ./public
 node skills/dazzler-frontend/scripts/colors.mjs recommend --mood "cozy minimal"
 node skills/dazzler-frontend/scripts/colors.mjs generate --base '#7048E8' --harmony splitComplementary --out ./palette-review
 python -m unittest discover -s tests -p "test_*.py"
-node --test tests/colors.test.mjs
+npm test
 ```
 
 Font export preserves notices and makes project-local copies; it never installs OS fonts. Rankings are shortlist heuristics, not aesthetic verdicts. Color export requires a new destination and includes notices; evaluate the actual project with its selected typography.
@@ -159,7 +159,7 @@ Maintainers rebuild the color engine with exact versions in `package-lock.json`.
 
 </details>
 
-Completed agent-driven maintenance includes validation, a commit, and a push, as documented in [AGENTS.md](AGENTS.md) and [MAINTENANCE.md](skills/dazzler-frontend/MAINTENANCE.md). 
+Completed agent-driven maintenance includes validation, a commit, and a push, as documented in [AGENTS.md](AGENTS.md) and [MAINTENANCE.md](maintenance/MAINTENANCE.md).
 
 ## 💌 Feedback, feature requests & ideas
 
@@ -201,7 +201,7 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).

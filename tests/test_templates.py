@@ -8,79 +8,182 @@ from collections import Counter
 from zipfile import ZipFile
 from xml.etree import ElementTree as ET
 
-ROOT=Path(__file__).resolve().parents[1]
-spec=importlib.util.spec_from_file_location('templates',ROOT/'skills/dazzler-frontend/scripts/templates.py');templates=importlib.util.module_from_spec(spec);spec.loader.exec_module(templates)
+ROOT = Path(__file__).resolve().parents[1]
+spec = importlib.util.spec_from_file_location(
+    "templates", ROOT / "skills/dazzler-frontend/scripts/templates.py"
+)
+templates = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(templates)
+
 
 class TemplateTests(unittest.TestCase):
     def test_counts_categories_and_integrity(self):
-        c=templates.catalog();self.assertEqual(Counter(t['format'] for t in c['templates']),{'docx':10,'html':10,'ui':10})
-        self.assertEqual(Counter(t['category'] for t in c['templates'] if t['format']=='ui'),{'general-webapp':3,'data-visualization':2,'restaurant':4,'generic-business':1})
-        for path,digest in c['files'].items():self.assertEqual(hashlib.sha256((templates.ROOT/path).read_bytes()).hexdigest(),digest,path)
+        c = templates.catalog()
+        self.assertEqual(
+            Counter(t["format"] for t in c["templates"]),
+            {"docx": 10, "html": 10, "ui": 10},
+        )
+        self.assertEqual(
+            Counter(t["category"] for t in c["templates"] if t["format"] == "ui"),
+            {
+                "general-webapp": 3,
+                "data-visualization": 2,
+                "restaurant": 4,
+                "generic-business": 1,
+            },
+        )
+        for path, digest in c["files"].items():
+            self.assertEqual(
+                hashlib.sha256((templates.ROOT / path).read_bytes()).hexdigest(),
+                digest,
+                path,
+            )
+
     def test_exports_preserve_resources_and_refuse_overwrite(self):
         with tempfile.TemporaryDirectory() as td:
-            for ident in ['docx-legal','html-family','restaurant-cafe']:
-                out=Path(td)/ident;result=templates.export(ident,out);self.assertTrue(Path(result['entrypoint']).is_file());self.assertTrue((out/'LICENSE.txt').is_file())
-                if result['format']!='docx':self.assertTrue((out/'fonts/work-sans/fonts.css').is_file())
-                with self.assertRaises(ValueError):templates.export(ident,out)
-            with self.assertRaises(ValueError):templates.export('unknown',Path(td)/'unknown')
+            for ident in ["docx-legal", "html-family", "restaurant-cafe"]:
+                out = Path(td) / ident
+                result = templates.export(ident, out)
+                self.assertTrue(Path(result["entrypoint"]).is_file())
+                self.assertTrue((out / "LICENSE.txt").is_file())
+                if result["format"] != "docx":
+                    self.assertTrue((out / "fonts/work-sans/fonts.css").is_file())
+                with self.assertRaises(ValueError):
+                    templates.export(ident, out)
+            with self.assertRaises(ValueError):
+                templates.export("unknown", Path(td) / "unknown")
+
     def test_word_structure_and_no_inherited_title_rule(self):
-        ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
-        for t in templates.select('docx'):
-            with ZipFile(templates.ROOT/t['path']) as z:
-                document=ET.fromstring(z.read('word/document.xml'));styles=ET.fromstring(z.read('word/styles.xml'))
-                self.assertFalse(styles.findall('.//w:pBdr',ns))
-                self.assertTrue(document.findall('.//w:tbl',ns));self.assertTrue(document.findall('.//w:tblHeader',ns))
-                self.assertGreater(len(''.join(document.itertext())),800,t['id'])
-                self.assertEqual(len(document.findall('.//w:br[@w:type="page"]',ns))+1,t['plannedPages'])
+        ns = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
+        for t in templates.select("docx"):
+            with ZipFile(templates.ROOT / t["path"]) as z:
+                document = ET.fromstring(z.read("word/document.xml"))
+                styles = ET.fromstring(z.read("word/styles.xml"))
+                self.assertFalse(styles.findall(".//w:pBdr", ns))
+                self.assertTrue(document.findall(".//w:tbl", ns))
+                self.assertTrue(document.findall(".//w:tblHeader", ns))
+                self.assertGreater(len("".join(document.itertext())), 800, t["id"])
+                self.assertEqual(
+                    len(document.findall('.//w:br[@w:type="page"]', ns)) + 1,
+                    t["plannedPages"],
+                )
+
     def test_json_matches_embedded_data(self):
         import re
-        for t in templates.select('ui'):
-            folder=templates.ROOT/t['path'];s=(folder/'index.html').read_text(encoding='utf-8')
-            embedded=re.search(r'<script id="template-data" type="application/json">(.*?)</script>',s,re.S).group(1)
-            self.assertEqual(json.loads(embedded),json.loads((folder/'template.json').read_text(encoding='utf-8')))
+
+        for t in templates.select("ui"):
+            folder = templates.ROOT / t["path"]
+            s = (folder / "index.html").read_text(encoding="utf-8")
+            embedded = re.search(
+                r'<script id="template-data" type="application/json">(.*?)</script>',
+                s,
+                re.S,
+            ).group(1)
+            self.assertEqual(
+                json.loads(embedded),
+                json.loads((folder / "template.json").read_text(encoding="utf-8")),
+            )
 
     def test_showcase_data_reconciles(self):
-        load=lambda name:json.loads((templates.ROOT/'data'/f'{name}.json').read_text(encoding='utf-8'))
-        for item in templates.select('docx'):
-            data=load(item['category']);self.assertTrue(data['fictional'])
-            self.assertEqual(len(data['document']),item['plannedPages'])
-        budget=load('professional')['budget'];self.assertEqual(budget['spent']+budget['remaining'],budget['approved'])
-        payments=load('business')['payments'];self.assertEqual(sum(p['usd'] for p in payments),12000);self.assertEqual(sum(p['percent'] for p in payments),100)
-        self.assertEqual(sum(load('marketing')['budget'].values()),3000)
-        outcomes=load('technical')['delivery'];self.assertEqual(sum(outcomes[k] for k in ('firstAttempt','retriedSuccess','held')),outcomes['total'])
-        plants=load('school')['measurements']
-        for hours,expected in [(4,7.2),(8,8.2)]:self.assertAlmostEqual(sum(p['day14'] for p in plants if p['lightHours']==hours)/3,expected)
-        family=load('family');rows=next(b['rows'] for b in family['document'][0]['blocks'] if b['type']=='table')
-        self.assertEqual(family['weeklyMeals'],[{'day':r[0],'meal':r[3]} for r in rows])
-        revenue=json.loads((templates.ROOT/'ui/data-revenue/template.json').read_text(encoding='utf-8'))['months']
-        self.assertEqual(len(revenue),12);self.assertEqual(sum(r['gross']-r['refunds'] for r in revenue),777580)
+        load = lambda name: json.loads(
+            (templates.ROOT / "data" / f"{name}.json").read_text(encoding="utf-8")
+        )
+        for item in templates.select("docx"):
+            data = load(item["category"])
+            self.assertTrue(data["fictional"])
+            self.assertEqual(len(data["document"]), item["plannedPages"])
+        budget = load("professional")["budget"]
+        self.assertEqual(budget["spent"] + budget["remaining"], budget["approved"])
+        payments = load("business")["payments"]
+        self.assertEqual(sum(p["usd"] for p in payments), 12000)
+        self.assertEqual(sum(p["percent"] for p in payments), 100)
+        self.assertEqual(sum(load("marketing")["budget"].values()), 3000)
+        outcomes = load("technical")["delivery"]
+        self.assertEqual(
+            sum(outcomes[k] for k in ("firstAttempt", "retriedSuccess", "held")),
+            outcomes["total"],
+        )
+        plants = load("school")["measurements"]
+        for hours, expected in [(4, 7.2), (8, 8.2)]:
+            self.assertAlmostEqual(
+                sum(p["day14"] for p in plants if p["lightHours"] == hours) / 3,
+                expected,
+            )
+        family = load("family")
+        rows = next(
+            b["rows"] for b in family["document"][0]["blocks"] if b["type"] == "table"
+        )
+        self.assertEqual(
+            family["weeklyMeals"], [{"day": r[0], "meal": r[3]} for r in rows]
+        )
+        revenue = json.loads(
+            (templates.ROOT / "ui/data-revenue/template.json").read_text(
+                encoding="utf-8"
+            )
+        )["months"]
+        self.assertEqual(len(revenue), 12)
+        self.assertEqual(sum(r["gross"] - r["refunds"] for r in revenue), 777580)
 
     def test_showcase_snapshots_and_exported_dependencies(self):
-        for item in templates.catalog()['templates']:
-            self.assertGreater((templates.ROOT/'previews'/f'{item["id"]}.jpg').stat().st_size,10000)
+        for item in templates.catalog()["templates"]:
+            self.assertGreater(
+                (templates.ROOT / "previews" / f'{item["id"]}.jpg').stat().st_size,
+                10000,
+            )
         with tempfile.TemporaryDirectory() as td:
-            for ident in ['html-school','data-revenue','restaurant-reservations']:
-                out=Path(td)/ident;templates.export(ident,out)
-                if ident=='html-school':self.assertTrue((out/'data/school.json').is_file());self.assertTrue((out/'charts/school-1.svg').is_file())
-                elif ident=='data-revenue':self.assertTrue((out/'charts/data-revenue.svg').is_file())
-                else:self.assertTrue((out/'ui/restaurant-reservations/seating/runtime.js').is_file())
-        captures=[]
-        for name in ['word-captures.json','browser-captures.json']:captures.extend(json.loads((templates.ROOT/'previews'/name).read_text(encoding='utf-8')))
-        by_id={item['id']:item for item in captures};self.assertEqual(len(by_id),30)
-        for item in templates.catalog()['templates']:
-            source=templates.ROOT/item['path']
-            if item['format']=='ui':source=source/'index.html'
-            self.assertEqual(hashlib.sha256(source.read_bytes()).hexdigest(),by_id[item['id']]['sourceSha256'])
+            for ident in ["html-school", "data-revenue", "restaurant-reservations"]:
+                out = Path(td) / ident
+                templates.export(ident, out)
+                if ident == "html-school":
+                    self.assertTrue((out / "data/school.json").is_file())
+                    self.assertTrue((out / "charts/school-1.svg").is_file())
+                elif ident == "data-revenue":
+                    self.assertTrue((out / "charts/data-revenue.svg").is_file())
+                else:
+                    self.assertTrue(
+                        (
+                            out / "ui/restaurant-reservations/seating/runtime.js"
+                        ).is_file()
+                    )
+        captures = []
+        for name in ["word-captures.json", "browser-captures.json"]:
+            captures.extend(
+                json.loads(
+                    (templates.ROOT / "previews" / name).read_text(encoding="utf-8")
+                )
+            )
+        by_id = {item["id"]: item for item in captures}
+        self.assertEqual(len(by_id), 30)
+        for item in templates.catalog()["templates"]:
+            source = templates.ROOT / item["path"]
+            if item["format"] == "ui":
+                source = source / "index.html"
+            self.assertEqual(
+                hashlib.sha256(source.read_bytes()).hexdigest(),
+                by_id[item["id"]]["sourceSha256"],
+            )
 
     def test_document_theme_text_contrast(self):
         def luminance(color):
-            channels=[int(color[i:i+2],16)/255 for i in (1,3,5)]
-            linear=[v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in channels]
-            return sum(a*b for a,b in zip(linear,[.2126,.7152,.0722]))
-        for item in templates.select('docx'):
-            theme=json.loads((templates.ROOT/item['dataset']).read_text(encoding='utf-8'))['design']
-            for role in ['accent','secondary']:
-                values=sorted([luminance(theme[role]),luminance(theme['paper'])])
-                self.assertGreaterEqual((values[1]+.05)/(values[0]+.05),4.5,item['id']+' '+role)
+            channels = [int(color[i : i + 2], 16) / 255 for i in (1, 3, 5)]
+            linear = [
+                v / 12.92 if v <= 0.04045 else ((v + 0.055) / 1.055) ** 2.4
+                for v in channels
+            ]
+            return sum(a * b for a, b in zip(linear, [0.2126, 0.7152, 0.0722]))
 
-if __name__=='__main__':unittest.main()
+        for item in templates.select("docx"):
+            theme = json.loads(
+                (templates.ROOT / item["dataset"]).read_text(encoding="utf-8")
+            )["design"]
+            for role in ["accent", "secondary"]:
+                values = sorted([luminance(theme[role]), luminance(theme["paper"])])
+                self.assertGreaterEqual(
+                    (values[1] + 0.05) / (values[0] + 0.05),
+                    4.5,
+                    item["id"] + " " + role,
+                )
+
+
+if __name__ == "__main__":
+    unittest.main()

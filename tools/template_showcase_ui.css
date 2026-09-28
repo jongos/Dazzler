@@ -1,4 +1,593 @@
-body{background:var(--paper);font-variant-numeric:tabular-nums}h1,h2,.brand{font-family:var(--display),'Work Sans',sans-serif}h1{font-size:clamp(34px,4.4vw,60px);max-width:22ch;line-height:1.03}.page-title{padding:12px 0 24px;border-bottom:3px solid var(--accent)}.page-title p{max-width:70ch}.top{border-top:7px solid var(--bright);height:85px}.brand{font-size:29px}.metrics .metric-card{border:0;border-top:5px solid var(--accent);border-radius:0;padding:25px}.metric-card strong{font:700 38px var(--display),'Work Sans',sans-serif;letter-spacing:-.045em}.project-row{border:0;border-left:5px solid var(--accent);border-radius:0;padding:28px}.project-row:nth-child(2n){border-left-color:var(--secondary)}.showcase-panel{display:grid;grid-template-columns:1fr 1.8fr;gap:35px;border-top:3px solid var(--accent);padding:35px;margin-top:38px;background:white}.showcase-panel h2{font-size:30px;max-width:16ch;color:var(--accent)}.showcase-panel p{font-size:14px;max-width:50ch}.showcase-panel figure{margin:0;min-width:0}.showcase-panel img{width:100%;height:auto}.showcase-panel details{font-size:12px}.producer-story,.morning-note,.market-note{margin-top:50px;padding:44px;background:var(--bright);color:#24273A}.producer-story h2,.morning-note h2,.market-note h2{font-size:44px;line-height:1.05;font-weight:500;letter-spacing:-.04em}.producer-story em,.morning-note em{color:var(--secondary)}.producer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;border-top:1px solid currentColor;padding-top:25px}.producer-grid strong{font-size:20px}.producer-grid p{font-size:13px}.morning-note{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}.morning-note svg{width:100%;max-width:420px;align-self:center}.room-guide{margin:45px 0;padding:35px;background:#EDE2F6}.room-guide h2{font-size:34px;color:var(--accent)}.room-guide iframe{width:100%;height:830px;border:0;background:white}.print-plan{display:none}.template-workspace .top{background:#1B326B;color:white}.template-workspace .top a{color:white}.template-workspace .top .avatar{background:#FBD66A;color:#1B326B}.template-workspace .page-title h1{color:#2149B7}.template-board .page-title{border-bottom:0}.template-board .board-column{border-top:7px solid var(--accent);background:#E9E2F7}.template-board .board-column:nth-child(2){border-color:#A94428;background:#F9EEDC}.template-board .board-column:nth-child(3){border-color:#236E65;background:#DEF1E9}.template-board .board-column:nth-child(4){border-color:#576275;background:#E5EBF3}.template-board .task{border:0;border-radius:10px;box-shadow:0 3px 0 #24134712}.template-settings .top{border-top-color:#BCE5D8}.template-settings .panel{border:0;border-left:5px solid #BCE5D8;border-radius:0}.template-settings h1{font-weight:400;color:#096B61}.template-settings .savebar{background:#DCEFE4;padding:18px}.template-revenue .top{background:#143C31}.template-revenue .top a{color:#F0F8D1}.template-revenue .metric-card{background:#143C31;color:#F6F9E7;border-color:#D8EC75}.template-revenue .metric-card small,.template-revenue .metric-card p{color:#E1EACB}.template-revenue .metric-card strong{font-size:43px;color:#DAED83}.template-revenue .revenue-chart .fill{background:#176A58}.template-revenue .revenue-chart .bar:nth-child(3n) .fill{background:#6748B1}.template-revenue .panel{border-radius:0}.template-operations .top{background:#172C45}.template-operations .top a{color:#F1F6FD}.template-operations .page-title h1{font-size:43px;color:#1B5681;letter-spacing:-.055em}.template-operations .ticket{border-left:4px solid #1B5681}.template-operations .ticket:has(.warning){border-left-color:#B63838}.template-dining .dining-hero{background:#5A1D2D;color:#FFF6DF;padding:44px;gap:40px}.template-dining .dining-hero h1{font-size:70px;line-height:1.04;color:#FFE5BA;font-weight:400}.template-dining .dining-hero .eyebrow,.template-dining .dining-hero .service,.template-dining .dining-hero figcaption{color:#F1D4AD}.template-dining .dining-hero .button{background:#E7BD6A;color:#422233;border-color:#E7BD6A}.template-dining .tasting h2{font-size:40px;color:#82283D}.template-dining .visit{border-top:3px solid #82283D}.template-cafe .cafe-heading{background:#F9C638;padding:35px 42px;margin:28px 0}.template-cafe .cafe-heading h1{font-size:65px;color:#732B15;letter-spacing:-.05em}.template-cafe .product{border:0;border-top:5px solid #A83B19;background:#FFFCF4}.template-cafe .product:nth-child(3n){border-color:#3C4B9C}.template-cafe .order{background:#FFFDF6;border:2px solid #A83B19;border-radius:0}.template-reservations h1{font-size:64px;font-weight:400;color:#593478}.template-reservations .booking-card{border-top:9px solid #236B62;background:#FFFFFF;box-shadow:15px 15px 0 #E8DCF1;border-radius:0}.template-reservations .time-slots span{border-radius:30px}.template-menu .menu-heading{padding:35px 0;border-top:6px solid #3A6325;border-bottom:1px solid #3A6325}.template-menu .menu-heading h1{color:#3A6325;font-weight:400;font-size:56px}.template-menu .menu-dish{background:#FFFDF2;border:0;border-bottom:3px solid #CFDABB;border-radius:0}.template-menu .menu-dish h3{font:23px 'Young Serif',Georgia,serif;color:#3A6325}.template-menu .menu-dish header>strong{color:#A63E25}.template-business .client-banner{background:#193D7D;color:#F4F6FD;border-radius:0;padding:35px}.template-business .client-banner p,.template-business .client-banner .eyebrow{color:#E0E9FF}.template-business .client-banner .button{background:#F4CAD9;color:#612039;border:0}.template-business .project-facts{color:#E0E9FF}.template-business .deliverable{border:0;border-left:5px solid #A1395D;background:white}.site-footer{border-top:2px solid var(--accent)}
-@media(max-width:750px){.showcase-panel,.morning-note{grid-template-columns:1fr;padding:23px;gap:18px}.producer-story,.market-note{padding:24px}.producer-grid{grid-template-columns:1fr}.producer-story h2,.morning-note h2,.market-note h2{font-size:34px}.room-guide{padding:15px}.room-guide iframe{height:1150px}.template-dining .dining-hero{padding:25px}.template-dining .dining-hero h1,.template-cafe .cafe-heading h1,.template-reservations h1,.template-menu .menu-heading h1{font-size:43px}.template-cafe .cafe-heading{padding:26px}.template-operations .page-title h1{font-size:32px}.template-revenue .metric-card strong{font-size:36px}.template-reservations .booking-card{box-shadow:none}.producer-story h2{overflow-wrap:anywhere}.revenue-chart{overflow:auto}.bar{min-width:40px!important}.top .brand{font-size:23px}}
-@page{size:letter;margin:13mm}@media print{body{background:white;color:#172033;font-size:10pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}.demo,.top nav,.filters,button,.button,.savebar,dialog,.skip,.status{display:none!important}.top{height:auto;padding:12px 0;background:white!important;border-top:4px solid #333}.top a{color:#172033!important}main{padding:20px 0;max-width:none}.page-title{padding:0;margin-bottom:15px}h1,.template-cafe .cafe-heading h1,.template-dining .dining-hero h1,.template-reservations h1,.template-menu .menu-heading h1{font-size:28pt!important}.split,.order-layout,.reservation-layout,.showcase-panel{display:block}.rail{border:0;padding:15px 0}.metrics{display:grid;grid-template-columns:repeat(3,1fr)}.metric-card{padding:12px!important}.metric-card strong{font-size:23pt!important}.panel,.project-row,.task,.ticket,.deliverable,.product,.menu-dish,.showcase-panel,.booking-card{break-inside:avoid}.board{display:grid;grid-template-columns:repeat(2,1fr)}.board-column{break-inside:avoid}.task{padding:12px}.table-wrap{overflow:visible}table{font-size:8pt}.showcase-panel{padding:20px 0}.showcase-panel h2{font-size:20pt;max-width:none}.showcase-panel img{max-height:180px;object-fit:contain}.showcase-panel details{display:none}.room-guide iframe{display:none}.print-plan{display:block;max-width:100%;max-height:250px}.room-guide{padding:15px}.producer-story,.morning-note,.market-note{margin-top:20px;padding:20px;break-inside:avoid}.producer-story h2,.morning-note h2,.market-note h2{font-size:25pt}.dining-hero,.tasting,.visit{break-inside:avoid}.site-footer{margin-top:20px;padding:12px 0}.site-footer details{display:none}.revenue-chart{overflow:visible}.bar strong{font-size:8px}.order{position:static!important}.product-grid,.menu-grid{grid-template-columns:repeat(2,1fr)}input,select,textarea{border:1px solid #444;padding:5px}.morning-note svg{max-height:170px}}
-.template-cafe .cafe-heading h1{font-family:Poppins,Arial,sans-serif}body.restaurant{background:var(--paper)}
+body {
+  background: var(--paper);
+  font-variant-numeric: tabular-nums;
+}
+h1,
+h2,
+.brand {
+  font-family: var(--display), "Work Sans", sans-serif;
+}
+h1 {
+  font-size: clamp(34px, 4.4vw, 60px);
+  max-width: 22ch;
+  line-height: 1.03;
+}
+.page-title {
+  padding: 12px 0 24px;
+  border-bottom: 3px solid var(--accent);
+}
+.page-title p {
+  max-width: 70ch;
+}
+.top {
+  border-top: 7px solid var(--bright);
+  height: 85px;
+}
+.brand {
+  font-size: 29px;
+}
+.metrics .metric-card {
+  border: 0;
+  border-top: 5px solid var(--accent);
+  border-radius: 0;
+  padding: 25px;
+}
+.metric-card strong {
+  font:
+    700 38px var(--display),
+    "Work Sans",
+    sans-serif;
+  letter-spacing: -0.045em;
+}
+.project-row {
+  border: 0;
+  border-left: 5px solid var(--accent);
+  border-radius: 0;
+  padding: 28px;
+}
+.project-row:nth-child(2n) {
+  border-left-color: var(--secondary);
+}
+.showcase-panel {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 35px;
+  border-top: 3px solid var(--accent);
+  padding: 35px;
+  margin-top: 38px;
+  background: white;
+}
+.showcase-panel h2 {
+  font-size: 30px;
+  max-width: 16ch;
+  color: var(--accent);
+}
+.showcase-panel p {
+  font-size: 14px;
+  max-width: 50ch;
+}
+.showcase-panel figure {
+  margin: 0;
+  min-width: 0;
+}
+.showcase-panel img {
+  width: 100%;
+  height: auto;
+}
+.showcase-panel details {
+  font-size: 12px;
+}
+.producer-story,
+.morning-note,
+.market-note {
+  margin-top: 50px;
+  padding: 44px;
+  background: var(--bright);
+  color: #24273a;
+}
+.producer-story h2,
+.morning-note h2,
+.market-note h2 {
+  font-size: 44px;
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+.producer-story em,
+.morning-note em {
+  color: var(--secondary);
+}
+.producer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  border-top: 1px solid currentColor;
+  padding-top: 25px;
+}
+.producer-grid strong {
+  font-size: 20px;
+}
+.producer-grid p {
+  font-size: 13px;
+}
+.morning-note {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+}
+.morning-note svg {
+  width: 100%;
+  max-width: 420px;
+  align-self: center;
+}
+.room-guide {
+  margin: 45px 0;
+  padding: 35px;
+  background: #ede2f6;
+}
+.room-guide h2 {
+  font-size: 34px;
+  color: var(--accent);
+}
+.room-guide iframe {
+  width: 100%;
+  height: 830px;
+  border: 0;
+  background: white;
+}
+.print-plan {
+  display: none;
+}
+.template-workspace .top {
+  background: #1b326b;
+  color: white;
+}
+.template-workspace .top a {
+  color: white;
+}
+.template-workspace .top .avatar {
+  background: #fbd66a;
+  color: #1b326b;
+}
+.template-workspace .page-title h1 {
+  color: #2149b7;
+}
+.template-board .page-title {
+  border-bottom: 0;
+}
+.template-board .board-column {
+  border-top: 7px solid var(--accent);
+  background: #e9e2f7;
+}
+.template-board .board-column:nth-child(2) {
+  border-color: #a94428;
+  background: #f9eedc;
+}
+.template-board .board-column:nth-child(3) {
+  border-color: #236e65;
+  background: #def1e9;
+}
+.template-board .board-column:nth-child(4) {
+  border-color: #576275;
+  background: #e5ebf3;
+}
+.template-board .task {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 0 #24134712;
+}
+.template-settings .top {
+  border-top-color: #bce5d8;
+}
+.template-settings .panel {
+  border: 0;
+  border-left: 5px solid #bce5d8;
+  border-radius: 0;
+}
+.template-settings h1 {
+  font-weight: 400;
+  color: #096b61;
+}
+.template-settings .savebar {
+  background: #dcefe4;
+  padding: 18px;
+}
+.template-revenue .top {
+  background: #143c31;
+}
+.template-revenue .top a {
+  color: #f0f8d1;
+}
+.template-revenue .metric-card {
+  background: #143c31;
+  color: #f6f9e7;
+  border-color: #d8ec75;
+}
+.template-revenue .metric-card small,
+.template-revenue .metric-card p {
+  color: #e1eacb;
+}
+.template-revenue .metric-card strong {
+  font-size: 43px;
+  color: #daed83;
+}
+.template-revenue .revenue-chart .fill {
+  background: #176a58;
+}
+.template-revenue .revenue-chart .bar:nth-child(3n) .fill {
+  background: #6748b1;
+}
+.template-revenue .panel {
+  border-radius: 0;
+}
+.template-operations .top {
+  background: #172c45;
+}
+.template-operations .top a {
+  color: #f1f6fd;
+}
+.template-operations .page-title h1 {
+  font-size: 43px;
+  color: #1b5681;
+  letter-spacing: -0.055em;
+}
+.template-operations .ticket {
+  border-left: 4px solid #1b5681;
+}
+.template-operations .ticket:has(.warning) {
+  border-left-color: #b63838;
+}
+.template-dining .dining-hero {
+  background: #5a1d2d;
+  color: #fff6df;
+  padding: 44px;
+  gap: 40px;
+}
+.template-dining .dining-hero h1 {
+  font-size: 70px;
+  line-height: 1.04;
+  color: #ffe5ba;
+  font-weight: 400;
+}
+.template-dining .dining-hero .eyebrow,
+.template-dining .dining-hero .service,
+.template-dining .dining-hero figcaption {
+  color: #f1d4ad;
+}
+.template-dining .dining-hero .button {
+  background: #e7bd6a;
+  color: #422233;
+  border-color: #e7bd6a;
+}
+.template-dining .tasting h2 {
+  font-size: 40px;
+  color: #82283d;
+}
+.template-dining .visit {
+  border-top: 3px solid #82283d;
+}
+.template-cafe .cafe-heading {
+  background: #f9c638;
+  padding: 35px 42px;
+  margin: 28px 0;
+}
+.template-cafe .cafe-heading h1 {
+  font-size: 65px;
+  color: #732b15;
+  letter-spacing: -0.05em;
+}
+.template-cafe .product {
+  border: 0;
+  border-top: 5px solid #a83b19;
+  background: #fffcf4;
+}
+.template-cafe .product:nth-child(3n) {
+  border-color: #3c4b9c;
+}
+.template-cafe .order {
+  background: #fffdf6;
+  border: 2px solid #a83b19;
+  border-radius: 0;
+}
+.template-reservations h1 {
+  font-size: 64px;
+  font-weight: 400;
+  color: #593478;
+}
+.template-reservations .booking-card {
+  border-top: 9px solid #236b62;
+  background: #ffffff;
+  box-shadow: 15px 15px 0 #e8dcf1;
+  border-radius: 0;
+}
+.template-reservations .time-slots span {
+  border-radius: 30px;
+}
+.template-menu .menu-heading {
+  padding: 35px 0;
+  border-top: 6px solid #3a6325;
+  border-bottom: 1px solid #3a6325;
+}
+.template-menu .menu-heading h1 {
+  color: #3a6325;
+  font-weight: 400;
+  font-size: 56px;
+}
+.template-menu .menu-dish {
+  background: #fffdf2;
+  border: 0;
+  border-bottom: 3px solid #cfdabb;
+  border-radius: 0;
+}
+.template-menu .menu-dish h3 {
+  font:
+    23px "Young Serif",
+    Georgia,
+    serif;
+  color: #3a6325;
+}
+.template-menu .menu-dish header > strong {
+  color: #a63e25;
+}
+.template-business .client-banner {
+  background: #193d7d;
+  color: #f4f6fd;
+  border-radius: 0;
+  padding: 35px;
+}
+.template-business .client-banner p,
+.template-business .client-banner .eyebrow {
+  color: #e0e9ff;
+}
+.template-business .client-banner .button {
+  background: #f4cad9;
+  color: #612039;
+  border: 0;
+}
+.template-business .project-facts {
+  color: #e0e9ff;
+}
+.template-business .deliverable {
+  border: 0;
+  border-left: 5px solid #a1395d;
+  background: white;
+}
+.site-footer {
+  border-top: 2px solid var(--accent);
+}
+@media (max-width: 750px) {
+  .showcase-panel,
+  .morning-note {
+    grid-template-columns: 1fr;
+    padding: 23px;
+    gap: 18px;
+  }
+  .producer-story,
+  .market-note {
+    padding: 24px;
+  }
+  .producer-grid {
+    grid-template-columns: 1fr;
+  }
+  .producer-story h2,
+  .morning-note h2,
+  .market-note h2 {
+    font-size: 34px;
+  }
+  .room-guide {
+    padding: 15px;
+  }
+  .room-guide iframe {
+    height: 1150px;
+  }
+  .template-dining .dining-hero {
+    padding: 25px;
+  }
+  .template-dining .dining-hero h1,
+  .template-cafe .cafe-heading h1,
+  .template-reservations h1,
+  .template-menu .menu-heading h1 {
+    font-size: 43px;
+  }
+  .template-cafe .cafe-heading {
+    padding: 26px;
+  }
+  .template-operations .page-title h1 {
+    font-size: 32px;
+  }
+  .template-revenue .metric-card strong {
+    font-size: 36px;
+  }
+  .template-reservations .booking-card {
+    box-shadow: none;
+  }
+  .producer-story h2 {
+    overflow-wrap: anywhere;
+  }
+  .revenue-chart {
+    overflow: auto;
+  }
+  .bar {
+    min-width: 40px !important;
+  }
+  .top .brand {
+    font-size: 23px;
+  }
+}
+@page {
+  size: letter;
+  margin: 13mm;
+}
+@media print {
+  body {
+    background: white;
+    color: #172033;
+    font-size: 10pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .demo,
+  .top nav,
+  .filters,
+  button,
+  .button,
+  .savebar,
+  dialog,
+  .skip,
+  .status {
+    display: none !important;
+  }
+  .top {
+    height: auto;
+    padding: 12px 0;
+    background: white !important;
+    border-top: 4px solid #333;
+  }
+  .top a {
+    color: #172033 !important;
+  }
+  main {
+    padding: 20px 0;
+    max-width: none;
+  }
+  .page-title {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  h1,
+  .template-cafe .cafe-heading h1,
+  .template-dining .dining-hero h1,
+  .template-reservations h1,
+  .template-menu .menu-heading h1 {
+    font-size: 28pt !important;
+  }
+  .split,
+  .order-layout,
+  .reservation-layout,
+  .showcase-panel {
+    display: block;
+  }
+  .rail {
+    border: 0;
+    padding: 15px 0;
+  }
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .metric-card {
+    padding: 12px !important;
+  }
+  .metric-card strong {
+    font-size: 23pt !important;
+  }
+  .panel,
+  .project-row,
+  .task,
+  .ticket,
+  .deliverable,
+  .product,
+  .menu-dish,
+  .showcase-panel,
+  .booking-card {
+    break-inside: avoid;
+  }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .board-column {
+    break-inside: avoid;
+  }
+  .task {
+    padding: 12px;
+  }
+  .table-wrap {
+    overflow: visible;
+  }
+  table {
+    font-size: 8pt;
+  }
+  .showcase-panel {
+    padding: 20px 0;
+  }
+  .showcase-panel h2 {
+    font-size: 20pt;
+    max-width: none;
+  }
+  .showcase-panel img {
+    max-height: 180px;
+    object-fit: contain;
+  }
+  .showcase-panel details {
+    display: none;
+  }
+  .room-guide iframe {
+    display: none;
+  }
+  .print-plan {
+    display: block;
+    max-width: 100%;
+    max-height: 250px;
+  }
+  .room-guide {
+    padding: 15px;
+  }
+  .producer-story,
+  .morning-note,
+  .market-note {
+    margin-top: 20px;
+    padding: 20px;
+    break-inside: avoid;
+  }
+  .producer-story h2,
+  .morning-note h2,
+  .market-note h2 {
+    font-size: 25pt;
+  }
+  .dining-hero,
+  .tasting,
+  .visit {
+    break-inside: avoid;
+  }
+  .site-footer {
+    margin-top: 20px;
+    padding: 12px 0;
+  }
+  .site-footer details {
+    display: none;
+  }
+  .revenue-chart {
+    overflow: visible;
+  }
+  .bar strong {
+    font-size: 8px;
+  }
+  .order {
+    position: static !important;
+  }
+  .product-grid,
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  input,
+  select,
+  textarea {
+    border: 1px solid #444;
+    padding: 5px;
+  }
+  .morning-note svg {
+    max-height: 170px;
+  }
+}
+.template-cafe .cafe-heading h1 {
+  font-family: Poppins, Arial, sans-serif;
+}
+body.restaurant {
+  background: var(--paper);
+}
+
+.template-cafe .cafe-heading > .eyebrow,
+.template-cafe .morning-note > div > .eyebrow {
+  color: #732b15;
+}

@@ -1,1 +1,1 @@
-export {DOMParser,XMLSerializer} from '@xmldom/xmldom';
+export { DOMParser, XMLSerializer } from "@xmldom/xmldom";

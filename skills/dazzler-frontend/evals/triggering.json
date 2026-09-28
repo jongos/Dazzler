@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "baselineDescription": "Automatically design and refine interfaces, branded documents and slides. Import brand evidence, choose licensed fonts and assets, generate measured tokens and data visualizations, implement and inspect. Offer controls only when requested; preserve the user's brand and stack.",
+  "cases": [
+    {
+      "id": "positive-01",
+      "prompt": "Build a landing page for a community theatre.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-02",
+      "prompt": "Design a dashboard for our support queue.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-03",
+      "prompt": "Make this React component look better.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-04",
+      "prompt": "Restyle these Tailwind cards for a warmer brand.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-05",
+      "prompt": "Create an editorial website for a local magazine.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-06",
+      "prompt": "Choose fonts for a reading app.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-07",
+      "prompt": "Find a color palette for a neighborhood caf\u00e9.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-08",
+      "prompt": "Make this app UI less generic.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-09",
+      "prompt": "Improve the hierarchy of this settings screen.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-10",
+      "prompt": "Create a polished business proposal document.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-11",
+      "prompt": "Design slides for our product launch.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-12",
+      "prompt": "Style this HTML instruction manual for print.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-13",
+      "prompt": "Build a responsive restaurant menu.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-14",
+      "prompt": "Make an accessible chart from these quarterly totals.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-15",
+      "prompt": "Create an interactive floor plan with named rooms.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-16",
+      "prompt": "Improve the spacing and contrast in this CSS.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-17",
+      "prompt": "Design a professional invoice layout.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-18",
+      "prompt": "Build a portfolio homepage with strong typography.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-19",
+      "prompt": "Create a signup form with clear validation states.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "positive-20",
+      "prompt": "Carry our brand into an annual report.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "negative-01",
+      "prompt": "Fix this SQL migration.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-02",
+      "prompt": "Add a REST endpoint for invoices.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-03",
+      "prompt": "Optimize this database index.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-04",
+      "prompt": "Write unit tests for the payment calculation.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-05",
+      "prompt": "Configure the Kubernetes deployment.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-06",
+      "prompt": "Investigate a server memory leak.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-07",
+      "prompt": "Translate this paragraph into French.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-08",
+      "prompt": "Summarize this meeting transcript.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-09",
+      "prompt": "Fix the OAuth token refresh logic without UI changes.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "negative-10",
+      "prompt": "Update dependency versions without changing the interface.",
+      "expectedLoaded": false
+    }
+  ]
+}

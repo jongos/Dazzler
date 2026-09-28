@@ -1,2 +1,2 @@
-export {parse, View, loader} from 'vega';
-export {compile} from 'vega-lite';
+export { parse, View, loader } from "vega";
+export { compile } from "vega-lite";

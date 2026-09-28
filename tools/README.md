@@ -37,7 +37,7 @@ Run `npm ci --ignore-scripts --no-audit --no-fund`, then `npm run build:visualiz
 
 Run `npm run build:hotspots` after `npm ci --ignore-scripts --no-audit --no-fund`. This builds separate vector, React and Vue browser bundles and the XML validator, retaining all constituent notices and hashes. Run `npm run test:hotspots`, generate fixtures with `node tools/test_hotspot_exports.mjs NEW_DIR`, then run `node tools/test_hotspot_browser.cjs NEW_DIR` with Playwright available. The Vue adapter requests an initial update after image load for its pinned older component; preserve that tested compatibility behavior when upgrading.
 
-Run `python tools/seal_runtime.py` after final review, then `python skills/dazzler-frontend/scripts/health.py`. Use `tools/offline_build.py` to capture or restore the maintainer-only source kit; the restored kit can rebuild the three engines without package installation on its recorded OS/architecture. `tools/no_network.cjs` blocks Node networking during verification; it is not an OS sandbox.
+Run `python tools/seal_runtime.py` after final review, then `python skills/dazzler-frontend/scripts/health.py`. Use `tools/offline_build.py` to capture or restore the maintainer-only source kit; the release-only kit can rebuild the three engines on Windows x64 without package installation; other OS/architectures use the pinned package lock. `tools/no_network.cjs` blocks Node networking during verification; it is not an OS sandbox.
 
 ## Template showcase maintenance
 
@@ -46,6 +46,12 @@ Run `python tools/seal_runtime.py` after final review, then `python skills/dazzl
 On Windows with Microsoft Word available, run `tools/capture_word_templates.ps1 -Output PDF_DIRECTORY`, then `python tools/capture_template_pages.py PDF_DIRECTORY` with existing PDFium/Pillow. The capture step requires planned native pagination, emits all 20 Word-page snapshots and records source hashes. Inspect rendered pages visually; a page-count assertion is not a layout review. Other native renderers may be used after changing the recorded engine label honestly.
 
 After snapshots, run `python tools/build_templates.py --gallery-only` to refresh the gallery and byte inventory, then `python tools/publish_template_gallery.py` to update the public collection, README and field manual from that inventory. Re-run browser/Word capture after changing the rendered source. Each main gallery contains 30 distinct snapshots. Keep the canonical and public template folders synchronized before sealing resources and building release packages.
+
+## Release checks
+
+Run `npm test`, `npm run format:check`, `python -m black --check tools tests skills/dazzler-frontend/scripts`, `python tools/check_links.py` and `python tools/validate_release.py`. CI runs core checks on Windows/Ubuntu and Node 20/22, plus browser accessibility on Ubuntu. Install maintainer-only Python tools from `maintenance/requirements.txt`.
+
+The offline ZIP is a release asset with a matching manifest and SHA256SUMS; never add it to Git. Download the Windows x64 kit and manifest from the same release into one folder before restoring. Hashes detect corruption, not a malicious replacement of both files. Older kit commits remain in history; future regenerations do not add another tracked binary.
 
 ## Notes and credits
 

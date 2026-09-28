@@ -1,2 +1,21 @@
-const {chromium}=require('playwright'),fs=require('node:fs/promises'),path=require('node:path'),{pathToFileURL}=require('node:url');
-(async()=>{const root=path.resolve(process.argv[2]),b=await chromium.launch();try{const p=await b.newPage({viewport:{width:900,height:400},deviceScaleFactor:2});for(const file of await fs.readdir(root)){if(!file.endsWith('.svg'))continue;await p.goto(pathToFileURL(path.join(root,file)).href);await p.locator('svg').screenshot({path:path.join(root,file.replace('.svg','.png'))});}}finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});
+const { chromium } = require("playwright"),
+  fs = require("node:fs/promises"),
+  path = require("node:path"),
+  { pathToFileURL } = require("node:url");
+(async () => {
+  const root = path.resolve(process.argv[2]),
+    b = await chromium.launch();
+  try {
+    const p = await b.newPage({ viewport: { width: 900, height: 400 }, deviceScaleFactor: 2 });
+    for (const file of await fs.readdir(root)) {
+      if (!file.endsWith(".svg")) continue;
+      await p.goto(pathToFileURL(path.join(root, file)).href);
+      await p.locator("svg").screenshot({ path: path.join(root, file.replace(".svg", ".png")) });
+    }
+  } finally {
+    await b.close();
+  }
+})().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

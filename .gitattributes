@@ -1,3 +1,4 @@
+* text=auto eol=lf
 # Font and support-file hashes are byte-exact, including upstream license line endings.
 skills/dazzler-frontend/assets/fonts/** -text -whitespace
 *.otf binary

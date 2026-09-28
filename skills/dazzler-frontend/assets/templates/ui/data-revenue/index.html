@@ -1,199 +1,723 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Metric — Revenue performance</title><link rel="stylesheet" href="styles.css"></head><body class="template-revenue app"><a class="skip" href="#main">Skip to content</a><div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div><header class="top"><a class="brand" href="#main">Metric<span class="brand-dot"></span></a><nav aria-label="Main navigation"><a href="#main">Overview</a><a href="#source-data">Source data</a></nav><span class="avatar" aria-label="Alex Morgan">AM</span></header><main id="main"><header class="page-title"><p class="eyebrow">Metric / REVENUE</p><h1>Revenue performance</h1><p>Full year 2027 • USD • Reconciled synthetic sales ledger</p></header><div class="section-head"><p>Net revenue = gross revenue less refunds. All amounts are USD.</p><div class="filters"><label for="period">Period</label><select id="period"><option value="all">Full year 2027</option><option value="q1">Q1 · Jan–Mar</option><option value="q2">Q2 · Apr–Jun</option><option value="q3">Q3 · Jul–Sep</option><option value="q4">Q4 · Oct–Dec</option></select><button data-action="download">Export CSV</button></div></div><div id="revenue-metrics" class="metrics"></div><section class="panel"><div class="section-head"><h2>Monthly net revenue</h2><span class="pill">After refunds</span></div><div id="revenue-chart" class="revenue-chart"></div><p class="muted">Bars begin at zero. Exact values are shown below and in the export.</p></section><section class="panel" id="source-data"><h2>Revenue reconciliation</h2><div class="table-wrap" id="revenue-table"></div></section><section class="showcase-panel"><div><p class="eyebrow">THE BIGGER PICTURE</p><h2>The year in net revenue</h2><p>A full-year view complements the period selector. Gross minus refunds reconciles to net for every month.</p></div><figure><img src="../../charts/data-revenue.svg" alt="The year in net revenue"><details><summary>Read exact values</summary><table><tbody><tr><th>Jan</th><td>40800 USD</td></tr><tr><th>Feb</th><td>44600 USD</td></tr><tr><th>Mar</th><td>49200 USD</td></tr><tr><th>Apr</th><td>52500 USD</td></tr><tr><th>May</th><td>58900 USD</td></tr><tr><th>Jun</th><td>64000 USD</td></tr><tr><th>Jul</th><td>67900 USD</td></tr><tr><th>Aug</th><td>71300 USD</td></tr><tr><th>Sep</th><td>75700 USD</td></tr><tr><th>Oct</th><td>79050 USD</td></tr><tr><th>Nov</th><td>83420 USD</td></tr><tr><th>Dec</th><td>90210 USD</td></tr></tbody></table></details></figure></section><p id="status" class="status" role="status" aria-live="polite"></p></main><footer class="site-footer"><span>Metric · Fictional example by Dazzler</span><details><summary>Template notes</summary><p>All names, contact details, dates, prices and figures are illustrative. Actions update this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled fonts retain their notices.</p><p>Design system: Financial editorial / forest and citron. Local fonts, synthetic data, responsive layout, print styles and working preview states demonstrate Dazzler.</p></details></footer><dialog id="edit-dialog"><form id="edit-form"><h2 id="dialog-title">Add details</h2><div id="dialog-content"></div><label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160"><div class="dialog-actions"><button type="button" id="cancel" class="secondary">Cancel</button><button id="dialog-save">Save preview</button></div></form></dialog><script id="template-data" type="application/json">{
-  "id": "data-revenue",
-  "category": "data-visualization",
-  "layout": "revenue",
-  "brand": "Metric",
-  "title": "Revenue performance",
-  "intro": "Full year 2027 • USD • Reconciled synthetic sales ledger",
-  "accent": "#176A58",
-  "tint": "#EDEFF7",
-  "months": [
-    {
-      "month": "Jan",
-      "gross": 42000,
-      "refunds": 1200,
-      "orders": 310
-    },
-    {
-      "month": "Feb",
-      "gross": 46000,
-      "refunds": 1400,
-      "orders": 338
-    },
-    {
-      "month": "Mar",
-      "gross": 51000,
-      "refunds": 1800,
-      "orders": 367
-    },
-    {
-      "month": "Apr",
-      "gross": 54000,
-      "refunds": 1500,
-      "orders": 402
-    },
-    {
-      "month": "May",
-      "gross": 61000,
-      "refunds": 2100,
-      "orders": 441
-    },
-    {
-      "month": "Jun",
-      "gross": 66000,
-      "refunds": 2000,
-      "orders": 472
-    },
-    {
-      "month": "Jul",
-      "gross": 70000,
-      "refunds": 2100,
-      "orders": 495
-    },
-    {
-      "month": "Aug",
-      "gross": 73500,
-      "refunds": 2200,
-      "orders": 512
-    },
-    {
-      "month": "Sep",
-      "gross": 78000,
-      "refunds": 2300,
-      "orders": 541
-    },
-    {
-      "month": "Oct",
-      "gross": 81500,
-      "refunds": 2450,
-      "orders": 566
-    },
-    {
-      "month": "Nov",
-      "gross": 86000,
-      "refunds": 2580,
-      "orders": 602
-    },
-    {
-      "month": "Dec",
-      "gross": 93000,
-      "refunds": 2790,
-      "orders": 648
-    }
-  ],
-  "secondary": "#6748B1",
-  "bright": "#D8EC75",
-  "paper": "#F5F9EF",
-  "headingFont": "Archivo",
-  "font": "Arial",
-  "voice": "Financial editorial / forest and citron",
-  "ink": "#172033",
-  "sample": {
-    "fictional": true,
-    "asOf": "2027-12-31T23:59:00",
-    "seed": "dazzler-showcase-014",
-    "scope": "Local demonstration only; resets on reload"
-  },
-  "channels": [
-    {
-      "channel": "Subscriptions",
-      "share": 62
-    },
-    {
-      "channel": "Services",
-      "share": 28
-    },
-    {
-      "channel": "Add-ons",
-      "share": 10
-    }
-  ],
-  "showcaseChart": {
-    "asset": "data-revenue",
-    "title": "The year in net revenue",
-    "rows": [
-      [
-        "Jan",
-        40800
-      ],
-      [
-        "Feb",
-        44600
-      ],
-      [
-        "Mar",
-        49200
-      ],
-      [
-        "Apr",
-        52500
-      ],
-      [
-        "May",
-        58900
-      ],
-      [
-        "Jun",
-        64000
-      ],
-      [
-        "Jul",
-        67900
-      ],
-      [
-        "Aug",
-        71300
-      ],
-      [
-        "Sep",
-        75700
-      ],
-      [
-        "Oct",
-        79050
-      ],
-      [
-        "Nov",
-        83420
-      ],
-      [
-        "Dec",
-        90210
-      ]
-    ],
-    "unit": "USD"
-  },
-  "schemaVersion": 2,
-  "license": "Apache-2.0",
-  "creator": "Jon Gosier",
-  "demo": true,
-  "persistence": "memory only",
-  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
-}</script><script>// Local-only demo state. No fetch, storage, payment, booking, or messaging integration.
-const cfg=JSON.parse(document.getElementById('template-data').textContent);
-const $=id=>document.getElementById(id),esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n);
-const say=t=>{$('status').textContent=t;};
-const dialog=$('edit-dialog');let pending='',cart={},category='All';
-function openDialog(title,action,content='',label='Details'){$('dialog-title').textContent=title;$('dialog-content').innerHTML=content;$('entry-label').textContent=label;$('entry').value='';$('entry').required=Boolean(label);$('entry').hidden=$('entry-label').hidden=!label;$('dialog-save').textContent=action==='reservation'?'Keep request preview':action==='cart'?'Keep order preview':'Save preview';pending=action;dialog.showModal();}
-$('cancel').addEventListener('click',()=>dialog.close());
-function projectRender(){const search=($('search')?.value||'').toLowerCase();const rows=cfg.projects.filter(x=>[x.name,x.client,x.owner].join(' ').toLowerCase().includes(search));$('projects').innerHTML=rows.map(x=>`<article class="project-row"><div><p>${esc(x.client)}</p><h3>${esc(x.name)}</h3><span class="pill ${x.status==='At risk'?'warning':''}">${esc(x.status)}</span></div><div><p>${x.done} of ${x.total} tasks complete</p><progress value="${x.done}" max="${x.total||1}" aria-label="${esc(x.name)} task completion"></progress></div><div><p>${esc(x.owner)}</p><strong>Due ${esc(x.due)}</strong></div></article>`).join('');$('empty').hidden=rows.length>0;}
-function boardRender(){const owner=$('owner-filter').value;const tasks=cfg.tasks.filter(x=>owner==='Everyone'||x.owner===owner);$('board-summary').textContent=`${tasks.length} visible tasks · ${cfg.tasks.filter(t=>t.stage==='Done').length} completed overall · ${cfg.tasks.reduce((n,t)=>n+t.points,0)} planned points`;$('board').innerHTML=['Ready','In progress','Review','Done'].map(stage=>`<section class="board-column"><h2>${stage}<span>${tasks.filter(t=>t.stage===stage).length}</span></h2>${tasks.filter(t=>t.stage===stage).map(t=>`<article class="task"><span class="task-id">${esc(t.id)}</span><h3>${esc(t.title)}</h3><p class="pill ${t.priority==='High'?'warning':''}">${esc(t.priority)} priority</p><div class="task-meta"><span>${esc(t.owner)}</span><span>${t.points} points</span></div><button class="secondary" data-move="${esc(t.id)}">${stage==='Done'?'Reopen in Ready':'Move to '+['In progress','Review','Done'][['Ready','In progress','Review'].indexOf(stage)]}</button></article>`).join('')}</section>`).join('');}
-function selectedMonths(){return cfg.months.filter((x,i)=>$('period').value==='all'||Math.floor(i/3)+1===Number($('period').value.slice(1)));}
-function revenueRender(){const rows=selectedMonths(),gross=rows.reduce((s,x)=>s+x.gross,0),refunds=rows.reduce((s,x)=>s+x.refunds,0),orders=rows.reduce((s,x)=>s+x.orders,0);$('revenue-metrics').innerHTML=[['Net revenue',money(gross-refunds),'Gross less refunds'],['Refund rate',(refunds/gross*100).toFixed(2)+'%',money(refunds)+' returned'],['Orders',orders.toLocaleString('en-US'),'Across the selected period']].map(([a,b,c])=>`<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`).join('');const max=Math.max(...cfg.months.map(x=>x.gross-x.refunds));$('revenue-chart').innerHTML=rows.map(x=>`<div class="bar"><strong>${money((x.gross-x.refunds)/1000).replace(/0+$/,'').replace(/\.$/,'')}k</strong><div class="fill" style="height:${(x.gross-x.refunds)/max*170}px" aria-hidden="true"></div><span>${x.month}</span></div>`).join('');$('revenue-table').innerHTML='<table><thead><tr><th>Month</th><th>Gross USD</th><th>Refunds USD</th><th>Net USD</th><th>Orders</th></tr></thead><tbody>'+rows.map(x=>`<tr><th scope="row">${x.month}</th><td>${money(x.gross)}</td><td>${money(x.refunds)}</td><td>${money(x.gross-x.refunds)}</td><td>${x.orders}</td></tr>`).join('')+`</tbody><tfoot><tr><th>Total</th><td>${money(gross)}</td><td>${money(refunds)}</td><td>${money(gross-refunds)}</td><td>${orders}</td></tr></tfoot></table>`;}
-function filteredTickets(){return cfg.tickets.filter(x=>($('queue').value==='All queues'||x.queue===$('queue').value)&&($('show-resolved').checked||x.status==='Open'));}
-function opsRender(){const open=cfg.tickets.filter(x=>x.status==='Open'),late=open.filter(x=>x.age>({High:30,Normal:60,Low:120}[x.priority]));$('ops-metrics').innerHTML=[['Open tickets',open.length,'Across all queues'],['Past first-response target',late.length,'Based on priority at this snapshot'],['Oldest open ticket',(open.length?Math.max(...open.map(x=>x.age)):0)+' min','Age at 09:40 snapshot']].map(([a,b,c])=>`<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`).join('');const rows=filteredTickets();$('tickets').innerHTML=rows.length?rows.map(x=>`<article class="ticket"><div class="ticket-top"><small>${x.id} · ${x.queue}</small><span class="pill ${x.priority==='High'?'warning':''}">${x.priority} priority</span></div><h3>${x.subject}</h3><div class="ticket-bottom"><small>${x.owner} · ${x.age} min old · ${x.status}</small><button class="secondary" data-resolve="${x.id}" ${x.status==='Resolved'?'disabled':''}>${x.status==='Resolved'?'Resolved':'Resolve in preview'}</button></div></article>`).join(''):'<p>No tickets match these filters.</p>';$('queue-health').innerHTML=['Access','Billing','Account'].map(q=>{const n=open.filter(x=>x.queue===q).length;return `<div class="queue-row"><div><strong>${q}</strong><span>${n} open</span></div><progress value="${n}" max="${Math.max(open.length,1)}" aria-label="${q} share of open tickets"></progress></div>`;}).join('');}
-function menuRender(){const search=($('menu-search')?.value||'').toLowerCase(),vegan=$('vegan')?.checked;const items=cfg.items.map((x,i)=>({...x,index:i})).filter(x=>(category==='All'||x.category===category)&&(!vegan||x.vegan)&&[x.name,x.description].join(' ').toLowerCase().includes(search));$('products').innerHTML=items.map(x=>cfg.layout==='cafe'?`<article class="product"><small>${x.category}</small><h3>${x.name}</h3><p>${x.description}</p><div class="price"><strong>${money(x.price)}</strong><button data-add="${x.index}" aria-label="Add ${x.name}">Add +</button></div></article>`:`<article class="menu-dish"><header><h3>${x.name}</h3><strong>${money(x.price)}</strong></header><p>${x.description}</p><span class="pill">${x.category}${x.vegan?' · V':''}</span></article>`).join('');if($('menu-empty'))$('menu-empty').hidden=items.length>0;}
-function cartRender(){const ids=Object.keys(cart).filter(i=>cart[i]>0);$('cart-lines').innerHTML=ids.length?ids.map(i=>`<div class="cart-line"><strong>${cfg.items[i].name}</strong><small>${money(cfg.items[i].price*cart[i])}</small><div class="quantity"><button class="secondary" data-quantity="${i}" data-delta="-1" aria-label="Remove one ${cfg.items[i].name}">−</button><span>${cart[i]}</span><button class="secondary" data-quantity="${i}" data-delta="1" aria-label="Add one ${cfg.items[i].name}">+</button></div></div>`).join(''):'<p class="muted">Your bag is empty. Add a coffee or something from the kitchen.</p>';$('subtotal').textContent=money(ids.reduce((s,i)=>s+cfg.items[i].price*cart[i],0));}
-function businessRender(){$('deliverable-list').innerHTML=cfg.deliverables.map((x,i)=>`<article class="deliverable"><header><div><small>${x.version} · Due ${x.due}</small><h3>${x.name}</h3></div><span class="pill">${x.status}</span></header><p>${x.description}</p><div class="actions"><button class="secondary" data-brief="${i}">View review brief</button>${i===0?'<button data-approve="0">Approve in preview</button><button class="secondary" data-dialog="revision">Request a revision</button>':''}</div></article>`).join('');}
-document.addEventListener('click',event=>{const b=event.target.closest('button');if(!b)return;if(b.dataset.dialog){const mode=b.dataset.dialog;openDialog({project:'Create a project',task:'Add a sprint task',update:'Draft an update request',revision:'Request a revision'}[mode],mode,'<p>Saved in this local preview only.</p>',mode==='project'?'Project name':mode==='task'?'Task title':'Your note');}if(b.dataset.move){const t=cfg.tasks.find(x=>x.id===b.dataset.move),stages=['Ready','In progress','Review','Done'];t.stage=stages[(stages.indexOf(t.stage)+1)%4];boardRender();say(`${t.id} moved to ${t.stage}.`);}if(b.dataset.resolve){cfg.tickets.find(x=>x.id===b.dataset.resolve).status='Resolved';opsRender();say('Ticket resolved in this preview. No support system was changed.');}if(b.dataset.filter){category=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));menuRender();}if(b.dataset.add!==undefined){cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;cartRender();say('Added to your pickup preview.');}if(b.dataset.quantity!==undefined){cart[b.dataset.quantity]=Math.max(0,(cart[b.dataset.quantity]||0)+Number(b.dataset.delta));cartRender();}if(b.dataset.approve){cfg.deliverables[0].status='Approved in preview';businessRender();say('Approval recorded locally. No client decision was sent.');}if(b.dataset.brief!==undefined){const d=cfg.deliverables[Number(b.dataset.brief)];openDialog(d.name,'brief',`<p>${esc(d.description)}</p><h3>Review checklist</h3><ul><li>Does this meet the agreed scope?</li><li>Are the facts and wording accurate?</li><li>What specific changes are needed?</li></ul><p>${esc(d.status)} · ${esc(d.version)}</p>`,'');}if(b.dataset.action==='clear'){cart={};cartRender();say('Order preview cleared.');}if(b.dataset.action==='cart'){const ids=Object.keys(cart).filter(i=>cart[i]>0);if(!ids.length){say('Add an item before reviewing your order.');return;}openDialog('Your pickup order','cart','<ul>'+ids.map(i=>`<li>${cart[i]} × ${cfg.items[i].name} — ${money(cfg.items[i].price*cart[i])}</li>`).join('')+'</ul><p><strong>Subtotal '+$('subtotal').textContent+'</strong></p><p>Sample pickup estimate: 15–20 minutes. No order or payment is submitted.</p>','');}if(b.dataset.action==='download'){let rows=cfg.layout==='revenue'?[['Month','Gross USD','Refunds USD','Net USD','Orders'],...selectedMonths().map(x=>[x.month,x.gross,x.refunds,x.gross-x.refunds,x.orders])]:[['Ticket','Queue','Priority','Age minutes','Owner','Status'],...filteredTickets().map(x=>[x.id,x.queue,x.priority,x.age,x.owner,x.status])];const text=rows.map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\n');const url=URL.createObjectURL(new Blob([text],{type:'text/csv'}));const a=document.createElement('a');a.href=url;a.download=cfg.id+'-sample.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);say('The currently selected sample data was exported.');}});
-$('edit-form').addEventListener('submit',event=>{event.preventDefault();const value=$('entry').value.trim();if($('entry').required&&!value)return;if(pending==='project'){cfg.projects.push({name:value,client:'New project',owner:'Unassigned',done:0,total:0,due:'Not set',status:'Planning'});projectRender();}if(pending==='task'){cfg.tasks.push({id:'ONB-'+(41+cfg.tasks.length),title:value,owner:'Maya',stage:'Ready',points:1,priority:'Normal'});boardRender();}if(pending==='revision'){cfg.deliverables[0].status='Revision requested';cfg.deliverables[0].description=value;businessRender();}say(pending==='reservation'?'Reservation request preview kept. No table has been booked.':pending==='cart'?'Order preview kept. Nothing was sent to the café.':pending==='brief'?'Review brief closed.':'Saved in this preview only. No message or account change was sent.');dialog.close();});
-if(cfg.layout==='workspace'){projectRender();$('search').addEventListener('input',projectRender);}
-if(cfg.layout==='board'){boardRender();$('owner-filter').addEventListener('change',boardRender);}
-if(cfg.layout==='settings'){$('settings').addEventListener('input',()=>{$('dirty').textContent='Unsaved changes';});$('settings').addEventListener('reset',()=>{$('dirty').textContent='No unsaved changes';say('Changes discarded.');});$('settings').addEventListener('submit',event=>{event.preventDefault();$('dirty').textContent='Saved for this preview';say('Preferences updated locally. Reloading restores the sample profile.');});}
-if(cfg.layout==='revenue'){revenueRender();$('period').addEventListener('change',revenueRender);}
-if(cfg.layout==='operations'){opsRender();$('queue').addEventListener('change',opsRender);$('show-resolved').addEventListener('change',opsRender);}
-if(['cafe','menu'].includes(cfg.layout)){$('menu-filters').innerHTML=['All',...new Set(cfg.items.map(x=>x.category))].map(c=>`<button data-filter="${c}" aria-pressed="${c==='All'}">${c}</button>`).join('');menuRender();$('menu-search')?.addEventListener('input',menuRender);$('vegan')?.addEventListener('change',menuRender);if(cfg.layout==='cafe')cartRender();}
-if(cfg.layout==='reservations'){const today=new Date(),localDate=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');$('date').min=localDate(today);today.setDate(today.getDate()+7);while([0,1].includes(today.getDay()))today.setDate(today.getDate()+1);$('date').value=localDate(today);$('date').addEventListener('change',()=>{const day=new Date($('date').value+'T12:00:00').getDay();$('date').setCustomValidity([0,1].includes(day)?'Dinner service runs Tuesday through Saturday. Choose another date.':'');});$('reservation').addEventListener('submit',event=>{event.preventDefault();const f=new FormData(event.target);openDialog('Review your table request','reservation',`<p><strong>${esc(f.get('guest'))}</strong><br>${esc(f.get('guests'))} guests · ${esc(f.get('date'))} at ${esc(f.get('time'))}</p><p>${esc(f.get('guest-email'))}</p><p>${esc($('booking-note').value)}</p><p>No availability has been checked and no booking will be made by this preview.</p>`,'');});}
-if(cfg.layout==='business')businessRender();
-</script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Metric — Revenue performance</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="template-revenue app">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div>
+    <header class="top">
+      <a class="brand" href="#main">Metric<span class="brand-dot"></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#main">Overview</a><a href="#source-data">Source data</a>
+      </nav>
+      <span class="avatar" aria-label="Alex Morgan">AM</span>
+    </header>
+    <main id="main">
+      <header class="page-title">
+        <p class="eyebrow">Metric / REVENUE</p>
+        <h1>Revenue performance</h1>
+        <p>Full year 2027 • USD • Reconciled synthetic sales ledger</p>
+      </header>
+      <div class="section-head">
+        <p>Net revenue = gross revenue less refunds. All amounts are USD.</p>
+        <div class="filters">
+          <label for="period">Period</label
+          ><select id="period">
+            <option value="all">Full year 2027</option>
+            <option value="q1">Q1 · Jan–Mar</option>
+            <option value="q2">Q2 · Apr–Jun</option>
+            <option value="q3">Q3 · Jul–Sep</option>
+            <option value="q4">Q4 · Oct–Dec</option></select
+          ><button data-action="download">Export CSV</button>
+        </div>
+      </div>
+      <div id="revenue-metrics" class="metrics"></div>
+      <section class="panel">
+        <div class="section-head">
+          <h2>Monthly net revenue</h2>
+          <span class="pill">After refunds</span>
+        </div>
+        <div id="revenue-chart" class="revenue-chart" tabindex="0"></div>
+        <p class="muted">Bars begin at zero. Exact values are shown below and in the export.</p>
+      </section>
+      <section class="panel" id="source-data">
+        <h2>Revenue reconciliation</h2>
+        <div class="table-wrap" tabindex="0" id="revenue-table"></div>
+      </section>
+      <section class="showcase-panel">
+        <div>
+          <p class="eyebrow">THE BIGGER PICTURE</p>
+          <h2>The year in net revenue</h2>
+          <p>
+            A full-year view complements the period selector. Gross minus refunds reconciles to net
+            for every month.
+          </p>
+        </div>
+        <figure>
+          <img src="../../charts/data-revenue.svg" alt="The year in net revenue" />
+          <details>
+            <summary>Read exact values</summary>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Jan</th>
+                  <td>40800 USD</td>
+                </tr>
+                <tr>
+                  <th>Feb</th>
+                  <td>44600 USD</td>
+                </tr>
+                <tr>
+                  <th>Mar</th>
+                  <td>49200 USD</td>
+                </tr>
+                <tr>
+                  <th>Apr</th>
+                  <td>52500 USD</td>
+                </tr>
+                <tr>
+                  <th>May</th>
+                  <td>58900 USD</td>
+                </tr>
+                <tr>
+                  <th>Jun</th>
+                  <td>64000 USD</td>
+                </tr>
+                <tr>
+                  <th>Jul</th>
+                  <td>67900 USD</td>
+                </tr>
+                <tr>
+                  <th>Aug</th>
+                  <td>71300 USD</td>
+                </tr>
+                <tr>
+                  <th>Sep</th>
+                  <td>75700 USD</td>
+                </tr>
+                <tr>
+                  <th>Oct</th>
+                  <td>79050 USD</td>
+                </tr>
+                <tr>
+                  <th>Nov</th>
+                  <td>83420 USD</td>
+                </tr>
+                <tr>
+                  <th>Dec</th>
+                  <td>90210 USD</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
+        </figure>
+      </section>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <footer class="site-footer">
+      <span>Metric · Fictional example by Dazzler</span>
+      <details>
+        <summary>Template notes</summary>
+        <p>
+          All names, contact details, dates, prices and figures are illustrative. Actions update
+          this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled
+          fonts retain their notices.
+        </p>
+        <p>
+          Design system: Financial editorial / forest and citron. Local fonts, synthetic data,
+          responsive layout, print styles and working preview states demonstrate Dazzler.
+        </p>
+      </details>
+    </footer>
+    <dialog id="edit-dialog">
+      <form id="edit-form">
+        <h2 id="dialog-title">Add details</h2>
+        <div id="dialog-content"></div>
+        <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
+        <div class="dialog-actions">
+          <button type="button" id="cancel" class="secondary">Cancel</button
+          ><button id="dialog-save">Save preview</button>
+        </div>
+      </form>
+    </dialog>
+    <script id="template-data" type="application/json">
+      {
+        "id": "data-revenue",
+        "category": "data-visualization",
+        "layout": "revenue",
+        "brand": "Metric",
+        "title": "Revenue performance",
+        "intro": "Full year 2027 • USD • Reconciled synthetic sales ledger",
+        "accent": "#176A58",
+        "tint": "#EDEFF7",
+        "months": [
+          {
+            "month": "Jan",
+            "gross": 42000,
+            "refunds": 1200,
+            "orders": 310
+          },
+          {
+            "month": "Feb",
+            "gross": 46000,
+            "refunds": 1400,
+            "orders": 338
+          },
+          {
+            "month": "Mar",
+            "gross": 51000,
+            "refunds": 1800,
+            "orders": 367
+          },
+          {
+            "month": "Apr",
+            "gross": 54000,
+            "refunds": 1500,
+            "orders": 402
+          },
+          {
+            "month": "May",
+            "gross": 61000,
+            "refunds": 2100,
+            "orders": 441
+          },
+          {
+            "month": "Jun",
+            "gross": 66000,
+            "refunds": 2000,
+            "orders": 472
+          },
+          {
+            "month": "Jul",
+            "gross": 70000,
+            "refunds": 2100,
+            "orders": 495
+          },
+          {
+            "month": "Aug",
+            "gross": 73500,
+            "refunds": 2200,
+            "orders": 512
+          },
+          {
+            "month": "Sep",
+            "gross": 78000,
+            "refunds": 2300,
+            "orders": 541
+          },
+          {
+            "month": "Oct",
+            "gross": 81500,
+            "refunds": 2450,
+            "orders": 566
+          },
+          {
+            "month": "Nov",
+            "gross": 86000,
+            "refunds": 2580,
+            "orders": 602
+          },
+          {
+            "month": "Dec",
+            "gross": 93000,
+            "refunds": 2790,
+            "orders": 648
+          }
+        ],
+        "secondary": "#6748B1",
+        "bright": "#D8EC75",
+        "paper": "#F5F9EF",
+        "headingFont": "Archivo",
+        "font": "Arial",
+        "voice": "Financial editorial / forest and citron",
+        "ink": "#172033",
+        "sample": {
+          "fictional": true,
+          "asOf": "2027-12-31T23:59:00",
+          "seed": "dazzler-showcase-014",
+          "scope": "Local demonstration only; resets on reload"
+        },
+        "channels": [
+          {
+            "channel": "Subscriptions",
+            "share": 62
+          },
+          {
+            "channel": "Services",
+            "share": 28
+          },
+          {
+            "channel": "Add-ons",
+            "share": 10
+          }
+        ],
+        "showcaseChart": {
+          "asset": "data-revenue",
+          "title": "The year in net revenue",
+          "rows": [
+            ["Jan", 40800],
+            ["Feb", 44600],
+            ["Mar", 49200],
+            ["Apr", 52500],
+            ["May", 58900],
+            ["Jun", 64000],
+            ["Jul", 67900],
+            ["Aug", 71300],
+            ["Sep", 75700],
+            ["Oct", 79050],
+            ["Nov", 83420],
+            ["Dec", 90210]
+          ],
+          "unit": "USD"
+        },
+        "schemaVersion": 2,
+        "license": "Apache-2.0",
+        "creator": "Jon Gosier",
+        "demo": true,
+        "persistence": "memory only",
+        "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+      }
+    </script>
+    <script>
+      // Local-only demo state. No fetch, storage, payment, booking, or messaging integration.
+      const cfg = JSON.parse(document.getElementById("template-data").textContent);
+      const $ = (id) => document.getElementById(id),
+        esc = (v) =>
+          String(v).replace(
+            /[&<>"']/g,
+            (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
+          );
+      const money = (n) =>
+        new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 2,
+        }).format(n);
+      const say = (t) => {
+        $("status").textContent = t;
+      };
+      const dialog = $("edit-dialog");
+      let pending = "",
+        cart = {},
+        category = "All";
+      function openDialog(title, action, content = "", label = "Details") {
+        $("dialog-title").textContent = title;
+        $("dialog-content").innerHTML = content;
+        $("entry-label").textContent = label;
+        $("entry").value = "";
+        $("entry").required = Boolean(label);
+        $("entry").hidden = $("entry-label").hidden = !label;
+        $("dialog-save").textContent =
+          action === "reservation"
+            ? "Keep request preview"
+            : action === "cart"
+              ? "Keep order preview"
+              : "Save preview";
+        pending = action;
+        dialog.showModal();
+      }
+      $("cancel").addEventListener("click", () => dialog.close());
+      function projectRender() {
+        const search = ($("search")?.value || "").toLowerCase();
+        const rows = cfg.projects.filter((x) =>
+          [x.name, x.client, x.owner].join(" ").toLowerCase().includes(search),
+        );
+        $("projects").innerHTML = rows
+          .map(
+            (x) =>
+              `<article class="project-row"><div><p>${esc(x.client)}</p><h3>${esc(x.name)}</h3><span class="pill ${x.status === "At risk" ? "warning" : ""}">${esc(x.status)}</span></div><div><p>${x.done} of ${x.total} tasks complete</p><progress value="${x.done}" max="${x.total || 1}" aria-label="${esc(x.name)} task completion"></progress></div><div><p>${esc(x.owner)}</p><strong>Due ${esc(x.due)}</strong></div></article>`,
+          )
+          .join("");
+        $("empty").hidden = rows.length > 0;
+      }
+      function boardRender() {
+        const owner = $("owner-filter").value;
+        const tasks = cfg.tasks.filter((x) => owner === "Everyone" || x.owner === owner);
+        $("board-summary").textContent =
+          `${tasks.length} visible tasks · ${cfg.tasks.filter((t) => t.stage === "Done").length} completed overall · ${cfg.tasks.reduce((n, t) => n + t.points, 0)} planned points`;
+        $("board").innerHTML = ["Ready", "In progress", "Review", "Done"]
+          .map(
+            (stage) =>
+              `<section class="board-column"><h2>${stage}<span>${tasks.filter((t) => t.stage === stage).length}</span></h2>${tasks
+                .filter((t) => t.stage === stage)
+                .map(
+                  (t) =>
+                    `<article class="task"><span class="task-id">${esc(t.id)}</span><h3>${esc(t.title)}</h3><p class="pill ${t.priority === "High" ? "warning" : ""}">${esc(t.priority)} priority</p><div class="task-meta"><span>${esc(t.owner)}</span><span>${t.points} points</span></div><button class="secondary" data-move="${esc(t.id)}">${stage === "Done" ? "Reopen in Ready" : "Move to " + ["In progress", "Review", "Done"][["Ready", "In progress", "Review"].indexOf(stage)]}</button></article>`,
+                )
+                .join("")}</section>`,
+          )
+          .join("");
+      }
+      function selectedMonths() {
+        return cfg.months.filter(
+          (x, i) =>
+            $("period").value === "all" ||
+            Math.floor(i / 3) + 1 === Number($("period").value.slice(1)),
+        );
+      }
+      function revenueRender() {
+        const rows = selectedMonths(),
+          gross = rows.reduce((s, x) => s + x.gross, 0),
+          refunds = rows.reduce((s, x) => s + x.refunds, 0),
+          orders = rows.reduce((s, x) => s + x.orders, 0);
+        $("revenue-metrics").innerHTML = [
+          ["Net revenue", money(gross - refunds), "Gross less refunds"],
+          ["Refund rate", ((refunds / gross) * 100).toFixed(2) + "%", money(refunds) + " returned"],
+          ["Orders", orders.toLocaleString("en-US"), "Across the selected period"],
+        ]
+          .map(
+            ([a, b, c]) =>
+              `<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`,
+          )
+          .join("");
+        const max = Math.max(...cfg.months.map((x) => x.gross - x.refunds));
+        $("revenue-chart").innerHTML = rows
+          .map(
+            (x) =>
+              `<div class="bar"><strong>${money((x.gross - x.refunds) / 1000)
+                .replace(/0+$/, "")
+                .replace(
+                  /\.$/,
+                  "",
+                )}k</strong><div class="fill" style="height:${((x.gross - x.refunds) / max) * 170}px" aria-hidden="true"></div><span>${x.month}</span></div>`,
+          )
+          .join("");
+        $("revenue-table").innerHTML =
+          "<table><thead><tr><th>Month</th><th>Gross USD</th><th>Refunds USD</th><th>Net USD</th><th>Orders</th></tr></thead><tbody>" +
+          rows
+            .map(
+              (x) =>
+                `<tr><th scope="row">${x.month}</th><td>${money(x.gross)}</td><td>${money(x.refunds)}</td><td>${money(x.gross - x.refunds)}</td><td>${x.orders}</td></tr>`,
+            )
+            .join("") +
+          `</tbody><tfoot><tr><th>Total</th><td>${money(gross)}</td><td>${money(refunds)}</td><td>${money(gross - refunds)}</td><td>${orders}</td></tr></tfoot></table>`;
+      }
+      function filteredTickets() {
+        return cfg.tickets.filter(
+          (x) =>
+            ($("queue").value === "All queues" || x.queue === $("queue").value) &&
+            ($("show-resolved").checked || x.status === "Open"),
+        );
+      }
+      function opsRender() {
+        const open = cfg.tickets.filter((x) => x.status === "Open"),
+          late = open.filter((x) => x.age > { High: 30, Normal: 60, Low: 120 }[x.priority]);
+        $("ops-metrics").innerHTML = [
+          ["Open tickets", open.length, "Across all queues"],
+          ["Past first-response target", late.length, "Based on priority at this snapshot"],
+          [
+            "Oldest open ticket",
+            (open.length ? Math.max(...open.map((x) => x.age)) : 0) + " min",
+            "Age at 09:40 snapshot",
+          ],
+        ]
+          .map(
+            ([a, b, c]) =>
+              `<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`,
+          )
+          .join("");
+        const rows = filteredTickets();
+        $("tickets").innerHTML = rows.length
+          ? rows
+              .map(
+                (x) =>
+                  `<article class="ticket"><div class="ticket-top"><small>${x.id} · ${x.queue}</small><span class="pill ${x.priority === "High" ? "warning" : ""}">${x.priority} priority</span></div><h3>${x.subject}</h3><div class="ticket-bottom"><small>${x.owner} · ${x.age} min old · ${x.status}</small><button class="secondary" data-resolve="${x.id}" ${x.status === "Resolved" ? "disabled" : ""}>${x.status === "Resolved" ? "Resolved" : "Resolve in preview"}</button></div></article>`,
+              )
+              .join("")
+          : "<p>No tickets match these filters.</p>";
+        $("queue-health").innerHTML = ["Access", "Billing", "Account"]
+          .map((q) => {
+            const n = open.filter((x) => x.queue === q).length;
+            return `<div class="queue-row"><div><strong>${q}</strong><span>${n} open</span></div><progress value="${n}" max="${Math.max(open.length, 1)}" aria-label="${q} share of open tickets"></progress></div>`;
+          })
+          .join("");
+      }
+      function menuRender() {
+        const search = ($("menu-search")?.value || "").toLowerCase(),
+          vegan = $("vegan")?.checked;
+        const items = cfg.items
+          .map((x, i) => ({ ...x, index: i }))
+          .filter(
+            (x) =>
+              (category === "All" || x.category === category) &&
+              (!vegan || x.vegan) &&
+              [x.name, x.description].join(" ").toLowerCase().includes(search),
+          );
+        $("products").innerHTML = items
+          .map((x) =>
+            cfg.layout === "cafe"
+              ? `<article class="product"><small>${x.category}</small><h3>${x.name}</h3><p>${x.description}</p><div class="price"><strong>${money(x.price)}</strong><button data-add="${x.index}" aria-label="Add ${x.name}">Add +</button></div></article>`
+              : `<article class="menu-dish"><header><h3>${x.name}</h3><strong>${money(x.price)}</strong></header><p>${x.description}</p><span class="pill">${x.category}${x.vegan ? " · V" : ""}</span></article>`,
+          )
+          .join("");
+        if ($("menu-empty")) $("menu-empty").hidden = items.length > 0;
+      }
+      function cartRender() {
+        const ids = Object.keys(cart).filter((i) => cart[i] > 0);
+        $("cart-lines").innerHTML = ids.length
+          ? ids
+              .map(
+                (i) =>
+                  `<div class="cart-line"><strong>${cfg.items[i].name}</strong><small>${money(cfg.items[i].price * cart[i])}</small><div class="quantity"><button class="secondary" data-quantity="${i}" data-delta="-1" aria-label="Remove one ${cfg.items[i].name}">−</button><span>${cart[i]}</span><button class="secondary" data-quantity="${i}" data-delta="1" aria-label="Add one ${cfg.items[i].name}">+</button></div></div>`,
+              )
+              .join("")
+          : '<p class="muted">Your bag is empty. Add a coffee or something from the kitchen.</p>';
+        $("subtotal").textContent = money(
+          ids.reduce((s, i) => s + cfg.items[i].price * cart[i], 0),
+        );
+      }
+      function businessRender() {
+        $("deliverable-list").innerHTML = cfg.deliverables
+          .map(
+            (x, i) =>
+              `<article class="deliverable"><header><div><small>${x.version} · Due ${x.due}</small><h3>${x.name}</h3></div><span class="pill">${x.status}</span></header><p>${x.description}</p><div class="actions"><button class="secondary" data-brief="${i}">View review brief</button>${i === 0 ? '<button data-approve="0">Approve in preview</button><button class="secondary" data-dialog="revision">Request a revision</button>' : ""}</div></article>`,
+          )
+          .join("");
+      }
+      document.addEventListener("click", (event) => {
+        const b = event.target.closest("button");
+        if (!b) return;
+        if (b.dataset.dialog) {
+          const mode = b.dataset.dialog;
+          openDialog(
+            {
+              project: "Create a project",
+              task: "Add a sprint task",
+              update: "Draft an update request",
+              revision: "Request a revision",
+            }[mode],
+            mode,
+            "<p>Saved in this local preview only.</p>",
+            mode === "project" ? "Project name" : mode === "task" ? "Task title" : "Your note",
+          );
+        }
+        if (b.dataset.move) {
+          const t = cfg.tasks.find((x) => x.id === b.dataset.move),
+            stages = ["Ready", "In progress", "Review", "Done"];
+          t.stage = stages[(stages.indexOf(t.stage) + 1) % 4];
+          boardRender();
+          say(`${t.id} moved to ${t.stage}.`);
+        }
+        if (b.dataset.resolve) {
+          cfg.tickets.find((x) => x.id === b.dataset.resolve).status = "Resolved";
+          opsRender();
+          say("Ticket resolved in this preview. No support system was changed.");
+        }
+        if (b.dataset.filter) {
+          category = b.dataset.filter;
+          document
+            .querySelectorAll("[data-filter]")
+            .forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+          menuRender();
+        }
+        if (b.dataset.add !== undefined) {
+          cart[b.dataset.add] = (cart[b.dataset.add] || 0) + 1;
+          cartRender();
+          say("Added to your pickup preview.");
+        }
+        if (b.dataset.quantity !== undefined) {
+          cart[b.dataset.quantity] = Math.max(
+            0,
+            (cart[b.dataset.quantity] || 0) + Number(b.dataset.delta),
+          );
+          cartRender();
+        }
+        if (b.dataset.approve) {
+          cfg.deliverables[0].status = "Approved in preview";
+          businessRender();
+          say("Approval recorded locally. No client decision was sent.");
+        }
+        if (b.dataset.brief !== undefined) {
+          const d = cfg.deliverables[Number(b.dataset.brief)];
+          openDialog(
+            d.name,
+            "brief",
+            `<p>${esc(d.description)}</p><h3>Review checklist</h3><ul><li>Does this meet the agreed scope?</li><li>Are the facts and wording accurate?</li><li>What specific changes are needed?</li></ul><p>${esc(d.status)} · ${esc(d.version)}</p>`,
+            "",
+          );
+        }
+        if (b.dataset.action === "clear") {
+          cart = {};
+          cartRender();
+          say("Order preview cleared.");
+        }
+        if (b.dataset.action === "cart") {
+          const ids = Object.keys(cart).filter((i) => cart[i] > 0);
+          if (!ids.length) {
+            say("Add an item before reviewing your order.");
+            return;
+          }
+          openDialog(
+            "Your pickup order",
+            "cart",
+            "<ul>" +
+              ids
+                .map(
+                  (i) =>
+                    `<li>${cart[i]} × ${cfg.items[i].name} — ${money(cfg.items[i].price * cart[i])}</li>`,
+                )
+                .join("") +
+              "</ul><p><strong>Subtotal " +
+              $("subtotal").textContent +
+              "</strong></p><p>Sample pickup estimate: 15–20 minutes. No order or payment is submitted.</p>",
+            "",
+          );
+        }
+        if (b.dataset.action === "download") {
+          let rows =
+            cfg.layout === "revenue"
+              ? [
+                  ["Month", "Gross USD", "Refunds USD", "Net USD", "Orders"],
+                  ...selectedMonths().map((x) => [
+                    x.month,
+                    x.gross,
+                    x.refunds,
+                    x.gross - x.refunds,
+                    x.orders,
+                  ]),
+                ]
+              : [
+                  ["Ticket", "Queue", "Priority", "Age minutes", "Owner", "Status"],
+                  ...filteredTickets().map((x) => [
+                    x.id,
+                    x.queue,
+                    x.priority,
+                    x.age,
+                    x.owner,
+                    x.status,
+                  ]),
+                ];
+          const text = rows
+            .map((row) => row.map((v) => '"' + String(v).replaceAll('"', '""') + '"').join(","))
+            .join("\n");
+          const url = URL.createObjectURL(new Blob([text], { type: "text/csv" }));
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = cfg.id + "-sample.csv";
+          a.click();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+          say("The currently selected sample data was exported.");
+        }
+      });
+      $("edit-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const value = $("entry").value.trim();
+        if ($("entry").required && !value) return;
+        if (pending === "project") {
+          cfg.projects.push({
+            name: value,
+            client: "New project",
+            owner: "Unassigned",
+            done: 0,
+            total: 0,
+            due: "Not set",
+            status: "Planning",
+          });
+          projectRender();
+        }
+        if (pending === "task") {
+          cfg.tasks.push({
+            id: "ONB-" + (41 + cfg.tasks.length),
+            title: value,
+            owner: "Maya",
+            stage: "Ready",
+            points: 1,
+            priority: "Normal",
+          });
+          boardRender();
+        }
+        if (pending === "revision") {
+          cfg.deliverables[0].status = "Revision requested";
+          cfg.deliverables[0].description = value;
+          businessRender();
+        }
+        say(
+          pending === "reservation"
+            ? "Reservation request preview kept. No table has been booked."
+            : pending === "cart"
+              ? "Order preview kept. Nothing was sent to the café."
+              : pending === "brief"
+                ? "Review brief closed."
+                : "Saved in this preview only. No message or account change was sent.",
+        );
+        dialog.close();
+      });
+      if (cfg.layout === "workspace") {
+        projectRender();
+        $("search").addEventListener("input", projectRender);
+      }
+      if (cfg.layout === "board") {
+        boardRender();
+        $("owner-filter").addEventListener("change", boardRender);
+      }
+      if (cfg.layout === "settings") {
+        $("settings").addEventListener("input", () => {
+          $("dirty").textContent = "Unsaved changes";
+        });
+        $("settings").addEventListener("reset", () => {
+          $("dirty").textContent = "No unsaved changes";
+          say("Changes discarded.");
+        });
+        $("settings").addEventListener("submit", (event) => {
+          event.preventDefault();
+          $("dirty").textContent = "Saved for this preview";
+          say("Preferences updated locally. Reloading restores the sample profile.");
+        });
+      }
+      if (cfg.layout === "revenue") {
+        revenueRender();
+        $("period").addEventListener("change", revenueRender);
+      }
+      if (cfg.layout === "operations") {
+        opsRender();
+        $("queue").addEventListener("change", opsRender);
+        $("show-resolved").addEventListener("change", opsRender);
+      }
+      if (["cafe", "menu"].includes(cfg.layout)) {
+        $("menu-filters").innerHTML = ["All", ...new Set(cfg.items.map((x) => x.category))]
+          .map((c) => `<button data-filter="${c}" aria-pressed="${c === "All"}">${c}</button>`)
+          .join("");
+        menuRender();
+        $("menu-search")?.addEventListener("input", menuRender);
+        $("vegan")?.addEventListener("change", menuRender);
+        if (cfg.layout === "cafe") cartRender();
+      }
+      if (cfg.layout === "reservations") {
+        const today = new Date(),
+          localDate = (d) =>
+            [
+              d.getFullYear(),
+              String(d.getMonth() + 1).padStart(2, "0"),
+              String(d.getDate()).padStart(2, "0"),
+            ].join("-");
+        $("date").min = localDate(today);
+        today.setDate(today.getDate() + 7);
+        while ([0, 1].includes(today.getDay())) today.setDate(today.getDate() + 1);
+        $("date").value = localDate(today);
+        $("date").addEventListener("change", () => {
+          const day = new Date($("date").value + "T12:00:00").getDay();
+          $("date").setCustomValidity(
+            [0, 1].includes(day)
+              ? "Dinner service runs Tuesday through Saturday. Choose another date."
+              : "",
+          );
+        });
+        $("reservation").addEventListener("submit", (event) => {
+          event.preventDefault();
+          const f = new FormData(event.target);
+          openDialog(
+            "Review your table request",
+            "reservation",
+            `<p><strong>${esc(f.get("guest"))}</strong><br>${esc(f.get("guests"))} guests · ${esc(f.get("date"))} at ${esc(f.get("time"))}</p><p>${esc(f.get("guest-email"))}</p><p>${esc($("booking-note").value)}</p><p>No availability has been checked and no booking will be made by this preview.</p>`,
+            "",
+          );
+        });
+      }
+      if (cfg.layout === "business") businessRender();
+    </script>
+  </body>
+</html>

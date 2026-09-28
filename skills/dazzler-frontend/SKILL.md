@@ -1,117 +1,52 @@
 ---
 name: dazzler-frontend
-description: Automatically design and refine interfaces, branded documents and slides. Import brand evidence, choose licensed fonts and assets, generate measured tokens and data visualizations, implement and inspect. Offer controls only when requested; preserve the user's brand and stack.
+description: Design, build or restyle websites, landing pages, app UIs, dashboards, React components, CSS/Tailwind layouts, branded documents and slides. Choose fonts and color palettes, improve visual hierarchy, or make an interface look better and less generic. Not for backend-only, database, infrastructure or nonvisual logic changes.
 license: Apache-2.0; see LICENSE.txt
 ---
 
 # Dazzler Frontend
 
-When asked to update this skill or its plugin, read [MAINTENANCE.md](MAINTENANCE.md) first. It identifies the canonical maintenance location and the owner-authorized workflow for pushing updates with developer notes. It does not apply to projects created using this skill.
-
-Create a usable interface whose visual identity follows its subject and audience. Make deliberate choices instead of applying the same aesthetic to every project. An explicit brief, reference, or established design system takes precedence over novelty.
-
 ## Automatic by default
 
-`Use $dazzler-frontend to ...` is enough. Follow [the automatic workflow](references/automatic-workflow.md): understand the task, choose a coherent direction, run the relevant font and color helpers yourself, implement, inspect and refine. The user does not need to select a mood, font, palette, harmony, component library or layout, run commands, or approve routine aesthetic choices. Infer reasonable choices from the brief and available context and complete the requested deliverable. A progress explanation is not an approval gate.
+`Use $dazzler-frontend to ...` is enough. Infer purpose, audience and a coherent visual direction from the brief; choose suitable fonts, colors, composition and interactions yourself. Preserve the user's brand, stack, facts and explicit constraints. Deliver the requested artifact and inspect it. Do not make routine aesthetic choices into questions, setup steps or approval gates. Ask only for indispensable missing inputs. Use [optional controls](references/design-controls.md) when the user asks to choose or refine.
 
-Keep internal candidate comparisons and helper configuration out of the user's way. Deliver one considered result with a brief rationale, not a menu of decisions or an offer to start. “Best” means best fit for the task under the available evidence, then checked in context; a heuristic score alone does not decide quality.
+For a small edit, change only what is needed. For substantial work, inspect existing components/tokens and read the relevant part of [the automatic workflow](references/automatic-workflow.md). Use [the design framework](references/deslop.md) when establishing a new direction; consult [interface craft](references/interface-craft.md) for component details. Do not load every reference or run every helper for every task.
 
-Make the visual possibilities work automatically: select an expressive, context-specific typographic hierarchy, a coherent color relationship and an editorial composition. Where appropriate, use strong display type, colored and bold key terms, genuine italics for secondary voice, and contrasting or triadic accents with measured text contrast. Concentrate emphasis on decisions, evidence, actions and meaningful numbers. Keep a legal memo disciplined, a family planner easy to print, and a playful invitation exuberant; do not apply one treatment to every artifact. Existing brand and accessibility requirements take priority.
+## Typography, color and editorial craft
 
-For demonstrations, use rich, explicitly fictional scenarios with reconciled totals, dates, units, edge states and source rows. Choose relevant charts, interactive regions, filters and export controls automatically; avoid adding features that obscure the task. For printable documents, design and inspect the print edition, including page breaks, table headers, margins and readable emphasis. Capture the actual finished artifacts when a preview or gallery is requested, including native Word renders for DOCX rather than screenshots of the HTML companion.
+Run the offline helpers first; their compact output avoids loading entire catalogs:
 
-Switch to [optional refinement controls](references/design-controls.md) only when the user asks for alternatives, wants to choose, or requests a tweak. Preserve all choices they have already supplied. Ask a necessary question only when the task itself cannot be responsibly completed from context, such as an indispensable missing input or contradictory non-negotiable requirements; uncertain taste is not a blocker. External-action permissions still apply.
+```shell
+python scripts/fonts.py recommend --role body --mood literary --text "Actual representative copy"
+node scripts/colors.mjs recommend --mood "cozy minimal" --limit 3
+```
 
-Use [the local runtime guidance](references/local-runtime.md) for integrity checks, automatic technical routing and offline operation. Run the local health check once per installed release for substantial work; choose the smallest compatible runtime and keep optional installation steps out of the default workflow.
+Filter fonts by actual text coverage, weights, genuine italics, numeric features and loading budget before judging character. Read only a shortlisted or named family's `references/fonts/<id>.md` when more detail is needed; [the font index](references/font-catalog.md) is for browsing. Use [typography](references/typography.md) for export, fallback, licensing or installation details. Export only needed files with their notices; do not silently relax script/style requirements or install OS fonts.
 
-## Design from purpose
+Use [the color workflow](references/color-workflow.md) when choosing or changing color. Preserve locked brand colors, measure actual foreground/background roles, and report unresolved constraints. Harmony alone is not contrast. Choose an expressive hierarchy, restrained reading measure and a context-specific composition. Strong display type, selective bold colored keywords, genuine italics and complementary/triadic accents are useful where they clarify decisions, evidence or actions. Keep a legal memo disciplined, a planner printable and an invitation exuberant. Avoid repeating one visual treatment across unrelated tasks.
 
-For substantial new interfaces, redesigns or requests to make a UI less generic, use [the adapted deslop framework](references/deslop.md). It connects artifact type and audience to a design direction, tokens, component states and a review of the actual result. Inspect existing design records and tokens first. Infer a useful direction from the brief without mandatory approval gates, preserve brand choices, and reuse the [design-record guide](references/design-record.md) when durable project documentation is warranted. For a small edit, apply only the relevant [interface craft](references/interface-craft.md); do not expand it into a redesign.
+## Select relevant capabilities
 
-## Make typography a design foundation
+Use [local runtime guidance](references/local-runtime.md) for integrity, smallest-compatible routing and missing runtimes. Core helpers run offline with Python/Node; normal use does not require npm installation. Optional browser/Office checks depend on host tools and must be reported honestly.
 
-When the brief leaves fonts open, automatically choose a best-fit face for the project's audience, content, reading task and visual character. Read [the typography workflow](references/typography.md) for selection and implementation, then consult relevant entries in [the font catalog](references/font-catalog.md). The catalog covers all 25 families found on Open Foundry on 2026-09-28; 24 families have licensed, unmodified files bundled in `assets/fonts/`.
+- Starting structure: [templates](references/templates.md), with ten DOCX, ten HTML and ten UI examples. Export a copy with `scripts/templates.py`; adapt it to verified project content and preserve its resources/notices. Fictional examples are never user facts.
+- Brand import, shared tokens, stress tests, font specimens, original assets and reversible previews: select the relevant [studio workflow](references/design-studio.md).
+- Actual charts, networks, maps and compact metrics: [visualization](references/visualization.md). Preserve source rows, units, missing values, labels and non-color cues. Native editable Office charts require their optional runtime; static images are not editable charts.
+- Clickable images, diagrams and floor plans: [interactive illustrations](references/interactive-illustrations.md). Provide named keyboard controls, useful region descriptions and a text equivalent.
+- Native documents/slides: use the host's artifact workflow when available; preserve the supplied content and verify the target renderer. Design print margins, table headers, page breaks and readable emphasis deliberately.
 
-Filter by actual character coverage, needed weights/italics, technical features and loading budget before comparing subjective character. Typography includes hierarchy, measure, spacing and rendering, not just a font name. Choose and implement without asking for a routine font approval when a suitable bundled option is available and project edits are authorized. Explain the choice briefly. Preserve established brand fonts, never silently replace a missing language/style requirement, and use the workflow's exact-source guidance when manual approval or desktop installation is necessary.
-
-## Establish the direction
-
-When choosing or substantially changing colors, follow [the color workflow](references/color-workflow.md). Infer mood and audience from the brief, preserve locked brand colors, and select contextual inspiration from the attributed palette catalog or generate from a brand seed. Use perceptual ramps and measured semantic roles for light/dark themes; never treat color harmony or a mood label as evidence of accessible contrast. The optional offline helper generates CSS tokens, provenance, contrast reports and a reviewable preview. If constraints conflict it reports no match instead of silently changing locked colors. Review the actual interface with the chosen typography, non-color state cues and keyboard focus before delivery.
-
-Identify the product, audience, main task, content, and constraints from the request and available project context. Inspect relevant existing screens and components before changing an interface. Infer unspecified aesthetic preferences and proceed; do not treat them as missing requirements that need questions. Do not invent company facts, testimonials, performance claims, or customer logos to fill a layout. Mark illustrative data clearly.
-
-For a substantial new design, briefly describe a coherent visual direction before implementing it:
-
-- Palette: a small set of named color tokens and their roles.
-- Typography: one or two appropriate families, clear hierarchy, readable measure, and intentional spacing.
-- Composition: content order, alignment, density, responsive behavior, and the element that deserves the most attention.
-- Identity: a concrete connection between the subject matter and the visual decisions.
-
-For a small edit, apply the existing tokens directly. Avoid turning a minor adjustment into a redesign or a mandatory planning ceremony.
-
-## Design with purpose
-
-Choose the opening treatment around what users need to understand or do first. A useful demonstration, image, headline, or primary task can each lead; dashboards need not acquire marketing heroes.
-
-Use typography to communicate hierarchy and personality. Favor readable body measures, often around 45–80 characters, with spacing suited to the typeface. Respect supplied fonts and practical loading constraints; include fallbacks.
-
-Make borders, labels, grouping, and numbering express relationships. Number items when sequence or rank matters. Use cards when they clarify independent objects. A headline accent, all-caps label, decorative gradient, monospace caption, or repeated card grid should have a reason in the brief rather than appear automatically. These are options, not forbidden styles.
-
-Concentrate expressive detail where it earns attention. Keep surrounding navigation and controls legible. Use motion to explain state changes; limit unsolicited animation and respect reduced-motion preferences.
-
-Write concise interface copy from the user's perspective. Name actions by their outcome, use consistent vocabulary, and make empty and error states explain the next useful step. Keep implementation terminology out of ordinary user flows unless it helps a decision.
-
-For actual charts, networks, maps, compact React metrics or editable Office charts, use [the visualization adapters](references/visualization.md). Choose the renderer automatically from the task and existing stack; preserve data semantics, source tables, brand tokens and runtime limitations.
-
-For clickable illustrations, floor plans, product images or SVG regions, use [the interactive illustration adapters](references/interactive-illustrations.md). Choose the vector or image route automatically, preserve the host framework, and provide named keyboard controls and a text equivalent.
-
-## Use the integrated design studio
-
-For a new document or interface whose structure matches a bundled starting point, use [the template library](references/templates.md). It provides ten DOCX documents, ten matching HTML documents and ten UI folders. Select the best fit automatically, export it with `scripts/templates.py`, and adapt its content, typography and colors to the brief. Replace all fictional names, dates, amounts, contact details and claims with verified project content. Preserve the context-specific information and working interactions, accompanying licenses, and test the customized output; existing brand systems take priority.
-
-For relevant tasks, follow [the studio workflows](references/design-studio.md). The agent selects and runs these tools internally; the user still only supplies a brief. Do not run every tool for every task.
-
-- Extend an existing identity with the CSS/rendered brand importer; resolve conflicting evidence against authoritative project rules before making locks.
-- Generate shared typography, color, spacing, radius, elevation and motion tokens. Export CSS, supported DTCG primitives and Tailwind adapters appropriate to the actual project version.
-- Use the font pairing lab to compare actual copy, available styles, local loading and fallback wrapping. Choose contextually, not by a single score.
-- Generate chart-specific palettes with stable series IDs, patterns, marker/dash cues and measured graphic contrast; add direct labels and text/table equivalents.
-- Select original licensed icons/illustrations from the asset catalog when they serve the content; preserve an existing brand system.
-- Inspect rendered layouts and stress-test long copy, numbers, empty data, missing imagery and errors. Review candidates before editing; DOM simulations do not prove real backend recovery.
-- When the user requests alternatives, create before/after previews and reversible single-file plans. Apply authorized changes without another taste-approval gate; refuse stale plans that would overwrite intervening edits.
-- Carry the same system into document/slide exports. Use the host's document or presentation workflow for native deliverables when available, preserve supplied content and inspect the target rendering. Native font embedding and pagination are not assumed.
-- For authorized evaluation work, run the cross-platform suite with the actual available host runner. No host run means not-run, not passed; never substitute a fixture for a real model evaluation.
-
-Browser tools require an existing Playwright/Chromium installation or equivalent host tooling; native DOCX/PPTX helpers require existing Python libraries. Use available capabilities automatically, keep maintenance dependencies out of client projects, and disclose unavailable execution or checks. Optional tools do not authorize purchases, deployments or unrelated edits.
+For demonstrations, author rich, explicitly synthetic data with reconciled totals and dates, edge states and traceable source rows. Add relevant controls and charts, not features that obscure the task. Capture actual finished artifacts for requested previews; DOCX snapshots must come from a native document render, not its HTML companion.
 
 ## Implement with available capabilities
 
-The design guidance requires no Claude CLI, Anthropic API, MCP server or model-specific SDK. Use the offline Python font helper and bundled Node color helper internally when those decisions are in scope and the runtimes are available. Normal use needs no npm install or third-party Python packages. Catalog-maintenance dependencies are separate and must not be installed in the user's project merely to use the skill. The automatic workflow explains how to continue when a runtime is unavailable.
-
-- Existing codebase: use its framework, package manager, components, tokens, and available development commands. Add dependencies only when the actual feature warrants them. Keep CSS specificity predictable.
-- Complete new website: when the installed Sites skill applies, read and follow it for creation and preview. This skill supplies aesthetic guidance, not a replacement hosting workflow.
-- Inline interactive explanation or mockup: use the installed visualization skill when available and suited to the requested output.
-- Original raster artwork: use the installed image-generation skill/tool when needed. Prefer existing assets or code-native vector graphics when appropriate.
-- Rendered inspection: use the available browser or preview tools and their instructions. Do not assume a particular browser, localhost port, or screenshot API exists.
-
-These integrations are optional and selected by the requested deliverable. Do not install them automatically, switch platforms unexpectedly, or call unavailable tools. If preview or execution is unavailable, provide the useful source or specification and identify what remains unverified. Do not claim a static mockup has working backend behavior. Publishing and other external actions retain the user's authorization requirements.
+Follow [host routing](references/host-routing.md) only when a tool choice requires it. Use the current project's framework and available capabilities. Do not install optional integrations, change platforms, deploy or perform other external actions without the user's authorization. This skill grants no commit, push or publishing permission.
 
 ## Verify the result
 
-Review the design against the brief: which decisions are specific to this product, and which merely repeat familiar defaults? Revise unjustified choices without violating requested styling.
+Inspect narrow and wide layouts, font loading, content accuracy and the primary interactions. Check accessible names, keyboard/focus behavior, actual rendered contrast and relevant empty/error states. For print, inspect every rendered page and repair clipping, spillovers and inappropriate breaks. Run proportionate project tests. Use [the design audit](references/design-audit.md) for a substantial review; a build or screenshot alone proves neither usability nor complete accessibility.
 
-Use [the design audit](references/design-audit.md) to compare the actual composition with the intended direction and check applicable component states. Distinguish verified checks, failures, unavailable checks and features outside scope. A common font, hue or layout is not a defect by itself; fix failures of purpose, hierarchy or behavior instead of enforcing a style blacklist.
-
-For implemented interfaces, use proportionate checks:
-
-- Inspect the actual rendered output at a narrow and a wide viewport when tools permit; fix overflow, clipping, broken assets, and weak hierarchy.
-- Exercise the primary action and relevant loading, empty, error, and success states. Preserve existing behavior during styling changes.
-- Check semantic controls, accessible names, keyboard access, visible focus, contrast, and reduced motion where applicable.
-- Run the project's relevant build, lint, or tests when justified by the change. A screenshot does not establish functional correctness, and a passing build does not establish visual quality.
-
-Deliver the implementation, preview, or requested artifact with a short account of what changed and what was actually checked. Distinguish completed checks from limitations; avoid unsupported claims of production readiness.
+Deliver the artifact with a short explanation of what changed, what was checked and any unavailable verification. Do not imply backend behavior from a static/local demo. For authorized evaluation work use [the evaluation guide](references/evaluations.md); distinguish host observations from fixtures and unrun cases.
 
 ## Notes and credits
 
-Design framework adapted from Samuel Berthe (samber); original frontend guidance from davila7/claude-code-templates. Retain the original license notices. See [adaptation notes](PROVENANCE.md) and [framework attribution](references/deslop.md#notes-and-credits).
-
-Adapted and modified on 2026-09-28 from davila7/claude-code-templates, creative-design/frontend-design. This version adds ChatGPT/Codex tool routing and verification, and revises the workflow to preserve existing brands and user scope. See [provenance](PROVENANCE.md).
+Original frontend guidance: davila7/claude-code-templates. Design framework: Samuel Berthe (samber). See [provenance](PROVENANCE.md) and [framework attribution](references/deslop.md#notes-and-credits). Retain original notices; fonts and libraries keep their own licenses.

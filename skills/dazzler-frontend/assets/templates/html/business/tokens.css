@@ -1,0 +1,32 @@
+:root {
+  --accent: #3c36b5;
+  --secondary: #aa352b;
+  --bright: #bfe9d8;
+  --paper: #ffffff;
+  --ink: #172033;
+  --display: "Work Sans";
+  --body-background: #dddde4;
+  --button-background: #172033;
+  --button-color: white;
+  --tools-color: #172033;
+  --sheet-box-shadow: #10172b16;
+  --page-foot-border-top: #9298a5;
+  --metric-border-right: #ffffff55;
+  --chart-img-background: white;
+  --th-td-border-bottom: #9298a577;
+  --pre-background: #172033;
+  --pre-color: #dceef8;
+  --notes-background: #f8f8fa;
+  --notes-color: #343c4c;
+  --dish-border-bottom: #80233830;
+  --metric-border-bottom: #ffffff44;
+  --body-background-2: white;
+  --body-color: #172033;
+  --sheet-background: white;
+  --sheet-color: #172033;
+  --sheet-border-top: #333;
+  --h1-color: #172033;
+  --folio-color: #172033;
+  --callout-keyword-prose-keyword-tbody-th-color: #172033;
+  --h2-color: #172033;
+}
