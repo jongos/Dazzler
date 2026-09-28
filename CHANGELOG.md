@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — Publish the Dazzler field manual
+
+- **Changed:** Linked the live manual prominently from the README, preserving the owner's latest branding edits. Configured GitHub Pages to publish `main` / `docs` so future committed documentation updates deploy automatically.
+- **Added:** The self-contained interactive manual at `docs/index.html`, `.nojekyll`, original font licenses, and documentation publishing guidance. Includes embedded fonts, chapter navigation, copyable prompts, a brief selector, creator story, feedback address, migration guidance, and upstream credits.
+- **Why:** Let repository visitors read and use the HTML manual in a browser without downloading files or installing dependencies. This publication is explicitly authorized by the owner; it does not broaden permission to publish unrelated design projects.
+- **Validation:** The manual is copied from the previously browser-verified Dazzler edition (desktop and 390/320px layouts, font loading, copying, selector, disclosures, focus and measured accent contrast). Checked copied file integrity and staged whitespace before publishing. Live deployment is verified separately after push; no plugin behavior or version change.
+
 ## 2026-09-28 — 0.6.0: Dazzler identity and repository migration
 
 - **Changed:** Renamed the GitHub repository to `jongos/Dazzler`, plugin identifier to `dazzler`, display name to Dazzler, and skill folder/invocation to `dazzler-frontend` / `$dazzler-frontend`. Updated the SSH remote, canonical checkout, installed personal-skill junction, maintenance instructions, package metadata, helper/test paths, links, and byte-preserving Git attributes. Older release notes and upstream source names remain historical records.

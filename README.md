@@ -2,7 +2,7 @@
 
 <p align="center"><strong>Supercharged Design for A.I.</strong></p>
 
-<p align="center"><a href="#-start-with-an-idea">Get started</a> · <a href="#-the-design-toolkit">The toolkit</a> · <a href="#-install-dazzler">Install</a> · <a href="mailto:jon@filmhedge.com">Send an idea</a></p>
+<p align="center"><a href="https://jongos.github.io/Dazzler/">Read the field manual</a> · <a href="#-start-with-an-idea">Get started</a> · <a href="#-the-design-toolkit">The toolkit</a> · <a href="#-install-dazzler">Install</a> · <a href="mailto:jon@filmhedge.com">Send an idea</a></p>
 
 # Dazzler
 
