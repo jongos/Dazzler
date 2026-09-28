@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/assets/dazzler-banner.svg" alt="Dazzler — Give your ideas a visual voice. Typography, color, composition, and craft." width="100%"></p>
 
-<p align="center"><strong>Supercharge Design Skills for A.I.</strong></p>
+<p align="center"><strong>Supercharged Design for A.I.</strong></p>
 
 <p align="center"><a href="#-start-with-an-idea">Get started</a> · <a href="#-the-design-toolkit">The toolkit</a> · <a href="#-install-dazzler">Install</a> · <a href="mailto:jon@filmhedge.com">Send an idea</a></p>
 
@@ -8,7 +8,7 @@
 
 **Dazzler gives your frontend a visual voice.** Describe what you want to make and who it’s for. The skill chooses suitable fonts, measured colors, layout, and interactions, then implements and reviews the result using the tools available in your ChatGPT/Codex host.
 
-Created by **Jon Gosier** and named after **Dazzler, one of his favorite X-Men characters**. The name celebrates a love of expressive design. This is an independent project, with no affiliation to Marvel, OpenAI, or Anthropic.
+Created by **Jon Gosier** and named after **Dazzler, one of his favorite X-Men characters**. The name celebrates a love of expressive design. This is an independent project, with no affiliation to Disney/Marvel, OpenAI, or Anthropic.
 
 ## ✨ Start with an idea
 
@@ -17,7 +17,7 @@ Use $dazzler-frontend to build a welcoming website for a neighborhood
 pottery studio. Help visitors explore classes and book a first session.
 ```
 
-You supply the intent; Dazzler handles routine design decisions. No style questionnaire, font shopping, or palette setup required.
+Dazzler can be used to help design anything: documents, websites, or UI interfaces.
 
 **Already building something?** Dazzler preserves your brand, stack, and explicit constraints. Small edits stay small.
 
@@ -37,19 +37,19 @@ Keep our brand colors, React components, and existing behavior.
 | **↗ · Composition** | Purpose, audience, hierarchy, grouping, and component craft | A direction informed by the task rather than the same template everywhere. |
 | **✓ · Review** | Responsive inspection, relevant interactions, keyboard focus, and honest verification | A clear account of what was checked and what remains unverified. |
 
-### Type is the foundation
+### Native Typography
 
 Dazzler checks actual text coverage, required weights and italics, features, and file size before comparing character. It exports selected project-local files with their licenses and CSS. Web work normally requires no desktop font installation.
 
-Browse the [font catalog](skills/dazzler-frontend/references/font-catalog.md), [typography workflow](skills/dazzler-frontend/references/typography.md), or [technical inventory](skills/dazzler-frontend/references/font-catalog.json). The Open Foundry snapshot was checked September 28, 2026. Nimbus Sans L remains cataloged with manual source/license guidance rather than bundled.
+Browse the [font catalog](skills/dazzler-frontend/references/font-catalog.md), [typography workflow](skills/dazzler-frontend/references/typography.md), or [technical inventory](skills/dazzler-frontend/references/font-catalog.json). 
 
-### Color should do a job
+### Color Suite
 
 The [color workflow](skills/dazzler-frontend/references/color-workflow.md) connects curated inspiration to a bundled Ankhorage/Culori engine. It generates CSS tokens, provenance, contrast reports, and a portable preview. Conflicting locked colors produce an unresolved report instead of silently changing your brand.
 
 A passing report covers its listed opaque-color pairs. It does **not** certify complete WCAG conformance, image backgrounds, charts, or a finished interface. Those require review in context.
 
-### Less generic. More intentional.
+### Design Framework
 
 The adapted [design framework](skills/dazzler-frontend/references/deslop.md) connects purpose to visual decisions, supported by [interface craft](skills/dazzler-frontend/references/interface-craft.md), an optional [design record](skills/dazzler-frontend/references/design-record.md), and a [design audit](skills/dazzler-frontend/references/design-audit.md). It preserves your direction without universal font/color bans or compulsory approvals for aesthetic choices.
 
@@ -96,13 +96,13 @@ Maintainers rebuild the color engine with exact versions in `package-lock.json`.
 
 </details>
 
-Completed agent-driven maintenance includes validation, a commit, and a push, as documented in [AGENTS.md](AGENTS.md) and [MAINTENANCE.md](skills/dazzler-frontend/MAINTENANCE.md). Every update carries [developer notes](CHANGELOG.md) explaining **what changed, what was added, why, and what was validated**. This is a maintenance workflow, not a background watcher for arbitrary file saves or permission to publish projects designed with Dazzler.
+Completed agent-driven maintenance includes validation, a commit, and a push, as documented in [AGENTS.md](AGENTS.md) and [MAINTENANCE.md](skills/dazzler-frontend/MAINTENANCE.md). 
 
 ## 💌 Feedback, feature requests & ideas
 
-Have a design challenge, a font suggestion, or an idea for what Dazzler should do next? Contact **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)** or [open an issue](https://github.com/jongos/Dazzler/issues).
+Have an idea for what Dazzler should do next? Contact **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)** or [open an issue](https://github.com/jongos/Dazzler/issues).
 
-## 🤝 Credit where it belongs
+## 🤝 Credits
 
 - **Original frontend guidance:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates), specifically its [creative-design/frontend-design folder](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design). Adapted with its original Apache-2.0 license and [provenance](skills/dazzler-frontend/PROVENANCE.md) retained.
 - **De-slop framework:** **Samuel Berthe ([samber](https://github.com/samber))**, from [frontend-design-deslop](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop). Only that folder’s framework was adapted, not the wider project. MIT notice and [source inventory](skills/dazzler-frontend/references/deslop-provenance.json) remain included.
