@@ -28,7 +28,7 @@ def skill_text(platform):
 
 def assemble(platform, target):
     target.mkdir(parents=True)
-    for name in ('references', 'scripts', 'assets'):
+    for name in ('references', 'scripts', 'assets', 'evals'):
         shutil.copytree(SOURCE / name, target / name,
                         ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
     for name in ('LICENSE.txt', 'PROVENANCE.md'):

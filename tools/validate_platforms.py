@@ -26,6 +26,12 @@ def validate(folder):
             assert 'name: dazzler-frontend' in text and '## Verify the result' in text
             assert 'MAINTENANCE.md' not in text and '$dazzler-frontend' not in text
             assert not any(n.endswith('MAINTENANCE.md') or n.endswith('agents/openai.yaml') for n in names)
+            for required in ('scripts/studio.mjs','scripts/project.py','scripts/browser.cjs','scripts/evaluate.py','evals/cross-platform.json','references/design-studio.md'):
+                assert prefix+required in names, required
+            graphics=json.loads(z.read(prefix+'references/asset-catalog.json'))
+            assert len(graphics['assets'])==15
+            for asset in graphics['assets']:
+                assert hashlib.sha256(z.read(prefix+asset['path'])).hexdigest()==asset['sha256']
             catalog = json.loads(z.read(prefix+'references/font-catalog.json'))
             checked = 0
             for family in catalog['fonts']:
@@ -54,7 +60,13 @@ def validate(folder):
                 assert json.loads(result.stdout)
                 result=subprocess.run(['node',str(skill/'scripts/colors.mjs'),'recommend','--mood','cozy'],capture_output=True,text=True,check=True)
                 assert json.loads(result.stdout)
-            print(f'{archive.name}: structure, links, 206 asset hashes, engine and extracted helpers passed')
+                cfg=Path(temp)/'system-input.json';cfg.write_text('{"brand":{"seed":"#345678"}}')
+                subprocess.run(['node',str(skill/'scripts/studio.mjs'),'tokens','--config',str(cfg),'--out',str(Path(temp)/'system')],capture_output=True,text=True,check=True)
+                assert json.loads((Path(temp)/'system/design-system.json').read_text())['palette']['modes']['light']['tokens']['brand']=='#345678'
+                subprocess.run([sys.executable,'-X','utf8',str(skill/'scripts/project.py'),'assets','--kind','icon','--ids','check','--out',str(Path(temp)/'icons')],capture_output=True,text=True,check=True)
+                subprocess.run([sys.executable,'-X','utf8',str(skill/'scripts/evaluate.py'),'--host','package-check','--out',str(Path(temp)/'eval')],capture_output=True,text=True,check=True)
+                assert all(r['status']=='not-run' for r in json.loads((Path(temp)/'eval/evaluation.json').read_text())['results'])
+            print(f'{archive.name}: structure, links, 206 font/support hashes, 15 graphics, engine and extracted core/studio/evaluation helpers passed')
 
 
 if __name__=='__main__':

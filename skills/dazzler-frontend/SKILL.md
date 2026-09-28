@@ -1,6 +1,6 @@
 ---
 name: dazzler-frontend
-description: Automatically design, refine, and de-slop web interfaces from a brief. Choose licensed fonts, measured colors, layout and interactions, then implement and verify. Offer design controls only when requested; preserve the user's brand and stack.
+description: Automatically design and refine interfaces, branded documents and slides. Import brand evidence, choose licensed fonts and assets, generate measured tokens and chart palettes, implement and inspect. Offer controls only when requested; preserve the user's brand and stack.
 license: Apache-2.0; see LICENSE.txt
 ---
 
@@ -56,6 +56,22 @@ Make borders, labels, grouping, and numbering express relationships. Number item
 Concentrate expressive detail where it earns attention. Keep surrounding navigation and controls legible. Use motion to explain state changes; limit unsolicited animation and respect reduced-motion preferences.
 
 Write concise interface copy from the user's perspective. Name actions by their outcome, use consistent vocabulary, and make empty and error states explain the next useful step. Keep implementation terminology out of ordinary user flows unless it helps a decision.
+
+## Use the integrated design studio
+
+For relevant tasks, follow [the studio workflows](references/design-studio.md). The agent selects and runs these tools internally; the user still only supplies a brief. Do not run every tool for every task.
+
+- Extend an existing identity with the CSS/rendered brand importer; resolve conflicting evidence against authoritative project rules before making locks.
+- Generate shared typography, color, spacing, radius, elevation and motion tokens. Export CSS, supported DTCG primitives and Tailwind adapters appropriate to the actual project version.
+- Use the font pairing lab to compare actual copy, available styles, local loading and fallback wrapping. Choose contextually, not by a single score.
+- Generate chart-specific palettes with stable series IDs, patterns, marker/dash cues and measured graphic contrast; add direct labels and text/table equivalents.
+- Select original licensed icons/illustrations from the asset catalog when they serve the content; preserve an existing brand system.
+- Inspect rendered layouts and stress-test long copy, numbers, empty data, missing imagery and errors. Review candidates before editing; DOM simulations do not prove real backend recovery.
+- When the user requests alternatives, create before/after previews and reversible single-file plans. Apply authorized changes without another taste-approval gate; refuse stale plans that would overwrite intervening edits.
+- Carry the same system into document/slide exports. Use the host's document or presentation workflow for native deliverables when available, preserve supplied content and inspect the target rendering. Native font embedding and pagination are not assumed.
+- For authorized evaluation work, run the cross-platform suite with the actual available host runner. No host run means not-run, not passed; never substitute a fixture for a real model evaluation.
+
+Browser tools require an existing Playwright/Chromium installation or equivalent host tooling; native DOCX/PPTX helpers require existing Python libraries. Use available capabilities automatically, keep maintenance dependencies out of client projects, and disclose unavailable execution or checks. Optional tools do not authorize purchases, deployments or unrelated edits.
 
 ## Implement with available capabilities
 

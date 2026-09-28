@@ -1,6 +1,6 @@
 {
   "name": "dazzler",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Dazzler turns your brief into expressive, purposeful frontend design.",
   "author": {
     "name": "Jon Gosier",
@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "Dazzler",
     "shortDescription": "Automatic frontend design from your brief.",
-    "longDescription": "Choose and apply coherent fonts, colors, layouts and interactions automatically from the brief, with licensed assets, measured color roles and visual review. Optional controls support user-requested refinements.",
+    "longDescription": "Automatically create coherent interfaces, documents and slides with brand import, design tokens, licensed fonts and artwork, chart palettes, rendered audits, content stress tests and reversible previews. Includes an evidence-based cross-platform evaluation harness.",
     "developerName": "Jon Gosier",
     "category": "Productivity",
     "capabilities": [],

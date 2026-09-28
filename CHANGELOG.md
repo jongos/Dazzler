@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.8.0: Integrated design studio
+
+- **Changed:** Connected brand evidence, shared tokens, typography, charts, assets, design review and document output in the automatic skill workflow. Updated the field guide to Edition 03, the README, host guides and all platform packages. Existing brand constraints and host permission controls remain authoritative.
+- **Added:** CSS/rendered brand import; complete system generation with CSS, supported DTCG primitives and Tailwind exports; rendered inspection; six content scenarios; a font pairing lab; categorical/sequential/diverging chart styling with non-color cues; 15 original Apache-licensed SVG assets; visual/text change previews with guarded apply/revert; HTML and optional native DOCX/PPTX exports; and four executable cross-platform evaluation briefs with explicit run status and artifact assertions.
+- **Why:** Make the ten approved capabilities available through one invocation, using the existing licensed fonts and measured color engine. Optional browser/native libraries use the host runtime; the skill chooses supported paths and does not make users configure every design decision.
+- **Validation:** 17 Python and 16 Node tests passed. Chromium checked deliberately flawed inspector fixtures, stress scenarios, actual font loading, responsive HTML documents/slides and field-guide controls. Native DOCX/PPTX content, tables, fonts and continuation structure passed structural checks. All five archives passed resource links, 206 font/support hashes, 15 graphic hashes, engine integrity and extracted helper checks; skill/plugin validation passed. Native office rendering and real Claude/Fable, Gemini, Cursor and Copilot model runs remain unverified. Contrast heuristics and chart checks are scoped measurements, not accessibility certification; prepared evaluation matrices remain not-run until a real runner executes them.
+
 ## 2026-09-28 — 0.7.0: Optional editions for other AI hosts
 
 - **Changed:** Versioned the package at 0.7.0 and linked platform downloads from the README. Existing Codex skill behavior is unchanged. Fable is treated as an Anthropic model using the Claude edition, not an invented separate integration.

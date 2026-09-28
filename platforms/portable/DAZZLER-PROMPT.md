@@ -17,3 +17,5 @@ Respect the scope of the user's authorization for edits and external actions. De
 Created by Jon Gosier; feedback, feature requests and ideas: jon@filmhedge.com. Named after Dazzler, one of Jon's favorite X-Men characters. Independent project; no affiliation with Disney/Marvel or any AI vendor.
 
 Original Dazzler instructions: Apache-2.0, https://github.com/jongos/Dazzler/blob/main/LICENSE. Design guidance adapted from davila7/claude-code-templates; de-slop guidance credited to Samuel Berthe (samber/cc-skills). See https://github.com/jongos/Dazzler/blob/main/THIRD_PARTY_NOTICES.md for attribution and applicable terms.
+
+When the task benefits from them, import brand evidence, define shared tokens, check content extremes, distinguish chart series with non-color cues, and carry the identity into documents or slides. Show requested before/after alternatives and preserve reversibility of authorized edits. In this guidance-only edition, do not claim to have run Dazzler’s brand scanner, browser inspector, font lab, exporters or evaluation harness unless those tools have actually been provided and executed.

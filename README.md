@@ -53,6 +53,27 @@ A passing report covers its listed opaque-color pairs. It does **not** certify c
 
 The adapted [design framework](skills/dazzler-frontend/references/deslop.md) connects purpose to visual decisions, supported by [interface craft](skills/dazzler-frontend/references/interface-craft.md), an optional [design record](skills/dazzler-frontend/references/design-record.md), and a [design audit](skills/dazzler-frontend/references/design-audit.md). It preserves your direction without universal font/color bans or compulsory approvals for aesthetic choices.
 
+## ✦ The Dazzler studio — new in 0.8.0
+
+Ten connected tools extend the automatic workflow. Ask for the outcome; Dazzler selects the relevant tools internally.
+
+| Capability | What is now included |
+|---|---|
+| Brand import | CSS evidence and conflicts, plus computed browser styles at multiple widths |
+| Shared design tokens | Type, spacing, radius, elevation, motion and measured light/dark colors; CSS, DTCG primitives and Tailwind adapters |
+| Rendered inspection | Screenshots and reports for overflow, clipping, images, labels, contrast candidates and focus probes |
+| Content stress testing | Temporary long-text, large-number, missing-image, empty-data and error scenarios |
+| Font pairing lab | Actual-copy specimens, fallback/final geometry, file sizes and local load measurements |
+| Chart styling | Categorical, sequential and diverging palettes, labels, patterns, marker/dash cues and graphic contrast |
+| Original asset catalog | 12 outline icons and three geometric illustrations with licenses, usage notes and hashes |
+| Reversible previews | Before/after screenshots, escaped source diffs, atomic single-file apply/revert and stale-edit protection |
+| Documents and slides | Shared-brand HTML editions, optional verified font embedding, and native DOCX/PPTX exporters |
+| Cross-platform evaluations | Four repeatable briefs, configurable real-host runner, artifact assertions, hashes and explicit unrun/manual-review states |
+
+Examples: “Match our existing site,” “Stress-test this dashboard,” “Carry this design into a report and slides,” or “Show me the warmer version.”
+
+**[Studio workflow and command reference](skills/dazzler-frontend/references/design-studio.md)**. Browser inspection needs an existing Playwright/Chromium runtime (or equivalent host tools); DOCX/PPTX need existing `python-docx`/`python-pptx`. Core import, tokens, charts, assets, changes and HTML exports stay lightweight. Automated findings require review; no complete accessibility, native pagination, or cross-model design-quality certification is claimed.
+
 ## 🚀 Install Dazzler
 
 For a host that supports local Codex skills:

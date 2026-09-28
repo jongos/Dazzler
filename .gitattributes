@@ -11,3 +11,6 @@ skills/dazzler-frontend/references/deslop-LICENSE.txt -text
 
 # Preserve original documentation font notices.
 docs/licenses/** -text -whitespace
+
+# Original graphics have cataloged byte hashes.
+skills/dazzler-frontend/assets/graphics/** -text -whitespace

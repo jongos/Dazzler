@@ -56,3 +56,7 @@ Aileron's author page and embedded copyright field say No Rights Reserved; the i
 Terminal Grotesque's GitHub `LICENSE.md` has an unrelated Blackout header. It is retained without alteration as upstream material, but the applicable Terminal Grotesque notice and full OFL are embedded in **both actual binaries** and are also preserved in `*-EMBEDDED-LICENSE.txt`. No font rights are inferred from the unrelated header.
 
 **Excluded:** Nimbus Sans L is cataloged, but no binary is distributed here. The checked Font Library archive includes GPLv2 and a document exception, and refers to corresponding PfaEdit source files elsewhere. Those sources were not verified. The catalog therefore requires exact-release/source review before redistribution; a user approval does not replace those requirements.
+
+## Original graphics and optional runtimes
+
+The 12 icons and three illustrations in `skills/dazzler-frontend/assets/graphics` are original Dazzler SVG artwork, copyright 2026 Jon Gosier, under Apache-2.0. Their catalog records file hashes and usage guidance. Playwright/Chromium, python-docx and python-pptx are optional host-provided runtimes, not vendored into these packages. Their respective licenses apply to any separately installed copies.
