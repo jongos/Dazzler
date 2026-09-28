@@ -47,6 +47,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npx playwright install --with-deps chromium
+      - run: node tools/test_studio_browser.cjs dist/studio-browser
       - run: node tools/test_templates.cjs dist/browser --check-only
       - run: node tools/test_template_gallery.cjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

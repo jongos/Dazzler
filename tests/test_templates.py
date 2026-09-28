@@ -1,6 +1,7 @@
 import hashlib
 import importlib.util
 import json
+import re
 from pathlib import Path
 import tempfile
 import unittest
@@ -17,6 +18,22 @@ spec.loader.exec_module(templates)
 
 
 class TemplateTests(unittest.TestCase):
+    def test_ui_scripts_only_reference_existing_elements(self):
+        scripts = set()
+        for file in (ROOT / "skills/dazzler-frontend/assets/templates/ui").glob(
+            "*/index.html"
+        ):
+            text = file.read_text(encoding="utf-8")
+            script = re.search(r"<script>(.*?)</script>", text, re.S)[1]
+            ids = set(re.findall(r'id="([^"]+)"', text))
+            referenced = set(re.findall(r'\$\("([^"]+)"\)', script))
+            self.assertFalse(
+                referenced - ids, f"{file.parent.name}: {referenced - ids}"
+            )
+            self.assertLess(len(script.encode()), 6000)
+            scripts.add(hashlib.sha256(script.encode()).hexdigest())
+        self.assertEqual(len(scripts), 10)
+
     def test_counts_categories_and_integrity(self):
         c = templates.catalog()
         self.assertEqual(

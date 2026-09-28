@@ -126,6 +126,10 @@ The suite checks brand preservation, content resilience, system/chart output, an
 
 Core project tools use Python stdlib. Tokens/charts use Node and the already bundled color engine. Browser tools need an existing Playwright/Chromium environment, optionally located with `DAZZLER_NODE_MODULES`; use host browser tools if absent. Native DOCX/PPTX need their respective existing Python libraries. The skill should select a supported path automatically and state concrete limitations; never report an unavailable check as passed.
 
+## Import boundaries and font fallbacks
+
+See [bounded imports and font stacks](import-boundaries.md) for evidence trust, browser navigation, limits and fallback overrides.
+
 ## Notes and credits
 
 - [DTCG 2025.10](https://www.designtokens.org/tr/2025.10/format/)

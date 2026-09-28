@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // Dazzler design systems and data visualization. Apache-2.0.
+import { readFileSync } from "node:fs";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { parseArgs } from "node:util";
 import { pathToFileURL } from "node:url";
@@ -22,6 +23,38 @@ const cssString = (s) =>
     .replace(/\\/g, "\\\\")
     .replace(/"/g, '\\"') +
   '"';
+const fontFamilies = JSON.parse(
+  readFileSync(new URL("../references/font-families.json", import.meta.url), "utf8"),
+);
+const generics = new Set([
+  "serif",
+  "sans-serif",
+  "monospace",
+  "system-ui",
+  "ui-serif",
+  "ui-sans-serif",
+  "ui-monospace",
+  "cursive",
+  "fantasy",
+]);
+function fontRole(value, override) {
+  const family = typeof value === "string" ? value : value?.family;
+  if (typeof family !== "string" || !family.trim() || family.length > 160)
+    throw Error("Invalid font family");
+  const supplied = override ?? (typeof value === "object" ? value.fallback : undefined);
+  const known = generics.has(family) || Object.hasOwn(fontFamilies, family.toLowerCase());
+  const fallback =
+    supplied ??
+    (generics.has(family) ? family : (fontFamilies[family.toLowerCase()] ?? "sans-serif"));
+  if (!generics.has(fallback)) throw Error("Font fallback must be a CSS generic family");
+  return {
+    family,
+    fallback,
+    inferred: supplied === undefined,
+    known,
+    stack: generics.has(family) ? family : `${cssString(family)}, ${fallback}`,
+  };
+}
 function positive(n, label) {
   if (!Number.isFinite(n) || n <= 0) throw Error(`${label} must be positive`);
   return n;
@@ -39,7 +72,7 @@ export function tokens(input = {}) {
     ratio = positive(input.typeRatio ?? 1.2, "typeRatio");
   if (base < 12 || base > 24 || ratio < 1.05 || ratio > 1.5)
     throw Error("Use baseSize 12–24 and typeRatio 1.05–1.5");
-  const fonts = {
+  const requestedFonts = {
     body: input.fonts?.body ?? input.brand?.fonts?.body ?? "system-ui",
     heading:
       input.fonts?.heading ??
@@ -48,8 +81,15 @@ export function tokens(input = {}) {
       input.brand?.fonts?.body ??
       "system-ui",
   };
-  for (const font of Object.values(fonts))
-    if (typeof font !== "string" || font.length > 160) throw Error("Invalid font family");
+  const fontRoles = Object.fromEntries(
+    Object.entries(requestedFonts).map(([role, value]) => [
+      role,
+      fontRole(value, input.fontFallbacks?.[role]),
+    ]),
+  );
+  const fonts = Object.fromEntries(
+    Object.entries(fontRoles).map(([role, value]) => [role, value.family]),
+  );
   const scale = Object.fromEntries(
     Array.from({ length: 8 }, (_, i) => [
       "step" + (i - 1),
@@ -59,6 +99,7 @@ export function tokens(input = {}) {
   const system = {
     schemaVersion: 1,
     fonts,
+    fontRoles,
     type: scale,
     spacing: Object.fromEntries([0, 1, 2, 3, 4, 6, 8, 12, 16, 24].map((n) => [n, n * 0.25])),
     radius: { none: 0, small: 0.25, medium: 0.5, large: 1, pill: 999 },
@@ -71,6 +112,12 @@ export function tokens(input = {}) {
     palette,
     provenance: input.brand?.source ?? null,
     notes: [
+      ...Object.values(fontRoles)
+        .filter((x) => !x.known && x.inferred)
+        .map(
+          (x) =>
+            `Unknown font ${x.family}: using sans-serif fallback; set fontFallbacks to override.`,
+        ),
       "Font families are references, not proof of installed files or licensing.",
       "Spacing/radius defaults may be overridden by project constraints.",
     ],
@@ -96,7 +143,7 @@ export function tokens(input = {}) {
       }
   let css = colorCSS(palette) + "\n:root {\n";
   for (const [key, value] of Object.entries(fonts))
-    css += `  --font-${key}: ${cssString(value)}, sans-serif;\n`;
+    css += `  --font-${key}: ${fontRoles[key].stack};\n`;
   for (const [group, values] of Object.entries({
     type: scale,
     space: system.spacing,
@@ -121,7 +168,10 @@ export function tokens(input = {}) {
       ]),
     );
   dtcg.font = Object.fromEntries(
-    Object.entries(fonts).map(([k, v]) => [k, { $type: "fontFamily", $value: v }]),
+    Object.entries(fonts).map(([k, v]) => [
+      k,
+      { $type: "fontFamily", $value: generics.has(v) ? [v] : [v, fontRoles[k].fallback] },
+    ]),
   );
   dtcg.color = Object.fromEntries(
     Object.entries(palette.modes).map(([mode, v]) => [
@@ -172,7 +222,7 @@ export function tokens(input = {}) {
         return `  --color-dazzler-${name}: var(--color-${name});`;
       })
       .join("\n") +
-    "\n  --font-sans: var(--font-body);\n  --font-display: var(--font-heading);\n}\n";
+    `\n  --font-${fontRoles.body.fallback.replace(/^ui-/, "").replace("system-ui", "sans").replace("sans-serif", "sans").replace("monospace", "mono")}: var(--font-body);\n  --font-display: var(--font-heading);\n}\n`;
   return { system, css, dtcg, tailwind, theme };
 }
 const shapes = ["circle", "square", "triangle", "diamond", "cross", "star", "hexagon", "plus"];

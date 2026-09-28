@@ -11,12 +11,14 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "skills/dazzler-frontend"
-PLATFORMS = ("claude", "gemini", "cursor", "copilot")
+PLATFORMS = ("codex", "claude", "gemini", "cursor", "copilot")
 
 
 def skill_text(platform):
     text = (SOURCE / "SKILL.md").read_text(encoding="utf-8")
     text = re.sub(r"When asked to update this skill.*?\n\n", "", text, count=1)
+    if platform == "codex":
+        return text
     start = text.index("## Implement with available capabilities")
     end = text.index("## Verify the result", start)
     routing = (ROOT / f"platforms/{platform}/HOST.md").read_text(encoding="utf-8")
@@ -30,7 +32,103 @@ def skill_text(platform):
     return text.replace("$dazzler-frontend", "Dazzler")
 
 
-def assemble(platform, target):
+LITE_FAMILIES = {
+    "work-sans",
+    "young-serif",
+    "office-code-pro",
+    "inter",
+    "bluu-next",
+    "league-gothic",
+}
+
+
+def seal_profile(target, platform, profile):
+    catalog_path = target / "references/font-catalog.json"
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    if profile == "compact":
+        for family in catalog["fonts"]:
+            if family["status"] != "bundled" or family["id"] in LITE_FAMILIES:
+                continue
+            directory = target / "assets/fonts" / family["id"]
+            assert directory.parent == target / "assets/fonts"
+            shutil.rmtree(directory)
+            reference = target / "references/fonts" / (family["id"] + ".md")
+            if reference.is_file():
+                reference.write_text(
+                    "**Optional in this compact edition.** This family's catalog binaries are not installed; use an included alternative or the full edition. The information below describes the full catalog.\n\n"
+                    + reference.read_text(encoding="utf-8"),
+                    encoding="utf-8",
+                )
+            family["status"] = "optional-pack"
+            family["manual_steps"] = [
+                "Use an included alternative automatically, or obtain the full edition to use this family. Never imply the missing files are installed."
+            ]
+            for face in family["files"]:
+                face["path"] = None
+            family["support_files"] = []
+        notices_path = target / "THIRD_PARTY_NOTICES.md"
+        notices = notices_path.read_text(encoding="utf-8")
+        for family in catalog["fonts"]:
+            if family["status"] == "optional-pack":
+                notices = notices.replace(
+                    f"[Notices](assets/fonts/{family['id']}/)",
+                    f"[Optional family information](references/fonts/{family['id']}.md)",
+                )
+        notices_path.write_text(
+            "Compact profile: catalog families marked optional are not installed. Original notices for included binaries remain alongside those files, including template-local subsets. Full-catalog attribution below is retained for context.\n\n"
+            + notices,
+            encoding="utf-8",
+        )
+        catalog["bundled_family_count"] = len(LITE_FAMILIES)
+        catalog_path.write_text(json.dumps(catalog, indent=2) + "\n", encoding="utf-8")
+    bundled = [f for f in catalog["fonts"] if f["status"] == "bundled"]
+    templates = json.loads(
+        (target / "assets/templates/catalog.json").read_text(encoding="utf-8")
+    )
+    version = json.loads((ROOT / "package.json").read_text())["version"]
+    record = {
+        "schemaVersion": 1,
+        "version": version,
+        "host": platform,
+        "profile": profile,
+        "maxUnpackedBytes": 24_000_000 if profile == "compact" else 80_000_000,
+        "fontFamilies": [f["id"] for f in bundled],
+        "fontSupportFiles": sum(
+            len(f["files"]) + len(f["support_files"]) for f in bundled
+        ),
+        "templates": len(templates["templates"]),
+        "notes": [
+            "Template-local font subsets remain with their templates; they are not general font-catalog installations.",
+            "Host upload and execution compatibility require a real host test; package validation is not host acceptance.",
+        ],
+    }
+    (target / "references/package-profile.json").write_text(
+        json.dumps(record, indent=2) + "\n", encoding="utf-8"
+    )
+    import sys
+
+    sys.path.insert(0, str(SOURCE / "scripts"))
+    from health import content_digest
+
+    files = {
+        p.relative_to(target).as_posix(): content_digest(p)
+        for directory in ("scripts", "assets", "references")
+        for p in sorted(
+            (target / directory).rglob("*"),
+            key=lambda p: p.relative_to(target).as_posix(),
+        )
+        if p.is_file() and "__pycache__" not in p.parts and p.name != "integrity.json"
+    }
+    (target / "references/integrity.json").write_text(
+        json.dumps({"schemaVersion": 1, "files": files}, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    size = sum(len(canonical_bytes(p)) for p in target.rglob("*") if p.is_file())
+    if size > record["maxUnpackedBytes"]:
+        raise ValueError(f"{platform}/{profile} exceeds unpacked budget: {size}")
+
+
+def assemble(platform, target, profile="full"):
     target.mkdir(parents=True)
     for name in ("references", "scripts", "assets", "evals"):
         shutil.copytree(
@@ -47,6 +145,9 @@ def assemble(platform, target):
     notices = notices.replace("skills/dazzler-frontend/", "")
     (target / "THIRD_PARTY_NOTICES.md").write_text(notices, encoding="utf-8")
     shutil.copy2(ROOT / f"platforms/{platform}/README.md", target / "INSTALL.md")
+    if platform == "codex":
+        shutil.copytree(SOURCE / "agents", target / "agents")
+    seal_profile(target, platform, profile)
     return target
 
 
@@ -111,6 +212,11 @@ def build(destination):
     with tempfile.TemporaryDirectory(dir=destination, prefix="build-") as temp:
         stage = Path(temp).resolve()
         assert stage.parent == destination
+        compact = assemble("claude", stage / "dazzler-frontend", "compact")
+        archive(compact, destination / "dazzler-claude-compact.zip")
+    with tempfile.TemporaryDirectory(dir=destination, prefix="build-") as temp:
+        stage = Path(temp).resolve()
+        assert stage.parent == destination
         plugin = stage / "dazzler"
         assemble("claude", plugin / "skills/dazzler-frontend")
         (plugin / ".claude-plugin").mkdir()
@@ -138,7 +244,24 @@ def build(destination):
     (destination / "DAZZLER-PROMPT.md").write_bytes(
         canonical_bytes(ROOT / "platforms/portable/DAZZLER-PROMPT.md")
     )
-    files = sorted(destination.glob("*.zip")) + [destination / "DAZZLER-PROMPT.md"]
+    sizes = {}
+    for file in sorted(destination.glob("*.zip")):
+        with zipfile.ZipFile(file) as bundle:
+            sizes[file.name] = {
+                "compressedBytes": file.stat().st_size,
+                "unpackedBytes": sum(x.file_size for x in bundle.infolist()),
+                "files": len(bundle.infolist()),
+            }
+    (destination / "PACKAGE-SIZES.json").write_text(
+        json.dumps({"version": manifest["version"], "packages": sizes}, indent=2)
+        + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    files = sorted(destination.glob("*.zip")) + [
+        destination / "DAZZLER-PROMPT.md",
+        destination / "PACKAGE-SIZES.json",
+    ]
     (destination / "SHA256SUMS.txt").write_text(
         "".join(
             hashlib.sha256(p.read_bytes()).hexdigest() + "  " + p.name + "\n"

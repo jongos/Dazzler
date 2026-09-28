@@ -96,7 +96,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "a99c39d59d8aa9ff22da7372cb9ac04406f2a829e5d868a224b5698784c70b58"
+    "sourceSha256": "0e26f994d65a49d0fdc8481e2cefef5c4fd1b124db875a017ab4a9e6438b3960"
   },
   {
     "id": "webapp-board",
@@ -105,7 +105,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "195eaeb74dfdf99cc02e4c79efb78aa48d1ce62886b62880b86d9f8e76fae2bc"
+    "sourceSha256": "fb7c7cca265026779231cca9daa5aff16432155325c19a74c22db5fbeecbae2e"
   },
   {
     "id": "webapp-settings",
@@ -114,7 +114,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "a3e17daba766b0421eeee0baf4a0aeaba686ff2398a015c6d08e54f93fb46c02"
+    "sourceSha256": "9df814a628d5f61b4798020529fc1543737d5a1ea6de7f9de4642ea1ebc0dc11"
   },
   {
     "id": "data-revenue",
@@ -123,7 +123,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "e62e936f7c8716f141bc7bee848fef5d6b231dd8a98307235e07ca32cb0a7d9f"
+    "sourceSha256": "23e3a3e7cb334c183f910d6e3ade9f413a75e647e0f253cdb4fbf52ee7c19eea"
   },
   {
     "id": "data-operations",
@@ -132,7 +132,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "9a1511eebf1356fbbc29eeea80a47cc55417592d88f04c4ed070578350668e74"
+    "sourceSha256": "30e08dabc8ca7671c1f5763b36e77dbfc78a10c52703958ff5a595535d48319f"
   },
   {
     "id": "restaurant-fine-dining",
@@ -141,7 +141,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "d5baa8ee69b673c119729c52ceb086bcfa23780b0be82c23db81e435af176090"
+    "sourceSha256": "26dcb7068de24ef442f28047f6a7f58135d36a4f5f8b21bc089b1cc49d0c3c14"
   },
   {
     "id": "restaurant-cafe",
@@ -150,7 +150,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "64aecf85e928a4be8572ae0c03791b32d53e438d28ed428a3f84164a64f41a7e"
+    "sourceSha256": "6ba4b4db241c5cdad4631f4777055c36a49e89da866ba773514d3f4020e05367"
   },
   {
     "id": "restaurant-reservations",
@@ -159,7 +159,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "ad201bd939d107a019c7fd26dcb43e30d7f9e8f8fc205c81b19b24fb84543fd4"
+    "sourceSha256": "bae6f764f1d130a0dc9aaca477a6b644b422dcc76df71f087242059f043917b6"
   },
   {
     "id": "restaurant-menu",
@@ -168,7 +168,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "a020299f77d0cfe5f7f054a0f8ed3bd5963fac669c48307f5973965b5ab021e6"
+    "sourceSha256": "4561681ef416de34fcf5d204475d423b23bc8f8c65552531e031526fdf93db63"
   },
   {
     "id": "business-portal",
@@ -177,6 +177,6 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "1d861b8f1c40a66f826a9e7b59faf08813f1080d8b527f301236dd9a840d2dfa"
+    "sourceSha256": "c8a6a1b46cfe9683ffe6b0f30a589850050ad8dcebadc8a91ad5457b7d484f2a"
   }
 ]

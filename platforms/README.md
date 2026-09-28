@@ -4,8 +4,8 @@ The core typography, color tools and design guidance are shared. Platform adapte
 
 | Host | Installation guide | Download |
 |---|---|---|
-| ChatGPT/Codex | [Existing native edition](../README.md#-install-dazzler) | Use `skills/dazzler-frontend` |
-| Claude Code / Claude chat, including Fable | [Claude guide](claude/README.md) | Skill ZIP · Code plugin ZIP |
+| ChatGPT/Codex | [Native edition](codex/README.md) | Versioned Codex skill ZIP |
+| Claude Code / Claude chat, including Fable | [Claude guide](claude/README.md) | Compact upload ZIP · Full skill ZIP · Code plugin ZIP |
 | Gemini CLI | [Gemini guide](gemini/README.md) | Skill ZIP |
 | Cursor Agent | [Cursor guide](cursor/README.md) | Skill ZIP |
 | GitHub Copilot agents | [Copilot guide](copilot/README.md) | Skill ZIP |
@@ -13,7 +13,7 @@ The core typography, color tools and design guidance are shared. Platform adapte
 
 Fable is an Anthropic Claude model and uses the Claude host's format, not a separate platform package. The portable prompt is guidance only: it cannot install skills or provide fonts, scripts, execution or verified measurements to a text-only chat.
 
-Full ZIPs carry unmodified fonts, licenses and the offline helper bundle. They are generated from `skills/dazzler-frontend` plus the relevant `HOST.md`, without Codex UI metadata, owner-specific maintenance permissions, or Windows paths. Platform source folders intentionally do not duplicate font binaries. Installation paths and capabilities are based on official documentation linked in each guide, checked September 28, 2026. Native host sessions and cloud uploads have not been tested.
+Full ZIPs carry unmodified fonts, licenses and the offline helper bundle. They are generated from `skills/dazzler-frontend` plus the relevant `HOST.md`, without transferable maintenance permissions or personal Windows paths. Only the Codex edition carries Codex UI metadata. Platform source folders intentionally do not duplicate font binaries. Installation paths and capabilities are based on official documentation linked in each guide, checked September 28, 2026. Native host sessions and cloud uploads have not been tested.
 
 ## Maintain the editions
 
@@ -39,11 +39,14 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 ## Notes and credits
 
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-claude.zip)
-- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-claude-plugin.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-gemini.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-cursor.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-copilot.zip)
-- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.15.0/DAZZLER-PROMPT.md)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude.zip)
+- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude-plugin.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-gemini.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-cursor.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-copilot.zip)
+- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.16.0/DAZZLER-PROMPT.md)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-templates.zip)
+
+- [Native Codex skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude-compact.zip)

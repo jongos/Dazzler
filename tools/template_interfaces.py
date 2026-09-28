@@ -567,8 +567,12 @@ def build_ui(d, folder):
         '<option value="q2">Q2 · Apr–Jun</option>',
         '<option value="q2">Q2 · Apr–Jun</option><option value="q3">Q3 · Jul–Sep</option><option value="q4">Q4 · Oct–Dec</option>',
     )
-    script = (
-        Path(__file__).with_name("template_interactions.js").read_text(encoding="utf-8")
+    import subprocess
+
+    script = subprocess.check_output(
+        ["node", str(Path(__file__).with_name("build_template_interactions.mjs")), k],
+        text=True,
+        encoding="utf-8",
     )
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(d['brand'])} — {e(d['title'])}</title><link rel="stylesheet" href="styles.css"></head><body class="template-{k} {'restaurant' if restaurant else 'app'}"><a class="skip" href="#main">Skip to content</a><div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div><header class="top"><a class="brand" href="#main">{e(d['brand'])}<span class="brand-dot"></span></a><nav aria-label="Main navigation">{links}</nav>{'<span class="avatar" aria-label="Alex Morgan">AM</span>' if not restaurant else '<span class="top-note">'+('Dinner, slowly.' if k=='dining' else 'Made for good company.')+'</span>'}</header><main id="main">{title}{body}<p id="status" class="status" role="status" aria-live="polite"></p></main><footer class="site-footer"><span>{e(d['brand'])} · Fictional example by Dazzler</span><details><summary>Template notes</summary><p>All names, contact details, dates, prices and figures are illustrative. Actions update this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled fonts retain their notices.</p><p>Design system: {e(d["voice"])}. Local fonts, synthetic data, responsive layout, print styles and working preview states demonstrate Dazzler.</p></details></footer><dialog id="edit-dialog"><form id="edit-form"><h2 id="dialog-title">Add details</h2><div id="dialog-content"></div><label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160"><div class="dialog-actions"><button type="button" id="cancel" class="secondary">Cancel</button><button id="dialog-save">Save preview</button></div></form></dialog><script id="template-data" type="application/json">{encoded}</script><script>{script}</script></body></html>"""
     (folder / "index.html").write_text(page, encoding="utf-8")

@@ -22,12 +22,21 @@ def validate(folder):
     )
     for name, digest in sums.items():
         assert hashlib.sha256((folder / name).read_bytes()).hexdigest() == digest, name
+    sizes = json.loads((folder / "PACKAGE-SIZES.json").read_text(encoding="utf-8"))
     for archive in sorted(folder.glob("*.zip")):
         with zipfile.ZipFile(archive) as z:
             names = z.namelist()
+            assert sizes["packages"][archive.name] == {
+                "compressedBytes": archive.stat().st_size,
+                "unpackedBytes": sum(i.file_size for i in z.infolist()),
+                "files": len(names),
+            }
             assert len(names) == len(set(names))
             assert not any(
-                PurePosixPath(n).is_absolute() or ".." in PurePosixPath(n).parts
+                PurePosixPath(n).is_absolute()
+                or ".." in PurePosixPath(n).parts
+                or "\\" in n
+                or ":" in n
                 for n in names
             )
             if archive.name == "dazzler-templates.zip":
@@ -48,9 +57,23 @@ def validate(folder):
             prefix = entry.removesuffix("SKILL.md")
             text = z.read(entry).decode()
             assert "name: dazzler-frontend" in text and "## Verify the result" in text
-            assert "MAINTENANCE.md" not in text and "$dazzler-frontend" not in text
+            profile = json.loads(z.read(prefix + "references/package-profile.json"))
+            assert profile["profile"] == (
+                "compact" if "compact" in archive.name else "full"
+            )
+            assert sum(i.file_size for i in z.infolist()) <= profile["maxUnpackedBytes"]
+            assert archive.stat().st_size <= profile["maxUnpackedBytes"]
+            assert "MAINTENANCE.md" not in text
+            if archive.name != "dazzler-codex.zip":
+                assert "$dazzler-frontend" not in text
+            else:
+                assert prefix + "agents/openai.yaml" in names
             assert not any(
-                n.endswith("MAINTENANCE.md") or n.endswith("agents/openai.yaml")
+                n.endswith("MAINTENANCE.md")
+                or (
+                    archive.name != "dazzler-codex.zip"
+                    and n.endswith("agents/openai.yaml")
+                )
                 for n in names
             )
             templates = json.loads(z.read(prefix + "assets/templates/catalog.json"))
@@ -92,7 +115,21 @@ def validate(folder):
                         == item["sha256"]
                     )
                     checked += 1
-            assert checked == 206
+            assert checked == profile["fontSupportFiles"]
+            bundled_ids = [
+                f["id"] for f in catalog["fonts"] if f["status"] == "bundled"
+            ]
+            assert bundled_ids == profile["fontFamilies"]
+            if profile["profile"] == "full":
+                assert checked == 206
+            else:
+                assert len(bundled_ids) == 6
+                assert profile["maxUnpackedBytes"] == 24_000_000
+                assert not any(
+                    n.startswith(prefix + "assets/fonts/")
+                    and n.split("/fonts/", 1)[1].split("/")[0] not in bundled_ids
+                    for n in names
+                )
             viz = json.loads(z.read(prefix + "scripts/vendor/viz/provenance.json"))
             for relative, digest in viz["files"].items():
                 assert (
@@ -336,7 +373,7 @@ def validate(folder):
                     Path(temp) / "template-export/ui/restaurant-cafe/index.html"
                 ).is_file()
             print(
-                f"{archive.name}: structure, links, 206 font/support hashes, 15 graphics, color/viz engines and extracted core/studio/chart/evaluation helpers passed"
+                f"{archive.name}: structure, links, {checked} font/support hashes, 15 graphics, color/viz engines and extracted core/studio/chart/evaluation helpers passed"
             )
 
 

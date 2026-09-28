@@ -57,3 +57,25 @@ test("chart preview escapes labels and rejects invalid configurations", () => {
   assert.throws(() => chart({ hue: NaN }));
   assert.throws(() => chart({ count: 2, ids: ["a", "a"] }));
 });
+
+test("font category controls fallback and Tailwind alias, with explicit unknown overrides", () => {
+  const serif = tokens({ fonts: { body: "Young Serif", heading: "Office Code Pro" } });
+  assert.match(serif.css, /--font-body: "Young Serif", serif/);
+  assert.match(serif.css, /--font-heading: "Office Code Pro", monospace/);
+  assert.match(serif.theme, /--font-serif: var\(--font-body\)/);
+  assert(!serif.theme.includes("--font-sans:"));
+  assert.deepEqual(serif.dtcg.font.body.$value, ["Young Serif", "serif"]);
+  assert.match(tokens().css, /--font-body: system-ui;/);
+  assert.match(
+    tokens({ fonts: { body: { family: "Private Display", fallback: "serif" } } }).css,
+    /"Private Display", serif/,
+  );
+  assert.match(
+    tokens({ fonts: { body: "Private" }, fontFallbacks: { body: "monospace" } }).css,
+    /"Private", monospace/,
+  );
+  assert(
+    tokens({ fonts: { body: "Private" } }).system.notes.some((x) => x.includes("Unknown font")),
+  );
+  assert.throws(() => tokens({ fontFallbacks: { body: "serif; color:red" } }));
+});

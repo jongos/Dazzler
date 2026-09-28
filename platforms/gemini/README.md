@@ -34,6 +34,6 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 Packaging reference (checked September 28, 2026): [official documentation](https://geminicli.com/docs/cli/skills/). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-gemini.zip)
+- [dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-gemini.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-templates.zip)

@@ -47,6 +47,13 @@ def check(root=ROOT):
             problems.append({"file": relative, "issue": "modified"})
     return {
         "status": "pass" if not problems else "fail",
+        "package": (
+            json.loads(
+                (root / "references/package-profile.json").read_text(encoding="utf-8")
+            )
+            if (root / "references/package-profile.json").exists()
+            else {"profile": "canonical-full-checkout"}
+        ),
         "checkedFiles": len(manifest["files"]),
         "problems": problems,
         "core": {

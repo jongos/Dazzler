@@ -16,7 +16,11 @@ This repository folder contains the platform adapter and installation guidance, 
 
 Fable is a Claude model, so it uses this same edition; choose it in your host if your account offers it.
 
-For Claude chat, upload `dazzler-claude.zip` through Customize > Skills > Create skill > Upload a skill, where custom skills are available. The ZIP contains one `dazzler-frontend` folder with `SKILL.md`, resources and licenses. Host upload limits, account availability and execution capabilities apply; the full asset bundle is approximately 23 MB compressed. This upload has not been exercised in Claude chat. Upload instructions are linked in the closing notes.
+For Claude chat, try **dazzler-claude-compact.zip** through your host's custom skill upload flow. The compact profile contains six general-purpose families (Work Sans, Young Serif, Office Code Pro, Inter, Bluu Next and League Gothic), all 30 templates with their local font subsets, the offline engines, and complete applicable licenses. Other catalog families are explicitly marked optional; Dazzler automatically chooses an included family. Use the full desktop edition when the wider font collection is needed.
+
+The builder enforces **24,000,000 bytes unpacked** for the compact skill and publishes exact compressed/unpacked sizes in `PACKAGE-SIZES.json`. This leaves headroom below the documented Claude API 30 MB uncompressed limit; it does not establish Claude chat's current upload limit. Real Claude chat upload acceptance remains unverified. API execution is offline: no package installation or runtime network is assumed.
+
+Verify `SHA256SUMS.txt` before extraction/upload. `references/package-profile.json` identifies the version, installed families and resources; `python scripts/health.py` verifies that profile's inventory. For an update, back up and replace the complete installed folder instead of merging versions. For a manual uninstall, remove only that skill folder; use the host's removal UI for hosted skills.
 
 ## Optional Claude Code plugin
 
@@ -44,9 +48,12 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 Packaging reference (checked September 28, 2026): [official documentation](https://code.claude.com/docs/en/skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-claude.zip)
+- [dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude.zip)
 - [Anthropic Fable](https://www.anthropic.com/claude/fable)
 - [Official upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 - [Plugin documentation](https://code.claude.com/docs/en/plugins)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.15.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-templates.zip)
+
+- [Compact Claude skill](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude-compact.zip)
+- [Claude API skill limits](https://platform.claude.com/docs/en/build-with-claude/skills-guide)

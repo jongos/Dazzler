@@ -91,6 +91,14 @@ class MaintenanceTests(unittest.TestCase):
                     str(file),
                 )
 
+    def test_repository_instructions_do_not_transfer_publication_permission(self):
+        for relative in ["AGENTS.md", "maintenance/MAINTENANCE.md"]:
+            text = (ROOT / relative).read_text(encoding="utf-8").lower()
+            self.assertNotIn("owner has authorized", text)
+            self.assertNotIn("owner explicitly authorized", text)
+            self.assertNotIn("without requesting separate push permission", text)
+            self.assertIn("active conversation", text)
+
     def test_context_and_installation_boundaries(self):
         skill = ROOT / "skills/dazzler-frontend"
         self.assertLessEqual((skill / "SKILL.md").stat().st_size, 8000)

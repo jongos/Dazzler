@@ -1,6 +1,6 @@
 {
   "name": "dazzler-maintenance",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,8 +12,8 @@
     "test:hotspots": "node --test tests/hotspots.test.mjs",
     "test": "node tools/run_tests.mjs",
     "build": "node tools/build_colors.mjs && node tools/build_visualization.mjs && node tools/build_hotspots.mjs",
-    "format": "prettier --write \"tools/*.{mjs,cjs,css}\" \"tests/*.mjs\" \"skills/dazzler-frontend/scripts/*.{mjs,cjs,css}\"",
-    "format:check": "prettier --check \"tools/*.{mjs,cjs,css}\" \"tests/*.mjs\" \"skills/dazzler-frontend/scripts/*.{mjs,cjs,css}\""
+    "format": "prettier --write \"tools/*.{mjs,cjs,js,css}\" \"tests/*.mjs\" \"skills/dazzler-frontend/scripts/*.{mjs,cjs,css}\"",
+    "format:check": "prettier --check \"tools/*.{mjs,cjs,js,css}\" \"tests/*.mjs\" \"skills/dazzler-frontend/scripts/*.{mjs,cjs,css}\""
   },
   "devDependencies": {
     "@ankhorage/color-theory": "0.3.1",
