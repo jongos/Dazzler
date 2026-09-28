@@ -57,6 +57,8 @@ Read `report.json`, check the source CSV against the input, inspect desktop/mobi
 
 For bars/areas keep a meaningful zero baseline; preserve missing observations and temporal order; distinguish actual, forecast and illustrative data. Use direct labels or non-color cues, meaningful units, a source, and an accessible data equivalent. A library's accessibility features do not certify the final artifact. Avoid inferring causation from correlation, reconstructing missing values without authorization, or generating chart geometry with an image model.
 
+For interactive regions on artwork rather than plotted observations, use [interactive illustrations](interactive-illustrations.md).
+
 ## Notes and credits
 
 - [Vega](https://github.com/vega/vega) and [Vega-Lite](https://github.com/vega/vega-lite): BSD-3-Clause; University of Washington Interactive Data Lab and contributors.

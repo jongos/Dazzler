@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "react-img-mapper": "2.0.2"
+  },
+  "hostRuntime": "Use the existing compatible React/React DOM runtime",
+  "notes": "Merge only the required dependency into the existing project. Do not replace its manifest."
+}

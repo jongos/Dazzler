@@ -52,6 +52,10 @@ def validate(folder):
             viz=json.loads(z.read(prefix+'scripts/vendor/viz/provenance.json'))
             for relative,digest in viz['files'].items():
                 assert hashlib.sha256(z.read(prefix+'scripts/vendor/viz/'+relative)).hexdigest()==digest
+            hotspots = json.loads(z.read(prefix+'scripts/vendor/hotspots/provenance.json'))
+            for relative,digest in hotspots['files'].items():
+                assert hashlib.sha256(z.read(prefix+'scripts/vendor/hotspots/'+relative)).hexdigest()==digest
+            assert prefix+'references/interactive-illustrations.md' in names
             prov = json.loads(z.read(prefix+'scripts/vendor/provenance.json'))
             assert hashlib.sha256(z.read(prefix+'scripts/vendor/color-engine.mjs')).hexdigest() == prov['sha256']
             for n in names:
@@ -72,6 +76,12 @@ def validate(folder):
                 config.write_text(json.dumps({'title':'Package smoke check','data':[{'x':'A','y':1},{'x':'B','y':3}]}))
                 subprocess.run(['node',str(skill/'scripts/visualize.mjs'),'--config',str(config),'--out',str(Path(temp)/'chart-output')],capture_output=True,text=True,check=True,timeout=30)
                 assert (Path(temp)/'chart-output/chart.svg').read_text().startswith('<svg')
+                art=Path(temp)/'art.svg'
+                art.write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect id="room" width="90" height="90"/></svg>')
+                interactive=Path(temp)/'interactive.json'
+                interactive.write_text(json.dumps({'title':'Illustration package check','imageAlt':'A room.','regions':[{'id':'room','label':'Room','description':'A sample room.'}]}))
+                subprocess.run(['node',str(skill/'scripts/hotspots.mjs'),'--config',str(interactive),'--art',str(art),'--out',str(Path(temp)/'interactive-output')],capture_output=True,text=True,check=True,timeout=30)
+                assert json.loads((Path(temp)/'interactive-output/report.json').read_text())['renderer']=='svgjs'
                 result=subprocess.run([sys.executable,'-X','utf8',str(skill/'scripts/fonts.py'),'recommend','--role','body','--text','Dazzler'],capture_output=True,text=True,check=True)
                 assert json.loads(result.stdout)
                 result=subprocess.run(['node',str(skill/'scripts/colors.mjs'),'recommend','--mood','cozy'],capture_output=True,text=True,check=True)

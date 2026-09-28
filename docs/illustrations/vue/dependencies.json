@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "vue-img-mapper": "0.1.0"
+  },
+  "hostRuntime": "Use the existing compatible Vue 3 runtime",
+  "notes": "Merge only the required dependency into the existing project. Do not replace its manifest."
+}

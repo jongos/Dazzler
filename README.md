@@ -143,6 +143,10 @@ The 0.10.0 library replaces generic outlines with 30 worked starting points: pri
 
 Dazzler renders standard charts, network/hierarchy/map layouts, compact React trends, and optional editable Word/PowerPoint charts. The skill selects the route and retains source data, labels, colors and provenance. [Visualization reference](skills/dazzler-frontend/references/visualization.md). Native Office requires an available R runtime; it was not executed on the maintenance host.
 
+### Illustrations you can explore
+
+Clickable vector regions and image hotspots now come with responsive layouts, keyboard/touch selection, detail panels and readable text alternatives. Dazzler chooses the route from the artwork and existing framework. [Interaction reference](skills/dazzler-frontend/references/interactive-illustrations.md).
+
 ## Notes and credits
 
 Created by **Jon Gosier** and named after **Dazzler, one of his favorite X-Men characters**. The name celebrates a love of expressive design. This is an independent project, with no affiliation to Disney/Marvel, OpenAI, or Anthropic.
@@ -165,5 +169,7 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
+
+Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).

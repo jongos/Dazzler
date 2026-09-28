@@ -10,7 +10,7 @@ Use Dazzler to build a welcoming studio website.
 
 The archive includes the platform entrypoint, font catalog, 24 licensed font families, Python helper, bundled Node color engine, all reference guides, and license/provenance notices. No API key or npm installation is required by Dazzler. Python/Node execution and browser inspection depend on your host; unavailable checks must be disclosed.
 
-This repository folder contains the platform adapter and installation guidance, **not** a standalone installable skill. Use the complete ZIP or build it with `python tools/build_platforms.py --out dist/platforms-0.11.1` from the repository root. The builder combines the canonical skill with `HOST.md`; assets are maintained once.
+This repository folder contains the platform adapter and installation guidance, **not** a standalone installable skill. Use the complete ZIP or build it with `python tools/build_platforms.py --out dist/platforms-0.12.0` from the repository root. The builder combines the canonical skill with `HOST.md`; assets are maintained once.
 
 ## Validation status
 
@@ -24,10 +24,14 @@ Full packages now include brand import, system-token export, browser inspection,
 
 Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Dazzler selects and copies a suitable starting point automatically. Browse the gallery or download only the templates. Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
 
+## Interactive illustrations
+
+Full editions include validated vector-region and image-hotspot exporters, offline previews, keyboard/touch controls, text alternatives and integration modules for the existing project framework. Follow references/interactive-illustrations.md in the package.
+
 ## Notes and credits
 
 Packaging reference (checked September 28, 2026): [official documentation](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-copilot.zip](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-copilot.zip)
+- [dazzler-copilot.zip](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-copilot.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-templates.zip)

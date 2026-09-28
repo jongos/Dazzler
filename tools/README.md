@@ -33,6 +33,10 @@ Optional browser check: with Playwright and its Chromium runtime available in th
 
 Run `npm ci --ignore-scripts --no-audit --no-fund`, then `npm run build:visualization`. Exact package versions and tarball integrity are pinned in package-lock.json. The build collects licenses for every constituent package discovered through the bundler metadata and records output hashes. Microcharts uses the pinned React legacy synchronous server renderer to avoid a lingering streaming MessagePort; re-evaluate that private build entry when upgrading React. Generated React source uses public package imports. Run `npm run test:visualization`, then `node tools/test_visualization_exports.mjs NEW_DIR` and `node tools/test_visualization_browser.cjs NEW_DIR` with Playwright available. Native R execution needs a separate runtime and should be recorded as untested when absent. Package validation checks viz hashes and renders from extracted archives.
 
+## Interactive illustration builds
+
+Run `npm run build:hotspots` after `npm ci --ignore-scripts --no-audit --no-fund`. This builds separate vector, React and Vue browser bundles and the XML validator, retaining all constituent notices and hashes. Run `npm run test:hotspots`, generate fixtures with `node tools/test_hotspot_exports.mjs NEW_DIR`, then run `node tools/test_hotspot_browser.cjs NEW_DIR` with Playwright available. The Vue adapter requests an initial update after image load for its pinned older component; preserve that tested compatibility behavior when upgrading.
+
 ## Notes and credits
 
 To refresh the curated catalog, review a new hue3 commit and license first. Update the explicit pin and parser in `tools/import_hue3.py`, then run it with a clean checkout. The current import accepts only a306210b7240e183366998ce39fbe7543cc09b41 and exactly 88 unique records. It extracts palette facts and editorial descriptions without importing upstream skill instructions. Its count/schema assertions intentionally require review when upstream changes.

@@ -31,13 +31,17 @@ Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10
 
 Every full package includes the same offline Vega/Vega-Lite, selected D3 and Microcharts rendering bundles, their license notices, and the optional mschart R adapter. Generated React components use the host project React runtime. Native Office export requires R, mschart >=0.5.1 and officer >=0.7.5; missing runtimes produce an explicit fallback report. Consult references/visualization.md in the package. No external model service is required.
 
+## Interactive illustrations
+
+Full editions include validated vector-region and image-hotspot exporters, offline previews, keyboard/touch controls, text alternatives and integration modules for the existing project framework. Follow references/interactive-illustrations.md in the package.
+
 ## Notes and credits
 
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-claude.zip)
-- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-claude-plugin.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-gemini.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-cursor.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-copilot.zip)
-- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.11.1/DAZZLER-PROMPT.md)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-claude.zip)
+- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-claude-plugin.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-gemini.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-cursor.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-copilot.zip)
+- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.12.0/DAZZLER-PROMPT.md)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.11.1/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-templates.zip)

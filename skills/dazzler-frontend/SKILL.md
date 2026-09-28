@@ -57,6 +57,8 @@ Write concise interface copy from the user's perspective. Name actions by their 
 
 For actual charts, networks, maps, compact React metrics or editable Office charts, use [the visualization adapters](references/visualization.md). Choose the renderer automatically from the task and existing stack; preserve data semantics, source tables, brand tokens and runtime limitations.
 
+For clickable illustrations, floor plans, product images or SVG regions, use [the interactive illustration adapters](references/interactive-illustrations.md). Choose the vector or image route automatically, preserve the host framework, and provide named keyboard controls and a text equivalent.
+
 ## Use the integrated design studio
 
 For a new document or interface whose structure matches a bundled starting point, use [the template library](references/templates.md). It provides ten DOCX documents, ten matching HTML documents and ten UI folders. Select the best fit automatically, export it with `scripts/templates.py`, and adapt its content, typography and colors to the brief. Replace all fictional names, dates, amounts, contact details and claims with verified project content. Preserve the context-specific information and working interactions, accompanying licenses, and test the customized output; existing brand systems take priority.

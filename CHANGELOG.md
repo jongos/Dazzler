@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.12.0: Interactive artwork and image hotspots
+
+- **Changed:** Added automatic selection between vector-region and image-hotspot adapters based on artwork and the existing framework. Updated the skill, field guide, public examples and platform packages; implementation credits remain in closing notes.
+- **Added:** Validated static SVG import, measured PNG/JPEG dimensions, named regions, responsive image maps, pointer/touch/keyboard activation, selection details, text equivalents, vector zoom/pan/reset, portable integration modules, dependency fragments and 15 retained dependency notices with bundle hashes. Added separate React and Vue browser adapters, geometry/security regression checks and extracted-package export checks.
+- **Why:** Turn supplied illustrations into useful explanations without requiring users to pick libraries or configure routine design details. The adapters preserve the application stack and artwork. They do not invent image regions, install frameworks into projects automatically or treat a successful export as completed browser verification.
+- **Validation:** Unit and browser checks cover static SVG allowlisting, local paint references, invalid geometry, exact dimensions, escaping, overwrite refusal, license hashes, desktop/mobile layout, actual region clicks, keyboard selection, touch activation and zoom/reset. Review corrected an older Vue component's first-load lifecycle and replaced a text-obscuring SVG highlight with a separate selection outline. Original upstream bundles are unchanged except normal compilation. All 26 Node tests and 21 Python tests passed, along with skill/plugin validators, all six platform archives, extracted interactive exports and four responsive documentation/gallery pages. All three browser adapters passed offline desktop/mobile, pointer, keyboard and touch checks.
+
 ## 2026-09-28 — 0.11.1: Keep working guidance focused on the task
 
 - **Changed:** Moved implementation credits, repository links, download/source references and inspiration acknowledgments into closing notes across authored documentation, platform instructions, the font catalog and public guides. Moved font-specific source and distribution details to the catalog's final notes while retaining technical selection data in each family entry. Removed speculative addition lists.
@@ -114,3 +121,5 @@ Historical note for commit `1a84ba1` (recorded with the following maintenance up
 ## Notes and credits
 
 Version 0.4.0 adapted Samuel Berthe’s frontend-design-deslop framework. Version 0.3.0 used hue3 palette entries, @ankhorage/color-theory 0.3.1 and Culori 4.0.2. Version 0.11.0 credited bkrsln/dataviz for chart-reference discovery. Original notices and pinned provenance remain included.
+
+Version 0.12.0 credits SVG.js 3.2.8, React Img Mapper 2.0.2, Vue Img Mapper 0.1.0, their React/Vue runtimes, and @xmldom/xmldom 0.9.12. See the third-party notice inventory for exact versions and original MIT terms.

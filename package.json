@@ -1,17 +1,21 @@
 {
   "name": "dazzler-maintenance",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build:colors": "node tools/build_colors.mjs",
     "test:colors": "node --test tests/colors.test.mjs",
     "build:visualization": "node tools/build_visualization.mjs",
-    "test:visualization": "node --test tests/visualization.test.mjs"
+    "test:visualization": "node --test tests/visualization.test.mjs",
+    "build:hotspots": "node tools/build_hotspots.mjs",
+    "test:hotspots": "node --test tests/hotspots.test.mjs"
   },
   "devDependencies": {
     "@ankhorage/color-theory": "0.3.1",
     "@microcharts/react": "0.19.1",
+    "@svgdotjs/svg.js": "3.2.8",
+    "@xmldom/xmldom": "0.9.12",
     "culori": "4.0.2",
     "d3-force": "3.0.0",
     "d3-geo": "3.1.1",
@@ -19,8 +23,10 @@
     "esbuild": "0.28.2",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "react-img-mapper": "2.0.2",
     "vega": "6.4.0",
-    "vega-lite": "6.4.3"
+    "vega-lite": "6.4.3",
+    "vue-img-mapper": "0.1.0"
   },
   "overrides": {
     "culori": "4.0.2"

@@ -22,6 +22,8 @@ When using a Dazzler template, preserve the context-specific workflow and replac
 
 When rendering data, choose Vega-Lite for standard charts, selective D3 for custom layouts, Microcharts for tiny React trends, and mschart when native Office editability and its runtime are available. Use the provided adapters only when actually accessible; otherwise supply a clearly identified specification. Preserve source values, missing data, units, labels and accessible tables.
 
+For clickable artwork, choose a vector-region or image-hotspot approach suited to the existing stack. Supply keyboard activation, named detail controls and a text equivalent. Use the full helper only when it is actually available; do not claim to infer regions or execute a renderer in text-only chat.
+
 ## Notes and credits
 
 Created by Jon Gosier; feedback, feature requests and ideas: jon@filmhedge.com. Named after Dazzler, one of Jon's favorite X-Men characters. Independent project; no affiliation with Disney/Marvel or any AI vendor.

@@ -74,3 +74,7 @@ The 30 document/interface templates and their demo code are original Dazzler mat
 Vega 6.4.0 and Vega-Lite 6.4.3 (BSD-3-Clause; UW Interactive Data Lab and contributors), selected D3 modules (ISC; Mike Bostock and contributors), Microcharts 0.19.1 (MIT), and React/React DOM 19.2.4 (MIT) support the offline adapters. All 58 constituent package notices and exact versions are retained in `skills/dazzler-frontend/scripts/vendor/viz/licenses/` and `provenance.json`. Transitive license labels include MIT, BSD-3-Clause, ISC and Unlicense. These components retain their original terms; they are not relicensed as Apache-2.0.
 
 The optional R adapter calls externally installed mschart and officer; these packages are not redistributed. Credit David Gohel, ArData and contributors. Resource discovery credits bkrsln/dataviz; no source, artwork or guide text was imported from that directory or its linked collections.
+
+### Interactive illustration runtimes
+
+SVG.js 3.2.8, react-img-mapper 2.0.2, vue-img-mapper 0.1.0, @xmldom/xmldom 0.9.12, React/React DOM 19.2.4 and Vue 3.5.43 are MIT-licensed. Credit Wout Fierens and SVG.js contributors, Nisharg Shah and Img Mapper contributors, and the respective runtime/parser authors. All 15 constituent notices, versions and file hashes are in `skills/dazzler-frontend/scripts/vendor/hotspots/`. The original adapter and sample artwork remain Apache-2.0; no upstream source notice is removed or relicensed.

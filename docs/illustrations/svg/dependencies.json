@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@svgdotjs/svg.js": "3.2.8"
+  },
+  "hostRuntime": "No framework needed",
+  "notes": "Merge only the required dependency into the existing project. Do not replace its manifest."
+}
