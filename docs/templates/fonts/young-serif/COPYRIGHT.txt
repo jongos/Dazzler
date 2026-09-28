@@ -1,0 +1,3 @@
+Copyright notices extracted verbatim from the bundled font name tables.
+
+Copyright 2023 The Young Serif Project Authors (https://github.com/noirblancrouge/YoungSerif)

@@ -1,0 +1,42 @@
+{
+  "id": "webapp-workspace",
+  "category": "general-webapp",
+  "title": "Your work in focus",
+  "brand": "Orbit",
+  "eyebrow": "WORKSPACE",
+  "intro": "A calm place to plan the next useful thing.",
+  "accent": "#354D93",
+  "tint": "#EEF1FD",
+  "layout": "workspace",
+  "heading": "Work Sans",
+  "nav": [
+    "Overview",
+    "Projects",
+    "Activity"
+  ],
+  "action": "Add project",
+  "items": [
+    [
+      "Website refresh",
+      "Design",
+      "Jun 18"
+    ],
+    [
+      "Customer onboarding",
+      "Review",
+      "Jun 21"
+    ],
+    [
+      "Research library",
+      "Planning",
+      "Jun 26"
+    ]
+  ],
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "creator": "Jon Gosier",
+  "demo": true,
+  "persistence": "memory only",
+  "fontFiles": "../../fonts",
+  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+}

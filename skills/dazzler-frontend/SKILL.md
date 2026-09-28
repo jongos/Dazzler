@@ -59,6 +59,8 @@ Write concise interface copy from the user's perspective. Name actions by their 
 
 ## Use the integrated design studio
 
+For a new document or interface whose structure matches a bundled starting point, use [the template library](references/templates.md). It provides ten DOCX documents, ten matching HTML documents and ten UI folders. Select the best fit automatically, export it with `scripts/templates.py`, and adapt its content, typography and colors to the brief. Preserve the accompanying licenses and test the customized output; existing brand systems take priority.
+
 For relevant tasks, follow [the studio workflows](references/design-studio.md). The agent selects and runs these tools internally; the user still only supplies a brief. Do not run every tool for every task.
 
 - Extend an existing identity with the CSS/rendered brand importer; resolve conflicting evidence against authoritative project rules before making locks.

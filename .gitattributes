@@ -14,3 +14,6 @@ docs/licenses/** -text -whitespace
 
 # Original graphics have cataloged byte hashes.
 skills/dazzler-frontend/assets/graphics/** -text -whitespace
+skills/dazzler-frontend/assets/templates/** -text -whitespace
+docs/templates/** -text -whitespace
+*.docx binary

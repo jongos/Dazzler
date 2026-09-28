@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "version": "0.9.0",
+  "license": "Apache-2.0",
+  "creator": "Jon Gosier",
+  "templates": [
+    {
+      "id": "docx-professional",
+      "category": "professional",
+      "format": "docx",
+      "title": "Project status report",
+      "use": "Executive updates and professional status reports",
+      "path": "docx/professional.docx",
+      "fonts": [
+        "Arial"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-professional",
+      "category": "professional",
+      "format": "html",
+      "title": "Project status report",
+      "use": "Executive updates and professional status reports",
+      "path": "html/professional.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "docx-legal",
+      "category": "legal",
+      "format": "docx",
+      "title": "Legal matter memorandum",
+      "use": "Legal memo layout with neutral placeholders; no jurisdiction-specific clauses or advice",
+      "path": "docx/legal.docx",
+      "fonts": [
+        "Georgia"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-legal",
+      "category": "legal",
+      "format": "html",
+      "title": "Legal matter memorandum",
+      "use": "Legal memo layout with neutral placeholders; no jurisdiction-specific clauses or advice",
+      "path": "html/legal.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "docx-business",
+      "category": "business",
+      "format": "docx",
+      "title": "Business proposal",
+      "use": "Client proposals, project scopes and internal business cases",
+      "path": "docx/business.docx",
+      "fonts": [
+        "Arial"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-business",
+      "category": "business",
+      "format": "html",
+      "title": "Business proposal",
+      "use": "Client proposals, project scopes and internal business cases",
+      "path": "html/business.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "docx-fun",
+      "category": "fun",
+      "format": "docx",
+      "title": "Game night invitation",
+      "use": "Playful invitations and casual community events",
+      "path": "docx/fun.docx",
+      "fonts": [
+        "Arial"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-fun",
+      "category": "fun",
+      "format": "html",
+      "title": "Game night invitation",
+      "use": "Playful invitations and casual community events",
+      "path": "html/fun.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "docx-family",
+      "category": "family",
+      "format": "docx",
+      "title": "Family weekly planner",
+      "use": "Household schedules, family planning and shared responsibilities",
+      "path": "docx/family.docx",
+      "fonts": [
+        "Georgia"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-family",
+      "category": "family",
+      "format": "html",
+      "title": "Family weekly planner",
+      "use": "Household schedules, family planning and shared responsibilities",
+      "path": "html/family.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "docx-presentation",
+      "category": "presentation",
+      "format": "docx",
+      "title": "Project presentation",
+      "use": "Landscape Word presentation handout and speaker outline",
+      "path": "docx/presentation.docx",
+      "fonts": [
+        "Arial"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "landscape"
+    },
+    {
+      "id": "html-presentation",
+      "category": "presentation",
+      "format": "html",
+      "title": "Project presentation",
+      "use": "Landscape Word presentation handout and speaker outline",
+      "path": "html/presentation.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "landscape"
+    },
+    {
+      "id": "docx-school",
+      "category": "school",
+      "format": "docx",
+      "title": "Student project report",
+      "use": "School reports, learning journals and research assignments",
+      "path": "docx/school.docx",
+      "fonts": [
+        "Arial"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-school",
+      "category": "school",
+      "format": "html",
+      "title": "Student project report",
+      "use": "School reports, learning journals and research assignments",
+      "path": "html/school.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "docx-marketing",
+      "category": "marketing",
+      "format": "docx",
+      "title": "Campaign creative brief",
+      "use": "Campaign planning and marketing creative briefs",
+      "path": "docx/marketing.docx",
+      "fonts": [
+        "Arial"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-marketing",
+      "category": "marketing",
+      "format": "html",
+      "title": "Campaign creative brief",
+      "use": "Campaign planning and marketing creative briefs",
+      "path": "html/marketing.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "docx-restaurant",
+      "category": "restaurant",
+      "format": "docx",
+      "title": "Seasonal dining menu",
+      "use": "Restaurant menus and seasonal dining sheets",
+      "path": "docx/restaurant.docx",
+      "fonts": [
+        "Georgia"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-restaurant",
+      "category": "restaurant",
+      "format": "html",
+      "title": "Seasonal dining menu",
+      "use": "Restaurant menus and seasonal dining sheets",
+      "path": "html/restaurant.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "docx-technical",
+      "category": "technical",
+      "format": "docx",
+      "title": "Technical design specification",
+      "use": "Engineering specifications, implementation plans and technical reviews",
+      "path": "docx/technical.docx",
+      "fonts": [
+        "Arial"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "html-technical",
+      "category": "technical",
+      "format": "html",
+      "title": "Technical design specification",
+      "use": "Engineering specifications, implementation plans and technical reviews",
+      "path": "html/technical.html",
+      "fonts": [
+        "Work Sans",
+        "Young Serif"
+      ],
+      "placeholders": "Bracketed text is intentionally replaceable.",
+      "orientation": "portrait"
+    },
+    {
+      "id": "webapp-workspace",
+      "category": "general-webapp",
+      "format": "ui",
+      "title": "Your work in focus",
+      "use": "A calm place to plan the next useful thing.",
+      "path": "ui/webapp-workspace",
+      "layout": "workspace",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "webapp-board",
+      "category": "general-webapp",
+      "format": "ui",
+      "title": "Make progress visible",
+      "use": "Small steps, shared ownership, a clear finish line.",
+      "path": "ui/webapp-board",
+      "layout": "board",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "webapp-settings",
+      "category": "general-webapp",
+      "format": "ui",
+      "title": "Make it your workspace",
+      "use": "Control how your profile and notifications work.",
+      "path": "ui/webapp-settings",
+      "layout": "settings",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "data-revenue",
+      "category": "data-visualization",
+      "format": "ui",
+      "title": "A clearer view of growth",
+      "use": "Compare the shape of the last six months.",
+      "path": "ui/data-revenue",
+      "layout": "revenue",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "data-operations",
+      "category": "data-visualization",
+      "format": "ui",
+      "title": "Keep the day moving",
+      "use": "See demand, capacity, and the queues that need attention.",
+      "path": "ui/data-operations",
+      "layout": "operations",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "restaurant-fine-dining",
+      "category": "restaurant",
+      "format": "ui",
+      "title": "An evening worth slowing down for",
+      "use": "A small dining room. A menu shaped by the season.",
+      "path": "ui/restaurant-fine-dining",
+      "layout": "dining",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "restaurant-cafe",
+      "category": "restaurant",
+      "format": "ui",
+      "title": "A good morning starts here",
+      "use": "Your neighborhood pause, poured fresh.",
+      "path": "ui/restaurant-cafe",
+      "layout": "cafe",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "restaurant-reservations",
+      "category": "restaurant",
+      "format": "ui",
+      "title": "There is a place for you",
+      "use": "Choose a date and join us for dinner.",
+      "path": "ui/restaurant-reservations",
+      "layout": "reservations",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "restaurant-menu",
+      "category": "restaurant",
+      "format": "ui",
+      "title": "Something for every appetite",
+      "use": "Simple ingredients, generous plates, good company.",
+      "path": "ui/restaurant-menu",
+      "layout": "menu",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    },
+    {
+      "id": "business-portal",
+      "category": "generic-business",
+      "format": "ui",
+      "title": "Good work starts with clarity",
+      "use": "Your projects, documents, and next steps in one place.",
+      "path": "ui/business-portal",
+      "layout": "business",
+      "files": [
+        "index.html",
+        "styles.css",
+        "template.json"
+      ],
+      "demo": true
+    }
+  ],
+  "files": {
+    "docx/business.docx": "d41a9eb2f54a95b27af52e4a15489c20092f5322ce57a0d0cecb6ac5178e4ba4",
+    "docx/family.docx": "19ffc1bcdb1fc9f2afeb29f226413c766ba6ecf6e4dd34fb5684a4ae38ee9f9f",
+    "docx/fun.docx": "04fefcd6252628f92aff0a11408282d5a41b39af5d9025f442cf54597cee398e",
+    "docx/legal.docx": "19e42200c9dbda4e76ffbc24038ffa15c56d284908600e0c0899db0c5344061b",
+    "docx/marketing.docx": "0f10a38cf6479a3bf984d3868e1ef57b72745eedee99d117f7842ad27a625c1e",
+    "docx/presentation.docx": "a245b0539f1d905ef924780a5cf3d016bf4a656c79fe49b937b226253f11eb43",
+    "docx/professional.docx": "c49cf88b5d5a3cf0235e19d3f426a29d2bb6ac8201b9bb0978305038b72cb903",
+    "docx/restaurant.docx": "c12dc1f7b4606ac5260cde12ac5c40b87eeba566e8d09b6562cfa399027182b8",
+    "docx/school.docx": "19e0726daf0b6d27357e0c281d4b743f9377bd0b0ac39bc10f34077148f9cd5c",
+    "docx/technical.docx": "b2ae098b76d6f4dca2f6b93dd8d189f6f3dcad6e0e7efa4771dacaf38cf3deeb",
+    "fonts/fonts.css": "d57a213f856e9b2cf06917917e63ac62327b7a5856dd873269acb994b11c505a",
+    "fonts/work-sans/COPYRIGHT.txt": "121af0683779ca9311017b16c9799f2c9fb2a27457226d02d8d193b0a18f973d",
+    "fonts/work-sans/fonts.css": "7a088f36997aa93805372743237283489eee098154f38698321691e2bf89e434",
+    "fonts/work-sans/OFL.txt": "749aca05078664ce682dce1b1b10096ac397cb088c1a6df4e1bb56f0092a9272",
+    "fonts/work-sans/selection.json": "12b951d612a31d4a2d5c644e5a21c59aa7c53e666b219c5a7d01653f4ea6227d",
+    "fonts/work-sans/SOURCE.md": "4cff05425e409500a4acf7e2e9bab6acbfb0a68ccb7fe23d564c7eb1518790b9",
+    "fonts/work-sans/WorkSans[wght].ttf": "f50f61f2ba738e239442d40bf1069adb195c224b6a5a73a581fc2f3ed62a9f63",
+    "fonts/young-serif/COPYRIGHT.txt": "09238c6247d0b50d81ad11fbbbbfbac63accc57fa51bcfa6f10bfa58b3f9645d",
+    "fonts/young-serif/fonts.css": "6410004b841e08b50dce1984013e22e01cb8db61ebe14e047f7f8a61b5b026a1",
+    "fonts/young-serif/OFL.txt": "737d8d343b674c6894f373de71a044b6782c130f2aebf180933d63ddf7a3dc19",
+    "fonts/young-serif/selection.json": "5d51ff270517c42bafd4fde51cf785ceae4f2c735dac44e6a8a0576646300d45",
+    "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
+    "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
+    "html/business.html": "0d710905182fec5b7f94bd3d69120b88c74d5a807afc1476aacfacc336d29867",
+    "html/family.html": "7288cad2c6583bebab0b74822eaf5afc46300dc74db9087928664a2d9cf70112",
+    "html/fun.html": "3419de07f0047a99969196c7d5c01872fb795591e15de8290550decd150433c2",
+    "html/legal.html": "22b218f7493397fc9cf9aed31154487aa3d59bf642aac2c3facdca5464d85a5c",
+    "html/marketing.html": "ad33cb7abb16e6cb1af82f2c7fa1ccb3325b99d5e066ee1c0a3eb9df2617d96c",
+    "html/presentation.html": "45b5925df6dd660b69d7624db0322471f0b2ceea31a7556f9ba786be107c7b75",
+    "html/professional.html": "9cd2c052edcf2d853f39304e1de37fbd7d94d982fdfaf97fd0737cd812cd96d2",
+    "html/restaurant.html": "f6432922b79390210720b20314bf4354dbc8a0179d13f5a481b6723d72077681",
+    "html/school.html": "122a0a6554284d22523dd4f37f201daf38aa4dea70ed737333ac352ca6087e22",
+    "html/technical.html": "dfc2b68462e6d7ce153c6ccb05d94b536c744eb1c0e6dd4d1588c8a294d8949f",
+    "index.html": "1b0938a51a4b004c265c5b473caf1f24bf3d314587f7d827bffd0b56ee26b3eb",
+    "LICENSE.txt": "eb3d7b5485466acbd81f2b496f595ab637d2792e268206b27d99e793bdb67549",
+    "NOTICE.txt": "6a86361572d7edb087680be5b905fcfe092bc8db43e1e2313d58cdac947f3eb3",
+    "ui/business-portal/index.html": "d681dcbec45cf64d5556a64561990314c54311248343c2e59b0eebc7d5e7c4cc",
+    "ui/business-portal/styles.css": "020b1277d4f02b88a71835e0de82e314c2478e25dcfbda631886c4ec3e299b20",
+    "ui/business-portal/template.json": "2ff30bda3a274f776808f9ac46d836cf1cbb385b1edb841bcaf00d834a7aeb66",
+    "ui/data-operations/index.html": "fc7a4023466ed4e965477bca28c9c859d628917de63c56552dc978f8cdd94394",
+    "ui/data-operations/styles.css": "f334c323bb3259b6b869451c5a2524c62483fd11f83a6e74623ad1ffd0c6e29a",
+    "ui/data-operations/template.json": "6223602935a608b8f91caf77530c5a7b7ad00e83c9a5340537f76d9519d2e282",
+    "ui/data-revenue/index.html": "27e2c81f8b051e6b2d3d9080436b1688d88dbbbe00163ab761797f0ba03a75d1",
+    "ui/data-revenue/styles.css": "c746686d3fa9c04764c836e4b94ae3ab73a0a2732ca0e2d40555d7bf6bbc83fb",
+    "ui/data-revenue/template.json": "cba587daa875a7e5142b53f6012b99026f951be1a41668890dbdfbbbc651a417",
+    "ui/restaurant-cafe/index.html": "e1b578356574343121d50793617facaa7e7972035c91f20fa35abdcafa6b03bc",
+    "ui/restaurant-cafe/styles.css": "fa826aeff26929391ad7158f6c264bbedb51932b8dbd7bb3ff972dc2c902c8d1",
+    "ui/restaurant-cafe/template.json": "c110d9c09910d6598fbe5f701c282854acd10a58d9d8a7e3b5e7f0ae75517291",
+    "ui/restaurant-fine-dining/index.html": "4149636796393d2a7460c02d0bb77eb3100859a9de3dac3445351594631d98da",
+    "ui/restaurant-fine-dining/styles.css": "47c9e415757fbee533cbeae6ff984bf2f0dacc1bb58c5676f6e119332771e397",
+    "ui/restaurant-fine-dining/template.json": "7edd8041ee7bebb681652e67ec26473ee927e897258beb3eba4d96239e03d0d8",
+    "ui/restaurant-menu/index.html": "a40513c507ddc58b4f60f1078b3e58040a3f55a911c9fdec98996a66bc23cc68",
+    "ui/restaurant-menu/styles.css": "76de3505c77c18f226902df519a1422f845ec7e325e4ec6a6317e8164347cbb5",
+    "ui/restaurant-menu/template.json": "990fe8f34c6408b7ddb99fd78531ac2bb15ad9a1724a4f8da6093f0657848ac0",
+    "ui/restaurant-reservations/index.html": "beb36b7732ce06be1443a0db5a2ee89dd8228dd514b071eb10ee2e6fafd677cf",
+    "ui/restaurant-reservations/styles.css": "822f69e7995af37b28a5734c1d112e386cb49fe1237247a43ef16d60ac3dfdcf",
+    "ui/restaurant-reservations/template.json": "724272a0e8b4618080433b6f99e22b1384e1a33c26444572efcf5b513270c0b9",
+    "ui/webapp-board/index.html": "83a8972f43fe0a41fb937ade11b8e154abc38057ab529809c7441c0ac95145f6",
+    "ui/webapp-board/styles.css": "e8d12ccb6e1b4accab19ef9ea03116cab4122b919e953140d9eec8c440787945",
+    "ui/webapp-board/template.json": "cb03a7c8e98f6b56472130c1fafb1e48729a1890e45faf863aebc032247cae7b",
+    "ui/webapp-settings/index.html": "9d0bca28391e62b086bd23dad1c7f1471b5651cf2e173343f0aba25d41831514",
+    "ui/webapp-settings/styles.css": "446d7eca0f709ac14427efa1662e9fbbec45e3e097919e6e52f63c28be16e228",
+    "ui/webapp-settings/template.json": "8efb1ba563b6071089c8c0a4f24582518cbe57478a70c5482e8110c5701e8739",
+    "ui/webapp-workspace/index.html": "31aa8f4ffd5ba1b03a5c0eb6e1f321861b5f7d5bead15d12706550bffafe2f27",
+    "ui/webapp-workspace/styles.css": "ffe43075103de3a1badc3698ae735bd857e070e409d078783293fd48a9be818b",
+    "ui/webapp-workspace/template.json": "81ecb5aba6593ba64c00eec68b7feb9025c991a8b0dd87a06e34f57b24fb7fad"
+  }
+}

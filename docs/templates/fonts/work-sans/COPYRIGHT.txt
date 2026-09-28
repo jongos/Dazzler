@@ -1,0 +1,3 @@
+Copyright notices extracted verbatim from the bundled font name tables.
+
+Copyright 2019 The Work Sans Project Authors (https://github.com/weiweihuanghuang/Work-Sans)

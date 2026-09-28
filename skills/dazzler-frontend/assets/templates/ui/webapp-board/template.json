@@ -1,0 +1,42 @@
+{
+  "id": "webapp-board",
+  "category": "general-webapp",
+  "title": "Make progress visible",
+  "brand": "Relay",
+  "eyebrow": "PROJECT BOARD",
+  "intro": "Small steps, shared ownership, a clear finish line.",
+  "accent": "#675037",
+  "tint": "#F7F0E6",
+  "layout": "board",
+  "heading": "Work Sans",
+  "nav": [
+    "Board",
+    "Team",
+    "Notes"
+  ],
+  "action": "Add task",
+  "items": [
+    [
+      "Interview outline",
+      "To do",
+      "Maya"
+    ],
+    [
+      "Prototype review",
+      "In progress",
+      "Sam"
+    ],
+    [
+      "Content inventory",
+      "Done",
+      "Alex"
+    ]
+  ],
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "creator": "Jon Gosier",
+  "demo": true,
+  "persistence": "memory only",
+  "fontFiles": "../../fonts",
+  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+}

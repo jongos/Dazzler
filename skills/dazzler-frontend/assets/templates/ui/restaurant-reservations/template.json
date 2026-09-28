@@ -1,0 +1,26 @@
+{
+  "id": "restaurant-reservations",
+  "category": "restaurant",
+  "title": "There is a place for you",
+  "brand": "The Long Table",
+  "eyebrow": "RESERVATIONS",
+  "intro": "Choose a date and join us for dinner.",
+  "accent": "#6D3656",
+  "tint": "#F9EDF3",
+  "layout": "reservations",
+  "heading": "Young Serif",
+  "nav": [
+    "Book a table",
+    "Menu",
+    "Plan your visit"
+  ],
+  "action": "Preview reservation",
+  "items": [],
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "creator": "Jon Gosier",
+  "demo": true,
+  "persistence": "memory only",
+  "fontFiles": "../../fonts",
+  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+}

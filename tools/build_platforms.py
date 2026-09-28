@@ -72,6 +72,9 @@ def build(destination):
     shutil.copy2(ROOT / 'LICENSE', plugin / 'LICENSE')
     shutil.copy2(ROOT / 'platforms/claude/README.md', plugin / 'README.md')
     archive(plugin, destination / 'dazzler-claude-plugin.zip')
+    templates=destination/'template-download/dazzler-templates'
+    shutil.copytree(SOURCE/'assets/templates',templates)
+    archive(templates,destination/'dazzler-templates.zip')
     shutil.copy2(ROOT / 'platforms/portable/DAZZLER-PROMPT.md', destination / 'DAZZLER-PROMPT.md')
     files = sorted(destination.glob('*.zip')) + [destination / 'DAZZLER-PROMPT.md']
     (destination / 'SHA256SUMS.txt').write_text(''.join(

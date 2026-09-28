@@ -74,6 +74,16 @@ Examples: “Match our existing site,” “Stress-test this dashboard,” “Ca
 
 **[Studio workflow and command reference](skills/dazzler-frontend/references/design-studio.md)**. Browser inspection needs an existing Playwright/Chromium runtime (or equivalent host tools); DOCX/PPTX need existing `python-docx`/`python-pptx`. Core import, tokens, charts, assets, changes and HTML exports stay lightweight. Automated findings require review; no complete accessibility, native pagination, or cross-model design-quality certification is claimed.
 
+## ✦ Thirty templates — new in 0.9.0
+
+**[Browse the live gallery](https://jongos.github.io/Dazzler/templates/)** · **[Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.9.0/dazzler-templates.zip)**
+
+- **10 DOCX + 10 matching HTML documents:** professional, legal, business, fun, family, presentation, school, marketing, restaurant and technical.
+- **10 UI folders, each with HTML, CSS and JSON:** three general webapps, two data dashboards, four restaurant experiences and one business portal.
+- Editable Word styles, local fonts for HTML, responsive layouts, print rules, illustrative data and working local demo controls. Original templates are Apache-2.0; font licenses stay intact.
+
+Ask for the result and Dazzler selects the starting point automatically. [Template selection and export reference](skills/dazzler-frontend/references/templates.md). Templates live in `skills/dazzler-frontend/assets/templates/{docx,html,ui}` and ship in every full platform package.
+
 ## 🚀 Install Dazzler
 
 For a host that supports local Codex skills:

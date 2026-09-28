@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Metric — REVENUE OVERVIEW</title><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><div class="demo">DAZZLER TEMPLATE · Illustrative content · Local preview only</div><header class="top"><a class="brand" href="#main">Metric</a><nav aria-label="Main navigation"><a href="#content">Overview</a><a href="#visit">Channels</a><a href="#visit">Reports</a></nav></header><main id="main"><div><p class="eyebrow">REVENUE OVERVIEW</p><h1>A clearer view of growth</h1><p class="intro">Compare the shape of the last six months.</p></div><div class="toolbar"><h2 id="content">Revenue in USD thousands</h2><button data-action="download">Download data</button></div><div class="two"><section class="panel"><h2>Monthly trend</h2><svg class="chart" viewBox="0 0 600 250" role="img" aria-label="Sample revenue rises from 32 to 88 thousand dollars from January to June"><path d="M35 210H575M35 30V210" fill="none" stroke="#687380"/><polyline points="45,152 150,124 255,136 360,94 465,79 570,50" fill="none" stroke="var(--accent)" stroke-width="4"/><circle cx="45" cy="151.76" r="6" fill="var(--accent)"/><circle cx="150" cy="122.64" r="6" fill="var(--accent)"/><circle cx="255" cy="135.38" r="6" fill="var(--accent)"/><circle cx="360" cy="93.52" r="6" fill="var(--accent)"/><circle cx="465" cy="78.96000000000001" r="6" fill="var(--accent)"/><circle cx="570" cy="49.84" r="6" fill="var(--accent)"/><text x="35" y="240" font-size="14">Jan</text><text x="545" y="240" font-size="14">Jun</text></svg></section><section class="panel"><h2>Underlying data</h2><div class="table-wrap"><table id=""><thead><tr><th scope="col">Month</th><th scope="col">USD thousands</th></tr></thead><tbody><tr><th scope="row">January</th><td>32</td></tr><tr><th scope="row">February</th><td>48</td></tr><tr><th scope="row">March</th><td>41</td></tr><tr><th scope="row">April</th><td>64</td></tr><tr><th scope="row">May</th><td>72</td></tr><tr><th scope="row">June</th><td>88</td></tr></tbody></table></div><p class="muted">Illustrative values. Replace with your verified dataset.</p></section></div><p class="status" id="status" role="status" aria-live="polite"></p></main><footer id="visit"><strong>Metric</strong><p>[Add your verified contact details and relevant links.]</p><details><summary>About this template</summary><p>Original Dazzler layout by Jon Gosier. Apache-2.0. Sample names, dates, prices, and figures are illustrative. Actions run locally; connect a real service before accepting bookings, orders, or messages. Font licenses accompany the fonts folder.</p></details></footer><dialog id="edit-dialog"><form id="edit-form"><h2>Add your details</h2><label for="entry">Name or request</label><input id="entry" required maxlength="120"><p><button>Save preview</button> <button type="button" id="cancel" class="secondary">Cancel</button></p></form></dialog><script id="template-data" type="application/json">{
+  "id": "data-revenue",
+  "category": "data-visualization",
+  "title": "A clearer view of growth",
+  "brand": "Metric",
+  "eyebrow": "REVENUE OVERVIEW",
+  "intro": "Compare the shape of the last six months.",
+  "accent": "#285A51",
+  "tint": "#EDF6F1",
+  "layout": "revenue",
+  "heading": "Work Sans",
+  "nav": [
+    "Overview",
+    "Channels",
+    "Reports"
+  ],
+  "action": "Download data",
+  "items": [
+    [
+      "January",
+      32
+    ],
+    [
+      "February",
+      48
+    ],
+    [
+      "March",
+      41
+    ],
+    [
+      "April",
+      64
+    ],
+    [
+      "May",
+      72
+    ],
+    [
+      "June",
+      88
+    ]
+  ],
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "creator": "Jon Gosier",
+  "demo": true,
+  "persistence": "memory only",
+  "fontFiles": "../../fonts",
+  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+}</script><script>const cfg=JSON.parse(document.getElementById('template-data').textContent),status=document.getElementById('status');const say=t=>status.textContent=t;let cart=[];
+document.getElementById('search')?.addEventListener('input',e=>{let n=0;document.querySelectorAll('#project-table tbody tr').forEach(r=>{r.hidden=!r.textContent.toLowerCase().includes(e.target.value.toLowerCase());if(!r.hidden)n++});document.getElementById('empty').hidden=n>0});
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('[data-category]').forEach(x=>x.hidden=b.dataset.filter!=='All'&&x.dataset.category!==b.dataset.filter)}));
+document.getElementById('settings')?.addEventListener('submit',e=>{e.preventDefault();say('Preferences updated for this preview only. Reloading resets them.')});
+document.getElementById('reservation')?.addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);say(`Preview for ${f.get('guest')}: ${f.get('guests')} guests on ${f.get('date')} at ${f.get('time')}. No booking has been made.`)});
+const dialog=document.getElementById('edit-dialog'),form=document.getElementById('edit-form');let pending='';
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-move')){const task=b.closest('.task'),col=task.closest('[data-column]'),cols=[...document.querySelectorAll('[data-column]')],next=cols[(cols.indexOf(col)+1)%cols.length];next.querySelector('.tasks').append(task);say('Task moved to '+next.dataset.column+'. Preview only.')}if(b.hasAttribute('data-add')){cart.push(cfg.items[Number(b.dataset.add)]);document.getElementById('cart').textContent=cart.length+' items · $'+cart.reduce((s,x)=>s+x[2],0).toFixed(2);say('Added to your preview order.')}const a=b.dataset.action;if(['workspace','board','business'].includes(a)){pending=a;document.getElementById('entry').value='';dialog.showModal();}if(a==='clear'){cart=[];document.getElementById('cart').textContent='0 items · $0.00';say('Preview order cleared.')}if(a==='cart')say(cart.length?'Preview: '+cart.map(x=>x[0]).join(', ')+'. No order sent.':'Your preview order is empty.');if(a==='download'){const csv=[['Label','Value'],...cfg.items].map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));const link=document.createElement('a');link.href=url;link.download=cfg.id+'-sample.csv';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);say('Illustrative data downloaded.')}});
+form.addEventListener('submit',e=>{e.preventDefault();const value=document.getElementById('entry').value.trim();if(!value)return;if(pending==='board'){const card=document.createElement('article');card.className='task';const h=document.createElement('h3');h.textContent=value;const b=document.createElement('button');b.className='secondary';b.dataset.move='';b.textContent='Move to next stage';card.append(h,b);document.querySelector('.tasks').append(card);}else if(pending==='workspace'){const row=document.createElement('tr');for(const v of [value,'Planning','Not set']){const cell=document.createElement('td');cell.textContent=v;row.append(cell)}document.querySelector('#project-table tbody').append(row);}say(pending==='business'?'Update request saved in this preview only. No message sent.':'Added to this preview. Reloading resets changes.');dialog.close()});document.getElementById('cancel').addEventListener('click',()=>dialog.close());</script></body></html>

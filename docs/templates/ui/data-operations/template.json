@@ -1,0 +1,43 @@
+{
+  "id": "data-operations",
+  "category": "data-visualization",
+  "title": "Keep the day moving",
+  "brand": "Signal",
+  "eyebrow": "OPERATIONS",
+  "intro": "See demand, capacity, and the queues that need attention.",
+  "accent": "#285775",
+  "tint": "#EAF3FA",
+  "layout": "operations",
+  "heading": "Work Sans",
+  "nav": [
+    "Today",
+    "Queues",
+    "History"
+  ],
+  "action": "Download data",
+  "items": [
+    [
+      "Intake",
+      76
+    ],
+    [
+      "Review",
+      54
+    ],
+    [
+      "Delivery",
+      89
+    ],
+    [
+      "Support",
+      38
+    ]
+  ],
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "creator": "Jon Gosier",
+  "demo": true,
+  "persistence": "memory only",
+  "fontFiles": "../../fonts",
+  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+}

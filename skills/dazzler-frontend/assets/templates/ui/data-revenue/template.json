@@ -1,0 +1,51 @@
+{
+  "id": "data-revenue",
+  "category": "data-visualization",
+  "title": "A clearer view of growth",
+  "brand": "Metric",
+  "eyebrow": "REVENUE OVERVIEW",
+  "intro": "Compare the shape of the last six months.",
+  "accent": "#285A51",
+  "tint": "#EDF6F1",
+  "layout": "revenue",
+  "heading": "Work Sans",
+  "nav": [
+    "Overview",
+    "Channels",
+    "Reports"
+  ],
+  "action": "Download data",
+  "items": [
+    [
+      "January",
+      32
+    ],
+    [
+      "February",
+      48
+    ],
+    [
+      "March",
+      41
+    ],
+    [
+      "April",
+      64
+    ],
+    [
+      "May",
+      72
+    ],
+    [
+      "June",
+      88
+    ]
+  ],
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "creator": "Jon Gosier",
+  "demo": true,
+  "persistence": "memory only",
+  "fontFiles": "../../fonts",
+  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+}

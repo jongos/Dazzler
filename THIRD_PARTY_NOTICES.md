@@ -60,3 +60,7 @@ Terminal Grotesque's GitHub `LICENSE.md` has an unrelated Blackout header. It is
 ## Original graphics and optional runtimes
 
 The 12 icons and three illustrations in `skills/dazzler-frontend/assets/graphics` are original Dazzler SVG artwork, copyright 2026 Jon Gosier, under Apache-2.0. Their catalog records file hashes and usage guidance. Playwright/Chromium, python-docx and python-pptx are optional host-provided runtimes, not vendored into these packages. Their respective licenses apply to any separately installed copies.
+
+## Original template library
+
+The 30 document/interface templates and their demo code are original Dazzler material by Jon Gosier, distributed under Apache-2.0. Bundled Work Sans and Young Serif files are unmodified copies of the existing licensed catalog exports with their source/copyright/license notices. DOCX files reference Arial or Georgia; those desktop fonts are not redistributed.

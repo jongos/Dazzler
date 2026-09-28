@@ -1,0 +1,42 @@
+{
+  "id": "restaurant-fine-dining",
+  "category": "restaurant",
+  "title": "An evening worth slowing down for",
+  "brand": "Juniper",
+  "eyebrow": "SEASONAL KITCHEN",
+  "intro": "A small dining room. A menu shaped by the season.",
+  "accent": "#4B5633",
+  "tint": "#F4F1E6",
+  "layout": "dining",
+  "heading": "Young Serif",
+  "nav": [
+    "Our menu",
+    "The experience",
+    "Visit us"
+  ],
+  "action": "Explore the menu",
+  "items": [
+    [
+      "Garden greens",
+      "Herbs, crisp leaves, citrus dressing",
+      14
+    ],
+    [
+      "Roasted squash",
+      "White beans, sage, toasted seeds",
+      26
+    ],
+    [
+      "Pear and almond",
+      "Warm fruit, almond crumb",
+      11
+    ]
+  ],
+  "schemaVersion": 1,
+  "license": "Apache-2.0",
+  "creator": "Jon Gosier",
+  "demo": true,
+  "persistence": "memory only",
+  "fontFiles": "../../fonts",
+  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+}

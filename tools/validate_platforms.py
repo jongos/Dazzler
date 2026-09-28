@@ -20,12 +20,21 @@ def validate(folder):
             names = z.namelist()
             assert len(names) == len(set(names))
             assert not any(PurePosixPath(n).is_absolute() or '..' in PurePosixPath(n).parts for n in names)
+            if archive.name=='dazzler-templates.zip':
+                catalog=json.loads(z.read('dazzler-templates/catalog.json'))
+                assert len(catalog['templates'])==30
+                for relative,digest in catalog['files'].items():assert hashlib.sha256(z.read('dazzler-templates/'+relative)).hexdigest()==digest
+                print('dazzler-templates.zip: all 30 templates and resource hashes passed')
+                continue
             entry = next(n for n in names if n.endswith('/SKILL.md'))
             prefix = entry.removesuffix('SKILL.md')
             text = z.read(entry).decode()
             assert 'name: dazzler-frontend' in text and '## Verify the result' in text
             assert 'MAINTENANCE.md' not in text and '$dazzler-frontend' not in text
             assert not any(n.endswith('MAINTENANCE.md') or n.endswith('agents/openai.yaml') for n in names)
+            templates=json.loads(z.read(prefix+'assets/templates/catalog.json'))
+            assert len(templates['templates'])==30
+            for relative,digest in templates['files'].items():assert hashlib.sha256(z.read(prefix+'assets/templates/'+relative)).hexdigest()==digest
             for required in ('scripts/studio.mjs','scripts/project.py','scripts/browser.cjs','scripts/evaluate.py','evals/cross-platform.json','references/design-studio.md'):
                 assert prefix+required in names, required
             graphics=json.loads(z.read(prefix+'references/asset-catalog.json'))
@@ -66,6 +75,8 @@ def validate(folder):
                 subprocess.run([sys.executable,'-X','utf8',str(skill/'scripts/project.py'),'assets','--kind','icon','--ids','check','--out',str(Path(temp)/'icons')],capture_output=True,text=True,check=True)
                 subprocess.run([sys.executable,'-X','utf8',str(skill/'scripts/evaluate.py'),'--host','package-check','--out',str(Path(temp)/'eval')],capture_output=True,text=True,check=True)
                 assert all(r['status']=='not-run' for r in json.loads((Path(temp)/'eval/evaluation.json').read_text())['results'])
+                subprocess.run([sys.executable,'-X','utf8',str(skill/'scripts/templates.py'),'export','restaurant-cafe','--out',str(Path(temp)/'template-export')],capture_output=True,text=True,check=True)
+                assert (Path(temp)/'template-export/ui/restaurant-cafe/index.html').is_file()
             print(f'{archive.name}: structure, links, 206 font/support hashes, 15 graphics, engine and extracted core/studio/evaluation helpers passed')
 
 

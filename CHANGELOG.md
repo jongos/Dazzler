@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.9.0: Thirty reusable templates
+
+- **Changed:** Added automatic template selection/export to the skill, refreshed the field guide to Edition 04, and included the library in every full platform package. Added a browsable GitHub Pages gallery and a separate template-only download.
+- **Added:** Ten editable DOCX files and ten matching HTML documents covering professional, legal, business, fun, family, presentation, school, marketing, restaurant and technical uses. Ten UI folders each contain HTML, CSS and JSON: three webapps, two data dashboards, four restaurant experiences and one business portal. Added a hashed catalog, safe copy helper, original local demo interactions, authoring/gallery build tools and template tests. All original layouts/demo code are Apache-2.0; existing font files retain their licenses.
+- **Why:** Give the automatic design workflow practical starting structures without asking users to choose every design detail. Copying preserves required fonts and notices, refuses overwrites, and leaves the installed library intact. DOCX uses referenced desktop fonts; UI data and actions are explicitly illustrative and local.
+- **Validation:** 21 Python tests passed, covering resource integrity, category counts, exports, overwrite refusal, Word tables/title styles and JSON consistency alongside existing font/project tests. All 20 HTML/UI templates passed Chromium checks at 1440px and 390px, font loading and applicable search, dialog, board, filter, form, cart and CSV actions. All ten DOCX files were rendered through installed Word to PDF and visually inspected as one-page documents; the bundled LibreOffice renderer was unavailable. All six ZIPs passed integrity checks; five full platform archives passed extracted helper checks. The gallery and guide passed responsive checks, and simple-background text contrast passed across the HTML/UI templates. Skill/plugin validation passed. Other-host agent sessions and arbitrary customized content are not certified by these checks.
+
 ## 2026-09-28 — 0.8.0: Integrated design studio
 
 - **Changed:** Connected brand evidence, shared tokens, typography, charts, assets, design review and document output in the automatic skill workflow. Updated the field guide to Edition 03, the README, host guides and all platform packages. Existing brand constraints and host permission controls remain authoritative.
