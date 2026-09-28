@@ -1,5 +1,13 @@
 # Developer change notes
 
+## 2026-09-28 — Preserve published font notices
+
+- **Changed:** Excluded original documentation font notices from Git whitespace and line-ending normalization; removed trailing whitespace from embedded HTML comments.
+- **Added:** Git attributes for documentation license files.
+- **Why:** Preserve upstream license bytes while keeping authored HTML clean; the initial publishing check identified upstream trailing spaces.
+- **Validation:** License content retained and staged whitespace checks passed. No rendered content or interaction changes.
+
+
 ## 2026-09-28 — Publish the Dazzler field manual
 
 - **Changed:** Linked the live manual prominently from the README, preserving the owner's latest branding edits. Configured GitHub Pages to publish `main` / `docs` so future committed documentation updates deploy automatically.

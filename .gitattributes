@@ -8,3 +8,6 @@ skills/dazzler-frontend/assets/fonts/** -text -whitespace
 skills/dazzler-frontend/scripts/vendor/** -text
 skills/dazzler-frontend/references/hue3-LICENSE.txt -text
 skills/dazzler-frontend/references/deslop-LICENSE.txt -text
+
+# Preserve original documentation font notices.
+docs/licenses/** -text -whitespace
