@@ -1,42 +1,39 @@
 {
   "id": "business-portal",
   "category": "generic-business",
-  "title": "Good work starts with clarity",
+  "layout": "business",
   "brand": "Northstar",
-  "eyebrow": "CLIENT PORTAL",
-  "intro": "Your projects, documents, and next steps in one place.",
+  "title": "Alder Studio / Brand & website",
+  "intro": "Your project room \u2022 Updated 18 June 2027",
   "accent": "#344D72",
   "tint": "#EDF2FA",
-  "layout": "business",
-  "heading": "Work Sans",
-  "nav": [
-    "Projects",
-    "Documents",
-    "Contact"
+  "deliverables": [
+    {
+      "name": "Brand direction",
+      "version": "v2",
+      "status": "Needs review",
+      "due": "21 Jun",
+      "description": "Positioning, voice and visual direction. Please confirm the preferred route."
+    },
+    {
+      "name": "Homepage wireframe",
+      "version": "v1",
+      "status": "In progress",
+      "due": "25 Jun",
+      "description": "Structure and content hierarchy for the new homepage."
+    },
+    {
+      "name": "Launch checklist",
+      "version": "v1",
+      "status": "Scheduled",
+      "due": "08 Jul",
+      "description": "Content, analytics and deployment checks before launch."
+    }
   ],
-  "action": "Request an update",
-  "items": [
-    [
-      "Brand strategy",
-      "In review",
-      "Jun 20"
-    ],
-    [
-      "Website delivery",
-      "In progress",
-      "Jul 08"
-    ],
-    [
-      "Launch plan",
-      "Scheduled",
-      "Jul 15"
-    ]
-  ],
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
   "demo": true,
   "persistence": "memory only",
-  "fontFiles": "../../fonts",
-  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
 }

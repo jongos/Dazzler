@@ -1,47 +1,74 @@
 {
   "id": "restaurant-menu",
   "category": "restaurant",
-  "title": "Something for every appetite",
+  "layout": "menu",
   "brand": "Olive & Grain",
-  "eyebrow": "ALL DAY MENU",
-  "intro": "Simple ingredients, generous plates, good company.",
+  "title": "Good food. Your kind of lunch.",
+  "intro": "Bowls, small plates, something sweet. Served 11:30\u201316:00.",
   "accent": "#5E5A24",
   "tint": "#F7F4E5",
-  "layout": "menu",
-  "heading": "Young Serif",
-  "nav": [
-    "Menu",
-    "About",
-    "Contact"
-  ],
-  "action": "See all dishes",
   "items": [
-    [
-      "Market salad",
-      "Lunch",
-      13
-    ],
-    [
-      "Roasted vegetable bowl",
-      "Lunch",
-      18
-    ],
-    [
-      "Lemon cake",
-      "Dessert",
-      8
-    ],
-    [
-      "Orange blossom tea",
-      "Drinks",
-      5
-    ]
+    {
+      "name": "Roasted vegetable bowl",
+      "category": "Bowls",
+      "description": "Brown rice, squash, chickpeas, tahini dressing.",
+      "price": 18,
+      "vegan": true
+    },
+    {
+      "name": "Green goddess bowl",
+      "category": "Bowls",
+      "description": "Herb rice, avocado, soft egg, yogurt dressing.",
+      "price": 19,
+      "vegan": false
+    },
+    {
+      "name": "Crisp potato plate",
+      "category": "Small plates",
+      "description": "Roasted potatoes, smoked paprika, lemon.",
+      "price": 9,
+      "vegan": true
+    },
+    {
+      "name": "Whipped feta",
+      "category": "Small plates",
+      "description": "Feta, roasted peppers, warm flatbread.",
+      "price": 11,
+      "vegan": false
+    },
+    {
+      "name": "Lemon olive oil cake",
+      "category": "Dessert",
+      "description": "Lemon syrup and thick cream.",
+      "price": 8,
+      "vegan": false
+    },
+    {
+      "name": "Seasonal fruit",
+      "category": "Dessert",
+      "description": "Fresh fruit with mint and citrus.",
+      "price": 7,
+      "vegan": true
+    },
+    {
+      "name": "Orange blossom tea",
+      "category": "Drinks",
+      "description": "Fragrant black tea, served hot or iced.",
+      "price": 5,
+      "vegan": true
+    },
+    {
+      "name": "House lemonade",
+      "category": "Drinks",
+      "description": "Lemon, a little sugar, sparkling water.",
+      "price": 6,
+      "vegan": true
+    }
   ],
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
   "demo": true,
   "persistence": "memory only",
-  "fontFiles": "../../fonts",
-  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
 }

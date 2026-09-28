@@ -1,51 +1,54 @@
 {
   "id": "data-revenue",
   "category": "data-visualization",
-  "title": "A clearer view of growth",
+  "layout": "revenue",
   "brand": "Metric",
-  "eyebrow": "REVENUE OVERVIEW",
-  "intro": "Compare the shape of the last six months.",
+  "title": "Revenue performance",
+  "intro": "January\u2013June 2027 \u2022 USD \u2022 Illustrative finance export",
   "accent": "#285A51",
   "tint": "#EDF6F1",
-  "layout": "revenue",
-  "heading": "Work Sans",
-  "nav": [
-    "Overview",
-    "Channels",
-    "Reports"
+  "months": [
+    {
+      "month": "Jan",
+      "gross": 42000,
+      "refunds": 1200,
+      "orders": 310
+    },
+    {
+      "month": "Feb",
+      "gross": 46000,
+      "refunds": 1400,
+      "orders": 338
+    },
+    {
+      "month": "Mar",
+      "gross": 51000,
+      "refunds": 1800,
+      "orders": 367
+    },
+    {
+      "month": "Apr",
+      "gross": 54000,
+      "refunds": 1500,
+      "orders": 402
+    },
+    {
+      "month": "May",
+      "gross": 61000,
+      "refunds": 2100,
+      "orders": 441
+    },
+    {
+      "month": "Jun",
+      "gross": 66000,
+      "refunds": 2000,
+      "orders": 472
+    }
   ],
-  "action": "Download data",
-  "items": [
-    [
-      "January",
-      32
-    ],
-    [
-      "February",
-      48
-    ],
-    [
-      "March",
-      41
-    ],
-    [
-      "April",
-      64
-    ],
-    [
-      "May",
-      72
-    ],
-    [
-      "June",
-      88
-    ]
-  ],
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
   "demo": true,
   "persistence": "memory only",
-  "fontFiles": "../../fonts",
-  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
 }

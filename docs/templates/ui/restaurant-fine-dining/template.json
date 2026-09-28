@@ -1,42 +1,34 @@
 {
   "id": "restaurant-fine-dining",
   "category": "restaurant",
-  "title": "An evening worth slowing down for",
-  "brand": "Juniper",
-  "eyebrow": "SEASONAL KITCHEN",
-  "intro": "A small dining room. A menu shaped by the season.",
-  "accent": "#4B5633",
-  "tint": "#F4F1E6",
   "layout": "dining",
-  "heading": "Young Serif",
-  "nav": [
-    "Our menu",
-    "The experience",
-    "Visit us"
-  ],
-  "action": "Explore the menu",
-  "items": [
+  "brand": "Juniper",
+  "title": "The season, at the table.",
+  "intro": "A small dining room, a changing menu, and an evening with room to linger.",
+  "accent": "#435036",
+  "tint": "#F3F0E5",
+  "courses": [
     [
-      "Garden greens",
-      "Herbs, crisp leaves, citrus dressing",
-      14
+      "Garden",
+      "Peas, soft herbs, fresh cheese and toasted rye"
     ],
     [
-      "Roasted squash",
-      "White beans, sage, toasted seeds",
-      26
+      "Field",
+      "Summer squash, white beans and sage"
     ],
     [
-      "Pear and almond",
-      "Warm fruit, almond crumb",
-      11
+      "Coast",
+      "Market fish, fennel and lemon"
+    ],
+    [
+      "Orchard",
+      "Warm pear, almond crumb and cream"
     ]
   ],
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
   "demo": true,
   "persistence": "memory only",
-  "fontFiles": "../../fonts",
-  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
 }

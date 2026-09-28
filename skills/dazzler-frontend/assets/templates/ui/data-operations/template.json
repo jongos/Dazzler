@@ -1,43 +1,72 @@
 {
   "id": "data-operations",
   "category": "data-visualization",
-  "title": "Keep the day moving",
+  "layout": "operations",
   "brand": "Signal",
-  "eyebrow": "OPERATIONS",
-  "intro": "See demand, capacity, and the queues that need attention.",
+  "title": "Support command desk",
+  "intro": "Snapshot \u2022 21 June 2027, 09:40 \u2022 Sample service data",
   "accent": "#285775",
   "tint": "#EAF3FA",
-  "layout": "operations",
-  "heading": "Work Sans",
-  "nav": [
-    "Today",
-    "Queues",
-    "History"
+  "tickets": [
+    {
+      "id": "SUP-2041",
+      "subject": "Account invitation expired",
+      "queue": "Access",
+      "priority": "High",
+      "age": 47,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2042",
+      "subject": "Invoice export missing June",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 31,
+      "owner": "Sam",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2043",
+      "subject": "New teammate cannot sign in",
+      "queue": "Access",
+      "priority": "High",
+      "age": 64,
+      "owner": "Alex",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2044",
+      "subject": "Change workspace owner",
+      "queue": "Account",
+      "priority": "Normal",
+      "age": 18,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2045",
+      "subject": "Receipt address correction",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 12,
+      "owner": "Sam",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2046",
+      "subject": "Notification preference question",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 8,
+      "owner": "Alex",
+      "status": "Open"
+    }
   ],
-  "action": "Download data",
-  "items": [
-    [
-      "Intake",
-      76
-    ],
-    [
-      "Review",
-      54
-    ],
-    [
-      "Delivery",
-      89
-    ],
-    [
-      "Support",
-      38
-    ]
-  ],
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
   "demo": true,
   "persistence": "memory only",
-  "fontFiles": "../../fonts",
-  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
 }

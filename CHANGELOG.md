@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.10.0: Templates grounded in their intended use
+
+- **Changed:** Reworked all 30 templates from generic outlines into contextual fictional examples. Documents now include relevant decisions, evidence gaps, payment schedules, weekly logistics, experiment results, campaign budgets, menu descriptions and technical contracts. Each UI has a distinct workflow and suitable information density. Updated the field guide to Edition 05, template selection guidance, gallery and every optional platform package.
+- **Added:** Gallery thumbnails and a per-template review; reconciled revenue period/CSV calculations; support queue resolution and response targets; sprint assignee filtering; settings dirty/discard state; café quantity/subtotal controls; restaurant service-day validation; client deliverable review and local approval/revision. Split the authoring source into document, interface, style and interaction modules so categories can evolve independently. Catalog schema 2 records planned document pages and worked-example context.
+- **Why:** A reusable template should model the actual task, not merely repeat a title, three cards and a generic table. Contextual examples demonstrate useful content density while the skill replaces every fictional fact with verified project details. Interactions remain explicitly local; no backend services or new runtime dependencies were added.
+- **Validation:** All 21 Python tests passed. All 20 HTML/UI templates passed desktop/mobile overflow, font, JavaScript and contextual interaction checks, with visual review of screenshots. All 10 final DOCX files rendered through installed Word into 17 inspected pages. Simple-background text contrast, gallery/guide layouts, skill/plugin validators and six archive validations passed. Review fixed missing assignee options, a body/grid class collision and narrow-screen chart overflow. Bundled LibreOffice was unavailable; Word rendering used fresh working copies after repeated-file automation stalled. Real AI-host model sessions and production services remain untested.
+
 ## 2026-09-28 — 0.9.0: Thirty reusable templates
 
 - **Changed:** Added automatic template selection/export to the skill, refreshed the field guide to Edition 04, and included the library in every full platform package. Added a browsable GitHub Pages gallery and a separate template-only download.

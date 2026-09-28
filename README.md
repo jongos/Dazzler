@@ -74,9 +74,9 @@ Examples: “Match our existing site,” “Stress-test this dashboard,” “Ca
 
 **[Studio workflow and command reference](skills/dazzler-frontend/references/design-studio.md)**. Browser inspection needs an existing Playwright/Chromium runtime (or equivalent host tools); DOCX/PPTX need existing `python-docx`/`python-pptx`. Core import, tokens, charts, assets, changes and HTML exports stay lightweight. Automated findings require review; no complete accessibility, native pagination, or cross-model design-quality certification is claimed.
 
-## ✦ Thirty templates — new in 0.9.0
+## ✦ Thirty templates — new in 0.10.0
 
-**[Browse the live gallery](https://jongos.github.io/Dazzler/templates/)** · **[Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.9.0/dazzler-templates.zip)**
+**[Browse the live gallery](https://jongos.github.io/Dazzler/templates/)** · **[Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.10.0/dazzler-templates.zip)**
 
 - **10 DOCX + 10 matching HTML documents:** professional, legal, business, fun, family, presentation, school, marketing, restaurant and technical.
 - **10 UI folders, each with HTML, CSS and JSON:** three general webapps, two data dashboards, four restaurant experiences and one business portal.
@@ -151,3 +151,7 @@ Have an idea for what Dazzler should do next? Contact **Jon Gosier at [jon@filmh
 ## License
 
 Our original instructions, scripts, catalog annotations, and Dazzler artwork use [Apache License 2.0](LICENSE). **Fonts, upstream support files, adapted framework guidance, palette data, and vendored libraries retain their respective third-party licenses.** See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and adjacent notices. Renaming the project does not change those terms.
+
+### Templates with context
+
+The 0.10.0 library replaces generic outlines with 30 worked starting points: priced proposals, evidence-led memos, full-week planners, course-based menus, technical RFCs and purpose-specific interfaces. Dashboard totals reconcile; café orders have quantities; booking requests respect service days; client portals support deliverable review. Every example is fictional and must be adapted to the actual project. [See the per-template review](docs/template-review-0.10.0.md).

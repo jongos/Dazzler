@@ -1,42 +1,45 @@
 {
   "id": "webapp-workspace",
   "category": "general-webapp",
-  "title": "Your work in focus",
+  "layout": "workspace",
   "brand": "Orbit",
-  "eyebrow": "WORKSPACE",
-  "intro": "A calm place to plan the next useful thing.",
+  "title": "Projects overview",
+  "intro": "Monday, 21 June \u2022 Product & delivery team",
   "accent": "#354D93",
   "tint": "#EEF1FD",
-  "layout": "workspace",
-  "heading": "Work Sans",
-  "nav": [
-    "Overview",
-    "Projects",
-    "Activity"
+  "projects": [
+    {
+      "name": "Customer portal",
+      "client": "Alder Studio",
+      "owner": "Maya Chen",
+      "done": 18,
+      "total": 24,
+      "due": "12 Jul",
+      "status": "At risk"
+    },
+    {
+      "name": "Welcome sequence",
+      "client": "Northstar",
+      "owner": "Sam Okafor",
+      "done": 9,
+      "total": 12,
+      "due": "28 Jun",
+      "status": "In review"
+    },
+    {
+      "name": "Research library",
+      "client": "Internal",
+      "owner": "Alex Rivera",
+      "done": 6,
+      "total": 10,
+      "due": "05 Jul",
+      "status": "On track"
+    }
   ],
-  "action": "Add project",
-  "items": [
-    [
-      "Website refresh",
-      "Design",
-      "Jun 18"
-    ],
-    [
-      "Customer onboarding",
-      "Review",
-      "Jun 21"
-    ],
-    [
-      "Research library",
-      "Planning",
-      "Jun 26"
-    ]
-  ],
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
   "demo": true,
   "persistence": "memory only",
-  "fontFiles": "../../fonts",
-  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
 }

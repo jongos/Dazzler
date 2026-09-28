@@ -1,285 +1,305 @@
 {
-  "schemaVersion": 1,
-  "version": "0.9.0",
-  "license": "Apache-2.0",
+  "schemaVersion": 2,
+  "version": "0.10.0",
   "creator": "Jon Gosier",
+  "license": "Apache-2.0",
   "templates": [
     {
       "id": "docx-professional",
       "category": "professional",
       "format": "docx",
-      "title": "Project status report",
-      "use": "Executive updates and professional status reports",
+      "title": "Customer portal launch",
+      "use": "Weekly executive status report with decision, milestones, risks and ownership",
       "path": "docx/professional.docx",
       "fonts": [
         "Arial"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 1,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-professional",
       "category": "professional",
       "format": "html",
-      "title": "Project status report",
-      "use": "Executive updates and professional status reports",
+      "title": "Customer portal launch",
+      "use": "Weekly executive status report with decision, milestones, risks and ownership",
       "path": "html/professional.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 1,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-legal",
       "category": "legal",
       "format": "docx",
-      "title": "Legal matter memorandum",
-      "use": "Legal memo layout with neutral placeholders; no jurisdiction-specific clauses or advice",
+      "title": "Supplier exit review",
+      "use": "Legal matter memo with chronology, evidence gaps and an authority research matrix",
       "path": "docx/legal.docx",
       "fonts": [
         "Georgia"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-legal",
       "category": "legal",
       "format": "html",
-      "title": "Legal matter memorandum",
-      "use": "Legal memo layout with neutral placeholders; no jurisdiction-specific clauses or advice",
+      "title": "Supplier exit review",
+      "use": "Legal matter memo with chronology, evidence gaps and an authority research matrix",
       "path": "html/legal.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-business",
       "category": "business",
       "format": "docx",
-      "title": "Business proposal",
-      "use": "Client proposals, project scopes and internal business cases",
+      "title": "Customer onboarding redesign",
+      "use": "Two-page services proposal with deliverables, exclusions, pricing and acceptance",
       "path": "docx/business.docx",
       "fonts": [
         "Arial"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-business",
       "category": "business",
       "format": "html",
-      "title": "Business proposal",
-      "use": "Client proposals, project scopes and internal business cases",
+      "title": "Customer onboarding redesign",
+      "use": "Two-page services proposal with deliverables, exclusions, pricing and acceptance",
       "path": "html/business.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-fun",
       "category": "fun",
       "format": "docx",
-      "title": "Game night invitation",
-      "use": "Playful invitations and casual community events",
+      "title": "The great game night",
+      "use": "A playful event invitation with actual logistics, schedule and RSVP details",
       "path": "docx/fun.docx",
       "fonts": [
         "Arial"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 1,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-fun",
       "category": "fun",
       "format": "html",
-      "title": "Game night invitation",
-      "use": "Playful invitations and casual community events",
+      "title": "The great game night",
+      "use": "A playful event invitation with actual logistics, schedule and RSVP details",
       "path": "html/fun.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 1,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-family",
       "category": "family",
       "format": "docx",
-      "title": "Family weekly planner",
-      "use": "Household schedules, family planning and shared responsibilities",
+      "title": "Our week at a glance",
+      "use": "Seven-day household schedule with meals, pickups, responsibilities and shopping",
       "path": "docx/family.docx",
       "fonts": [
-        "Georgia"
+        "Arial"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 1,
+      "orientation": "landscape",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-family",
       "category": "family",
       "format": "html",
-      "title": "Family weekly planner",
-      "use": "Household schedules, family planning and shared responsibilities",
+      "title": "Our week at a glance",
+      "use": "Seven-day household schedule with meals, pickups, responsibilities and shopping",
       "path": "html/family.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 1,
+      "orientation": "landscape",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-presentation",
       "category": "presentation",
       "format": "docx",
-      "title": "Project presentation",
-      "use": "Landscape Word presentation handout and speaker outline",
+      "title": "Approve the onboarding pilot",
+      "use": "Three-page landscape decision presentation with evidence, options and an action plan",
       "path": "docx/presentation.docx",
       "fonts": [
         "Arial"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "landscape"
+      "plannedPages": 3,
+      "orientation": "landscape",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-presentation",
       "category": "presentation",
       "format": "html",
-      "title": "Project presentation",
-      "use": "Landscape Word presentation handout and speaker outline",
+      "title": "Approve the onboarding pilot",
+      "use": "Three-page landscape decision presentation with evidence, options and an action plan",
       "path": "html/presentation.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "landscape"
+      "plannedPages": 3,
+      "orientation": "landscape",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-school",
       "category": "school",
       "format": "docx",
-      "title": "Student project report",
-      "use": "School reports, learning journals and research assignments",
+      "title": "How light affects seedling growth",
+      "use": "Science report with variables, repeatable method, sample data and reflection",
       "path": "docx/school.docx",
       "fonts": [
         "Arial"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-school",
       "category": "school",
       "format": "html",
-      "title": "Student project report",
-      "use": "School reports, learning journals and research assignments",
+      "title": "How light affects seedling growth",
+      "use": "Science report with variables, repeatable method, sample data and reflection",
       "path": "html/school.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-marketing",
       "category": "marketing",
       "format": "docx",
-      "title": "Campaign creative brief",
-      "use": "Campaign planning and marketing creative briefs",
+      "title": "Make the first visit easy",
+      "use": "Campaign brief with audience, message, channel budget, production details and measurement",
       "path": "docx/marketing.docx",
       "fonts": [
         "Arial"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-marketing",
       "category": "marketing",
       "format": "html",
-      "title": "Campaign creative brief",
-      "use": "Campaign planning and marketing creative briefs",
+      "title": "Make the first visit easy",
+      "use": "Campaign brief with audience, message, channel budget, production details and measurement",
       "path": "html/marketing.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-restaurant",
       "category": "restaurant",
       "format": "docx",
-      "title": "Seasonal dining menu",
-      "use": "Restaurant menus and seasonal dining sheets",
+      "title": "Juniper dinner menu",
+      "use": "Restaurant menu with courses, ingredient descriptions, prices and service notes",
       "path": "docx/restaurant.docx",
       "fonts": [
         "Georgia"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 1,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-restaurant",
       "category": "restaurant",
       "format": "html",
-      "title": "Seasonal dining menu",
-      "use": "Restaurant menus and seasonal dining sheets",
+      "title": "Juniper dinner menu",
+      "use": "Restaurant menu with courses, ingredient descriptions, prices and service notes",
       "path": "html/restaurant.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 1,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "docx-technical",
       "category": "technical",
       "format": "docx",
-      "title": "Technical design specification",
-      "use": "Engineering specifications, implementation plans and technical reviews",
+      "title": "Order status webhook delivery",
+      "use": "Technical RFC with delivery guarantees, payload, failure handling, tests and rollout",
       "path": "docx/technical.docx",
       "fonts": [
         "Arial"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "html-technical",
       "category": "technical",
       "format": "html",
-      "title": "Technical design specification",
-      "use": "Engineering specifications, implementation plans and technical reviews",
+      "title": "Order status webhook delivery",
+      "use": "Technical RFC with delivery guarantees, payload, failure handling, tests and rollout",
       "path": "html/technical.html",
       "fonts": [
         "Work Sans",
         "Young Serif"
       ],
-      "placeholders": "Bracketed text is intentionally replaceable.",
-      "orientation": "portrait"
+      "plannedPages": 2,
+      "orientation": "portrait",
+      "content": "Fictional worked example. Replace sample details and verify facts before use."
     },
     {
       "id": "webapp-workspace",
       "category": "general-webapp",
       "format": "ui",
-      "title": "Your work in focus",
-      "use": "A calm place to plan the next useful thing.",
+      "title": "Projects overview",
+      "use": "Monday, 21 June \u2022 Product & delivery team",
       "path": "ui/webapp-workspace",
       "layout": "workspace",
       "files": [
@@ -293,8 +313,8 @@
       "id": "webapp-board",
       "category": "general-webapp",
       "format": "ui",
-      "title": "Make progress visible",
-      "use": "Small steps, shared ownership, a clear finish line.",
+      "title": "Onboarding sprint",
+      "use": "Sprint 08 \u2022 21 June \u2013 2 July \u2022 Goal: make first setup clearer",
       "path": "ui/webapp-board",
       "layout": "board",
       "files": [
@@ -308,8 +328,8 @@
       "id": "webapp-settings",
       "category": "general-webapp",
       "format": "ui",
-      "title": "Make it your workspace",
-      "use": "Control how your profile and notifications work.",
+      "title": "Profile & preferences",
+      "use": "Manage how your team sees you and when you hear from us.",
       "path": "ui/webapp-settings",
       "layout": "settings",
       "files": [
@@ -323,8 +343,8 @@
       "id": "data-revenue",
       "category": "data-visualization",
       "format": "ui",
-      "title": "A clearer view of growth",
-      "use": "Compare the shape of the last six months.",
+      "title": "Revenue performance",
+      "use": "January\u2013June 2027 \u2022 USD \u2022 Illustrative finance export",
       "path": "ui/data-revenue",
       "layout": "revenue",
       "files": [
@@ -338,8 +358,8 @@
       "id": "data-operations",
       "category": "data-visualization",
       "format": "ui",
-      "title": "Keep the day moving",
-      "use": "See demand, capacity, and the queues that need attention.",
+      "title": "Support command desk",
+      "use": "Snapshot \u2022 21 June 2027, 09:40 \u2022 Sample service data",
       "path": "ui/data-operations",
       "layout": "operations",
       "files": [
@@ -353,8 +373,8 @@
       "id": "restaurant-fine-dining",
       "category": "restaurant",
       "format": "ui",
-      "title": "An evening worth slowing down for",
-      "use": "A small dining room. A menu shaped by the season.",
+      "title": "The season, at the table.",
+      "use": "A small dining room, a changing menu, and an evening with room to linger.",
       "path": "ui/restaurant-fine-dining",
       "layout": "dining",
       "files": [
@@ -368,8 +388,8 @@
       "id": "restaurant-cafe",
       "category": "restaurant",
       "format": "ui",
-      "title": "A good morning starts here",
-      "use": "Your neighborhood pause, poured fresh.",
+      "title": "Your usual, or something new.",
+      "use": "Order ahead for pickup \u2022 Sample caf\u00e9 location",
       "path": "ui/restaurant-cafe",
       "layout": "cafe",
       "files": [
@@ -383,8 +403,8 @@
       "id": "restaurant-reservations",
       "category": "restaurant",
       "format": "ui",
-      "title": "There is a place for you",
-      "use": "Choose a date and join us for dinner.",
+      "title": "Make an evening of it.",
+      "use": "Request a table for dinner. We will show a summary before any next step.",
       "path": "ui/restaurant-reservations",
       "layout": "reservations",
       "files": [
@@ -398,8 +418,8 @@
       "id": "restaurant-menu",
       "category": "restaurant",
       "format": "ui",
-      "title": "Something for every appetite",
-      "use": "Simple ingredients, generous plates, good company.",
+      "title": "Good food. Your kind of lunch.",
+      "use": "Bowls, small plates, something sweet. Served 11:30\u201316:00.",
       "path": "ui/restaurant-menu",
       "layout": "menu",
       "files": [
@@ -413,8 +433,8 @@
       "id": "business-portal",
       "category": "generic-business",
       "format": "ui",
-      "title": "Good work starts with clarity",
-      "use": "Your projects, documents, and next steps in one place.",
+      "title": "Alder Studio / Brand & website",
+      "use": "Your project room \u2022 Updated 18 June 2027",
       "path": "ui/business-portal",
       "layout": "business",
       "files": [
@@ -426,16 +446,16 @@
     }
   ],
   "files": {
-    "docx/business.docx": "d41a9eb2f54a95b27af52e4a15489c20092f5322ce57a0d0cecb6ac5178e4ba4",
-    "docx/family.docx": "19ffc1bcdb1fc9f2afeb29f226413c766ba6ecf6e4dd34fb5684a4ae38ee9f9f",
-    "docx/fun.docx": "04fefcd6252628f92aff0a11408282d5a41b39af5d9025f442cf54597cee398e",
-    "docx/legal.docx": "19e42200c9dbda4e76ffbc24038ffa15c56d284908600e0c0899db0c5344061b",
-    "docx/marketing.docx": "0f10a38cf6479a3bf984d3868e1ef57b72745eedee99d117f7842ad27a625c1e",
-    "docx/presentation.docx": "a245b0539f1d905ef924780a5cf3d016bf4a656c79fe49b937b226253f11eb43",
-    "docx/professional.docx": "c49cf88b5d5a3cf0235e19d3f426a29d2bb6ac8201b9bb0978305038b72cb903",
-    "docx/restaurant.docx": "c12dc1f7b4606ac5260cde12ac5c40b87eeba566e8d09b6562cfa399027182b8",
-    "docx/school.docx": "19e0726daf0b6d27357e0c281d4b743f9377bd0b0ac39bc10f34077148f9cd5c",
-    "docx/technical.docx": "b2ae098b76d6f4dca2f6b93dd8d189f6f3dcad6e0e7efa4771dacaf38cf3deeb",
+    "docx/business.docx": "649707901b09c211de9d9f712312d08516d6d641e8fabf928ed07d63d1a27ba3",
+    "docx/family.docx": "78d8b63a845d31982aec83b1b34e22387f0a29c860230161ba362d298e52542c",
+    "docx/fun.docx": "e93aa7d22bb6431c567c18c827fbb0ee5056e4645f48678df0e52c2e6151eaff",
+    "docx/legal.docx": "2312628929f12f4c98d8a71228862a958a501f04cb278022f3f0cd0262323010",
+    "docx/marketing.docx": "6ddba7365b7ad53d734400608151c86468bd55aaa93d3724b39a66e0eb79ced8",
+    "docx/presentation.docx": "8a1c438e6355a1e3f4b85cc67a5a18aeba545639a3a63fb3497416dda09820cd",
+    "docx/professional.docx": "2fd68fc84e60bd5bb9ae69d2294372b5aec3c1f65bc916b4c2985dae6ea900f9",
+    "docx/restaurant.docx": "e9ba282608dc5fd4600297fceec72b34451c2193f6cda81003dcdeeafa40d6ba",
+    "docx/school.docx": "b6bd8ac277adacb10a7359dbae34ddaf9393d16be335df7eac44dbcc32af6978",
+    "docx/technical.docx": "60a1e38879c02acdfc69d4f9266ee9f8866af0d7c1c2c4841908d7775cab7222",
     "fonts/fonts.css": "d57a213f856e9b2cf06917917e63ac62327b7a5856dd873269acb994b11c505a",
     "fonts/work-sans/COPYRIGHT.txt": "121af0683779ca9311017b16c9799f2c9fb2a27457226d02d8d193b0a18f973d",
     "fonts/work-sans/fonts.css": "7a088f36997aa93805372743237283489eee098154f38698321691e2bf89e434",
@@ -449,48 +469,68 @@
     "fonts/young-serif/selection.json": "5d51ff270517c42bafd4fde51cf785ceae4f2c735dac44e6a8a0576646300d45",
     "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
     "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-    "html/business.html": "0d710905182fec5b7f94bd3d69120b88c74d5a807afc1476aacfacc336d29867",
-    "html/family.html": "7288cad2c6583bebab0b74822eaf5afc46300dc74db9087928664a2d9cf70112",
-    "html/fun.html": "3419de07f0047a99969196c7d5c01872fb795591e15de8290550decd150433c2",
-    "html/legal.html": "22b218f7493397fc9cf9aed31154487aa3d59bf642aac2c3facdca5464d85a5c",
-    "html/marketing.html": "ad33cb7abb16e6cb1af82f2c7fa1ccb3325b99d5e066ee1c0a3eb9df2617d96c",
-    "html/presentation.html": "45b5925df6dd660b69d7624db0322471f0b2ceea31a7556f9ba786be107c7b75",
-    "html/professional.html": "9cd2c052edcf2d853f39304e1de37fbd7d94d982fdfaf97fd0737cd812cd96d2",
-    "html/restaurant.html": "f6432922b79390210720b20314bf4354dbc8a0179d13f5a481b6723d72077681",
-    "html/school.html": "122a0a6554284d22523dd4f37f201daf38aa4dea70ed737333ac352ca6087e22",
-    "html/technical.html": "dfc2b68462e6d7ce153c6ccb05d94b536c744eb1c0e6dd4d1588c8a294d8949f",
-    "index.html": "1b0938a51a4b004c265c5b473caf1f24bf3d314587f7d827bffd0b56ee26b3eb",
+    "html/business.html": "5c9500d560b209549c74fc35d6ce190b02474e491c47f5d974ebf4a7e7b5903f",
+    "html/family.html": "c608bb1d0316664bc492d5e35a9e342a99f14610ccef034100c421e8b9b2e6e9",
+    "html/fun.html": "d09425b0cf535000d1ee613da2738f1d5eab1e7d0198f64ba93f06afa8300631",
+    "html/legal.html": "31ad6623cfeb7637fca36ba934e6c579ae478e8798e1fb8e3ea32d09825e7d04",
+    "html/marketing.html": "74c02d8b9cfc4dcac28b0c58506037f1d81f0e1d2e43f4418aa89c898b6e86c8",
+    "html/presentation.html": "d03bf1ab5d4a1b3a47a5a23d6cbd879dbe115d1eb670f5d1379a195b452b6ec9",
+    "html/professional.html": "ca8d81d912c7376391f41385d4dd3e05736ac973c4a39d9f150835df2169243f",
+    "html/restaurant.html": "999465c8d2f9a058ee83c3a4f30fead0a401a1bca1ba02bb07abc5a0607f5c65",
+    "html/school.html": "d1b18d65cb9cd8965925839169f74b734e54ddb380b904e4c1f75802f06fed06",
+    "html/technical.html": "deeff37dceedf87f6964071afb5956b866f5edbff5f725b1294ffdbe7181b291",
+    "index.html": "3f8f55835e566565a867e0849e2ed0eddb0796ee83b55666a1f66345fcd709e7",
     "LICENSE.txt": "eb3d7b5485466acbd81f2b496f595ab637d2792e268206b27d99e793bdb67549",
-    "NOTICE.txt": "6a86361572d7edb087680be5b905fcfe092bc8db43e1e2313d58cdac947f3eb3",
-    "ui/business-portal/index.html": "d681dcbec45cf64d5556a64561990314c54311248343c2e59b0eebc7d5e7c4cc",
-    "ui/business-portal/styles.css": "020b1277d4f02b88a71835e0de82e314c2478e25dcfbda631886c4ec3e299b20",
-    "ui/business-portal/template.json": "2ff30bda3a274f776808f9ac46d836cf1cbb385b1edb841bcaf00d834a7aeb66",
-    "ui/data-operations/index.html": "fc7a4023466ed4e965477bca28c9c859d628917de63c56552dc978f8cdd94394",
-    "ui/data-operations/styles.css": "f334c323bb3259b6b869451c5a2524c62483fd11f83a6e74623ad1ffd0c6e29a",
-    "ui/data-operations/template.json": "6223602935a608b8f91caf77530c5a7b7ad00e83c9a5340537f76d9519d2e282",
-    "ui/data-revenue/index.html": "27e2c81f8b051e6b2d3d9080436b1688d88dbbbe00163ab761797f0ba03a75d1",
-    "ui/data-revenue/styles.css": "c746686d3fa9c04764c836e4b94ae3ab73a0a2732ca0e2d40555d7bf6bbc83fb",
-    "ui/data-revenue/template.json": "cba587daa875a7e5142b53f6012b99026f951be1a41668890dbdfbbbc651a417",
-    "ui/restaurant-cafe/index.html": "e1b578356574343121d50793617facaa7e7972035c91f20fa35abdcafa6b03bc",
-    "ui/restaurant-cafe/styles.css": "fa826aeff26929391ad7158f6c264bbedb51932b8dbd7bb3ff972dc2c902c8d1",
-    "ui/restaurant-cafe/template.json": "c110d9c09910d6598fbe5f701c282854acd10a58d9d8a7e3b5e7f0ae75517291",
-    "ui/restaurant-fine-dining/index.html": "4149636796393d2a7460c02d0bb77eb3100859a9de3dac3445351594631d98da",
-    "ui/restaurant-fine-dining/styles.css": "47c9e415757fbee533cbeae6ff984bf2f0dacc1bb58c5676f6e119332771e397",
-    "ui/restaurant-fine-dining/template.json": "7edd8041ee7bebb681652e67ec26473ee927e897258beb3eba4d96239e03d0d8",
-    "ui/restaurant-menu/index.html": "a40513c507ddc58b4f60f1078b3e58040a3f55a911c9fdec98996a66bc23cc68",
-    "ui/restaurant-menu/styles.css": "76de3505c77c18f226902df519a1422f845ec7e325e4ec6a6317e8164347cbb5",
-    "ui/restaurant-menu/template.json": "990fe8f34c6408b7ddb99fd78531ac2bb15ad9a1724a4f8da6093f0657848ac0",
-    "ui/restaurant-reservations/index.html": "beb36b7732ce06be1443a0db5a2ee89dd8228dd514b071eb10ee2e6fafd677cf",
-    "ui/restaurant-reservations/styles.css": "822f69e7995af37b28a5734c1d112e386cb49fe1237247a43ef16d60ac3dfdcf",
-    "ui/restaurant-reservations/template.json": "724272a0e8b4618080433b6f99e22b1384e1a33c26444572efcf5b513270c0b9",
-    "ui/webapp-board/index.html": "83a8972f43fe0a41fb937ade11b8e154abc38057ab529809c7441c0ac95145f6",
-    "ui/webapp-board/styles.css": "e8d12ccb6e1b4accab19ef9ea03116cab4122b919e953140d9eec8c440787945",
-    "ui/webapp-board/template.json": "cb03a7c8e98f6b56472130c1fafb1e48729a1890e45faf863aebc032247cae7b",
-    "ui/webapp-settings/index.html": "9d0bca28391e62b086bd23dad1c7f1471b5651cf2e173343f0aba25d41831514",
-    "ui/webapp-settings/styles.css": "446d7eca0f709ac14427efa1662e9fbbec45e3e097919e6e52f63c28be16e228",
-    "ui/webapp-settings/template.json": "8efb1ba563b6071089c8c0a4f24582518cbe57478a70c5482e8110c5701e8739",
-    "ui/webapp-workspace/index.html": "31aa8f4ffd5ba1b03a5c0eb6e1f321861b5f7d5bead15d12706550bffafe2f27",
-    "ui/webapp-workspace/styles.css": "ffe43075103de3a1badc3698ae735bd857e070e409d078783293fd48a9be818b",
-    "ui/webapp-workspace/template.json": "81ecb5aba6593ba64c00eec68b7feb9025c991a8b0dd87a06e34f57b24fb7fad"
+    "NOTICE.txt": "af0df69509c636dc040a000f95ab13b33c40c9eed0a03703341653d2afacd458",
+    "previews/business-portal.jpg": "94dc5cfebac1ed9baff9e41c511e04dd3d9e3ea63eb885abeea32e4b3c41a3cb",
+    "previews/data-operations.jpg": "3efe6a37875d6b4158e5daee3ce3cf52eaf5f424ae18b3b9ae24f8d0e8d33aa4",
+    "previews/data-revenue.jpg": "75df8f2721a2b45efef916919d970c12d900d3837f670a4a0ad0ecd9e470355f",
+    "previews/html-business.jpg": "02183a585f271d34f987b1e7b16f06d146e2067f3cf7df65648931d9c0273238",
+    "previews/html-family.jpg": "623c55c13be0477cb042c5748fb7b9740a07e2d494995de190cad7a97c1167ba",
+    "previews/html-fun.jpg": "5884d70be184bd067a422e47b9f07fee92c780a2e37c42dbe5a440531453cc27",
+    "previews/html-legal.jpg": "30bdfcaec44fe82f50f8044b8e92121f03f8f72a93402719aca8c45433c741d7",
+    "previews/html-marketing.jpg": "9e940ff5d84eacccbf11e27ce9777bfcbf03784d51b3dfafcba34deb8ca90285",
+    "previews/html-presentation.jpg": "bf0721be70452b623bc24e4bf33e64009d324d6600045ea964a04a03af23fd3c",
+    "previews/html-professional.jpg": "a1e740debaab378e749d60673bad4440e39e27062807b8b145e2fb58d558c7d6",
+    "previews/html-restaurant.jpg": "ac1f2167f9438c7e9f91e1cfbe57ad3995b2e5eebfc10d8ca2226b43c0793764",
+    "previews/html-school.jpg": "17ccede0099a112bf43c11a074c2285532287e36a9e37fc749598e2a4ca398a4",
+    "previews/html-technical.jpg": "b1690b32f014a1e4e6fb9b5555a6b53f93614ca3bee481368b1eb173a46b0c81",
+    "previews/restaurant-cafe.jpg": "c0fe71b0ffbd158d86b7776fb8f7ed51fbaf3c206f5f26e112cec6ad605ae4fd",
+    "previews/restaurant-fine-dining.jpg": "0f757c8b5cc0f6d0c452e27690280c3ac8a2501a07c91cdea73ce5456de0011f",
+    "previews/restaurant-menu.jpg": "9c1315250c61ce0568ff1700dc650caeb5a1eff30336b81380a2a450533cad01",
+    "previews/restaurant-reservations.jpg": "bee7b43345cbb4b8ec256d187bdc3c85ccf0949c5d1164549837ed23360619fc",
+    "previews/webapp-board.jpg": "68df283328efc02df20d0044e5af66181172ce52c6161c7dd9009655daf99c8e",
+    "previews/webapp-settings.jpg": "89cd7fc00eff3b4185e4d8e893d3ee101de2f97890859c15f696b2dc98a70993",
+    "previews/webapp-workspace.jpg": "1471c4c787be2c2a53e56746d03572f5122b938e135af10b0c7ec856e817b6c4",
+    "ui/business-portal/index.html": "75b5de5b663b2e3a217cf3977cab20fcd3396c906a383c5c2c4568b71f35bb4a",
+    "ui/business-portal/styles.css": "e19548fe1a19525993b3278fe9071bc8768f42c5a1a34b213620018b9409f08b",
+    "ui/business-portal/template.json": "7f9e8a01081152114b2c76c14234ba38532cbb5896fcca31db01e8cb72577c06",
+    "ui/data-operations/index.html": "0814c3359df572d99bc2325ebba6faab1e23ceef7e1ffe3210728b6955d9fb33",
+    "ui/data-operations/styles.css": "c316f54d4c7ea854eea9575628ca1c7e6e4f136ada1306c9d31b9653d5a26fa2",
+    "ui/data-operations/template.json": "ee1abd0f37ee30c53cd002fb5fa2f61c758d910c81c50cefaf219815efa228d1",
+    "ui/data-revenue/index.html": "a2e41d447891aa4c3b06bf1e2c39e65b92ff5b6460edab99ba11c0763129a728",
+    "ui/data-revenue/styles.css": "020b7039b4a3bc63cbf915226179b01af5a7460d36a17580080d8e93fbb00251",
+    "ui/data-revenue/template.json": "482f9d46b6c6859af7596982a0bbb210c906909e6c4f29939464b61513aa853f",
+    "ui/restaurant-cafe/index.html": "4799c007d58dd0425f9f1e4ff9c91ba0b1684acf2b1bf13ddd51d859ae7988be",
+    "ui/restaurant-cafe/styles.css": "bbfcc4b82a127109bb811afb3983efe5785d9348cdc7f3f9d2177cc676c2a8b9",
+    "ui/restaurant-cafe/template.json": "065a5847f6deb31fec31c641f6032de347e0476c6ef2ff325b1a7a8e97f826b8",
+    "ui/restaurant-fine-dining/index.html": "ea6f2a579cbc71e8a4de855c1704c3473823dae2401bdda85e685048bdf4ce77",
+    "ui/restaurant-fine-dining/styles.css": "cd4d5f2e4e4e8a008676729ae0cd3de583606b866f44c26b4b1315f846de6b7e",
+    "ui/restaurant-fine-dining/template.json": "9aa5011af8bf84fc4b9a8df0b3191e8ac63cb824c1dd12c15a5a2640f5cecd75",
+    "ui/restaurant-menu/index.html": "bfe3493b75d8932d3a344df2fccd19a093373567cfe85a3260460f6e396426d0",
+    "ui/restaurant-menu/styles.css": "1ef97969d1d1e56fc9b83fdde8f7c4bba81c3d1f7d7ae813aed0129082fcb7d7",
+    "ui/restaurant-menu/template.json": "755fbb6820ff4a2d580030e449ad7bc0f23662c4318813070158da507b6243e5",
+    "ui/restaurant-reservations/index.html": "1ea1ebdbce7b73eea2299b19cab835fc8f3d6ab3d0d20d6040abe7d4d63f1851",
+    "ui/restaurant-reservations/styles.css": "1777605fcbd58f621d802028dbd32b5596fd42097caf3642d506bffdea1be830",
+    "ui/restaurant-reservations/template.json": "1c52adaa429b82baff4147e6a7b38ff4e4cf6d7b4032e6951539d0ff181c502e",
+    "ui/webapp-board/index.html": "7957cfb5aeaead863f68bb56db64e98efff4ae5c5c8d3b8ad473e823dc70cdac",
+    "ui/webapp-board/styles.css": "91c8e445549b1822b5d64eefe3ccd2705508955cda7454e362f3be3ea248bdf0",
+    "ui/webapp-board/template.json": "ae5f9ce5f5af27ed52fdce2d7fbfd9c1dcd70eb54ae273cc205b05bffd1e82aa",
+    "ui/webapp-settings/index.html": "86155af877daed8ebd9d6762c5b8b314e9bc23fecf7719694f4d15c019c655cc",
+    "ui/webapp-settings/styles.css": "254fc3ecda615ef553e4af93a993f8b4b1e8e6ec4b1a14b3efd2867354a30513",
+    "ui/webapp-settings/template.json": "d9f307c0b038c45216e752c474a09b6e1aa94bc018eabfdbeabae22a9e059e4a",
+    "ui/webapp-workspace/index.html": "046f7736e010b15bf27d9523fec96f93a109737998f0005883a0b7bc5610a4f0",
+    "ui/webapp-workspace/styles.css": "542efcbe1e744e5d5c126ea733fdc96f958814c8d99d17e0da57c7cc55177883",
+    "ui/webapp-workspace/template.json": "8b7392e29f82f8d2de91ea3e572a058d9ed3b411941df9778df8296065be6d53"
   }
 }

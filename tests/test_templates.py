@@ -28,8 +28,10 @@ class TemplateTests(unittest.TestCase):
         for t in templates.select('docx'):
             with ZipFile(templates.ROOT/t['path']) as z:
                 document=ET.fromstring(z.read('word/document.xml'));styles=ET.fromstring(z.read('word/styles.xml'))
-                self.assertTrue(document.findall('.//w:tbl',ns));self.assertTrue(document.findall('.//w:tblHeader',ns));self.assertFalse(styles.findall('.//w:pBdr',ns))
-                self.assertIn('[', ''.join(document.itertext()))
+                self.assertFalse(styles.findall('.//w:pBdr',ns))
+                self.assertTrue(document.findall('.//w:tbl',ns));self.assertTrue(document.findall('.//w:tblHeader',ns))
+                self.assertGreater(len(''.join(document.itertext())),800,t['id'])
+                self.assertEqual(len(document.findall('.//w:br[@w:type="page"]',ns))+1,t['plannedPages'])
     def test_json_matches_embedded_data(self):
         import re
         for t in templates.select('ui'):

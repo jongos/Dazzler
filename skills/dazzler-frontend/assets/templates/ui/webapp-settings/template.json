@@ -1,26 +1,24 @@
 {
   "id": "webapp-settings",
   "category": "general-webapp",
-  "title": "Make it your workspace",
+  "layout": "settings",
   "brand": "Forma",
-  "eyebrow": "PREFERENCES",
-  "intro": "Control how your profile and notifications work.",
+  "title": "Profile & preferences",
+  "intro": "Manage how your team sees you and when you hear from us.",
   "accent": "#4E5673",
   "tint": "#F0F2F8",
-  "layout": "settings",
-  "heading": "Work Sans",
-  "nav": [
-    "Profile",
-    "Notifications",
-    "Privacy"
-  ],
-  "action": "Save preferences",
-  "items": [],
-  "schemaVersion": 1,
+  "profile": {
+    "name": "Alex Morgan",
+    "email": "alex@example.com",
+    "role": "Product designer",
+    "timezone": "America/New_York",
+    "digest": true,
+    "mentions": true
+  },
+  "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
   "demo": true,
   "persistence": "memory only",
-  "fontFiles": "../../fonts",
-  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
 }

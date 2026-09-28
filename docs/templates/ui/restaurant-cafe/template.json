@@ -1,47 +1,54 @@
 {
   "id": "restaurant-cafe",
   "category": "restaurant",
-  "title": "A good morning starts here",
+  "layout": "cafe",
   "brand": "Daybreak",
-  "eyebrow": "COFFEE AND KITCHEN",
-  "intro": "Your neighborhood pause, poured fresh.",
+  "title": "Your usual, or something new.",
+  "intro": "Order ahead for pickup \u2022 Sample caf\u00e9 location",
   "accent": "#8C422B",
   "tint": "#FFF0E5",
-  "layout": "cafe",
-  "heading": "Young Serif",
-  "nav": [
-    "Order",
-    "Our story",
-    "Hours"
-  ],
-  "action": "View order",
   "items": [
-    [
-      "Flat white",
-      "Coffee",
-      4.5
-    ],
-    [
-      "Iced oat latte",
-      "Coffee",
-      5.5
-    ],
-    [
-      "Almond croissant",
-      "Bakery",
-      4
-    ],
-    [
-      "Tomato toast",
-      "Kitchen",
-      9
-    ]
+    {
+      "name": "Flat white",
+      "category": "Coffee",
+      "description": "Double espresso, steamed milk, fine foam.",
+      "price": 4.5
+    },
+    {
+      "name": "Iced oat latte",
+      "category": "Coffee",
+      "description": "Espresso over ice with oat drink.",
+      "price": 5.5
+    },
+    {
+      "name": "Filter coffee",
+      "category": "Coffee",
+      "description": "Today\u2019s batch, served black or with milk.",
+      "price": 3.5
+    },
+    {
+      "name": "Almond croissant",
+      "category": "Bakery",
+      "description": "Twice baked with almond cream.",
+      "price": 4.5
+    },
+    {
+      "name": "Morning bun",
+      "category": "Bakery",
+      "description": "Orange sugar and a soft, buttery center.",
+      "price": 4
+    },
+    {
+      "name": "Tomato toast",
+      "category": "Kitchen",
+      "description": "Sourdough, tomatoes, whipped ricotta, herbs.",
+      "price": 9
+    }
   ],
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
   "demo": true,
   "persistence": "memory only",
-  "fontFiles": "../../fonts",
-  "customization": "Edit the source HTML/CSS for layout and displayed copy. Keep this JSON and the embedded template-data JSON in index.html synchronized when changing interactive sample data."
+  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
 }
