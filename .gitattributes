@@ -5,3 +5,5 @@ skills/frontend-design/assets/fonts/** -text -whitespace
 *.woff binary
 *.woff2 binary
 *.zip binary
+skills/frontend-design/scripts/vendor/** -text
+skills/frontend-design/references/hue3-LICENSE.txt -text

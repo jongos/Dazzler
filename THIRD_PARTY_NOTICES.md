@@ -1,6 +1,16 @@
-# Third-party font notices
+# Third-party notices
 
-The plugin's instructions, scripts and original annotations are Apache-2.0. **Font binaries and upstream support files retain the terms below.** These assets have not been relicensed, converted, subsetted or internally renamed. SHA-256 hashes and exact download URLs are recorded in [the inventory](skills/frontend-design/references/font-catalog.json). Each family folder includes copyright/license evidence and a source notice; preserve those when copying fonts to projects.
+## Color resources
+
+The mood catalog reuses palette values, names and atmosphere descriptions from [hue3](https://github.com/ktzzypo938/hue3/tree/a306210b7240e183366998ce39fbe7543cc09b41), copyright 2026 hue3 contributors, under [MIT](skills/frontend-design/references/hue3-LICENSE.txt). Its original instructions and erroneous contrast guidance are not incorporated. Our importer restructures the entries and records per-file source links.
+
+The generated [color engine](skills/frontend-design/scripts/vendor/color-engine.mjs) bundles @ankhorage/color-theory 0.3.1 (copyright 2026 Ankhorage, [MIT](skills/frontend-design/scripts/vendor/ankhorage-color-theory-LICENSE.txt)) and Culori 4.0.2 (copyright 2018 Dan Burzo, [MIT](skills/frontend-design/scripts/vendor/culori-LICENSE.txt)). These portions are not relicensed under Apache. Exact package versions and npm integrity are pinned in `package-lock.json`; the bundle hash is in [provenance.json](skills/frontend-design/scripts/vendor/provenance.json). The build selects upstream exports and bundles their code without changing upstream algorithms.
+
+The original adapter, semantic-role orchestration and preview template are Apache-2.0. The MIT-licensed [bivex/brand-color-palette-generator](https://github.com/bivex/brand-color-palette-generator/tree/34120ac72e8153dd26ce2f995dba277477c74ce6) inspired interaction ideas only; no code is redistributed. Colormind, TinyColor, RandomColor and Chroma.js are not dependencies of this plugin. esbuild is a pinned development-only bundler, not shipped runtime code. Preserve the exported `licenses` folder and provenance when distributing generated color artifacts.
+
+## Fonts
+
+The plugin's original instructions, scripts and annotations are Apache-2.0. **Font binaries and upstream support files retain the terms below.** These assets have not been relicensed, converted, subsetted or internally renamed. SHA-256 hashes and exact download URLs are recorded in [the inventory](skills/frontend-design/references/font-catalog.json). Each family folder includes copyright/license evidence and a source notice; preserve those when copying fonts to projects.
 
 Open Foundry supplied the discovery directory, not a blanket license grant for every asset. We did not bundle its specimen artwork, backgrounds or site code. The complete [font catalog](skills/frontend-design/references/font-catalog.md) links every directory page and explains repository, version and license discrepancies.
 

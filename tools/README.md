@@ -1,4 +1,14 @@
-# Font catalog maintenance
+# Design resource maintenance
+
+## Color resources
+
+Normal color helper use needs Node.js (22+ recommended), not npm, network access or a service account. Rebuild with `npm ci --ignore-scripts --no-audit --no-fund` then `npm run build:colors`. The lockfile pins @ankhorage/color-theory 0.3.1, Culori 4.0.2 and esbuild 0.28.2. esbuild is development-only. The build copies MIT notices and records the generated engine's SHA-256. Commit the bundle, notices and provenance with dependency changes; never edit generated bundle code directly.
+
+To refresh the curated catalog, review a new hue3 commit and license first. Update the explicit pin and parser in `tools/import_hue3.py`, then run it with a clean checkout. The current import accepts only a306210b7240e183366998ce39fbe7543cc09b41 and exactly 88 unique records. It extracts palette facts and editorial descriptions without importing upstream skill instructions. Its count/schema assertions intentionally require review when upstream changes.
+
+Run `npm run test:colors` for ratio, gamut, grayscale/extreme ramp, locked brand, no-match, export, catalog and hash regressions. For preview changes, also run `node tools/test_color_preview.cjs /path/to/new-preview-folder` with Playwright available via NODE_PATH. The browser check opens the generated local artifact, exercises both themes and simulation controls, and captures desktop/mobile screenshots. These checks are not complete WCAG or color-vision certification. Review actual typography and components in each design task.
+
+## Font catalog
 
 The catalog is a reviewed snapshot, not a live scraper dependency. Normal skill use and `scripts/fonts.py` need only Python's standard library.
 

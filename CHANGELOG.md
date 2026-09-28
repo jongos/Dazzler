@@ -2,6 +2,13 @@
 
 Each entry accompanies the commit and push containing the described changes.
 
+## 2026-09-28 — 0.3.0: Perceptual color selection and semantic palette validation
+
+- **Changed:** The skill now selects color direction from the brief and existing brand, then measures functional roles instead of assuming a harmonious palette is accessible. Locked colors remain exact; conflicting requirements produce an explicit unresolved report and no CSS/HTML export. Typography and rendered-state review remain part of the workflow.
+- **Added:** 88 attributed hue3 palette entries; an offline Node helper; pinned, bundled @ankhorage/color-theory 0.3.1 and Culori 4.0.2; OKLCH/gamut-aware generation; light/dark semantic tokens; per-candidate decisions, ramp diagnostics and full-precision contrast reports; portable CSS/JSON/HTML export with original licenses; theme and approximate color-vision previews. Added a reviewed palette importer, reproducible bundle build, behavioral tests and optional Chromium checks. No external color service is used.
+- **Why:** Combine useful mood inspiration with deterministic color checks while avoiding upstream three-color mandates, incorrect accessibility heuristics, unsafe white-text choices and a commercial-use-restricted API. Explicit brand seeds override inspiration. Raw brand/accent swatches remain distinct from validated functional colors. MIT resources retain their notices alongside the Apache adapter.
+- **Validation:** Eleven color tests and nine existing font tests passed, along with plugin/skill validators. Color checks cover near-threshold contrast, multiple-surface no-match cases, gamut mapping, grayscale/extreme ramp diagnostics, brand preservation, invalid input, portable license export and bundle integrity. All 88 catalog seeds generated light/dark systems passing their 44 listed role-pair checks. Chromium verified both themes, three simulations per theme, visible keyboard focus, the preview action, mobile overflow and zero external requests/page errors. A detected mobile overflow was fixed. These results cover specified opaque-color roles, not complete WCAG conformance or project-specific typography, gradients, alpha or chart differentiation.
+
 ## 2026-09-28 — 0.2.0: Typography selection and licensed open-font catalog
 
 - **Changed:** Typography is now an explicit design foundation. The skill chooses a contextual best-fit font when the brief permits it, preserving brand requirements and filtering actual text, styles, features and byte budgets before visual judgment. The root Apache license now explicitly excludes third-party fonts. CSS mappings distinguish named styles from malformed legacy OS/2 metadata.

@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Design and refine web interfaces with intentional typography, layout, color, and interaction. Select suitable open fonts from a licensed catalog. Use for frontend visual design and implementation while preserving the user's brand and stack.
+description: Design and refine web interfaces with intentional typography, perceptual color palettes, layout, and interaction. Select licensed open fonts and validate color roles. Use for frontend visual design and implementation while preserving the user's brand and stack.
 license: Apache-2.0; see LICENSE.txt
 ---
 
@@ -19,6 +19,8 @@ When the brief leaves fonts open, automatically choose a best-fit face for the p
 Filter by actual character coverage, needed weights/italics, technical features and loading budget before comparing subjective character. Typography includes hierarchy, measure, spacing and rendering, not just a font name. Choose and implement without asking for a routine font approval when a suitable bundled option is available and project edits are authorized. Explain the choice briefly. Preserve established brand fonts, never silently replace a missing language/style requirement, and use the workflow's exact-source guidance when manual approval or desktop installation is necessary.
 
 ## Establish the direction
+
+When choosing or substantially changing colors, follow [the color workflow](references/color-workflow.md). Infer mood and audience from the brief, preserve locked brand colors, and select contextual inspiration from the attributed palette catalog or generate from a brand seed. Use perceptual ramps and measured semantic roles for light/dark themes; never treat color harmony or a mood label as evidence of accessible contrast. The optional offline helper generates CSS tokens, provenance, contrast reports and a reviewable preview. If constraints conflict it reports no match instead of silently changing locked colors. Review the actual interface with the chosen typography, non-color state cues and keyboard focus before delivery.
 
 Identify the product, audience, main task, content, and constraints from the request and available project context. Inspect relevant existing screens and components before changing an interface. Ask only when missing information materially changes the result; otherwise state a reasonable assumption and proceed. Do not invent company facts, testimonials, performance claims, or customer logos to fill a layout. Mark illustrative data clearly.
 

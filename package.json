@@ -1,0 +1,16 @@
+{
+  "name": "chatgpt-design-skills-maintenance",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:colors": "node tools/build_colors.mjs",
+    "test:colors": "node --test tests/colors.test.mjs"
+  },
+  "devDependencies": {
+    "@ankhorage/color-theory": "0.3.1",
+    "culori": "4.0.2",
+    "esbuild": "0.28.2"
+  },
+  "overrides": { "culori": "4.0.2" }
+}
