@@ -1,0 +1,20 @@
+{
+  "name": "chatgpt-design-skills",
+  "version": "0.1.0",
+  "description": "Intentional frontend design guidance adapted for ChatGPT and Codex.",
+  "author": {
+    "name": "jongos"
+  },
+  "skills": "./skills/",
+  "repository": "https://github.com/jongos/chatgpt-design-skills",
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "ChatGPT Design Skills",
+    "shortDescription": "Distinctive, usable frontend design.",
+    "longDescription": "Design web interfaces with intentional typography, color, layout, interaction, and proportionate visual verification.",
+    "developerName": "jongos",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use the frontend-design skill to design an interface for my audience and brand."
+  }
+}

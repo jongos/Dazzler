@@ -1,0 +1,6 @@
+interface:
+  display_name: "Frontend Design"
+  short_description: "Distinctive, usable web interfaces and components"
+  default_prompt: "Use $frontend-design to design and build an interface that fits my audience, content, and existing brand."
+policy:
+  allow_implicit_invocation: true
