@@ -24,7 +24,13 @@ If a skill with that name already exists, review the differences before replacin
 
 The repository also includes `.codex-plugin/plugin.json` for hosts that accept the OpenAI plugin format. Plugin import availability depends on the host; cloning the repository alone does not install it into a ChatGPT account.
 
-## Use
+## Development and update history
+
+Plugin maintenance follows [AGENTS.md](AGENTS.md) and the [maintenance workflow](skills/frontend-design/MAINTENANCE.md). Completed agent-driven updates include validation, a Git commit, and a push to this repository. Each push includes developer notes in [CHANGELOG.md](CHANGELOG.md) covering what changed, what was added, why, and validation.
+
+For an actively maintained local installation, link the personal skill directory to the checkout's `skills/frontend-design` folder instead of copying it. Preserve any existing installation before creating the link. This keeps the installed instructions and repository source in sync. This workflow does not run a background watcher or push arbitrary file saves.
+
+## Usage examples
 
 For a standalone installation:
 
