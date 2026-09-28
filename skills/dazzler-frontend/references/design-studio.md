@@ -1,5 +1,7 @@
 # Dazzler studio workflows
 
+For persistent records, fluid typography, safe token interchange and compatible theme proposals, follow [persistent systems](persistent-systems.md). Discover the existing project record before choosing a new direction.
+
 Use only the tools relevant to the brief. These are internal agent commands, not steps the user must perform. Keep the normal experience to “Use Dazzler to …”. Resolve paths from the installed skill. Outputs belong in the authorized project or scratch directory, never in the installed skill. All `NEW_DIR` outputs must be new directories.
 
 ## Brand → system → deliverable → review

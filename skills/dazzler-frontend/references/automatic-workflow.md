@@ -1,5 +1,7 @@
 # One brief to a finished design
 
+For persistent records, fluid typography, safe token interchange and compatible theme proposals, follow [persistent systems](persistent-systems.md). Discover the existing project record before choosing a new direction.
+
 This is the default orchestration for frontend-design. The agent handles the choices and tools; the user supplies the task. The existing helpers are internal implementation tools, not setup instructions the user must follow.
 
 ## 1. Read the situation

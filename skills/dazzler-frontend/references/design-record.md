@@ -1,5 +1,7 @@
 # Durable design decisions
 
+For persistent records, fluid typography, safe token interchange and compatible theme proposals, follow [persistent systems](persistent-systems.md). Discover the existing project record before choosing a new direction.
+
 For substantial projects, read the existing design document and token implementation before designing. Extend that record in place. If none exists and a durable record will help future work, create `DESIGN.md` in the authorized project alongside implementation. Do not require it for small edits, read-only reviews, isolated components or one-off snippets. Do not put client design records in the plugin repository.
 
 Use only applicable sections; replace every example with actual decisions. Link to authoritative token files rather than maintaining duplicate value tables that will drift. Describe any unresolved disagreement between the record and implementation; neither silently overrides the user or an established design system.

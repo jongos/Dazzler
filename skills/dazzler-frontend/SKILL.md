@@ -18,6 +18,8 @@ Read `references/package-profile.json` when present: use only its installed font
 
 For a small edit, change only what is needed. For substantial work, inspect existing components/tokens and read the relevant part of [the automatic workflow](references/automatic-workflow.md). Use [the design framework](references/deslop.md) when establishing a new direction; consult [interface craft](references/interface-craft.md) for component details. Do not load every reference or run every helper for every task.
 
+Before substantial design work, discover and read the existing project design record. Continue its designated fonts, colors and constraints. Follow [persistent systems](references/persistent-systems.md) for bounded discovery, safe interchange, fluid typography and compatible shadcn themes. Preserve the record location and existing prose; small edits and read-only critiques do not require a new record.
+
 ## Typography, color and editorial craft
 
 Run the offline helpers first; their compact output avoids loading entire catalogs:

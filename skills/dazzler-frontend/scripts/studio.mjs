@@ -6,7 +6,10 @@ import { parseArgs } from "node:util";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
 import { templateCSS } from "./template-theme.mjs";
-import { readJSON, createOutput } from "./runtime.mjs";
+import { enhanceType, specimen } from "./type-system.mjs";
+import { exportDesign, importDesign, resumeConfig } from "./design-record.mjs";
+import { shadcnTheme } from "./shadcn-theme.mjs";
+import { readJSON, readLimited, createOutput } from "./runtime.mjs";
 import { generate, css as colorCSS } from "./colors.mjs";
 import { converter, formatHex, toGamut, getContrastRatio } from "./vendor/color-engine.mjs";
 const gamut = toGamut("rgb", "oklch"),
@@ -60,6 +63,8 @@ function positive(n, label) {
   return n;
 }
 export function tokens(input = {}) {
+  if (input.schemaVersion !== undefined && ![1, 2].includes(input.schemaVersion))
+    throw Error("Unsupported token schema");
   const palette = generate(
     input.colors ?? {
       base: input.brand?.seed ?? "#7048E8",
@@ -96,6 +101,14 @@ export function tokens(input = {}) {
       +((base * ratio ** (i - 1)) / 16).toFixed(4),
     ]),
   );
+  if (input.typeScale) {
+    if (Object.keys(input.typeScale).length !== 8) throw Error("Supply all eight type steps");
+    for (const key of Object.keys(scale)) {
+      const v = input.typeScale[key];
+      if (!Number.isFinite(v) || v < 0.5 || v > 32) throw Error("Invalid type step");
+      scale[key] = v;
+    }
+  }
   const system = {
     schemaVersion: 1,
     fonts,
@@ -223,7 +236,10 @@ export function tokens(input = {}) {
       })
       .join("\n") +
     `\n  --font-${fontRoles.body.fallback.replace(/^ui-/, "").replace("system-ui", "sans").replace("sans-serif", "sans").replace("monospace", "mono")}: var(--font-body);\n  --font-display: var(--font-heading);\n}\n`;
-  return { system, css, dtcg, tailwind, theme };
+  const result = enhanceType({ system, css, dtcg, tailwind, theme }, input);
+  if (result.system.schemaVersion === 2)
+    result.system.configuration = structuredClone({ ...input, schemaVersion: 2 });
+  return result;
 }
 const shapes = ["circle", "square", "triangle", "diamond", "cross", "star", "hexagon", "plus"];
 export function chart(input = {}) {
@@ -332,25 +348,75 @@ async function main() {
       config: { type: "string" },
       out: { type: "string" },
       template: { type: "string" },
+      context: { type: "string" },
+      accept: { type: "boolean" },
       help: { type: "boolean" },
     },
   });
   if (values.help) {
     console.log(
-      "Usage: studio.mjs tokens|chart --config input.json --out NEW_DIR [--template tokens.json]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept]",
     );
     return;
   }
   if (positionals.length !== 1 || !values.config || !values.out)
     throw Error(
-      "Usage: studio.mjs tokens|chart --config input.json --out NEW_DIR [--template tokens.json]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept]",
     );
-  const input = await readJSON(values.config);
   const command = positionals[0];
-  if (!["tokens", "chart"].includes(command)) throw Error("Unknown command");
-  const result = command === "tokens" ? tokens(input) : chart(input);
+  if (!["tokens", "chart", "resume", "import-design"].includes(command))
+    throw Error("Unknown command");
+  if (command === "import-design") {
+    const imported = importDesign(
+      (await readLimited(values.config, 262144)).toString("utf8"),
+      values.accept === true,
+    );
+    const out = await createOutput(values.out);
+    await writeFile(path.join(out, "import.json"), JSON.stringify(imported, null, 2) + "\n");
+    if (imported.config)
+      await writeFile(
+        path.join(out, "config.json"),
+        JSON.stringify(imported.config, null, 2) + "\n",
+      );
+    console.log(
+      JSON.stringify({
+        command,
+        out,
+        status: imported.contrast.status,
+        unsupported: imported.unsupported,
+      }),
+    );
+    return;
+  }
+  const input = await readJSON(values.config);
+  const result =
+    command === "chart" ? chart(input) : tokens(command === "resume" ? resumeConfig(input) : input);
+  if (command === "resume")
+    for (const mode of ["light", "dark"])
+      if (
+        JSON.stringify(result.system.palette.modes[mode].tokens) !==
+        JSON.stringify(input.palette.modes[mode].tokens)
+      )
+        throw Error(
+          "Canonical configuration disagrees with stored palette; reconcile before continuing",
+        );
+  const mapped =
+    command !== "chart" && values.context
+      ? shadcnTheme(result.system, await readJSON(values.context))
+      : null;
+  if (command === "resume")
+    for (const field of ["fonts", "type", "spacing", "radius", "typography"])
+      if (
+        input[field] !== undefined &&
+        JSON.stringify(result.system[field]) !== JSON.stringify(input[field])
+      )
+        throw Error(
+          "Canonical configuration disagrees with stored " +
+            field +
+            "; reconcile before continuing",
+        );
   if (values.template) {
-    if (command !== "tokens") throw Error("--template requires tokens");
+    if (!["tokens", "resume"].includes(command)) throw Error("--template requires tokens/resume");
     result.css += templateCSS(
       await readJSON(values.template),
       result.system.palette,
@@ -363,7 +429,7 @@ async function main() {
       path.join(values.out, name),
       typeof data === "string" ? data : JSON.stringify(data, null, 2) + "\n",
     );
-  if (command === "tokens") {
+  if (command !== "chart") {
     await write("design-system.json", result.system);
     await write("tokens.css", result.css);
     await write("tokens.dtcg.json", result.dtcg);
@@ -372,6 +438,12 @@ async function main() {
       "module.exports = " + JSON.stringify(result.tailwind, null, 2) + ";\n",
     );
     await write("tailwind-theme.css", result.theme);
+    await write("DESIGN.md", exportDesign(result.system));
+    await write("specimen.html", specimen(result.system));
+    if (mapped) {
+      await write("shadcn-report.json", mapped);
+      if (mapped.status === "pass") await write("shadcn.css", mapped.css);
+    }
   } else {
     await write("chart.json", result);
     await write("preview.html", chartPreview(result));
@@ -382,7 +454,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   main().catch((e) => {
     console.error(String(e.message).replace(/[\r\n]+/g, " "));
     console.error(
-      "Usage: studio.mjs tokens|chart --config input.json --out NEW_DIR [--template tokens.json]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept]",
     );
     process.exitCode = 1;
   });

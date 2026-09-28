@@ -237,6 +237,23 @@ def export_document(content, system, destination, mode="document"):
     tokens = system["palette"]["modes"]["light"]["tokens"]
     font = system["fonts"]["body"]
     heading = system["fonts"]["heading"]
+    type_steps = system.get("typography", {}).get("steps", {})
+    for item in type_steps.values():
+        for field, low, high in [
+            ("minRem", 0.5, 32),
+            ("maxRem", 0.5, 32),
+            ("printRem", 0.5, 32),
+            ("lineHeight", 1, 3),
+            ("letterSpacing", -0.05, 0.3),
+            ("weight", 100, 900),
+            ("minViewport", 320, 2560),
+            ("maxViewport", 320, 2560),
+        ]:
+            value = item.get(field)
+            if not isinstance(value, (int, float)) or not low <= value <= high:
+                raise ValueError("Invalid document typography metric")
+        if item["maxViewport"] <= item["minViewport"]:
+            raise ValueError("Invalid document typography endpoints")
     if any(
         not re.fullmatch(r"#[0-9a-fA-F]{6}", tokens[k])
         for k in ("text", "background", "border")
@@ -268,6 +285,17 @@ def export_document(content, system, destination, mode="document"):
             doc.styles[level].font.color.rgb = RGBColor.from_string(
                 tokens["text"].lstrip("#")
             )
+        for level, key in [
+            ("Normal", "step0"),
+            ("Title", "step4"),
+            ("Heading 1", "step3"),
+            ("Heading 2", "step2"),
+        ]:
+            if key in type_steps:
+                metrics = type_steps[key]
+                doc.styles[level].font.size = Pt(metrics["printRem"] * 12)
+                doc.styles[level].font.bold = metrics["weight"] >= 600
+                doc.styles[level].paragraph_format.line_spacing = metrics["lineHeight"]
         doc.add_heading(title, 0)
         for section in sections:
             if section.get("pageBreak"):
@@ -278,7 +306,7 @@ def export_document(content, system, destination, mode="document"):
             if section.get("table"):
                 rows = section["table"]
                 table = doc.add_table(rows=0, cols=max(map(len, rows)))
-                table.style = "Light Shading Accent 1"
+                table.style = "Table Grid"
                 for row in rows:
                     cells = table.add_row().cells
                     for i, value in enumerate(row):
@@ -287,7 +315,20 @@ def export_document(content, system, destination, mode="document"):
         from docx.oxml import OxmlElement
         from docx.oxml.ns import qn
 
+        for style_name in ["Title", "Subtitle", "Normal", "Heading 1", "Heading 2"]:
+            ppr = doc.styles[style_name].element.find(qn("w:pPr"))
+            if ppr is not None:
+                for border in list(ppr.findall(qn("w:pBdr"))):
+                    ppr.remove(border)
         for table in doc.tables:
+            borders = OxmlElement("w:tblBorders")
+            for edge in ["top", "left", "bottom", "right", "insideH", "insideV"]:
+                border = OxmlElement("w:" + edge)
+                border.set(qn("w:val"), "single")
+                border.set(qn("w:sz"), "4")
+                border.set(qn("w:color"), tokens["border"][1:])
+                borders.append(border)
+            table._tbl.tblPr.append(borders)
             for ri, row in enumerate(table.rows):
                 for cell in row.cells:
                     shd = OxmlElement("w:shd")
@@ -476,6 +517,17 @@ def export_document(content, system, destination, mode="document"):
         )
         if slides:
             css += "section{min-height:65vh;border-bottom:2px solid;scroll-margin:20px} @media print{@page{size:landscape}section{min-height:0;break-before:page;break-inside:avoid}}"
+        for selector, key in [("body", "step0"), ("h1", "step4"), ("h2", "step3")]:
+            if key in type_steps:
+                metrics = type_steps[key]
+                small, large = metrics["minRem"], metrics["maxRem"]
+                slope = (
+                    (large - small)
+                    * 1600
+                    / (metrics["maxViewport"] - metrics["minViewport"])
+                )
+                intercept = small - slope * metrics["minViewport"] / 1600
+                css += f'{selector}{{font-size:clamp({min(small, large)}rem,calc({intercept:.6f}rem + {slope:.6f}vw),{max(small, large)}rem);line-height:{metrics["lineHeight"]};letter-spacing:{metrics["letterSpacing"]}em;font-weight:{metrics["weight"]};overflow-wrap:anywhere}}@media print{{{selector}{{font-size:{metrics["printRem"]}rem}}}}'
         notices = []
         for directory in content.get("fontExports", []):
             import base64

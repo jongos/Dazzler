@@ -94,6 +94,50 @@ class ProjectToolsTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 project.assets("icon", "", out, ["check"])
 
+    def test_fluid_document_metrics_and_invalid_input(self):
+        system = {
+            "fonts": {"body": "Work Sans", "heading": "Young Serif"},
+            "palette": {
+                "modes": {
+                    "light": {
+                        "tokens": {
+                            "text": "#111111",
+                            "background": "#FFFFFF",
+                            "border": "#666666",
+                        }
+                    }
+                }
+            },
+            "typography": {"steps": {}},
+        }
+        metrics = {
+            "minRem": 1,
+            "maxRem": 2,
+            "printRem": 1,
+            "lineHeight": 1.6,
+            "letterSpacing": 0,
+            "weight": 400,
+            "minViewport": 360,
+            "maxViewport": 1440,
+        }
+        system["typography"]["steps"] = {
+            key: dict(metrics) for key in ["step0", "step3", "step4"]
+        }
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td) / "fluid.html"
+            project.export_document(
+                {"sections": [{"body": "Readable text"}]}, system, out
+            )
+            text = out.read_text(encoding="utf-8")
+            self.assertIn("clamp(", text)
+            self.assertIn("@media print", text)
+            system["typography"]["steps"]["step0"]["lineHeight"] = float("nan")
+            with self.assertRaisesRegex(ValueError, "typography"):
+                project.export_document(
+                    {"sections": [{"body": "Text"}]}, system, Path(td) / "bad.html"
+                )
+            self.assertFalse((Path(td) / "bad.html").exists())
+
     def test_document_export_escapes_content_and_has_print_rules(self):
         system = {
             "fonts": {"body": "Work Sans", "heading": "Young Serif"},

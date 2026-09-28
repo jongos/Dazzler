@@ -78,3 +78,7 @@ The optional R adapter calls externally installed mschart and officer; these pac
 ### Interactive illustration runtimes
 
 SVG.js 3.2.8, react-img-mapper 2.0.2, vue-img-mapper 0.1.0, @xmldom/xmldom 0.9.12, React/React DOM 19.2.4 and Vue 3.5.43 are MIT-licensed. Credit Wout Fierens and SVG.js contributors, Nisharg Shah and Img Mapper contributors, and the respective runtime/parser authors. All 15 constituent notices, versions and file hashes are in `skills/dazzler-frontend/scripts/vendor/hotspots/`. The original adapter and sample artwork remain Apache-2.0; no upstream source notice is removed or relicensed.
+
+## Development conformance checks
+
+The maintenance-only DESIGN.md linter pins @google/design.md 0.4.0 (Apache-2.0), credited to Google and contributors. Its original license and package sources accompany the Windows offline build kit. It is not bundled into the skill runtime. Specification: https://github.com/google-labs-code/design.md.

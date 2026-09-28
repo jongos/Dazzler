@@ -1,5 +1,7 @@
 # Typography selection and use
 
+For persistent records, fluid typography, safe token interchange and compatible theme proposals, follow [persistent systems](persistent-systems.md). Discover the existing project record before choosing a new direction.
+
 Typography establishes hierarchy, reading rhythm and product identity. Select it early enough to shape the layout, then test real content at actual sizes. Font choice alone cannot rescue poor measure, spacing, contrast or hierarchy.
 
 ## Automatically choose a suitable font

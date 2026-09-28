@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.18.0: Persistent systems, fluid typography and compatible themes
+
+- **Changed:** Substantial design work discovers and continues existing project records before selecting a new direction. Schema 2 provides fluid type, leading, tracking, supported weights and static print values; explicit schema 1 preserves legacy output. HTML/DOCX exports consume typography metrics, and native document borders use the chosen palette. Platform guides and the field manual explain continuity and interchange boundaries.
+- **Added:** Bounded read-only record discovery, safe DESIGN.md subset import/export, canonical resume with consistency checks, a development-only pinned conformance linter, Tailwind v3/v4 and static DTCG typography mappings, compatible shadcn light/dark proposals, a public typography specimen, continuation/security regressions and a compiled component/browser fixture. All full helper packages share the additions.
+- **Why:** Preserve visual identity between sessions without requiring routine user configuration, make responsive type and print behavior explicit, and adapt to existing component conventions without installing or overwriting them. Unknown source fields remain evidence and exact color conflicts remain unresolved.
+- **Validation:** 59 Node and 44 Python tests; pinned external linter; supported static-token round trips; direct legacy comparison against v0.17; fresh-process canonical continuation; Chromium narrow/wide, 200% text and print checks; native Word print review. Platform archives, font/license/integrity, release/link checks and a Windows offline rebuild accompany publication. See maintenance/PHASE3-VALIDATION.md for evidence and limits. Live AI-host triggering, Claude upload acceptance and Grok Bot remain unverified; deterministic fixtures do not establish host behavior.
+
 ## 2026-09-28 — 0.17.0: Managed installation and nineteen practical starting points
 
 - **Changed:** Phase 2 onboarding now routes from one short prompt to the appropriate installed helpers and host tools. Platform builds translate starter invocation syntax and include a compact, on-demand reference index. The field manual links a new responsive starter library with local licensed typography. Evaluation reports distinguish observed outcomes, unavailable access and undefined metrics.
