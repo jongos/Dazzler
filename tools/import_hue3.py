@@ -36,7 +36,7 @@ def main():
             })
     if len(palettes) != 88 or len({p['id'] for p in palettes}) != 88:
         raise ValueError('Expected exactly 88 unique reviewed palettes.')
-    dest = ROOT / 'skills/frontend-design/references'
+    dest = ROOT / 'skills/dazzler-frontend/references'
     (dest / 'color-palettes.json').write_text(json.dumps({
         'source_commit': PIN, 'license': 'MIT; see hue3-LICENSE.txt',
         'note': 'Editorial starting points, not accessibility-certified tokens. Mood associations are contextual.',

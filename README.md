@@ -1,99 +1,114 @@
-# ChatGPT Design Skills
+<p align="center"><img src="docs/assets/dazzler-banner.svg" alt="Dazzler — Give your ideas a visual voice. Typography, color, composition, and craft." width="100%"></p>
 
-A frontend design skill adapted for ChatGPT/Codex environments that support local skills. It guides deliberate typography, color, layout, interface copy, interaction, and visual verification while respecting an existing brand and technology stack.
+<p align="center"><strong>One brief. Thoughtful typography. Color with purpose. An interface that feels like yours.</strong></p>
 
-## Just describe the task
+<p align="center"><a href="#-start-with-an-idea">Get started</a> · <a href="#-the-design-toolkit">The toolkit</a> · <a href="#-install-dazzler">Install</a> · <a href="mailto:jon@filmhedge.com">Send an idea</a></p>
+
+# Dazzler
+
+**Dazzler gives your frontend a visual voice.** Describe what you want to make and who it’s for. The skill chooses suitable fonts, measured colors, layout, and interactions, then implements and reviews the result using the tools available in your ChatGPT/Codex host.
+
+Created by **Jon Gosier** and named after **Dazzler, one of his favorite X-Men characters**. The name celebrates a love of expressive design. This is an independent project, with no affiliation to Marvel, OpenAI, or Anthropic.
+
+## ✨ Start with an idea
 
 ```text
-Use $frontend-design to build a website for a neighborhood ceramics studio.
+Use $dazzler-frontend to build a welcoming website for a neighborhood
+pottery studio. Help visitors explore classes and book a first session.
 ```
 
-Version 0.5.0 makes the default workflow automatic: the agent infers a direction, chooses and applies suitable fonts, colors, layout and interactions, runs the relevant helpers, and checks the result. You do not need to choose a mood, answer a style questionnaire, run commands or approve routine aesthetic decisions. Existing brand choices and explicit constraints are preserved.
+You supply the intent; Dazzler handles routine design decisions. No style questionnaire, font shopping, or palette setup required.
 
-For more control, say “show me three font pairings,” “open a palette comparison,” or “make this warmer and denser.” The skill offers focused questions or an available interactive preview when requested, then applies the adjustment without restarting discovery. Specific tweaks are instructions, not another approval step.
+**Already building something?** Dazzler preserves your brand, stack, and explicit constraints. Small edits stay small.
 
-The [automatic workflow](skills/frontend-design/references/automatic-workflow.md) connects the underlying resources; [optional controls](skills/frontend-design/references/design-controls.md) explain refinement. Helper commands below are internal/developer interfaces, not prerequisites for using the skill. Missing runtimes use available alternatives with honest verification limits; purchases, OS changes and external publication retain their usual authorization boundaries.
+```text
+Use $dazzler-frontend to improve this dashboard’s hierarchy and spacing.
+Keep our brand colors, React components, and existing behavior.
+```
 
-## Typography and open fonts
+**Want to steer?** Say “make it warmer,” “keep our exact blue,” or “show me two font pairings.” Focused comparisons and controls appear when requested. See the [automatic workflow](skills/dazzler-frontend/references/automatic-workflow.md) and [optional controls](skills/dazzler-frontend/references/design-controls.md).
 
-Version 0.2.0 adds a [catalog of all 25 Open Foundry families](skills/frontend-design/references/font-catalog.md), checked on September 28, 2026. It includes technical attributes extracted from actual binaries, editorial descriptions, GitHub/source URLs, license evidence and known directory errors. **24 families / 124 unmodified font files are bundled**; Nimbus Sans L is cataloged with manual source/license guidance.
+## 🌈 The design toolkit
 
-The skill automatically chooses fonts appropriate to the brief while respecting existing brand choices. It checks actual text, required styles and features before visual fit. The [typography guide](skills/frontend-design/references/typography.md) covers pairings, performance, licenses, fallbacks, and desktop installation when needed. The agent uses this offline helper internally to recommend candidates and export selected files with their notices and ready-to-use CSS:
+| | What Dazzler brings | What it means for your project |
+|---|---|---|
+| **Aa · Typography** | 25 cataloged families; 24 bundled families containing 124 unmodified font files | Fonts chosen for real characters, styles, technical needs, reading comfort, and personality. |
+| **● · Color** | 88 attributed mood palettes, perceptual ramps, semantic light/dark tokens | Contextual inspiration plus measured contrast for specified role pairs. Brand locks remain exact. |
+| **↗ · Composition** | Purpose, audience, hierarchy, grouping, and component craft | A direction informed by the task rather than the same template everywhere. |
+| **✓ · Review** | Responsive inspection, relevant interactions, keyboard focus, and honest verification | A clear account of what was checked and what remains unverified. |
+
+### Type is the foundation
+
+Dazzler checks actual text coverage, required weights and italics, features, and file size before comparing character. It exports selected project-local files with their licenses and CSS. Web work normally requires no desktop font installation.
+
+Browse the [font catalog](skills/dazzler-frontend/references/font-catalog.md), [typography workflow](skills/dazzler-frontend/references/typography.md), or [technical inventory](skills/dazzler-frontend/references/font-catalog.json). The Open Foundry snapshot was checked September 28, 2026. Nimbus Sans L remains cataloged with manual source/license guidance rather than bundled.
+
+### Color should do a job
+
+The [color workflow](skills/dazzler-frontend/references/color-workflow.md) connects curated inspiration to a bundled Ankhorage/Culori engine. It generates CSS tokens, provenance, contrast reports, and a portable preview. Conflicting locked colors produce an unresolved report instead of silently changing your brand.
+
+A passing report covers its listed opaque-color pairs. It does **not** certify complete WCAG conformance, image backgrounds, charts, or a finished interface. Those require review in context.
+
+### Less generic. More intentional.
+
+The adapted [design framework](skills/dazzler-frontend/references/deslop.md) connects purpose to visual decisions, supported by [interface craft](skills/dazzler-frontend/references/interface-craft.md), an optional [design record](skills/dazzler-frontend/references/design-record.md), and a [design audit](skills/dazzler-frontend/references/design-audit.md). It preserves your direction without universal font/color bans or compulsory approvals for aesthetic choices.
+
+## 🚀 Install Dazzler
+
+For a host that supports local Codex skills:
+
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/jongos/Dazzler.git dazzler
+   ```
+
+2. Copy `skills/dazzler-frontend` into `$CODEX_HOME/skills`, or `~/.codex/skills` when `CODEX_HOME` is unset. The default Windows directory is `%USERPROFILE%\.codex\skills`.
+3. Start a new chat if your host hasn’t refreshed its skill catalog. Invoke **`$dazzler-frontend`**.
+
+Review an existing installation before replacing it. A maintained checkout can use a directory link to keep the installed skill connected to source.
+
+The plugin identifier is **`dazzler`**, its display name is **Dazzler**, and its skill is **`dazzler-frontend`**. Hosts exposing qualified names may show `dazzler:dazzler-frontend`. The repository includes `.codex-plugin/plugin.json`; plugin import depends on the host. Cloning alone does not install anything into a ChatGPT account.
+
+**Upgrading from ChatGPT Design Skills?** This is the same project, renamed in version 0.6.0. Update your Git remote to `git@github.com:jongos/Dazzler.git`, install/link the renamed skill folder, and use `$dazzler-frontend` in new prompts. Verify the new installation before retiring duplicate discovery entries. Historical release notes retain their original names.
+
+## 🛠 Under the hood
+
+Normal use needs no API keys, Claude CLI, Anthropic SDK, MCP server, npm installation, or third-party Python packages. The agent uses available Python 3 and Node.js runtimes internally; Node.js 22+ is recommended for the color helper. When a runtime or preview tool is unavailable, it uses available verified resources and reports the limits. Optional host tools are used only when appropriate; project-specific dependencies still apply.
+
+<details>
+<summary><strong>Developer interfaces: fonts, colors, and validation</strong></summary>
+
+These commands support development and inspection. Users do not need to run them to request a design.
 
 ```shell
-python skills/frontend-design/scripts/fonts.py recommend --role body --mood literary --text "A thoughtful introduction"
-python skills/frontend-design/scripts/fonts.py export work-sans --dest ./public/fonts --file "WorkSans[wght].ttf"
+python skills/dazzler-frontend/scripts/fonts.py recommend --role body --mood literary --text "A thoughtful introduction"
+python skills/dazzler-frontend/scripts/fonts.py export work-sans --dest ./public/fonts --file "WorkSans[wght].ttf"
+node skills/dazzler-frontend/scripts/colors.mjs recommend --mood "cozy minimal"
+node skills/dazzler-frontend/scripts/colors.mjs generate --base '#7048E8' --harmony splitComplementary --out ./palette-review
+python -m unittest discover -s tests -p "test_*.py"
+node --test tests/colors.test.mjs
 ```
 
-The helper makes project-local copies, never OS installations. Its ranking is a transparent shortlist heuristic; the agent makes the final contextual choice and checks rendering. See [third-party notices](THIRD_PARTY_NOTICES.md) and the [machine-readable inventory](skills/frontend-design/references/font-catalog.json) for exact versions, sources, hashes, and font-specific terms.
+Font export preserves notices and makes project-local copies; it never installs OS fonts. Rankings are shortlist heuristics, not aesthetic verdicts. Color export requires a new destination and includes notices; evaluate the actual project with its selected typography.
 
-## Color theory and palette tools
+Maintainers rebuild the color engine with exact versions in `package-lock.json`. Binary font inspection uses `requirements-dev.txt`; those maintenance dependencies do not belong in every designed project. See [tools](tools/README.md).
 
-Version 0.3.0 adds [88 attributed mood palettes](skills/frontend-design/references/color-palettes.json) and an [offline color workflow](skills/frontend-design/references/color-workflow.md). It combines hue3's curated inspiration with pinned Ankhorage/Culori perceptual generation, sRGB gamut mapping, semantic light/dark tokens, and measured contrast selection. Brand locks remain exact; unresolved constraints produce a report instead of usable CSS.
+</details>
 
-```shell
-node skills/frontend-design/scripts/colors.mjs recommend --mood "cozy minimal"
-node skills/frontend-design/scripts/colors.mjs generate --base '#345678' --harmony splitComplementary --out ./palette-review
-```
+Completed agent-driven maintenance includes validation, a commit, and a push, as documented in [AGENTS.md](AGENTS.md) and [MAINTENANCE.md](skills/dazzler-frontend/MAINTENANCE.md). Every update carries [developer notes](CHANGELOG.md) explaining **what changed, what was added, why, and what was validated**. This is a maintenance workflow, not a background watcher for arbitrary file saves or permission to publish projects designed with Dazzler.
 
-The new output folder contains CSS, a detailed JSON report, a portable HTML preview with theme/color-vision simulation controls, and license notices. The preview uses system fonts; evaluate the actual project with its selected fonts. A passing report covers its listed role pairs, not complete WCAG conformance. Node.js 22+ is recommended; the helper works offline without npm installation. Upstream licenses stay with the catalog and bundled engine.
+## 💌 Feedback, feature requests & ideas
 
-Credit to [hue3](https://github.com/ktzzypo938/hue3), [Ankhorage color-theory](https://github.com/ankhorage/color-theory), and [Culori](https://github.com/Evercoder/culori) for the reused resources. [bivex's palette generator](https://github.com/bivex/brand-color-palette-generator) informed the preview/export interaction design; no code or external service was incorporated from it.
+Have a design challenge, a font suggestion, or an idea for what Dazzler should do next? Contact **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)** or [open an issue](https://github.com/jongos/Dazzler/issues).
 
-## Design direction and anti-generic review
+## 🤝 Credit where it belongs
 
-Version 0.4.0 integrates **Samuel Berthe's ([samber](https://github.com/samber)) [frontend-design-deslop framework](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop)** from `samber/cc-skills`. Only that folder's framework is adapted; none of the wider project's skills, installers, agents or configuration is incorporated. Its governing MIT license is preserved with the adaptation.
-
-The [adapted workflow](skills/frontend-design/references/deslop.md) connects the artifact's purpose and audience to visual direction, tokens, layout and component states. It adds a [design-record guide](skills/frontend-design/references/design-record.md), [interface craft](skills/frontend-design/references/interface-craft.md) and an [evidence-based audit](skills/frontend-design/references/design-audit.md), integrated with our existing font and color tools.
-
-We preserve explicit brand choices and the project's source of truth instead of importing universal font/color bans, compulsory discovery approvals or mandatory `DESIGN.md` files for small edits. Creator credit, the MIT notice, source hashes and adaptation boundaries are recorded in [third-party notices](THIRD_PARTY_NOTICES.md) and [source provenance](skills/frontend-design/references/deslop-provenance.json). The framework adds no executable dependency.
-
-## Original skill credit
-
-This project adapts the **frontend-design** skill from [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates), specifically [cli-tool/components/skills/creative-design/frontend-design](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design). Credit belongs to the original project's authors and contributors for the source design guidance.
-
-The original skill was inspected on September 28, 2026. Its Apache 2.0 license is preserved, and the adapted skill includes a modification notice and [provenance record](skills/frontend-design/PROVENANCE.md). This is an independent adaptation, not an official OpenAI or Anthropic product.
-
-## What changed
-
-- Adapted the workflow for ChatGPT/Codex and the tools available in the host environment.
-- Preserved explicit user direction, established brands, and existing project stacks.
-- Added optional routing to Sites, visualization, image generation, and browser capabilities.
-- Added practical checks for responsive rendering, keyboard access, state handling, and primary interactions.
-- Removed assumptions about client history and unnecessary mandatory confirmation.
-
-## Install the standalone skill
-
-Clone this repository, then copy `skills/frontend-design` into your personal Codex skills directory: `$CODEX_HOME/skills`, or `~/.codex/skills` when `CODEX_HOME` is unset. On Windows the default is `%USERPROFILE%\.codex\skills`.
-
-If a skill with that name already exists, review the differences before replacing it. Start a new chat if the host has not refreshed its skill catalog.
-
-The repository also includes `.codex-plugin/plugin.json` for hosts that accept the OpenAI plugin format. Plugin import availability depends on the host; cloning the repository alone does not install it into a ChatGPT account.
-
-## Development and update history
-
-Plugin maintenance follows [AGENTS.md](AGENTS.md) and the [maintenance workflow](skills/frontend-design/MAINTENANCE.md). Completed agent-driven updates include validation, a Git commit, and a push to this repository. Each push includes developer notes in [CHANGELOG.md](CHANGELOG.md) covering what changed, what was added, why, and validation.
-
-For an actively maintained local installation, link the personal skill directory to the checkout's `skills/frontend-design` folder instead of copying it. Preserve any existing installation before creating the link. This keeps the installed instructions and repository source in sync. This workflow does not run a background watcher or push arbitrary file saves.
-
-## Usage examples
-
-For a standalone installation:
-
-```text
-Use $frontend-design to create a landing page for a neighborhood ceramics studio.
-```
-
-```text
-Use $frontend-design to improve this dashboard while preserving its existing brand and React stack.
-```
-
-The skill can also be selected automatically for relevant frontend design requests. If installed through a plugin, use the skill name exposed by that host.
-
-## Dependencies
-
-There are no required API keys, Claude tools, MCP servers, or external services. The font helper uses Python 3's standard library; the color helper uses Node.js and its checked-in library bundle. Maintainers rebuild that bundle using the exact versions and integrity entries in `package-lock.json`; ordinary skill use does not need npm. Binary font inspection uses `requirements-dev.txt`. Optional host capabilities are used when available and appropriate; they are not installed automatically. A particular frontend project may have its own dependencies.
+- **Original frontend guidance:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates), specifically its [creative-design/frontend-design folder](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design). Adapted with its original Apache-2.0 license and [provenance](skills/dazzler-frontend/PROVENANCE.md) retained.
+- **De-slop framework:** **Samuel Berthe ([samber](https://github.com/samber))**, from [frontend-design-deslop](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop). Only that folder’s framework was adapted, not the wider project. MIT notice and [source inventory](skills/dazzler-frontend/references/deslop-provenance.json) remain included.
+- **Font discovery and typography:** [Open Foundry](https://open-foundry.com/) and the individual font creators credited in the catalog and bundled notices.
+- **Color foundations:** [hue3](https://github.com/ktzzypo938/hue3), [Ankhorage color-theory](https://github.com/ankhorage/color-theory), and [Culori](https://github.com/Evercoder/culori). [bivex’s palette generator](https://github.com/bivex/brand-color-palette-generator) informed preview/export interactions; no code or external service from it is incorporated.
 
 ## License
 
-Our original instructions, scripts, and catalog annotations are licensed under the [Apache License, Version 2.0](LICENSE). **Bundled fonts, upstream support files, adapted deslop guidance, mood palette data and vendored color libraries retain their applicable third-party licenses**; original notices remain included. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and adjacent notices. The original skill's Apache license is retained inside the skill folder as well.
+Our original instructions, scripts, catalog annotations, and Dazzler artwork use [Apache License 2.0](LICENSE). **Fonts, upstream support files, adapted framework guidance, palette data, and vendored libraries retain their respective third-party licenses.** See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and adjacent notices. Renaming the project does not change those terms.

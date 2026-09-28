@@ -4,11 +4,11 @@ import { mkdtemp, readFile, readdir, rm } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { generate, recommend, css, preview, exportResult } from '../skills/frontend-design/scripts/colors.mjs';
+import { generate, recommend, css, preview, exportResult } from '../skills/dazzler-frontend/scripts/colors.mjs';
 import {
   getContrastRatio, selectReadableForeground, generateColorSwatch, selectColorSwatchStep,
   generateHarmonyRoleColors, converter, toGamut, formatHex,
-} from '../skills/frontend-design/scripts/vendor/color-engine.mjs';
+} from '../skills/dazzler-frontend/scripts/vendor/color-engine.mjs';
 
 test('WCAG reference ratios and near-threshold foreground choice use full precision', () => {
   assert.equal(getContrastRatio('#000000', '#FFFFFF'), 21);
@@ -87,7 +87,7 @@ test('rejects unsupported transparency, malformed colors and unknown configurati
 });
 
 test('all 88 inspiration palettes generate either validated tokens or an explicit unresolved report', async () => {
-  const catalog = JSON.parse(await readFile(new URL('../skills/frontend-design/references/color-palettes.json', import.meta.url)));
+  const catalog = JSON.parse(await readFile(new URL('../skills/dazzler-frontend/references/color-palettes.json', import.meta.url)));
   assert.equal(catalog.palettes.length, 88);
   let passed = 0;
   for (const palette of catalog.palettes) {
@@ -119,7 +119,7 @@ test('export produces portable preview, CSS, provenance and licenses; refuses ov
 });
 
 test('bundle matches recorded hash and carries pinned license notices', async () => {
-  const dir = new URL('../skills/frontend-design/scripts/vendor/', import.meta.url);
+  const dir = new URL('../skills/dazzler-frontend/scripts/vendor/', import.meta.url);
   const provenance = JSON.parse(await readFile(new URL('provenance.json', dir)));
   const bundle = await readFile(new URL('color-engine.mjs', dir));
   assert.equal(createHash('sha256').update(bundle).digest('hex'), provenance.sha256);

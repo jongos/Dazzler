@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const dest = path.join(root, 'skills/frontend-design/scripts/vendor');
+const dest = path.join(root, 'skills/dazzler-frontend/scripts/vendor');
 await mkdir(dest, { recursive: true });
 await build({
   absWorkingDir: root, entryPoints: ['tools/color-engine-entry.mjs'],

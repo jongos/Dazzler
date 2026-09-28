@@ -1,0 +1,6 @@
+interface:
+  display_name: "Dazzler Frontend"
+  short_description: "Automatic, coherent frontend design from your brief"
+  default_prompt: "Use $dazzler-frontend to design and build an interface from my brief. Choose suitable fonts, colors, layout and interactions automatically, preserve my existing brand, and verify the result."
+policy:
+  allow_implicit_invocation: true

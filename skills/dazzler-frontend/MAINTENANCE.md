@@ -2,11 +2,11 @@
 
 Read this only when maintaining the skill/plugin itself, not when using it to design a user's project.
 
-Canonical repository: https://github.com/jongos/chatgpt-design-skills
+Canonical repository: https://github.com/jongos/Dazzler
 
-SSH remote: `git@github.com:jongos/chatgpt-design-skills.git`
+SSH remote: `git@github.com:jongos/Dazzler.git`
 
-On the owner's Windows installation, the permanent checkout is `C:\Users\jongo\Codex\chatgpt-design-skills`. The personal skill directory `C:\Users\jongo\.codex\skills\frontend-design` links to its `skills\frontend-design` directory. Edit the checkout so installed instructions and tracked source stay identical. On another machine, locate or clone the repository instead of assuming these paths exist. For a cached plugin installation, update its source and follow the host's reinstall procedure; do not edit a disposable cache.
+On the owner's Windows installation, the permanent checkout is `C:\Users\jongo\Codex\dazzler`. The personal skill directory `C:\Users\jongo\.codex\skills\dazzler-frontend` links to its `skills\dazzler-frontend` directory. Edit the checkout so installed instructions and tracked source stay identical. On another machine, locate or clone the repository instead of assuming these paths exist. For a cached plugin installation, update its source and follow the host's reinstall procedure; do not edit a disposable cache.
 
 The owner explicitly authorized automatic commit and push as part of completed plugin updates on 2026-09-28. Carry this through without requesting separate push permission unless a later instruction changes the scope. This is an agent maintenance workflow, not a background file watcher: arbitrary manual saves do not trigger Git operations.
 

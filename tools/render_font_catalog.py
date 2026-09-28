@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REF = ROOT / 'skills/frontend-design/references'
+REF = ROOT / 'skills/dazzler-frontend/references'
 
 
 def render():

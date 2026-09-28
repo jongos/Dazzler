@@ -1,20 +1,23 @@
 {
-  "name": "chatgpt-design-skills",
-  "version": "0.5.0",
-  "description": "Intentional frontend design guidance adapted for ChatGPT and Codex.",
+  "name": "dazzler",
+  "version": "0.6.0",
+  "description": "Dazzler turns your brief into expressive, purposeful frontend design.",
   "author": {
-    "name": "jongos"
+    "name": "Jon Gosier",
+    "email": "jon@filmhedge.com",
+    "url": "https://github.com/jongos"
   },
   "skills": "./skills/",
-  "repository": "https://github.com/jongos/chatgpt-design-skills",
+  "repository": "https://github.com/jongos/Dazzler",
   "license": "Apache-2.0",
   "interface": {
-    "displayName": "ChatGPT Design Skills",
+    "displayName": "Dazzler",
     "shortDescription": "Automatic frontend design from your brief.",
     "longDescription": "Choose and apply coherent fonts, colors, layouts and interactions automatically from the brief, with licensed assets, measured color roles and visual review. Optional controls support user-requested refinements.",
-    "developerName": "jongos",
+    "developerName": "Jon Gosier",
     "category": "Productivity",
     "capabilities": [],
-    "defaultPrompt": "Use $frontend-design to design and build an interface from my brief, choosing fonts, colors, layout and interactions automatically."
+    "defaultPrompt": "Use $dazzler-frontend to design and build an interface from my brief, choosing fonts, colors, layout and interactions automatically.",
+    "brandColor": "#7048E8"
   }
 }

@@ -5,7 +5,7 @@ const http = require('node:http');
 const { chromium } = require('playwright');
 
 (async () => {
-  const root = path.resolve(__dirname, '../skills/frontend-design');
+  const root = path.resolve(__dirname, '../skills/dazzler-frontend');
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'references/font-catalog.json'), 'utf8'));
   const fonts = catalog.fonts.filter(f => f.status === 'bundled');
   const faces = fonts.flatMap(f => f.files.map(v => ({...v, id: f.id, name: f.name})));

@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.6.0: Dazzler identity and repository migration
+
+- **Changed:** Renamed the GitHub repository to `jongos/Dazzler`, plugin identifier to `dazzler`, display name to Dazzler, and skill folder/invocation to `dazzler-frontend` / `$dazzler-frontend`. Updated the SSH remote, canonical checkout, installed personal-skill junction, maintenance instructions, package metadata, helper/test paths, links, and byte-preserving Git attributes. Older release notes and upstream source names remain historical records.
+- **Added:** Original spectrum SVG README banner, rewritten quick-start/toolkit/install/developer sections, upgrade guidance, Jon Gosier's creator credit and X-Men naming story, and `jon@filmhedge.com` for feedback, feature requests, and ideas (also in plugin author metadata).
+- **Why:** Give the project a distinct identity while keeping automatic design behavior, licensed assets, upstream attribution, and the authorized commit/push workflow intact. Consumers must update path-based imports and invoke the renamed skill; use a new chat to refresh discovery. No font binaries, upstream notices, or design algorithms were changed.
+- **Validation:** Plugin and skill validators passed. Nine font workflow tests and eleven color tests passed, including all 88 palette seeds. All 124 bundled fonts and 206 asset/support files passed checksum validation, including staged Git bytes. Active local Markdown references were checked and the banner was rendered and visually inspected in Chromium. Git diff whitespace checks passed. The installed junction resolves to the renamed skill. This release checks migration integrity, not a new behavioral evaluation of generated designs.
+
 Each entry accompanies the commit and push containing the described changes.
 
 ## 2026-09-28 — 0.5.0: Automatic design orchestration with optional refinement

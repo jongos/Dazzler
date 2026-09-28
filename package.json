@@ -1,6 +1,6 @@
 {
-  "name": "chatgpt-design-skills-maintenance",
-  "version": "0.5.0",
+  "name": "dazzler-maintenance",
+  "version": "0.6.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,5 +12,7 @@
     "culori": "4.0.2",
     "esbuild": "0.28.2"
   },
-  "overrides": { "culori": "4.0.2" }
+  "overrides": {
+    "culori": "4.0.2"
+  }
 }

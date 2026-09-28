@@ -1,10 +1,10 @@
 ---
-name: frontend-design
+name: dazzler-frontend
 description: Automatically design, refine, and de-slop web interfaces from a brief. Choose licensed fonts, measured colors, layout and interactions, then implement and verify. Offer design controls only when requested; preserve the user's brand and stack.
 license: Apache-2.0; see LICENSE.txt
 ---
 
-# Frontend Design
+# Dazzler Frontend
 
 When asked to update this skill or its plugin, read [MAINTENANCE.md](MAINTENANCE.md) first. It identifies the canonical GitHub source and the owner-authorized workflow for pushing updates with developer notes. It does not apply to projects created using this skill.
 
@@ -14,7 +14,7 @@ Create a usable interface whose visual identity follows its subject and audience
 
 ## Automatic by default
 
-`Use $frontend-design to ...` is enough. Follow [the automatic workflow](references/automatic-workflow.md): understand the task, choose a coherent direction, run the relevant font and color helpers yourself, implement, inspect and refine. The user does not need to select a mood, font, palette, harmony, component library or layout, run commands, or approve routine aesthetic choices. Infer reasonable choices from the brief and available context and complete the requested deliverable. A progress explanation is not an approval gate.
+`Use $dazzler-frontend to ...` is enough. Follow [the automatic workflow](references/automatic-workflow.md): understand the task, choose a coherent direction, run the relevant font and color helpers yourself, implement, inspect and refine. The user does not need to select a mood, font, palette, harmony, component library or layout, run commands, or approve routine aesthetic choices. Infer reasonable choices from the brief and available context and complete the requested deliverable. A progress explanation is not an approval gate.
 
 Keep internal candidate comparisons and helper configuration out of the user's way. Deliver one considered result with a brief rationale, not a menu of decisions or an offer to start. “Best” means best fit for the task under the available evidence, then checked in context; a heuristic score alone does not decide quality.
 

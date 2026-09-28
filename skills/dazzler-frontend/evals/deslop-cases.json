@@ -60,7 +60,7 @@
     },
     {
       "id": "automatic-default",
-      "prompt": "Use $frontend-design to build a website for a neighborhood ceramics studio. Choose what works best.",
+      "prompt": "Use $dazzler-frontend to build a website for a neighborhood ceramics studio. Choose what works best.",
       "expect": ["Infers a coherent direction and completes the authorized artifact", "Runs available font/color helpers internally and applies selected assets and tokens", "Does not ask routine font, palette, mood or layout questions", "Does not stop at a shortlist or ask the user to run commands"]
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "id": "runtime-fallback",
-      "prompt": "Use $frontend-design to refine this existing page. The environment has no Python runtime, but the project already includes its approved fonts.",
+      "prompt": "Use $dazzler-frontend to refine this existing page. The environment has no Python runtime, but the project already includes its approved fonts.",
       "expect": ["Uses existing approved fonts rather than requesting Python installation", "Completes the refinement with available tools", "Does not claim font-helper validation ran", "Does not install maintenance dependencies in the project"]
     },
     {

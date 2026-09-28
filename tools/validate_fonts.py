@@ -7,7 +7,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / 'skills/frontend-design'
+SKILL = ROOT / 'skills/dazzler-frontend'
 spec = importlib.util.spec_from_file_location('font_helper', SKILL / 'scripts/fonts.py')
 helper = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(helper)

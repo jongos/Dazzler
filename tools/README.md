@@ -4,7 +4,7 @@
 
 The framework is adapted guidance, not a separately installed upstream skill. Review only the requested `skills/frontend-design-deslop` folder at the pinned revision recorded in `references/deslop-provenance.json`; retrieve its governing license as needed. Preserve creator credit and the MIT notice. Review changes against our brand, scope, typography, measured-color and accessibility rules before adoption. Do not blindly replace the adapted guides with upstream files or broaden the import to other skills.
 
-`skills/frontend-design/evals/deslop-cases.json` contains manual behavioral evaluation scenarios. For an authorized evaluation run, use an isolated project, inspect actual outputs and record evidence. Fixture presence and structural validation do not establish behavioral success. For guidance-only edits, inspect the relevant scenarios, validate skill/plugin structure and local links, and state whether agent/browser execution was performed. Update developer notes with the real validation boundary.
+`skills/dazzler-frontend/evals/deslop-cases.json` contains manual behavioral evaluation scenarios. For an authorized evaluation run, use an isolated project, inspect actual outputs and record evidence. Fixture presence and structural validation do not establish behavioral success. For guidance-only edits, inspect the relevant scenarios, validate skill/plugin structure and local links, and state whether agent/browser execution was performed. Update developer notes with the real validation boundary.
 
 ## Color resources
 

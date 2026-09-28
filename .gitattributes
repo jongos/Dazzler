@@ -1,10 +1,10 @@
 # Font and support-file hashes are byte-exact, including upstream license line endings.
-skills/frontend-design/assets/fonts/** -text -whitespace
+skills/dazzler-frontend/assets/fonts/** -text -whitespace
 *.otf binary
 *.ttf binary
 *.woff binary
 *.woff2 binary
 *.zip binary
-skills/frontend-design/scripts/vendor/** -text
-skills/frontend-design/references/hue3-LICENSE.txt -text
-skills/frontend-design/references/deslop-LICENSE.txt -text
+skills/dazzler-frontend/scripts/vendor/** -text
+skills/dazzler-frontend/references/hue3-LICENSE.txt -text
+skills/dazzler-frontend/references/deslop-LICENSE.txt -text

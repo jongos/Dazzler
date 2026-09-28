@@ -32,7 +32,7 @@ class Page(HTMLParser):
 
 
 def fetch(url):
-    request = Request(url,headers={'User-Agent':'chatgpt-design-skills font catalog audit'})
+    request = Request(url,headers={'User-Agent':'dazzler font catalog audit'})
     with urlopen(request,timeout=30) as response:
         page = Page()
         page.feed(response.read().decode('utf-8'))

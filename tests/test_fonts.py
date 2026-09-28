@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location('fonts',ROOT/'skills/frontend-design/scripts/fonts.py')
+spec = importlib.util.spec_from_file_location('fonts',ROOT/'skills/dazzler-frontend/scripts/fonts.py')
 fonts = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(fonts)
 
