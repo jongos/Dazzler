@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Fictional example. Compare the same USD units across periods.",
+  "data": {
+    "values": [
+      {
+        "x": "Q1",
+        "y": 42000,
+        "series": "Subscriptions",
+        "_order": 0
+      },
+      {
+        "x": "Q2",
+        "y": 54000,
+        "series": "Subscriptions",
+        "_order": 1
+      },
+      {
+        "x": "Q3",
+        "y": 61000,
+        "series": "Subscriptions",
+        "_order": 2
+      },
+      {
+        "x": "Q1",
+        "y": 17000,
+        "series": "Services",
+        "_order": 0
+      },
+      {
+        "x": "Q2",
+        "y": 21000,
+        "series": "Services",
+        "_order": 1
+      },
+      {
+        "x": "Q3",
+        "y": 24000,
+        "series": "Services",
+        "_order": 2
+      }
+    ]
+  },
+  "width": 720,
+  "height": 380,
+  "background": "#FFFFFF",
+  "mark": {
+    "type": "bar",
+    "filled": true,
+    "aria": true
+  },
+  "encoding": {
+    "x": {
+      "field": "x",
+      "type": "nominal",
+      "title": "Category",
+      "sort": null
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative",
+      "title": "Value (USD)",
+      "scale": {
+        "zero": true
+      }
+    },
+    "color": {
+      "field": "series",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Subscriptions",
+          "Services"
+        ],
+        "range": [
+          "#2c4a96",
+          "#873000"
+        ]
+      },
+      "legend": {
+        "title": null
+      }
+    },
+    "tooltip": [
+      {
+        "field": "x",
+        "title": "Category"
+      },
+      {
+        "field": "y",
+        "title": "Value"
+      },
+      {
+        "field": "series"
+      }
+    ],
+    "xOffset": {
+      "field": "series"
+    }
+  },
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "labelLimit": 110,
+      "labelAngle": 0,
+      "labelOverlap": true,
+      "labelColor": "#20252C",
+      "titleColor": "#20252C",
+      "domainColor": "#20252C",
+      "tickColor": "#20252C",
+      "gridColor": "#20252C",
+      "gridOpacity": 0.18
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "labelColor": "#20252C",
+      "titleColor": "#20252C",
+      "orient": "bottom"
+    }
+  }
+}

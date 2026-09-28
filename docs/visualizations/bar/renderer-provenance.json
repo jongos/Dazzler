@@ -1,0 +1,584 @@
+{
+  "build": "tools/build_visualization.mjs; exact package-lock.json integrity",
+  "packages": [
+    {
+      "name": "@microcharts/react",
+      "version": "0.19.1",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ganapativs/microcharts.git"
+      }
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.4",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-array.git"
+      }
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-color.git"
+      }
+    },
+    {
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-delaunay.git"
+      }
+    },
+    {
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-dispatch.git"
+      }
+    },
+    {
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-dsv.git"
+      }
+    },
+    {
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-ease.git"
+      }
+    },
+    {
+      "name": "d3-force",
+      "version": "3.0.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-force.git"
+      }
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.2",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-format.git"
+      }
+    },
+    {
+      "name": "d3-geo",
+      "version": "3.1.1",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-geo.git"
+      }
+    },
+    {
+      "name": "d3-geo-projection",
+      "version": "4.0.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-geo-projection.git"
+      }
+    },
+    {
+      "name": "d3-hierarchy",
+      "version": "3.1.2",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-hierarchy.git"
+      }
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-interpolate.git"
+      }
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-path.git"
+      }
+    },
+    {
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-quadtree.git"
+      }
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-scale.git"
+      }
+    },
+    {
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-scale-chromatic.git"
+      }
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-shape.git"
+      }
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-time.git"
+      }
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-time-format.git"
+      }
+    },
+    {
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/d3/d3-timer.git"
+      }
+    },
+    {
+      "name": "delaunator",
+      "version": "5.1.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/mapbox/delaunator.git"
+      }
+    },
+    {
+      "name": "internmap",
+      "version": "2.0.3",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/mbostock/internmap.git"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.2.4",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/react.git",
+        "directory": "packages/react"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.4",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/react.git",
+        "directory": "packages/react-dom"
+      }
+    },
+    {
+      "name": "robust-predicates",
+      "version": "3.0.3",
+      "license": "Unlicense",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/mourner/robust-predicates.git"
+      }
+    },
+    {
+      "name": "topojson-client",
+      "version": "3.1.0",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/topojson/topojson-client.git"
+      }
+    },
+    {
+      "name": "vega",
+      "version": "6.4.0",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-canvas",
+      "version": "2.0.0",
+      "license": "BSD-3-Clause",
+      "repository": "vega/vega"
+    },
+    {
+      "name": "vega-crossfilter",
+      "version": "5.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-dataflow",
+      "version": "6.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-encode",
+      "version": "5.2.2",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-event-selector",
+      "version": "4.0.0",
+      "license": "BSD-3-Clause",
+      "repository": "vega/vega"
+    },
+    {
+      "name": "vega-expression",
+      "version": "6.2.2",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-expression",
+      "version": "6.1.0",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-force",
+      "version": "5.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-format",
+      "version": "2.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-functions",
+      "version": "6.2.0",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-geo",
+      "version": "5.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-hierarchy",
+      "version": "5.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-label",
+      "version": "2.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-lite",
+      "version": "6.4.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega-lite.git"
+      }
+    },
+    {
+      "name": "vega-loader",
+      "version": "5.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-parser",
+      "version": "7.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-projection",
+      "version": "2.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-regression",
+      "version": "2.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-runtime",
+      "version": "7.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-scale",
+      "version": "8.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-scenegraph",
+      "version": "5.3.0",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-selections",
+      "version": "6.1.5",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-statistics",
+      "version": "2.0.0",
+      "license": "BSD-3-Clause",
+      "repository": "vega/vega"
+    },
+    {
+      "name": "vega-time",
+      "version": "3.3.0",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-transforms",
+      "version": "5.2.2",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-util",
+      "version": "2.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-view",
+      "version": "6.2.0",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-view-transforms",
+      "version": "5.2.2",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-voronoi",
+      "version": "5.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    },
+    {
+      "name": "vega-wordcloud",
+      "version": "5.1.3",
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vega/vega.git"
+      }
+    }
+  ],
+  "files": {
+    "d3.mjs": "b6cf9b8bef253f7aab9e7dacdc2880ba16ada4edff42573fee3db4a94dd34330",
+    "licenses/@microcharts__react-LICENSE": "7020cef98044cae819e9077a66e41a7d8828f28f8e9ed62bf7efaebb0360b17c",
+    "licenses/d3-array-LICENSE": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+    "licenses/d3-color-LICENSE": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+    "licenses/d3-delaunay-LICENSE": "582c3022bd01942336095f92b58a90b1be624dc547d987555c6c956512dd24c1",
+    "licenses/d3-dispatch-LICENSE": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+    "licenses/d3-dsv-LICENSE": "7842a82012622e5a37bfe4f6c1b67cd3bae6350716b5bf87f36cea0bdc1319dc",
+    "licenses/d3-ease-LICENSE": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08",
+    "licenses/d3-force-LICENSE": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+    "licenses/d3-format-LICENSE": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3",
+    "licenses/d3-geo-LICENSE": "3e3edc1224eec9c39cd26491a21304a62883c1e5b6a65c5283ccc7a6cc94baee",
+    "licenses/d3-geo-projection-LICENSE": "8f4c30fd14045812de501fb1329e900c7507f96cfba1104caae929f0b217613d",
+    "licenses/d3-hierarchy-LICENSE": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+    "licenses/d3-interpolate-LICENSE": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+    "licenses/d3-path-LICENSE": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa",
+    "licenses/d3-quadtree-LICENSE": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+    "licenses/d3-scale-chromatic-LICENSE": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe",
+    "licenses/d3-scale-LICENSE": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+    "licenses/d3-shape-LICENSE": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+    "licenses/d3-time-format-LICENSE": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+    "licenses/d3-time-LICENSE": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+    "licenses/d3-timer-LICENSE": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+    "licenses/delaunator-LICENSE": "0b348fff56384b43dbb37593906904e56d0f9deb51eae590d4dc6d427fbf1808",
+    "licenses/internmap-LICENSE": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f",
+    "licenses/react-dom-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "licenses/react-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "licenses/robust-predicates-LICENSE": "88d9b4eb60579c191ec391ca04c16130572d7eedc4a86daa58bf28c6e14c9bcd",
+    "licenses/topojson-client-LICENSE": "4c4d15b635e04e691825a76db7d33f7f2033b55669a7430011694f31e6c65999",
+    "licenses/vega-canvas-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-crossfilter-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-dataflow-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-encode-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-event-selector-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-expression-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-force-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-format-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-functions-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-geo-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-hierarchy-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-label-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-lite-LICENSE": "f618900fd0d64046963b29f40590cdd1e341a2f41449f99110d82fd81fea808c",
+    "licenses/vega-loader-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-parser-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-projection-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-regression-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-runtime-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-scale-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-scenegraph-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-selections-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-statistics-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-time-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-transforms-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-util-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-view-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-view-transforms-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-voronoi-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "licenses/vega-wordcloud-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
+    "microcharts.css": "09d6de9e51ed1389257a80cecb33847737403bfb0122ab0ab63625c691b07a6c",
+    "microcharts.mjs": "0dc21ca192dfce049118a3749c697f389b5f872dfb4bf3ac8297053d97d8a064",
+    "vega-browser.js": "c89c423add61f9cfb18579bc87c661bcac7f02f07a97d5138af0f4f285e55a42",
+    "vega.mjs": "87c98314b243603540cfb9e60e87a493c19fb8c03a96a98a916f7f7f9d625272"
+  }
+}

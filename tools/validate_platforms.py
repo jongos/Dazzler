@@ -35,7 +35,7 @@ def validate(folder):
             templates=json.loads(z.read(prefix+'assets/templates/catalog.json'))
             assert len(templates['templates'])==30
             for relative,digest in templates['files'].items():assert hashlib.sha256(z.read(prefix+'assets/templates/'+relative)).hexdigest()==digest
-            for required in ('scripts/studio.mjs','scripts/project.py','scripts/browser.cjs','scripts/evaluate.py','evals/cross-platform.json','references/design-studio.md'):
+            for required in ('scripts/studio.mjs','scripts/project.py','scripts/browser.cjs','scripts/evaluate.py','evals/cross-platform.json','references/design-studio.md','references/visualization.md','scripts/visualize.mjs','scripts/office-chart.R'):
                 assert prefix+required in names, required
             graphics=json.loads(z.read(prefix+'references/asset-catalog.json'))
             assert len(graphics['assets'])==15
@@ -49,6 +49,9 @@ def validate(folder):
                     assert hashlib.sha256(z.read(prefix+item['path'])).hexdigest() == item['sha256']
                     checked += 1
             assert checked == 206
+            viz=json.loads(z.read(prefix+'scripts/vendor/viz/provenance.json'))
+            for relative,digest in viz['files'].items():
+                assert hashlib.sha256(z.read(prefix+'scripts/vendor/viz/'+relative)).hexdigest()==digest
             prov = json.loads(z.read(prefix+'scripts/vendor/provenance.json'))
             assert hashlib.sha256(z.read(prefix+'scripts/vendor/color-engine.mjs')).hexdigest() == prov['sha256']
             for n in names:
@@ -65,6 +68,10 @@ def validate(folder):
             with tempfile.TemporaryDirectory() as temp:
                 z.extractall(temp)
                 skill=Path(temp)/prefix
+                config=Path(temp)/'chart-input.json'
+                config.write_text(json.dumps({'title':'Package smoke check','data':[{'x':'A','y':1},{'x':'B','y':3}]}))
+                subprocess.run(['node',str(skill/'scripts/visualize.mjs'),'--config',str(config),'--out',str(Path(temp)/'chart-output')],capture_output=True,text=True,check=True,timeout=30)
+                assert (Path(temp)/'chart-output/chart.svg').read_text().startswith('<svg')
                 result=subprocess.run([sys.executable,'-X','utf8',str(skill/'scripts/fonts.py'),'recommend','--role','body','--text','Dazzler'],capture_output=True,text=True,check=True)
                 assert json.loads(result.stdout)
                 result=subprocess.run(['node',str(skill/'scripts/colors.mjs'),'recommend','--mood','cozy'],capture_output=True,text=True,check=True)
@@ -77,7 +84,7 @@ def validate(folder):
                 assert all(r['status']=='not-run' for r in json.loads((Path(temp)/'eval/evaluation.json').read_text())['results'])
                 subprocess.run([sys.executable,'-X','utf8',str(skill/'scripts/templates.py'),'export','restaurant-cafe','--out',str(Path(temp)/'template-export')],capture_output=True,text=True,check=True)
                 assert (Path(temp)/'template-export/ui/restaurant-cafe/index.html').is_file()
-            print(f'{archive.name}: structure, links, 206 font/support hashes, 15 graphics, engine and extracted core/studio/evaluation helpers passed')
+            print(f'{archive.name}: structure, links, 206 font/support hashes, 15 graphics, color/viz engines and extracted core/studio/chart/evaluation helpers passed')
 
 
 if __name__=='__main__':

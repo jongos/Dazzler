@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "type": "network",
+  "title": "Delivery dependencies",
+  "description": "Values supplied by the project.",
+  "source": "Fictional project",
+  "unit": "",
+  "xLabel": "Category",
+  "yLabel": "Value",
+  "font": "Arial",
+  "background": "#FFFFFF",
+  "width": 720,
+  "height": 380,
+  "xType": "nominal",
+  "warnings": [],
+  "special": {
+    "nodes": [
+      {
+        "id": "Research"
+      },
+      {
+        "id": "Design"
+      },
+      {
+        "id": "Build"
+      },
+      {
+        "id": "Review"
+      }
+    ],
+    "links": [
+      {
+        "source": "Research",
+        "target": "Design"
+      },
+      {
+        "source": "Design",
+        "target": "Build"
+      },
+      {
+        "source": "Build",
+        "target": "Review"
+      }
+    ]
+  },
+  "series": [
+    "Data"
+  ],
+  "colors": [
+    "#2c4a96"
+  ],
+  "palette": [
+    {
+      "id": "series-1",
+      "label": "Data",
+      "color": "#2c4a96",
+      "shape": "circle",
+      "dash": "none",
+      "pattern": "pattern-1",
+      "contrast": 8.310223162975337
+    }
+  ],
+  "format": "html",
+  "engine": "d3"
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "type": "bar",
+  "title": "Quarterly revenue",
+  "description": "Fictional example. Compare the same USD units across periods.",
+  "source": "Dazzler demonstration data",
+  "unit": "USD",
+  "xLabel": "Category",
+  "yLabel": "Value",
+  "font": "Arial",
+  "background": "#FFFFFF",
+  "width": 720,
+  "height": 380,
+  "xType": "nominal",
+  "warnings": [],
+  "data": [
+    {
+      "x": "Q1",
+      "y": 42000,
+      "series": "Subscriptions",
+      "_order": 0
+    },
+    {
+      "x": "Q2",
+      "y": 54000,
+      "series": "Subscriptions",
+      "_order": 1
+    },
+    {
+      "x": "Q3",
+      "y": 61000,
+      "series": "Subscriptions",
+      "_order": 2
+    },
+    {
+      "x": "Q1",
+      "y": 17000,
+      "series": "Services",
+      "_order": 0
+    },
+    {
+      "x": "Q2",
+      "y": 21000,
+      "series": "Services",
+      "_order": 1
+    },
+    {
+      "x": "Q3",
+      "y": 24000,
+      "series": "Services",
+      "_order": 2
+    }
+  ],
+  "series": [
+    "Subscriptions",
+    "Services"
+  ],
+  "colors": [
+    "#2c4a96",
+    "#873000"
+  ],
+  "palette": [
+    {
+      "id": "series-1",
+      "label": "Subscriptions",
+      "color": "#2c4a96",
+      "shape": "circle",
+      "dash": "none",
+      "pattern": "pattern-1",
+      "contrast": 8.310223162975337
+    },
+    {
+      "id": "series-2",
+      "label": "Services",
+      "color": "#873000",
+      "shape": "square",
+      "dash": "6 3",
+      "pattern": "pattern-2",
+      "contrast": 8.561084361626301
+    }
+  ],
+  "format": "html",
+  "engine": "vega"
+}

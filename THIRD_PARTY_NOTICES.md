@@ -64,3 +64,9 @@ The 12 icons and three illustrations in `skills/dazzler-frontend/assets/graphics
 ## Original template library
 
 The 30 document/interface templates and their demo code are original Dazzler material by Jon Gosier, distributed under Apache-2.0. Bundled Work Sans and Young Serif files are unmodified copies of the existing licensed catalog exports with their source/copyright/license notices. DOCX files reference Arial or Georgia; those desktop fonts are not redistributed.
+
+## Visualization runtimes
+
+Vega 6.4.0 and Vega-Lite 6.4.3 (BSD-3-Clause; UW Interactive Data Lab and contributors), selected D3 modules (ISC; Mike Bostock and contributors), Microcharts 0.19.1 (MIT), and React/React DOM 19.2.4 (MIT) support the offline adapters. All 58 constituent package notices and exact versions are retained in `skills/dazzler-frontend/scripts/vendor/viz/licenses/` and `provenance.json`. Transitive license labels include MIT, BSD-3-Clause, ISC and Unlicense. These components retain their original terms; they are not relicensed as Apache-2.0.
+
+The optional R adapter calls externally installed mschart and officer; these packages are not redistributed. Credit David Gohel, ArData and contributors. Resource discovery credits bkrsln/dataviz; no source, artwork or guide text was imported from that directory or its linked collections.

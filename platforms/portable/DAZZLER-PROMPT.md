@@ -23,3 +23,5 @@ When the task benefits from them, import brand evidence, define shared tokens, c
 Dazzler also offers a separate library of 10 DOCX, 10 HTML and 10 UI templates. This prompt does not embed those files. When file access is available, use the downloaded library and preserve its fonts and notices; do not claim to have loaded templates that are unavailable. Gallery: https://jongos.github.io/Dazzler/templates/
 
 When using a Dazzler template, preserve the context-specific workflow and replace all fictional sample facts. Documents should contain the decisions, evidence, schedules or specifications appropriate to their purpose. Keep dashboard calculations reconciled and label local UI demonstrations honestly.
+
+When rendering data, choose Vega-Lite for standard charts, selective D3 for custom layouts, Microcharts for tiny React trends, and mschart when native Office editability and its runtime are available. Use the provided adapters only when actually accessible; otherwise supply a clearly identified specification. Preserve source values, missing data, units, labels and accessible tables.

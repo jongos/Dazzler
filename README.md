@@ -74,9 +74,9 @@ Examples: “Match our existing site,” “Stress-test this dashboard,” “Ca
 
 **[Studio workflow and command reference](skills/dazzler-frontend/references/design-studio.md)**. Browser inspection needs an existing Playwright/Chromium runtime (or equivalent host tools); DOCX/PPTX need existing `python-docx`/`python-pptx`. Core import, tokens, charts, assets, changes and HTML exports stay lightweight. Automated findings require review; no complete accessibility, native pagination, or cross-model design-quality certification is claimed.
 
-## ✦ Thirty templates — new in 0.10.0
+## ✦ Thirty templates — refined in 0.10.0
 
-**[Browse the live gallery](https://jongos.github.io/Dazzler/templates/)** · **[Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.10.0/dazzler-templates.zip)**
+**[Browse the live gallery](https://jongos.github.io/Dazzler/templates/)** · **[Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-templates.zip)**
 
 - **10 DOCX + 10 matching HTML documents:** professional, legal, business, fun, family, presentation, school, marketing, restaurant and technical.
 - **10 UI folders, each with HTML, CSS and JSON:** three general webapps, two data dashboards, four restaurant experiences and one business portal.
@@ -155,3 +155,7 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 ### Templates with context
 
 The 0.10.0 library replaces generic outlines with 30 worked starting points: priced proposals, evidence-led memos, full-week planners, course-based menus, technical RFCs and purpose-specific interfaces. Dashboard totals reconcile; café orders have quantities; booking requests respect service days; client portals support deliverable review. Every example is fictional and must be adapted to the actual project. [See the per-template review](docs/template-review-0.10.0.md).
+
+### Charts that share your design system
+
+Version 0.11.0 adds offline Vega/Vega-Lite rendering, selected D3 network/hierarchy/map layouts, Microcharts sparkline/area exports for React, and an optional mschart adapter for editable Word/PowerPoint charts. The skill selects the route and retains source data, labels, colors and provenance. [Visualization reference](skills/dazzler-frontend/references/visualization.md). Native Office requires an available R runtime; it was not executed on the maintenance host. [bkrsln/dataviz](https://github.com/bkrsln/dataviz) informed further resource discovery; its collection was not copied.

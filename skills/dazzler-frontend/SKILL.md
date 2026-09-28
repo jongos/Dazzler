@@ -1,6 +1,6 @@
 ---
 name: dazzler-frontend
-description: Automatically design and refine interfaces, branded documents and slides. Import brand evidence, choose licensed fonts and assets, generate measured tokens and chart palettes, implement and inspect. Offer controls only when requested; preserve the user's brand and stack.
+description: Automatically design and refine interfaces, branded documents and slides. Import brand evidence, choose licensed fonts and assets, generate measured tokens and data visualizations, implement and inspect. Offer controls only when requested; preserve the user's brand and stack.
 license: Apache-2.0; see LICENSE.txt
 ---
 
@@ -56,6 +56,8 @@ Make borders, labels, grouping, and numbering express relationships. Number item
 Concentrate expressive detail where it earns attention. Keep surrounding navigation and controls legible. Use motion to explain state changes; limit unsolicited animation and respect reduced-motion preferences.
 
 Write concise interface copy from the user's perspective. Name actions by their outcome, use consistent vocabulary, and make empty and error states explain the next useful step. Keep implementation terminology out of ordinary user flows unless it helps a decision.
+
+For actual charts, networks, maps, compact React metrics or editable Office charts, use [the visualization adapters](references/visualization.md). Choose the renderer automatically from the task and existing stack; preserve data semantics, source tables, brand tokens and runtime limitations.
 
 ## Use the integrated design studio
 

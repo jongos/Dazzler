@@ -1,0 +1,12 @@
+{
+  "engine": "microcharts",
+  "status": "rendered",
+  "nativeOffice": "not-requested",
+  "warnings": [],
+  "files": [
+    "index.html",
+    "chart.svg",
+    "data.csv",
+    "chart.json"
+  ]
+}

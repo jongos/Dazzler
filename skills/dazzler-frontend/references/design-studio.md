@@ -69,6 +69,8 @@ Use 1–6 pairs. The lab requires exported folders with `selection.json`, copies
 
 ## 6. Chart styling
 
+For actual data rendering, follow [the visualization adapters](visualization.md): Vega/Vega-Lite, selected D3 layouts, Microcharts React output and optional mschart Office export. The palette command below remains useful for shared color decisions.
+
 ```shell
 node scripts/studio.mjs chart --config chart-input.json --out NEW_DIR
 ```

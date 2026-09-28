@@ -1,16 +1,26 @@
 {
   "name": "dazzler-maintenance",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build:colors": "node tools/build_colors.mjs",
-    "test:colors": "node --test tests/colors.test.mjs"
+    "test:colors": "node --test tests/colors.test.mjs",
+    "build:visualization": "node tools/build_visualization.mjs",
+    "test:visualization": "node --test tests/visualization.test.mjs"
   },
   "devDependencies": {
     "@ankhorage/color-theory": "0.3.1",
+    "@microcharts/react": "0.19.1",
     "culori": "4.0.2",
-    "esbuild": "0.28.2"
+    "d3-force": "3.0.0",
+    "d3-geo": "3.1.1",
+    "d3-hierarchy": "3.1.2",
+    "esbuild": "0.28.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "vega": "6.4.0",
+    "vega-lite": "6.4.3"
   },
   "overrides": {
     "culori": "4.0.2"

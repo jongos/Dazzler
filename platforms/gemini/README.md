@@ -1,6 +1,6 @@
 # Dazzler for Gemini CLI
 
-Download **[dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.10.0/dazzler-gemini.zip)**.
+Download **[dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-gemini.zip)**.
 
 Extract the archive and copy its complete `dazzler-frontend` folder into `~/.gemini/skills/`. Do not overwrite an existing installation without reviewing it. Refresh skills or start a new session, then ask:
 
@@ -24,4 +24,4 @@ Full packages now include brand import, system-token export, browser inspection,
 
 ## Template library in 0.9.0
 
-Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Dazzler selects and copies a suitable starting point automatically. [Browse the gallery](https://jongos.github.io/Dazzler/templates/) or [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.10.0/dazzler-templates.zip). Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
+Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Dazzler selects and copies a suitable starting point automatically. [Browse the gallery](https://jongos.github.io/Dazzler/templates/) or [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.11.0/dazzler-templates.zip). Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
