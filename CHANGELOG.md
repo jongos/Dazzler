@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.7.0: Optional editions for other AI hosts
+
+- **Changed:** Versioned the package at 0.7.0 and linked platform downloads from the README. Existing Codex skill behavior is unchanged. Fable is treated as an Anthropic model using the Claude edition, not an invented separate integration.
+- **Added:** Claude/Fable, Gemini CLI, Cursor and Copilot adapter folders; complete downloadable skill ZIPs; a Claude Code plugin ZIP; a guidance-only portable prompt; a standard-library builder; checksum manifests; and an archive/resource/extracted-helper validator. Installation guides cite current official documentation and disclose host/account limitations.
+- **Why:** Offer practical optional distributions while maintaining fonts, palette resources and design guidance in one canonical source. Exported packages omit Codex-specific routing/UI metadata and owner-specific maintenance/push permissions. All original asset bytes, credits and licenses remain intact.
+- **Validation:** All five archives passed structure, local reference, 206 font/support-file hashes, bundled color-engine integrity, and extracted Python/Node helper execution checks. Four generated skill manifests and the existing plugin manifest passed validators. The portable prompt explicitly disclaims native installation, bundled assets and execution. Native Claude/Fable, Gemini CLI, Cursor and Copilot sessions and Claude chat uploads were not available/tested; packaging validity is not an end-to-end compatibility claim. Git staged whitespace validation passed. No design algorithm changes or new behavioral agent evaluation.
+
 ## 2026-09-28 — Preserve published font notices
 
 - **Changed:** Excluded original documentation font notices from Git whitespace and line-ending normalization; removed trailing whitespace from embedded HTML comments.

@@ -72,6 +72,14 @@ The plugin identifier is **`dazzler`**, its display name is **Dazzler**, and its
 
 **Upgrading from ChatGPT Design Skills?** This is the same project, renamed in version 0.6.0. Update your Git remote to `git@github.com:jongos/Dazzler.git`, install/link the renamed skill folder, and use `$dazzler-frontend` in new prompts. Verify the new installation before retiring duplicate discovery entries. Historical release notes retain their original names.
 
+## 🌍 Other AI platforms
+
+Optional editions are available for **Claude (including Fable), Gemini CLI, Cursor, and GitHub Copilot**, plus a portable prompt for other chat hosts. Each full package shares Dazzler’s licensed fonts, color tools and design guidance.
+
+**[Choose a platform and download →](platforms/README.md)**
+
+Packages are locally validated and aligned with each host’s documented skill format; native host sessions and cloud uploads have not been tested. Fable uses the Claude edition.
+
 ## 🛠 Under the hood
 
 Normal use needs no API keys, Claude CLI, Anthropic SDK, MCP server, npm installation, or third-party Python packages. The agent uses available Python 3 and Node.js runtimes internally; Node.js 22+ is recommended for the color helper. When a runtime or preview tool is unavailable, it uses available verified resources and reports the limits. Optional host tools are used only when appropriate; project-specific dependencies still apply.

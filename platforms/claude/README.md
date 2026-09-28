@@ -1,0 +1,29 @@
+# Dazzler for Claude / Fable
+
+Download **[dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.7.0/dazzler-claude.zip)**.
+
+Extract the archive and copy its complete `dazzler-frontend` folder into `~/.claude/skills/`. Do not overwrite an existing installation without reviewing it. Refresh skills or start a new session, then ask:
+
+```text
+/dazzler-frontend build a welcoming studio website.
+```
+
+The archive includes the platform entrypoint, font catalog, 24 licensed font families, Python helper, bundled Node color engine, all reference guides, and license/provenance notices. No API key or npm installation is required by Dazzler. Python/Node execution and browser inspection depend on your host; unavailable checks must be disclosed.
+
+This repository folder contains the platform adapter and installation guidance, **not** a standalone installable skill. Use the complete ZIP or build it with `python tools/build_platforms.py --out dist/platforms-0.7.0` from the repository root. The builder combines the canonical skill with `HOST.md`; assets are maintained once.
+
+## Claude chat and Fable
+
+Fable is a Claude model, so it uses this same edition; choose it in your host if your account offers it. [Anthropic Fable](https://www.anthropic.com/claude/fable).
+
+For Claude chat, upload `dazzler-claude.zip` through Customize > Skills > Create skill > Upload a skill, where custom skills are available. The ZIP contains one `dazzler-frontend` folder with `SKILL.md`, resources and licenses. Host upload limits, account availability and execution capabilities apply; the full asset bundle is approximately 21 MB compressed. This upload has not been exercised in Claude chat. [Official upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+
+## Optional Claude Code plugin
+
+Unzip `dazzler-claude-plugin.zip`, then start Claude Code with `claude --plugin-dir /absolute/path/to/dazzler`. Invoke `/dazzler:dazzler-frontend`. The plugin includes `.claude-plugin/plugin.json` and its own complete skill resources. Install either the standalone skill or plugin to avoid duplicate entries. [Plugin documentation](https://code.claude.com/docs/en/plugins).
+
+## Validation status
+
+Documentation-aligned packaging with local archive, license, resource and helper checks. Not end-to-end tested inside Claude / Fable; a valid archive does not guarantee account eligibility, upload acceptance, or agent behavior. Keep the core skill enabled for automatic selection where supported; host consent still applies.
+
+Packaging reference (checked September 28, 2026): [official documentation](https://code.claude.com/docs/en/skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
