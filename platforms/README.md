@@ -35,13 +35,15 @@ Every full package includes the same offline Vega/Vega-Lite, selected D3 and Mic
 
 Full editions include validated vector-region and image-hotspot exporters, offline previews, keyboard/touch controls, text alternatives and integration modules for the existing project framework. Follow references/interactive-illustrations.md in the package.
 
+Routine design helpers run from local bundled resources. Standalone image interactions use a lightweight browser-native adapter; existing framework integrations remain available. The release includes an integrity checker and automatic routing guidance. Optional native Office and browser tools use existing host runtimes.
+
 ## Notes and credits
 
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-claude.zip)
-- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-claude-plugin.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-gemini.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-cursor.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-copilot.zip)
-- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.12.0/DAZZLER-PROMPT.md)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-claude.zip)
+- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-claude-plugin.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-gemini.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-cursor.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-copilot.zip)
+- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.13.0/DAZZLER-PROMPT.md)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-templates.zip)

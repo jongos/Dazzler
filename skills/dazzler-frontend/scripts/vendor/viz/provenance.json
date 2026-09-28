@@ -578,7 +578,7 @@
     "licenses/vega-wordcloud-LICENSE": "63727832aaf62004a2b249c933e327f3c90caf49e41a72f4bf436edf632cbda8",
     "microcharts.css": "09d6de9e51ed1389257a80cecb33847737403bfb0122ab0ab63625c691b07a6c",
     "microcharts.mjs": "0dc21ca192dfce049118a3749c697f389b5f872dfb4bf3ac8297053d97d8a064",
-    "vega-browser.js": "c89c423add61f9cfb18579bc87c661bcac7f02f07a97d5138af0f4f285e55a42",
+    "vega-browser.js": "a570291cb5d2028910abd92e8a661bc1b70c427c1bfc5aa3751cfce75ba9a056",
     "vega.mjs": "87c98314b243603540cfb9e60e87a493c19fb8c03a96a98a916f7f7f9d625272"
   }
 }

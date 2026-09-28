@@ -24,6 +24,8 @@ When rendering data, choose Vega-Lite for standard charts, selective D3 for cust
 
 For clickable artwork, choose a vector-region or image-hotspot approach suited to the existing stack. Supply keyboard activation, named detail controls and a text equivalent. Use the full helper only when it is actually available; do not claim to infer regions or execute a renderer in text-only chat.
 
+Routine design helpers run from local bundled resources. Standalone image interactions use a lightweight browser-native adapter; existing framework integrations remain available. The release includes an integrity checker and automatic routing guidance. Optional native Office and browser tools use existing host runtimes.
+
 ## Notes and credits
 
 Created by Jon Gosier; feedback, feature requests and ideas: jon@filmhedge.com. Named after Dazzler, one of Jon's favorite X-Men characters. Independent project; no affiliation with Disney/Marvel or any AI vendor.

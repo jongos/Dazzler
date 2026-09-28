@@ -72,6 +72,8 @@ def validate(folder):
             with tempfile.TemporaryDirectory() as temp:
                 z.extractall(temp)
                 skill=Path(temp)/prefix
+                health=subprocess.run([sys.executable,str(skill/'scripts/health.py')],capture_output=True,text=True,check=True,timeout=30)
+                assert json.loads(health.stdout)['status']=='pass'
                 config=Path(temp)/'chart-input.json'
                 config.write_text(json.dumps({'title':'Package smoke check','data':[{'x':'A','y':1},{'x':'B','y':3}]}))
                 subprocess.run(['node',str(skill/'scripts/visualize.mjs'),'--config',str(config),'--out',str(Path(temp)/'chart-output')],capture_output=True,text=True,check=True,timeout=30)

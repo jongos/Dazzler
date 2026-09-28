@@ -17,6 +17,12 @@ Do not commit or publish generated websites, client assets, or unrelated reposit
 
 Keep implementation-source credits, repository links and inspiration acknowledgments in a closing notes or fine-print section of each human-readable document. Keep product explanations focused on current capabilities; do not add speculative addition lists. Preserve original license files, machine-readable provenance and functional identifiers.
 
+## Self-contained maintenance
+
+Use the checked-in `maintenance/offline-build/` kit to restore source and exact build inputs into a new workspace with `python tools/offline_build.py restore --from maintenance/offline-build --out NEW_DIRECTORY`. On its recorded platform, run the three Node build scripts without npm installation, then tests. The kit includes package sources and original licenses, not Node/Python or optional browser/Office installations.
+
+Treat upstream changes as reviewed imports. Never fetch upstream code during skill invocation. For an intentional update, inspect the diff, license and advisory changes, pin exact versions, rebuild, test behavior, update notices and regenerate the kit. Retain the previous release for rollback. After final changes run `python tools/seal_runtime.py`, the health check and platform validation. Keep kit hashes and release notes in the same commit. The local inventory is not a digital signature.
+
 ## Notes and credits
 
 Canonical repository: https://github.com/jongos/Dazzler

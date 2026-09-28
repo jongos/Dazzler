@@ -4,9 +4,9 @@ import {readFile,writeFile,mkdir,copyFile,cp,realpath} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {parseArgs} from 'node:util';
-import {randomUUID} from 'node:crypto';
+import {randomUUID,createHash} from 'node:crypto';
 import {DOMParser,XMLSerializer} from './vendor/hotspots/xml.mjs';
-import {escapeHTML as esc} from './studio.mjs';
+import {escapeHTML as esc,readJSON,readLimited,createOutput} from './runtime.mjs';
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const NS='http://www.w3.org/2000/svg';
 const ID=/^[A-Za-z_][A-Za-z0-9_.-]{0,99}$/;
@@ -15,8 +15,8 @@ const safeJSON=v=>JSON.stringify(v).replaceAll('<','\\u003c');
 const finite=n=>typeof n==='number'&&Number.isFinite(n);
 export function normalize(input){
  if(!input||typeof input!=='object'||Array.isArray(input))throw Error('Expected an illustration configuration');
- const kind=input.kind??'svg',framework=input.framework??'react';
- if(!['svg','image'].includes(kind)||!['react','vue'].includes(framework))throw Error('Use kind svg/image and framework react/vue');
+ const kind=input.kind??'svg',framework=input.framework??'native';
+ if(!['svg','image'].includes(kind)||!['native','react','vue'].includes(framework))throw Error('Use kind svg/image and framework native/react/vue');
  if(!text(input.title,200)||!text(input.imageAlt,500))throw Error('Provide a title and meaningful imageAlt');
  if(!Array.isArray(input.regions)||input.regions.length<1||input.regions.length>60)throw Error('Provide 1–60 regions');
  const color=input.color??'#7048E8';if(!/^#[0-9a-f]{6}$/i.test(color))throw Error('Use an opaque six-digit color');
@@ -79,7 +79,7 @@ export function imageDimensions(bytes){
 }
 
 export async function render(input,artFile,out){
- const config=normalize(input);const bytes=await readFile(artFile);if(bytes.length>8_000_000)throw Error('Artwork must be at most 8 MB');
+ const config=normalize(input);const bytes=await readLimited(artFile);if(bytes.length>8_000_000)throw Error('Artwork must be at most 8 MB');
  let artwork,extension;
  if(config.kind==='svg'||path.extname(artFile).toLowerCase()==='.svg'){
   const parsed=validateSVG(bytes.toString('utf8'),config.kind==='svg'?config.regions:[]);extension='svg';artwork=Buffer.from(parsed.artwork);
@@ -91,10 +91,8 @@ export async function render(input,artFile,out){
  }
  const engine=config.kind==='svg'?'svg':config.framework;
  config.mapName='dazzler-'+randomUUID();
- config.credit=engine==='svg'?'Interactive SVG: SVG.js, MIT.':'Image regions: '+(engine==='react'?'React Img Mapper and React':'Vue Img Mapper and Vue')+', MIT.';
- const skillRoot=await realpath(path.join(HERE,'..'));const parent=await realpath(path.dirname(path.resolve(out)));const dest=path.join(parent,path.basename(out));
- if(dest===skillRoot||dest.startsWith(skillRoot+path.sep))throw Error('Export into the project, outside the installed skill');
- await mkdir(dest,{recursive:false});
+ config.credit=engine==='native'?'Dazzler native image regions, Apache-2.0.':engine==='svg'?'Interactive SVG: SVG.js, MIT.':'Image regions: '+(engine==='react'?'React Img Mapper and React':'Vue Img Mapper and Vue')+', MIT.';
+ const dest=await createOutput(out);
  const write=(name,data)=>writeFile(path.join(dest,name),data);
  await write('illustration.'+extension,artwork);await write('hotspots.json',JSON.stringify(config,null,2)+'\n');
  await write('regions.csv',[['ID','Label','Description'],...config.regions.map(r=>[r.id,r.label,r.description])].map(row=>row.map(s=>'"'+s.replaceAll('"','""')+'"').join(',')).join('\n')+'\n');
@@ -102,11 +100,13 @@ export async function render(input,artFile,out){
  await copyFile(path.join(HERE,'hotspot-'+engine+'.mjs'),path.join(dest,'adapter.mjs'));
  await copyFile(path.join(HERE,'hotspot-ui.mjs'),path.join(dest,'hotspot-ui.mjs'));
  const vendor=path.join(HERE,'vendor/hotspots');await copyFile(path.join(vendor,engine+'.js'),path.join(dest,'runtime.js'));await cp(path.join(vendor,'licenses'),path.join(dest,'licenses'),{recursive:true});await copyFile(path.join(vendor,'provenance.json'),path.join(dest,'renderer-provenance.json'));await copyFile(path.join(HERE,'../LICENSE.txt'),path.join(dest,'LICENSE.txt'));
- const dependencies=engine==='svg'?{'@svgdotjs/svg.js':'3.2.8'}:engine==='react'?{'react-img-mapper':'2.0.2'}:{'vue-img-mapper':'0.1.0'};
+ const dependencies=engine==='native'?{}:engine==='svg'?{'@svgdotjs/svg.js':'3.2.8'}:engine==='react'?{'react-img-mapper':'2.0.2'}:{'vue-img-mapper':'0.1.0'};
  await write('dependencies.json',JSON.stringify({dependencies,hostRuntime:engine==='react'?'Use the existing compatible React/React DOM runtime':engine==='vue'?'Use the existing compatible Vue 3 runtime':'No framework needed',notes:'Merge only the required dependency into the existing project. Do not replace its manifest.'},null,2)+'\n');
  await write('INTEGRATE.md',`# Interactive illustration\n\nImport the accompanying CSS, load hotspots.json as a module or data object, then call the adapter with an empty DOM container. Use the returned cleanup function when the host component unmounts. In React/Vue, mount only after the container exists. The adapter manages its own subtree.\n\n\`\`\`js\nimport {mount} from './adapter.mjs';\nconst dispose = mount(container, config);\n// On host unmount: dispose();\n\`\`\`\n\nKeep hotspot coordinates in original image pixels. Keep SVG region IDs matched to the descriptions. Re-export after changing artwork. This adapter accepts only validated exported configuration; rerun the CLI for new SVG input. Use the existing host runtime and merge dependencies.json rather than replacing package.json. Review keyboard, touch, labels and resizing in the final page. Fonts are referenced, not installed or embedded.\n\n## Notes and credits\n\n${config.credit} Original Dazzler adapter: Apache-2.0. Preserve LICENSE.txt, licenses/ and renderer-provenance.json when sharing.\n`);
  const fallback=config.regions.map(r=>'<h2>'+esc(r.label)+'</h2><p>'+esc(r.description)+'</p>').join('');
- await write('index.html',`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>${esc(config.title)}</title><link rel="stylesheet" href="hotspots.css"><style>body{margin:0;background:#f4f5f8}</style><main id="illustration"></main><noscript><h1>${esc(config.title)}</h1>${fallback}</noscript><script src="runtime.js"></script><script>try{DazzlerHotspots.mount(document.querySelector('#illustration'),${safeJSON(config)});}catch(error){document.querySelector('#illustration').textContent='Interactive preview failed: '+error.message;}</script></html>`);
- const report={status:'exported',renderer:engine==='svg'?'svgjs':engine+'-img-mapper',regionCount:config.regions.length,validation:'Input and SVG allowlist checked; browser interaction and visual review still required.',files:['index.html','illustration.'+extension,'regions.csv','hotspots.json','adapter.mjs','hotspot-ui.mjs','hotspots.css','dependencies.json','INTEGRATE.md']};await write('report.json',JSON.stringify(report,null,2)+'\n');return report;
+ const boot=`const config=${safeJSON(config)};try{DazzlerHotspots.mount(document.querySelector('#illustration'),config);}catch(error){const root=document.querySelector('#illustration');root.replaceChildren();for(const r of config.regions){const h=document.createElement('h2'),p=document.createElement('p');h.textContent=r.label;p.textContent=r.description;root.append(h,p);}const p=document.createElement('p');p.textContent='Interactive preview unavailable; all region descriptions are shown.';root.append(p);}`;
+ const policy="default-src 'none'; script-src 'self' 'sha256-"+createHash('sha256').update(boot).digest('base64')+"'; style-src 'self' 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; connect-src 'none'";
+ await write('index.html',`<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="${esc(policy)}"><meta name="viewport" content="width=device-width"><title>${esc(config.title)}</title><link rel="stylesheet" href="hotspots.css"><style>body{margin:0;background:#f4f5f8}</style><main id="illustration"></main><noscript><h1>${esc(config.title)}</h1>${fallback}</noscript><script src="runtime.js"></script><script>${boot}</script></html>`);
+ const report={status:'exported',renderer:engine==='svg'?'svgjs':engine==='native'?'native-image':engine+'-img-mapper',regionCount:config.regions.length,validation:'Input and SVG allowlist checked; browser interaction and visual review still required.',files:['index.html','illustration.'+extension,'regions.csv','hotspots.json','adapter.mjs','hotspot-ui.mjs','hotspots.css','dependencies.json','INTEGRATE.md']};await write('report.json',JSON.stringify(report,null,2)+'\n');return report;
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){const {values}=parseArgs({options:{config:{type:'string'},art:{type:'string'},out:{type:'string'}}});if(!values.config||!values.art||!values.out)throw Error('Use --config input.json --art illustration.svg|png|jpg --out NEW_DIRECTORY');render(JSON.parse(await readFile(values.config,'utf8')),path.resolve(values.art),path.resolve(values.out)).then(r=>console.log(JSON.stringify(r))).catch(e=>{console.error(e.message);process.exitCode=1;});}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){const {values}=parseArgs({options:{config:{type:'string'},art:{type:'string'},out:{type:'string'}}});if(!values.config||!values.art||!values.out)throw Error('Use --config input.json --art illustration.svg|png|jpg --out NEW_DIRECTORY');render(await readJSON(values.config),path.resolve(values.art),path.resolve(values.out)).then(r=>console.log(JSON.stringify(r))).catch(e=>{console.error(e.message);process.exitCode=1;});}

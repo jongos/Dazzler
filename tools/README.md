@@ -37,6 +37,8 @@ Run `npm ci --ignore-scripts --no-audit --no-fund`, then `npm run build:visualiz
 
 Run `npm run build:hotspots` after `npm ci --ignore-scripts --no-audit --no-fund`. This builds separate vector, React and Vue browser bundles and the XML validator, retaining all constituent notices and hashes. Run `npm run test:hotspots`, generate fixtures with `node tools/test_hotspot_exports.mjs NEW_DIR`, then run `node tools/test_hotspot_browser.cjs NEW_DIR` with Playwright available. The Vue adapter requests an initial update after image load for its pinned older component; preserve that tested compatibility behavior when upgrading.
 
+Run `python tools/seal_runtime.py` after final review, then `python skills/dazzler-frontend/scripts/health.py`. Use `tools/offline_build.py` to capture or restore the maintainer-only source kit; the restored kit can rebuild the three engines without package installation on its recorded OS/architecture. `tools/no_network.cjs` blocks Node networking during verification; it is not an OS sandbox.
+
 ## Notes and credits
 
 To refresh the curated catalog, review a new hue3 commit and license first. Update the explicit pin and parser in `tools/import_hue3.py`, then run it with a clean checkout. The current import accepts only a306210b7240e183366998ce39fbe7543cc09b41 and exactly 88 unique records. It extracts palette facts and editorial descriptions without importing upstream skill instructions. Its count/schema assertions intentionally require review when upstream changes.

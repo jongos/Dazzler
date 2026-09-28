@@ -4,7 +4,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 const root=process.cwd(),dest=path.join(root,'skills/dazzler-frontend/scripts/vendor/hotspots');
 await mkdir(path.join(dest,'licenses'),{recursive:true});const packages=new Map(),files={};
-for(const kind of ['svg','react','vue','xml']){
+for(const kind of ['svg','react','vue','native','xml']){
  const result=await build({entryPoints:[kind==='xml'?'tools/xml-entry.mjs':`skills/dazzler-frontend/scripts/hotspot-${kind}.mjs`],outfile:path.join(dest,kind+(kind==='xml'?'.mjs':'.js')),bundle:true,format:kind==='xml'?'esm':'iife',globalName:kind==='xml'?undefined:'DazzlerHotspots',platform:'browser',target:'es2022',minify:true,legalComments:'inline',metafile:true,define:{'process.env.NODE_ENV':'"production"',__VUE_OPTIONS_API__:'true',__VUE_PROD_DEVTOOLS__:'false',__VUE_PROD_HYDRATION_MISMATCH_DETAILS__:'false'}});
  for(const input of Object.keys(result.metafile.inputs)){if(!input.includes('node_modules/'))continue;let dir=path.dirname(path.resolve(input));while(dir!==root&&dir!==path.dirname(dir)){try{const pkg=JSON.parse(await readFile(path.join(dir,'package.json'),'utf8'));if(pkg.name){packages.set(dir,pkg);break;}}catch{}dir=path.dirname(dir);}}
 }

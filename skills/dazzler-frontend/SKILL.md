@@ -18,6 +18,8 @@ Keep internal candidate comparisons and helper configuration out of the user's w
 
 Switch to [optional refinement controls](references/design-controls.md) only when the user asks for alternatives, wants to choose, or requests a tweak. Preserve all choices they have already supplied. Ask a necessary question only when the task itself cannot be responsibly completed from context, such as an indispensable missing input or contradictory non-negotiable requirements; uncertain taste is not a blocker. External-action permissions still apply.
 
+Use [the local runtime guidance](references/local-runtime.md) for integrity checks, automatic technical routing and offline operation. Run the local health check once per installed release for substantial work; choose the smallest compatible runtime and keep optional installation steps out of the default workflow.
+
 ## Design from purpose
 
 For substantial new interfaces, redesigns or requests to make a UI less generic, use [the adapted deslop framework](references/deslop.md). It connects artifact type and audience to a design direction, tokens, component states and a review of the actual result. Inspect existing design records and tokens first. Infer a useful direction from the brief without mandatory approval gates, preserve brand choices, and reuse the [design-record guide](references/design-record.md) when durable project documentation is warranted. For a small edit, apply only the relevant [interface craft](references/interface-craft.md); do not expand it into a redesign.

@@ -1,0 +1,85 @@
+{
+  "method": "Seven fresh Node process imports per helper; local wall-clock measurements, no universal guarantee",
+  "before": {
+    "hotspots": {
+      "samples_ms": [
+        127.48,
+        121.43,
+        119.53,
+        140.57,
+        162.05,
+        132.5,
+        125.65
+      ],
+      "median_ms": 127.48
+    },
+    "visualize": {
+      "samples_ms": [
+        161.46,
+        153.45,
+        166.76,
+        163.54,
+        174.16,
+        164.16,
+        159.89
+      ],
+      "median_ms": 163.54
+    },
+    "studio": {
+      "samples_ms": [
+        99.5,
+        97.25,
+        97.95,
+        97.49,
+        89.19,
+        92.11,
+        92.58
+      ],
+      "median_ms": 97.25
+    }
+  },
+  "after": {
+    "hotspots": {
+      "samples_ms": [
+        118.54,
+        129.3,
+        111.68,
+        111.28,
+        112.75,
+        111.31,
+        118.17
+      ],
+      "median_ms": 112.75
+    },
+    "visualize": {
+      "samples_ms": [
+        108.82,
+        105.46,
+        106.97,
+        107.3,
+        105.75,
+        107.51,
+        104.33
+      ],
+      "median_ms": 106.97
+    },
+    "studio": {
+      "samples_ms": [
+        105.27,
+        118.19,
+        109.92,
+        120.8,
+        118.36,
+        133.53,
+        116.56
+      ],
+      "median_ms": 118.19
+    }
+  },
+  "bytes": {
+    "chartBrowserBefore": 791505,
+    "chartBrowserAfter": 519022,
+    "nativeImage": 3756,
+    "reactImagePreview": 207211
+  }
+}

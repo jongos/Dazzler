@@ -5,6 +5,13 @@ import os from 'node:os';
 import path from 'node:path';
 import {normalize,specification,render,vegaSVG,d3SVG} from '../skills/dazzler-frontend/scripts/visualize.mjs';
 const sample={title:'Revenue by quarter',unit:'USD',data:[{x:'Q1',y:12},{x:'Q2',y:18},{x:'Q3',y:15}]};
+test('map geometry rejects unbounded recursion and non-geographic coordinates',()=>{
+ const chart=geometry=>normalize({type:'map',map:{type:'FeatureCollection',features:[{type:'Feature',geometry}]}});
+ assert.throws(()=>d3SVG(chart({type:'Point',coordinates:[181,0]})));
+ let nested={type:'Point',coordinates:[0,0]};for(let i=0;i<14;i++)nested={type:'GeometryCollection',geometries:[nested]};assert.throws(()=>d3SVG(chart(nested)));
+ assert.throws(()=>d3SVG(chart({type:'MultiPoint',coordinates:Array.from({length:50001},()=>[0,0])})));
+ assert.match(d3SVG(chart({type:'Point',coordinates:[-74,40]})).svg,/<path/);
+});
 test('reject invalid, ambiguous and nonfinite data',()=>{for(const data of [[],[{x:'A',y:'3'}],[{x:'A',y:Infinity}],[{x:'A',y:null}],[{x:'A',y:1},{x:'A',y:2}]])assert.throws(()=>normalize({...sample,data}));assert.throws(()=>normalize({...sample,colors:['red']}));assert.throws(()=>normalize({...sample,format:'react',type:'bar'}));});
 test('missing values remain missing and grouped bars retain series',()=>{const n=normalize({...sample,data:[{x:'Q1',y:null,series:'A'},{x:'Q1',y:8,series:'B'}]});assert.equal(n.data[0].y,null);assert.equal(n.warnings.length,1);const s=specification(n);assert.equal(s.encoding.xOffset.field,'series');assert.equal(s.encoding.y.scale.zero,true);});
 test('all standard encodings produce actual Vega SVG',async()=>{for(const type of ['bar','line','area','scatter','histogram','boxplot','heatmap']){const n=normalize({...sample,type,data:[{x:1,y:12},{x:2,y:18},{x:3,y:15}],xType:type==='scatter'?'quantitative':'ordinal'});const {svg}=await vegaSVG(specification(n));assert.match(svg,/<svg/);assert(!svg.includes('NaN'));}});

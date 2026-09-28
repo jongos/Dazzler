@@ -12,7 +12,10 @@ SKILL = Path(__file__).resolve().parents[1]
 
 
 def read(path):
-    return json.loads(Path(path).read_text(encoding='utf-8'))
+    with Path(path).open('rb') as handle:
+        data=handle.read(8_000_001)
+    if len(data)>8_000_000:raise ValueError('JSON input exceeds 8 MB')
+    return json.loads(data.decode('utf-8'))
 
 
 def digest(path):
@@ -111,7 +114,8 @@ def export_document(content, system, destination, mode='document'):
         if not isinstance(section,dict) or not isinstance(section.get('body',''),str):raise ValueError('Each section requires a string body')
     tokens=system['palette']['modes']['light']['tokens'];font=system['fonts']['body'];heading=system['fonts']['heading']
     if any(not re.fullmatch(r'#[0-9a-fA-F]{6}',tokens[k]) for k in ('text','background','border')):raise ValueError('Document colors must be opaque hex tokens')
-    destination=Path(destination)
+    destination=Path(destination).resolve()
+    if destination.is_relative_to(SKILL.resolve()):raise ValueError('Export outside the installed skill')
     if destination.exists():raise ValueError('Refusing to overwrite an existing deliverable')
     embedded=False
     if mode=='docx':
@@ -218,7 +222,9 @@ def export_document(content, system, destination, mode='document'):
                 if not face or digest(source)!=face['sha256']:raise ValueError('Unverified exported font binary')
                 mime='font/woff2' if source.suffix=='.woff2' else 'font/woff' if source.suffix=='.woff' else 'font/otf' if source.suffix=='.otf' else 'font/ttf'
                 return 'url("data:'+mime+';base64,'+base64.b64encode(source.read_bytes()).decode()+'")'
-            css=re.sub(r'url\("\./([^\"]+)"\)',embed,font_css)+'\n'+css;embedded=True
+            embedded_css=re.sub(r'url\("\./([^\"]+)"\)',embed,font_css)
+            if re.search(r'@import|url\(\s*(?!"data:)',embedded_css,re.I):raise ValueError('Font CSS must contain only embedded local resources')
+            css=embedded_css+'\n'+css;embedded=True
         appendix='<details><summary>Font licenses and sources</summary><pre style="white-space:pre-wrap">'+'\n\n'.join(notices)+'</pre></details>' if notices else ''
         destination.write_text(f'<!doctype html><html lang="{esc(content.get("lang","en"))}"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>{esc(title)}</title><style>{css}</style><main><h1>{esc(title)}</h1>{"".join(pages)}{appendix}</main></html>',encoding='utf-8')
     return {'file':str(destination),'format':mode,'fontsEmbedded':embedded,'verification':'Exported, not visually certified. Check page/slide layout in the target renderer. Native formats reference fonts; HTML optionally embeds verified exported font files and notices.'}

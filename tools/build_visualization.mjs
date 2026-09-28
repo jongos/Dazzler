@@ -13,7 +13,7 @@ for(const [entry,name] of [['viz','vega'],['d3','d3'],['microcharts','microchart
   while(dir!==root){try{const pkg=JSON.parse(await readFile(path.join(dir,'package.json'),'utf8'));if(pkg.name){packages.set(dir,pkg);break;}}catch{}dir=path.dirname(dir);}
  }
 }
-await build({entryPoints:['tools/viz-entry.mjs'],outfile:path.join(dest,'vega-browser.js'),bundle:true,format:'iife',globalName:'DazzlerVega',platform:'browser',target:'es2022',minify:true,legalComments:'inline'});
+await build({entryPoints:['tools/viz-browser-entry.mjs'],outfile:path.join(dest,'vega-browser.js'),bundle:true,format:'iife',globalName:'DazzlerVega',platform:'browser',target:'es2022',minify:true,legalComments:'inline'});
 await copyFile('node_modules/@microcharts/react/dist/styles.css',path.join(dest,'microcharts.css')).catch(async()=>{await copyFile('node_modules/@microcharts/react/dist/styles/index.css',path.join(dest,'microcharts.css'));});
 const notices=[];
 for(const [dir,pkg] of packages){

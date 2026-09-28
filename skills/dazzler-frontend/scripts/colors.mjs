@@ -4,6 +4,7 @@ import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
+import {readJSON,createOutput} from './runtime.mjs';
 import {
   generateHarmonyRoleColors, generateColorSwatch, selectColorSwatchStep,
   selectReadableForeground, getContrastRatio, createDefaultSemanticStatusSwatches,
@@ -198,17 +199,7 @@ ${['success', 'warning', 'danger', 'info'].map(role => `<p class="status" style=
 }
 
 export async function exportResult(result, destination) {
-  const dest = path.resolve(destination);
-  // Disallow exports into installed resources, including through existing junctions.
-  const { realpath } = await import('node:fs/promises');
-  const parent = await realpath(path.dirname(dest));
-  const resolvedSkill = await realpath(skill);
-  const actual = path.join(parent, path.basename(dest));
-  const relative = path.relative(resolvedSkill, actual);
-  if (!relative || (!relative.startsWith('..' + path.sep) && relative !== '..' && !path.isAbsolute(relative))) {
-    throw new Error('Export outside the skill directory.');
-  }
-  await mkdir(dest); // No recursive mkdir and no overwrite of an existing directory.
+  const dest = await createOutput(destination);
   await writeFile(path.join(dest, 'palette.json'), JSON.stringify(result, null, 2) + '\n');
   if (result.status !== 'pass') return; // Evidence only; never ship unresolved CSS or HTML.
   await writeFile(path.join(dest, 'colors.css'), css(result));
@@ -239,7 +230,7 @@ async function main() {
     result = recommend(values.mood, Number(values.limit ?? 3));
     if (!result.length) process.exitCode = 2;
   } else if (positionals[0] === 'generate') {
-    const config = values.config ? JSON.parse(await readFile(values.config, 'utf8')) : {};
+    const config = values.config ? await readJSON(values.config) : {};
     const input = { ...config, ...Object.fromEntries(['mood', 'palette', 'base', 'harmony'].filter(k => values[k] !== undefined).map(k => [k, values[k]])) };
     result = generate(input);
     if (values.out) await exportResult(result, values.out);

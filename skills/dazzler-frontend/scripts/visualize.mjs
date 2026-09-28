@@ -7,9 +7,9 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {parseArgs} from 'node:util';
 import {chart,escapeHTML as esc} from './studio.mjs';
 import {getContrastRatio} from './vendor/color-engine.mjs';
-import {compile,parse,View} from './vendor/viz/vega.mjs';
+import {readJSON,createOutput} from './runtime.mjs';
 import {hierarchy,treemap,forceSimulation,forceLink,forceManyBody,forceCenter,forceCollide,geoPath,geoMercator} from './vendor/viz/d3.mjs';
-import {renderSparkline} from './vendor/viz/microcharts.mjs';
+
 const HERE=path.dirname(fileURLToPath(import.meta.url)),vendor=path.join(HERE,'vendor/viz');
 const json=x=>JSON.stringify(x).replaceAll('<','\\u003c');
 const csv=rows=>rows.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\n')+'\n';
@@ -29,7 +29,7 @@ export function normalize(input){
  else{
   if(!Array.isArray(input.data)||input.data.length===0||input.data.length>10000)throw Error('Provide 1–10000 data rows');
   n.data=input.data.map((r,i)=>{if(!r||typeof r!=='object'||!['string','number'].includes(typeof r.x)||String(r.x).length>300||r.x===''||(typeof r.x==='number'&&!finite(r.x))||!(r.y===null||finite(r.y)))throw Error('Invalid x/y at row '+i);if(n.xType==='quantitative'&&!finite(r.x))throw Error('Quantitative x requires numbers');if(n.xType==='temporal'&&(typeof r.x!=='string'||!/^\d{4}-\d{2}-\d{2}(T.*)?$/.test(r.x)||!Number.isFinite(Date.parse(r.x))))throw Error('Temporal x requires ISO dates');return {x:r.x,y:r.y,series:text(r.series,'Data')};});
-  const order=[...new Set(n.data.map(r=>r.x))];n.data.forEach(r=>r._order=order.indexOf(r.x));n.series=[...new Set(n.data.map(r=>r.series))];if(n.series.length>8)throw Error('Use at most 8 series; facet a larger comparison');
+  const order=new Map();for(const r of n.data){if(!order.has(r.x))order.set(r.x,order.size);r._order=order.get(r.x);}n.series=[...new Set(n.data.map(r=>r.series))];if(n.series.length>8)throw Error('Use at most 8 series; facet a larger comparison');
   if(n.data.every(r=>r.y===null))throw Error('All values are missing');
   if(n.data.some(r=>r.y===null))n.warnings.push('Missing values remain missing; they are not replaced with zero.');
   if(['bar','line','area','heatmap'].includes(type)){const keys=n.data.map(r=>JSON.stringify([r.x,r.series]));if(new Set(keys).size!==keys.length)throw Error('Duplicate x/series rows: explicitly aggregate or choose another chart');}
@@ -59,6 +59,7 @@ export function specification(n){
  return {$schema:'https://vega.github.io/schema/vega-lite/v6.json',description:n.description,data:{values:n.data},width:n.width,height:n.height,background:n.background,mark,encoding:enc,...(n.type==='scatter'?{params:[{name:'zoom',select:'interval',bind:'scales'}]}:{}),config:{font:n.font,view:{stroke:null},axis:{labelFontSize:12,titleFontSize:13,labelLimit:110,labelAngle:0,labelOverlap:true,labelColor:ink,titleColor:ink,domainColor:ink,tickColor:ink,gridColor:ink,gridOpacity:0.18},legend:{labelFontSize:12,labelColor:ink,titleColor:ink,orient:'bottom'}}};
 }
 export async function vegaSVG(spec){
+ const {compile,parse,View}=await import('./vendor/viz/vega.mjs');
  const compiled=compile(spec).spec;
  const view=new View(parse(compiled),{renderer:'none',loader:{load:async()=>{throw Error('External data loading disabled');},sanitize:async()=>{throw Error('External assets disabled');}}});
  try{await view.runAsync();return {svg:await view.toSVG(),compiled};}finally{view.finalize();}
@@ -79,14 +80,23 @@ export function d3SVG(n){
   body=root.leaves().map(x=>`<g><rect x="${x.x0}" y="${x.y0}" width="${x.x1-x.x0}" height="${x.y1-x.y0}" fill="${fill}"/><title>${esc(x.data.name)}: ${x.value}</title>${x.x1-x.x0>90&&x.y1-x.y0>42?`<text x="${x.x0+8}" y="${x.y0+20}" fill="white">${esc(x.data.name.slice(0,12))}</text>`:''}</g>`).join('');rows=[['Item','Value'],...root.leaves().map(x=>[x.ancestors().reverse().map(a=>a.data.name).join(' / '),x.value])];
  }else{
   if(n.special.type!=='FeatureCollection'||!Array.isArray(n.special.features)||!n.special.features.length||n.special.features.length>2000)throw Error('Map requires a GeoJSON FeatureCollection with 1–2000 features');
-  const projection=geoMercator().fitExtent([[15,15],[w-15,h-15]],n.special),draw=geoPath(projection);body=n.special.features.map((f,i)=>{const d=draw(f);if(!d||/NaN|Infinity/.test(d))throw Error('Invalid map geometry');return `<path d="${d}" fill="${fill}" stroke="${n.background}"><title>${esc(f.properties?.name??'Feature '+(i+1))}</title></path>`;}).join('');rows=[['Feature'],...n.special.features.map((f,i)=>[f.properties?.name??'Feature '+(i+1)])];
+  let vertices=0;
+  function geometry(g,depth=0){
+   if(!g||depth>12)throw Error('Invalid map geometry depth');
+   if(g.type==='GeometryCollection'){if(!Array.isArray(g.geometries)||!g.geometries.length)throw Error('Empty geometry collection');for(const child of g.geometries)geometry(child,depth+1);return;}
+   const levels={Point:0,MultiPoint:1,LineString:1,MultiLineString:2,Polygon:2,MultiPolygon:3};if(!(g.type in levels))throw Error('Unsupported map geometry');
+   function coordinates(c,level){if(!Array.isArray(c)||!c.length)throw Error('Empty map coordinates');if(level){for(const child of c)coordinates(child,level-1);}else if(++vertices>50000||c.length<2||c.length>3||!c.every(finite)||Math.abs(c[0])>180||Math.abs(c[1])>90)throw Error('Map coordinates exceed geographic or complexity limits');}
+   coordinates(g.coordinates,levels[g.type]);
+  }
+  for(const feature of n.special.features){if(feature?.type!=='Feature')throw Error('Expected GeoJSON feature');geometry(feature.geometry);}
+  const projection=geoMercator(),bounds=geoPath(projection).bounds(n.special);if(bounds[0][0]===bounds[1][0]&&bounds[0][1]===bounds[1][1])projection.center(projection.invert(bounds[0])).translate([w/2,h/2]).scale(Math.min(w,h)/6);else projection.fitExtent([[15,15],[w-15,h-15]],n.special);const draw=geoPath(projection);body=n.special.features.map((f,i)=>{const d=draw(f);if(!d||/NaN|Infinity/.test(d))throw Error('Invalid map geometry');return `<path d="${d}" fill="${fill}" stroke="${n.background}"><title>${esc(f.properties?.name??'Feature '+(i+1))}</title></path>`;}).join('');rows=[['Feature'],...n.special.features.map((f,i)=>[f.properties?.name??'Feature '+(i+1)])];
  }
  return {svg:`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(n.title)}"><title>${esc(n.title)}</title><desc>${esc(n.description)}</desc><rect width="100%" height="100%" fill="${n.background}"/><g font-family="${esc(n.font)}" font-size="12" fill="${getContrastRatio('#FFFFFF',n.background)>getContrastRatio('#20252C',n.background)?'#FFFFFF':'#20252C'}">${body}</g></svg>`,rows};
 }
 export async function render(input,out){
  const n=normalize(input);let spec,svg,compiled,rows=n.data?[['X','Y','Series'],...n.data.map(r=>[r.x,r.y,r.series])]:[];
- if(n.engine==='d3'){({svg,rows}=d3SVG(n));}else if(n.engine==='microcharts'){const raw=renderSparkline({data:n.data.map(r=>r.y),title:n.title,color:n.colors[0],fill:n.type==='area'});svg=raw.match(/<svg[\s\S]*?<\/svg>/)?.[0];if(!svg)throw Error('Microcharts did not render SVG');const css=await readFile(path.join(vendor,'microcharts.css'),'utf8');svg=svg.replace('<svg','<svg xmlns="http://www.w3.org/2000/svg"').replace(/(<svg[^>]*>)/,'$1<style>'+css+':root{--mc-stroke:'+n.colors[0]+';--mc-positive:'+n.colors[0]+';--mc-accent:'+n.colors[0]+'}</style>');}else{spec=specification(n);({svg,compiled}=await vegaSVG(spec));}
- await mkdir(out,{recursive:false});const write=(file,data)=>writeFile(path.join(out,file),data,'utf8');
+ if(n.engine==='d3'){({svg,rows}=d3SVG(n));}else if(n.engine==='microcharts'){const {renderSparkline}=await import('./vendor/viz/microcharts.mjs');const raw=renderSparkline({data:n.data.map(r=>r.y),title:n.title,color:n.colors[0],fill:n.type==='area'});svg=raw.match(/<svg[\s\S]*?<\/svg>/)?.[0];if(!svg)throw Error('Microcharts did not render SVG');const css=await readFile(path.join(vendor,'microcharts.css'),'utf8');svg=svg.replace('<svg','<svg xmlns="http://www.w3.org/2000/svg"').replace(/(<svg[^>]*>)/,'$1<style>'+css+':root{--mc-stroke:'+n.colors[0]+';--mc-positive:'+n.colors[0]+';--mc-accent:'+n.colors[0]+'}</style>');}else{spec=specification(n);({svg,compiled}=await vegaSVG(spec));}
+ out=await createOutput(out);const write=(file,data)=>writeFile(path.join(out,file),data,'utf8');
  await write('chart.svg',svg);await write('data.csv',csv(rows));await write('chart.json',JSON.stringify(n,null,2)+'\n');
  if(spec)await write('spec.vl.json',JSON.stringify(spec,null,2)+'\n');
  await cp(path.join(vendor,'licenses'),path.join(out,'licenses'),{recursive:true});await copyFile(path.join(HERE,'../LICENSE.txt'),path.join(out,'LICENSE.txt'));await copyFile(path.join(vendor,'provenance.json'),path.join(out,'renderer-provenance.json'));
@@ -110,4 +120,4 @@ export async function render(input,out){
  }
  await write('report.json',JSON.stringify(report,null,2)+'\n');return report;
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){const {values}=parseArgs({options:{config:{type:'string'},out:{type:'string'}}});if(!values.config||!values.out)throw Error('Use --config chart.json --out NEW_DIRECTORY');render(JSON.parse(await readFile(values.config,'utf8')),path.resolve(values.out)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1;});}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){const {values}=parseArgs({options:{config:{type:'string'},out:{type:'string'}}});if(!values.config||!values.out)throw Error('Use --config chart.json --out NEW_DIRECTORY');render(await readJSON(values.config),path.resolve(values.out)).then(x=>console.log(JSON.stringify(x))).catch(e=>{console.error(e.message);process.exitCode=1;});}

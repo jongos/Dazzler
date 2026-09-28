@@ -1,6 +1,6 @@
 {
   "name": "dazzler-maintenance",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,7 +9,9 @@
     "build:visualization": "node tools/build_visualization.mjs",
     "test:visualization": "node --test tests/visualization.test.mjs",
     "build:hotspots": "node tools/build_hotspots.mjs",
-    "test:hotspots": "node --test tests/hotspots.test.mjs"
+    "test:hotspots": "node --test tests/hotspots.test.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node tools/build_colors.mjs && node tools/build_visualization.mjs && node tools/build_hotspots.mjs"
   },
   "devDependencies": {
     "@ankhorage/color-theory": "0.3.1",

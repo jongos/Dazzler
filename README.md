@@ -147,6 +147,8 @@ Dazzler renders standard charts, network/hierarchy/map layouts, compact React tr
 
 Clickable vector regions and image hotspots now come with responsive layouts, keyboard/touch selection, detail panels and readable text alternatives. Dazzler chooses the route from the artwork and existing framework. [Interaction reference](skills/dazzler-frontend/references/interactive-illustrations.md).
 
+Routine design helpers run from local bundled resources. Standalone image interactions use a lightweight browser-native adapter; existing framework integrations remain available. The release includes an integrity checker and automatic routing guidance. Optional native Office and browser tools use existing host runtimes.
+
 ## Notes and credits
 
 Created by **Jon Gosier** and named after **Dazzler, one of his favorite X-Men characters**. The name celebrates a love of expressive design. This is an independent project, with no affiliation to Disney/Marvel, OpenAI, or Anthropic.
@@ -169,7 +171,7 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).

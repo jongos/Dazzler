@@ -28,10 +28,12 @@ Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10
 
 Full editions include validated vector-region and image-hotspot exporters, offline previews, keyboard/touch controls, text alternatives and integration modules for the existing project framework. Follow references/interactive-illustrations.md in the package.
 
+Routine design helpers run from local bundled resources. Standalone image interactions use a lightweight browser-native adapter; existing framework integrations remain available. The release includes an integrity checker and automatic routing guidance. Optional native Office and browser tools use existing host runtimes.
+
 ## Notes and credits
 
 Packaging reference (checked September 28, 2026): [official documentation](https://prod.cursor.com/docs/skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-cursor.zip](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-cursor.zip)
+- [dazzler-cursor.zip](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-cursor.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.12.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-templates.zip)

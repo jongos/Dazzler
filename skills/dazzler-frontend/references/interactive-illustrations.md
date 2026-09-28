@@ -7,7 +7,7 @@ Use this for clickable diagrams, illustrated guides, floor plans and product ima
 | An SVG with identifiable shapes or groups | Interactive vector adapter; framework independent |
 | A PNG/JPEG or flattened illustration in React | React image hotspot adapter |
 | A PNG/JPEG or flattened illustration in Vue 3 | Vue image hotspot adapter |
-| Standalone image guide without an application | Self-contained preview export; no package installation required to view it |
+| Standalone image guide without an application | Native browser adapter; no framework or package installation required |
 
 Retain the project's existing framework and approved artwork. Use the visualization adapters for numeric chart geometry. This helper adds interaction to supplied artwork; it does not infer shapes from pixels, draw a complete infographic from prose, or recreate a missing image. The agent can author suitable vector artwork using the existing design workflow when that is part of the brief.
 
@@ -35,6 +35,8 @@ node scripts/hotspots.mjs --config regions.json --art illustration.svg --out NEW
 For images, use `kind:"image"`, `framework:"react"` or `"vue"`, the exact intrinsic `width` and `height`, and a `shape` plus `coords` per region. Coordinates stay in original image pixels: rect `[left,top,right,bottom]`; circle `[cx,cy,radius]`; poly `[x1,y1,x2,y2,x3,y3,...]`. Define meaningful, non-overlapping zones. The helper measures PNG/JPEG dimensions and checks them against the configuration before export. Static SVG images use their viewBox dimensions.
 
 The agent supplies `source` when artwork or information needs a credit/data label. It is displayed in the closing notes, alongside implementation attribution. Pass the project's font and selection color; use existing color helpers to check the selection contrast against the actual artwork. The selection also has a named button and detail panel, so color is not the only cue. Fonts are referenced, not installed or embedded. Do not recolor an approved illustration without authorization.
+
+Standalone image exports default to `framework: "native"`. Use `react` or `vue` only when the host already uses that framework. The native adapter supports rectangles, circles and polygons with the same validated coordinates.
 
 ## Imported SVG contract
 
