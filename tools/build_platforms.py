@@ -147,6 +147,14 @@ def assemble(platform, target, profile="full"):
     shutil.copy2(ROOT / f"platforms/{platform}/README.md", target / "INSTALL.md")
     if platform == "codex":
         shutil.copytree(SOURCE / "agents", target / "agents")
+    else:
+        for starter in (target / "references").glob("starters*"):
+            text = starter.read_text(encoding="utf-8")
+            text = text.replace(
+                "Use $dazzler-frontend to ",
+                "/dazzler-frontend " if platform == "claude" else "Use Dazzler to ",
+            )
+            starter.write_text(text, encoding="utf-8", newline="\n")
     seal_profile(target, platform, profile)
     return target
 
@@ -244,6 +252,9 @@ def build(destination):
     (destination / "DAZZLER-PROMPT.md").write_bytes(
         canonical_bytes(ROOT / "platforms/portable/DAZZLER-PROMPT.md")
     )
+    (destination / "install_skill.py").write_bytes(
+        canonical_bytes(ROOT / "tools/install_skill.py")
+    )
     sizes = {}
     for file in sorted(destination.glob("*.zip")):
         with zipfile.ZipFile(file) as bundle:
@@ -261,6 +272,7 @@ def build(destination):
     files = sorted(destination.glob("*.zip")) + [
         destination / "DAZZLER-PROMPT.md",
         destination / "PACKAGE-SIZES.json",
+        destination / "install_skill.py",
     ]
     (destination / "SHA256SUMS.txt").write_text(
         "".join(

@@ -10,6 +10,27 @@ import subprocess
 SKILL = Path(__file__).resolve().parents[1]
 
 
+def metrics(results):
+    report = {}
+    for variant in ("baseline", "current"):
+        rows = [r for r in results if r["variant"] == variant]
+        observed = [r for r in rows if type(r.get("observedLoaded")) is bool]
+        tp = sum(r["expectedLoaded"] and r["observedLoaded"] for r in observed)
+        fp = sum(not r["expectedLoaded"] and r["observedLoaded"] for r in observed)
+        fn = sum(r["expectedLoaded"] and not r["observedLoaded"] for r in observed)
+        tn = sum(not r["expectedLoaded"] and not r["observedLoaded"] for r in observed)
+        report[variant] = {
+            "truePositives": tp,
+            "falsePositives": fp,
+            "falseNegatives": fn,
+            "trueNegatives": tn,
+            "unrun": len(rows) - len(observed),
+            "precision": tp / (tp + fp) if tp + fp else None,
+            "recall": tp / (tp + fn) if tp + fn else None,
+        }
+    return report
+
+
 def run(out, host, command=None, timeout=120):
     if command is not None and (
         not isinstance(command, list)
@@ -110,6 +131,7 @@ def run(out, host, command=None, timeout=120):
         "schemaVersion": 1,
         "host": host,
         "summary": summary,
+        "metrics": metrics(results),
         "results": results,
         "notes": "A host adapter must observe actual skill loading in a fresh session. Fixture tests validate this harness, not host selection behavior.",
     }

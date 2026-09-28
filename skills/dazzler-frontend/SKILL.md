@@ -33,6 +33,8 @@ Use [the color workflow](references/color-workflow.md) when choosing or changing
 
 ## Select relevant capabilities
 
+For examples or help getting started, choose one of the [19 short starter prompts](references/starters.md). Read only its category or use `python scripts/starters.py --id ID` for the relevant helper and host requirements. Starters are optional; do not ask users to select one before doing their task.
+
 Use [local runtime guidance](references/local-runtime.md) for integrity, smallest-compatible routing and missing runtimes. Core helpers run offline with Python/Node; normal use does not require npm installation. Optional browser/Office checks depend on host tools and must be reported honestly.
 
 - Starting structure: [templates](references/templates.md), with ten DOCX, ten HTML and ten UI examples. Export a copy with `scripts/templates.py`; adapt it to verified project content and preserve its resources/notices. Fictional examples are never user facts.

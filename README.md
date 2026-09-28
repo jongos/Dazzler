@@ -8,6 +8,12 @@
 
 **Dazzler gives your frontend a visual voice.** Describe what you want to make and who it’s for. The skill chooses suitable fonts, measured colors, layout, and interactions, then implements and reviews the result using the tools available in your ChatGPT/Codex host.
 
+## Begin with a sentence
+
+Try “Use $dazzler-frontend to turn this CSV into a clear branded chart” or browse the [19 starter prompts](https://jongos.github.io/Dazzler/starters/). Fonts, colors and layout remain automatic. Advanced controls are optional.
+
+The [installation guide](maintenance/ONBOARDING.md) covers a managed installer with local-edit protection, rollback, explicit host/scope selection and a pinned Claude marketplace. [Grok Bot status](platforms/GROK-BOT-STATUS.md) remains unverified.
+
 ## Current editions
 
 Use the native Codex skill ZIP for a versioned installation, the full desktop edition for all fonts, or the compact Claude upload edition with six families and all 30 templates. Each archive identifies its installed resources. Dazzler selects included alternatives automatically; real Claude upload acceptance remains unverified. See [installation and edition guidance](platforms/README.md).
@@ -204,10 +210,10 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).
 
-- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude-compact.zip)
+- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-claude-compact.zip)

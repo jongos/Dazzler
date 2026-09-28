@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "host": "codex-cli 0.158.0-alpha.2.1",
+  "model": "Host default; no model override; resolved model not reported by JSONL",
+  "settings": {
+    "sandbox": "read-only",
+    "ignoreUserConfig": true,
+    "ephemeral": true,
+    "timeoutSeconds": 60,
+    "projectDocMaxBytes": 0,
+    "repetitions": 1
+  },
+  "descriptions": {
+    "baseline": "Automatically design and refine interfaces, branded documents and slides. Import brand evidence, choose licensed fonts and assets, generate measured tokens and data visualizations, implement and inspect. Offer controls only when requested; preserve the user's brand and stack.",
+    "current": "Design, build or restyle websites, landing pages, app UIs, dashboards, React components, CSS/Tailwind layouts, branded documents and slides. Choose fonts and color palettes, improve visual hierarchy, or make an interface look better and less generic. Not for backend-only, database, infrastructure or nonvisual logic changes."
+  },
+  "suiteSha256": "3c11c93abd67c524ba61e0858a142ea3de72c7b251a2688592f500d638047bcb",
+  "metrics": {
+    "baseline": {
+      "truePositives": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1,
+      "trueNegatives": 2,
+      "unrun": 27,
+      "precision": null,
+      "recall": 0.0
+    },
+    "current": {
+      "truePositives": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1,
+      "trueNegatives": 2,
+      "unrun": 27,
+      "precision": null,
+      "recall": 0.0
+    }
+  },
+  "results": [
+    {
+      "variant": "baseline",
+      "case": "positive-01",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "575ccf405f1053f63aa9de02aafd35fc9141d79036b800b86355904231088f39"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-02",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "5fb2c26ba8659992a5da79ae8d7f5b4fe69645558399ed0c70bfe19cadbe8f8f"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-03",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "312d136476db3591c23695e44bf56449f823f9ce10cc2464ad8f63f14e7dc9b8"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-04",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "2679b20c12296afb39e02beab5c2685e8c133324484ebb44a9097ae5d1b54b02"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-05",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-06",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "2b4266ab89c21e164abd9e26e8915a03b8f63b3d4990a603e9321747d7d39994"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-07",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "bd1a4b43d387218b3b18126d8aba81818fe7336c974a2ec0efc42a75eae71345"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-08",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "55f920d7dfe7dac7a7d2c98422d2c464536ba0a0a3c18dd6be00fdf03824617d"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-09",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "d774a5f052ab6703230faa654356a2a77919aa58996160f49e84e0b9f5d98242"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-10",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-11",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "1b19dc23e7e95897d1abbf2432d501794535013d6b4cdf2d4f74ee3ad9b7dcb9"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-12",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "51fe11acc19856586b2c63cd61238e19daea45eaa131d15487863cb81e3bfeae"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-13",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-14",
+      "expectedLoaded": true,
+      "observedLoaded": false,
+      "evidence": "Completed host turn without a successful candidate SKILL.md read in the JSONL trace",
+      "traceSha256": "462155afde579e27cdded866d62352bde6deb1c231ea2c895048096464da9909",
+      "status": "fail"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-15",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-16",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "17e0ed78b3150e398f5b78dc21a469cfeb713e839fa4c7d93c8c93312d576649"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-17",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-18",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "6c83c802ebb85bf9b524489eedb7dcb42cc26befb367741339420f3d52c9aeb8"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-19",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "baseline",
+      "case": "positive-20",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "d97d5537b935933b77fc50b692d9994f4f522faf30f1b81b677db684447f1b2c"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-01",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "c14f32f75f99e703b7e4d0ab81a596010d27ccb82cb1ab7d0afa18718040c844"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-02",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "39e3a5ae1ac2c3d8f7520ef2a093da37aa7c48ebe20b4b6d5eb9626502f96935"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-03",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "79ec32d620cede5031c333424e73642d1c60dcf88573c32d63ced9f1006843c3"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-04",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "86344cee1c92b51e28f5e3f2a5771c3ce706483c764f3485fe9f4cb93e60ef45"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-05",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "c0aa887084006d913a8b9cdd874bcafce28d42b4a246868bfa3ad66d910819db"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-06",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "068462af5d97bb00b32d66a13e4a505e49633e09398ef7548faec483cceab44c"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-07",
+      "expectedLoaded": false,
+      "observedLoaded": false,
+      "evidence": "Completed host turn without a successful candidate SKILL.md read in the JSONL trace",
+      "traceSha256": "91c4558ed73a111bc238d86af7a4350e3f8b64a07fd7bd23277455ffd4664fe5",
+      "status": "pass"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-08",
+      "expectedLoaded": false,
+      "observedLoaded": false,
+      "evidence": "Completed host turn without a successful candidate SKILL.md read in the JSONL trace",
+      "traceSha256": "0b652e7bd7d2f232eb75b5b68d66d6eeea68a4d5c4f1b52472f7d765af1cf2c3",
+      "status": "pass"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-09",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "6194eb86739e7cc96fa3a77c92e6ab7b07874e39bd33e0ea9a16c48b7cd8dbbe"
+    },
+    {
+      "variant": "baseline",
+      "case": "negative-10",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "18ec74b828e19fd0242c7e873c4ef09573adb70a9997f9ca66d38d0f45cbc5c7"
+    },
+    {
+      "variant": "current",
+      "case": "positive-01",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "current",
+      "case": "positive-02",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "6920aefe3ae60629a4b3c7d46a2b1042ed534a99e0a52fe7e7269d0836486aa5"
+    },
+    {
+      "variant": "current",
+      "case": "positive-03",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "bbaed266200dd774d88b9ed37265761e13f6d424717479e0e788b347f6455245"
+    },
+    {
+      "variant": "current",
+      "case": "positive-04",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "3e463f926e2a01be2c877f6d50b7b72caa9877d6a03b03f84db72428fdd71a7f"
+    },
+    {
+      "variant": "current",
+      "case": "positive-05",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "122eb2c7dd4cdd116bd77214ce285093c4a306418e09f8622ffd8cb54b727b04"
+    },
+    {
+      "variant": "current",
+      "case": "positive-06",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "7dbc5532032ae2b70520019e3813cdfc4e6698c5fb46b1257bf769f15e864c66"
+    },
+    {
+      "variant": "current",
+      "case": "positive-07",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "2fcdc23b6e489bac42cab096a75c48038a8f577d6ad686b5022c555c9029d222"
+    },
+    {
+      "variant": "current",
+      "case": "positive-08",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "1007c30488c41d6b1c867c2334c576a0e03bcc47232d03bd3735c798dbd109e1"
+    },
+    {
+      "variant": "current",
+      "case": "positive-09",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "c4e6da6c1a054e1d5881f117e07750faf4f3703f7410a2bf5302812f8d144578"
+    },
+    {
+      "variant": "current",
+      "case": "positive-10",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "current",
+      "case": "positive-11",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "482edb01f186a67473719d5fd373c1c28c666d8d9b94fcd7fba4a098faa3a42a"
+    },
+    {
+      "variant": "current",
+      "case": "positive-12",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "f2e292452f7f20df11cd8435a132d91b61021a87a603269a4b76ffc79dcb498d"
+    },
+    {
+      "variant": "current",
+      "case": "positive-13",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "current",
+      "case": "positive-14",
+      "expectedLoaded": true,
+      "observedLoaded": false,
+      "evidence": "Completed host turn without a successful candidate SKILL.md read in the JSONL trace",
+      "traceSha256": "dbec98b75a4ebfb5a95ae5580ee7df54d6d2101bdb34efa6725c784856245c93",
+      "status": "fail"
+    },
+    {
+      "variant": "current",
+      "case": "positive-15",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "current",
+      "case": "positive-16",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "5e19e386d9169957bc90f7c3fab74920e968dedea8738e557cd489b9679b5d5a"
+    },
+    {
+      "variant": "current",
+      "case": "positive-17",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "current",
+      "case": "positive-18",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "076c953efea17e1611236891245c551e0ca67763be959731d8163c443a406d70"
+    },
+    {
+      "variant": "current",
+      "case": "positive-19",
+      "expectedLoaded": true,
+      "status": "timeout",
+      "evidence": "Host did not finish within the common timeout"
+    },
+    {
+      "variant": "current",
+      "case": "positive-20",
+      "expectedLoaded": true,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "6fafeeb4d5aff69ab2670c0e45517bf76172c9f9d134a25695b0d4d54a360e8c"
+    },
+    {
+      "variant": "current",
+      "case": "negative-01",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "a1ae4e24a8dc9b1a82c2c005e9717bcc515ff0632cfa1cc751aaf0b1bc2e91de"
+    },
+    {
+      "variant": "current",
+      "case": "negative-02",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "4d52064873dfc6e68c1a4f36918222205af494e74efca118c564f57820ce65b0"
+    },
+    {
+      "variant": "current",
+      "case": "negative-03",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "e60b221ba814fd337d871ba70d5df2506d639d5fdd15b68d24973b5c99cb0956"
+    },
+    {
+      "variant": "current",
+      "case": "negative-04",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "8448d797109cfd61048b893a596878320ef9509054ecc930b737d1a3ff42e465"
+    },
+    {
+      "variant": "current",
+      "case": "negative-05",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "855841b831934085ef3153865694df40990bcb9a2eaf2beec1362ad75d43ec3a"
+    },
+    {
+      "variant": "current",
+      "case": "negative-06",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "54196183960fc554a867c9167468c7842d8e4c9f051e06e658b0ef66916d97fa"
+    },
+    {
+      "variant": "current",
+      "case": "negative-07",
+      "expectedLoaded": false,
+      "observedLoaded": false,
+      "evidence": "Completed host turn without a successful candidate SKILL.md read in the JSONL trace",
+      "traceSha256": "34bf8bc8149f8dcd37783435b280e67afb85a1e7010c557dd5ae56d224d61fb9",
+      "status": "pass"
+    },
+    {
+      "variant": "current",
+      "case": "negative-08",
+      "expectedLoaded": false,
+      "observedLoaded": false,
+      "evidence": "Completed host turn without a successful candidate SKILL.md read in the JSONL trace",
+      "traceSha256": "8454fc7ab414bfab8533f3ced975eca9592fe0eb034b3d675be3f4d64852d9bd",
+      "status": "pass"
+    },
+    {
+      "variant": "current",
+      "case": "negative-09",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "2452e5e4d0904c2ea2561df69862101bcd45603037d960ce2c5dd0db5c4b6173"
+    },
+    {
+      "variant": "current",
+      "case": "negative-10",
+      "expectedLoaded": false,
+      "status": "host-policy-blocked",
+      "evidence": "Host tool execution rejected by policy; loading could not be observed",
+      "traceSha256": "642e1d84cbb74b4d53a93e8fe924e858f5921cefa2538f7871b1d386682f3928"
+    }
+  ],
+  "limitations": [
+    "Original suite, not starter-derived or independently held out.",
+    "Single stochastic run per prompt/description; no causal improvement claim.",
+    "Policy-blocked and incomplete turns count as unrun, never passes.",
+    "Raw traces stay local; this report contains only reviewed loading evidence."
+  ]
+}

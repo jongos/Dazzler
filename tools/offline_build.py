@@ -36,6 +36,7 @@ def create(output):
         "node_modules",
         "platforms",
         ".codex-plugin",
+        ".claude-plugin",
         ".github",
         "docs",
     ):
@@ -55,6 +56,10 @@ def create(output):
             "AGENTS.md",
             "maintenance/MAINTENANCE.md",
             "maintenance/requirements.txt",
+            "maintenance/ONBOARDING.md",
+            "maintenance/PHASE2-VALIDATION.md",
+            "maintenance/reports/codex-triggering-2026-09-28.json",
+            "maintenance/reports/skills-cli-1.7.0.json",
             "README.md",
             "CHANGELOG.md",
             ".gitattributes",

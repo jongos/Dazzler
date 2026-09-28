@@ -39,14 +39,14 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 ## Notes and credits
 
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude.zip)
-- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude-plugin.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-gemini.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-cursor.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-copilot.zip)
-- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.16.0/DAZZLER-PROMPT.md)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-claude.zip)
+- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-claude-plugin.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-gemini.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-cursor.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-copilot.zip)
+- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.17.0/DAZZLER-PROMPT.md)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-templates.zip)
 
-- [Native Codex skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.16.0/dazzler-claude-compact.zip)
+- [Native Codex skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.17.0/dazzler-claude-compact.zip)

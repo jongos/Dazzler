@@ -1,0 +1,39 @@
+{
+  "cli": "skills@1.7.0",
+  "source": "local immutable v0.16.0 skill fixture",
+  "telemetryDisabled": true,
+  "results": [
+    {
+      "operation": "project-install",
+      "exitCode": 0
+    },
+    {
+      "operation": "project-reinstall",
+      "exitCode": 0
+    },
+    {
+      "localEditSurvived": false
+    },
+    {
+      "operation": "project-remove",
+      "exitCode": 0
+    },
+    {
+      "projectRemoved": true
+    },
+    {
+      "operation": "global-install",
+      "exitCode": 0
+    },
+    {
+      "globalInstalled": true
+    },
+    {
+      "operation": "global-remove",
+      "exitCode": 0
+    },
+    {
+      "globalRemoved": true
+    }
+  ]
+}
