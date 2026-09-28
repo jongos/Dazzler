@@ -7,3 +7,4 @@ skills/frontend-design/assets/fonts/** -text -whitespace
 *.zip binary
 skills/frontend-design/scripts/vendor/** -text
 skills/frontend-design/references/hue3-LICENSE.txt -text
+skills/frontend-design/references/deslop-LICENSE.txt -text

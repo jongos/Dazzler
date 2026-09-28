@@ -28,6 +28,14 @@ The new output folder contains CSS, a detailed JSON report, a portable HTML prev
 
 Credit to [hue3](https://github.com/ktzzypo938/hue3), [Ankhorage color-theory](https://github.com/ankhorage/color-theory), and [Culori](https://github.com/Evercoder/culori) for the reused resources. [bivex's palette generator](https://github.com/bivex/brand-color-palette-generator) informed the preview/export interaction design; no code or external service was incorporated from it.
 
+## Design direction and anti-generic review
+
+Version 0.4.0 integrates **Samuel Berthe's ([samber](https://github.com/samber)) [frontend-design-deslop framework](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop)** from `samber/cc-skills`. Only that folder's framework is adapted; none of the wider project's skills, installers, agents or configuration is incorporated. Its governing MIT license is preserved with the adaptation.
+
+The [adapted workflow](skills/frontend-design/references/deslop.md) connects the artifact's purpose and audience to visual direction, tokens, layout and component states. It adds a [design-record guide](skills/frontend-design/references/design-record.md), [interface craft](skills/frontend-design/references/interface-craft.md) and an [evidence-based audit](skills/frontend-design/references/design-audit.md), integrated with our existing font and color tools.
+
+We preserve explicit brand choices and the project's source of truth instead of importing universal font/color bans, compulsory discovery approvals or mandatory `DESIGN.md` files for small edits. Creator credit, the MIT notice, source hashes and adaptation boundaries are recorded in [third-party notices](THIRD_PARTY_NOTICES.md) and [source provenance](skills/frontend-design/references/deslop-provenance.json). The framework adds no executable dependency.
+
 ## Original skill credit
 
 This project adapts the **frontend-design** skill from [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates), specifically [cli-tool/components/skills/creative-design/frontend-design](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design). Credit belongs to the original project's authors and contributors for the source design guidance.
@@ -76,4 +84,4 @@ There are no required API keys, Claude tools, MCP servers, or external services.
 
 ## License
 
-Our original instructions, scripts, and catalog annotations are licensed under the [Apache License, Version 2.0](LICENSE). **Bundled fonts, upstream support files, mood palette data and vendored color libraries retain their own licenses**; they are not relicensed as Apache. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and adjacent notices. The original skill's Apache license is retained inside the skill folder as well.
+Our original instructions, scripts, and catalog annotations are licensed under the [Apache License, Version 2.0](LICENSE). **Bundled fonts, upstream support files, adapted deslop guidance, mood palette data and vendored color libraries retain their applicable third-party licenses**; original notices remain included. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and adjacent notices. The original skill's Apache license is retained inside the skill folder as well.

@@ -1,5 +1,13 @@
 # Third-party notices
 
+## Frontend design deslop framework
+
+Creator: **Samuel Berthe ([samber](https://github.com/samber))**, copyright 2026 Samuel Berthe. Adapted from only [`skills/frontend-design-deslop`](https://github.com/samber/cc-skills/tree/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop) in `samber/cc-skills`, upstream skill version 1.2.2, commit `f866b800353719270a9ea101a41c5e2a2618d460`.
+
+The applicable repository-root [MIT license is preserved verbatim](skills/frontend-design/references/deslop-LICENSE.txt). Its notice applies to the adapted framework guidance and upstream-derived evaluation scenarios. Retain it with substantial copies. No other skills, agents, installers or repository configuration were imported; the root license was retrieved solely to preserve the governing notice.
+
+Adaptation: consolidated the framework into design direction, a proportionate design record, interface craft and a render-based audit; connected typography/color to our existing verified resources; retained brand and stack choices; replaced rigid aesthetic bans and compulsory approvals with contextual decisions; corrected focus-outline, modal-focus and WCAG level guidance. Fixed palette/token presets and the upstream tool allowlist were not imported. [Source inventory and mapping](skills/frontend-design/references/deslop-provenance.json) record the reviewed folder and content destinations. The evaluation cases are manual scenarios, not evidence of executed agent tests.
+
 ## Color resources
 
 The mood catalog reuses palette values, names and atmosphere descriptions from [hue3](https://github.com/ktzzypo938/hue3/tree/a306210b7240e183366998ce39fbe7543cc09b41), copyright 2026 hue3 contributors, under [MIT](skills/frontend-design/references/hue3-LICENSE.txt). Its original instructions and erroneous contrast guidance are not incorporated. Our importer restructures the entries and records per-file source links.

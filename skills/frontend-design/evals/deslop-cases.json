@@ -1,0 +1,67 @@
+{
+  "purpose": "Manual behavioral evaluation scenarios for the adapted framework; these are not automatically executed tests.",
+  "attribution": "Adapted from Samuel Berthe (samber), frontend-design-deslop/evals/evals.json at f866b800353719270a9ea101a41c5e2a2618d460; MIT notice in ../references/deslop-LICENSE.txt.",
+  "method": "Run the prompt in an isolated project when evaluating agent behavior, inspect its actual output against expectations, and record evidence and limitations. Do not treat this fixture's existence as a passing evaluation. Additional boundary cases are original to this adaptation.",
+  "cases": [
+    {
+      "id": "direction-before-styling",
+      "prompt": "Build a landing page for a developer tool that explains database query performance. Make it specific to the product and start implementing.",
+      "expect": ["Identifies product, audience and primary task before styling", "States reasonable visual assumptions and continues without an unnecessary approval gate", "Uses relevant product evidence rather than invented testimonials"]
+    },
+    {
+      "id": "preserve-locked-brand",
+      "prompt": "Our existing brand uses Inter and violet. Make the dashboard less generic, but keep both and preserve the current framework.",
+      "expect": ["Preserves Inter, violet and the stack", "Improves information hierarchy, grouping or task-specific structure", "Measures functional contrast instead of rejecting a hue"]
+    },
+    {
+      "id": "tokens-before-components",
+      "prompt": "Design a primary button, card and text input for a new project. Use our color helper's generated palette.",
+      "expect": ["Defines or reuses semantic tokens alongside implementation", "Maps button fill/label to action/onAction rather than decorative accent", "Uses licensed fonts with actual required styles", "Does not introduce an unrelated token framework"]
+    },
+    {
+      "id": "button-states",
+      "prompt": "Implement the Save changes button for an async settings form.",
+      "expect": ["Includes focus, pressed and pending behavior", "Prevents duplicate submission and preserves input on failure", "Explains success/failure near the action", "Does not create an unrelated destructive variant"]
+    },
+    {
+      "id": "table-density",
+      "prompt": "Create a compact monthly revenue table with Month, Revenue and Growth %, using supplied data.",
+      "expect": ["Aligns comparable numeric columns and their headers consistently", "Uses supported tabular numerals", "Keeps labels and comparisons legible at narrow widths", "Does not add marketing-page spacing or fabricated figures"]
+    },
+    {
+      "id": "forms",
+      "prompt": "Build a minimal login form with email and password.",
+      "expect": ["Uses programmatically associated labels", "Preserves paste/password-manager support", "Shows useful associated error text and retains input", "Does not treat placeholder text as the only label"]
+    },
+    {
+      "id": "motion",
+      "prompt": "Animate an existing drawer opening and closing without changing its behavior.",
+      "expect": ["Uses a purposeful transition and reduced-motion behavior", "Preserves existing modal or nonmodal semantics", "Handles focus appropriately and does not trap every popover by default", "Does not expand into an animation-system rewrite"]
+    },
+    {
+      "id": "dark-mode",
+      "prompt": "Add dark mode to this application using the existing token system.",
+      "expect": ["Uses semantic theme overrides rather than blanket inversion", "Measures actual text, surface and state relationships", "Does not replace an approved pure-black choice solely because of a style ban", "Reports unavailable checks honestly"]
+    },
+    {
+      "id": "small-edit",
+      "prompt": "Fix this card's 8px spacing error. Keep everything else as it is.",
+      "expect": ["Makes the narrow authorized fix", "Does not require new discovery, adjectives, palettes or a DESIGN.md", "Checks the affected layout proportionately"]
+    },
+    {
+      "id": "existing-source-of-truth",
+      "prompt": "Our maintained tokens.json uses the current brand, while DESIGN.md has obsolete colors. Update the button to the current brand.",
+      "expect": ["Uses the designated maintained token source", "Identifies documentation drift without silently overriding current tokens", "Does not create a competing design authority"]
+    },
+    {
+      "id": "read-only-audit",
+      "prompt": "Review this page for generic design and accessibility issues. Do not change files. You only have a screenshot.",
+      "expect": ["Gives concrete visual observations without writing files", "Does not claim keyboard, screen-reader or interaction tests were performed", "Does not assign an unexplained passing score"]
+    },
+    {
+      "id": "substantial-project-record",
+      "prompt": "Redesign our portfolio to emphasize the actual project work. No design record exists; implementation changes are authorized.",
+      "expect": ["Selects a content-specific composition and explains the direction", "Records relevant decisions in the project rather than the plugin", "Audits actual layout beyond decorative color/font changes", "Records checks performed and remaining limitations"]
+    }
+  ]
+}

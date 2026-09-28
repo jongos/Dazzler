@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Design and refine web interfaces with intentional typography, perceptual color palettes, layout, and interaction. Select licensed open fonts and validate color roles. Use for frontend visual design and implementation while preserving the user's brand and stack.
+description: Design, refine, and de-slop web interfaces with intentional typography, perceptual color palettes, layout, and interaction. Use for frontend design, implementation, or making a UI less generic while preserving the user's brand and stack.
 license: Apache-2.0; see LICENSE.txt
 ---
 
@@ -11,6 +11,10 @@ When asked to update this skill or its plugin, read [MAINTENANCE.md](MAINTENANCE
 Adapted and modified on 2026-09-28 from davila7/claude-code-templates, creative-design/frontend-design. This version adds ChatGPT/Codex tool routing and verification, and revises the workflow to preserve existing brands and user scope. See [provenance](PROVENANCE.md).
 
 Create a usable interface whose visual identity follows its subject and audience. Make deliberate choices instead of applying the same aesthetic to every project. An explicit brief, reference, or established design system takes precedence over novelty.
+
+## Design from purpose
+
+For substantial new interfaces, redesigns or requests to make a UI less generic, use [the adapted deslop framework](references/deslop.md), credited to **Samuel Berthe (samber)**. It connects artifact type and audience to a design direction, tokens, component states and a review of the actual result. Inspect existing design records and tokens first. Infer a useful direction from the brief without mandatory approval gates, preserve brand choices, and reuse the [design-record guide](references/design-record.md) when durable project documentation is warranted. For a small edit, apply only the relevant [interface craft](references/interface-craft.md); do not expand it into a redesign.
 
 ## Make typography a design foundation
 
@@ -60,6 +64,8 @@ These integrations are optional and selected by the requested deliverable. Do no
 ## Verify the result
 
 Review the design against the brief: which decisions are specific to this product, and which merely repeat familiar defaults? Revise unjustified choices without violating requested styling.
+
+Use [the design audit](references/design-audit.md) to compare the actual composition with the intended direction and check applicable component states. Distinguish verified checks, failures, unavailable checks and features outside scope. A common font, hue or layout is not a defect by itself; fix failures of purpose, hierarchy or behavior instead of enforcing a style blacklist.
 
 For implemented interfaces, use proportionate checks:
 

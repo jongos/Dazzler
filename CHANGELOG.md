@@ -2,6 +2,13 @@
 
 Each entry accompanies the commit and push containing the described changes.
 
+## 2026-09-28 — 0.4.0: Integrate Samuel Berthe's frontend-design-deslop framework
+
+- **Changed:** The skill now connects artifact purpose, audience and existing design constraints to a deliberate direction, semantic tokens, component-state craft and an evidence-based review of the rendered result. Existing fonts, measured-color tools, brand locks, stack choices and project token authority remain in force. Small edits do not acquire a mandatory discovery or documentation cycle.
+- **Added:** Four adapted guides covering the framework, durable design records, interface craft and design audits; 12 manual behavioral scenarios; Samuel Berthe/samber creator credit, the original MIT notice, a pinned source revision and a 22-file source inventory with adaptation mapping. Only `skills/frontend-design-deslop` is integrated; the root license is retained solely as its governing notice. No wider-project features or new runtime dependencies are added.
+- **Why:** Make design decisions specific to the task and improve component completeness beyond surface styling. The adaptation avoids blanket bans on fonts/colors, mandatory user approval gates, stale-document overrides and an unexplained numeric taste score. It also corrects upstream focus-outline and modal-focus recommendations and distinguishes WCAG 2.4.13 AAA from AA.
+- **Validation:** Skill/plugin structure, local reference links, JSON/version consistency, license hash and staged whitespace checks. Manual instruction review covered brand locks, small edits, existing token authority, read-only screenshot audits and applicable component states. The new behavioral scenarios are not reported as executed agent evaluations. No rendering or executable helper changes were made, so previous browser/helper results were not rerun or claimed for this guidance update.
+
 ## 2026-09-28 — 0.3.0: Perceptual color selection and semantic palette validation
 
 - **Changed:** The skill now selects color direction from the brief and existing brand, then measures functional roles instead of assuming a harmonious palette is accessible. Locked colors remain exact; conflicting requirements produce an explicit unresolved report and no CSS/HTML export. Typography and rendered-state review remain part of the workflow.
