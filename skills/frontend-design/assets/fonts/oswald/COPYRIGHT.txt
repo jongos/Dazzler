@@ -1,0 +1,3 @@
+Copyright notices extracted verbatim from the bundled font name tables.
+
+Copyright 2016 The Oswald Project Authors (https://github.com/googlefonts/OswaldFont)

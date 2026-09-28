@@ -1,0 +1,5 @@
+Copyright notices extracted verbatim from the bundled font name tables.
+
+Copyright Rapha Bastide 2011
+
+Copyright Raphael Bastide 2011 Forked by Jérémy Landes Nones

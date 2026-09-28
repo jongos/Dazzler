@@ -1,0 +1,7 @@
+Copyright notices extracted verbatim from the bundled font name tables.
+
+Copyright (c) 2011 by Tyler Finck. All rights reserved.
+
+Copyright (c) 2013 by The League of Moveable Type. All rights reserved.
+
+Copyright 2014 Adobe Systems Incorporated. All rights reserved.

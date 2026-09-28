@@ -1,0 +1,3 @@
+Copyright notices extracted verbatim from the bundled font name tables.
+
+The Polish TeX Users Group GUST on behalf of Local TeX Users Groups

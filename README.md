@@ -2,6 +2,19 @@
 
 A frontend design skill adapted for ChatGPT/Codex environments that support local skills. It guides deliberate typography, color, layout, interface copy, interaction, and visual verification while respecting an existing brand and technology stack.
 
+## Typography and open fonts
+
+Version 0.2.0 adds a [catalog of all 25 Open Foundry families](skills/frontend-design/references/font-catalog.md), checked on September 28, 2026. It includes technical attributes extracted from actual binaries, editorial descriptions, GitHub/source URLs, license evidence and known directory errors. **24 families / 124 unmodified font files are bundled**; Nimbus Sans L is cataloged with manual source/license guidance.
+
+The skill automatically chooses fonts appropriate to the brief while respecting existing brand choices. It checks actual text, required styles and features before visual fit. The [typography guide](skills/frontend-design/references/typography.md) covers pairings, performance, licenses, fallbacks, and desktop installation when needed. An offline helper can recommend candidates and export selected files with their notices and ready-to-use CSS:
+
+```shell
+python skills/frontend-design/scripts/fonts.py recommend --role body --mood literary --text "A thoughtful introduction"
+python skills/frontend-design/scripts/fonts.py export work-sans --dest ./public/fonts --file "WorkSans[wght].ttf"
+```
+
+The helper makes project-local copies, never OS installations. Its ranking is a transparent shortlist heuristic; the agent makes the final contextual choice and checks rendering. See [third-party notices](THIRD_PARTY_NOTICES.md) and the [machine-readable inventory](skills/frontend-design/references/font-catalog.json) for exact versions, sources, hashes, and font-specific terms.
+
 ## Credit
 
 This project adapts the **frontend-design** skill from [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates), specifically [cli-tool/components/skills/creative-design/frontend-design](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design). Credit belongs to the original project's authors and contributors for the source design guidance.
@@ -46,8 +59,8 @@ The skill can also be selected automatically for relevant frontend design reques
 
 ## Dependencies
 
-There are no required runtime packages, API keys, Claude tools, MCP servers, or external services. The upstream folder contained only a skill and its license. Optional host capabilities are used when available and appropriate; they are not bundled or installed automatically. A particular frontend project may have its own dependencies.
+There are no required API keys, Claude tools, MCP servers, or external services. The font helper uses Python 3's standard library. Binary inspection for maintainers uses the pinned packages in `requirements-dev.txt`. The original upstream skill contained only instructions and its license; this adaptation now also bundles fonts, notices, a catalog, and helpers. Optional host capabilities are used when available and appropriate; they are not installed automatically. A particular frontend project may have its own dependencies.
 
 ## License
 
-This repository, including the adaptations, is licensed under the [Apache License, Version 2.0](LICENSE). The original skill's license is also retained inside its folder so standalone copies preserve the license.
+Our instructions, scripts, and original catalog annotations are licensed under the [Apache License, Version 2.0](LICENSE). **Bundled fonts and upstream support files retain their own licenses**; they are not relicensed as Apache. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and each asset folder. The original skill's Apache license is retained inside the skill folder as well.

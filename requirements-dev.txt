@@ -1,0 +1,4 @@
+# Only catalog maintenance and binary inspection need these packages.
+# The installed skill and its font-selection helper use Python's standard library.
+fonttools==4.66.0
+brotli==1.2.0

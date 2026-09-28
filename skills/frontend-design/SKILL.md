@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Design and refine distinctive web interfaces, pages, dashboards, and components with intentional typography, layout, color, and interaction. Use for frontend visual design and implementation; keep established brand systems and the user's chosen stack.
+description: Design and refine web interfaces with intentional typography, layout, color, and interaction. Select suitable open fonts from a licensed catalog. Use for frontend visual design and implementation while preserving the user's brand and stack.
 license: Apache-2.0; see LICENSE.txt
 ---
 
@@ -11,6 +11,12 @@ When asked to update this skill or its plugin, read [MAINTENANCE.md](MAINTENANCE
 Adapted and modified on 2026-09-28 from davila7/claude-code-templates, creative-design/frontend-design. This version adds ChatGPT/Codex tool routing and verification, and revises the workflow to preserve existing brands and user scope. See [provenance](PROVENANCE.md).
 
 Create a usable interface whose visual identity follows its subject and audience. Make deliberate choices instead of applying the same aesthetic to every project. An explicit brief, reference, or established design system takes precedence over novelty.
+
+## Make typography a design foundation
+
+When the brief leaves fonts open, automatically choose a best-fit face for the project's audience, content, reading task and visual character. Read [the typography workflow](references/typography.md) for selection and implementation, then consult relevant entries in [the font catalog](references/font-catalog.md). The catalog covers all 25 families found on Open Foundry on 2026-09-28; 24 families have licensed, unmodified files bundled in `assets/fonts/`.
+
+Filter by actual character coverage, needed weights/italics, technical features and loading budget before comparing subjective character. Typography includes hierarchy, measure, spacing and rendering, not just a font name. Choose and implement without asking for a routine font approval when a suitable bundled option is available and project edits are authorized. Explain the choice briefly. Preserve established brand fonts, never silently replace a missing language/style requirement, and use the workflow's exact-source guidance when manual approval or desktop installation is necessary.
 
 ## Establish the direction
 
@@ -39,7 +45,7 @@ Write concise interface copy from the user's perspective. Name actions by their 
 
 ## Implement with available capabilities
 
-This is an instruction-only skill. It requires no Claude CLI, Anthropic API, MCP server, model-specific SDK, or package installation.
+The design guidance requires no Claude CLI, Anthropic API, MCP server or model-specific SDK. An optional offline Python helper shortlists and copies bundled fonts with their licenses; normal use needs no third-party Python packages. Catalog-maintenance tools have separate development dependencies.
 
 - Existing codebase: use its framework, package manager, components, tokens, and available development commands. Add dependencies only when the actual feature warrants them. Keep CSS specificity predictable.
 - Complete new website: when the installed Sites skill applies, read and follow it for creation and preview. This skill supplies aesthetic guidance, not a replacement hosting workflow.

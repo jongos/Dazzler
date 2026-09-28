@@ -11,3 +11,5 @@ Changes: restructured design guidance; removed the assumed client history and ma
 OpenAI skill format reference: https://developers.openai.com/plugins/build/skills
 
 The folder is intended for this local ChatGPT/Codex environment's personal skills directory. The ZIP is a portable copy, not evidence of installation in other ChatGPT accounts or cloud environments.
+
+Typography expansion, 2026-09-28: the original dependency audit above describes the source skill, not this expanded package. Version 0.2.0 adds a catalog of 25 Open Foundry families, 24 bundled families under their individual terms, and an optional standard-library Python selection/export helper. Consult references/font-catalog.md and each assets/fonts/*/SOURCE.md for attribution and licensing; font assets are not covered by the skill's Apache license.

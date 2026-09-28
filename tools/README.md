@@ -1,0 +1,16 @@
+# Font catalog maintenance
+
+The catalog is a reviewed snapshot, not a live scraper dependency. Normal skill use and `scripts/fonts.py` need only Python's standard library.
+
+1. Run `python tools/crawl_open_foundry.py --out /path/to/new-snapshot.json` to capture current directory facts. The scraper uses the site's public Nuxt payload, fails on a missing schema, and does not download fonts. Compare all detail pages with the existing catalog. Do not adopt license labels or repository placeholders without checking them.
+2. Follow the family author/publisher's repository or release archive. Inspect the exact font's license, notices, version and any source-distribution requirements. For a mirror, label it as such. Pin GitHub downloads to a commit; preserve archive URL and SHA-256 for release downloads. Do not blindly refresh all binaries from moving URLs.
+3. Preserve original bytes, copyright, license, and provenance in `assets/fonts/<id>/`. Changes to a font, including format conversion or subsetting, require a separate review of its license and reserved names. Keep GUST's full archive and manifest with TeX Gyre Heros. Keep Nimbus excluded until its exact source-distribution requirements are resolved.
+4. With `requirements-dev.txt` installed in a development environment, use `tools/inspect_font.py`'s `inspect(path)` to derive technical data. Update `references/font-catalog.json` with separate directory claims, binary facts, editorial judgments and deliberate CSS descriptors. Do not erase raw OS/2 values when correcting CSS mappings. Update asset/support hashes. Record the exact source URL of each downloaded font. License URLs and commits live in each family's source notice and distribution record.
+5. Run `python tools/render_font_catalog.py`, `python tools/validate_fonts.py --inspect-binaries`, and `python -m unittest discover -s tests -v`. Check actual browser loading for new or replaced binaries. A parsed font is not necessarily accepted by a browser's sanitizer.
+6. Bump the plugin version, update the counts and developer changelog, and follow `AGENTS.md` to commit, push and verify the remote SHA. Review public files for accidental client data or machine-specific temporary paths.
+
+The SHA-256 inventory detects accidental changes; it is not an independent signature from each font's author. Source availability and branch heads can change after the snapshot date. Font metadata may overstate coverage; test real text and shaping for the intended language.
+
+Asset files use `-text -whitespace` in `.gitattributes` so Git preserves upstream line endings and intentional whitespace without rewriting license text or invalidating the inventory. Whitespace checks still apply to our code and documentation outside the asset tree. After staging an update, run `python tools/validate_fonts.py --staged` to compare the actual Git blobs to every recorded asset hash.
+
+Optional browser check: with Playwright and its Chromium runtime available in the development environment, run `node tools/test_font_loading.cjs /path/to/qa-output`. It serves only cataloged local font files on a temporary loopback server, loads every bundled face, and writes a JSON report plus desktop/mobile specimen screenshots. These browser dependencies are not required for skill use and are not bundled.

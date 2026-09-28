@@ -1,0 +1,7 @@
+Copyright notices extracted verbatim from the bundled font name tables.
+
+Digitized data copyright (c) 2010 Google Corporation.
+Copyright (c) 2012 Red Hat, Inc.
+
+Digitized data copyright (c) 2010 Google Corporation. 
+Copyright (c) 2012 Red Hat, Inc.

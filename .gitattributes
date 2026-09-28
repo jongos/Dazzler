@@ -1,0 +1,7 @@
+# Font and support-file hashes are byte-exact, including upstream license line endings.
+skills/frontend-design/assets/fonts/** -text -whitespace
+*.otf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.zip binary
