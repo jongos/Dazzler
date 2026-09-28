@@ -42,3 +42,21 @@ class ContextTests(unittest.TestCase):
             self.assertFalse(found["shadcn"]["supported"])
             self.assertTrue(any("byte-budget" in x for x in found["skipped"]))
             self.assertFalse(any(x["path"] == "DESIGN.md" for x in found["records"]))
+
+    def test_declared_color_conventions_without_inline_bindings(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / "components.json").write_text(
+                json.dumps({"tailwind": {"css": "app.css", "cssVariables": True}})
+            )
+            css = root / "app.css"
+            css.write_text(":root{--background:0 0% 100%;--primary:222.2 47.4% 11.2%}")
+            self.assertEqual(
+                context.discover(root)["shadcn"]["convention"], "hsl-channels"
+            )
+            css.write_text(":root{--background:oklch(1 0 0);--primary:#123456}")
+            self.assertEqual(
+                context.discover(root)["shadcn"]["convention"], "color-values"
+            )
+            css.write_text(":root{--background:0 0% 100%;--primary:#123456}")
+            self.assertFalse(context.discover(root)["shadcn"]["supported"])

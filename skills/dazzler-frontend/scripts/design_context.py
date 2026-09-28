@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import stat
 from itertools import islice
@@ -20,6 +21,8 @@ def discover(root):
     root = Path(os.path.abspath(root))
     if not root.is_dir() or any(linked(p) for p in [root, *root.parents]):
         raise ValueError("Use an existing unlinked project root")
+    # Resolve Windows short-name aliases after rejecting linked ancestors.
+    root = root.resolve()
     records, skipped = [], []
     budget, total = 0, 0
     shadcn = None
@@ -124,8 +127,35 @@ def discover(root):
                     except UnicodeError:
                         shadcn = {"supported": False, "reason": "CSS must use UTF-8"}
                         continue
+                    # v3 commonly wraps variables in tailwind.config, not this CSS.
+                    clean = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
+                    values = re.findall(
+                        r"--(?:background|foreground|primary|primary-foreground)\s*:\s*([^;}]+)",
+                        clean,
+                    )
+                    channel = any(
+                        re.fullmatch(r"[-+\d.]+\s+[-+\d.]+%\s+[-+\d.]+%", value.strip())
+                        for value in values
+                    )
+                    full = any(
+                        re.match(
+                            r"(?:#|oklch\(|oklab\(|hsl\(|rgb\(|color\()", value.strip()
+                        )
+                        for value in values
+                    )
+                    wrapped = bool(re.search(r"hsl\(\s*var\(\s*--", clean))
+                    if (
+                        full
+                        and (channel or wrapped)
+                        or not (full or channel or wrapped)
+                    ):
+                        shadcn = {
+                            "supported": False,
+                            "reason": "Mixed or unknown color syntax; inspect existing component bindings",
+                        }
+                        continue
                     convention = (
-                        "hsl-channels" if "hsl(var(--" in text else "color-values"
+                        "hsl-channels" if channel or wrapped else "color-values"
                     )
                     shadcn = {
                         "supported": supported,

@@ -10,7 +10,7 @@ function scalar(value) {
     if (!Number.isFinite(number)) throw Error("Nonfinite YAML number");
     return number;
   }
-  if (/^[!&*\[\]{>|]|^(?:true|false|null|~)$/.test(value) || value.includes(" #"))
+  if (/^[#!&*\[\]{>|]|^(?:true|false|null|~)$/.test(value) || value.includes(" #"))
     throw Error("Unsupported YAML scalar; quote strings and use nested mappings");
   return value;
 }

@@ -44,6 +44,7 @@ test("Safe YAML preserves unknown scalar mappings/prose and refuses unsupported 
   assert(doc.unsupported.includes("custom"));
   for (const yaml of [
     "x: !!python/object bad",
+    "x: #123456",
     "x: &anchor value",
     "x: [1, 2]",
     "x: 1\nx: 2",

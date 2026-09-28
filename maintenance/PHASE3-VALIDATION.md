@@ -5,7 +5,7 @@ Release 0.18.0 implements persistent design context, bounded DESIGN.md interchan
 ## Evidence
 
 - 59 JavaScript tests cover the pinned interchange linter, supported-value round trips, unsafe YAML, unresolved color locks, canonical continuation, real font metadata, static interchange and both theme syntaxes.
-- 44 Python tests cover bounded discovery, existing record location, ambiguity, external/oversized paths and exporter typography input limits alongside the prior regression suite.
+- 45 Python tests cover bounded discovery, existing record location, ambiguity, external/oversized paths and exporter typography input limits alongside the prior regression suite.
 - A fresh Node process resumes serialized canonical data exactly. This is a deterministic two-process continuation fixture, not a live AI-host evaluation.
 - Legacy output was compared directly against the published 0.17.0 implementation for default and custom configurations; complete returned outputs matched in schema-1 mode.
 - Chromium renders 320/390/1440 widths, 200% text scaling, static print sizes and a compiled original shadcn-style React fixture with light/dark toggling and keyboard interaction. Local licensed font CSS is loaded. No registry component was downloaded or installed.
