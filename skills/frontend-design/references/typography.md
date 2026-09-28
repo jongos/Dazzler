@@ -17,6 +17,8 @@ Preserve user-selected fonts and established brand systems. When the brief leave
 
 The helper requires only Python 3. It reads the checked catalog offline and never downloads fonts, installs system fonts, or transmits project text.
 
+The agent runs these commands and applies the result as part of the automatic workflow. Do not ask the user to run them, choose catalog IDs, or approve a routine font choice. Shortlists are internal unless the user requests alternatives.
+
 From the skill directory:
 
 ```shell

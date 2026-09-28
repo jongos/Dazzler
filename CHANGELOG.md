@@ -2,6 +2,13 @@
 
 Each entry accompanies the commit and push containing the described changes.
 
+## 2026-09-28 — 0.5.0: Automatic design orchestration with optional refinement
+
+- **Changed:** Calling `$frontend-design` with a task now explicitly defaults to agent-selected fonts, colors, composition and interactions through implementation and verification. The agent runs existing helpers internally; routine aesthetic uncertainty no longer becomes a question, selector, approval gate or request for the user to run commands. Direct tweaks preserve unrelated choices. Skill/plugin prompts and README lead with this experience.
+- **Added:** One automatic workflow connecting brief interpretation, deslop reasoning, font constraints/export, measured color generation, component craft and final review; a separate opt-in refinement guide for focused choices or actual interactive previews; three additional manual behavioral scenarios for automatic use, requested controls and missing runtimes.
+- **Why:** Make the existing stack operate as one design capability without adding a duplicate decision engine or runtime dependency. The agent supplies contextual judgment, the helpers supply constraint evidence, and rendering checks the combined result. Brand locks, task scope and necessary external-action permissions remain intact; missing runtimes use available alternatives with explicit verification limits.
+- **Validation:** Skill/plugin structure, local links, YAML/JSON/version consistency and staged whitespace checks. Compatibility smoke checks found eligible font families at 400/700 for editorial and numeric-interface samples and passing 44-pair light/dark color systems for cozy/professional directions. These verify helper compatibility, not aesthetic superiority. The 15 manual behavioral cases were reviewed as scenarios, not executed as independent agent evaluations. No font files, upstream algorithms, dependencies or preview code changed.
+
 ## 2026-09-28 — 0.4.0: Integrate Samuel Berthe's frontend-design-deslop framework
 
 - **Changed:** The skill now connects artifact purpose, audience and existing design constraints to a deliberate direction, semantic tokens, component-state craft and an evidence-based review of the rendered result. Existing fonts, measured-color tools, brand locks, stack choices and project token authority remain in force. Small edits do not acquire a mandatory discovery or documentation cycle.

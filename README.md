@@ -2,11 +2,23 @@
 
 A frontend design skill adapted for ChatGPT/Codex environments that support local skills. It guides deliberate typography, color, layout, interface copy, interaction, and visual verification while respecting an existing brand and technology stack.
 
+## Just describe the task
+
+```text
+Use $frontend-design to build a website for a neighborhood ceramics studio.
+```
+
+Version 0.5.0 makes the default workflow automatic: the agent infers a direction, chooses and applies suitable fonts, colors, layout and interactions, runs the relevant helpers, and checks the result. You do not need to choose a mood, answer a style questionnaire, run commands or approve routine aesthetic decisions. Existing brand choices and explicit constraints are preserved.
+
+For more control, say “show me three font pairings,” “open a palette comparison,” or “make this warmer and denser.” The skill offers focused questions or an available interactive preview when requested, then applies the adjustment without restarting discovery. Specific tweaks are instructions, not another approval step.
+
+The [automatic workflow](skills/frontend-design/references/automatic-workflow.md) connects the underlying resources; [optional controls](skills/frontend-design/references/design-controls.md) explain refinement. Helper commands below are internal/developer interfaces, not prerequisites for using the skill. Missing runtimes use available alternatives with honest verification limits; purchases, OS changes and external publication retain their usual authorization boundaries.
+
 ## Typography and open fonts
 
 Version 0.2.0 adds a [catalog of all 25 Open Foundry families](skills/frontend-design/references/font-catalog.md), checked on September 28, 2026. It includes technical attributes extracted from actual binaries, editorial descriptions, GitHub/source URLs, license evidence and known directory errors. **24 families / 124 unmodified font files are bundled**; Nimbus Sans L is cataloged with manual source/license guidance.
 
-The skill automatically chooses fonts appropriate to the brief while respecting existing brand choices. It checks actual text, required styles and features before visual fit. The [typography guide](skills/frontend-design/references/typography.md) covers pairings, performance, licenses, fallbacks, and desktop installation when needed. An offline helper can recommend candidates and export selected files with their notices and ready-to-use CSS:
+The skill automatically chooses fonts appropriate to the brief while respecting existing brand choices. It checks actual text, required styles and features before visual fit. The [typography guide](skills/frontend-design/references/typography.md) covers pairings, performance, licenses, fallbacks, and desktop installation when needed. The agent uses this offline helper internally to recommend candidates and export selected files with their notices and ready-to-use CSS:
 
 ```shell
 python skills/frontend-design/scripts/fonts.py recommend --role body --mood literary --text "A thoughtful introduction"

@@ -59,6 +59,21 @@
       "expect": ["Gives concrete visual observations without writing files", "Does not claim keyboard, screen-reader or interaction tests were performed", "Does not assign an unexplained passing score"]
     },
     {
+      "id": "automatic-default",
+      "prompt": "Use $frontend-design to build a website for a neighborhood ceramics studio. Choose what works best.",
+      "expect": ["Infers a coherent direction and completes the authorized artifact", "Runs available font/color helpers internally and applies selected assets and tokens", "Does not ask routine font, palette, mood or layout questions", "Does not stop at a shortlist or ask the user to run commands"]
+    },
+    {
+      "id": "optional-controls",
+      "prompt": "I like this design. Show me two warmer palette alternatives in an interactive comparison if possible, keeping the typography and layout.",
+      "expect": ["Keeps the current design as the reference and preserves fonts/layout", "Uses measured palette alternatives with current locks", "Opens or creates a real comparison if supported, otherwise states the fallback", "Does not claim preview controls saved source changes unless implemented"]
+    },
+    {
+      "id": "runtime-fallback",
+      "prompt": "Use $frontend-design to refine this existing page. The environment has no Python runtime, but the project already includes its approved fonts.",
+      "expect": ["Uses existing approved fonts rather than requesting Python installation", "Completes the refinement with available tools", "Does not claim font-helper validation ran", "Does not install maintenance dependencies in the project"]
+    },
+    {
       "id": "substantial-project-record",
       "prompt": "Redesign our portfolio to emphasize the actual project work. No design record exists; implementation changes are authorized.",
       "expect": ["Selects a content-specific composition and explains the direction", "Records relevant decisions in the project rather than the plugin", "Audits actual layout beyond decorative color/font changes", "Records checks performed and remaining limitations"]

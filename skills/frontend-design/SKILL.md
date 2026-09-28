@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Design, refine, and de-slop web interfaces with intentional typography, perceptual color palettes, layout, and interaction. Use for frontend design, implementation, or making a UI less generic while preserving the user's brand and stack.
+description: Automatically design, refine, and de-slop web interfaces from a brief. Choose licensed fonts, measured colors, layout and interactions, then implement and verify. Offer design controls only when requested; preserve the user's brand and stack.
 license: Apache-2.0; see LICENSE.txt
 ---
 
@@ -11,6 +11,14 @@ When asked to update this skill or its plugin, read [MAINTENANCE.md](MAINTENANCE
 Adapted and modified on 2026-09-28 from davila7/claude-code-templates, creative-design/frontend-design. This version adds ChatGPT/Codex tool routing and verification, and revises the workflow to preserve existing brands and user scope. See [provenance](PROVENANCE.md).
 
 Create a usable interface whose visual identity follows its subject and audience. Make deliberate choices instead of applying the same aesthetic to every project. An explicit brief, reference, or established design system takes precedence over novelty.
+
+## Automatic by default
+
+`Use $frontend-design to ...` is enough. Follow [the automatic workflow](references/automatic-workflow.md): understand the task, choose a coherent direction, run the relevant font and color helpers yourself, implement, inspect and refine. The user does not need to select a mood, font, palette, harmony, component library or layout, run commands, or approve routine aesthetic choices. Infer reasonable choices from the brief and available context and complete the requested deliverable. A progress explanation is not an approval gate.
+
+Keep internal candidate comparisons and helper configuration out of the user's way. Deliver one considered result with a brief rationale, not a menu of decisions or an offer to start. “Best” means best fit for the task under the available evidence, then checked in context; a heuristic score alone does not decide quality.
+
+Switch to [optional refinement controls](references/design-controls.md) only when the user asks for alternatives, wants to choose, or requests a tweak. Preserve all choices they have already supplied. Ask a necessary question only when the task itself cannot be responsibly completed from context, such as an indispensable missing input or contradictory non-negotiable requirements; uncertain taste is not a blocker. External-action permissions still apply.
 
 ## Design from purpose
 
@@ -26,7 +34,7 @@ Filter by actual character coverage, needed weights/italics, technical features 
 
 When choosing or substantially changing colors, follow [the color workflow](references/color-workflow.md). Infer mood and audience from the brief, preserve locked brand colors, and select contextual inspiration from the attributed palette catalog or generate from a brand seed. Use perceptual ramps and measured semantic roles for light/dark themes; never treat color harmony or a mood label as evidence of accessible contrast. The optional offline helper generates CSS tokens, provenance, contrast reports and a reviewable preview. If constraints conflict it reports no match instead of silently changing locked colors. Review the actual interface with the chosen typography, non-color state cues and keyboard focus before delivery.
 
-Identify the product, audience, main task, content, and constraints from the request and available project context. Inspect relevant existing screens and components before changing an interface. Ask only when missing information materially changes the result; otherwise state a reasonable assumption and proceed. Do not invent company facts, testimonials, performance claims, or customer logos to fill a layout. Mark illustrative data clearly.
+Identify the product, audience, main task, content, and constraints from the request and available project context. Inspect relevant existing screens and components before changing an interface. Infer unspecified aesthetic preferences and proceed; do not treat them as missing requirements that need questions. Do not invent company facts, testimonials, performance claims, or customer logos to fill a layout. Mark illustrative data clearly.
 
 For a substantial new design, briefly describe a coherent visual direction before implementing it:
 
@@ -51,7 +59,7 @@ Write concise interface copy from the user's perspective. Name actions by their 
 
 ## Implement with available capabilities
 
-The design guidance requires no Claude CLI, Anthropic API, MCP server or model-specific SDK. An optional offline Python helper shortlists and copies bundled fonts with their licenses; normal use needs no third-party Python packages. Catalog-maintenance tools have separate development dependencies.
+The design guidance requires no Claude CLI, Anthropic API, MCP server or model-specific SDK. Use the offline Python font helper and bundled Node color helper internally when those decisions are in scope and the runtimes are available. Normal use needs no npm install or third-party Python packages. Catalog-maintenance dependencies are separate and must not be installed in the user's project merely to use the skill. The automatic workflow explains how to continue when a runtime is unavailable.
 
 - Existing codebase: use its framework, package manager, components, tokens, and available development commands. Add dependencies only when the actual feature warrants them. Keep CSS specificity predictable.
 - Complete new website: when the installed Sites skill applies, read and follow it for creation and preview. This skill supplies aesthetic guidance, not a replacement hosting workflow.

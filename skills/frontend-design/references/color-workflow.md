@@ -1,6 +1,6 @@
 # Color selection and implementation
 
-Use this when choosing or materially changing a palette. Preserve existing tokens for small edits. Infer direction from the brief, content, audience and brand; ask only when a missing requirement changes the result. A mood describes a design intent, not a universal psychological or cultural effect.
+Use this when choosing or materially changing a palette. Preserve existing tokens for small edits. Infer direction from the brief, content, audience and brand and choose unspecified preferences yourself. Ask only for an indispensable task input or an unresolved hard constraint, not a routine aesthetic choice. A mood describes a design intent, not a universal psychological or cultural effect.
 
 ## Choose a direction
 
@@ -11,6 +11,8 @@ Use a brand seed or palette as a starting point. Select monochromatic, analogous
 The helper preserves curated primary/secondary/accent hues when a palette alone is selected. An explicit base or harmony overrides those hues. With a base alone, it defaults to analogous; choose another harmony when the brief warrants it. Exact `brand` colors are retained, while functional tokens use related variants. Backgrounds and role colors are newly derived, not copies of the upstream palette's accessibility claims.
 
 ## Generate locally
+
+The agent operates this helper and integrates its output. The user does not need to supply a mood, seed, palette ID, harmony or configuration file. Keep candidate selection internal unless alternatives are requested; the standalone preview is an optional review aid, not a required approval step.
 
 Node.js 22 or newer is recommended. No npm installation, API key, network request or system settings change is needed for normal use. The vendored engine contains @ankhorage/color-theory 0.3.1 and Culori 4.0.2 under MIT. If Node is unavailable, use the guidance with available tools and report contrast as unverified until measured; do not fabricate numerical results or automatically install a runtime.
 

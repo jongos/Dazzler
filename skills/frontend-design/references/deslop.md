@@ -10,7 +10,7 @@ Inspect the relevant implementation and existing design records first: `DESIGN.m
 
 Determine the artifact, audience, primary task and constraints before choosing its visual treatment. In a composite interface, classify each region separately. Use context to propose a few descriptive words, then translate each into a concrete decision. For example, “precise” might mean aligned numeric columns and restrained motion; “welcoming” might mean readable humanist text and clear explanatory labels. These are hypotheses to check, not universal color or personality laws.
 
-Ask only for information that materially affects the design and cannot be inferred. Use the host's available question mechanism appropriately. Do not require approval of adjectives, a fixed question sequence, or a separate discovery session when the brief is sufficient. State reasonable assumptions and continue authorized work.
+In default automatic mode, infer unspecified aesthetic choices and proceed. Ask only for an indispensable task input or a conflict between hard requirements that cannot be resolved within scope. Use the host's available question mechanism appropriately. Do not require approval of adjectives, a fixed question sequence, or a separate discovery session. State reasonable assumptions and continue authorized work; offer aesthetic questions or selectors only when the user requests control.
 
 | Artifact | Prioritize | Useful structure | Avoid by default |
 |---|---|---|---|
