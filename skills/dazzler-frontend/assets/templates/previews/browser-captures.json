@@ -1,0 +1,182 @@
+[
+  {
+    "id": "html-professional",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "5e4c1a9d12ea7c01dec9ac7d46e2079a26d4c2619817afffdcd81b83cd305cfa"
+  },
+  {
+    "id": "html-legal",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "ae065d960fe67187c4ee70c4be19b14c1ef18e8c2b90dd7c815393931c5dca34"
+  },
+  {
+    "id": "html-business",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "e6ea7df59ee04126f48ca0f08d352b9ab615001b5f8411c8f10c5e4723857476"
+  },
+  {
+    "id": "html-fun",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "645232d4e274ba6f2d05efda69e7ca5a01ad7f7f0b4ecf5878727fdd1b8245c8"
+  },
+  {
+    "id": "html-family",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "4b2d689fb3bb554740cba905435f97764bcfefdd42707072f2e385aa3c044543"
+  },
+  {
+    "id": "html-presentation",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "bf7c430899ed233a69d87ab80ecf31d20c5a6d0c03a165f5ad9ccb7ef9c93102"
+  },
+  {
+    "id": "html-school",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "ed44bdda14a989e1cffd090016c0625acffa422aa0889d649a1e7f4920eef99b"
+  },
+  {
+    "id": "html-marketing",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "b67ebbbc6fcf3b26270529147e970f229f96aba44b26eee6ed4fc567ac6ac0ac"
+  },
+  {
+    "id": "html-restaurant",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "d362336ab501afd3fc23bd2e7e67f135a6f74474fccd3638fcde7c53a9308026"
+  },
+  {
+    "id": "html-technical",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "fe074426af67e26973da9bf0d5e306eafcef4f6768f5fd0c619203a5eae3a680"
+  },
+  {
+    "id": "webapp-workspace",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "4ba8f597dee5ccab08bf5302664e220102d1095ec7e2b7f7603b7b84240b5a4e"
+  },
+  {
+    "id": "webapp-board",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "1680234c719715d8e9f4769a702785d98b3518da3ff89e938eae07ab3adcd052"
+  },
+  {
+    "id": "webapp-settings",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "f357dd59505bb785906770210c1e0a9bdb6fa4e938d35df6855a0b6f59c95aaf"
+  },
+  {
+    "id": "data-revenue",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "ece29f19b70d43b2fc1a25ac66e60fe83270eafeb2c23ba6cfb19016100d42cd"
+  },
+  {
+    "id": "data-operations",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "bdb97abb8c278058eb6771a82202ea9a951e69333e46faac389732dc944da8be"
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "3db60b38bf069c144aa72d0a5ecdc0e2a6938765ac872d7584010db06fd11181"
+  },
+  {
+    "id": "restaurant-cafe",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "f9c76d2a0e1b401cc1642dbb4859d238aa3f85813eecb21f5e8aa08a8e29fb79"
+  },
+  {
+    "id": "restaurant-reservations",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "efc4dd515519f6780bc063380a639248f2b7416ea4cf03ad88090be015354b2c"
+  },
+  {
+    "id": "restaurant-menu",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "7d9eed8e46acedd20a6dcc71e0e1625a81b5e36cf7e838b84903c8c9a005f523"
+  },
+  {
+    "id": "business-portal",
+    "engine": "Chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "sourceSha256": "c24dd1e49b2819b63ccb77dc47737e8386ae40f16623ec11603f46eec3d1894f"
+  }
+]

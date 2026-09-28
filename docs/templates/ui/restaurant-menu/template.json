@@ -5,8 +5,8 @@
   "brand": "Olive & Grain",
   "title": "Good food. Your kind of lunch.",
   "intro": "Bowls, small plates, something sweet. Served 11:30\u201316:00.",
-  "accent": "#5E5A24",
-  "tint": "#F7F4E5",
+  "accent": "#3A6325",
+  "tint": "#EDEFF7",
   "items": [
     {
       "name": "Roasted vegetable bowl",
@@ -63,8 +63,65 @@
       "description": "Lemon, a little sugar, sparkling water.",
       "price": 6,
       "vegan": true
+    },
+    {
+      "name": "Smoky bean bowl",
+      "category": "Bowls",
+      "description": "Black beans, corn, lime rice, salsa.",
+      "price": 18,
+      "vegan": true
+    },
+    {
+      "name": "Roasted carrot dip",
+      "category": "Small plates",
+      "description": "Carrot, cumin, seeded crackers.",
+      "price": 10,
+      "vegan": true
+    },
+    {
+      "name": "Herb chicken bowl",
+      "category": "Bowls",
+      "description": "Chicken, grains, greens, herb dressing.",
+      "price": 22,
+      "vegan": false
+    },
+    {
+      "name": "Peach iced tea",
+      "category": "Drinks",
+      "description": "Black tea, peach, mint.",
+      "price": 5.5,
+      "vegan": true
+    },
+    {
+      "name": "Brown butter cookie",
+      "category": "Dessert",
+      "description": "Chocolate, brown butter, sea salt.",
+      "price": 5,
+      "vegan": false
+    },
+    {
+      "name": "Tomato and white bean salad",
+      "category": "Small plates",
+      "description": "White beans, tomato, basil.",
+      "price": 12,
+      "vegan": true
     }
   ],
+  "secondary": "#A63E25",
+  "bright": "#F6D762",
+  "paper": "#F7F8E8",
+  "headingFont": "Young Serif",
+  "font": "Georgia",
+  "voice": "Market board / leaf and tomato",
+  "ink": "#172033",
+  "sample": {
+    "fictional": true,
+    "asOf": "2027-06-21T09:40:00",
+    "seed": "dazzler-showcase-014",
+    "scope": "Local demonstration only; resets on reload"
+  },
+  "season": "Summer 2027",
+  "serviceWindow": "11:30\u201316:00",
   "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",

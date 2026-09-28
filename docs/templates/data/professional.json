@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "fictional": true,
+  "asOf": "2027-06-21",
+  "scenario": "Weekly executive status report with decision, milestones, risks and ownership",
+  "generation": "Deterministic authored fixtures; no client or external personal data",
+  "weeklyAccepted": [
+    5,
+    9,
+    12,
+    16,
+    18
+  ],
+  "budget": {
+    "approved": 60000,
+    "spent": 42000,
+    "remaining": 18000
+  },
+  "document": [
+    {
+      "title": "Launch with confidence",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "PORTAL RELEASE / WEEK 24 / 14\u201318 JUNE 2027"
+        },
+        {
+          "type": "metrics",
+          "values": [
+            [
+              "75%",
+              "scope complete"
+            ],
+            [
+              "$18k",
+              "budget remaining"
+            ],
+            [
+              "24",
+              "days to launch"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "label": "DECISION / 21 JUNE",
+          "text": "Approve the 20-customer pilot. Identity integration is three days late; a reviewed password fallback protects the 12 July launch."
+        },
+        {
+          "type": "chart",
+          "label": "Cumulative accepted deliverables",
+          "rows": [
+            [
+              "W20",
+              5
+            ],
+            [
+              "W21",
+              9
+            ],
+            [
+              "W22",
+              12
+            ],
+            [
+              "W23",
+              16
+            ],
+            [
+              "W24",
+              18
+            ]
+          ],
+          "kind": "line",
+          "unit": "deliverables",
+          "asset": "professional-1"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Workstream",
+            "Accepted / planned",
+            "Owner"
+          ],
+          "rows": [
+            [
+              "Account setup",
+              "6 / 6",
+              "Alex Rivera"
+            ],
+            [
+              "Invoice history",
+              "5 / 6",
+              "Sam Okafor"
+            ],
+            [
+              "Identity",
+              "3 / 6",
+              "Maya Chen"
+            ],
+            [
+              "Help and training",
+              "4 / 6",
+              "Lena Ortiz"
+            ]
+          ],
+          "widths": [
+            42,
+            28,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Protect the launch window",
+      "blocks": [
+        {
+          "type": "metrics",
+          "values": [
+            [
+              "3",
+              "tracked risks"
+            ],
+            [
+              "0",
+              "new funding requested"
+            ],
+            [
+              "25 Jun",
+              "pilot review"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Risk / owner",
+            "Trigger",
+            "Response"
+          ],
+          "rows": [
+            [
+              "Identity / Maya",
+              "Access arrives after 22 June",
+              "Reviewed password fallback"
+            ],
+            [
+              "Content / Lena",
+              "Help copy not signed off",
+              "Limit pilot to reviewed flows"
+            ],
+            [
+              "Support / Sam",
+              "More than 5 pilot incidents",
+              "Pause new invitations"
+            ]
+          ],
+          "widths": [
+            28,
+            34,
+            38
+          ]
+        },
+        {
+          "type": "h",
+          "text": "What success looks like"
+        },
+        {
+          "type": "p",
+          "text": "Invite 20 customers, observe setup completion and review support handoffs. The sponsor receives a recorded go / revise / pause recommendation after the 25 June acceptance review."
+        },
+        {
+          "type": "h",
+          "text": "Risks and response"
+        },
+        {
+          "type": "p",
+          "text": "R-03 \u2022 Identity provider access. If credentials arrive after 22 June, the pilot will use password sign-in. Maya owns the fallback; security review is booked for 23 June."
+        },
+        {
+          "type": "h",
+          "text": "Decision for the sponsor"
+        },
+        {
+          "type": "p",
+          "text": "Approve the 20-customer pilot with password sign-in, subject to security review. No additional budget is requested. Priya Shah to confirm by 21 June, 15:00."
+        },
+        {
+          "type": "h",
+          "text": "Next week"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Finance: approve invoice totals and download wording by 21 June.",
+            "Engineering: complete pilot deployment and rollback rehearsal by 24 June.",
+            "Customer success: confirm pilot participants and support coverage by 25 June."
+          ]
+        }
+      ]
+    }
+  ],
+  "design": {
+    "accent": "#164BCA",
+    "secondary": "#AE391C",
+    "bright": "#FFCD4D",
+    "paper": "#FFFFFF",
+    "headingFont": "Archivo",
+    "voice": "Executive briefing / cobalt signals"
+  },
+  "capabilities": "Decision hierarchy, measured progress and owner-led action"
+}

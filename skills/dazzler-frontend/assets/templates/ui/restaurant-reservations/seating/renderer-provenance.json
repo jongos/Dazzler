@@ -1,0 +1,172 @@
+{
+  "build": "tools/build_hotspots.mjs; pinned package-lock.json",
+  "packages": [
+    {
+      "name": "@svgdotjs/svg.js",
+      "version": "3.2.8",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/svgdotjs/svg.js.git"
+      }
+    },
+    {
+      "name": "@vue/compiler-core",
+      "version": "3.5.43",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/compiler-core"
+      }
+    },
+    {
+      "name": "@vue/compiler-dom",
+      "version": "3.5.43",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/compiler-dom"
+      }
+    },
+    {
+      "name": "@vue/reactivity",
+      "version": "3.5.43",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/reactivity"
+      }
+    },
+    {
+      "name": "@vue/runtime-core",
+      "version": "3.5.43",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/runtime-core"
+      }
+    },
+    {
+      "name": "@vue/runtime-dom",
+      "version": "3.5.43",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/runtime-dom"
+      }
+    },
+    {
+      "name": "@vue/shared",
+      "version": "3.5.43",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/shared"
+      }
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "version": "0.9.12",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/xmldom/xmldom.git"
+      }
+    },
+    {
+      "name": "react",
+      "version": "19.2.4",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/react.git",
+        "directory": "packages/react"
+      }
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.4",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/react.git",
+        "directory": "packages/react-dom"
+      }
+    },
+    {
+      "name": "react-fast-compare",
+      "version": "3.2.2",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/FormidableLabs/react-fast-compare"
+      }
+    },
+    {
+      "name": "react-img-mapper",
+      "version": "2.0.2",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/img-mapper/img-mapper.git",
+        "directory": "packages/react-img-mapper"
+      }
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/react.git",
+        "directory": "packages/scheduler"
+      }
+    },
+    {
+      "name": "vue",
+      "version": "3.5.43",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git"
+      }
+    },
+    {
+      "name": "vue-img-mapper",
+      "version": "0.1.0",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/img-mapper/vue-img-mapper.git"
+      }
+    }
+  ],
+  "files": {
+    "licenses/@svgdotjs__svg.js-LICENSE.txt": "455113977c98c54dad8598e092b99aad6be0ed8c5c4a0722154acf4b21df4730",
+    "licenses/@vue__compiler-core-LICENSE": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+    "licenses/@vue__compiler-dom-LICENSE": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+    "licenses/@vue__reactivity-LICENSE": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+    "licenses/@vue__runtime-core-LICENSE": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+    "licenses/@vue__runtime-dom-LICENSE": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+    "licenses/@vue__shared-LICENSE": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+    "licenses/@xmldom__xmldom-LICENSE": "4da724fc305d81606b245b324d4d2586916b9d248b23d82183df753ace0fdf71",
+    "licenses/react-dom-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "licenses/react-fast-compare-LICENSE": "1e187eec147d04bcbb3b7aef9f3b0ea82228961fa7d390d3efb9e57751dbe0cb",
+    "licenses/react-img-mapper-LICENSE.txt": "8e0bff9669ced2ab788ce4639b3dd1537f95697dec2fbc060d005ee97bf60f25",
+    "licenses/react-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "licenses/scheduler-LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "licenses/vue-img-mapper-LICENSE.txt": "9ddfa3766d69fea45b92467eaef5c4d0910d63799875c3cb9ef27f33a80def82",
+    "licenses/vue-LICENSE": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+    "native.js": "34f9351c7841d670777dd431445e738e775ed308c64fc3a7666be7d54b3511aa",
+    "react.js": "b08e6457919e72d9f8176300107bcc338946a482ee20f018e9d7d06b46cc3bdc",
+    "svg.js": "5263772da9d5b346db935ed10566580947957f5187a0988316c3de634299bd8b",
+    "vue.js": "c70c110090eed8f7218a14ef9f57f0ce567cc6df76ba1a88728d1eb29ccd7aa8",
+    "xml.mjs": "8153b5f003f908711cb56ab77655eff8db3a7c5fafd314662895f8340534df52"
+  }
+}

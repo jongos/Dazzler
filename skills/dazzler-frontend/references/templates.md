@@ -19,7 +19,7 @@ The machine-readable inventory is [catalog.json](../assets/templates/catalog.jso
 | Restaurant | Seasonal dining menu |
 | Technical | Technical design specification |
 
-IDs follow `docx-professional` and `html-professional`, replacing the category as needed. DOCX files use editable Word styles and native tables. Desktop fonts are Arial or Georgia, referenced rather than embedded; inspect substitution in the target application. HTML files use bundled Work Sans and Young Serif with local font notices, responsive layouts and print rules. The legal layout supplies no legal clauses or jurisdiction-specific advice. The presentation document is a Word handout, not a PPTX deck.
+IDs follow `docx-professional` and `html-professional`, replacing the category as needed. DOCX files use editable Word styles and native tables. Desktop fonts are context-specific Arial, Georgia, Trebuchet MS or Consolas, referenced rather than embedded; inspect substitution in the target application. HTML files select from seven bundled families, including display, serif, sans and monospace faces with available genuine italic companions with local font notices, responsive layouts and print rules. The legal layout supplies no legal clauses or jurisdiction-specific advice. The presentation document is a Word handout, not a PPTX deck.
 
 ## UI: 10 folders
 
@@ -48,14 +48,24 @@ python scripts/templates.py export restaurant-cafe --out NEW_PROJECT_DIR
 python scripts/templates.py export docx-business --out NEW_PROJECT_DIR
 ```
 
-The helper verifies hashes, refuses overwrites and copies the required fonts/licenses with relative paths intact. Open the returned entrypoint. Do not copy HTML alone and lose its font folder. A DOCX export has no bundled font dependency. Reusing the templates does not require the authoring dependency `python-docx`.
+The helper verifies hashes, refuses overwrites and copies the required fonts, licenses, scenario data, charts and interaction assets with relative paths intact. Open the returned entrypoint. Do not copy HTML alone and lose its font folder. A DOCX export has no bundled font dependency. Reusing the templates does not require the authoring dependency `python-docx`.
 
 For final documents, follow the host's document workflow and render the customized result. For UI, test the actual content at narrow/wide widths, keyboard focus and primary actions. Defaults are not evidence of accessibility for later changes.
 
-Original template layouts and demo code: Jon Gosier, Apache-2.0. Fonts retain their separate notices. Rebuild source: repository `tools/build_templates.py`; library generation is a maintenance operation, not a user setup step.
-
 ## Worked examples, not empty outlines
 
-Version 0.10.0 contains fictional, internally consistent examples. Replace every sample name, date, price, metric, contact and claim before delivery; do not carry examples forward as user facts. DOCX documents span one to three planned pages (17 pages total). The proposal includes a fee and payment schedule; the legal memo separates supplied evidence from missing authority; the family planner covers all seven days; the RFC includes a payload and failure policy. Restaurant layouts distinguish browsing, pickup ordering, table requests and editorial dining.
+Version 0.14.0 contains fictional, internally consistent examples. Replace every sample name, date, price, metric, contact and claim before delivery; do not carry examples forward as user facts. DOCX documents span one to three planned pages (20 pages total). The proposal includes a fee and payment schedule; the legal memo separates supplied evidence from missing authority; the family planner covers all seven days; the RFC includes a payload and failure policy. Restaurant layouts distinguish browsing, pickup ordering, table requests and editorial dining.
 
 The revenue dashboard derives net revenue, totals and exports from the selected rows. Booking dates follow the stated Tuesday–Saturday service schedule. All UI state remains local and resets on reload. No native AI-host execution is implied by package validation.
+
+## Expressive, automatic and purposeful
+
+Choose a visual identity suited to the content: cobalt status reporting, restrained plum legal analysis, violet/coral proposals, playful pink/blue invitations, teal household planning, lime-on-midnight presentation, green science, vermilion campaign briefs, oxblood menus or cyan technical writing. These are examples, not required palettes. Carry meaning through spacing, scale, bold colored terms and true italics, while keeping longer reading comfortable.
+
+Use the scenario JSON as the data source when adapting a demonstration. Document fixtures contain complete page content plus structured figures; UI JSON supplies row-level sample records and reference series. Reconcile totals, distinguish targets from observed results and retain synthetic labels until verified project facts replace them. Use charts, data tables and meaningful interactions only where they help the task. The reservation example includes a keyboard-selectable seating guide; the revenue example has twelve reconciled months and four quarter filters.
+
+Preview all 30 individual artifacts in `assets/templates/index.html`. Word preview links contain actual Microsoft Word page snapshots, with 20 pages across the collection. HTML/UI thumbnails are browser captures. Printable document editions use deliberate page breaks and colored hierarchy; interface print styles preserve useful information and a static seating plan. Re-render after customization: saved screenshots do not validate later edits or another computer's font substitutions.
+
+## Notes and credits
+
+Original template layouts, synthetic scenarios and demo code: Jon Gosier, Apache-2.0. Fonts retain their separate notices. Rebuild source: `tools/build_templates.py`; publication source: `tools/publish_template_gallery.py`. Generation is a maintenance operation, not a user setup step.

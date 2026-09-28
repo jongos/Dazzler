@@ -72,15 +72,45 @@ Examples: “Match our existing site,” “Stress-test this dashboard,” “Ca
 
 **[Studio workflow and command reference](skills/dazzler-frontend/references/design-studio.md)**. Browser inspection needs an existing Playwright/Chromium runtime (or equivalent host tools); DOCX/PPTX need existing `python-docx`/`python-pptx`. Core import, tokens, charts, assets, changes and HTML exports stay lightweight. Automated findings require review; no complete accessibility, native pagination, or cross-model design-quality certification is claimed.
 
-## ✦ Thirty templates — refined in 0.10.0
+## ✦ Thirty templates — the showcase collection
 
-**Browse the live gallery** · **Download the template library**
+**[Explore all 30 live examples](https://jongos.github.io/Dazzler/templates/)**
 
-- **10 DOCX + 10 matching HTML documents:** professional, legal, business, fun, family, presentation, school, marketing, restaurant and technical.
-- **10 UI folders, each with HTML, CSS and JSON:** three general webapps, two data dashboards, four restaurant experiences and one business portal.
-- Editable Word styles, local fonts for HTML, responsive layouts, print rules, illustrative data and working local demo controls. Original templates are Apache-2.0; font licenses stay intact.
+Ten editable Word documents, ten editorial HTML documents and ten interactive interfaces. Every snapshot below shows a rebuilt artifact with a distinct typographic and color identity. The Word previews show actual Microsoft Word pages.
 
-Ask for the result and Dazzler selects the starting point automatically. [Template selection and export reference](skills/dazzler-frontend/references/templates.md). Templates live in `skills/dazzler-frontend/assets/templates/{docx,html,ui}` and ship in every full platform package.
+Rich fictional scenarios demonstrate reconciled budgets, a 12-month revenue story, experimental observations, evidence review, delivery outcomes, menus and accessible seating exploration. Open an example to inspect its data or try its local controls. All actions remain demonstrations; no booking, purchase or account change is submitted.
+
+Dazzler chooses the relevant typography, color, layout, chart and print treatment automatically. Existing brand choices stay in control. Documents retain editable structures; HTML and UI editions include local fonts, chart assets, notices and print styles.
+
+### Editable Word documents
+
+<table>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-professional.html"><img src="docs/templates/previews/docx-professional.jpg" alt="Customer portal launch — DOCX snapshot" width="100%"></a><br><strong>Customer portal launch</strong> · DOCX</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-legal.html"><img src="docs/templates/previews/docx-legal.jpg" alt="Supplier exit review — DOCX snapshot" width="100%"></a><br><strong>Supplier exit review</strong> · DOCX</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-business.html"><img src="docs/templates/previews/docx-business.jpg" alt="Customer onboarding redesign — DOCX snapshot" width="100%"></a><br><strong>Customer onboarding redesign</strong> · DOCX</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-fun.html"><img src="docs/templates/previews/docx-fun.jpg" alt="The great game night — DOCX snapshot" width="100%"></a><br><strong>The great game night</strong> · DOCX</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-family.html"><img src="docs/templates/previews/docx-family.jpg" alt="Our week at a glance — DOCX snapshot" width="100%"></a><br><strong>Our week at a glance</strong> · DOCX</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-presentation.html"><img src="docs/templates/previews/docx-presentation.jpg" alt="Approve the onboarding pilot — DOCX snapshot" width="100%"></a><br><strong>Approve the onboarding pilot</strong> · DOCX</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-school.html"><img src="docs/templates/previews/docx-school.jpg" alt="How light affects seedling growth — DOCX snapshot" width="100%"></a><br><strong>How light affects seedling growth</strong> · DOCX</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-marketing.html"><img src="docs/templates/previews/docx-marketing.jpg" alt="Make the first visit easy — DOCX snapshot" width="100%"></a><br><strong>Make the first visit easy</strong> · DOCX</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-restaurant.html"><img src="docs/templates/previews/docx-restaurant.jpg" alt="Juniper dinner menu — DOCX snapshot" width="100%"></a><br><strong>Juniper dinner menu</strong> · DOCX</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/docx/preview-technical.html"><img src="docs/templates/previews/docx-technical.jpg" alt="Order status webhook delivery — DOCX snapshot" width="100%"></a><br><strong>Order status webhook delivery</strong> · DOCX</td></tr>
+</table>
+
+### Editorial HTML documents
+
+<table>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/professional.html"><img src="docs/templates/previews/html-professional.jpg" alt="Customer portal launch — HTML snapshot" width="100%"></a><br><strong>Customer portal launch</strong> · HTML</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/legal.html"><img src="docs/templates/previews/html-legal.jpg" alt="Supplier exit review — HTML snapshot" width="100%"></a><br><strong>Supplier exit review</strong> · HTML</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/business.html"><img src="docs/templates/previews/html-business.jpg" alt="Customer onboarding redesign — HTML snapshot" width="100%"></a><br><strong>Customer onboarding redesign</strong> · HTML</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/fun.html"><img src="docs/templates/previews/html-fun.jpg" alt="The great game night — HTML snapshot" width="100%"></a><br><strong>The great game night</strong> · HTML</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/family.html"><img src="docs/templates/previews/html-family.jpg" alt="Our week at a glance — HTML snapshot" width="100%"></a><br><strong>Our week at a glance</strong> · HTML</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/presentation.html"><img src="docs/templates/previews/html-presentation.jpg" alt="Approve the onboarding pilot — HTML snapshot" width="100%"></a><br><strong>Approve the onboarding pilot</strong> · HTML</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/school.html"><img src="docs/templates/previews/html-school.jpg" alt="How light affects seedling growth — HTML snapshot" width="100%"></a><br><strong>How light affects seedling growth</strong> · HTML</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/marketing.html"><img src="docs/templates/previews/html-marketing.jpg" alt="Make the first visit easy — HTML snapshot" width="100%"></a><br><strong>Make the first visit easy</strong> · HTML</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/restaurant.html"><img src="docs/templates/previews/html-restaurant.jpg" alt="Juniper dinner menu — HTML snapshot" width="100%"></a><br><strong>Juniper dinner menu</strong> · HTML</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/html/technical.html"><img src="docs/templates/previews/html-technical.jpg" alt="Order status webhook delivery — HTML snapshot" width="100%"></a><br><strong>Order status webhook delivery</strong> · HTML</td></tr>
+</table>
+
+### Interactive interfaces
+
+<table>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-workspace/index.html"><img src="docs/templates/previews/webapp-workspace.jpg" alt="Projects overview — UI snapshot" width="100%"></a><br><strong>Projects overview</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-board/index.html"><img src="docs/templates/previews/webapp-board.jpg" alt="Onboarding sprint — UI snapshot" width="100%"></a><br><strong>Onboarding sprint</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-settings/index.html"><img src="docs/templates/previews/webapp-settings.jpg" alt="Profile &amp; preferences — UI snapshot" width="100%"></a><br><strong>Profile &amp; preferences</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/data-revenue/index.html"><img src="docs/templates/previews/data-revenue.jpg" alt="Revenue performance — UI snapshot" width="100%"></a><br><strong>Revenue performance</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/data-operations/index.html"><img src="docs/templates/previews/data-operations.jpg" alt="Support command desk — UI snapshot" width="100%"></a><br><strong>Support command desk</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-fine-dining/index.html"><img src="docs/templates/previews/restaurant-fine-dining.jpg" alt="The season, at the table. — UI snapshot" width="100%"></a><br><strong>The season, at the table.</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-cafe/index.html"><img src="docs/templates/previews/restaurant-cafe.jpg" alt="Your usual, or something new. — UI snapshot" width="100%"></a><br><strong>Your usual, or something new.</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-reservations/index.html"><img src="docs/templates/previews/restaurant-reservations.jpg" alt="Make an evening of it. — UI snapshot" width="100%"></a><br><strong>Make an evening of it.</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-menu/index.html"><img src="docs/templates/previews/restaurant-menu.jpg" alt="Good food. Your kind of lunch. — UI snapshot" width="100%"></a><br><strong>Good food. Your kind of lunch.</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/business-portal/index.html"><img src="docs/templates/previews/business-portal.jpg" alt="Alder Studio / Brand &amp; website — UI snapshot" width="100%"></a><br><strong>Alder Studio / Brand &amp; website</strong> · UI</td></tr>
+</table>
 
 ## 🚀 Install Dazzler
 
@@ -171,7 +201,7 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "type": "bar",
+  "title": "Allocate by the job to be done",
+  "description": "Synthetic worked example. Exact values accompany the graphic.",
+  "source": "Original Dazzler synthetic scenario",
+  "unit": "USD",
+  "xLabel": "Category",
+  "yLabel": "Value",
+  "font": "Arial",
+  "background": "#FFFFFF",
+  "width": 720,
+  "height": 200,
+  "xType": "nominal",
+  "warnings": [],
+  "data": [
+    {
+      "x": "Paid social",
+      "y": 1400,
+      "series": "Data",
+      "_order": 0
+    },
+    {
+      "x": "Local print",
+      "y": 600,
+      "series": "Data",
+      "_order": 1
+    },
+    {
+      "x": "Content",
+      "y": 700,
+      "series": "Data",
+      "_order": 2
+    },
+    {
+      "x": "Reserve",
+      "y": 300,
+      "series": "Data",
+      "_order": 3
+    }
+  ],
+  "series": [
+    "Data"
+  ],
+  "colors": [
+    "#B3381B"
+  ],
+  "palette": [
+    {
+      "id": "series-1",
+      "label": "Data",
+      "color": "#B3381B",
+      "shape": "circle",
+      "dash": "none",
+      "pattern": "pattern-1",
+      "contrast": 6.003024025459232
+    }
+  ],
+  "format": "html",
+  "engine": "vega"
+}

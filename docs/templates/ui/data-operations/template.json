@@ -5,8 +5,8 @@
   "brand": "Signal",
   "title": "Support command desk",
   "intro": "Snapshot \u2022 21 June 2027, 09:40 \u2022 Sample service data",
-  "accent": "#285775",
-  "tint": "#EAF3FA",
+  "accent": "#1B5681",
+  "tint": "#EDEFF7",
   "tickets": [
     {
       "id": "SUP-2041",
@@ -61,8 +61,173 @@
       "age": 8,
       "owner": "Alex",
       "status": "Open"
+    },
+    {
+      "id": "SUP-2047",
+      "subject": "Reset a team invitation",
+      "queue": "Access",
+      "priority": "High",
+      "age": 14,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2048",
+      "subject": "Reconcile payment reference",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 72,
+      "owner": "Sam",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2049",
+      "subject": "Update contact details",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 38,
+      "owner": "Alex",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2050",
+      "subject": "Review workspace access",
+      "queue": "Access",
+      "priority": "High",
+      "age": 95,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2051",
+      "subject": "Reset a team invitation",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 22,
+      "owner": "Sam",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2052",
+      "subject": "Reconcile payment reference",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 11,
+      "owner": "Alex",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2053",
+      "subject": "Update contact details",
+      "queue": "Access",
+      "priority": "High",
+      "age": 35,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2054",
+      "subject": "Review workspace access",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 49,
+      "owner": "Sam",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2055",
+      "subject": "Reset a team invitation",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 126,
+      "owner": "Alex",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2056",
+      "subject": "Reconcile payment reference",
+      "queue": "Access",
+      "priority": "High",
+      "age": 18,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2057",
+      "subject": "Update contact details",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 63,
+      "owner": "Sam",
+      "status": "Resolved"
+    },
+    {
+      "id": "SUP-2058",
+      "subject": "Review workspace access",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 7,
+      "owner": "Alex",
+      "status": "Resolved"
     }
   ],
+  "secondary": "#B63838",
+  "bright": "#F3C659",
+  "paper": "#EEF5FB",
+  "headingFont": "Office Code Pro",
+  "font": "Arial",
+  "voice": "Operations console / blue and amber",
+  "ink": "#172033",
+  "sample": {
+    "fictional": true,
+    "asOf": "2027-06-21T09:40:00",
+    "seed": "dazzler-showcase-014",
+    "scope": "Local demonstration only; resets on reload"
+  },
+  "arrivals": [
+    12,
+    18,
+    24,
+    21,
+    16,
+    11,
+    8
+  ],
+  "showcaseChart": {
+    "asset": "data-operations",
+    "title": "Arrivals across the shift",
+    "rows": [
+      [
+        "8:00",
+        12
+      ],
+      [
+        "9:00",
+        18
+      ],
+      [
+        "10:00",
+        24
+      ],
+      [
+        "11:00",
+        21
+      ],
+      [
+        "12:00",
+        16
+      ],
+      [
+        "13:00",
+        11
+      ],
+      [
+        "14:00",
+        8
+      ]
+    ],
+    "unit": "tickets"
+  },
   "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",

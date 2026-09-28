@@ -25,7 +25,7 @@ Full packages now include brand import, system-token export, browser inspection,
 
 ## Template library
 
-Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Dazzler selects and copies a suitable starting point automatically. Browse the gallery or download only the templates. Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
+Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Each now has a distinct visual identity, robust fictional scenarios and an actual captured preview. Contextual charts, genuine italic fonts, editable structures and print treatments are selected automatically; relevant data and interaction assets travel with exports. Dazzler selects and copies a suitable starting point automatically. Browse the gallery or download only the templates. Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
 
 ## Visualization adapters in 0.11.0
 
@@ -39,11 +39,11 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 ## Notes and credits
 
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-claude.zip)
-- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-claude-plugin.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-gemini.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-cursor.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-copilot.zip)
-- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.13.0/DAZZLER-PROMPT.md)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-claude.zip)
+- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-claude-plugin.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-gemini.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-cursor.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-copilot.zip)
+- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.14.0/DAZZLER-PROMPT.md)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-templates.zip)

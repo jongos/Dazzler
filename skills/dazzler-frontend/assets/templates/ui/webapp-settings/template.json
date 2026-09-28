@@ -5,8 +5,8 @@
   "brand": "Forma",
   "title": "Profile & preferences",
   "intro": "Manage how your team sees you and when you hear from us.",
-  "accent": "#4E5673",
-  "tint": "#F0F2F8",
+  "accent": "#096B61",
+  "tint": "#EDEFF7",
   "profile": {
     "name": "Alex Morgan",
     "email": "alex@example.com",
@@ -14,6 +14,77 @@
     "timezone": "America/New_York",
     "digest": true,
     "mentions": true
+  },
+  "secondary": "#9E3D60",
+  "bright": "#BCE5D8",
+  "paper": "#F4FAF6",
+  "headingFont": "Work Sans",
+  "font": "Arial",
+  "voice": "Personal workspace / mint and rose",
+  "ink": "#172033",
+  "sample": {
+    "fictional": true,
+    "asOf": "2027-06-21T09:40:00",
+    "seed": "dazzler-showcase-014",
+    "scope": "Local demonstration only; resets on reload"
+  },
+  "activity": [
+    {
+      "device": "Desktop browser",
+      "location": "Sampletown",
+      "lastUsed": "Today 09:12",
+      "current": true
+    },
+    {
+      "device": "Mobile browser",
+      "location": "Sampletown",
+      "lastUsed": "Yesterday 18:40",
+      "current": false
+    }
+  ],
+  "notificationVolumes": [
+    8,
+    5,
+    9,
+    3,
+    6,
+    2,
+    1
+  ],
+  "showcaseChart": {
+    "asset": "webapp-settings",
+    "title": "A quieter notification rhythm",
+    "rows": [
+      [
+        "Mon",
+        8
+      ],
+      [
+        "Tue",
+        5
+      ],
+      [
+        "Wed",
+        9
+      ],
+      [
+        "Thu",
+        3
+      ],
+      [
+        "Fri",
+        6
+      ],
+      [
+        "Sat",
+        2
+      ],
+      [
+        "Sun",
+        1
+      ]
+    ],
+    "unit": "sample notifications"
   },
   "schemaVersion": 2,
   "license": "Apache-2.0",

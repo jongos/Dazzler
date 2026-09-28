@@ -39,6 +39,14 @@ Run `npm run build:hotspots` after `npm ci --ignore-scripts --no-audit --no-fund
 
 Run `python tools/seal_runtime.py` after final review, then `python skills/dazzler-frontend/scripts/health.py`. Use `tools/offline_build.py` to capture or restore the maintainer-only source kit; the restored kit can rebuild the three engines without package installation on its recorded OS/architecture. `tools/no_network.cjs` blocks Node networking during verification; it is not an OS sandbox.
 
+## Template showcase maintenance
+
+`python tools/build_templates.py` rebuilds all 30 artifacts from deterministic fictional scenarios, selected local font faces and the actual chart/region exporters. It requires existing python-docx, Node and Playwright; it does not install them. `node tools/test_templates.cjs QA_DIRECTORY` checks both browser widths, data/filter behavior, local assets and seating interactions, then captures the 20 HTML/UI thumbnails and print PDFs.
+
+On Windows with Microsoft Word available, run `tools/capture_word_templates.ps1 -Output PDF_DIRECTORY`, then `python tools/capture_template_pages.py PDF_DIRECTORY` with existing PDFium/Pillow. The capture step requires planned native pagination, emits all 20 Word-page snapshots and records source hashes. Inspect rendered pages visually; a page-count assertion is not a layout review. Other native renderers may be used after changing the recorded engine label honestly.
+
+After snapshots, run `python tools/build_templates.py --gallery-only` to refresh the gallery and byte inventory, then `python tools/publish_template_gallery.py` to update the public collection, README and field manual from that inventory. Re-run browser/Word capture after changing the rendered source. Each main gallery contains 30 distinct snapshots. Keep the canonical and public template folders synchronized before sealing resources and building release packages.
+
 ## Notes and credits
 
 To refresh the curated catalog, review a new hue3 commit and license first. Update the explicit pin and parser in `tools/import_hue3.py`, then run it with a clean checkout. The current import accepts only a306210b7240e183366998ce39fbe7543cc09b41 and exactly 88 unique records. It extracts palette facts and editorial descriptions without importing upstream skill instructions. Its count/schema assertions intentionally require review when upstream changes.

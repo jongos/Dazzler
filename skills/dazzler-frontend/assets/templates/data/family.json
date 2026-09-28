@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "fictional": true,
+  "asOf": "2027-06-21",
+  "scenario": "Seven-day household schedule with meals, pickups, responsibilities and shopping",
+  "generation": "Deterministic authored fixtures; no client or external personal data",
+  "people": [
+    "Alex",
+    "Taylor",
+    "Riley"
+  ],
+  "weeklyMeals": [
+    {
+      "day": "Mon 21",
+      "meal": "Vegetable pasta"
+    },
+    {
+      "day": "Tue 22",
+      "meal": "Rice bowls"
+    },
+    {
+      "day": "Wed 23",
+      "meal": "Soup and toast"
+    },
+    {
+      "day": "Thu 24",
+      "meal": "Tray-bake potatoes"
+    },
+    {
+      "day": "Fri 25",
+      "meal": "Homemade pizza"
+    },
+    {
+      "day": "Sat 26",
+      "meal": "Leftovers"
+    },
+    {
+      "day": "Sun 27",
+      "meal": "Family choice"
+    }
+  ],
+  "document": [
+    {
+      "title": "Our week at a glance",
+      "blocks": [
+        {
+          "type": "metrics",
+          "values": [
+            [
+              "7",
+              "dinners planned"
+            ],
+            [
+              "3",
+              "shared owners"
+            ],
+            [
+              "1",
+              "calm place to check"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Day",
+            "Plans and appointments",
+            "Pickup or owner",
+            "Dinner"
+          ],
+          "rows": [
+            [
+              "Mon 21",
+              "Library returns \u2022 16:00",
+              "Alex picks up Riley",
+              "Vegetable pasta"
+            ],
+            [
+              "Tue 22",
+              "Swimming \u2022 17:15",
+              "Taylor drives; Alex collects",
+              "Rice bowls"
+            ],
+            [
+              "Wed 23",
+              "School project due",
+              "Riley packs model Tuesday",
+              "Soup and toast"
+            ],
+            [
+              "Thu 24",
+              "Dentist \u2022 15:30",
+              "Taylor \u2022 leave at 15:00",
+              "Tray-bake potatoes"
+            ],
+            [
+              "Fri 25",
+              "Movie night \u2022 19:00",
+              "Everyone chooses one option",
+              "Homemade pizza"
+            ],
+            [
+              "Sat 26",
+              "Park picnic \u2022 12:00",
+              "Alex packs lunch",
+              "Leftovers"
+            ],
+            [
+              "Sun 27",
+              "Plan next week \u2022 17:30",
+              "All \u2022 15-minute check-in",
+              "Family choice"
+            ]
+          ],
+          "widths": [
+            12,
+            38,
+            28,
+            22
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Shared jobs"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Alex",
+            "Taylor",
+            "Riley"
+          ],
+          "rows": [
+            [
+              "Shopping \u2022 Tuesday\nRecycling \u2022 Thursday",
+              "Laundry \u2022 Wednesday\nCheck calendar \u2022 Sunday",
+              "Water plants \u2022 Mon/Wed/Fri\nPack bag each evening"
+            ]
+          ],
+          "widths": null
+        },
+        {
+          "type": "h",
+          "text": "Shopping and reminders"
+        },
+        {
+          "type": "p",
+          "text": "Milk \u2022 oats \u2022 tomatoes \u2022 apples \u2022 rice \u2022 dishwasher tablets\nReturn library books Monday. Swimming bag by the door Tuesday. Confirm the picnic weather Saturday morning."
+        },
+        {
+          "type": "callout",
+          "label": "PLAN B IS STILL A PLAN",
+          "text": "Rain on Saturday? Picnic at the community hall. Alex updates Taylor before pickup. Keep emergency details in your private family record, not a public template."
+        }
+      ],
+      "kicker": null
+    }
+  ],
+  "design": {
+    "accent": "#086A66",
+    "secondary": "#AC402A",
+    "bright": "#DCD2FF",
+    "paper": "#FFFDF5",
+    "headingFont": "Young Serif",
+    "voice": "Kitchen calendar / teal and apricot"
+  },
+  "capabilities": "Landscape planning, non-color ownership cues and print utility"
+}

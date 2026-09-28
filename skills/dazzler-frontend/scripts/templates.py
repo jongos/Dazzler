@@ -19,7 +19,8 @@ def export(identifier,destination):
     if target==ROOT or target.is_relative_to(ROOT.parents[1]):raise ValueError('Export into the project, not the installed skill')
     if target.exists():raise ValueError('Use a new directory; existing files are not overwritten')
     rel=template['path'];prefix=rel+'/' if template['format']=='ui' else None
-    required=[p for p in data['files'] if p==rel or (prefix and p.startswith(prefix)) or p in ('LICENSE.txt','NOTICE.txt') or (template['format']!='docx' and p.startswith('fonts/'))]
+    chart_id=template['category'] if template['format']!='ui' else template['id']
+    required=[p for p in data['files'] if p==rel or (prefix and p.startswith(prefix)) or p==template.get('dataset') or p in ('LICENSE.txt','NOTICE.txt') or (template['format']!='docx' and (p.startswith('fonts/') or p.startswith('charts/'+chart_id+'-') or p.startswith('charts/'+chart_id+'.')))]
     for relative in required:
         source=(ROOT/relative).resolve()
         if not source.is_relative_to(ROOT) or hashlib.sha256(source.read_bytes()).hexdigest()!=data['files'][relative]:raise ValueError('Template resource integrity check failed: '+relative)

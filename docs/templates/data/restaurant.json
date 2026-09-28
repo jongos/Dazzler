@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "fictional": true,
+  "asOf": "2027-06-21",
+  "scenario": "Restaurant menu with courses, ingredient descriptions, prices and service notes",
+  "generation": "Deterministic authored fixtures; no client or external personal data",
+  "menuItems": 12,
+  "currency": "USD",
+  "document": [
+    {
+      "title": "Juniper dinner menu",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "An unhurried dinner built around vegetables, grains and the season.\nIllustrative menu \u2022 Prices in USD"
+        },
+        {
+          "type": "h",
+          "text": "To begin"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dish",
+            "Preparation",
+            "Price"
+          ],
+          "rows": [
+            [
+              "Garden leaves",
+              "Radish, soft herbs, mustard dressing",
+              "14"
+            ],
+            [
+              "Roasted beetroot",
+              "Whipped ricotta, orange, toasted hazelnuts",
+              "16"
+            ],
+            [
+              "Warm sourdough",
+              "Cultured butter and sea salt",
+              "8"
+            ]
+          ],
+          "widths": [
+            29,
+            58,
+            13
+          ]
+        },
+        {
+          "type": "h",
+          "text": "From the kitchen"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dish",
+            "Preparation",
+            "Price"
+          ],
+          "rows": [
+            [
+              "Summer squash",
+              "White beans, sage, pumpkin seeds",
+              "26"
+            ],
+            [
+              "Roast chicken",
+              "New potatoes, greens, pan jus",
+              "32"
+            ],
+            [
+              "Market fish",
+              "Braised fennel, lemon, herb oil",
+              "34"
+            ]
+          ],
+          "widths": [
+            29,
+            58,
+            13
+          ]
+        }
+      ],
+      "kicker": null
+    },
+    {
+      "title": "Stay for something sweet",
+      "blocks": [
+        {
+          "type": "h",
+          "text": "The final course"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dish",
+            "Preparation",
+            "Price"
+          ],
+          "rows": [
+            [
+              "Pear and almond",
+              "Warm pear, almond crumb, cream",
+              "11"
+            ],
+            [
+              "Dark chocolate",
+              "Chocolate cr\u00e9meux, olive oil, sea salt",
+              "12"
+            ],
+            [
+              "Seasonal sorbet",
+              "Three scoops, citrus zest",
+              "9"
+            ]
+          ],
+          "widths": [
+            28,
+            59,
+            13
+          ]
+        },
+        {
+          "type": "h",
+          "text": "A glass alongside"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Drink",
+            "Character",
+            "Price"
+          ],
+          "rows": [
+            [
+              "Garden spritz",
+              "Citrus, rosemary, sparkling water \u00b7 alcohol-free",
+              "9"
+            ],
+            [
+              "Orchard cordial",
+              "Apple, chamomile, soda \u00b7 alcohol-free",
+              "8"
+            ],
+            [
+              "House white",
+              "150 ml \u00b7 dry and crisp \u00b7 contains alcohol",
+              "12"
+            ]
+          ],
+          "widths": [
+            28,
+            59,
+            13
+          ]
+        },
+        {
+          "type": "callout",
+          "label": "AT YOUR TABLE",
+          "text": "Tell the team about allergies before ordering. Recipe labels do not guarantee freedom from cross-contact. Menu, pricing and service details are fictional; confirm them before real use."
+        },
+        {
+          "type": "p",
+          "text": "Wednesday\u2013Sunday \u2022 17:30\u201322:00\n42 Orchard Lane, Sampletown \u2022 hello@example.com\nIllustrative prices in USD. Confirm the operator\u2019s tax and service policy."
+        }
+      ]
+    }
+  ],
+  "design": {
+    "accent": "#802338",
+    "secondary": "#52602B",
+    "bright": "#E4BB66",
+    "paper": "#FFF8E9",
+    "headingFont": "Young Serif",
+    "voice": "Seasonal menu / oxblood and herb"
+  },
+  "capabilities": "Menu hierarchy, ingredient detail and dietary notes"
+}

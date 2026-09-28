@@ -1,12 +1,12 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Signal — Support command desk</title><link rel="stylesheet" href="styles.css"></head><body class="template-operations app"><a class="skip" href="#main">Skip to content</a><div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div><header class="top"><a class="brand" href="#main">Signal<span class="brand-dot"></span></a><nav aria-label="Main navigation"><a href="#tickets">Queue</a><a href="#queue-health">Health</a></nav><span class="avatar" aria-label="Alex Morgan">AM</span></header><main id="main"><header class="page-title"><p class="eyebrow">Signal / OPERATIONS</p><h1>Support command desk</h1><p>Snapshot • 21 June 2027, 09:40 • Sample service data</p></header><div class="metrics" id="ops-metrics"></div><div class="split"><section class="panel"><div class="section-head"><h2>Open work</h2><label class="check"><input id="show-resolved" type="checkbox">Include resolved</label></div><div class="filters"><label for="queue">Queue</label><select id="queue"><option>All queues</option><option>Access</option><option>Billing</option><option>Account</option></select><button data-action="download">Export queue</button></div><div id="tickets"></div></section><aside class="rail"><h2>Queue health</h2><div id="queue-health"></div><section class="note"><h3>Response target</h3><p>High priority: first response within 30 minutes. Normal: within 60 minutes. Low: within 120 minutes.</p><p>Age is fixed at this sample snapshot. Resolving a ticket updates this preview only.</p></section></aside></div><p id="status" class="status" role="status" aria-live="polite"></p></main><footer class="site-footer"><span>Signal · Fictional example by Dazzler</span><details><summary>Template notes</summary><p>All names, contact details, dates, prices and figures are illustrative. Actions update this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled fonts retain their notices.</p></details></footer><dialog id="edit-dialog"><form id="edit-form"><h2 id="dialog-title">Add details</h2><div id="dialog-content"></div><label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160"><div class="dialog-actions"><button type="button" id="cancel" class="secondary">Cancel</button><button id="dialog-save">Save preview</button></div></form></dialog><script id="template-data" type="application/json">{
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Signal — Support command desk</title><link rel="stylesheet" href="styles.css"></head><body class="template-operations app"><a class="skip" href="#main">Skip to content</a><div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div><header class="top"><a class="brand" href="#main">Signal<span class="brand-dot"></span></a><nav aria-label="Main navigation"><a href="#tickets">Queue</a><a href="#queue-health">Health</a></nav><span class="avatar" aria-label="Alex Morgan">AM</span></header><main id="main"><header class="page-title"><p class="eyebrow">Signal / OPERATIONS</p><h1>Support command desk</h1><p>Snapshot • 21 June 2027, 09:40 • Sample service data</p></header><div class="metrics" id="ops-metrics"></div><div class="split"><section class="panel"><div class="section-head"><h2>Open work</h2><label class="check"><input id="show-resolved" type="checkbox">Include resolved</label></div><div class="filters"><label for="queue">Queue</label><select id="queue"><option>All queues</option><option>Access</option><option>Billing</option><option>Account</option></select><button data-action="download">Export queue</button></div><div id="tickets"></div></section><aside class="rail"><h2>Queue health</h2><div id="queue-health"></div><section class="note"><h3>Response target</h3><p>High priority: first response within 30 minutes. Normal: within 60 minutes. Low: within 120 minutes.</p><p>Age is fixed at this sample snapshot. Resolving a ticket updates this preview only.</p></section></aside></div><section class="showcase-panel"><div><p class="eyebrow">THE BIGGER PICTURE</p><h2>Arrivals across the shift</h2><p>The arrival profile gives context to the queue snapshot. It is historical sample data, not a live forecast.</p></div><figure><img src="../../charts/data-operations.svg" alt="Arrivals across the shift"><details><summary>Read exact values</summary><table><tbody><tr><th>8:00</th><td>12 tickets</td></tr><tr><th>9:00</th><td>18 tickets</td></tr><tr><th>10:00</th><td>24 tickets</td></tr><tr><th>11:00</th><td>21 tickets</td></tr><tr><th>12:00</th><td>16 tickets</td></tr><tr><th>13:00</th><td>11 tickets</td></tr><tr><th>14:00</th><td>8 tickets</td></tr></tbody></table></details></figure></section><p id="status" class="status" role="status" aria-live="polite"></p></main><footer class="site-footer"><span>Signal · Fictional example by Dazzler</span><details><summary>Template notes</summary><p>All names, contact details, dates, prices and figures are illustrative. Actions update this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled fonts retain their notices.</p><p>Design system: Operations console / blue and amber. Local fonts, synthetic data, responsive layout, print styles and working preview states demonstrate Dazzler.</p></details></footer><dialog id="edit-dialog"><form id="edit-form"><h2 id="dialog-title">Add details</h2><div id="dialog-content"></div><label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160"><div class="dialog-actions"><button type="button" id="cancel" class="secondary">Cancel</button><button id="dialog-save">Save preview</button></div></form></dialog><script id="template-data" type="application/json">{
   "id": "data-operations",
   "category": "data-visualization",
   "layout": "operations",
   "brand": "Signal",
   "title": "Support command desk",
   "intro": "Snapshot • 21 June 2027, 09:40 • Sample service data",
-  "accent": "#285775",
-  "tint": "#EAF3FA",
+  "accent": "#1B5681",
+  "tint": "#EDEFF7",
   "tickets": [
     {
       "id": "SUP-2041",
@@ -61,8 +61,173 @@
       "age": 8,
       "owner": "Alex",
       "status": "Open"
+    },
+    {
+      "id": "SUP-2047",
+      "subject": "Reset a team invitation",
+      "queue": "Access",
+      "priority": "High",
+      "age": 14,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2048",
+      "subject": "Reconcile payment reference",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 72,
+      "owner": "Sam",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2049",
+      "subject": "Update contact details",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 38,
+      "owner": "Alex",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2050",
+      "subject": "Review workspace access",
+      "queue": "Access",
+      "priority": "High",
+      "age": 95,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2051",
+      "subject": "Reset a team invitation",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 22,
+      "owner": "Sam",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2052",
+      "subject": "Reconcile payment reference",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 11,
+      "owner": "Alex",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2053",
+      "subject": "Update contact details",
+      "queue": "Access",
+      "priority": "High",
+      "age": 35,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2054",
+      "subject": "Review workspace access",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 49,
+      "owner": "Sam",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2055",
+      "subject": "Reset a team invitation",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 126,
+      "owner": "Alex",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2056",
+      "subject": "Reconcile payment reference",
+      "queue": "Access",
+      "priority": "High",
+      "age": 18,
+      "owner": "Maya",
+      "status": "Open"
+    },
+    {
+      "id": "SUP-2057",
+      "subject": "Update contact details",
+      "queue": "Billing",
+      "priority": "Normal",
+      "age": 63,
+      "owner": "Sam",
+      "status": "Resolved"
+    },
+    {
+      "id": "SUP-2058",
+      "subject": "Review workspace access",
+      "queue": "Account",
+      "priority": "Low",
+      "age": 7,
+      "owner": "Alex",
+      "status": "Resolved"
     }
   ],
+  "secondary": "#B63838",
+  "bright": "#F3C659",
+  "paper": "#EEF5FB",
+  "headingFont": "Office Code Pro",
+  "font": "Arial",
+  "voice": "Operations console / blue and amber",
+  "ink": "#172033",
+  "sample": {
+    "fictional": true,
+    "asOf": "2027-06-21T09:40:00",
+    "seed": "dazzler-showcase-014",
+    "scope": "Local demonstration only; resets on reload"
+  },
+  "arrivals": [
+    12,
+    18,
+    24,
+    21,
+    16,
+    11,
+    8
+  ],
+  "showcaseChart": {
+    "asset": "data-operations",
+    "title": "Arrivals across the shift",
+    "rows": [
+      [
+        "8:00",
+        12
+      ],
+      [
+        "9:00",
+        18
+      ],
+      [
+        "10:00",
+        24
+      ],
+      [
+        "11:00",
+        21
+      ],
+      [
+        "12:00",
+        16
+      ],
+      [
+        "13:00",
+        11
+      ],
+      [
+        "14:00",
+        8
+      ]
+    ],
+    "unit": "tickets"
+  },
   "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",
@@ -79,7 +244,7 @@ function openDialog(title,action,content='',label='Details'){$('dialog-title').t
 $('cancel').addEventListener('click',()=>dialog.close());
 function projectRender(){const search=($('search')?.value||'').toLowerCase();const rows=cfg.projects.filter(x=>[x.name,x.client,x.owner].join(' ').toLowerCase().includes(search));$('projects').innerHTML=rows.map(x=>`<article class="project-row"><div><p>${esc(x.client)}</p><h3>${esc(x.name)}</h3><span class="pill ${x.status==='At risk'?'warning':''}">${esc(x.status)}</span></div><div><p>${x.done} of ${x.total} tasks complete</p><progress value="${x.done}" max="${x.total||1}" aria-label="${esc(x.name)} task completion"></progress></div><div><p>${esc(x.owner)}</p><strong>Due ${esc(x.due)}</strong></div></article>`).join('');$('empty').hidden=rows.length>0;}
 function boardRender(){const owner=$('owner-filter').value;const tasks=cfg.tasks.filter(x=>owner==='Everyone'||x.owner===owner);$('board-summary').textContent=`${tasks.length} visible tasks · ${cfg.tasks.filter(t=>t.stage==='Done').length} completed overall · ${cfg.tasks.reduce((n,t)=>n+t.points,0)} planned points`;$('board').innerHTML=['Ready','In progress','Review','Done'].map(stage=>`<section class="board-column"><h2>${stage}<span>${tasks.filter(t=>t.stage===stage).length}</span></h2>${tasks.filter(t=>t.stage===stage).map(t=>`<article class="task"><span class="task-id">${esc(t.id)}</span><h3>${esc(t.title)}</h3><p class="pill ${t.priority==='High'?'warning':''}">${esc(t.priority)} priority</p><div class="task-meta"><span>${esc(t.owner)}</span><span>${t.points} points</span></div><button class="secondary" data-move="${esc(t.id)}">${stage==='Done'?'Reopen in Ready':'Move to '+['In progress','Review','Done'][['Ready','In progress','Review'].indexOf(stage)]}</button></article>`).join('')}</section>`).join('');}
-function selectedMonths(){return cfg.months.filter((x,i)=>$('period').value==='all'||($('period').value==='q1'?i<3:i>=3));}
+function selectedMonths(){return cfg.months.filter((x,i)=>$('period').value==='all'||Math.floor(i/3)+1===Number($('period').value.slice(1)));}
 function revenueRender(){const rows=selectedMonths(),gross=rows.reduce((s,x)=>s+x.gross,0),refunds=rows.reduce((s,x)=>s+x.refunds,0),orders=rows.reduce((s,x)=>s+x.orders,0);$('revenue-metrics').innerHTML=[['Net revenue',money(gross-refunds),'Gross less refunds'],['Refund rate',(refunds/gross*100).toFixed(2)+'%',money(refunds)+' returned'],['Orders',orders.toLocaleString('en-US'),'Across the selected period']].map(([a,b,c])=>`<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`).join('');const max=Math.max(...cfg.months.map(x=>x.gross-x.refunds));$('revenue-chart').innerHTML=rows.map(x=>`<div class="bar"><strong>${money((x.gross-x.refunds)/1000).replace(/0+$/,'').replace(/\.$/,'')}k</strong><div class="fill" style="height:${(x.gross-x.refunds)/max*170}px" aria-hidden="true"></div><span>${x.month}</span></div>`).join('');$('revenue-table').innerHTML='<table><thead><tr><th>Month</th><th>Gross USD</th><th>Refunds USD</th><th>Net USD</th><th>Orders</th></tr></thead><tbody>'+rows.map(x=>`<tr><th scope="row">${x.month}</th><td>${money(x.gross)}</td><td>${money(x.refunds)}</td><td>${money(x.gross-x.refunds)}</td><td>${x.orders}</td></tr>`).join('')+`</tbody><tfoot><tr><th>Total</th><td>${money(gross)}</td><td>${money(refunds)}</td><td>${money(gross-refunds)}</td><td>${orders}</td></tr></tfoot></table>`;}
 function filteredTickets(){return cfg.tickets.filter(x=>($('queue').value==='All queues'||x.queue===$('queue').value)&&($('show-resolved').checked||x.status==='Open'));}
 function opsRender(){const open=cfg.tickets.filter(x=>x.status==='Open'),late=open.filter(x=>x.age>({High:30,Normal:60,Low:120}[x.priority]));$('ops-metrics').innerHTML=[['Open tickets',open.length,'Across all queues'],['Past first-response target',late.length,'Based on priority at this snapshot'],['Oldest open ticket',(open.length?Math.max(...open.map(x=>x.age)):0)+' min','Age at 09:40 snapshot']].map(([a,b,c])=>`<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`).join('');const rows=filteredTickets();$('tickets').innerHTML=rows.length?rows.map(x=>`<article class="ticket"><div class="ticket-top"><small>${x.id} · ${x.queue}</small><span class="pill ${x.priority==='High'?'warning':''}">${x.priority} priority</span></div><h3>${x.subject}</h3><div class="ticket-bottom"><small>${x.owner} · ${x.age} min old · ${x.status}</small><button class="secondary" data-resolve="${x.id}" ${x.status==='Resolved'?'disabled':''}>${x.status==='Resolved'?'Resolved':'Resolve in preview'}</button></div></article>`).join(''):'<p>No tickets match these filters.</p>';$('queue-health').innerHTML=['Access','Billing','Account'].map(q=>{const n=open.filter(x=>x.queue===q).length;return `<div class="queue-row"><div><strong>${q}</strong><span>${n} open</span></div><progress value="${n}" max="${Math.max(open.length,1)}" aria-label="${q} share of open tickets"></progress></div>`;}).join('');}

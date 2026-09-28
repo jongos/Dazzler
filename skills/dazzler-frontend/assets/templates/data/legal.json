@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "fictional": true,
+  "asOf": "2027-06-21",
+  "scenario": "Legal matter memo with chronology, evidence gaps and an authority research matrix",
+  "generation": "Deterministic authored fixtures; no client or external personal data",
+  "evidence": [
+    {
+      "id": "E-01",
+      "item": "Onboarding email",
+      "date": "2027-02-03",
+      "status": "Fictional chronology reference"
+    },
+    {
+      "id": "E-02",
+      "item": "Support ticket",
+      "date": "2027-05-07",
+      "status": "Fictional chronology reference"
+    },
+    {
+      "id": "E-03",
+      "item": "Internal instruction",
+      "date": "2027-06-15",
+      "status": "Fictional chronology reference"
+    }
+  ],
+  "document": [
+    {
+      "title": "Supplier exit review",
+      "blocks": [
+        {
+          "type": "metrics",
+          "values": [
+            [
+              "3",
+              "chronology events"
+            ],
+            [
+              "4",
+              "review questions"
+            ],
+            [
+              "0",
+              "notices sent"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "To",
+            "From",
+            "Date"
+          ],
+          "rows": [
+            [
+              "Reviewing counsel",
+              "Jordan Lee \u2022 Legal operations",
+              "18 June 2027"
+            ]
+          ],
+          "widths": null
+        },
+        {
+          "type": "p",
+          "text": "Client matter: Alder Studio / Northline Services. Purpose: organize the record for counsel\u2019s review of a proposed supplier transition."
+        },
+        {
+          "type": "callout",
+          "label": "QUESTION FOR REVIEW",
+          "text": "What contractual notice, transition and data-return requirements must be verified before the client sets an exit date?"
+        },
+        {
+          "type": "h",
+          "text": "Preliminary position"
+        },
+        {
+          "type": "p",
+          "text": "The file is incomplete. The team should obtain the executed agreement, amendments and delivery record before recording a notice deadline or sending an exit communication. This example does not reach a legal conclusion."
+        },
+        {
+          "type": "h",
+          "text": "Working chronology"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Date",
+            "Recorded event",
+            "Evidence"
+          ],
+          "rows": [
+            [
+              "3 February",
+              "Services began",
+              "Onboarding email, file E-01"
+            ],
+            [
+              "7 May",
+              "Client reported delayed handover",
+              "Support ticket, file E-02"
+            ],
+            [
+              "15 June",
+              "Operations requested exit options",
+              "Internal instruction, file E-03"
+            ]
+          ],
+          "widths": [
+            19,
+            46,
+            35
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Facts still to establish"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Which signed terms govern, and have they been amended?",
+            "Who is authorized to give and receive notice, and by which method?",
+            "What client data or work product is held by the supplier?"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Evidence status: the chronology above is fictional sample material. Replace each reference with the actual retained source."
+        }
+      ],
+      "kicker": null
+    },
+    {
+      "title": "Analysis and review plan",
+      "blocks": [
+        {
+          "type": "h",
+          "text": "Contract and authority matrix"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Issue",
+            "Source to verify",
+            "Analysis to complete"
+          ],
+          "rows": [
+            [
+              "Notice",
+              "Executed agreement and amendments",
+              "Trigger, period, recipient and delivery method"
+            ],
+            [
+              "Transition",
+              "Exit and assistance provisions",
+              "Services, duration, fees and dependencies"
+            ],
+            [
+              "Data return",
+              "Data processing terms",
+              "Format, retention and deletion obligations"
+            ],
+            [
+              "Governing law",
+              "Agreement and current authorities",
+              "Insert verified jurisdiction-specific research"
+            ]
+          ],
+          "widths": [
+            20,
+            37,
+            43
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Competing considerations"
+        },
+        {
+          "type": "p",
+          "text": "Operations wants a short transition; the technology team needs time to validate exports. Counsel should assess the verified terms against both needs and identify any required approvals or unresolved questions."
+        },
+        {
+          "type": "h",
+          "text": "Requested evidence"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Item",
+            "Owner",
+            "Target"
+          ],
+          "rows": [
+            [
+              "Executed agreement and amendments",
+              "Procurement",
+              "21 June"
+            ],
+            [
+              "Service and notice correspondence",
+              "Operations",
+              "21 June"
+            ],
+            [
+              "Data inventory and export test",
+              "Technology",
+              "23 June"
+            ]
+          ],
+          "widths": null
+        },
+        {
+          "type": "h",
+          "text": "Recorded disposition"
+        },
+        {
+          "type": "p",
+          "text": "Avery Kim will collect the signed agreement and delivery evidence by 24 June. Counsel has not approved an exit date or a notice. The sample deliberately preserves that uncertainty."
+        },
+        {
+          "type": "callout",
+          "label": "REVIEW BOUNDARY",
+          "text": "A polished chronology is not proof of the underlying record. Each event remains tagged by evidence status; no jurisdiction-specific conclusion is supplied."
+        }
+      ],
+      "kicker": null
+    }
+  ],
+  "design": {
+    "accent": "#63305D",
+    "secondary": "#79571C",
+    "bright": "#E8C885",
+    "paper": "#FBF7EF",
+    "headingFont": "Libre Baskerville",
+    "voice": "Case-file editorial / plum and brass"
+  },
+  "capabilities": "Evidence status, careful typography and review boundaries"
+}

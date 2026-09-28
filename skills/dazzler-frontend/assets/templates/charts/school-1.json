@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "type": "bar",
+  "title": "Mean height at day 14",
+  "description": "Synthetic worked example. Exact values accompany the graphic.",
+  "source": "Original Dazzler synthetic scenario",
+  "unit": "cm",
+  "xLabel": "Category",
+  "yLabel": "Value",
+  "font": "Arial",
+  "background": "#FFFFFF",
+  "width": 720,
+  "height": 200,
+  "xType": "nominal",
+  "warnings": [],
+  "data": [
+    {
+      "x": "4 hours light",
+      "y": 7.2,
+      "series": "Data",
+      "_order": 0
+    },
+    {
+      "x": "8 hours light",
+      "y": 8.2,
+      "series": "Data",
+      "_order": 1
+    }
+  ],
+  "series": [
+    "Data"
+  ],
+  "colors": [
+    "#216348"
+  ],
+  "palette": [
+    {
+      "id": "series-1",
+      "label": "Data",
+      "color": "#216348",
+      "shape": "circle",
+      "dash": "none",
+      "pattern": "pattern-1",
+      "contrast": 7.13562783242847
+    }
+  ],
+  "format": "html",
+  "engine": "vega"
+}

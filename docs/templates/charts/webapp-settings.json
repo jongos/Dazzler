@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "type": "line",
+  "title": "A quieter notification rhythm",
+  "description": "Synthetic worked example. Exact values accompany the graphic.",
+  "source": "Original Dazzler synthetic scenario",
+  "unit": "sample notifications",
+  "xLabel": "Category",
+  "yLabel": "Value",
+  "font": "Arial",
+  "background": "#FFFFFF",
+  "width": 720,
+  "height": 200,
+  "xType": "nominal",
+  "warnings": [],
+  "data": [
+    {
+      "x": "Mon",
+      "y": 8,
+      "series": "Data",
+      "_order": 0
+    },
+    {
+      "x": "Tue",
+      "y": 5,
+      "series": "Data",
+      "_order": 1
+    },
+    {
+      "x": "Wed",
+      "y": 9,
+      "series": "Data",
+      "_order": 2
+    },
+    {
+      "x": "Thu",
+      "y": 3,
+      "series": "Data",
+      "_order": 3
+    },
+    {
+      "x": "Fri",
+      "y": 6,
+      "series": "Data",
+      "_order": 4
+    },
+    {
+      "x": "Sat",
+      "y": 2,
+      "series": "Data",
+      "_order": 5
+    },
+    {
+      "x": "Sun",
+      "y": 1,
+      "series": "Data",
+      "_order": 6
+    }
+  ],
+  "series": [
+    "Data"
+  ],
+  "colors": [
+    "#096B61"
+  ],
+  "palette": [
+    {
+      "id": "series-1",
+      "label": "Data",
+      "color": "#096B61",
+      "shape": "circle",
+      "dash": "none",
+      "pattern": "pattern-1",
+      "contrast": 6.38820796558748
+    }
+  ],
+  "format": "html",
+  "engine": "vega"
+}

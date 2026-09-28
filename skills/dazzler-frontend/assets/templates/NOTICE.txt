@@ -1,1 +1,1 @@
-Original Dazzler templates copyright 2026 Jon Gosier. Apache-2.0. Work Sans and Young Serif retain their accompanying licenses. All content is fictional sample material. DOCX fonts are referenced, not embedded.
+Original Dazzler templates copyright 2026 Jon Gosier. Apache-2.0. All bundled fonts retain the notices in fonts/. Charts use the local Dazzler visualization workflow; the seating guide retains its accompanying runtime notices. All content is fictional sample material. DOCX fonts are referenced, not embedded.

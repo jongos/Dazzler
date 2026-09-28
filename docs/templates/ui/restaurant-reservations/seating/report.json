@@ -1,0 +1,17 @@
+{
+  "status": "exported",
+  "renderer": "native-image",
+  "regionCount": 3,
+  "validation": "Input and SVG allowlist checked; browser interaction and visual review still required.",
+  "files": [
+    "index.html",
+    "illustration.svg",
+    "regions.csv",
+    "hotspots.json",
+    "adapter.mjs",
+    "hotspot-ui.mjs",
+    "hotspots.css",
+    "dependencies.json",
+    "INTEGRATE.md"
+  ]
+}

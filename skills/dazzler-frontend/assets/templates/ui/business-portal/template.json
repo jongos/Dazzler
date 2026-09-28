@@ -5,8 +5,8 @@
   "brand": "Northstar",
   "title": "Alder Studio / Brand & website",
   "intro": "Your project room \u2022 Updated 18 June 2027",
-  "accent": "#344D72",
-  "tint": "#EDF2FA",
+  "accent": "#193D7D",
+  "tint": "#EDEFF7",
   "deliverables": [
     {
       "name": "Brand direction",
@@ -28,8 +28,54 @@
       "status": "Scheduled",
       "due": "08 Jul",
       "description": "Content, analytics and deployment checks before launch."
+    },
+    {
+      "name": "Type and color system",
+      "version": "v1",
+      "status": "Ready",
+      "due": "28 Jun",
+      "description": "Semantic color roles, typography scale and component states."
+    },
+    {
+      "name": "Responsive QA report",
+      "version": "v1",
+      "status": "Scheduled",
+      "due": "09 Jul",
+      "description": "Mobile layout, keyboard checks and content review evidence."
     }
   ],
+  "secondary": "#A1395D",
+  "bright": "#ADCFC8",
+  "paper": "#F2F5FC",
+  "headingFont": "Archivo",
+  "font": "Arial",
+  "voice": "Client editorial / navy and raspberry",
+  "ink": "#172033",
+  "sample": {
+    "fictional": true,
+    "asOf": "2027-06-21T09:40:00",
+    "seed": "dazzler-showcase-014",
+    "scope": "Local demonstration only; resets on reload"
+  },
+  "showcaseChart": {
+    "asset": "business-portal",
+    "title": "A fee tied to delivery",
+    "rows": [
+      [
+        "Kickoff",
+        4800
+      ],
+      [
+        "Review",
+        4800
+      ],
+      [
+        "Handover",
+        2400
+      ]
+    ],
+    "unit": "USD"
+  },
   "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",

@@ -5,8 +5,8 @@
   "brand": "Juniper",
   "title": "The season, at the table.",
   "intro": "A small dining room, a changing menu, and an evening with room to linger.",
-  "accent": "#435036",
-  "tint": "#F3F0E5",
+  "accent": "#82283D",
+  "tint": "#EDEFF7",
   "courses": [
     [
       "Garden",
@@ -25,6 +25,37 @@
       "Warm pear, almond crumb and cream"
     ]
   ],
+  "secondary": "#536135",
+  "bright": "#E7BD6A",
+  "paper": "#FFF7E6",
+  "headingFont": "Young Serif",
+  "font": "Georgia",
+  "voice": "Supper journal / wine and parchment",
+  "ink": "#172033",
+  "sample": {
+    "fictional": true,
+    "asOf": "2027-06-21T09:40:00",
+    "seed": "dazzler-showcase-014",
+    "scope": "Local demonstration only; resets on reload"
+  },
+  "producers": [
+    {
+      "name": "Orchard plot",
+      "ingredient": "Pears and soft herbs",
+      "distanceKm": 18
+    },
+    {
+      "name": "Mill House",
+      "ingredient": "Rye and wheat flour",
+      "distanceKm": 32
+    },
+    {
+      "name": "Coast market",
+      "ingredient": "Daily fish selection",
+      "distanceKm": 46
+    }
+  ],
+  "seats": 28,
   "schemaVersion": 2,
   "license": "Apache-2.0",
   "creator": "Jon Gosier",

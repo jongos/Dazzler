@@ -39,4 +39,48 @@ class TemplateTests(unittest.TestCase):
             embedded=re.search(r'<script id="template-data" type="application/json">(.*?)</script>',s,re.S).group(1)
             self.assertEqual(json.loads(embedded),json.loads((folder/'template.json').read_text(encoding='utf-8')))
 
+    def test_showcase_data_reconciles(self):
+        load=lambda name:json.loads((templates.ROOT/'data'/f'{name}.json').read_text(encoding='utf-8'))
+        for item in templates.select('docx'):
+            data=load(item['category']);self.assertTrue(data['fictional'])
+            self.assertEqual(len(data['document']),item['plannedPages'])
+        budget=load('professional')['budget'];self.assertEqual(budget['spent']+budget['remaining'],budget['approved'])
+        payments=load('business')['payments'];self.assertEqual(sum(p['usd'] for p in payments),12000);self.assertEqual(sum(p['percent'] for p in payments),100)
+        self.assertEqual(sum(load('marketing')['budget'].values()),3000)
+        outcomes=load('technical')['delivery'];self.assertEqual(sum(outcomes[k] for k in ('firstAttempt','retriedSuccess','held')),outcomes['total'])
+        plants=load('school')['measurements']
+        for hours,expected in [(4,7.2),(8,8.2)]:self.assertAlmostEqual(sum(p['day14'] for p in plants if p['lightHours']==hours)/3,expected)
+        family=load('family');rows=next(b['rows'] for b in family['document'][0]['blocks'] if b['type']=='table')
+        self.assertEqual(family['weeklyMeals'],[{'day':r[0],'meal':r[3]} for r in rows])
+        revenue=json.loads((templates.ROOT/'ui/data-revenue/template.json').read_text(encoding='utf-8'))['months']
+        self.assertEqual(len(revenue),12);self.assertEqual(sum(r['gross']-r['refunds'] for r in revenue),777580)
+
+    def test_showcase_snapshots_and_exported_dependencies(self):
+        for item in templates.catalog()['templates']:
+            self.assertGreater((templates.ROOT/'previews'/f'{item["id"]}.jpg').stat().st_size,10000)
+        with tempfile.TemporaryDirectory() as td:
+            for ident in ['html-school','data-revenue','restaurant-reservations']:
+                out=Path(td)/ident;templates.export(ident,out)
+                if ident=='html-school':self.assertTrue((out/'data/school.json').is_file());self.assertTrue((out/'charts/school-1.svg').is_file())
+                elif ident=='data-revenue':self.assertTrue((out/'charts/data-revenue.svg').is_file())
+                else:self.assertTrue((out/'ui/restaurant-reservations/seating/runtime.js').is_file())
+        captures=[]
+        for name in ['word-captures.json','browser-captures.json']:captures.extend(json.loads((templates.ROOT/'previews'/name).read_text(encoding='utf-8')))
+        by_id={item['id']:item for item in captures};self.assertEqual(len(by_id),30)
+        for item in templates.catalog()['templates']:
+            source=templates.ROOT/item['path']
+            if item['format']=='ui':source=source/'index.html'
+            self.assertEqual(hashlib.sha256(source.read_bytes()).hexdigest(),by_id[item['id']]['sourceSha256'])
+
+    def test_document_theme_text_contrast(self):
+        def luminance(color):
+            channels=[int(color[i:i+2],16)/255 for i in (1,3,5)]
+            linear=[v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4 for v in channels]
+            return sum(a*b for a,b in zip(linear,[.2126,.7152,.0722]))
+        for item in templates.select('docx'):
+            theme=json.loads((templates.ROOT/item['dataset']).read_text(encoding='utf-8'))['design']
+            for role in ['accent','secondary']:
+                values=sorted([luminance(theme[role]),luminance(theme['paper'])])
+                self.assertGreaterEqual((values[1]+.05)/(values[0]+.05),4.5,item['id']+' '+role)
+
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "fictional": true,
+  "asOf": "2027-06-21",
+  "scenario": "Two-page services proposal with deliverables, exclusions, pricing and acceptance",
+  "generation": "Deterministic authored fixtures; no client or external personal data",
+  "payments": [
+    {
+      "milestone": "Kickoff",
+      "percent": 40,
+      "usd": 4800
+    },
+    {
+      "milestone": "Prototype",
+      "percent": 40,
+      "usd": 4800
+    },
+    {
+      "milestone": "Handover",
+      "percent": 20,
+      "usd": 2400
+    }
+  ],
+  "document": [
+    {
+      "title": "Customer onboarding redesign",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Prepared for Alder Studio     \u2022     Prepared by Northstar Design\nIssued 18 June 2027     \u2022     Proposal valid through 2 July 2027"
+        },
+        {
+          "type": "metrics",
+          "values": [
+            [
+              "4 weeks",
+              "engagement"
+            ],
+            [
+              "6 screens",
+              "annotated prototype"
+            ],
+            [
+              "$12,000",
+              "fixed sample fee"
+            ]
+          ]
+        },
+        {
+          "type": "callout",
+          "label": "THE OUTCOME",
+          "text": "A clearer first-week experience: one welcome journey, one account checklist and fewer handoffs between sales and customer success."
+        },
+        {
+          "type": "h",
+          "text": "What we heard"
+        },
+        {
+          "type": "p",
+          "text": "New customers receive setup instructions in three separate emails. The proposed work consolidates those steps, clarifies ownership and gives the service team a reusable launch checklist."
+        },
+        {
+          "type": "h",
+          "text": "Scope and delivery"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Phase",
+            "Deliverables",
+            "Schedule"
+          ],
+          "rows": [
+            [
+              "Discover",
+              "Five staff interviews; journey map; agreed problem statement",
+              "Week 1"
+            ],
+            [
+              "Design",
+              "Welcome flow; six screen designs; email copy outline",
+              "Weeks 2\u20133"
+            ],
+            [
+              "Handover",
+              "Annotated prototype; component notes; two training sessions",
+              "Week 4"
+            ]
+          ],
+          "widths": [
+            18,
+            61,
+            21
+          ]
+        },
+        {
+          "type": "h",
+          "text": "How we will work"
+        },
+        {
+          "type": "list",
+          "items": [
+            "One 30-minute review each Tuesday, with a named client decision-maker.",
+            "Two consolidated feedback rounds on the prototype.",
+            "Shared decision log and weekly written delivery update."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Outside this scope"
+        },
+        {
+          "type": "p",
+          "text": "Production code, system migration, translation and new brand identity work are excluded. Any added scope requires a written change agreement."
+        }
+      ],
+      "kicker": null
+    },
+    {
+      "title": "Investment and approval",
+      "blocks": [
+        {
+          "type": "chart",
+          "label": "Payment follows delivery",
+          "rows": [
+            [
+              "Kickoff",
+              4800
+            ],
+            [
+              "Prototype",
+              4800
+            ],
+            [
+              "Handover",
+              2400
+            ]
+          ],
+          "kind": "bar",
+          "unit": "USD",
+          "asset": "business-1"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Work package",
+            "Fee in USD"
+          ],
+          "rows": [
+            [
+              "Research and journey mapping",
+              "$3,000"
+            ],
+            [
+              "Experience design and prototype",
+              "$7,500"
+            ],
+            [
+              "Handover and training",
+              "$1,500"
+            ],
+            [
+              "Total project fee",
+              "$12,000"
+            ]
+          ],
+          "widths": [
+            72,
+            28
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Payment schedule"
+        },
+        {
+          "type": "p",
+          "text": "40% at kickoff ($4,800), 40% at prototype review ($4,800), and 20% at handover ($2,400). This illustrative price excludes applicable taxes and third-party expenses."
+        },
+        {
+          "type": "h",
+          "text": "Client responsibilities"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Provide current onboarding material and access to five interview participants.",
+            "Return consolidated feedback within two working days.",
+            "Confirm content accuracy and nominate an approver before kickoff."
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Acceptance criteria"
+        },
+        {
+          "type": "p",
+          "text": "Acceptance covers six annotated screens, the welcome email outline, a working prototype and two team sessions. The lead records acceptance or specific scope-related corrections."
+        },
+        {
+          "type": "h",
+          "text": "The decision"
+        },
+        {
+          "type": "p",
+          "text": "Alder Studio sponsor Priya Shah and Northstar lead Maya Chen review scope on 25 June. Proposed kickoff: 5 July. Acceptance is a recorded review of the agreed deliverables, not an automatic consequence of payment."
+        }
+      ],
+      "kicker": null
+    }
+  ],
+  "design": {
+    "accent": "#3C36B5",
+    "secondary": "#AA352B",
+    "bright": "#BFE9D8",
+    "paper": "#FFFFFF",
+    "headingFont": "Work Sans",
+    "voice": "Confident proposal / violet and coral"
+  },
+  "capabilities": "Scope narrative, pricing visualization and acceptance criteria"
+}

@@ -32,7 +32,7 @@ Full packages now include brand import, system-token export, browser inspection,
 
 ## Template library in 0.9.0
 
-Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Dazzler selects and copies a suitable starting point automatically. Browse the gallery or download only the templates. Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
+Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Each now has a distinct visual identity, robust fictional scenarios and an actual captured preview. Contextual charts, genuine italic fonts, editable structures and print treatments are selected automatically; relevant data and interaction assets travel with exports. Dazzler selects and copies a suitable starting point automatically. Browse the gallery or download only the templates. Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
 
 ## Interactive illustrations
 
@@ -44,9 +44,9 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 Packaging reference (checked September 28, 2026): [official documentation](https://code.claude.com/docs/en/skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-claude.zip)
+- [dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-claude.zip)
 - [Anthropic Fable](https://www.anthropic.com/claude/fable)
 - [Official upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 - [Plugin documentation](https://code.claude.com/docs/en/plugins)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.13.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.14.0/dazzler-templates.zip)

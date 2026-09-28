@@ -2,6 +2,15 @@
 
 @font-face {
   font-family: "Young Serif";
+  src: url("./Young-Serif-Italic%5Bwght%5D.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Young Serif";
   src: url("./Young-Serif%5Bwght%5D.woff2") format("woff2");
   font-weight: 300 700;
   font-style: normal;

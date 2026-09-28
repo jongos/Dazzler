@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "fictional": true,
+  "asOf": "2027-06-21",
+  "scenario": "A playful event invitation with actual logistics, schedule and RSVP details",
+  "generation": "Deterministic authored fixtures; no client or external personal data",
+  "guestCount": 24,
+  "stations": 4,
+  "document": [
+    {
+      "title": "The great game night",
+      "blocks": [
+        {
+          "type": "callout",
+          "label": "SATURDAY 24 JULY",
+          "text": "6:30\u201310:00 PM  \u2022  The Rivera living room\n18 Willow Lane, Sampletown \u2014 fictional venue"
+        },
+        {
+          "type": "metrics",
+          "values": [
+            [
+              "24",
+              "places planned"
+            ],
+            [
+              "4",
+              "game stations"
+            ],
+            [
+              "1",
+              "glorious final round"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Come for the pizza. Stay for the dramatic final round. We are mixing quick team games with a few old favorites, and there is a seat for complete beginners."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Time",
+            "What is happening"
+          ],
+          "rows": [
+            [
+              "6:30",
+              "Arrive, choose a team and grab a slice"
+            ],
+            [
+              "7:00",
+              "Drawing game warm-up"
+            ],
+            [
+              "7:45",
+              "Team trivia and snack break"
+            ],
+            [
+              "8:45",
+              "Choose-your-own table games"
+            ],
+            [
+              "9:45",
+              "One last round and the extremely unofficial awards"
+            ]
+          ],
+          "widths": [
+            20,
+            80
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Bring one thing"
+        },
+        {
+          "type": "p",
+          "text": "A favorite game, a snack to share, or just yourself. Comfortable clothes encouraged. Please tell us about food needs when you reply."
+        },
+        {
+          "type": "h",
+          "text": "Save your seat"
+        },
+        {
+          "type": "p",
+          "text": "RSVP to Alex by 20 July at games@example.com. Let us know how many people are coming so we can plan teams and dinner."
+        },
+        {
+          "type": "p",
+          "text": "All ages welcome with a grown-up. Step-free entry through the side gate. Quiet room available away from the games."
+        },
+        {
+          "type": "callout",
+          "label": "HOUSE RULE",
+          "text": "Be kind, explain the rules, and celebrate a good move\u2014even when it is not yours."
+        }
+      ],
+      "kicker": null
+    },
+    {
+      "title": "The host playbook",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A little planning keeps the evening easy. These are fictional RSVPs, not real people or dietary guarantees."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Team",
+            "Guests",
+            "First station",
+            "Food notes"
+          ],
+          "rows": [
+            [
+              "Comets",
+              "6",
+              "Word relay",
+              "1 dairy-free request"
+            ],
+            [
+              "Fireflies",
+              "6",
+              "Card table",
+              "2 vegetarian requests"
+            ],
+            [
+              "Orbit",
+              "6",
+              "Puzzle corner",
+              "1 nut-avoidance request"
+            ],
+            [
+              "Wildcards",
+              "6",
+              "Cooperative quest",
+              "No requests recorded"
+            ]
+          ],
+          "widths": [
+            22,
+            12,
+            31,
+            35
+          ]
+        },
+        {
+          "type": "h",
+          "text": "Station rotation"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Round",
+            "Time",
+            "Play"
+          ],
+          "rows": [
+            [
+              "1",
+              "19:00\u201319:25",
+              "Start at the assigned station"
+            ],
+            [
+              "2",
+              "19:30\u201319:55",
+              "Rotate clockwise"
+            ],
+            [
+              "3",
+              "20:00\u201320:25",
+              "Choose a favorite"
+            ],
+            [
+              "Final",
+              "20:40\u201321:10",
+              "Whole-room team challenge"
+            ]
+          ],
+          "widths": null
+        },
+        {
+          "type": "callout",
+          "label": "GOOD HOSTING",
+          "text": "Confirm food needs directly, keep packaging available and ask before sharing photos. A quiet room and beginner-friendly rules are part of the plan."
+        },
+        {
+          "type": "p",
+          "text": "Shopping plan: 8 pizzas, 24 reusable cups, 3 pitchers of lemonade and 4 snack bowls. Review quantities against the final guest list."
+        }
+      ]
+    }
+  ],
+  "design": {
+    "accent": "#AD145B",
+    "secondary": "#2440B2",
+    "bright": "#FFE25A",
+    "paper": "#FFF9E8",
+    "headingFont": "Poppins",
+    "voice": "Playful poster / pink blue yellow"
+  },
+  "capabilities": "Expressive type, accessible event information and a host worksheet"
+}
