@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.21.0 release documentation correction
+
+- **Changed:** Moved the field manual's notes, credits, download links and footer after all feature chapters.
+- **Added:** None.
+- **Why:** Later chapters had accumulated after the closing credits; the manual now follows the requested end-of-document attribution convention consistently.
+- **Validation:** Local gallery/link checks cover the reordered manual. Runtime and platform archives are unchanged; the matching offline kit includes this documentation correction.
+
 ## 2026-09-28 — 0.21.0: Phase 6 design defaults and issue reconciliation
 
 - **Changed:** New schema-3 systems choose context-sensitive tone, protected English heading case, 60ch maximum prose measure and responsive grid tokens. Explicit settings, brand locks and schema-1/2 records retain precedence. DOCX/HTML/UI templates and the field manual adopt the editorial policy; chart and illustration headings preserve data labels and IDs.
