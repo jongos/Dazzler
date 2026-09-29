@@ -27,7 +27,22 @@ Rollback swaps the clean current and previous versions. Uninstall without `--dry
 
 The reviewed version is `skills@1.7.0`, requiring Node 22.20 or newer. Fresh project and isolated user installation, reinstall and removal were exercised. Its reinstall operation deleted a locally added file in the isolated test. Therefore use it only for a fresh installation or after preserving and reviewing an existing installation. Do not use unattended update/reinstall on edited skills. The managed installer above exists to cover this observed gap.
 
-Set `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1` in the installer's process environment if you want its telemetry disabled. Both were set during testing. This external installation utility uses the network; Dazzler's bundled design helpers remain offline. Live website/browser tasks still require the network. Public directory discovery is an external service outcome and is not guaranteed by a repository test.
+Set `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1` in the installer's process environment if you want its telemetry disabled. Earlier lifecycle tests opted out; the September 29 registration check used one real project install with default telemetry. This external installation utility uses the network; Dazzler's bundled design helpers remain offline. Live website/browser tasks still require the network.
+
+### Remove a source installation
+
+In version 1.7.0, project agents share `.agents/skills`. Removal with `--agent codex` can report success while leaving Dazzler discoverable because another detected agent uses the same directory. To remove Dazzler from **all agents in the current project**, preserve any edits, change to that project, then run:
+
+```sh
+npx skills@1.7.0 remove dazzler-frontend --yes
+npx skills@1.7.0 list --agent codex
+```
+
+This targets only Dazzler, not other skills. Verify that `.agents/skills/dazzler-frontend` and its `skills-lock.json` entry are gone. Do not use this command if another agent in the project should retain Dazzler. Avoid `--agent '*'`: the published 1.7.0 CLI rejects that option. These checks covered project scope only; they did not change the user's global installation. Use the receipt-aware command above for a managed Dazzler installation.
+
+### Directory status
+
+The public skill page and repository listing were verified on September 29, 2026; the repository badge reported one install. A listing is not a security endorsement. Gen Agent Trust Hub currently reports Critical/Fail, citing a font attribution domain and execution/import concerns; Socket reports zero alerts and Snyk reports low risk. Review the linked report before installing. The audit follow-up is tracked separately in issue 40.
 
 Use the pinned source command in the closing notes. Omit `--global` for project scope and specify `--agent` rather than installing into all detected hosts. Avoid `--yes` until you have reviewed the selected destination. Direct archive mode's default 10 MiB download ceiling is too small for these packages; use the reviewed source route or the managed local installer.
 
@@ -43,6 +58,8 @@ Rollback requires a previous managed update. With no backup, the installer says 
 
 ## Notes and references
 
+- [Dazzler on skills.sh](https://skills.sh/jongos/dazzler/dazzler-frontend), [registration process](https://skills.sh/docs/faq), and [audit follow-up](https://github.com/jongos/Dazzler/issues/40).
+- [Gen Agent Trust Hub report](https://skills.sh/jongos/dazzler/dazzler-frontend/security/agent-trust-hub). Its attribution-domain classification has not been independently verified here.
 - Pinned CLI: `npx skills@1.7.0 add https://github.com/jongos/Dazzler/tree/v0.23.0/skills/dazzler-frontend --skill dazzler-frontend --agent codex --copy`
 - Claude commands: `/plugin marketplace add jongos/Dazzler`, then `/plugin install dazzler@dazzler`.
 - [Release downloads](https://github.com/jongos/Dazzler/releases/tag/v0.23.0)

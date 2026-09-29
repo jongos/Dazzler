@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-09-29 — Directory registration and source removal guidance
+
+**Changed:** Corrected source-install removal guidance for shared project skill directories. Agent-specific removal can retain a discoverable copy; named-skill removal without an agent filter removes Dazzler across the current project.
+
+**Added:** Verified skills.sh listing/badge, explicit removal postconditions and a separate audit follow-up in issue 40.
+
+**Why:** Complete issue 20's discovery and lifecycle work without mistaking a successful CLI message for removal or a directory listing for security approval. Explicit host selection remains intentional; the managed installer does not guess which hosts to modify.
+
+**Validation:** One official skills@1.7.0 project install with default telemetry passed the 701-file health check. Reproduced agent-specific retention; removal without an agent filter cleared the directory, lock entry and list result. The wildcard agent option was rejected. Public skill content, repository listing and one-install badge were observed. The audit remains Critical/Fail and is not claimed resolved. Documentation links and release guards pass; no runtime or release package changed.
+
 
 ## 2026-09-28 — 0.23.0: A redesigned field guide and portable distribution
 

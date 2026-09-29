@@ -128,6 +128,10 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 
 ### Downloads and maintenance links
 
+[![skills.sh installs](https://skills.sh/b/jongos/dazzler)](https://skills.sh/jongos/dazzler/dazzler-frontend)
+
+The directory listing is live. Its Gen Agent Trust Hub audit currently reports Critical/Fail; [review the findings and follow-up](https://github.com/jongos/Dazzler/issues/40) before installing. See [installation and removal guidance](maintenance/ONBOARDING.md) for the shared-project-directory behavior of the skills CLI.
+
 [Contributor source archive (unpinned main)](https://github.com/jongos/Dazzler/archive/refs/heads/main.zip). Maintainer remote: `git@github.com:jongos/Dazzler.git`.
 
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
