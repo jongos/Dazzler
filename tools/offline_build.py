@@ -59,6 +59,8 @@ def create(output):
             "maintenance/ONBOARDING.md",
             "maintenance/PHASE2-VALIDATION.md",
             "maintenance/PHASE3-VALIDATION.md",
+            "maintenance/PHASE4-VALIDATION.md",
+            "maintenance/reports/composition-0.19.0.json",
             "maintenance/reports/codex-triggering-2026-09-28.json",
             "maintenance/reports/skills-cli-1.7.0.json",
             "README.md",

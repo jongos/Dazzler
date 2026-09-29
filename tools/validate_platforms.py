@@ -56,6 +56,16 @@ def validate(folder):
             entry = next(n for n in names if n.endswith("/SKILL.md"))
             prefix = entry.removesuffix("SKILL.md")
             text = z.read(entry).decode()
+            assert len(z.read(entry)) <= 8000, (archive.name, "entrypoint budget")
+            for reference in names:
+                if reference.startswith(prefix + "references/") and reference.endswith(
+                    ".md"
+                ):
+                    assert len(z.read(reference)) <= 12000, (
+                        archive.name,
+                        reference,
+                        "reference budget",
+                    )
             assert "name: dazzler-frontend" in text and "## Verify the result" in text
             profile = json.loads(z.read(prefix + "references/package-profile.json"))
             assert profile["profile"] == (
@@ -66,6 +76,8 @@ def validate(folder):
             assert "MAINTENANCE.md" not in text
             if archive.name != "dazzler-codex.zip":
                 assert "$dazzler-frontend" not in text
+                assert "references/platform-host.md" in text
+                assert prefix + "references/platform-host.md" in names
             else:
                 assert prefix + "agents/openai.yaml" in names
             assert not any(
@@ -294,7 +306,9 @@ def validate(folder):
                 )
                 assert json.loads(result.stdout)
                 cfg = Path(temp) / "system-input.json"
-                cfg.write_text('{"brand":{"seed":"#345678"}}')
+                cfg.write_text(
+                    '{"brand":{"seed":"#345678"},"refinement":{"intent":"bolder","density":4}}'
+                )
                 subprocess.run(
                     [
                         "node",
@@ -315,6 +329,35 @@ def validate(folder):
                     ]["modes"]["light"]["tokens"]["brand"]
                     == "#345678"
                 )
+                layout_brief = Path(temp) / "layout-brief.json"
+                layout_brief.write_text(
+                    '{"task":"apply","content":["fields","submit"]}'
+                )
+                layout_result = subprocess.run(
+                    [
+                        "node",
+                        str(skill / "scripts/layouts.mjs"),
+                        "recommend",
+                        "--config",
+                        str(layout_brief),
+                    ],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                )
+                assert (
+                    json.loads(layout_result.stdout)["recommendations"][0]["id"]
+                    == "focused-form"
+                )
+                controls = Path(temp) / "controls.json"
+                controls.write_text('{"intent":"critique"}')
+                refinement_result = subprocess.run(
+                    ["node", str(skill / "scripts/refinement.mjs"), str(controls)],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                )
+                assert json.loads(refinement_result.stdout)["readOnly"] is True
                 subprocess.run(
                     [
                         sys.executable,

@@ -4,6 +4,8 @@ import { spawnSync } from "node:child_process";
 import path from "node:path";
 for (const file of [
   "route.mjs",
+  "layouts.mjs",
+  "refinement.mjs",
   "visualize.mjs",
   "hotspots.mjs",
   "studio.mjs",

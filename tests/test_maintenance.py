@@ -46,7 +46,17 @@ class MaintenanceTests(unittest.TestCase):
         harness = module(ROOT / "skills/dazzler-frontend/scripts/triggering.py")
         with tempfile.TemporaryDirectory() as td:
             report = harness.run(Path(td) / "run", "unconfigured")
-            self.assertEqual(len(report["results"]), 60)
+            self.assertEqual(
+                len(report["results"]),
+                2
+                * len(
+                    json.loads(
+                        (harness.SKILL / "evals/triggering.json").read_text(
+                            encoding="utf-8"
+                        )
+                    )["cases"]
+                ),
+            )
             self.assertTrue(all(r["status"] == "not-run" for r in report["results"]))
             self.assertEqual(report["summary"]["current"]["observed"], 0)
 
@@ -60,7 +70,7 @@ class MaintenanceTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as td:
             for loaded, expected in [
-                (True, {"observed": 30, "passed": 20}),
+                (True, {"observed": 38, "passed": 24}),
                 ("true", {"observed": 0, "passed": 0}),
             ]:
 

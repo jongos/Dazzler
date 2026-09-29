@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "status": "deterministic-fixture-tasks-not-live-host-evaluation",
+  "tasks": [
+    {
+      "id": "workshop-application",
+      "task": "apply",
+      "content": [
+        "fields",
+        "submit"
+      ],
+      "expectedArchetype": "focused-form",
+      "mustPreserve": [
+        "Email",
+        "Background",
+        "Preferred date",
+        "Requirements",
+        "Submit application"
+      ]
+    },
+    {
+      "id": "incident-desk",
+      "task": "operations",
+      "content": [
+        "records",
+        "actions"
+      ],
+      "expectedArchetype": "dense-workspace",
+      "mustPreserve": [
+        "Exception detail",
+        "Review action",
+        "Current status"
+      ]
+    }
+  ]
+}

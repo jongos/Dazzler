@@ -1,5 +1,7 @@
 # Review the result against its purpose
 
+See [composition and refinement](composition.md) for purpose-based layout contracts, measured review candidates and bounded refinement intents. Preserve intentional repetition and record exceptions; these candidates remain separate from accessibility failures.
+
 Before delivery, compare the actual implementation/render with the brief and recorded direction. For small edits, review the affected component and neighboring layout. For a full interface, examine narrow and wide layouts, real content extremes, the primary task and relevant states. Do not claim rendered inspection when only source is available.
 
 ## Review questions

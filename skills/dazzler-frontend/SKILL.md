@@ -14,15 +14,15 @@ Read `references/package-profile.json` when present: use only its installed font
 
 ## Automatic by default
 
-`Use $dazzler-frontend to ...` is enough. Infer purpose, audience and a coherent visual direction from the brief; choose suitable fonts, colors, composition and interactions yourself. Preserve the user's brand, stack, facts and explicit constraints. Deliver the requested artifact and inspect it. Do not make routine aesthetic choices into questions, setup steps or approval gates. Ask only for indispensable missing inputs. Use [optional controls](references/design-controls.md) when the user asks to choose or refine.
+`Use $dazzler-frontend to ...` is enough. Infer purpose, audience and a coherent visual direction from the brief; choose suitable fonts, colors, composition and interactions yourself. Preserve the user's brand, stack, facts and explicit constraints. Deliver the requested artifact and inspect it. Ask only for indispensable inputs; routine aesthetic choices stay automatic. Use [optional controls](references/design-controls.md) when the user asks to choose or refine.
 
-For a small edit, change only what is needed. For substantial work, inspect existing components/tokens and read the relevant part of [the automatic workflow](references/automatic-workflow.md). Use [the design framework](references/deslop.md) when establishing a new direction; consult [interface craft](references/interface-craft.md) for component details. Do not load every reference or run every helper for every task.
+For a small edit, change only what is needed. For substantial work, inspect existing components/tokens and read the relevant part of [the automatic workflow](references/automatic-workflow.md). Use [the design framework](references/deslop.md) when establishing a new direction; consult [interface craft](references/interface-craft.md) for component details.
 
 Before substantial design work, discover and read the existing project design record. Continue its designated fonts, colors and constraints. Follow [persistent systems](references/persistent-systems.md) for bounded discovery, safe interchange, fluid typography and compatible shadcn themes. Preserve the record location and existing prose; small edits and read-only critiques do not require a new record.
 
 ## Typography, color and editorial craft
 
-Run the offline helpers first; their compact output avoids loading entire catalogs:
+When selecting or changing fonts/colors, use the relevant offline helper. Keep accepted choices for small refinements:
 
 ```shell
 python scripts/fonts.py recommend --role body --mood literary --text "Actual representative copy"
@@ -32,6 +32,8 @@ node scripts/colors.mjs recommend --mood "cozy minimal" --limit 3
 Filter fonts by actual text coverage, weights, genuine italics, numeric features and loading budget before judging character. Read only a shortlisted or named family's `references/fonts/<id>.md` when more detail is needed; [the font index](references/font-catalog.md) is for browsing. Use [typography](references/typography.md) for export, fallback, licensing or installation details. Export only needed files with their notices; do not silently relax script/style requirements or install OS fonts.
 
 Use [the color workflow](references/color-workflow.md) when choosing or changing color. Preserve locked brand colors, measure actual foreground/background roles, and report unresolved constraints. Harmony alone is not contrast. Choose an expressive hierarchy, restrained reading measure and a context-specific composition. Strong display type, selective bold colored keywords, genuine italics and complementary/triadic accents are useful where they clarify decisions, evidence or actions. Keep a legal memo disciplined, a planner printable and an invitation exuberant. Avoid repeating one visual treatment across unrelated tasks.
+
+Use [composition and refinement](references/composition.md) for substantial layouts, measured review candidates and the optional bolder/quieter/typeset/colorize/polish/harden/critique/distill intents. Critique is read-only; distill preserves required content and controls. Review candidates need context and never establish AI authorship.
 
 ## Select relevant capabilities
 

@@ -151,6 +151,46 @@
       "id": "negative-10",
       "prompt": "Update dependency versions without changing the interface.",
       "expectedLoaded": false
+    },
+    {
+      "id": "phase4-1",
+      "prompt": "Make this dashboard quieter while keeping every control.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "phase4-2",
+      "prompt": "Typeset this article with a clearer reading hierarchy.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "phase4-3",
+      "prompt": "Critique the checkout page without editing it.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "phase4-4",
+      "prompt": "Distill this interface while retaining the disclosures and actions.",
+      "expectedLoaded": true
+    },
+    {
+      "id": "phase4-5",
+      "prompt": "Make the server logs quieter without changing the UI.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "phase4-6",
+      "prompt": "Harden the database authentication policy.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "phase4-7",
+      "prompt": "Distill this audio interview into a transcript summary.",
+      "expectedLoaded": false
+    },
+    {
+      "id": "phase4-8",
+      "prompt": "Make the terminal prompt text say bolder.",
+      "expectedLoaded": false
     }
   ]
 }

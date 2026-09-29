@@ -1,5 +1,7 @@
 # Choose your Dazzler edition
 
+Full helper editions include eight purpose-based composition contracts, measured review candidates, and bounded refinement intents with optional saved controls. Read references/composition.md in the installed skill. Browser review requires the host browser runtime; critique stays read-only.
+
 Full helper editions share persistent design records, schema-2 fluid typography with print fallbacks, and compatible shadcn theme proposals. Read references/persistent-systems.md in the installed skill. These helpers do not install components or overwrite project records. Host-specific execution remains subject to available tools.
 
 The core typography, color tools and design guidance are shared. Platform adapters change tool routing and installation, not the design standard. No edition auto-installs another host or changes its permissions.
@@ -41,14 +43,14 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 ## Notes and credits
 
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-claude.zip)
-- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-claude-plugin.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-gemini.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-cursor.zip)
-- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-copilot.zip)
-- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.18.0/DAZZLER-PROMPT.md)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude.zip)
+- [Code plugin ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude-plugin.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-gemini.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-cursor.zip)
+- [Skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-copilot.zip)
+- [Prompt file](https://github.com/jongos/Dazzler/releases/download/v0.19.0/DAZZLER-PROMPT.md)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-templates.zip)
 
-- [Native Codex skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-claude-compact.zip)
+- [Native Codex skill ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude-compact.zip)

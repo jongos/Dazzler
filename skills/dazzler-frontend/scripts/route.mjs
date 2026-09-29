@@ -1,6 +1,8 @@
 // Dazzler deterministic routing hints. Apache-2.0. No network or install step.
 import { pathToFileURL } from "node:url";
 import path from "node:path";
+import { recommend } from "./layouts.mjs";
+import { resolveRefinement } from "./refinement.mjs";
 import { readJSON } from "./runtime.mjs";
 export function route(input = {}) {
   const { kind = "interface", framework = "none", format = "html", interactive = false } = input;
@@ -17,6 +19,8 @@ export function route(input = {}) {
     verification: [],
     networkRequired: false,
   };
+  if (input.composition) result.composition = recommend(input.composition);
+  if (input.refinement) result.refinement = resolveRefinement(input.refinement);
   if (input.designContext?.found === true) {
     result.designContext = {
       found: true,
@@ -85,6 +89,10 @@ export function route(input = {}) {
       "Final rendered layout",
       "Font coverage and contrast",
     ];
+  }
+  if (result.refinement?.readOnly) {
+    result.options.readOnly = true;
+    result.reasons.push("Critique is report-only; do not generate or apply project edits.");
   }
   return result;
 }

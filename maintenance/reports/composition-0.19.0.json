@@ -1,0 +1,98 @@
+{
+  "fixtures": [
+    {
+      "name": "repetitive",
+      "purpose": "editorial-feature",
+      "review": [
+        "repeated-card-geometry",
+        "repetitive-section-rhythm",
+        "flattened-type-hierarchy",
+        "pervasive-chrome",
+        "pervasive-decoration"
+      ],
+      "retained": [],
+      "accessibility": []
+    },
+    {
+      "name": "catalog",
+      "purpose": "catalog-menu",
+      "review": [],
+      "retained": [
+        "repeated-card-geometry",
+        "pervasive-chrome"
+      ],
+      "accessibility": []
+    },
+    {
+      "name": "workspace",
+      "purpose": "dense-workspace",
+      "review": [],
+      "retained": [
+        "repeated-card-geometry",
+        "pervasive-chrome"
+      ],
+      "accessibility": []
+    },
+    {
+      "name": "editorial",
+      "purpose": "editorial-feature",
+      "review": [],
+      "retained": [],
+      "accessibility": []
+    },
+    {
+      "name": "heldout-form",
+      "purpose": "focused-form",
+      "review": [
+        "repetitive-section-rhythm"
+      ],
+      "retained": [],
+      "accessibility": [],
+      "disposition": "Retain: consistent form groups help predictable completion. This is a false-positive aesthetic candidate."
+    },
+    {
+      "name": "heldout-decorated",
+      "purpose": "focused-form",
+      "review": [
+        "repeated-card-geometry",
+        "repetitive-section-rhythm",
+        "flattened-type-hierarchy",
+        "pervasive-decoration"
+      ],
+      "retained": [],
+      "accessibility": []
+    }
+  ],
+  "interpretation": "Two intentionally problematic fixtures flagged. Among four benign/conventional fixtures, editorial has no candidates, catalog/workspace retain repetition with context, and the held-out form has one false-positive rhythm candidate retained after review. Small authored set, not a population accuracy estimate or AI-host evaluation.",
+  "heldoutTasks": 2,
+  "behavioralRuns": [
+    {
+      "task": "quieter-distill-application",
+      "mainTextUnchanged": true,
+      "requiredFieldsPreserved": 4,
+      "widths": [
+        390,
+        1440
+      ],
+      "keyboardAndRequiredValidation": "observed",
+      "network": "blocked",
+      "blind": false,
+      "qualification": "Test-specific guide text was visible; removed after feedback."
+    },
+    {
+      "task": "bolder-menu-then-critique",
+      "mainInventoryUnchanged": true,
+      "dishesPricesDietaryNotesAndActionsPreserved": 6,
+      "widths": [
+        390,
+        1440
+      ],
+      "textScale": 2,
+      "minimumControlHeight": 48,
+      "keyboardFocus": "observed",
+      "networkRequests": 0,
+      "afterCritiqueEdits": false,
+      "qualification": "Fresh agent read task-relevant skill references, not maintenance/evaluation reports; one scoped run, not broad model or host-discovery evidence."
+    }
+  ]
+}

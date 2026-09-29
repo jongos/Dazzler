@@ -6,6 +6,7 @@ import { parseArgs } from "node:util";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
 import { templateCSS } from "./template-theme.mjs";
+import { resolveRefinement, prepareRefinement, refinementCSS } from "./refinement.mjs";
 import { enhanceType, specimen } from "./type-system.mjs";
 import { exportDesign, importDesign, resumeConfig } from "./design-record.mjs";
 import { shadcnTheme } from "./shadcn-theme.mjs";
@@ -63,6 +64,9 @@ function positive(n, label) {
   return n;
 }
 export function tokens(input = {}) {
+  const originalInput = input;
+  const refinement = resolveRefinement(input.refinement ?? {});
+  input = prepareRefinement(input, refinement);
   if (input.schemaVersion !== undefined && ![1, 2].includes(input.schemaVersion))
     throw Error("Unsupported token schema");
   const palette = generate(
@@ -238,7 +242,11 @@ export function tokens(input = {}) {
     `\n  --font-${fontRoles.body.fallback.replace(/^ui-/, "").replace("system-ui", "sans").replace("sans-serif", "sans").replace("monospace", "mono")}: var(--font-body);\n  --font-display: var(--font-heading);\n}\n`;
   const result = enhanceType({ system, css, dtcg, tailwind, theme }, input);
   if (result.system.schemaVersion === 2)
-    result.system.configuration = structuredClone({ ...input, schemaVersion: 2 });
+    result.system.configuration = structuredClone({ ...originalInput, schemaVersion: 2 });
+  if (refinement.active) {
+    result.system.refinement = refinement;
+    result.css += refinementCSS(refinement);
+  }
   return result;
 }
 const shapes = ["circle", "square", "triangle", "diamond", "cross", "star", "hexagon", "plus"];
@@ -350,22 +358,31 @@ async function main() {
       template: { type: "string" },
       context: { type: "string" },
       accept: { type: "boolean" },
+      variance: { type: "string" },
+      density: { type: "string" },
+      motion: { type: "string" },
+      intent: { type: "string" },
       help: { type: "boolean" },
     },
   });
   if (values.help) {
     console.log(
-      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
     );
     return;
   }
   if (positionals.length !== 1 || !values.config || !values.out)
     throw Error(
-      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
     );
   const command = positionals[0];
   if (!["tokens", "chart", "resume", "import-design"].includes(command))
     throw Error("Unknown command");
+  if (
+    command !== "tokens" &&
+    ["variance", "density", "motion", "intent"].some((k) => values[k] !== undefined)
+  )
+    throw Error("Refinement flags require tokens; resume preserves the stored controls");
   if (command === "import-design") {
     const imported = importDesign(
       (await readLimited(values.config, 262144)).toString("utf8"),
@@ -389,6 +406,15 @@ async function main() {
     return;
   }
   const input = await readJSON(values.config);
+  if (["variance", "density", "motion", "intent"].some((k) => values[k] !== undefined)) {
+    if (command !== "tokens")
+      throw Error("Refinement flags require tokens; resume preserves the stored controls");
+    input.refinement = { ...input.refinement };
+    for (const key of ["variance", "density", "motion", "intent"])
+      if (values[key] !== undefined)
+        input.refinement[key] =
+          key === "intent" || values[key] === "auto" ? values[key] : Number(values[key]);
+  }
   const result =
     command === "chart" ? chart(input) : tokens(command === "resume" ? resumeConfig(input) : input);
   if (command === "resume")
@@ -405,7 +431,15 @@ async function main() {
       ? shadcnTheme(result.system, await readJSON(values.context))
       : null;
   if (command === "resume")
-    for (const field of ["fonts", "type", "spacing", "radius", "typography"])
+    for (const field of [
+      "fonts",
+      "type",
+      "spacing",
+      "radius",
+      "typography",
+      "refinement",
+      "motion",
+    ])
       if (
         input[field] !== undefined &&
         JSON.stringify(result.system[field]) !== JSON.stringify(input[field])
@@ -454,7 +488,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   main().catch((e) => {
     console.error(String(e.message).replace(/[\r\n]+/g, " "));
     console.error(
-      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
     );
     process.exitCode = 1;
   });

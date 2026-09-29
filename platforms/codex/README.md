@@ -1,5 +1,7 @@
 # Dazzler for Codex
 
+Full helper editions include eight purpose-based composition contracts, measured review candidates, and bounded refinement intents with optional saved controls. Read references/composition.md in the installed skill. Browser review requires the host browser runtime; critique stays read-only.
+
 Full helper editions share persistent design records, schema-2 fluid typography with print fallbacks, and compatible shadcn theme proposals. Read references/persistent-systems.md in the installed skill. These helpers do not install components or overwrite project records. Host-specific execution remains subject to available tools.
 
 Download the versioned `dazzler-codex.zip` and matching `SHA256SUMS.txt`. Verify the archive SHA-256 before extraction. This is the native skill edition with `agents/openai.yaml`, all fonts, templates and offline helpers.
@@ -48,6 +50,6 @@ The package includes 19 beginner prompts in `references/starters.md`, grouped by
 
 Creator: Jon Gosier. Feedback: jon@filmhedge.com. Apache-2.0; bundled assets retain their licenses.
 
-[Download native skill](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-codex.zip) · [Checksums](https://github.com/jongos/Dazzler/releases/download/v0.18.0/SHA256SUMS.txt)
+[Download native skill](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-codex.zip) · [Checksums](https://github.com/jongos/Dazzler/releases/download/v0.19.0/SHA256SUMS.txt)
 
 [Official skill discovery guidance](https://learn.chatgpt.com/docs/build-skills) · [Plugin distribution](https://developers.openai.com/plugins/build/plugins)

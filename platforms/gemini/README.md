@@ -1,5 +1,7 @@
 # Dazzler for Gemini CLI
 
+Full helper editions include eight purpose-based composition contracts, measured review candidates, and bounded refinement intents with optional saved controls. Read references/composition.md in the installed skill. Browser review requires the host browser runtime; critique stays read-only.
+
 Full helper editions share persistent design records, schema-2 fluid typography with print fallbacks, and compatible shadcn theme proposals. Read references/persistent-systems.md in the installed skill. These helpers do not install components or overwrite project records. Host-specific execution remains subject to available tools.
 
 Download **dazzler-gemini.zip** from the closing download links.
@@ -40,6 +42,6 @@ The package includes 19 beginner prompts in `references/starters.md`, grouped by
 
 Packaging reference (checked September 28, 2026): [official documentation](https://geminicli.com/docs/cli/skills/). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-gemini.zip)
+- [dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-gemini.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-templates.zip)

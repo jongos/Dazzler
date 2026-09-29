@@ -1,5 +1,7 @@
 # Dazzler for Claude / Fable
 
+Full helper editions include eight purpose-based composition contracts, measured review candidates, and bounded refinement intents with optional saved controls. Read references/composition.md in the installed skill. Browser review requires the host browser runtime; critique stays read-only.
+
 Full helper editions share persistent design records, schema-2 fluid typography with print fallbacks, and compatible shadcn theme proposals. Read references/persistent-systems.md in the installed skill. These helpers do not install components or overwrite project records. Host-specific execution remains subject to available tools.
 
 Download **dazzler-claude.zip** from the closing download links.
@@ -58,14 +60,14 @@ The release-pinned marketplace supports the full Code plugin with its archive ha
 
 Packaging reference (checked September 28, 2026): [official documentation](https://code.claude.com/docs/en/skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-claude.zip)
+- [dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude.zip)
 - [Anthropic Fable](https://www.anthropic.com/claude/fable)
 - [Official upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 - [Plugin documentation](https://code.claude.com/docs/en/plugins)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-templates.zip)
 
-- [Compact Claude skill](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-claude-compact.zip)
+- [Compact Claude skill](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude-compact.zip)
 - [Claude API skill limits](https://platform.claude.com/docs/en/build-with-claude/skills-guide)
 
 Marketplace: `/plugin marketplace add jongos/Dazzler`, then `/plugin install dazzler@dazzler`.

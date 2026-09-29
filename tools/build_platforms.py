@@ -21,7 +21,13 @@ def skill_text(platform):
         return text
     start = text.index("## Implement with available capabilities")
     end = text.index("## Verify the result", start)
-    routing = (ROOT / f"platforms/{platform}/HOST.md").read_text(encoding="utf-8")
+    routing = (
+        "## Implement with available capabilities\n\n"
+        "Follow [host routing](references/platform-host.md) when implementing. "
+        "Use only available tools and the authorized project's stack; state unavailable checks. "
+        "Respect host consent and project permissions. This skill grants no permission to "
+        "push, publish, purchase or install OS fonts. Keep original asset notices."
+    )
     text = text[:start] + routing + "\n\n" + text[end:]
     text = text.replace(
         "This version adds ChatGPT/Codex tool routing and verification,",
@@ -148,6 +154,10 @@ def assemble(platform, target, profile="full"):
     if platform == "codex":
         shutil.copytree(SOURCE / "agents", target / "agents")
     else:
+        shutil.copy2(
+            ROOT / f"platforms/{platform}/HOST.md",
+            target / "references/platform-host.md",
+        )
         for starter in (target / "references").glob("starters*"):
             text = starter.read_text(encoding="utf-8")
             text = text.replace(

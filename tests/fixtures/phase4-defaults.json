@@ -1,0 +1,26 @@
+{
+  "sourceVersion": "0.18.0",
+  "cases": [
+    {
+      "input": {},
+      "sha256": "9a746e3712eccd16cb11421f98d0148a7d6b14d0f85dd3126b8ac869b644947f"
+    },
+    {
+      "input": {
+        "schemaVersion": 1
+      },
+      "sha256": "a72b8b151cfd906e1bfc54ebd1435b8da394f7ed1e42e887d2d04328c8dddf7e"
+    },
+    {
+      "input": {
+        "baseSize": 18,
+        "typeRatio": 1.25,
+        "fonts": {
+          "body": "Work Sans",
+          "heading": "Young Serif"
+        }
+      },
+      "sha256": "9e5a8655bc6015ed3099020b4bb156ebe7edd897c39f25862ca283cdb7a639d1"
+    }
+  ]
+}

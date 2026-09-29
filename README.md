@@ -14,6 +14,10 @@ Try “Use $dazzler-frontend to turn this CSV into a clear branded chart” or b
 
 The [installation guide](maintenance/ONBOARDING.md) covers a managed installer with local-edit protection, rollback, explicit host/scope selection and a pinned Claude marketplace. [Grok Bot status](platforms/GROK-BOT-STATUS.md) remains unverified.
 
+## Give the content its shape
+
+Eight purpose-based composition contracts now guide structure. Ask for **bolder**, **quieter**, **typeset**, **colorize**, **polish**, **harden**, **critique** or **distill**; optional controls stay out of your way until needed. Measured review candidates preserve intentional repetition and remain separate from accessibility failures. [Explore the composition field guide](https://jongos.github.io/Dazzler/composition/).
+
 ## A design that remembers
 
 Dazzler now resumes saved project choices, scales typography across screen sizes with readable print fallbacks, and proposes matching light/dark themes for compatible existing components. Existing design records stay in their chosen location. [Explore the typography specimen](https://jongos.github.io/Dazzler/typography/) or read [persistent systems](skills/dazzler-frontend/references/persistent-systems.md).
@@ -214,10 +218,10 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).
 
-- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.18.0/dazzler-claude-compact.zip)
+- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude-compact.zip)

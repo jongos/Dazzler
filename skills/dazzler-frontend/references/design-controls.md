@@ -1,5 +1,7 @@
 # Optional refinement, without restarting the design
 
+See [composition and refinement](composition.md) for purpose-based layout contracts, measured review candidates and bounded refinement intents. Preserve intentional repetition and record exceptions; these candidates remain separate from accessibility failures.
+
 Use this only when the user asks for options, wants control, or requests a specific tweak. Default use is automatic through [automatic-workflow.md](automatic-workflow.md). Do not open a selector, ask for aesthetic approval or show a questionnaire before the first result merely because this guide exists.
 
 ## Respond at the requested level
