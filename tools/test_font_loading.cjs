@@ -14,7 +14,7 @@ const { chromium } = require("playwright");
   const routes = new Map(faces.map((f) => ["/" + f.path, path.join(root, f.path)]));
   const html = `<!doctype html><meta charset="utf-8"><title>Bundled font specimens</title>
   <style>body{font:16px system-ui;margin:32px;background:#fff;color:#181818}h1{font:600 30px system-ui}main{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}article{border-top:1px solid #bbb;padding-top:12px;min-height:170px;overflow-wrap:anywhere}h2{font:600 14px system-ui;margin:0 0 15px}p{margin:8px 0}.sample{font-size:28px;line-height:1.25}.small{font-size:15px;line-height:1.5}.meta{font:11px system-ui;color:#555}@media(max-width:700px){main{grid-template-columns:1fr}body{margin:16px}}</style>
-  <h1>Open Foundry — bundled font specimens</h1><p>24 families · original font bytes · local browser QA</p><main></main>
+  <h1>Open Foundry — bundled font specimens</h1><p>${fonts.length} families · original font bytes · local browser QA</p><main></main>
   <script>
   const faces=${JSON.stringify(faces).replace(/</g, "\\u003c")};
   const families=${JSON.stringify(fonts.map((f) => ({ id: f.id, name: f.name, description: f.description }))).replace(/</g, "\\u003c")};

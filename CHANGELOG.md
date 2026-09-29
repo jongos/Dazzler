@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-09-29 — 0.23.1: Retire a flagged font dependency and constrain CSS import
+
+**Changed:** Removed the complete Gap Sans distribution and catalog entry after a directory audit flagged its attribution domain. No copyright text was edited in retained fonts; the earlier distribution remains unchanged in Git history and earlier releases. The full catalog now bundles 23 families; the compact six-family selection is unchanged. CSS token import omits resource references, executable expressions, markup, controls and escaped declarations, reporting an omission count.
+
+**Added:** Regression coverage for dependency retirement and CSS import with network/process calls blocked, plus concise documentation of enforced input boundaries and their limits.
+
+**Why:** Remove an unnecessary flagged dependency rather than obscure its notices, and narrow the data imported into design proposals. Legitimate local design helpers remain available. Repository repairs do not by themselves clear a third-party audit.
+
+**Validation:** 76 Node tests and 56 Python tests pass (one Windows symlink case skipped). All 121 retained font binaries match their recorded metadata and load in Chromium; the 695-file runtime inventory, local links, version guards and formatting checks pass. Rebuilt package checks and external reassessment are tracked in issue 40; no cleared public verdict is claimed.
+
 ## 2026-09-29 — Directory registration and source removal guidance
 
 **Changed:** Corrected source-install removal guidance for shared project skill directories. Agent-specific removal can retain a discoverable copy; named-skill removal without an agent filter removes Dazzler across the current project.

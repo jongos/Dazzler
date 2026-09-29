@@ -35,7 +35,6 @@ Open Foundry supplied the discovery directory, not a blanket license grant for e
 | Cooper Hewitt | OFL-1.1; binaries from Font Library, source/license from Cooper Hewitt | [Notices](skills/dazzler-frontend/assets/fonts/cooper-hewitt/) |
 | Cotham Sans | OFL-1.1 | [Notices](skills/dazzler-frontend/assets/fonts/cotham-sans/) |
 | EB Garamond | OFL-1.1; Google Fonts distribution | [Notices](skills/dazzler-frontend/assets/fonts/eb-garamond/) |
-| Gap Sans | OFL-1.1 | [Notices](skills/dazzler-frontend/assets/fonts/gap-sans/) |
 | Inter | OFL-1.1 | [Notices](skills/dazzler-frontend/assets/fonts/inter/) |
 | Junicode | OFL-1.1; Junicode 2 distribution | [Notices](skills/dazzler-frontend/assets/fonts/junicode/) |
 | League Gothic | OFL-1.1; release 1.601 | [Notices](skills/dazzler-frontend/assets/fonts/league-gothic/) |

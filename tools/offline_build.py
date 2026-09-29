@@ -62,6 +62,7 @@ def create(output):
             "maintenance/ONBOARDING.md",
             "maintenance/DESIGN-PHILOSOPHY.md",
             "maintenance/RELEASE-023.md",
+            "maintenance/SECURITY-040.md",
             "maintenance/PHASE2-VALIDATION.md",
             "maintenance/PHASE3-VALIDATION.md",
             "maintenance/PHASE4-VALIDATION.md",

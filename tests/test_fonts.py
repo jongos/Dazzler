@@ -21,6 +21,14 @@ class FontWorkflowTests(unittest.TestCase):
         result = fonts.shortlist(self.catalog, "body", ["literary"], "An introduction")
         self.assertIn(result[0]["id"], ["eb-garamond", "junicode", "libre-baskerville"])
 
+    def test_retired_dependency_is_not_distributed_or_recommended(self):
+        self.assertNotIn("gap-sans", {family["id"] for family in self.catalog})
+        self.assertFalse((fonts.SKILL / "assets/fonts/gap-sans").exists())
+        self.assertEqual(
+            fonts.shortlist(self.catalog, "display", family="gap-sans"), []
+        )
+        self.assertTrue(fonts.shortlist(self.catalog, "heading", text="Clear design"))
+
     def test_devanagari_never_silently_falls_back_to_latin(self):
         result = fonts.shortlist(self.catalog, "body", text="नमस्ते दुनिया")
         self.assertTrue(result)

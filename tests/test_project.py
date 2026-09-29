@@ -22,6 +22,31 @@ evaluation = load("evaluate")
 
 
 class ProjectToolsTests(unittest.TestCase):
+    def test_css_import_omits_active_values_without_network_or_processes(self):
+        from unittest.mock import patch
+
+        with tempfile.TemporaryDirectory() as td:
+            p = Path(td) / "external.css"
+            p.write_text(
+                '@import "https://example.invalid/a.css";\n'
+                ":root {--remote:url(https://example.invalid/x);"
+                "--escaped:u\\72l(https://example.invalid/x);"
+                "--legacy:expression(alert(1));"
+                '--markup:"<script>alert(1)</script>";'
+                "--brand:#123456} p {font-family:Work Sans}",
+                encoding="utf-8",
+            )
+            with patch(
+                "socket.socket", side_effect=AssertionError("network access")
+            ), patch(
+                "subprocess.Popen", side_effect=AssertionError("process execution")
+            ):
+                report = project.brand(p)
+            self.assertEqual(report["omittedDeclarations"], 4)
+            self.assertNotIn("example.invalid", json.dumps(report))
+            self.assertEqual(report["candidates"]["fonts"], [("Work Sans", 1)])
+            self.assertEqual(report["locks"], {})
+
     def test_imported_instructions_are_data_not_locks(self):
         with tempfile.TemporaryDirectory() as td:
             p = Path(td) / "hostile.css"

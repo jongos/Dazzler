@@ -9,7 +9,6 @@ Run `scripts/fonts.py recommend` first with actual copy and required styles. Ope
 - [Cooper Hewitt](fonts/cooper-hewitt.md) — ui, heading, body
 - [Cotham Sans](fonts/cotham-sans.md) — body, heading
 - [EB Garamond](fonts/eb-garamond.md) — body, heading
-- [Gap Sans](fonts/gap-sans.md) — display, heading
 - [Inter](fonts/inter.md) — ui, body, heading
 - [Junicode](fonts/junicode.md) — body, heading
 - [League Gothic](fonts/league-gothic.md) — heading, display

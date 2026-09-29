@@ -9,7 +9,7 @@ Choose one host and one scope. After installation, ask `Use $dazzler-frontend to
 Use Python 3.10 or newer. Download the matching host skill ZIP, `install_skill.py` and `SHA256SUMS.txt` from the same release, or use `tools/install_skill.py` from that release's source checkout. Review the source before running it. The examples below use the checkout path; for the standalone download use `python install_skill.py` instead. It makes no network requests and does not detect or install other hosts.
 
 ```sh
-python tools/install_skill.py install --host codex --scope project --root /absolute/project --version 0.23.0 --archive /downloads/dazzler-codex.zip --checksums /downloads/SHA256SUMS.txt --dry-run
+python tools/install_skill.py install --host codex --scope project --root /absolute/project --version 0.23.1 --archive /downloads/dazzler-codex.zip --checksums /downloads/SHA256SUMS.txt --dry-run
 ```
 
 Remove `--dry-run` to install. Select `claude`, `gemini`, `cursor` or `copilot` with its matching archive. For user scope, explicitly pass `--scope user --root /absolute/user-home`; Copilot supports project scope only here. The installer uses the selected host's documented skill folder, refuses linked paths and unmanaged existing installs, validates archive paths and hashes, then verifies the resource inventory without executing archive code. Dry-run performs the same validation without changing the installation root. Only use release archives and manifests from a publisher you trust: checksum consistency is not independent authentication.
@@ -60,9 +60,9 @@ Rollback requires a previous managed update. With no backup, the installer says 
 
 - [Dazzler on skills.sh](https://skills.sh/jongos/dazzler/dazzler-frontend), [registration process](https://skills.sh/docs/faq), and [audit follow-up](https://github.com/jongos/Dazzler/issues/40).
 - [Gen Agent Trust Hub report](https://skills.sh/jongos/dazzler/dazzler-frontend/security/agent-trust-hub). Its attribution-domain classification has not been independently verified here.
-- Pinned CLI: `npx skills@1.7.0 add https://github.com/jongos/Dazzler/tree/v0.23.0/skills/dazzler-frontend --skill dazzler-frontend --agent codex --copy`
+- Pinned CLI: `npx skills@1.7.0 add https://github.com/jongos/Dazzler/tree/v0.23.1/skills/dazzler-frontend --skill dazzler-frontend --agent codex --copy`
 - Claude commands: `/plugin marketplace add jongos/Dazzler`, then `/plugin install dazzler@dazzler`.
-- [Release downloads](https://github.com/jongos/Dazzler/releases/tag/v0.23.0)
+- [Release downloads](https://github.com/jongos/Dazzler/releases/tag/v0.23.1)
 - [Skills CLI source](https://github.com/vercel-labs/skills), MIT. Reviewed package SHA-512: `OfePnDft+Xt9/tCoHdCUe5fkM8i+Q3QOSQO53hm7mKtsXyvc+CKOAAliVWZ484HS3cWx+6r+ob0AArixs3jYXw==`.
 - [Claude marketplace format](https://code.claude.com/docs/en/plugin-marketplaces)
 - [Codex skills](https://developers.openai.com/codex/skills/)

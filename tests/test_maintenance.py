@@ -113,7 +113,13 @@ class MaintenanceTests(unittest.TestCase):
         skill = ROOT / "skills/dazzler-frontend"
         self.assertLessEqual((skill / "SKILL.md").stat().st_size, 8000)
         self.assertLess((skill / "references/font-catalog.md").stat().st_size, 3000)
-        self.assertEqual(len(list((skill / "references/fonts").glob("*.md"))), 25)
+        catalog = json.loads(
+            (skill / "references/font-catalog.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            {p.stem for p in (skill / "references/fonts").glob("*.md")},
+            {family["id"] for family in catalog["fonts"]},
+        )
         self.assertFalse((skill / "MAINTENANCE.md").exists())
         for file in [skill / "SKILL.md", *list((skill / "references").rglob("*.md"))]:
             self.assertLessEqual(file.stat().st_size, 12000, str(file))
