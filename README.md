@@ -10,6 +10,10 @@ Use $dazzler-frontend to redesign this dashboard so the important numbers stand 
 
 [Explore the field manual](https://jongos.github.io/Dazzler/) · [Try the live templates](https://jongos.github.io/Dazzler/templates/) · [Choose your platform](platforms/README.md)
 
+![A 30-second guided tour of the Dazzler field guide](docs/assets/dazzler-walkthrough.gif)
+
+*A guided walkthrough of the brief builder and worked examples, not a timed AI-generation recording.*
+
 ## Why use Dazzler?
 
 | What you need | What Dazzler does |
@@ -25,10 +29,19 @@ No design questionnaire is required. Fonts, colors and layout are automatic; you
 
 ## Install once
 
+For a compatible local agent, run:
+
+```sh
+npx skills add jongos/Dazzler --skill dazzler-frontend
+```
+
+Requires Node 22.20+. Select your agent in the installer. This downloads the larger source skill, including the full font catalog. The installer may replace local changes: back them up first. Its optional install telemetry supports directory rankings; set `DISABLE_TELEMETRY=1` to opt out. Listing or ranking is not guaranteed. For a pinned, smaller package with rollback, use the method below.
+
+
 Download the host ZIP, `install_skill.py` and `SHA256SUMS.txt` from the release linked below. With Python 3.10+ available, run this from the download folder for an existing project:
 
 ```sh
-python install_skill.py install --host codex --scope project --root /absolute/project --version 0.22.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
+python install_skill.py install --host codex --scope project --root /absolute/project --version 0.23.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
 ```
 
 Restart or refresh the agent, then ask it to use `$dazzler-frontend`. Add `--dry-run` to inspect an installation first. The installer checks hashes and resource completeness without executing downloaded scripts; updates preserve one previous version and refuse local edits.
@@ -120,13 +133,13 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.23.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).
 
-- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-claude-compact.zip)
+- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.23.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.23.0/dazzler-claude-compact.zip)
 
 ### Comparison notes
 

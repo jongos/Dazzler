@@ -9,7 +9,7 @@
       "whenToUse": "When you have an existing interface or a concrete design brief.",
       "prompt": "Use $dazzler-frontend to refresh this website while preserving its brand, content and existing framework.",
       "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control. If you supply a Figma frame, use available authorized read tools and preserve existing project tokens; otherwise use your supplied export and label the evidence gap.",
-      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "exercises": "Preserve the brand, establish a primary action, check narrow reflow and keyboard focus, and save accepted decisions.",
       "expect": "A working refresh with narrow/wide previews and a short change summary.",
       "tips": "Review the existing tokens and primary user journey before changing code.",
       "helpers": [
@@ -44,7 +44,7 @@
       "whenToUse": "When you have an existing interface or a concrete design brief.",
       "prompt": "Use $dazzler-frontend to make this landing page more vivid and readable, keeping its message and main action.",
       "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control. Ask for a visual comp first only if you want one. Image generation depends on the host; a static proposal must still become real text and controls with rendered checks.",
-      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "exercises": "Match the audience and stakes, make the main action clear, and inspect error recovery and keyboard controls.",
       "expect": "A coherent palette, clearer type hierarchy and measured foreground/background pairs.",
       "tips": "Preserve required brand colors; report conflicts instead of silently replacing them.",
       "helpers": [
@@ -143,7 +143,7 @@
       "whenToUse": "When you have a document or verified notes to improve.",
       "prompt": "Use $dazzler-frontend to make this Word report polished and easier to read while preserving every fact and document object.",
       "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
-      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "exercises": "Check reading measure, heading hierarchy, selective emphasis, font coverage and every printed page.",
       "expect": "A revised DOCX plus page-by-page render checks and any preservation limitations.",
       "tips": "Use host document tools for existing files; the basic content exporter cannot preserve arbitrary objects.",
       "helpers": [
@@ -307,7 +307,7 @@
       "whenToUse": "When you have actual data and a clear audience.",
       "prompt": "Use $dazzler-frontend to turn this CSV into a clear branded set of charts with labels, units and a data table.",
       "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
-      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "exercises": "Preserve source values and units, choose the chart for the analytical relationship, check contrast and provide non-color cues.",
       "expect": "Charts grounded in supplied rows, accessible equivalents and stated missing-value handling.",
       "tips": "Do not invent observations or describe CSV visualization as Excel workbook editing.",
       "helpers": [
@@ -373,7 +373,7 @@
       "whenToUse": "When you have brand evidence or representative copy.",
       "prompt": "Use $dazzler-frontend to derive a usable design system from this existing site and its brand files.",
       "advanced": "Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.",
-      "exercises": "Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.",
+      "exercises": "Separate brand seeds from accessible roles, verify licensed font coverage, and record reusable decisions.",
       "expect": "Traceable observations, resolved tokens and visible conflicts.",
       "tips": "Observed frequency is evidence, not permission to lock a brand value.",
       "helpers": [

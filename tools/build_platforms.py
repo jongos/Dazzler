@@ -11,7 +11,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "skills/dazzler-frontend"
-PLATFORMS = ("codex", "claude", "gemini", "cursor", "copilot")
+PLATFORMS = ("codex", "claude", "gemini", "cursor", "copilot", "grokbot")
 
 
 def skill_text(platform, plugin=False):
@@ -36,6 +36,16 @@ def skill_text(platform, plugin=False):
     if platform == "claude":
         invocation = "/dazzler:dazzler-frontend" if plugin else "/dazzler-frontend"
         return text.replace("Use $dazzler-frontend to ...", invocation + " ...")
+    if platform == "grokbot":
+        text = text.replace("name: dazzler-frontend", "name: Dazzler")
+        text = re.sub(
+            r"description: (.*)",
+            lambda m: "description: >-\n  use this when you need to "
+            + m[1][0].lower()
+            + m[1][1:],
+            text,
+            count=1,
+        )
     return text.replace("$dazzler-frontend", "Dazzler")
 
 
@@ -269,8 +279,19 @@ def build(destination):
         with tempfile.TemporaryDirectory(dir=destination, prefix="build-") as temp:
             stage = Path(temp).resolve()
             assert stage.parent == destination
-            skill = assemble(platform, stage / "dazzler-frontend")
+            skill = assemble(
+                platform,
+                stage / ("dazzler" if platform == "grokbot" else "dazzler-frontend"),
+            )
             archive(skill, destination / f"dazzler-{platform}.zip")
+    with tempfile.TemporaryDirectory(dir=destination, prefix="build-") as temp:
+        extension = Path(temp) / "dazzler"
+        assemble("gemini", extension / "skills/dazzler-frontend")
+        shutil.copy2(
+            ROOT / "gemini-extension.json", extension / "gemini-extension.json"
+        )
+        shutil.copy2(ROOT / "LICENSE", extension / "LICENSE")
+        archive(extension, destination / "dazzler-gemini-extension.zip")
     # Keep the previous upload filename as a byte-identical compatibility alias.
     shutil.copyfile(
         destination / "dazzler-claude.zip", destination / "dazzler-claude-compact.zip"

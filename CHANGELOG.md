@@ -1,5 +1,16 @@
 # Developer change notes
 
+
+## 2026-09-28 — 0.23.0: A redesigned field guide and portable distribution
+
+**Changed:** Rebuilt the field guide around an editorial introduction, local prompt builder, searchable 30-example gallery, host setup and concise verification guidance. Source installs are prominent; compact downloads retain integrity checks and rollback.
+
+**Added:** Portable, Claude, Cursor and Gemini manifests; square brand assets; Grok Bot and Gemini extension archives; SwiftUI, Compose and Flutter token proposals with regression fixtures. Release checks now guard onboarding commands and every manifest version.
+
+**Why:** Make the skill easier to understand, discover and install while extending the existing token system to native app projects. Keep external host acceptance separate from local validation.
+
+**Validation:** 76 Node tests and 54 Python tests pass (one Windows symlink case skipped). Guide browser checks cover fonts, axe, keyboard controls, copy denial, prompt injection, three viewports and actual 200% text scaling; all six print pages were inspected. All 30 gallery destinations pass. Portable schema and strict Claude manifests validate; Gemini compact install/discovery/uninstall passes under Node 22. Packages retain 24 MB compressed/unpacked gates and extracted-helper checks. See `maintenance/RELEASE-023.md` for exact host limits and remaining issues; no hosted-upload or controlled model-comparison success is claimed.
+
 ## 2026-09-28 — 0.22.0: Smaller packages and safer installation
 
 - **Changed:** All host downloads use the compact profile with six font families, all 30 templates and complete rendering helpers. Both ZIP and unpacked content are capped at 24 MB. The full 24-family source collection is retained. README and platform guides lead with benefits and concise installation steps.

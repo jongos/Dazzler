@@ -9,7 +9,7 @@
 
 **Prompt:** Use $dazzler-frontend to refresh this website while preserving its brand, content and existing framework.
 
-**Exercises:** Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.
+**Exercises:** Preserve the brand, establish a primary action, check narrow reflow and keyboard focus, and save accepted decisions.
 
 **Expect:** A working refresh with narrow/wide previews and a short change summary.
 
@@ -30,7 +30,7 @@ Workflow: [design studio](design-studio.md), [design handoff](design-handoff.md)
 
 **Prompt:** Use $dazzler-frontend to make this landing page more vivid and readable, keeping its message and main action.
 
-**Exercises:** Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.
+**Exercises:** Match the audience and stakes, make the main action clear, and inspect error recovery and keyboard controls.
 
 **Expect:** A coherent palette, clearer type hierarchy and measured foreground/background pairs.
 

@@ -3,7 +3,7 @@
 Download `dazzler-copilot.zip`, `install_skill.py` and `SHA256SUMS.txt` from the same release. From that folder, with Python 3.10+ available:
 
 ```sh
-python install_skill.py install --host copilot --scope project --root /absolute/project --version 0.22.0 --archive dazzler-copilot.zip --checksums SHA256SUMS.txt
+python install_skill.py install --host copilot --scope project --root /absolute/project --version 0.23.0 --archive dazzler-copilot.zip --checksums SHA256SUMS.txt
 ```
 
 The project must exist. Add `--dry-run` to validate without installing. The installer verifies archive paths, checksums and every inventoried resource without executing package code. It refuses unmanaged installations or local edits and retains one prior managed version for rollback.
@@ -30,6 +30,6 @@ Archive, size and helper checks are automated. Real host activation, cloud uploa
 
 Packaging reference (checked September 28, 2026): [official documentation](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-copilot.zip](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-copilot.zip)
+- [dazzler-copilot.zip](https://github.com/jongos/Dazzler/releases/download/v0.23.0/dazzler-copilot.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.23.0/dazzler-templates.zip)

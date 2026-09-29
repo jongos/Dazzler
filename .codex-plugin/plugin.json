@@ -1,6 +1,6 @@
 {
   "name": "dazzler",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "Dazzler turns your brief into expressive, purposeful frontend design.",
   "author": {
     "name": "Jon Gosier",
@@ -18,6 +18,8 @@
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": "Use $dazzler-frontend to design and build an interface from my brief, choosing fonts, colors, layout and interactions automatically.",
-    "brandColor": "#7048E8"
+    "brandColor": "#7048E8",
+    "logo": "./assets/dazzler-logo.svg",
+    "composerIcon": "./assets/dazzler-icon.png"
   }
 }

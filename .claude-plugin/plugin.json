@@ -1,0 +1,21 @@
+{
+  "name": "dazzler",
+  "version": "0.23.0",
+  "description": "Dazzler turns your brief into expressive, purposeful frontend design.",
+  "author": {
+    "name": "Jon Gosier",
+    "email": "jon@filmhedge.com",
+    "url": "https://github.com/jongos"
+  },
+  "repository": "https://github.com/jongos/Dazzler",
+  "license": "Apache-2.0",
+  "homepage": "https://jongos.github.io/Dazzler/",
+  "keywords": [
+    "design",
+    "typography",
+    "color",
+    "frontend",
+    "charts",
+    "documents"
+  ]
+}

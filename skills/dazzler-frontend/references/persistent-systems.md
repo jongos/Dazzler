@@ -54,6 +54,12 @@ Discovery checks an existing root components.json with CSS variables enabled and
 
 Review syntax and existing component bindings before merging. No registry component is installed, no CSS is overwritten and no framework is introduced automatically. Unsupported projects keep their existing stack and can use ordinary tokens.
 
+## Native theme proposals
+
+Use `node scripts/studio.mjs tokens --config INPUT.json --out NEW_DIR --format swiftui|compose|flutter` with one actual format name. This adds an iOS SwiftUI color/type file, Android Material 3 ColorScheme/Typography file, or Flutter ThemeData file to the usual exports. Light/dark action and error pairs retain the measured web roles. Other Material roles use framework defaults and require rendered review. Native compilers are not bundled.
+
+Font family references do not identify native font files or PostScript names. Register the authorized files and notices through the app's asset workflow, then bind its font faces deliberately. System defaults preserve Dynamic Type/text scaling until registration. Retain 44pt iOS or 48dp Android/Flutter touch targets; test long labels, enlarged text, both modes and platform contrast after binding. SwiftUI output targets iOS/UIKit, not macOS.
+
 ## Notes and credits
 
 Interchange reference: [DESIGN.md specification](https://github.com/google-labs-code/design.md/blob/main/docs/spec.md). Maintenance conformance checks pin @google/design.md 0.4.0; this development-only dependency is never imported by the skill runtime. Theme conventions: [shadcn theming](https://ui.shadcn.com/docs/theming). Token interchange: [DTCG 2025.10](https://www.designtokens.org/tr/2025.10/format/). Dazzler adapters are original Apache-2.0 code. Font files retain their own notices.

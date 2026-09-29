@@ -1,9 +1,86 @@
 {
   "schemaVersion": 1,
   "cases": [
-    {"id":"brand-preservation","prompt":"Use Dazzler to create a small HTML event signup page for an independent bookshop. Keep the brand seed exactly #345678. Save index.html and design.json containing brandSeed. Use real labels and a visible keyboard focus style. No publishing.","assertions":[{"file":"index.html","contains":"<label"},{"file":"design.json","json":"brandSeed","equals":"#345678"}],"manualReview":["Brand seed preserved in actual design", "Signup hierarchy and keyboard access", "No invented testimonials"]},
-    {"id":"content-resilience","prompt":"Use Dazzler to build a responsive HTML order table with long customer names, missing images, empty results and a failed-save message. Save index.html. Show realistic illustrative data, clearly labeled as such. No backend or publishing.","assertions":[{"file":"index.html","contains":"<table"},{"file":"index.html","contains":"viewport"}],"manualReview":["Long labels and narrow viewport remain usable", "States distinguish mock behavior from real persistence", "Non-color error cues"]},
-    {"id":"system-and-charts","prompt":"Use Dazzler to generate a coherent token system and a five-category chart palette. Save design-system.json and chart.json. Include non-color series identifiers and distinguish measured contrast from overall accessibility. No publishing.","assertions":[{"file":"design-system.json","json":"schemaVersion","equals":2},{"file":"chart.json","json":"status","equals":"pass"}],"manualReview":["Labels and marker/dash cues accompany colors", "Measurements actually executed", "Tokens are integrated coherently"]},
-    {"id":"document-transfer","prompt":"Use Dazzler to create a readable printable HTML one-page project brief and an HTML slide edition using the same brand identity. Save brief.html and slides.html. Use only illustrative content and label it. No publishing.","assertions":[{"file":"brief.html","contains":"<title"},{"file":"slides.html","contains":"<title"}],"manualReview":["Print breaks and slide density", "Consistent typography and brand", "Font availability and export limitations disclosed"]}
+    {
+      "id": "brand-preservation",
+      "prompt": "Use Dazzler to create a small HTML event signup page for an independent bookshop. Keep the brand seed exactly #345678. Save index.html and design.json containing brandSeed. Use real labels and a visible keyboard focus style. No publishing.",
+      "assertions": [
+        {
+          "file": "index.html",
+          "contains": "<label"
+        },
+        {
+          "file": "design.json",
+          "json": "brandSeed",
+          "equals": "#345678"
+        }
+      ],
+      "manualReview": [
+        "Brand seed preserved in actual design",
+        "Signup hierarchy and keyboard access",
+        "No invented testimonials"
+      ]
+    },
+    {
+      "id": "content-resilience",
+      "prompt": "Use Dazzler to build a responsive HTML order table with long customer names, missing images, empty results and a failed-save message. Save index.html. Show realistic illustrative data, clearly labeled as such. No backend or publishing.",
+      "assertions": [
+        {
+          "file": "index.html",
+          "contains": "<table"
+        },
+        {
+          "file": "index.html",
+          "contains": "viewport"
+        }
+      ],
+      "manualReview": [
+        "Long labels and narrow viewport remain usable",
+        "States distinguish mock behavior from real persistence",
+        "Non-color error cues"
+      ]
+    },
+    {
+      "id": "system-and-charts",
+      "prompt": "Use Dazzler to generate a coherent token system and a five-category chart palette. Save design-system.json and chart.json. Include non-color series identifiers and distinguish measured contrast from overall accessibility. No publishing. Use current schema-3 defaults and preserve readable foreground/background roles.",
+      "assertions": [
+        {
+          "file": "design-system.json",
+          "json": "schemaVersion",
+          "equals": 3
+        },
+        {
+          "file": "chart.json",
+          "json": "status",
+          "equals": "pass"
+        }
+      ],
+      "manualReview": [
+        "Labels and marker/dash cues accompany colors",
+        "Measurements actually executed",
+        "Tokens are integrated coherently"
+      ]
+    },
+    {
+      "id": "document-transfer",
+      "prompt": "Use Dazzler to create a readable printable HTML one-page project brief and an HTML slide edition using the same brand identity. Save brief.html and slides.html. Use only illustrative content and label it. No publishing.",
+      "assertions": [
+        {
+          "file": "brief.html",
+          "contains": "<title"
+        },
+        {
+          "file": "slides.html",
+          "contains": "<title"
+        }
+      ],
+      "manualReview": [
+        "Print breaks and slide density",
+        "Consistent typography and brand",
+        "Font availability and export limitations disclosed",
+        "Body measure and selective emphasis",
+        "Actual licensed font availability"
+      ]
+    }
   ]
 }

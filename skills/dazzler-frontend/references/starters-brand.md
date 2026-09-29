@@ -9,7 +9,7 @@
 
 **Prompt:** Use $dazzler-frontend to derive a usable design system from this existing site and its brand files.
 
-**Exercises:** Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.
+**Exercises:** Separate brand seeds from accessible roles, verify licensed font coverage, and record reusable decisions.
 
 **Expect:** Traceable observations, resolved tokens and visible conflicts.
 

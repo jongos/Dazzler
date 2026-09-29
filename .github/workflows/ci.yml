@@ -50,6 +50,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: node tools/test_studio_browser.cjs dist/studio-browser
       - run: node tools/test_templates.cjs dist/browser --check-only
+      - run: node tools/test_fieldguide.cjs dist/browser/fieldguide
       - run: node tools/test_template_gallery.cjs
       - run: node tools/test_composition_browser.mjs dist/browser/composition
       - run: node tools/test_design_system_browser.mjs dist/browser/design-system

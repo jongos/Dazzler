@@ -11,6 +11,7 @@ import { resolveRefinement, prepareRefinement, refinementCSS } from "./refinemen
 import { enhanceType, specimen } from "./type-system.mjs";
 import { exportDesign, importDesign, resumeConfig } from "./design-record.mjs";
 import { shadcnTheme } from "./shadcn-theme.mjs";
+import { nativeTokens } from "./native-tokens.mjs";
 import { readJSON, readLimited, createOutput } from "./runtime.mjs";
 import { generate, css as colorCSS } from "./colors.mjs";
 import { converter, formatHex, toGamut, getContrastRatio } from "./vendor/color-engine.mjs";
@@ -84,7 +85,7 @@ export function tokens(input = {}) {
   const base = positive(input.baseSize ?? 16, "baseSize"),
     ratio = positive(input.typeRatio ?? 1.2, "typeRatio");
   if (base < 12 || base > 24 || ratio < 1.05 || ratio > 1.5)
-    throw Error("Use baseSize 12–24 and typeRatio 1.05–1.5");
+    throw Error("Use baseSize 12â€“24 and typeRatio 1.05â€“1.5");
   const requestedFonts = {
     body: input.fonts?.body ?? input.brand?.fonts?.body ?? "system-ui",
     heading:
@@ -268,7 +269,7 @@ export function chart(input = {}) {
     count < 2 ||
     count > 8
   )
-    throw Error("Choose categorical/sequential/diverging and 2–8 entries");
+    throw Error("Choose categorical/sequential/diverging and 2â€“8 entries");
   if (!/^#[\da-f]{6}$/i.test(bg)) throw Error("Background must be opaque hex");
   if (input.hue !== undefined && !Number.isFinite(input.hue)) throw Error("Hue must be finite");
   if (
@@ -354,7 +355,7 @@ export function chart(input = {}) {
   };
 }
 export function chartPreview(report) {
-  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Dazzler chart palette</title><style>body{font:18px system-ui;max-width:900px;margin:40px auto;padding:20px}td,th{padding:12px;text-align:left}svg{background:${report.background};max-width:100%}</style><h1>${escapeHTML(report.kind)} chart palette</h1><p>Labels, patterns and a data table accompany color. Bars below are illustrative samples.</p><svg viewBox="0 0 800 ${report.entries.length * 55}" role="img" aria-label="Illustrative palette bars">${report.entries.map((e, i) => `<defs><pattern id="${e.pattern}" width="${5 + i * 2}" height="${5 + i * 2}" patternUnits="userSpaceOnUse"><rect width="100%" height="100%" fill="${e.color}"/><path d="M0 0L${5 + i * 2} ${5 + i * 2}" stroke="${report.background}" stroke-width="2"/></pattern></defs><rect x="10" y="${i * 55 + 5}" width="${180 + i * 60}" height="38" fill="url(#${e.pattern})"/>`).join("")}</svg><table><caption>Palette key — use your real chart values in production</caption><thead><tr><th>Series</th><th>Color</th><th>Marker</th><th>Graphic contrast</th></tr></thead><tbody>${report.entries.map((e) => `<tr><th scope="row">${escapeHTML(e.label)}</th><td>${e.color}</td><td>${e.shape}</td><td>${e.contrast.toFixed(2)}:1</td></tr>`).join("")}</tbody></table><p>${escapeHTML(report.notes.join(" "))}</p></html>`;
+  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Dazzler chart palette</title><style>body{font:18px system-ui;max-width:900px;margin:40px auto;padding:20px}td,th{padding:12px;text-align:left}svg{background:${report.background};max-width:100%}</style><h1>${escapeHTML(report.kind)} chart palette</h1><p>Labels, patterns and a data table accompany color. Bars below are illustrative samples.</p><svg viewBox="0 0 800 ${report.entries.length * 55}" role="img" aria-label="Illustrative palette bars">${report.entries.map((e, i) => `<defs><pattern id="${e.pattern}" width="${5 + i * 2}" height="${5 + i * 2}" patternUnits="userSpaceOnUse"><rect width="100%" height="100%" fill="${e.color}"/><path d="M0 0L${5 + i * 2} ${5 + i * 2}" stroke="${report.background}" stroke-width="2"/></pattern></defs><rect x="10" y="${i * 55 + 5}" width="${180 + i * 60}" height="38" fill="url(#${e.pattern})"/>`).join("")}</svg><table><caption>Palette key â€” use your real chart values in production</caption><thead><tr><th>Series</th><th>Color</th><th>Marker</th><th>Graphic contrast</th></tr></thead><tbody>${report.entries.map((e) => `<tr><th scope="row">${escapeHTML(e.label)}</th><td>${e.color}</td><td>${e.shape}</td><td>${e.contrast.toFixed(2)}:1</td></tr>`).join("")}</tbody></table><p>${escapeHTML(report.notes.join(" "))}</p></html>`;
 }
 async function main() {
   const { positionals, values } = parseArgs({
@@ -365,6 +366,7 @@ async function main() {
       out: { type: "string" },
       template: { type: "string" },
       context: { type: "string" },
+      format: { type: "string" },
       accept: { type: "boolean" },
       variance: { type: "string" },
       density: { type: "string" },
@@ -375,15 +377,17 @@ async function main() {
   });
   if (values.help) {
     console.log(
-      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--format swiftui|compose|flutter] [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
     );
     return;
   }
   if (positionals.length !== 1 || !values.config || !values.out)
     throw Error(
-      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--format swiftui|compose|flutter] [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
     );
   const command = positionals[0];
+  if (values.format && !["tokens", "resume"].includes(command))
+    throw Error("--format requires tokens or resume");
   if (!["tokens", "chart", "resume", "import-design"].includes(command))
     throw Error("Unknown command");
   if (
@@ -468,6 +472,7 @@ async function main() {
       result.system.policy,
     );
   }
+  const native = values.format ? nativeTokens(result.system, values.format) : null;
   values.out = await createOutput(values.out);
   const write = (name, data) =>
     writeFile(
@@ -475,6 +480,7 @@ async function main() {
       typeof data === "string" ? data : JSON.stringify(data, null, 2) + "\n",
     );
   if (command !== "chart") {
+    if (native) await write(native.name, native.code);
     await write("design-system.json", result.system);
     await write("tokens.css", result.css);
     await write("tokens.dtcg.json", result.dtcg);
@@ -499,7 +505,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   main().catch((e) => {
     console.error(String(e.message).replace(/[\r\n]+/g, " "));
     console.error(
-      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
+      "Usage: studio.mjs tokens|chart|resume|import-design --config INPUT --out NEW_DIR [--format swiftui|compose|flutter] [--template tokens.json] [--context context.json] [--accept] [--intent VERB --variance auto|1..10 --density auto|1..10 --motion auto|1..10]",
     );
     process.exitCode = 1;
   });

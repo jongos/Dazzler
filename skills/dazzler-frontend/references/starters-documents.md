@@ -9,7 +9,7 @@
 
 **Prompt:** Use $dazzler-frontend to make this Word report polished and easier to read while preserving every fact and document object.
 
-**Exercises:** Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.
+**Exercises:** Check reading measure, heading hierarchy, selective emphasis, font coverage and every printed page.
 
 **Expect:** A revised DOCX plus page-by-page render checks and any preservation limitations.
 

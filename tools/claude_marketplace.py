@@ -13,6 +13,7 @@ def generate(packages, check=False):
     archive = Path(packages) / "dazzler-claude-plugin.zip"
     manifest = {
         "name": "dazzler",
+        "description": "Automatic typography, color, interfaces, charts and document design.",
         "owner": {"name": "Jon Gosier", "email": "jon@filmhedge.com"},
         "plugins": [
             {

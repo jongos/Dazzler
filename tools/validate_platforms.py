@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path, PurePosixPath
 import re
 import subprocess
@@ -86,8 +87,20 @@ def validate(folder):
                         reference,
                         "reference budget",
                     )
-            assert "name: dazzler-frontend" in text and "## Verify the result" in text
+            assert (
+                "name: Dazzler"
+                if archive.name == "dazzler-grokbot.zip"
+                else "name: dazzler-frontend"
+            ) in text and "## Verify the result" in text
             profile = json.loads(z.read(prefix + "references/package-profile.json"))
+            if archive.name == "dazzler-grokbot.zip":
+                assert prefix == "dazzler/"
+                assert "description: >-\n  use this when " in text
+            if archive.name == "dazzler-gemini-extension.zip":
+                extension = json.loads(z.read("dazzler/gemini-extension.json"))
+                assert extension["name"] == "dazzler"
+                assert extension["version"] == profile["version"]
+                assert prefix == "dazzler/skills/dazzler-frontend/"
             assert profile["profile"] == "compact"
             assert sum(i.file_size for i in z.infolist()) <= profile["maxUnpackedBytes"]
             assert archive.stat().st_size <= profile["maxUnpackedBytes"]
@@ -213,7 +226,10 @@ def validate(folder):
                     and manifest["version"] == expected["version"]
                 )
             with tempfile.TemporaryDirectory() as temp:
-                if "plugin" not in archive.name:
+                if "plugin" not in archive.name and archive.name not in (
+                    "dazzler-grokbot.zip",
+                    "dazzler-gemini-extension.zip",
+                ):
                     install_root = Path(temp) / "managed"
                     install_root.mkdir()
                     args = dict(
@@ -239,6 +255,65 @@ def validate(folder):
                     timeout=30,
                 )
                 assert json.loads(health.stdout)["status"] == "pass"
+                if archive.name == "dazzler-grokbot.zip":
+                    task = Path(temp) / "task.json"
+                    task.write_text('{"kind":"chart"}')
+                    routed = subprocess.run(
+                        ["node", str(skill / "scripts/route.mjs"), str(task)],
+                        capture_output=True,
+                        text=True,
+                        check=True,
+                        timeout=30,
+                    )
+                    assert json.loads(routed.stdout)["networkRequired"] is False
+                    page = Path(temp) / "index.html"
+                    page.write_text(
+                        "<!doctype html><title>Local check</title><p>Dazzler</p>"
+                    )
+                    env = {
+                        k: v
+                        for k, v in os.environ.items()
+                        if k not in ("DAZZLER_NODE_MODULES", "NODE_PATH")
+                    }
+                    browser = subprocess.run(
+                        [
+                            "node",
+                            "--no-global-search-paths",
+                            str(skill / "scripts/browser.cjs"),
+                            "inspect",
+                            str(page),
+                            str(Path(temp) / "browser-check"),
+                        ],
+                        cwd=temp,
+                        env=env,
+                        capture_output=True,
+                        text=True,
+                        timeout=30,
+                    )
+                    assert (
+                        browser.returncode != 0
+                        and "Playwright unavailable" in browser.stderr
+                    )
+                native_config = Path(temp) / "native-input.json"
+                native_config.write_text('{"brand":{"seed":"#7048E8"}}')
+                subprocess.run(
+                    [
+                        "node",
+                        str(skill / "scripts/studio.mjs"),
+                        "tokens",
+                        "--config",
+                        str(native_config),
+                        "--out",
+                        str(Path(temp) / "native"),
+                        "--format",
+                        "flutter",
+                    ],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                    timeout=30,
+                )
+                assert (Path(temp) / "native/dazzler_theme.dart").is_file()
                 config = Path(temp) / "chart-input.json"
                 config.write_text(
                     json.dumps(

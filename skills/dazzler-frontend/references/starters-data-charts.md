@@ -9,7 +9,7 @@
 
 **Prompt:** Use $dazzler-frontend to turn this CSV into a clear branded set of charts with labels, units and a data table.
 
-**Exercises:** Check the supplied evidence, choose a suitable visual direction, implement within the authorized scope, and inspect the result.
+**Exercises:** Preserve source values and units, choose the chart for the analytical relationship, check contrast and provide non-color cues.
 
 **Expect:** Charts grounded in supplied rows, accessible equivalents and stated missing-value handling.
 
