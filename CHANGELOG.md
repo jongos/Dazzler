@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.20.0: Optional design handoffs and evidence-based guidance
+
+- **Changed:** Supplied design files now route to a bounded read-only evidence workflow; optional comps route through actual implementation and browser review. Existing project choices remain authoritative. Platform guides, the field manual and website starters explain these conditional paths without adding a default questionnaire.
+- **Added:** Figma evidence/mode/conflict mapping guidance, an opt-in raster-comp comparison procedure, a colorful handoff guide linked to existing template demos, a dated capability comparison and a local end-to-end handoff check. Host instructions remain progressively disclosed within package context budgets.
+- **Why:** Make adjacent design workflows useful without inventing connector access, treating image proposals as functional interfaces, or promoting untested native/host support. No new runtime dependency or upstream code is imported.
+- **Validation:** Existing 69 Node / 45 Python regression suite; local CSS conflict evidence, no automatic locks, raster-wrapper comparison, unchanged source, keyboard form checks and handoff-guide reflow/fonts/assets. Extracted archives, context/license inventories, Windows offline restore and cross-platform CI gate publication. Live Figma, image generation, Grok Bot installation, native-app exports and comparative output quality are not verified; see maintenance/PHASE5-VALIDATION.md.
+
 ## 2026-09-28 — 0.19.0 release validation correction
 
 - **Changed:** The cross-runtime default-output fixture normalizes numeric metadata to 12 significant digits while retaining exact comparisons for exported strings. Runtime output is unchanged.

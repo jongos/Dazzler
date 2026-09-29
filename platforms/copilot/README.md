@@ -16,6 +16,8 @@ The archive includes the platform entrypoint, font catalog, 24 licensed font fam
 
 This repository folder contains the platform adapter and installation guidance, **not** a standalone installable skill. Use the complete ZIP or build it with `python tools/build_platforms.py --out dist/platforms` from the repository root. The builder combines the canonical skill with `HOST.md`; assets are maintained once.
 
+Optional design-file handoff uses an already available authorized connector. Visual comps run only when requested and supported by this host. Both require real rendered implementation checks; neither is bundled Figma synchronization or native-app export. See the installed `references/design-handoff.md` and `references/design-controls.md`.
+
 ## Validation status
 
 Documentation-aligned packaging with local archive, license, resource and helper checks. Not end-to-end tested inside GitHub Copilot; a valid archive does not guarantee account eligibility, upload acceptance, or agent behavior. Keep the core skill enabled for automatic selection where supported; host consent still applies.
@@ -42,6 +44,6 @@ The package includes 19 beginner prompts in `references/starters.md`, grouped by
 
 Packaging reference (checked September 28, 2026): [official documentation](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-copilot.zip](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-copilot.zip)
+- [dazzler-copilot.zip](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-copilot.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-templates.zip)

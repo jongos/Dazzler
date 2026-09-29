@@ -2,7 +2,7 @@
 
 Reviewed September 28, 2026. **Unverified installation; no dedicated supported package.**
 
-The host documents support for skills and compatible plugins. That establishes general capability, but not Dazzler's multi-file discovery, resource access, refresh/update semantics or a completed design task. No authenticated Grok Bot session was available for this review. Grok Build is a different host; an installer's `grok` adapter does not verify Grok Bot.
+The host documents support for skills and compatible plugins. That establishes general capability, but not Dazzler's multi-file discovery, resource access, refresh/update semantics or a completed design task. No authenticated Grok Bot session was available for this review or the Phase 5 recheck. Discovery/invocation has not been reproduced, so no dedicated edition is promoted. Grok Build is a different host; an installer's `grok` adapter does not verify Grok Bot.
 
 A community report describes a user workflow folder, a saved skill entry and successful standalone Linux helper commands. Those are useful observations, not independently reproduced installation evidence. In particular, a saved entrypoint alone does not establish that the font files, licenses, scripts and references remain accessible to the agent. A Bot template does not automatically transport arbitrary custom scripts or dependencies.
 

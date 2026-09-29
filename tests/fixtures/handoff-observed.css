@@ -1,0 +1,3 @@
+/* Synthetic observations. Modes intentionally conflict; neither is a brand lock. */
+:root { --brand: #173eac; font-family: 'Work Sans'; }
+[data-mode="dark"] { --brand: #91afff; }

@@ -30,6 +30,8 @@ For clickable artwork, choose a vector-region or image-hotspot approach suited t
 
 Routine design helpers run from local bundled resources. Standalone image interactions use a lightweight browser-native adapter; existing framework integrations remain available. The release includes an integrity checker and automatic routing guidance. Optional native Office and browser tools use existing host runtimes.
 
+For a supplied design file, read only through available authorized tools or use supplied exports; preserve source/mode evidence and existing brand rules. Generate a visual comp first only when requested and supported, then implement real accessible content and inspect it. A comp is a proposal, not proof of functionality. No Figma synchronization or validated native-app export is supplied.
+
 ## Notes and credits
 
 Created by Jon Gosier; feedback, feature requests and ideas: jon@filmhedge.com. Named after Dazzler, one of Jon's favorite X-Men characters. Independent project; no affiliation with Disney/Marvel or any AI vendor.

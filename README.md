@@ -18,6 +18,10 @@ The [installation guide](maintenance/ONBOARDING.md) covers a managed installer w
 
 Eight purpose-based composition contracts now guide structure. Ask for **bolder**, **quieter**, **typeset**, **colorize**, **polish**, **harden**, **critique** or **distill**; optional controls stay out of your way until needed. Measured review candidates preserve intentional repetition and remain separate from accessibility failures. [Explore the composition field guide](https://jongos.github.io/Dazzler/composition/).
 
+## From reference to working interface
+
+Bring a design frame through an available authorized connector, or ask for a visual comp first. Dazzler preserves the project’s existing system, implements real content and controls, and checks the result. These optional workflows add no connector or image-generation dependency. [Explore the handoff guide](https://jongos.github.io/Dazzler/handoff/).
+
 ## A design that remembers
 
 Dazzler now resumes saved project choices, scales typography across screen sizes with readable print fallbacks, and proposes matching light/dark themes for compatible existing components. Existing design records stay in their chosen location. [Explore the typography specimen](https://jongos.github.io/Dazzler/typography/) or read [persistent systems](skills/dazzler-frontend/references/persistent-systems.md).
@@ -178,6 +182,10 @@ Maintainers rebuild the color engine with exact versions in `package-lock.json`.
 
 Completed agent-driven maintenance includes validation, a commit, and a push, as documented in [AGENTS.md](AGENTS.md) and [MAINTENANCE.md](maintenance/MAINTENANCE.md).
 
+## How Dazzler fits
+
+Dazzler focuses on licensed font files, measured color, persistent brand choices and several output formats. The managed installer, composition tools and supported token interchange are available today. Local helpers work from bundled resources; live-site inspection and connectors use the network. Host activation and upload compatibility remain qualified, and no head-to-head quality advantage is claimed. See the dated comparison in the closing notes.
+
 ## 💌 Feedback, feature requests & ideas
 
 Have an idea for what Dazzler should do next? Contact **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)** or open an issue.
@@ -218,10 +226,14 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).
 
-- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude-compact.zip)
+- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-claude-compact.zip)
+
+### Comparison notes
+
+[Where Dazzler fits](docs/COMPARISON.md) separates **verified here**, **documented**, and **not assessed** claims, with primary sources and current limitations. Reviewed September 28, 2026. No popularity or speculative candidate lists are used.

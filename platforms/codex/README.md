@@ -42,6 +42,8 @@ To update, verify the new download, back up the existing skill directory outside
 
 To uninstall a manually copied skill, remove only the installed `dazzler-frontend` folder from the discovery path. If it is a symlink, unlink it without deleting its target. Restart or refresh the session; projects created using Dazzler remain separate. Uninstall managed plugins through their host.
 
+Optional design-file handoff uses an already available authorized connector. Visual comps run only when requested and supported by this host. Both require real rendered implementation checks; neither is bundled Figma synchronization or native-app export. See the installed `references/design-handoff.md` and `references/design-controls.md`.
+
 ## Quick starts
 
 The package includes 19 beginner prompts in `references/starters.md`, grouped by task. Read one category at a time. Host-specific invocation is applied during packaging; Claude plugin users prefix the command with `/dazzler:`. Advanced fields are optional.
@@ -50,6 +52,6 @@ The package includes 19 beginner prompts in `references/starters.md`, grouped by
 
 Creator: Jon Gosier. Feedback: jon@filmhedge.com. Apache-2.0; bundled assets retain their licenses.
 
-[Download native skill](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-codex.zip) · [Checksums](https://github.com/jongos/Dazzler/releases/download/v0.19.0/SHA256SUMS.txt)
+[Download native skill](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-codex.zip) · [Checksums](https://github.com/jongos/Dazzler/releases/download/v0.20.0/SHA256SUMS.txt)
 
 [Official skill discovery guidance](https://learn.chatgpt.com/docs/build-skills) · [Plugin distribution](https://developers.openai.com/plugins/build/plugins)

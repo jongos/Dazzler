@@ -37,10 +37,11 @@ Use [composition and refinement](references/composition.md) for substantial layo
 
 ## Select relevant capabilities
 
-For examples or help getting started, choose one of the [19 short starter prompts](references/starters.md). Read only its category or use `python scripts/starters.py --id ID` for the relevant helper and host requirements. Starters are optional; do not ask users to select one before doing their task.
+For examples, use the [19 starter prompts](references/starters.md) or `python scripts/starters.py --id ID`. Read only the relevant category; selection is optional.
 
 Use [local runtime guidance](references/local-runtime.md) for integrity, smallest-compatible routing and missing runtimes. Core helpers run offline with Python/Node; normal use does not require npm installation. Optional browser/Office checks depend on host tools and must be reported honestly.
 
+- Supplied Figma designs or requested visual comps: [design handoff](references/design-handoff.md). Reads are evidence; mockup-first is opt-in.
 - Starting structure: [templates](references/templates.md), with ten DOCX, ten HTML and ten UI examples. Export a copy with `scripts/templates.py`; adapt it to verified project content and preserve its resources/notices. Fictional examples are never user facts.
 - Brand import, shared tokens, stress tests, font specimens, original assets and reversible previews: select the relevant [studio workflow](references/design-studio.md).
 - Actual charts, networks, maps and compact metrics: [visualization](references/visualization.md). Preserve source rows, units, missing values, labels and non-color cues. Native editable Office charts require their optional runtime; static images are not editable charts.

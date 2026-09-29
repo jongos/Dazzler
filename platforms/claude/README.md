@@ -16,6 +16,8 @@ The archive includes the platform entrypoint, font catalog, 24 licensed font fam
 
 This repository folder contains the platform adapter and installation guidance, **not** a standalone installable skill. Use the complete ZIP or build it with `python tools/build_platforms.py --out dist/platforms` from the repository root. The builder combines the canonical skill with `HOST.md`; assets are maintained once.
 
+Optional design-file handoff uses an already available authorized connector. Visual comps run only when requested and supported by this host. Both require real rendered implementation checks; neither is bundled Figma synchronization or native-app export. See the installed `references/design-handoff.md` and `references/design-controls.md`.
+
 ## Claude chat and Fable
 
 Fable is a Claude model, so it uses this same edition; choose it in your host if your account offers it.
@@ -60,14 +62,14 @@ The release-pinned marketplace supports the full Code plugin with its archive ha
 
 Packaging reference (checked September 28, 2026): [official documentation](https://code.claude.com/docs/en/skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude.zip)
+- [dazzler-claude.zip](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-claude.zip)
 - [Anthropic Fable](https://www.anthropic.com/claude/fable)
 - [Official upload instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 - [Plugin documentation](https://code.claude.com/docs/en/plugins)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-templates.zip)
 
-- [Compact Claude skill](https://github.com/jongos/Dazzler/releases/download/v0.19.0/dazzler-claude-compact.zip)
+- [Compact Claude skill](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-claude-compact.zip)
 - [Claude API skill limits](https://platform.claude.com/docs/en/build-with-claude/skills-guide)
 
 Marketplace: `/plugin marketplace add jongos/Dazzler`, then `/plugin install dazzler@dazzler`.

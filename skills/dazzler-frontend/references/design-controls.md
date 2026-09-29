@@ -10,6 +10,27 @@ Use this only when the user asks for options, wants control, or requests a speci
 - **A few alternatives:** Show two or three meaningful, viable options with the current/recommended choice first. Compare actual headline/body text for fonts and real UI roles for palettes, not names and abstract swatches alone. Ask one focused question when a choice is genuinely requested.
 - **Interactive exploration:** If the user asks for a picker, controls or a comparison preview, create or open a local preview in the available host. Use the actual shortlisted font files, palettes and project content. Reuse the color helper's theme/simulation controls where useful. A static comparison or concise choices are valid fallbacks if an interactive host is unavailable; never claim a selector opened if it did not.
 
+## Mockup-first, only when requested
+
+When the user explicitly requests a static comp before implementation, use an available image-generation tool or the supplied reference. Keep the user's brand, actual copy and required controls in the brief. Label the result a **visual proposal**; generated lettering, font shapes, data and controls are not verified implementation. Use licensed assets and do not send private project content to an external service without appropriate authorization.
+
+If image generation is unavailable, explain the limitation and provide a useful local HTML/CSS comp using available tools. Do not call it a generated image. If the user asked to approve before coding, stop at that requested checkpoint; otherwise continue into the authorized implementation without inventing an approval gate. Use [design handoff](design-handoff.md) for reference evidence and conflicts.
+
+Build real text, semantic controls, responsive layout and states in the existing stack. Treat visual fidelity as one review dimension alongside readable type, contrast, focus, reflow, content and task completion. Preserve required information even if a bitmap omitted it. Record deliberate departures from the comp and why they improve the working result.
+
+For an available browser runtime, `browser.cjs compare` accepts **two navigable pages**, not a raw image path. If a comp is a local raster file, create a simple local HTML wrapper with an image and an accurate description. Put both pages and needed assets under the authorized local fixture directory. Use matching viewports and a new output directory:
+
+```json
+{"before":"/project/review/comp.html","after":"/project/review/implementation.html","width":1280,"reason":"Compare hierarchy, content and spacing; inspect interactions separately."}
+```
+
+```shell
+node scripts/browser.cjs compare comparison.json NEW_COMPARISON_DIR
+node scripts/browser.cjs inspect /project/review/implementation.html NEW_INSPECTION_DIR
+```
+
+The comparison creates side-by-side captures. It does not calculate a pixel-difference or fidelity score, certify accessibility, modify source, or compare native app behavior. Inspect narrow/wide and relevant states separately; report unavailable checks. Remote pages require network access. A bitmap is never evidence that a form, chart or backend works.
+
 ## Build selectors from valid choices
 
 Filter font options using the font helper for the required text, styles and features before presenting them. Load actual font assets rather than relying on a browser's similarly named installed face. Keep licenses with preview assets. State whether font-loading and shaping were verified.

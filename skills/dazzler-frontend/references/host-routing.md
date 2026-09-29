@@ -7,5 +7,6 @@ The design guidance requires no Claude CLI, Anthropic API, MCP server or model-s
 - Inline interactive explanation or mockup: use the installed visualization skill when available and suited to the requested output.
 - Original raster artwork: use the installed image-generation skill/tool when needed. Prefer existing assets or code-native vector graphics when appropriate.
 - Rendered inspection: use the available browser or preview tools and their instructions. Do not assume a particular browser, localhost port, or screenshot API exists.
+- Supplied design file or requested comp: follow [design handoff](design-handoff.md). Use available authorized Figma read tools; comp generation is opt-in and depends on the host. Remote reads use the network; no connector or image runtime is bundled.
 
 These integrations are optional and selected by the requested deliverable. Do not install them automatically, switch platforms unexpectedly, or call unavailable tools. If preview or execution is unavailable, provide the useful source or specification and identify what remains unverified. Do not claim a static mockup has working backend behavior. Publishing and other external actions retain the user's authorization requirements.

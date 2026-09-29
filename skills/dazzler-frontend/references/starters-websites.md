@@ -15,11 +15,11 @@
 
 **Tips:** Review the existing tokens and primary user journey before changing code.
 
-**More control:** Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.
+**More control:** Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control. If you supply a Figma frame, use available authorized read tools and preserve existing project tokens; otherwise use your supplied export and label the evidence gap.
 
 Agent route: `scripts/browser.cjs inspect`. Read the linked workflow for arguments and schemas; this is not a command to paste.
 
-Workflow: [design studio](design-studio.md).
+Workflow: [design studio](design-studio.md), [design handoff](design-handoff.md).
 
 <a id="w2"></a>
 ## Give a landing page stronger contrast
@@ -36,11 +36,11 @@ Workflow: [design studio](design-studio.md).
 
 **Tips:** Preserve required brand colors; report conflicts instead of silently replacing them.
 
-**More control:** Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control.
+**More control:** Optional: specify audience, required brand values, target format and constraints. Leave visual choices to Dazzler unless you want control. Ask for a visual comp first only if you want one. Image generation depends on the host; a static proposal must still become real text and controls with rendered checks.
 
 Agent route: `scripts/colors.mjs recommend`. Read the linked workflow for arguments and schemas; this is not a command to paste.
 
-Workflow: [color workflow](color-workflow.md).
+Workflow: [color workflow](color-workflow.md), [design controls](design-controls.md).
 
 <a id="w3"></a>
 ## Compare a redesign proposal
