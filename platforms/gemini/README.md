@@ -1,49 +1,35 @@
 # Dazzler for Gemini CLI
 
-Full helper editions include eight purpose-based composition contracts, measured review candidates, and bounded refinement intents with optional saved controls. Read references/composition.md in the installed skill. Browser review requires the host browser runtime; critique stays read-only.
+Download `dazzler-gemini.zip`, `install_skill.py` and `SHA256SUMS.txt` from the same release. From that folder, with Python 3.10+ available:
 
-Full helper editions share persistent design records, saved fluid typography with print fallbacks, and compatible shadcn theme proposals. Read references/persistent-systems.md in the installed skill. These helpers do not install components or overwrite project records. Host-specific execution remains subject to available tools.
+```sh
+python install_skill.py install --host gemini --scope project --root /absolute/project --version 0.22.0 --archive dazzler-gemini.zip --checksums SHA256SUMS.txt
+```
 
-Download **dazzler-gemini.zip** from the closing download links.
+The project must exist. Add `--dry-run` to validate without installing. The installer verifies archive paths, checksums and every inventoried resource without executing package code. It refuses unmanaged installations or local edits and retains one prior managed version for rollback.
 
-Extract the archive and copy its complete `dazzler-frontend` folder into `~/.gemini/skills/`. Do not overwrite an existing installation without reviewing it. Refresh skills or start a new session, then ask:
+For a manual install, verify the checksum and copy the complete `dazzler-frontend` folder into `.gemini/skills/` in the project. Back up an existing installation outside discovery paths before replacing it; do not merge versions. User installs may instead use `--scope user --root /absolute/user-home`. Refresh the host and ask:
 
 ```text
 Use Dazzler to build a welcoming studio website.
 ```
 
-The archive includes the platform entrypoint, font catalog, 24 licensed font families, Python helper, bundled Node color engine, all reference guides, and license/provenance notices. No API key or npm installation is required by Dazzler. Python/Node execution and browser inspection depend on your host; unavailable checks must be disclosed.
+## Included
 
-This repository folder contains the platform adapter and installation guidance, **not** a standalone installable skill. Use the complete ZIP or build it with `python tools/build_platforms.py --out dist/platforms` from the repository root. The builder combines the canonical skill with `HOST.md`; assets are maintained once.
+Six general-purpose font families, all 30 templates, offline color/chart/illustration engines, saved design systems and the full reference guides. Template-local font files stay with their templates. Each archive is capped at 24 MB compressed and unpacked; `references/package-profile.json` lists exactly what is installed. Other font families remain optional in the catalog and available from the full source checkout.
 
-Optional design-file handoff uses an already available authorized connector. Visual comps run only when requested and supported by this host. Both require real rendered implementation checks; neither is bundled Figma synchronization or native-app export. See the installed `references/design-handoff.md` and `references/design-controls.md`.
+The agent chooses fonts, colors and layout automatically. For examples, open the installed `references/starters.md`. Core helpers require Python/Node; browser review and native Office exports use optional host runtimes. No Dazzler API key or npm installation is needed.
 
-## Validation status
+## Update or remove
 
-Documentation-aligned packaging with local archive, license, resource and helper checks. Not end-to-end tested inside Gemini CLI; a valid archive does not guarantee account eligibility, upload acceptance, or agent behavior. Keep the core skill enabled for automatic selection where supported; host consent still applies.
+Repeat the installation command with the new version and matching release files. Use the installer's `rollback` or `uninstall` action with the same host, scope and root. Uninstall retains the previous backup; it does not touch your projects. Hosted skills and managed plugins use the host's own removal/update flow.
 
-## Studio tools
-
-Full packages now include brand import, system-token export, browser inspection, content stress tests, a font-pairing lab, chart palettes, original SVG assets, reversible change previews, document/slide exports and the evaluation harness. Core tools remain offline; browser features need an existing Playwright/Chromium environment, and native DOCX/PPTX need existing Python libraries. These capabilities are not guaranteed by every host. Use the included `references/design-studio.md` guide; absent tools must be disclosed rather than simulated.
-
-## Template library in 0.9.0
-
-Full skill packages include 10 DOCX templates, 10 matching HTML templates and 10 UI templates with HTML, CSS and JSON. Each now has a distinct visual identity, robust fictional scenarios and an actual captured preview. Contextual charts, genuine italic fonts, editable structures and print treatments are selected automatically; relevant data and interaction assets travel with exports. Dazzler selects and copies a suitable starting point automatically. Browse the gallery or download only the templates. Keep the shared fonts folder with HTML/UI files. DOCX fonts are referenced, not embedded.
-
-## Interactive illustrations
-
-Full editions include validated vector-region and image-hotspot exporters, offline previews, keyboard/touch controls, text alternatives and integration modules for the existing project framework. Follow references/interactive-illustrations.md in the package.
-
-Routine design helpers run from local bundled resources. Standalone image interactions use a lightweight browser-native adapter; existing framework integrations remain available. The release includes an integrity checker and automatic routing guidance. Optional native Office and browser tools use existing host runtimes.
-
-## Quick starts
-
-The package includes 19 beginner prompts in `references/starters.md`, grouped by task. Read one category at a time. Host-specific invocation is applied during packaging. Advanced fields are optional.
+Archive, size and helper checks are automated. Real host activation, cloud uploads and optional integrations remain unverified unless separately recorded. Checksums detect mismatched files; obtain the installer and manifest from a trusted release.
 
 ## Notes and credits
 
 Packaging reference (checked September 28, 2026): [official documentation](https://geminicli.com/docs/cli/skills/). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.21.0/dazzler-gemini.zip)
+- [dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-gemini.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.21.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-templates.zip)

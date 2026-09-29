@@ -1,112 +1,60 @@
-<p align="center"><img src="docs/assets/dazzler-banner.svg" alt="Dazzler — Give your ideas a visual voice. Typography, color, composition, and craft." width="100%"></p>
-
-<p align="center"><strong>Supercharged Design for A.I.</strong></p>
-
-<p align="center"><a href="https://jongos.github.io/Dazzler/">Read the field manual</a> · <a href="#-start-with-an-idea">Get started</a> · <a href="#-the-design-toolkit">The toolkit</a> · <a href="#-install-dazzler">Install</a> · <a href="mailto:jon@filmhedge.com">Send an idea</a></p>
+<p align="center"><img src="docs/assets/dazzler-banner.svg" alt="Dazzler — Give your ideas a visual voice" width="100%"></p>
 
 # Dazzler
 
-**Dazzler gives your frontend a visual voice.** Describe what you want to make and who it’s for. The skill chooses suitable fonts, measured colors, layout, and interactions, then implements and reviews the result using the tools available in your ChatGPT/Codex host.
-
-## Design Defaults That Fit the Work
-
-Dazzler chooses expressive or reserved treatment from context, starts body text at a 60ch maximum, supplies responsive grid tokens and protects names/code when styling English headings. Existing brand choices and saved systems still win. Local licensed fonts stay private to the project; danger colors have measured foregrounds and require clear labels. See the [design principles](skills/dazzler-frontend/references/design-philosophy.md) for controls and verification limits.
-
-## Begin with a sentence
-
-Try “Use $dazzler-frontend to turn this CSV into a clear branded chart” or browse the [19 starter prompts](https://jongos.github.io/Dazzler/starters/). Fonts, colors and layout remain automatic. Advanced controls are optional.
-
-The [installation guide](maintenance/ONBOARDING.md) covers a managed installer with local-edit protection, rollback, explicit host/scope selection and a pinned Claude marketplace. [Grok Bot status](platforms/GROK-BOT-STATUS.md) remains unverified.
-
-## Give the content its shape
-
-Eight purpose-based composition contracts now guide structure. Ask for **bolder**, **quieter**, **typeset**, **colorize**, **polish**, **harden**, **critique** or **distill**; optional controls stay out of your way until needed. Measured review candidates preserve intentional repetition and remain separate from accessibility failures. [Explore the composition field guide](https://jongos.github.io/Dazzler/composition/).
-
-## From reference to working interface
-
-Bring a design frame through an available authorized connector, or ask for a visual comp first. Dazzler preserves the project’s existing system, implements real content and controls, and checks the result. These optional workflows add no connector or image-generation dependency. [Explore the handoff guide](https://jongos.github.io/Dazzler/handoff/).
-
-## A design that remembers
-
-Dazzler now resumes saved project choices, scales typography across screen sizes with readable print fallbacks, and proposes matching light/dark themes for compatible existing components. Existing design records stay in their chosen location. [Explore the typography specimen](https://jongos.github.io/Dazzler/typography/) or read [persistent systems](skills/dazzler-frontend/references/persistent-systems.md).
-
-## Current editions
-
-Use the native Codex skill ZIP for a versioned installation, the full desktop edition for all fonts, or the compact Claude upload edition with six families and all 30 templates. Each archive identifies its installed resources. Dazzler selects included alternatives automatically; real Claude upload acceptance remains unverified. See [installation and edition guidance](platforms/README.md).
-
-## ✨ Start with an idea
+**Turn a brief into a coherent, polished design.** Dazzler gives your AI agent practical tools for typography, color, layout, charts and print. Ask for the result you want; it chooses the details, builds the artifact and checks what it can render.
 
 ```text
-Use $dazzler-frontend to build a welcoming website for a neighborhood
-pottery studio. Help visitors explore classes and book a first session.
+Use $dazzler-frontend to redesign this dashboard so the important numbers stand out.
 ```
 
-Dazzler can be used to help design anything: documents, websites, or UI interfaces.
+[Explore the field manual](https://jongos.github.io/Dazzler/) · [Try the live templates](https://jongos.github.io/Dazzler/templates/) · [Choose your platform](platforms/README.md)
 
-**Already building something?** Dazzler preserves your brand, stack, and explicit constraints. Small edits stay small.
+## Why use Dazzler?
 
-```text
-Use $dazzler-frontend to improve this dashboard’s hierarchy and spacing.
-Keep our brand colors, React components, and existing behavior.
-```
-
-**Want to steer?** Say “make it warmer,” “keep our exact blue,” or “show me two font pairings.” Focused comparisons and controls appear when requested. See the [automatic workflow](skills/dazzler-frontend/references/automatic-workflow.md) and [optional controls](skills/dazzler-frontend/references/design-controls.md).
-
-## 🌈 The design toolkit
-
-| | What Dazzler brings | What it means for your project |
-|---|---|---|
-| **Aa · Typography** | 25 cataloged families; 24 bundled families containing 124 unmodified font files | Fonts chosen for real characters, styles, technical needs, reading comfort, and personality. |
-| **● · Color** | 88 mood palettes, perceptual ramps, semantic light/dark tokens | Contextual choices plus measured contrast for specified role pairs. Brand locks remain exact. |
-| **↗ · Composition** | Purpose, audience, hierarchy, grouping, and component craft | A direction informed by the task rather than the same template everywhere. |
-| **✓ · Review** | Responsive inspection, relevant interactions, keyboard focus, and honest verification | A clear account of what was checked and what remains unverified. |
-
-### Native Typography
-
-Dazzler checks actual text coverage, required weights and italics, features, and file size before comparing character. It exports selected project-local files with their licenses and CSS. Web work normally requires no desktop font installation.
-
-Browse the [font catalog](skills/dazzler-frontend/references/font-catalog.md), [typography workflow](skills/dazzler-frontend/references/typography.md), or [technical inventory](skills/dazzler-frontend/references/font-catalog.json).
-
-### Color Suite
-
-The [color workflow](skills/dazzler-frontend/references/color-workflow.md) turns a chosen palette into measured color roles. It generates CSS tokens, provenance, contrast reports, and a portable preview. Conflicting locked colors produce an unresolved report instead of silently changing your brand.
-
-A passing report covers its listed opaque-color pairs. It does **not** certify complete WCAG conformance, image backgrounds, charts, or a finished interface. Those require review in context.
-
-### Design Framework
-
-The adapted [design framework](skills/dazzler-frontend/references/deslop.md) connects purpose to visual decisions, supported by [interface craft](skills/dazzler-frontend/references/interface-craft.md), an optional [design record](skills/dazzler-frontend/references/design-record.md), and a [design audit](skills/dazzler-frontend/references/design-audit.md). It preserves your direction without universal font/color bans or compulsory approvals for aesthetic choices.
-
-## ✦ The Dazzler studio
-
-Ten connected tools extend the automatic workflow. Ask for the outcome; Dazzler selects the relevant tools internally.
-
-| Capability | What is now included |
+| What you need | What Dazzler does |
 |---|---|
-| Brand import | CSS evidence and conflicts, plus computed browser styles at multiple widths |
-| Shared design tokens | Type, spacing, radius, elevation, motion and measured light/dark colors; CSS, DTCG primitives and Tailwind adapters |
-| Rendered inspection | Screenshots and reports for overflow, clipping, images, labels, contrast candidates and focus probes |
-| Content stress testing | Temporary long-text, large-number, missing-image, empty-data and error scenarios |
-| Font pairing lab | Actual-copy specimens, fallback/final geometry, file sizes and local load measurements |
-| Chart styling | Categorical, sequential and diverging palettes, labels, patterns, marker/dash cues and graphic contrast |
-| Original asset catalog | 12 outline icons and three geometric illustrations with licenses, usage notes and hashes |
-| Reversible previews | Before/after screenshots, escaped source diffs, atomic single-file apply/revert and stale-edit protection |
-| Documents and slides | Shared-brand HTML editions, optional verified font embedding, and native DOCX/PPTX exporters |
-| Cross-platform evaluations | Four repeatable briefs, configurable real-host runner, artifact assertions, hashes and explicit unrun/manual-review states |
+| A design that fits the brief | Chooses expressive or restrained typography, colors and composition for the audience. |
+| Consistency across a project | Resumes saved design decisions and preserves your existing brand and components. |
+| Clear charts and reports | Carries shared colors and type into visualizations, documents and slides without changing the data. |
+| A useful starting point | Includes 30 worked templates with fictional data, editable structures and local assets. |
+| Fewer finishing problems | Checks rendered layouts, font loading, keyboard controls and relevant print pages when those tools are available. |
+| Control when you want it | Responds to “bolder,” “quieter,” “typeset,” “colorize” and other focused refinements. |
 
-Examples: “Match our existing site,” “Stress-test this dashboard,” “Carry this design into a report and slides,” or “Show me the warmer version.”
+No design questionnaire is required. Fonts, colors and layout are automatic; your instructions and brand constraints take precedence.
 
-**[Studio workflow and command reference](skills/dazzler-frontend/references/design-studio.md)**. Browser inspection needs an existing Playwright/Chromium runtime (or equivalent host tools); DOCX/PPTX need existing `python-docx`/`python-pptx`. Core import, tokens, charts, assets, changes and HTML exports stay lightweight. Automated findings require review; no complete accessibility, native pagination, or cross-model design-quality certification is claimed.
+## Install once
 
-## ✦ Thirty templates — the showcase collection
+Download the host ZIP, `install_skill.py` and `SHA256SUMS.txt` from the release linked below. With Python 3.10+ available, run this from the download folder for an existing project:
 
-**[Explore all 30 live examples](https://jongos.github.io/Dazzler/templates/)**
+```sh
+python install_skill.py install --host codex --scope project --root /absolute/project --version 0.22.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
+```
 
-Ten editable Word documents, ten editorial HTML documents and ten interactive interfaces. Every snapshot below shows a rebuilt artifact with a distinct typographic and color identity. The Word previews show actual Microsoft Word pages.
+Restart or refresh the agent, then ask it to use `$dazzler-frontend`. Add `--dry-run` to inspect an installation first. The installer checks hashes and resource completeness without executing downloaded scripts; updates preserve one previous version and refuse local edits.
 
-Rich fictional scenarios demonstrate reconciled budgets, a 12-month revenue story, experimental observations, evidence review, delivery outcomes, menus and accessible seating exploration. Open an example to inspect its data or try its local controls. All actions remain demonstrations; no booking, purchase or account change is submitted.
+Claude, Gemini CLI, Cursor and Copilot have matching packages and [short installation guides](platforms/README.md). Claude Code plugins use `/dazzler:dazzler-frontend`; standalone Claude skills use `/dazzler-frontend`. A portable prompt is available for other chat hosts. A downloaded skill does not install itself into a ChatGPT account.
 
-Dazzler chooses the relevant typography, color, layout, chart and print treatment automatically. Existing brand choices stay in control. Documents retain editable structures; HTML and UI editions include local fonts, chart assets, notices and print styles.
+Every host ZIP is capped at **24 MB compressed and unpacked**, with six versatile font families, all 30 templates and the complete rendering helpers. The larger font catalog remains in the source checkout; missing families are never represented as installed. The compact Claude filename remains an alias of the standard Claude download.
+
+See [installation, updates and rollback](maintenance/ONBOARDING.md) for user-wide installs or an existing manual installation. Local package checks do not guarantee cloud-upload acceptance or account eligibility.
+
+## Start with the outcome
+
+```text
+Use $dazzler-frontend to make this restaurant menu colorful and easy to scan.
+Use $dazzler-frontend to turn this CSV into a branded revenue report.
+Use $dazzler-frontend to improve this landing page while keeping our logo and colors.
+```
+
+Browse [19 starter prompts](https://jongos.github.io/Dazzler/starters/), the [composition guide](https://jongos.github.io/Dazzler/composition/) or the [typography specimen](https://jongos.github.io/Dazzler/typography/). Optional design handoff and visual-comp workflows use tools already available to your agent.
+
+## Thirty examples to build on
+
+Ten Word documents, ten editorial HTML documents and ten interactive interfaces show distinct typography, color and layout. Their data is fictional; adapt it to your project. Word previews are actual rendered pages, and interface actions are local demonstrations.
+
+<details>
+<summary>View the complete snapshot gallery</summary>
 
 ### Editable Word documents
 
@@ -138,75 +86,17 @@ Dazzler chooses the relevant typography, color, layout, chart and print treatmen
 <tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-menu/index.html"><img src="docs/templates/previews/restaurant-menu.jpg" alt="Good Food. Your Kind of Lunch. — UI snapshot" width="100%"></a><br><strong>Good Food. Your Kind of Lunch.</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/business-portal/index.html"><img src="docs/templates/previews/business-portal.jpg" alt="Alder Studio / Brand &amp; Website — UI snapshot" width="100%"></a><br><strong>Alder Studio / Brand &amp; Website</strong> · UI</td></tr>
 </table>
 
-## 🚀 Install Dazzler
-
-For a host that supports local Codex skills:
-
-1. Download the **versioned native Codex skill ZIP** and matching checksums from the closing links.
-2. Follow the [native installation guide](platforms/codex/README.md): extract its complete `dazzler-frontend` folder into the project's `.agents/skills/` or your user `$HOME/.agents/skills/`. The guide includes macOS/Linux and PowerShell commands.
-3. Run the installed `scripts/health.py`, refresh the host, then invoke **`$dazzler-frontend`**.
-
-Update by verifying a new release and replacing the complete backed-up installation, not merging files. Uninstall only its installed skill folder or symlink. Existing working legacy installations can remain until deliberately migrated; avoid duplicate discovery entries. Managed plugin installations use the host's update/uninstall workflow.
-
-The plugin identifier is **`dazzler`**, its display name is **Dazzler**, and its skill is **`dazzler-frontend`**. Hosts exposing qualified names may show `dazzler:dazzler-frontend`. The repository includes `.codex-plugin/plugin.json`; plugin import depends on the host. Cloning alone does not install anything into a ChatGPT account.
-
-**Upgrading from ChatGPT Design Skills?** This is the same project, renamed in version 0.6.0. Use the remote listed in the closing notes, install/link the renamed skill folder, and use `$dazzler-frontend` in new prompts. Verify the new installation before retiring duplicate discovery entries. Historical release notes retain their original names.
-
-## 🌍 Other AI platforms
-
-Optional editions are available for **Claude (including Fable), Gemini CLI, Cursor, and GitHub Copilot**, plus a portable prompt for other chat hosts. Each full package shares Dazzler’s licensed fonts, color tools and design guidance.
-
-**[Choose a platform and download →](platforms/README.md)**
-
-Packages are locally validated and aligned with each host’s documented skill format; native host sessions and cloud uploads have not been tested. Fable uses the Claude edition.
-
-## 🛠 Under the hood
-
-Normal use needs no API keys, Claude CLI, Anthropic SDK, MCP server, npm installation, or third-party Python packages. The agent uses available Python 3 and Node.js runtimes internally; Node.js 22+ is recommended for the color helper. When a runtime or preview tool is unavailable, it uses available verified resources and reports the limits. Optional host tools are used only when appropriate; project-specific dependencies still apply.
-
-<details>
-<summary><strong>Developer interfaces: fonts, colors, and validation</strong></summary>
-
-These commands support development and inspection. Users do not need to run them to request a design.
-
-```shell
-python skills/dazzler-frontend/scripts/fonts.py recommend --role body --mood literary --text "A thoughtful introduction"
-python skills/dazzler-frontend/scripts/fonts.py export work-sans --dest ./public/fonts --file "WorkSans[wght].ttf"
-node skills/dazzler-frontend/scripts/colors.mjs recommend --mood "cozy minimal"
-node skills/dazzler-frontend/scripts/colors.mjs generate --base '#7048E8' --harmony splitComplementary --out ./palette-review
-python -m unittest discover -s tests -p "test_*.py"
-npm test
-```
-
-Font export preserves notices and makes project-local copies; it never installs OS fonts. Rankings are shortlist heuristics, not aesthetic verdicts. Color export requires a new destination and includes notices; evaluate the actual project with its selected typography.
-
-Maintainers rebuild the color engine with exact versions in `package-lock.json`. Binary font inspection uses `requirements-dev.txt`; those maintenance dependencies do not belong in every designed project. See [tools](tools/README.md).
-
 </details>
 
-Completed agent-driven maintenance includes validation, a commit, and a push, as documented in [AGENTS.md](AGENTS.md) and [MAINTENANCE.md](maintenance/MAINTENANCE.md).
+## What runs locally
 
-## How Dazzler fits
+The core helpers use Python and Node.js with bundled resources: no API keys, npm install or network service is required. Browser review needs an available browser runtime; native Word and PowerPoint exports need their existing Python libraries. Dazzler reports unavailable checks instead of claiming they passed. Contrast reports cover measured pairs, not complete accessibility certification.
 
-Dazzler focuses on licensed font files, measured color, persistent brand choices and several output formats. The managed installer, composition tools and supported token interchange are available today. Local helpers work from bundled resources; live-site inspection and connectors use the network. Host activation and upload compatibility remain qualified, and no head-to-head quality advantage is claimed. See the dated comparison in the closing notes.
+Developers can start with [the tools guide](tools/README.md). Release validation covers tests, extracted archives, resource hashes and reproducibility across Windows/Linux and Node 20/22. The Windows offline build kit is a separate maintainer download, not a skill-upload package.
 
-## 💌 Feedback, feature requests & ideas
+## Feedback
 
-Have an idea for what Dazzler should do next? Contact **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)** or open an issue.
-
-### Templates with context
-
-The 0.10.0 library replaces generic outlines with 30 worked starting points: priced proposals, evidence-led memos, full-week planners, course-based menus, technical RFCs and purpose-specific interfaces. Dashboard totals reconcile; café orders have quantities; booking requests respect service days; client portals support deliverable review. Every example is fictional and must be adapted to the actual project. [See the per-template review](docs/template-review-0.10.0.md).
-
-### Charts that share your design system
-
-Dazzler renders standard charts, network/hierarchy/map layouts, compact React trends, and optional editable Word/PowerPoint charts. The skill selects the route and retains source data, labels, colors and provenance. [Visualization reference](skills/dazzler-frontend/references/visualization.md). Native Office requires an available R runtime; it was not executed on the maintenance host.
-
-### Illustrations you can explore
-
-Clickable vector regions and image hotspots now come with responsive layouts, keyboard/touch selection, detail panels and readable text alternatives. Dazzler chooses the route from the artwork and existing framework. [Interaction reference](skills/dazzler-frontend/references/interactive-illustrations.md).
-
-Routine design helpers run from local bundled resources. Standalone image interactions use a lightweight browser-native adapter; existing framework integrations remain available. The release includes an integrity checker and automatic routing guidance. Optional native Office and browser tools use existing host runtimes.
+Send ideas, feature requests and feedback to **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)**.
 
 ## Notes and credits
 
@@ -230,13 +120,13 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.21.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).
 
-- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.21.0/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.21.0/dazzler-claude-compact.zip)
+- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.22.0/dazzler-claude-compact.zip)
 
 ### Comparison notes
 

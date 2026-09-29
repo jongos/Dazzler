@@ -58,7 +58,8 @@ def seal_profile(target, platform, profile):
                 continue
             directory = target / "assets/fonts" / family["id"]
             assert directory.parent == target / "assets/fonts"
-            shutil.rmtree(directory)
+            if directory.exists():
+                shutil.rmtree(directory)
             reference = target / "references/fonts" / (family["id"] + ".md")
             if reference.is_file():
                 reference.write_text(
@@ -135,7 +136,7 @@ def seal_profile(target, platform, profile):
         raise ValueError(f"{platform}/{profile} exceeds unpacked budget: {size}")
 
 
-def assemble(platform, target, profile="full", plugin=False):
+def assemble(platform, target, profile="compact", plugin=False):
     catalog = json.loads(
         (SOURCE / "references/font-catalog.json").read_text(encoding="utf-8")
     )
@@ -167,12 +168,19 @@ def assemble(platform, target, profile="full", plugin=False):
         ):
             if hashlib.sha256(resource.read_bytes()).hexdigest() not in known:
                 raise ValueError("Unreviewed font binary in release: " + resource.name)
+
+    def omitted(directory, names):
+        excluded = {n for n in names if n == "__pycache__" or n.endswith(".pyc")}
+        if profile == "compact" and Path(directory) == SOURCE / "assets/fonts":
+            excluded.update(n for n in names if n not in LITE_FAMILIES)
+        return excluded
+
     target.mkdir(parents=True)
     for name in ("references", "scripts", "assets", "evals"):
         shutil.copytree(
             SOURCE / name,
             target / name,
-            ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
+            ignore=omitted,
         )
     for name in ("LICENSE.txt", "PROVENANCE.md"):
         shutil.copy2(SOURCE / name, target / name)
@@ -246,7 +254,7 @@ def archive(folder, output):
                 info.create_system = 3
                 info.compress_type = zipfile.ZIP_DEFLATED
                 info.external_attr = 0o100644 << 16
-                bundle.writestr(info, canonical_bytes(path))
+                bundle.writestr(info, canonical_bytes(path), compresslevel=9)
 
 
 def build(destination):
@@ -263,11 +271,10 @@ def build(destination):
             assert stage.parent == destination
             skill = assemble(platform, stage / "dazzler-frontend")
             archive(skill, destination / f"dazzler-{platform}.zip")
-    with tempfile.TemporaryDirectory(dir=destination, prefix="build-") as temp:
-        stage = Path(temp).resolve()
-        assert stage.parent == destination
-        compact = assemble("claude", stage / "dazzler-frontend", "compact")
-        archive(compact, destination / "dazzler-claude-compact.zip")
+    # Keep the previous upload filename as a byte-identical compatibility alias.
+    shutil.copyfile(
+        destination / "dazzler-claude.zip", destination / "dazzler-claude-compact.zip"
+    )
     with tempfile.TemporaryDirectory(dir=destination, prefix="build-") as temp:
         stage = Path(temp).resolve()
         assert stage.parent == destination
@@ -304,6 +311,11 @@ def build(destination):
     sizes = {}
     for file in sorted(destination.glob("*.zip")):
         with zipfile.ZipFile(file) as bundle:
+            if (
+                file.stat().st_size > 24_000_000
+                or sum(x.file_size for x in bundle.infolist()) > 24_000_000
+            ):
+                raise ValueError(f"Release archive exceeds 24 MB budget: {file.name}")
             sizes[file.name] = {
                 "compressedBytes": file.stat().st_size,
                 "unpackedBytes": sum(x.file_size for x in bundle.infolist()),

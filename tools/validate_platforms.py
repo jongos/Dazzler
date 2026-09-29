@@ -13,6 +13,7 @@ import zipfile
 
 def validate(folder):
     from validate_release import validate as validate_source
+    from install_skill import operate
 
     validate_source()
     folder = Path(folder).resolve()
@@ -31,6 +32,8 @@ def validate(folder):
                 "unpackedBytes": sum(i.file_size for i in z.infolist()),
                 "files": len(names),
             }
+            assert archive.stat().st_size <= 24_000_000
+            assert sum(i.file_size for i in z.infolist()) <= 24_000_000
             assert len(names) == len(set(names))
             assert not any(
                 PurePosixPath(n).is_absolute()
@@ -85,9 +88,7 @@ def validate(folder):
                     )
             assert "name: dazzler-frontend" in text and "## Verify the result" in text
             profile = json.loads(z.read(prefix + "references/package-profile.json"))
-            assert profile["profile"] == (
-                "compact" if "compact" in archive.name else "full"
-            )
+            assert profile["profile"] == "compact"
             assert sum(i.file_size for i in z.infolist()) <= profile["maxUnpackedBytes"]
             assert archive.stat().st_size <= profile["maxUnpackedBytes"]
             assert "MAINTENANCE.md" not in text
@@ -212,6 +213,22 @@ def validate(folder):
                     and manifest["version"] == expected["version"]
                 )
             with tempfile.TemporaryDirectory() as temp:
+                if "plugin" not in archive.name:
+                    install_root = Path(temp) / "managed"
+                    install_root.mkdir()
+                    args = dict(
+                        root=install_root, host=profile["host"], scope="project"
+                    )
+                    source = dict(
+                        archive=archive,
+                        checksums=folder / "SHA256SUMS.txt",
+                        version=profile["version"],
+                    )
+                    operate("install", **args, **source, dry_run=True)
+                    operate("install", **args, **source)
+                    operate("install", **args, **source)
+                    operate("rollback", **args)
+                    operate("uninstall", **args)
                 z.extractall(temp)
                 skill = Path(temp) / prefix
                 health = subprocess.run(

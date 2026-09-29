@@ -34,10 +34,13 @@ def heading(text, options=None):
     spans = [(m.start(), m.end()) for m in re.finditer(PROTECTED, text, re.I)]
     for value in preserve:
         spans.extend((m.start(), m.end()) for m in re.finditer(re.escape(value), text))
+    protected_chars = bytearray(len(text))
+    for start, end in spans:
+        protected_chars[start:end] = b"\x01" * (end - start)
     words = [
         m
         for m in re.finditer(r"[^\W\d_]+(?:['’][^\W\d_]+)?", text)
-        if not any(m.start() < b and m.end() > a for a, b in spans)
+        if 1 not in protected_chars[m.start() : m.end()]
     ]
     if case == "title" and text == text.upper():
         return text
@@ -46,9 +49,8 @@ def heading(text, options=None):
     for i, m in enumerate(words):
         word = m.group()
         replacement = word
-        protected = any(m.start() < b and m.end() > a for a, b in spans)
         # Existing capitals and camelCase/product names are never lowercased.
-        if not protected and (case == "upper" or word == word.lower()):
+        if case == "upper" or word == word.lower():
             after_break = i == 0 or bool(
                 re.search(r"[:—]\s*$", text[words[i - 1].end() : m.start()])
             )

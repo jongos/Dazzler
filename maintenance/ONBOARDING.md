@@ -4,13 +4,13 @@ Choose one host and one scope. After installation, ask `Use $dazzler-frontend to
 
 ## Managed local installer
 
-Use Python 3.10 or newer. Download the matching full host skill ZIP, `install_skill.py` and `SHA256SUMS.txt` from the same release, or use `tools/install_skill.py` from that release's source checkout. Review the source before running it. The examples below use the checkout path; for the standalone download use `python install_skill.py` instead. It makes no network requests and does not detect or install other hosts.
+Use Python 3.10 or newer. Download the matching host skill ZIP, `install_skill.py` and `SHA256SUMS.txt` from the same release, or use `tools/install_skill.py` from that release's source checkout. Review the source before running it. The examples below use the checkout path; for the standalone download use `python install_skill.py` instead. It makes no network requests and does not detect or install other hosts.
 
 ```sh
-python tools/install_skill.py install --host codex --scope project --root /absolute/project --version 0.20.0 --archive /downloads/dazzler-codex.zip --checksums /downloads/SHA256SUMS.txt --dry-run
+python tools/install_skill.py install --host codex --scope project --root /absolute/project --version 0.22.0 --archive /downloads/dazzler-codex.zip --checksums /downloads/SHA256SUMS.txt --dry-run
 ```
 
-Remove `--dry-run` to install. Select `claude`, `gemini`, `cursor` or `copilot` with its matching archive. For user scope, explicitly pass `--scope user --root /absolute/user-home`; Copilot supports project scope only here. The installer uses the selected host's documented skill folder, refuses linked paths and unmanaged existing installs, validates archive paths and hashes, then runs the extracted health check. Dry-run performs the same validation without changing the installation root. Only use release archives and manifests from a publisher you trust: checksum consistency is not independent authentication, and the health helper is executable code.
+Remove `--dry-run` to install. Select `claude`, `gemini`, `cursor` or `copilot` with its matching archive. For user scope, explicitly pass `--scope user --root /absolute/user-home`; Copilot supports project scope only here. The installer uses the selected host's documented skill folder, refuses linked paths and unmanaged existing installs, validates archive paths and hashes, then verifies the resource inventory without executing archive code. Dry-run performs the same validation without changing the installation root. Only use release archives and manifests from a publisher you trust: checksum consistency is not independent authentication.
 
 To update, run the same install command with an exact new version and its matching files. Every managed file and extra file is checked first. Local edits or additions cause a conflict, never a forced overwrite. Preserve and reconcile those edits in a separate copy before proceeding. The previous clean installation is retained outside discovery folders at `.dazzler-backups/HOST-SCOPE` beneath the explicit root. A successful later update replaces that one previous backup; keep a separate copy for longer history. Do not run concurrent installers against the same root.
 
@@ -31,7 +31,7 @@ Use the pinned source command in the closing notes. Omit `--global` for project 
 
 ## Claude marketplace
 
-The root marketplace manifest pins the full Claude plugin archive by release version and SHA-256. The build verifies that pin against the actual reproducible ZIP. In Claude Code, add the marketplace and install `dazzler@dazzler`, then invoke `/dazzler:dazzler-frontend`. Install either the plugin or standalone skill to avoid duplication. Local manifest/archive validation is not an actual Claude installation or cloud-upload acceptance test.
+The root marketplace manifest pins the Claude plugin archive by release version and SHA-256. The build verifies that pin against the actual reproducible ZIP. In Claude Code, add the marketplace and install `dazzler@dazzler`, then invoke `/dazzler:dazzler-frontend`. Install either the plugin or standalone skill to avoid duplication. Local manifest/archive validation is not an actual Claude installation or cloud-upload acceptance test.
 
 ## Migrate a Manual Install
 
@@ -41,9 +41,9 @@ Rollback requires a previous managed update. With no backup, the installer says 
 
 ## Notes and references
 
-- Pinned CLI: `npx skills@1.7.0 add https://github.com/jongos/Dazzler/tree/v0.20.0/skills/dazzler-frontend --skill dazzler-frontend --agent codex --copy`
+- Pinned CLI: `npx skills@1.7.0 add https://github.com/jongos/Dazzler/tree/v0.22.0/skills/dazzler-frontend --skill dazzler-frontend --agent codex --copy`
 - Claude commands: `/plugin marketplace add jongos/Dazzler`, then `/plugin install dazzler@dazzler`.
-- [Release downloads](https://github.com/jongos/Dazzler/releases/tag/v0.20.0)
+- [Release downloads](https://github.com/jongos/Dazzler/releases/tag/v0.22.0)
 - [Skills CLI source](https://github.com/vercel-labs/skills), MIT. Reviewed package SHA-512: `OfePnDft+Xt9/tCoHdCUe5fkM8i+Q3QOSQO53hm7mKtsXyvc+CKOAAliVWZ484HS3cWx+6r+ob0AArixs3jYXw==`.
 - [Claude marketplace format](https://code.claude.com/docs/en/plugin-marketplaces)
 - [Codex skills](https://developers.openai.com/codex/skills/)

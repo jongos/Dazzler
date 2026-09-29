@@ -13,6 +13,11 @@ test("Protected heading cases share vectors with native document exports", () =>
   for (const c of cases) assert.equal(heading(c.input, c.options), c.expected, c.input);
   assert.throws(() => heading("Title", { case: "invalid" }));
   assert.throws(() => heading("Title", { preserve: [null] }));
+  const repeated = "eBay and a colorful guide. ".repeat(300);
+  assert.equal(
+    heading(repeated, { preserve: Array(100).fill("eBay") }),
+    heading(repeated, { preserve: ["eBay"] }),
+  );
 });
 test("Context selects tone and explicit overrides survive saved-record resume", () => {
   for (const context of [

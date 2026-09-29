@@ -22,8 +22,10 @@ export function heading(text, options = {}) {
   for (const value of preserve)
     for (let p = text.indexOf(value); p !== -1; p = text.indexOf(value, p + value.length))
       spans.push([p, p + value.length]);
+  const protectedChars = new Uint8Array(text.length);
+  for (const [start, end] of spans) protectedChars.fill(1, start, end);
   const words = [...text.matchAll(/\p{L}+(?:['’]\p{L}+)?/gu)].filter(
-    (m) => !spans.some(([a, b]) => m.index < b && m.index + m[0].length > a),
+    (m) => !protectedChars.subarray(m.index, m.index + m[0].length).includes(1),
   );
   if (casing === "title" && text === text.toUpperCase()) return text;
   let result = "",
@@ -33,10 +35,7 @@ export function heading(text, options = {}) {
       start = m.index,
       stop = start + word.length;
     let replacement = word;
-    if (
-      !spans.some(([a, b]) => start < b && stop > a) &&
-      (casing === "upper" || word === word.toLowerCase())
-    ) {
+    if (casing === "upper" || word === word.toLowerCase()) {
       const between = i ? text.slice(words[i - 1].index + words[i - 1][0].length, start) : "";
       const afterBreak = i === 0 || /[:—]\s*$/.test(between);
       const pair =

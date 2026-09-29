@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.22.0: Smaller packages and safer installation
+
+- **Changed:** All host downloads use the compact profile with six font families, all 30 templates and complete rendering helpers. Both ZIP and unpacked content are capped at 24 MB. The full 24-family source collection is retained. README and platform guides lead with benefits and concise installation steps.
+- **Added:** Non-executing installer integrity checks, whole-archive path preflight, bounded metadata reads, malicious-path/no-execution regressions and real package install/update/rollback/removal checks in CI. The compact Claude filename is a byte-identical compatibility alias.
+- **Why:** Reduce downloads and staging I/O, avoid running code merely to validate an archive, and remove repeated documentation. Heading protection uses a character mask; installer inventory checks each entry once instead of repeatedly checking its ancestors.
+- **Validation:** 72 Node and 51 Python tests passed; one Windows symlink test requires host privileges and is also covered on Linux CI. A dense 7,800-character heading fixture with 100 repeated protected terms fell from 9,731 ms to 22 ms median across five local runs with identical output; this is a stress case, not an end-to-end speed claim. A 547-file inventory took 0.49 seconds versus 1.77 seconds before on the same files, with identical hashes. Dependency audit reported no known advisories. Extracted archives, managed lifecycle tests, browser checks, offline rebuild and reproducible CI gate publication. Live cloud upload and host activation remain unverified.
+
 ## 2026-09-28 — 0.21.0 template continuation correction
 
 - **Changed:** Template token exports retain the 4/8/12 responsive grid after their semantic aliases are appended. Heading tokenization keeps accented words intact rather than treating their letters as separate words.

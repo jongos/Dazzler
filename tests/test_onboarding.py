@@ -18,6 +18,22 @@ def module(path):
 
 
 class OnboardingTests(unittest.TestCase):
+    def test_inventory_refuses_linked_children(self):
+        installer = module(ROOT / "tools/install_skill.py")
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            outside = root / "outside"
+            outside.mkdir()
+            (outside / "private.txt").write_text("private")
+            owned = root / "owned"
+            owned.mkdir()
+            try:
+                (owned / "linked").symlink_to(outside, target_is_directory=True)
+            except OSError:
+                self.skipTest("Host does not permit test symlinks")
+            with self.assertRaisesRegex(ValueError, "Linked path"):
+                installer.inventory(owned)
+
     def test_starters_resolve_real_resources(self):
         skill = ROOT / "skills/dazzler-frontend"
         rows = json.loads((skill / "references/starters.json").read_text())["starters"]
@@ -57,6 +73,20 @@ class OnboardingTests(unittest.TestCase):
             bundle.writestr(
                 "dazzler-frontend/references/package-profile.json",
                 json.dumps({"version": version, "host": "codex", "profile": "full"}),
+            )
+        with zipfile.ZipFile(archive, "a") as bundle:
+            files = {
+                n.removeprefix("dazzler-frontend/"): hashlib.sha256(
+                    bundle.read(n)
+                ).hexdigest()
+                for n in bundle.namelist()
+                if n.startswith(
+                    ("dazzler-frontend/scripts/", "dazzler-frontend/references/")
+                )
+            }
+            bundle.writestr(
+                "dazzler-frontend/references/integrity.json",
+                json.dumps({"schemaVersion": 1, "files": files}),
             )
         sums = root / "SHA256SUMS.txt"
         sums.write_text(
@@ -203,9 +233,67 @@ class OnboardingTests(unittest.TestCase):
                 hashlib.sha256(archive.read_bytes()).hexdigest()
                 + "  dazzler-codex.zip\n"
             )
-            with self.assertRaisesRegex(ValueError, "health check failed"):
+            with self.assertRaises((ValueError, FileNotFoundError)):
                 installer.operate("install", **args)
             self.assertEqual(target.read_bytes(), before)
+
+    def test_archive_preflight_leaves_no_partial_files(self):
+        installer = module(ROOT / "tools/install_skill.py")
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            for bad in (
+                "dazzler-frontend/./bad",
+                "dazzler-frontend//bad",
+                "dazzler-frontend/control\x01",
+                "dazzler-frontend/valid/child",
+            ):
+                archive = root / "bad.zip"
+                with zipfile.ZipFile(archive, "w") as bundle:
+                    bundle.writestr("dazzler-frontend/valid", "keep")
+                    bundle.writestr(bad, "bad")
+                with self.assertRaises(ValueError):
+                    installer.extract(archive, root / "staged")
+                self.assertFalse((root / "staged").exists())
+
+    def test_installer_never_executes_archive_code(self):
+        installer = module(ROOT / "tools/install_skill.py")
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            archive, sums = self.fixture(root, "1.0.0")
+            with zipfile.ZipFile(archive) as bundle:
+                contents = {n: bundle.read(n) for n in bundle.namelist()}
+            contents["dazzler-frontend/scripts/health.py"] = (
+                b"raise RuntimeError('Must never execute')\n"
+            )
+            manifest = json.loads(
+                contents["dazzler-frontend/references/integrity.json"]
+            )
+            manifest["files"]["scripts/health.py"] = hashlib.sha256(
+                contents["dazzler-frontend/scripts/health.py"]
+            ).hexdigest()
+            contents["dazzler-frontend/references/integrity.json"] = json.dumps(
+                manifest
+            ).encode()
+            with zipfile.ZipFile(archive, "w") as bundle:
+                for name, data in contents.items():
+                    bundle.writestr(name, data)
+            sums.write_text(
+                hashlib.sha256(archive.read_bytes()).hexdigest()
+                + "  "
+                + archive.name
+                + "\n"
+            )
+            result = installer.operate(
+                "install",
+                root,
+                "codex",
+                "project",
+                archive=archive,
+                checksums=sums,
+                version="1.0.0",
+                dry_run=True,
+            )
+            self.assertEqual(result["health"], "passed")
 
 
 if __name__ == "__main__":

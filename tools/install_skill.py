@@ -12,7 +12,6 @@ from pathlib import Path, PurePosixPath
 import re
 import shutil
 import stat
-import subprocess
 import sys
 import tempfile
 import uuid
@@ -26,6 +25,57 @@ HOSTS = {
     "copilot": ".github",
 }
 RECEIPT = ".dazzler-install.json"
+
+
+def read_metadata(path, limit=1_000_000):
+    with safe_path(path).open("rb") as source:
+        data = source.read(limit + 1)
+    if len(data) > limit:
+        raise ValueError("Metadata exceeds size budget")
+    return data.decode("utf-8")
+
+
+def verify_resources(root):
+    """Check the release inventory without importing or executing its scripts."""
+    manifest = json.loads(read_metadata(root / "references/integrity.json"))
+    expected = manifest.get("files") if isinstance(manifest, dict) else None
+    if (
+        not isinstance(manifest, dict)
+        or manifest.get("schemaVersion") != 1
+        or not isinstance(expected, dict)
+        or not expected
+    ):
+        raise ValueError("Missing or invalid resource inventory")
+    actual = {
+        p.relative_to(root).as_posix(): p
+        for directory in ("scripts", "assets", "references")
+        for p in (root / directory).rglob("*")
+        if p.is_file() and p != root / "references/integrity.json"
+    }
+    if actual.keys() != expected.keys() or not (root / "SKILL.md").is_file():
+        raise ValueError("Resource inventory is incomplete")
+    text_types = {
+        ".md",
+        ".json",
+        ".mjs",
+        ".cjs",
+        ".js",
+        ".py",
+        ".r",
+        ".css",
+        ".html",
+        ".svg",
+        ".csv",
+        ".txt",
+        ".yaml",
+        ".yml",
+    }
+    for name, path in actual.items():
+        data = path.read_bytes()
+        if path.suffix.lower() in text_types:
+            data = data.replace(b"\r\n", b"\n")
+        if hashlib.sha256(data).hexdigest() != expected[name]:
+            raise ValueError("Resource integrity mismatch: " + name)
 
 
 def digest(path):
@@ -49,11 +99,23 @@ def safe_path(path):
 
 
 def inventory(root):
+    safe_path(root)
     files = {}
-    for path in root.rglob("*"):
-        safe_path(path)
-        if path.is_file() and path != root / RECEIPT:
-            files[path.relative_to(root).as_posix()] = digest(path)
+    pending = [root]
+    while pending:
+        directory = pending.pop()
+        for path in directory.iterdir():
+            info = path.lstat()
+            if stat.S_ISLNK(info.st_mode) or getattr(
+                info, "st_file_attributes", 0
+            ) & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0):
+                raise ValueError(f"Linked path refused: {path}")
+            if stat.S_ISDIR(info.st_mode):
+                pending.append(path)
+            elif stat.S_ISREG(info.st_mode) and path != root / RECEIPT:
+                files[path.relative_to(root).as_posix()] = digest(path)
+            elif not stat.S_ISREG(info.st_mode):
+                raise ValueError(f"Special file refused: {path}")
     return files
 
 
@@ -63,9 +125,10 @@ def clean_owned(root, host, scope):
         raise ValueError(
             f"Found an unmanaged Dazzler installation at {root}; preserve it by moving it aside before installing. See ONBOARDING: Migrate a Manual Install."
         )
-    receipt = json.loads(safe_path(root / RECEIPT).read_text(encoding="utf-8"))
+    receipt = json.loads(read_metadata(root / RECEIPT))
     if (
-        receipt.get("owner") != "dazzler-managed-v1"
+        not isinstance(receipt, dict)
+        or receipt.get("owner") != "dazzler-managed-v1"
         or receipt.get("host") != host
         or receipt.get("scope") != scope
     ):
@@ -92,6 +155,10 @@ def extract(archive, destination):
                 not parts
                 or parts[0] != "dazzler-frontend"
                 or "\\" in name
+                or "/".join(parts) != name.rstrip("/")
+                or len(name) > 512
+                or len(parts) > 24
+                or any(ord(c) < 32 or ord(c) == 127 for c in name)
                 or any(
                     p in (".", "..")
                     or ":" in p
@@ -112,6 +179,16 @@ def extract(archive, destination):
             if key in seen:
                 raise ValueError("Duplicate or case-colliding archive path")
             seen.add(key)
+        # Validate the whole archive before creating any files.
+        files = {m.filename.casefold() for m in members if not m.is_dir()}
+        for member in members:
+            parts = PurePosixPath(member.filename).parts
+            if any(
+                "/".join(parts[:i]).casefold() in files for i in range(1, len(parts))
+            ):
+                raise ValueError("Archive file/directory collision")
+        for member in members:
+            parts = PurePosixPath(member.filename).parts
             path = destination.joinpath(*parts)
             if member.is_dir():
                 path.mkdir(parents=True, exist_ok=True)
@@ -172,10 +249,13 @@ def operate(
     if archive is None or checksums is None:
         raise ValueError("Install requires --archive and --checksums")
     archive = safe_path(archive)
-    if archive.name != f"dazzler-{host}.zip" or archive.stat().st_size > 80_000_000:
-        raise ValueError("Select the matching full host skill archive")
+    allowed_names = {f"dazzler-{host}.zip"}
+    if host == "claude":
+        allowed_names.add("dazzler-claude-compact.zip")
+    if archive.name not in allowed_names or archive.stat().st_size > 80_000_000:
+        raise ValueError("Select the matching host skill archive")
     hashes = {}
-    for line in Path(checksums).read_text(encoding="utf-8").splitlines():
+    for line in read_metadata(checksums, 64_000).splitlines():
         match = re.fullmatch(r"([a-f0-9]{64})  ([^/\\]+)", line)
         if not match or match[2] in hashes:
             raise ValueError("Malformed or duplicate checksum entry")
@@ -187,26 +267,17 @@ def operate(
     # Dry-run validates the archive and health too, without changing the install root.
     with tempfile.TemporaryDirectory(prefix="dazzler-check-") as temp:
         staged = extract(archive, Path(temp))
-        profile = json.loads(
-            (staged / "references/package-profile.json").read_text(encoding="utf-8")
-        )
+        profile = json.loads(read_metadata(staged / "references/package-profile.json"))
         if (
-            profile.get("version") != version
+            not isinstance(profile, dict)
+            or profile.get("version") != version
             or profile.get("host") != host
-            or profile.get("profile") != "full"
+            or profile.get("profile") not in ("full", "compact")
         ):
             raise ValueError(
-                "Requested version/host does not match the full archive profile"
+                "Requested version/host does not match the archive profile"
             )
-        process = subprocess.run(
-            [sys.executable, "-B", str(staged / "scripts/health.py")],
-            capture_output=True,
-            text=True,
-            timeout=60,
-            shell=False,
-        )
-        if process.returncode:
-            raise ValueError("Extracted health check failed: " + process.stderr[-500:])
+        verify_resources(staged)
         receipt = {
             "owner": "dazzler-managed-v1",
             "version": version,
@@ -277,7 +348,7 @@ if __name__ == "__main__":
         OSError,
         ValueError,
         KeyError,
-        subprocess.TimeoutExpired,
         zipfile.BadZipFile,
+        RecursionError,
     ) as error:
         parser.exit(1, str(error) + "\n")
