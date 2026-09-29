@@ -5,6 +5,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { parseArgs } from "node:util";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
+import { preparePolicy, applyPolicy } from "./design-policy.mjs";
 import { templateCSS } from "./template-theme.mjs";
 import { resolveRefinement, prepareRefinement, refinementCSS } from "./refinement.mjs";
 import { enhanceType, specimen } from "./type-system.mjs";
@@ -65,15 +66,18 @@ function positive(n, label) {
 }
 export function tokens(input = {}) {
   const originalInput = input;
+  const modern = input.schemaVersion === undefined || input.schemaVersion === 3;
   const refinement = resolveRefinement(input.refinement ?? {});
   input = prepareRefinement(input, refinement);
-  if (input.schemaVersion !== undefined && ![1, 2].includes(input.schemaVersion))
+  if (modern) input = preparePolicy(input);
+  if (input.schemaVersion !== undefined && ![1, 2, 3].includes(input.schemaVersion))
     throw Error("Unsupported token schema");
   const palette = generate(
     input.colors ?? {
       base: input.brand?.seed ?? "#7048E8",
       ...(input.brand?.locks ? { locked: input.brand.locks } : {}),
     },
+    { legacy: !modern },
   );
   if (palette.status !== "pass")
     throw Error("Locked color roles are unresolved; inspect the color helper report");
@@ -241,8 +245,12 @@ export function tokens(input = {}) {
       .join("\n") +
     `\n  --font-${fontRoles.body.fallback.replace(/^ui-/, "").replace("system-ui", "sans").replace("sans-serif", "sans").replace("monospace", "mono")}: var(--font-body);\n  --font-display: var(--font-heading);\n}\n`;
   const result = enhanceType({ system, css, dtcg, tailwind, theme }, input);
-  if (result.system.schemaVersion === 2)
-    result.system.configuration = structuredClone({ ...originalInput, schemaVersion: 2 });
+  if (modern) applyPolicy(result, input);
+  if (result.system.schemaVersion >= 2)
+    result.system.configuration = structuredClone({
+      ...originalInput,
+      schemaVersion: modern ? 3 : 2,
+    });
   if (refinement.active) {
     result.system.refinement = refinement;
     result.css += refinementCSS(refinement);
@@ -439,6 +447,8 @@ async function main() {
       "typography",
       "refinement",
       "motion",
+      "policy",
+      "grid",
     ])
       if (
         input[field] !== undefined &&
@@ -455,6 +465,7 @@ async function main() {
       await readJSON(values.template),
       result.system.palette,
       result.system.fonts,
+      result.system.policy,
     );
   }
   values.out = await createOutput(values.out);

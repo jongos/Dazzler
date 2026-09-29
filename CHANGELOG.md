@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.21.0: Phase 6 design defaults and issue reconciliation
+
+- **Changed:** New schema-3 systems choose context-sensitive tone, protected English heading case, 60ch maximum prose measure and responsive grid tokens. Explicit settings, brand locks and schema-1/2 records retain precedence. DOCX/HTML/UI templates and the field manual adopt the editorial policy; chart and illustration headings preserve data labels and IDs.
+- **Added:** Twelve design principles with enforcement boundaries; shared Python/Node heading fixtures; project-local licensed-font import and coverage-based selection; package gates against private/unreviewed fonts; measured danger foregrounds and optional AAA text targets; browser reading-width, heading and target-size review candidates; six behavioral review briefs and a 30-template reconciliation with before/after captures.
+- **Why:** Resolve the remaining actionable design ideas while distinguishing design preferences from accessibility requirements and local packaging checks from live-host verification. Correct Claude plugin starter namespaces, explain unmanaged-install/empty-rollback recovery, and ignore project backups without replacing existing ignore rules. No new runtime dependency or upstream source import is required.
+- **Validation:** 72 Node and 49 Python tests passed; 20 HTML/UI examples passed responsive, font, interaction and data checks; native Word rendered 20 pages across ten templates with expected pagination. Grid breakpoints, 200% text, saved-system continuation, print fallbacks, bounded browser evidence, six composition fixtures and gallery navigation were checked. Integrity covers 700 files; 124 font binaries and 206 font/support assets passed. Archive, compact-size, offline-rebuild and cross-platform CI checks gate publication. Host upload/invocation, Grok, live Figma and native-app verification remain explicitly limited; see maintenance/phase6/README.md.
+
 ## 2026-09-28 — 0.20.0: Optional design handoffs and evidence-based guidance
 
 - **Changed:** Supplied design files now route to a bounded read-only evidence workflow; optional comps route through actual implementation and browser review. Existing project choices remain authoritative. Platform guides, the field manual and website starters explain these conditional paths without adding a default questionnaire.

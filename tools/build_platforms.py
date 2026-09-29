@@ -14,7 +14,7 @@ SOURCE = ROOT / "skills/dazzler-frontend"
 PLATFORMS = ("codex", "claude", "gemini", "cursor", "copilot")
 
 
-def skill_text(platform):
+def skill_text(platform, plugin=False):
     text = (SOURCE / "SKILL.md").read_text(encoding="utf-8")
     text = re.sub(r"When asked to update this skill.*?\n\n", "", text, count=1)
     if platform == "codex":
@@ -34,7 +34,8 @@ def skill_text(platform):
         "This edition adds host-specific tool routing and verification,",
     )
     if platform == "claude":
-        return text.replace("Use $dazzler-frontend to ...", "/dazzler-frontend ...")
+        invocation = "/dazzler:dazzler-frontend" if plugin else "/dazzler-frontend"
+        return text.replace("Use $dazzler-frontend to ...", invocation + " ...")
     return text.replace("$dazzler-frontend", "Dazzler")
 
 
@@ -134,7 +135,38 @@ def seal_profile(target, platform, profile):
         raise ValueError(f"{platform}/{profile} exceeds unpacked budget: {size}")
 
 
-def assemble(platform, target, profile="full"):
+def assemble(platform, target, profile="full", plugin=False):
+    catalog = json.loads(
+        (SOURCE / "references/font-catalog.json").read_text(encoding="utf-8")
+    )
+    allowed = {
+        "OFL-1.1",
+        "Apache-2.0",
+        "GUST Font License 1.0 / LPPL-1.3c-or-later",
+        "Author No Rights Reserved dedication (directory: CC0-1.0)",
+    }
+    known = {
+        face["sha256"]
+        for family in catalog["fonts"]
+        if family["status"] == "bundled"
+        for face in family["files"]
+        if face.get("path")
+    }
+    for family in catalog["fonts"]:
+        if family["status"] == "bundled" and family["license"] not in allowed:
+            raise ValueError("Unreviewed bundled font license")
+    for resource in SOURCE.rglob("*"):
+        if resource.name == "user-fonts.json":
+            raise ValueError("Private project font manifests cannot enter a release")
+        if resource.is_file() and resource.suffix.lower() in (
+            ".ttf",
+            ".otf",
+            ".woff",
+            ".woff2",
+            ".ttc",
+        ):
+            if hashlib.sha256(resource.read_bytes()).hexdigest() not in known:
+                raise ValueError("Unreviewed font binary in release: " + resource.name)
     target.mkdir(parents=True)
     for name in ("references", "scripts", "assets", "evals"):
         shutil.copytree(
@@ -145,7 +177,7 @@ def assemble(platform, target, profile="full"):
     for name in ("LICENSE.txt", "PROVENANCE.md"):
         shutil.copy2(SOURCE / name, target / name)
     (target / "SKILL.md").write_text(
-        skill_text(platform), encoding="utf-8", newline="\n"
+        skill_text(platform, plugin), encoding="utf-8", newline="\n"
     )
     notices = (ROOT / "THIRD_PARTY_NOTICES.md").read_text(encoding="utf-8")
     notices = notices.replace("skills/dazzler-frontend/", "")
@@ -162,7 +194,11 @@ def assemble(platform, target, profile="full"):
             text = starter.read_text(encoding="utf-8")
             text = text.replace(
                 "Use $dazzler-frontend to ",
-                "/dazzler-frontend " if platform == "claude" else "Use Dazzler to ",
+                (
+                    ("/dazzler:dazzler-frontend " if plugin else "/dazzler-frontend ")
+                    if platform == "claude"
+                    else "Use Dazzler to "
+                ),
             )
             starter.write_text(text, encoding="utf-8", newline="\n")
     seal_profile(target, platform, profile)
@@ -236,7 +272,7 @@ def build(destination):
         stage = Path(temp).resolve()
         assert stage.parent == destination
         plugin = stage / "dazzler"
-        assemble("claude", plugin / "skills/dazzler-frontend")
+        assemble("claude", plugin / "skills/dazzler-frontend", plugin=True)
         (plugin / ".claude-plugin").mkdir()
         (plugin / ".claude-plugin/plugin.json").write_text(
             json.dumps(

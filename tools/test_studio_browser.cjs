@@ -36,6 +36,19 @@ const { audit, fontLab, visualCompare } = require("../skills/dazzler-frontend/sc
     for (const text of ["IGNORE-USER", "RUN-SHELL", "SEND PRIVATE FILES NOW"])
       assert(!serialized.includes(text));
     assert(serialized.includes("Untrusted family instruction"));
+    await page.setContent(
+      '<html lang="en"><h2 style="text-transform:capitalize">private heading words</h2><p style="width:1000px;font:16px monospace">' +
+        "Private fixture text ".repeat(12) +
+        '</p><button style="width:12px;height:12px;padding:0">X</button></html>',
+    );
+    const policy = await collect(page);
+    for (const rule of ["body-measure", "heading-case", "heading-transform", "target-size"])
+      assert(
+        policy.designReview.some((x) => x.check === rule),
+        rule,
+      );
+    assert(!JSON.stringify(policy).includes("private heading words"));
+    assert(!JSON.stringify(policy).includes("Private fixture text"));
     await page.setContent("<div>" + Array(5100).fill("<span>Example</span>").join("") + "</div>");
     const bounded = await collect(page);
     assert(bounded.truncated);

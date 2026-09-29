@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Daybreak — Your usual, or something new.</title>
+    <title>Daybreak — Your Usual, or Something New.</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-cafe restaurant">
@@ -27,7 +27,7 @@
       </div>
       <div class="cafe-heading">
         <p class="eyebrow">ORDER A LITTLE BRIGHTER</p>
-        <h1>Your usual,<br />or something new.</h1>
+        <h1>Your Usual,<br />or Something New.</h1>
         <p>Coffee, something warm, and a good start to the day.</p>
       </div>
       <div class="order-layout">
@@ -37,7 +37,7 @@
         </section>
         <aside class="order" id="order">
           <p class="eyebrow">PICKUP ORDER</p>
-          <h2>Your morning</h2>
+          <h2>Your Morning</h2>
           <div id="cart-lines"></div>
           <div class="total"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
           <p class="muted">USD • Taxes or service fees are not calculated in this preview.</p>
@@ -48,7 +48,7 @@
       <section class="morning-note">
         <div>
           <p class="eyebrow">BAKED FOR THE MORNING</p>
-          <h2>Small rituals.<br /><em>A brighter day.</em></h2>
+          <h2>Small Rituals.<br /><em>A Brighter Day.</em></h2>
           <p>
             84 pastries in today’s fictional bake. Choose a coffee, a warm bite and a pickup
             preview. The bag calculates from your selected quantities.
@@ -99,7 +99,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -114,7 +114,7 @@
         "category": "restaurant",
         "layout": "cafe",
         "brand": "Daybreak",
-        "title": "Your usual, or something new.",
+        "title": "Your Usual, or Something New.",
         "intro": "Order ahead for pickup • Sample café location",
         "accent": "#A83B19",
         "tint": "#EDEFF7",
@@ -219,64 +219,137 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id);
-  var money = (n) => new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 2
-  }).format(n), say = (t) => {
-    $("status").textContent = t;
-  }, dialog = $("edit-dialog"), pending = "", cart = {}, category = "All";
-  function openDialog(title, action, content = "", label = "Details") {
-    $("dialog-title").textContent = title, $("dialog-content").innerHTML = content, $("entry-label").textContent = label, $("entry").value = "", $("entry").required = !!label, $("entry").hidden = $("entry-label").hidden = !label, $("dialog-save").textContent = action === "reservation" ? "Keep request preview" : action === "cart" ? "Keep order preview" : "Save preview", pending = action, dialog.showModal();
-  }
-  $("cancel").addEventListener("click", () => dialog.close());
-  function menuRender() {
-    let items = cfg.items.map((x, i) => ({ ...x, index: i })).filter(
-      (x) => (category === "All" || x.category === category) && !0 && [x.name, x.description].join(" ").toLowerCase().includes("")
-    );
-    $("products").innerHTML = items.map(
-      (x) => `<article class="product"><small>${x.category}</small><h3>${x.name}</h3><p>${x.description}</p><div class="price"><strong>${money(x.price)}</strong><button data-add="${x.index}" aria-label="Add ${x.name}">Add +</button></div></article>`
-    ).join("");
-  }
-  function cartRender() {
-    let ids = Object.keys(cart).filter((i) => cart[i] > 0);
-    $("cart-lines").innerHTML = ids.length ? ids.map(
-      (i) => `<div class="cart-line"><strong>${cfg.items[i].name}</strong><small>${money(cfg.items[i].price * cart[i])}</small><div class="quantity"><button class="secondary" data-quantity="${i}" data-delta="-1" aria-label="Remove one ${cfg.items[i].name}">\u2212</button><span>${cart[i]}</span><button class="secondary" data-quantity="${i}" data-delta="1" aria-label="Add one ${cfg.items[i].name}">+</button></div></div>`
-    ).join("") : '<p class="muted">Your bag is empty. Add a coffee or something from the kitchen.</p>', $("subtotal").textContent = money(ids.reduce((s, i) => s + cfg.items[i].price * cart[i], 0));
-  }
-  document.addEventListener("click", (event) => {
-    let b = event.target.closest("button");
-    if (b && (b.dataset.filter && (category = b.dataset.filter, document.querySelectorAll("[data-filter]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))), menuRender()), b.dataset.add !== void 0 && (cart[b.dataset.add] = (cart[b.dataset.add] || 0) + 1, cartRender(), say("Added to your pickup preview.")), b.dataset.quantity !== void 0 && (cart[b.dataset.quantity] = Math.max(
-      0,
-      (cart[b.dataset.quantity] || 0) + Number(b.dataset.delta)
-    ), cartRender()), b.dataset.action === "clear" && (cart = {}, cartRender(), say("Order preview cleared.")), b.dataset.action === "cart")) {
-      let ids = Object.keys(cart).filter((i) => cart[i] > 0);
-      if (!ids.length) {
-        say("Add an item before reviewing your order.");
-        return;
-      }
-      openDialog(
-        "Your pickup order",
-        "cart",
-        "<ul>" + ids.map(
-          (i) => `<li>${cart[i]} \xD7 ${cfg.items[i].name} \u2014 ${money(cfg.items[i].price * cart[i])}</li>`
-        ).join("") + "</ul><p><strong>Subtotal " + $("subtotal").textContent + "</strong></p><p>Sample pickup estimate: 15\u201320 minutes. No order or payment is submitted.</p>",
-        ""
-      );
-    }
-  });
-  $("edit-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    let value = $("entry").value.trim();
-    $("entry").required && !value || (say(
-      pending === "reservation" ? "Reservation request preview kept. No table has been booked." : pending === "cart" ? "Order preview kept. Nothing was sent to the caf\xE9." : pending === "brief" ? "Review brief closed." : "Saved in this preview only. No message or account change was sent."
-    ), dialog.close());
-  });
-  $("menu-filters").innerHTML = ["All", ...new Set(cfg.items.map((x) => x.category))].map((c) => `<button data-filter="${c}" aria-pressed="${c === "All"}">${c}</button>`).join(""), menuRender(), cartRender();
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id);
+        var money = (n) =>
+            new Intl.NumberFormat("en-US", {
+              style: "currency",
+              currency: "USD",
+              maximumFractionDigits: 2,
+            }).format(n),
+          say = (t) => {
+            $("status").textContent = t;
+          },
+          dialog = $("edit-dialog"),
+          pending = "",
+          cart = {},
+          category = "All";
+        function openDialog(title, action, content = "", label = "Details") {
+          (($("dialog-title").textContent = title),
+            ($("dialog-content").innerHTML = content),
+            ($("entry-label").textContent = label),
+            ($("entry").value = ""),
+            ($("entry").required = !!label),
+            ($("entry").hidden = $("entry-label").hidden = !label),
+            ($("dialog-save").textContent =
+              action === "reservation"
+                ? "Keep request preview"
+                : action === "cart"
+                  ? "Keep order preview"
+                  : "Save preview"),
+            (pending = action),
+            dialog.showModal());
+        }
+        $("cancel").addEventListener("click", () => dialog.close());
+        function menuRender() {
+          let items = cfg.items
+            .map((x, i) => ({ ...x, index: i }))
+            .filter(
+              (x) =>
+                (category === "All" || x.category === category) &&
+                !0 &&
+                [x.name, x.description].join(" ").toLowerCase().includes(""),
+            );
+          $("products").innerHTML = items
+            .map(
+              (x) =>
+                `<article class="product"><small>${x.category}</small><h3>${x.name}</h3><p>${x.description}</p><div class="price"><strong>${money(x.price)}</strong><button data-add="${x.index}" aria-label="Add ${x.name}">Add +</button></div></article>`,
+            )
+            .join("");
+        }
+        function cartRender() {
+          let ids = Object.keys(cart).filter((i) => cart[i] > 0);
+          (($("cart-lines").innerHTML = ids.length
+            ? ids
+                .map(
+                  (i) =>
+                    `<div class="cart-line"><strong>${cfg.items[i].name}</strong><small>${money(cfg.items[i].price * cart[i])}</small><div class="quantity"><button class="secondary" data-quantity="${i}" data-delta="-1" aria-label="Remove one ${cfg.items[i].name}">\u2212</button><span>${cart[i]}</span><button class="secondary" data-quantity="${i}" data-delta="1" aria-label="Add one ${cfg.items[i].name}">+</button></div></div>`,
+                )
+                .join("")
+            : '<p class="muted">Your bag is empty. Add a coffee or something from the kitchen.</p>'),
+            ($("subtotal").textContent = money(
+              ids.reduce((s, i) => s + cfg.items[i].price * cart[i], 0),
+            )));
+        }
+        document.addEventListener("click", (event) => {
+          let b = event.target.closest("button");
+          if (
+            b &&
+            (b.dataset.filter &&
+              ((category = b.dataset.filter),
+              document
+                .querySelectorAll("[data-filter]")
+                .forEach((x) => x.setAttribute("aria-pressed", String(x === b))),
+              menuRender()),
+            b.dataset.add !== void 0 &&
+              ((cart[b.dataset.add] = (cart[b.dataset.add] || 0) + 1),
+              cartRender(),
+              say("Added to your pickup preview.")),
+            b.dataset.quantity !== void 0 &&
+              ((cart[b.dataset.quantity] = Math.max(
+                0,
+                (cart[b.dataset.quantity] || 0) + Number(b.dataset.delta),
+              )),
+              cartRender()),
+            b.dataset.action === "clear" &&
+              ((cart = {}), cartRender(), say("Order preview cleared.")),
+            b.dataset.action === "cart")
+          ) {
+            let ids = Object.keys(cart).filter((i) => cart[i] > 0);
+            if (!ids.length) {
+              say("Add an item before reviewing your order.");
+              return;
+            }
+            openDialog(
+              "Your pickup order",
+              "cart",
+              "<ul>" +
+                ids
+                  .map(
+                    (i) =>
+                      `<li>${cart[i]} \xD7 ${cfg.items[i].name} \u2014 ${money(cfg.items[i].price * cart[i])}</li>`,
+                  )
+                  .join("") +
+                "</ul><p><strong>Subtotal " +
+                $("subtotal").textContent +
+                "</strong></p><p>Sample pickup estimate: 15\u201320 minutes. No order or payment is submitted.</p>",
+              "",
+            );
+          }
+        });
+        $("edit-form").addEventListener("submit", (event) => {
+          event.preventDefault();
+          let value = $("entry").value.trim();
+          ($("entry").required && !value) ||
+            (say(
+              pending === "reservation"
+                ? "Reservation request preview kept. No table has been booked."
+                : pending === "cart"
+                  ? "Order preview kept. Nothing was sent to the caf\xE9."
+                  : pending === "brief"
+                    ? "Review brief closed."
+                    : "Saved in this preview only. No message or account change was sent.",
+            ),
+            dialog.close());
+        });
+        (($("menu-filters").innerHTML = ["All", ...new Set(cfg.items.map((x) => x.category))]
+          .map((c) => `<button data-filter="${c}" aria-pressed="${c === "All"}">${c}</button>`)
+          .join("")),
+          menuRender(),
+          cartRender());
+      })();
+    </script>
   </body>
 </html>

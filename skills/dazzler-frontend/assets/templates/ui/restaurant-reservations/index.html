@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>The Long Table — Make an evening of it.</title>
+    <title>The Long Table — Make an Evening of It.</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-reservations restaurant">
@@ -20,10 +20,10 @@
       <div class="reservation-layout">
         <section>
           <p class="eyebrow">THE LONG TABLE</p>
-          <h1>Make an<br />evening of it.</h1>
+          <h1>Make an<br />Evening of It.</h1>
           <p class="intro">Dinner is better with something to look forward to.</p>
           <div class="booking-notes">
-            <h2>Before you book</h2>
+            <h2>Before You Book</h2>
             <p>Dinner • Tuesday–Saturday<br />17:30–22:00</p>
             <p>
               Tables of up to six can use this form. For larger groups, contact the restaurant
@@ -38,7 +38,7 @@
         </section>
         <form id="reservation" class="booking-card">
           <p class="step">01 / YOUR VISIT</p>
-          <h2>Find a time that suits you</h2>
+          <h2>Find a Time That Suits You</h2>
           <div class="form-grid">
             <div class="field">
               <label for="date">Date</label
@@ -101,7 +101,7 @@
         </form>
       </div>
       <section class="room-guide">
-        <h2>A place that suits your evening</h2>
+        <h2>A Place That Suits Your Evening</h2>
         <p>
           Explore the room before making a request. Seating preferences are illustrative and never
           confirm availability.
@@ -136,7 +136,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -151,7 +151,7 @@
         "category": "restaurant",
         "layout": "reservations",
         "brand": "The Long Table",
-        "title": "Make an evening of it.",
+        "title": "Make an Evening of It.",
         "intro": "Request a table for dinner. We will show a summary before any next step.",
         "accent": "#593478",
         "tint": "#EDEFF7",
@@ -195,53 +195,89 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id), esc = (v) => String(v).replace(
-    /[&<>"']/g,
-    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]
-  );
-  var say = (t) => {
-    $("status").textContent = t;
-  }, dialog = $("edit-dialog"), pending = "";
-  function openDialog(title, action, content = "", label = "Details") {
-    $("dialog-title").textContent = title, $("dialog-content").innerHTML = content, $("entry-label").textContent = label, $("entry").value = "", $("entry").required = !!label, $("entry").hidden = $("entry-label").hidden = !label, $("dialog-save").textContent = action === "reservation" ? "Keep request preview" : action === "cart" ? "Keep order preview" : "Save preview", pending = action, dialog.showModal();
-  }
-  $("cancel").addEventListener("click", () => dialog.close());
-  document.addEventListener("click", (event) => {
-    event.target.closest("button");
-  });
-  $("edit-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    let value = $("entry").value.trim();
-    $("entry").required && !value || (say(
-      pending === "reservation" ? "Reservation request preview kept. No table has been booked." : pending === "cart" ? "Order preview kept. Nothing was sent to the caf\xE9." : pending === "brief" ? "Review brief closed." : "Saved in this preview only. No message or account change was sent."
-    ), dialog.close());
-  });
-  {
-    let today = /* @__PURE__ */ new Date(), localDate = (d) => [
-      d.getFullYear(),
-      String(d.getMonth() + 1).padStart(2, "0"),
-      String(d.getDate()).padStart(2, "0")
-    ].join("-");
-    for ($("date").min = localDate(today), today.setDate(today.getDate() + 7); [0, 1].includes(today.getDay()); ) today.setDate(today.getDate() + 1);
-    $("date").value = localDate(today), $("date").addEventListener("change", () => {
-      let day = (/* @__PURE__ */ new Date($("date").value + "T12:00:00")).getDay();
-      $("date").setCustomValidity(
-        [0, 1].includes(day) ? "Dinner service runs Tuesday through Saturday. Choose another date." : ""
-      );
-    }), $("reservation").addEventListener("submit", (event) => {
-      event.preventDefault();
-      let f = new FormData(event.target);
-      openDialog(
-        "Review your table request",
-        "reservation",
-        `<p><strong>${esc(f.get("guest"))}</strong><br>${esc(f.get("guests"))} guests \xB7 ${esc(f.get("date"))} at ${esc(f.get("time"))}</p><p>${esc(f.get("guest-email"))}</p><p>${esc($("booking-note").value)}</p><p>No availability has been checked and no booking will be made by this preview.</p>`,
-        ""
-      );
-    });
-  }
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id),
+          esc = (v) =>
+            String(v).replace(
+              /[&<>"']/g,
+              (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
+            );
+        var say = (t) => {
+            $("status").textContent = t;
+          },
+          dialog = $("edit-dialog"),
+          pending = "";
+        function openDialog(title, action, content = "", label = "Details") {
+          (($("dialog-title").textContent = title),
+            ($("dialog-content").innerHTML = content),
+            ($("entry-label").textContent = label),
+            ($("entry").value = ""),
+            ($("entry").required = !!label),
+            ($("entry").hidden = $("entry-label").hidden = !label),
+            ($("dialog-save").textContent =
+              action === "reservation"
+                ? "Keep request preview"
+                : action === "cart"
+                  ? "Keep order preview"
+                  : "Save preview"),
+            (pending = action),
+            dialog.showModal());
+        }
+        $("cancel").addEventListener("click", () => dialog.close());
+        document.addEventListener("click", (event) => {
+          event.target.closest("button");
+        });
+        $("edit-form").addEventListener("submit", (event) => {
+          event.preventDefault();
+          let value = $("entry").value.trim();
+          ($("entry").required && !value) ||
+            (say(
+              pending === "reservation"
+                ? "Reservation request preview kept. No table has been booked."
+                : pending === "cart"
+                  ? "Order preview kept. Nothing was sent to the caf\xE9."
+                  : pending === "brief"
+                    ? "Review brief closed."
+                    : "Saved in this preview only. No message or account change was sent.",
+            ),
+            dialog.close());
+        });
+        {
+          let today = /* @__PURE__ */ new Date(),
+            localDate = (d) =>
+              [
+                d.getFullYear(),
+                String(d.getMonth() + 1).padStart(2, "0"),
+                String(d.getDate()).padStart(2, "0"),
+              ].join("-");
+          for (
+            $("date").min = localDate(today), today.setDate(today.getDate() + 7);
+            [0, 1].includes(today.getDay());
+          )
+            today.setDate(today.getDate() + 1);
+          (($("date").value = localDate(today)),
+            $("date").addEventListener("change", () => {
+              let day = /* @__PURE__ */ new Date($("date").value + "T12:00:00").getDay();
+              $("date").setCustomValidity(
+                [0, 1].includes(day)
+                  ? "Dinner service runs Tuesday through Saturday. Choose another date."
+                  : "",
+              );
+            }),
+            $("reservation").addEventListener("submit", (event) => {
+              event.preventDefault();
+              let f = new FormData(event.target);
+              openDialog(
+                "Review your table request",
+                "reservation",
+                `<p><strong>${esc(f.get("guest"))}</strong><br>${esc(f.get("guests"))} guests \xB7 ${esc(f.get("date"))} at ${esc(f.get("time"))}</p><p>${esc(f.get("guest-email"))}</p><p>${esc($("booking-note").value)}</p><p>No availability has been checked and no booking will be made by this preview.</p>`,
+                "",
+              );
+            }));
+        }
+      })();
+    </script>
   </body>
 </html>

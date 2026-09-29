@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "behavioral-review-briefs",
+  "status": "Fixtures; a real-host run must supply its own artifact evidence",
+  "cases": [
+    {"id":"editorial-defaults","brief":"Design a colorful independent cinema season page with a readable introduction and one booking action. Use the supplied real event data.","review":["Expressive direction","60ch prose maximum and narrow-screen reflow","Protected Title Case headings","Clear primary action","Accurate dates and accessible controls"]},
+    {"id":"reserved-context","brief":"Create a legal supplier exit memo from the supplied facts. Preserve uncertainty and chronology.","review":["Reserved treatment inferred","Stable print type and page boundaries","Tables retain all facts","Selective emphasis","No invented legal conclusions"]},
+    {"id":"explicit-override","brief":"Restyle our editorial page. Keep sentence-case headings and our 72ch reading width. Do not alter product names or body copy.","review":["Explicit case and measure win","Accepted overrides persisted","Brand names and body text preserved"]},
+    {"id":"red-brand","brief":"Design account settings using our locked red brand. Include a destructive account action with clear recovery information.","review":["Brand lock preserved","Danger and foreground measured","Distinct label and non-color cue","Confirmation or undo suited to consequence","Keyboard operation"]},
+    {"id":"licensed-local-font","brief":"Use the licensed font files already supplied in this project. Check coverage for the actual copy and retain the license declaration.","review":["No network or OS installation","Project-local import only","Coverage evidence","Private fonts excluded from skill packages","Unsupported shaping/features disclosed"]},
+    {"id":"non-english-chart","brief":"Build a French chart page using the supplied rows, units and missing values. Keep our authored French headings.","review":["No English case conversion","Missing values retained","Non-color cues and table equivalent","Responsive grid and readable labels"]}
+  ]
+}

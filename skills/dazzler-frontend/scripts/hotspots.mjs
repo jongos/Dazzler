@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // Original Dazzler interactive-illustration exporter, Apache-2.0.
+import { heading, headingOptions } from "./headings.mjs";
 import { readFile, writeFile, mkdir, copyFile, cp, realpath } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -50,7 +51,12 @@ export function normalize(input) {
     )
       throw Error("Regions need unique IDs, labels and descriptions");
     ids.add(r.id);
-    const result = { id: r.id, label: r.label, description: r.description };
+    const result = {
+      id: r.id,
+      label: r.label,
+      heading: heading(r.label, headingOptions(input)),
+      description: r.description,
+    };
     if (kind === "image") {
       const { shape, coords } = r;
       if (
@@ -101,7 +107,8 @@ export function normalize(input) {
   return {
     kind,
     framework,
-    title: input.title,
+    title: heading(input.title, headingOptions(input)),
+    lang: input.lang ?? "en",
     imageAlt: input.imageAlt,
     description: text(input.description, 1000) ? input.description : "Explore the labeled regions.",
     source: text(input.source, 500) ? input.source : "",
@@ -313,16 +320,16 @@ export async function render(input, artFile, out) {
     `# Interactive illustration\n\nImport the accompanying CSS, load hotspots.json as a module or data object, then call the adapter with an empty DOM container. Use the returned cleanup function when the host component unmounts. In React/Vue, mount only after the container exists. The adapter manages its own subtree.\n\n\`\`\`js\nimport {mount} from './adapter.mjs';\nconst dispose = mount(container, config);\n// On host unmount: dispose();\n\`\`\`\n\nKeep hotspot coordinates in original image pixels. Keep SVG region IDs matched to the descriptions. Re-export after changing artwork. This adapter accepts only validated exported configuration; rerun the CLI for new SVG input. Use the existing host runtime and merge dependencies.json rather than replacing package.json. Review keyboard, touch, labels and resizing in the final page. Fonts are referenced, not installed or embedded.\n\n## Notes and credits\n\n${config.credit} Original Dazzler adapter: Apache-2.0. Preserve LICENSE.txt, licenses/ and renderer-provenance.json when sharing.\n`,
   );
   const fallback = config.regions
-    .map((r) => "<h2>" + esc(r.label) + "</h2><p>" + esc(r.description) + "</p>")
+    .map((r) => "<h2>" + esc(r.heading ?? r.label) + "</h2><p>" + esc(r.description) + "</p>")
     .join("");
-  const boot = `const config=${safeJSON(config)};try{DazzlerHotspots.mount(document.querySelector('#illustration'),config);}catch(error){const root=document.querySelector('#illustration');root.replaceChildren();for(const r of config.regions){const h=document.createElement('h2'),p=document.createElement('p');h.textContent=r.label;p.textContent=r.description;root.append(h,p);}const p=document.createElement('p');p.textContent='Interactive preview unavailable; all region descriptions are shown.';root.append(p);}`;
+  const boot = `const config=${safeJSON(config)};try{DazzlerHotspots.mount(document.querySelector('#illustration'),config);}catch(error){const root=document.querySelector('#illustration');root.replaceChildren();for(const r of config.regions){const h=document.createElement('h2'),p=document.createElement('p');h.textContent=r.heading??r.label;p.textContent=r.description;root.append(h,p);}const p=document.createElement('p');p.textContent='Interactive preview unavailable; all region descriptions are shown.';root.append(p);}`;
   const policy =
     "default-src 'none'; script-src 'self' 'sha256-" +
     createHash("sha256").update(boot).digest("base64") +
     "'; style-src 'self' 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; connect-src 'none'";
   await write(
     "index.html",
-    `<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="${esc(policy)}"><meta name="viewport" content="width=device-width"><title>${esc(config.title)}</title><link rel="stylesheet" href="hotspots.css"><style>body{margin:0;background:#f4f5f8}</style><main id="illustration"></main><noscript><h1>${esc(config.title)}</h1>${fallback}</noscript><script src="runtime.js"></script><script>${boot}</script></html>`,
+    `<!doctype html><html lang="${esc(config.lang)}"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="${esc(policy)}"><meta name="viewport" content="width=device-width"><title>${esc(config.title)}</title><link rel="stylesheet" href="hotspots.css"><style>body{margin:0;background:#f4f5f8}</style><main id="illustration"></main><noscript><h1>${esc(config.title)}</h1>${fallback}</noscript><script src="runtime.js"></script><script>${boot}</script></html>`,
   );
   const report = {
     status: "exported",

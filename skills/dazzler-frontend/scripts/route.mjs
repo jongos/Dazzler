@@ -1,6 +1,7 @@
 // Dazzler deterministic routing hints. Apache-2.0. No network or install step.
 import { pathToFileURL } from "node:url";
 import path from "node:path";
+import { resolvePolicy } from "./design-policy.mjs";
 import { recommend } from "./layouts.mjs";
 import { resolveRefinement } from "./refinement.mjs";
 import { readJSON } from "./runtime.mjs";
@@ -11,6 +12,7 @@ export function route(input = {}) {
   if (!["none", "react", "vue", "other"].includes(framework)) throw Error("Unsupported framework");
   const result = {
     kind,
+    policy: resolvePolicy(input),
     framework,
     format,
     helper: null,

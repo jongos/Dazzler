@@ -5,6 +5,10 @@
   --bright: #bce5d8;
   --paper: #f4faf6;
   --display: "Work Sans";
+  --measure-body: 60ch;
+  --grid-columns: 4;
+  --grid-gutter: 1rem;
+  --grid-margin: 1.5rem;
   --body-background: #f7f8fa;
   --body-color: #20252c;
   --button-button-color: white;

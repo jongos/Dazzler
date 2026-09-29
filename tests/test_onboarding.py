@@ -86,16 +86,25 @@ class OnboardingTests(unittest.TestCase):
             installer.operate(
                 "install", **args, archive=archive, checksums=sums, version="1.0.0"
             )
+            with self.assertRaisesRegex(ValueError, "No previous version"):
+                installer.operate("rollback", **args)
             edited = target / "personal.txt"
             edited.write_text("Keep this")
             with self.assertRaisesRegex(ValueError, "Local changes"):
                 installer.operate("uninstall", **args)
             edited.unlink()
+            ignore = root / ".dazzler-backups/.gitignore"
+            ignore.parent.mkdir(exist_ok=True)
+            ignore.write_text("# Existing rule\ncache/\n")
             archive, sums = self.fixture(root, "1.1.0")
             installer.operate(
                 "install", **args, archive=archive, checksums=sums, version="1.1.0"
             )
             self.assertEqual((target / "SKILL.md").read_text(), "Test 1.1.0")
+            self.assertEqual(
+                (root / ".dazzler-backups/.gitignore").read_text(),
+                "# Existing rule\ncache/\n*\n",
+            )
             installer.operate("rollback", **args)
             self.assertEqual((target / "SKILL.md").read_text(), "Test 1.0.0")
             installer.operate("uninstall", **args)
@@ -128,7 +137,7 @@ class OnboardingTests(unittest.TestCase):
             target = root / ".agents/skills/dazzler-frontend"
             target.mkdir(parents=True)
             (target / "mine.txt").write_text("mine")
-            with self.assertRaises(OSError):
+            with self.assertRaisesRegex(ValueError, "unmanaged"):
                 installer.operate("uninstall", root, "codex", "project")
             self.assertTrue((target / "mine.txt").exists())
 

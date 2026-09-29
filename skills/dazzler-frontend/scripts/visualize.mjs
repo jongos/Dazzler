@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // Dazzler visualization adapters. Original integration: Apache-2.0.
+import { heading, headingOptions } from "./headings.mjs";
 import { readFile, writeFile, mkdir, copyFile, cp } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
@@ -72,7 +73,8 @@ export function normalize(input) {
   const n = {
     schemaVersion: 1,
     type,
-    title: text(input.title, "Chart"),
+    title: heading(text(input.title, "Chart"), headingOptions(input)),
+    lang: input.lang ?? "en",
     description: text(input.description, "Values supplied by the project."),
     source: text(input.source, "Source not provided"),
     unit: text(input.unit, ""),
@@ -543,7 +545,7 @@ export async function render(input, out) {
       "}";
   await write(
     "index.html",
-    `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>${esc(n.title)}</title><style>${style}*{box-sizing:border-box}body{font:16px/1.55 Arial,sans-serif;color:#20252c;background:#f5f6f8;margin:0}main{max-width:1100px;margin:30px auto;padding:30px;background:white}h1{font-size:30px}#chart{overflow:auto}#chart>svg{max-width:none;height:auto}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:10px;border-bottom:1px solid #ccd2da;text-align:left}.table-wrap{overflow:auto}a{color:#344d86}footer{font-size:12px}button{font:inherit;padding:8px 14px}details{margin:25px 0}:focus-visible{outline:3px solid #344d86;outline-offset:3px}@media(max-width:600px){main{margin:0;padding:20px}}@media print{button{display:none}main{margin:0}}</style><main><h1>${esc(n.title)}</h1><p>${esc(n.description)}</p><p>${esc(n.source)}${n.unit ? " · " + esc(n.unit) : ""}</p><div id="chart" tabindex="0" aria-label="Chart; scroll horizontally if needed">${svg}</div><p id="notice" role="status">${n.type === "scatter" ? "Drag to pan; scroll to zoom. The source table preserves exact values." : ""}</p><p><a href="chart.svg" download>Download SVG</a> · <a href="data.csv" download>Download data</a> <button onclick="print()">Print / PDF</button></p><details open><summary>View underlying data</summary>${table}</details><footer>${esc(n.warnings.join(" "))} Renderer: ${n.engine}. Fonts are references; verify the final artifact.</footer></main>${scripts}</html>`,
+    `<!doctype html><html lang="${esc(n.lang)}"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>${esc(n.title)}</title><style>${style}*{box-sizing:border-box}body{font:16px/1.55 Arial,sans-serif;color:#20252c;background:#f5f6f8;margin:0}main{max-width:1100px;margin:30px auto;padding:30px;background:white}h1{font-size:30px}#chart{overflow:auto}#chart>svg{max-width:none;height:auto}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:10px;border-bottom:1px solid #ccd2da;text-align:left}.table-wrap{overflow:auto}a{color:#344d86}footer{font-size:12px}button{font:inherit;padding:8px 14px}details{margin:25px 0}:focus-visible{outline:3px solid #344d86;outline-offset:3px}@media(max-width:600px){main{margin:0;padding:20px}}@media print{button{display:none}main{margin:0}}</style><main><h1>${esc(n.title)}</h1><p>${esc(n.description)}</p><p>${esc(n.source)}${n.unit ? " · " + esc(n.unit) : ""}</p><div id="chart" tabindex="0" aria-label="Chart; scroll horizontally if needed">${svg}</div><p id="notice" role="status">${n.type === "scatter" ? "Drag to pan; scroll to zoom. The source table preserves exact values." : ""}</p><p><a href="chart.svg" download>Download SVG</a> · <a href="data.csv" download>Download data</a> <button onclick="print()">Print / PDF</button></p><details open><summary>View underlying data</summary>${table}</details><footer>${esc(n.warnings.join(" "))} Renderer: ${n.engine}. Fonts are references; verify the final artifact.</footer></main>${scripts}</html>`,
   );
   if (n.engine === "microcharts") {
     await write(

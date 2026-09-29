@@ -53,7 +53,9 @@ def shortlist(
     results = []
     chars = {ord(c) for c in unicodedata.normalize("NFC", text) if c not in "\n\r\t"}
     for font in fonts:
-        if font["status"] != "bundled" or (family and font["id"] != family):
+        if font["status"] not in ("bundled", "project-local") or (
+            family and font["id"] != family
+        ):
             continue
         if role not in font["roles"]:
             continue
@@ -88,7 +90,9 @@ def shortlist(
                 "matched_moods": matches,
                 "description": font["description"],
                 "roles": font["roles"],
-                "reference": "references/fonts/" + font["id"] + ".md",
+                "reference": font.get(
+                    "reference", "references/fonts/" + font["id"] + ".md"
+                ),
                 "cautions": font["cautions"],
                 "license": font["license"],
                 "file": face["filename"],
@@ -196,6 +200,11 @@ def main():
     rec.add_argument("--max-bytes", type=int)
     rec.add_argument("--family")
     rec.add_argument("--limit", type=int, default=3)
+    rec.add_argument(
+        "--user-fonts",
+        type=Path,
+        help="Explicit project-local user-fonts.json; never discovered automatically",
+    )
     exp = sub.add_parser("export")
     exp.add_argument("family")
     exp.add_argument("--dest", required=True, type=Path)
@@ -205,15 +214,28 @@ def main():
         default=[],
         help="Repeat to copy only required styles",
     )
+    imp = sub.add_parser("import-local")
+    imp.add_argument("--src", required=True, type=Path)
+    imp.add_argument("--dest", required=True, type=Path)
+    imp.add_argument("--license", required=True)
+    imp.add_argument("--license-file", type=Path)
     args = parser.parse_args()
     fonts = load()["fonts"]
     try:
-        if args.command == "list":
+        if args.command == "import-local":
+            from local_fonts import import_local
+
+            result = import_local(args.src, args.dest, args.license, args.license_file)
+        elif args.command == "list":
             result = [
                 {k: f[k] for k in ("id", "name", "status", "roles", "moods", "license")}
                 for f in fonts
             ]
         elif args.command == "recommend":
+            if args.user_fonts:
+                from local_fonts import project_catalog
+
+                fonts += project_catalog(args.user_fonts)
             if not 1 <= args.weight <= 1000 or args.limit < 1:
                 raise ValueError("Use a weight from 1 to 1000 and a positive limit")
             text = (

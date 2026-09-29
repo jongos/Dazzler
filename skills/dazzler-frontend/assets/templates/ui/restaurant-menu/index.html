@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Olive &amp; Grain — Good food. Your kind of lunch.</title>
+    <title>Olive &amp; Grain — Good Food. Your Kind of Lunch.</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-menu restaurant">
@@ -19,7 +19,7 @@
     <main id="main">
       <header class="menu-heading">
         <p class="eyebrow">OLIVE & GRAIN • LUNCH</p>
-        <h1>Good food.<br />Your kind of lunch.</h1>
+        <h1>Good Food.<br />Your Kind of Lunch.</h1>
         <p>Served 11:30–16:00 • Dine in or take away</p>
       </header>
       <div class="menu-tools">
@@ -35,7 +35,7 @@
       <div class="menu-grid" id="products"></div>
       <p id="menu-empty" hidden>No dishes match. Try another category or clear the filters.</p>
       <aside class="allergen" id="dietary">
-        <h2>A note on dietary needs</h2>
+        <h2>A Note on Dietary Needs</h2>
         <p>
           V marks a vegan recipe in this sample menu. It is not an allergen or cross-contact
           guarantee. Speak with the restaurant team before ordering. Prices are illustrative USD;
@@ -44,7 +44,7 @@
       </aside>
       <section class="market-note">
         <p class="eyebrow">A MENU THAT MAKES ROOM</p>
-        <h2>Find a new favorite.</h2>
+        <h2>Find a New Favorite.</h2>
         <p>
           Filter by course, search an ingredient or explore vegan recipes. Labels describe the
           example recipe; speak with the team about allergies and cross-contact.
@@ -70,7 +70,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -85,7 +85,7 @@
         "category": "restaurant",
         "layout": "menu",
         "brand": "Olive & Grain",
-        "title": "Good food. Your kind of lunch.",
+        "title": "Good Food. Your Kind of Lunch.",
         "intro": "Bowls, small plates, something sweet. Served 11:30–16:00.",
         "accent": "#3A6325",
         "tint": "#EDEFF7",
@@ -213,30 +213,54 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id);
-  var money = (n) => new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 2
-  }).format(n);
-  var dialog = $("edit-dialog");
-  var category = "All";
-  function menuRender() {
-    let search = $("menu-search").value.toLowerCase(), vegan = $("vegan").checked, items = cfg.items.map((x, i) => ({ ...x, index: i })).filter(
-      (x) => (category === "All" || x.category === category) && (!vegan || x.vegan) && [x.name, x.description].join(" ").toLowerCase().includes(search)
-    );
-    $("products").innerHTML = items.map(
-      (x) => `<article class="menu-dish"><header><h3>${x.name}</h3><strong>${money(x.price)}</strong></header><p>${x.description}</p><span class="pill">${x.category}${x.vegan ? " \xB7 V" : ""}</span></article>`
-    ).join(""), $("menu-empty").hidden = items.length > 0;
-  }
-  document.addEventListener("click", (event) => {
-    let b = event.target.closest("button");
-    b && b.dataset.filter && (category = b.dataset.filter, document.querySelectorAll("[data-filter]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))), menuRender());
-  });
-  $("menu-filters").innerHTML = ["All", ...new Set(cfg.items.map((x) => x.category))].map((c) => `<button data-filter="${c}" aria-pressed="${c === "All"}">${c}</button>`).join(""), menuRender(), $("menu-search").addEventListener("input", menuRender), $("vegan").addEventListener("change", menuRender);
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id);
+        var money = (n) =>
+          new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            maximumFractionDigits: 2,
+          }).format(n);
+        var dialog = $("edit-dialog");
+        var category = "All";
+        function menuRender() {
+          let search = $("menu-search").value.toLowerCase(),
+            vegan = $("vegan").checked,
+            items = cfg.items
+              .map((x, i) => ({ ...x, index: i }))
+              .filter(
+                (x) =>
+                  (category === "All" || x.category === category) &&
+                  (!vegan || x.vegan) &&
+                  [x.name, x.description].join(" ").toLowerCase().includes(search),
+              );
+          (($("products").innerHTML = items
+            .map(
+              (x) =>
+                `<article class="menu-dish"><header><h3>${x.name}</h3><strong>${money(x.price)}</strong></header><p>${x.description}</p><span class="pill">${x.category}${x.vegan ? " \xB7 V" : ""}</span></article>`,
+            )
+            .join("")),
+            ($("menu-empty").hidden = items.length > 0));
+        }
+        document.addEventListener("click", (event) => {
+          let b = event.target.closest("button");
+          b &&
+            b.dataset.filter &&
+            ((category = b.dataset.filter),
+            document
+              .querySelectorAll("[data-filter]")
+              .forEach((x) => x.setAttribute("aria-pressed", String(x === b))),
+            menuRender());
+        });
+        (($("menu-filters").innerHTML = ["All", ...new Set(cfg.items.map((x) => x.category))]
+          .map((c) => `<button data-filter="${c}" aria-pressed="${c === "All"}">${c}</button>`)
+          .join("")),
+          menuRender(),
+          $("menu-search").addEventListener("input", menuRender),
+          $("vegan").addEventListener("change", menuRender));
+      })();
+    </script>
   </body>
 </html>

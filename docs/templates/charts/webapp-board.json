@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "type": "line",
-  "title": "Reference burn-down path",
+  "title": "Reference Burn-Down Path",
+  "lang": "en",
   "description": "Synthetic worked example. Exact values accompany the graphic.",
   "source": "Original Dazzler synthetic scenario",
   "unit": "remaining points",

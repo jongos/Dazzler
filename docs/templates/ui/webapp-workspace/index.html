@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Orbit — Projects overview</title>
+    <title>Orbit — Projects Overview</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-workspace app">
@@ -19,13 +19,13 @@
     <main id="main">
       <header class="page-title">
         <p class="eyebrow">Orbit / WORKSPACE</p>
-        <h1>Projects overview</h1>
+        <h1>Projects Overview</h1>
         <p>Monday, 21 June • Product &amp; delivery team</p>
       </header>
       <div class="split">
         <section>
           <div class="section-head">
-            <h2>Active projects</h2>
+            <h2>Active Projects</h2>
             <button data-dialog="project">New project</button>
           </div>
           <div class="filters">
@@ -36,19 +36,19 @@
           <p id="empty" hidden>No projects match this search.</p>
         </section>
         <aside class="rail">
-          <h2>Your next decisions</h2>
+          <h2>Your Next Decisions</h2>
           <article>
             <span class="pill warning">Due today</span>
-            <h3>Approve the invoice wording</h3>
+            <h3>Approve the Invoice Wording</h3>
             <p>Customer portal • Finance review</p>
             <a href="#projects">View project context</a>
           </article>
           <article>
             <span class="pill">By Wednesday</span>
-            <h3>Confirm pilot participants</h3>
+            <h3>Confirm Pilot Participants</h3>
             <p>20 customer accounts • Maya Chen</p>
           </article>
-          <h2>Recent activity</h2>
+          <h2>Recent Activity</h2>
           <ol class="activity">
             <li>
               <strong>Sam uploaded a review draft</strong><small>Welcome sequence • 09:10</small>
@@ -63,7 +63,7 @@
       <section class="showcase-panel">
         <div>
           <p class="eyebrow">THE BIGGER PICTURE</p>
-          <h2>Progress across the portfolio</h2>
+          <h2>Progress Across the Portfolio</h2>
           <p>
             Accepted work is visible, and the unfinished work has an owner. Percentages use each
             project’s own task count.
@@ -123,7 +123,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -138,7 +138,7 @@
         "category": "general-webapp",
         "layout": "workspace",
         "brand": "Orbit",
-        "title": "Projects overview",
+        "title": "Projects Overview",
         "intro": "Monday, 21 June • Product & delivery team",
         "accent": "#2149B7",
         "tint": "#EDEFF7",
@@ -255,61 +255,95 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id), esc = (v) => String(v).replace(
-    /[&<>"']/g,
-    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]
-  );
-  var say = (t) => {
-    $("status").textContent = t;
-  }, dialog = $("edit-dialog"), pending = "";
-  function openDialog(title, action, content = "", label = "Details") {
-    $("dialog-title").textContent = title, $("dialog-content").innerHTML = content, $("entry-label").textContent = label, $("entry").value = "", $("entry").required = !!label, $("entry").hidden = $("entry-label").hidden = !label, $("dialog-save").textContent = action === "reservation" ? "Keep request preview" : action === "cart" ? "Keep order preview" : "Save preview", pending = action, dialog.showModal();
-  }
-  $("cancel").addEventListener("click", () => dialog.close());
-  function projectRender() {
-    let search = ($("search")?.value || "").toLowerCase(), rows = cfg.projects.filter(
-      (x) => [x.name, x.client, x.owner].join(" ").toLowerCase().includes(search)
-    );
-    $("projects").innerHTML = rows.map(
-      (x) => `<article class="project-row"><div><p>${esc(x.client)}</p><h3>${esc(x.name)}</h3><span class="pill ${x.status === "At risk" ? "warning" : ""}">${esc(x.status)}</span></div><div><p>${x.done} of ${x.total} tasks complete</p><progress value="${x.done}" max="${x.total || 1}" aria-label="${esc(x.name)} task completion"></progress></div><div><p>${esc(x.owner)}</p><strong>Due ${esc(x.due)}</strong></div></article>`
-    ).join(""), $("empty").hidden = rows.length > 0;
-  }
-  document.addEventListener("click", (event) => {
-    let b = event.target.closest("button");
-    if (b && b.dataset.dialog) {
-      let mode = b.dataset.dialog;
-      openDialog(
-        {
-          project: "Create a project",
-          task: "Add a sprint task",
-          update: "Draft an update request",
-          revision: "Request a revision"
-        }[mode],
-        mode,
-        "<p>Saved in this local preview only.</p>",
-        mode === "project" ? "Project name" : mode === "task" ? "Task title" : "Your note"
-      );
-    }
-  });
-  $("edit-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    let value = $("entry").value.trim();
-    $("entry").required && !value || (pending === "project" && (cfg.projects.push({
-      name: value,
-      client: "New project",
-      owner: "Unassigned",
-      done: 0,
-      total: 0,
-      due: "Not set",
-      status: "Planning"
-    }), projectRender()), say(
-      pending === "reservation" ? "Reservation request preview kept. No table has been booked." : pending === "cart" ? "Order preview kept. Nothing was sent to the caf\xE9." : pending === "brief" ? "Review brief closed." : "Saved in this preview only. No message or account change was sent."
-    ), dialog.close());
-  });
-  projectRender(), $("search").addEventListener("input", projectRender);
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id),
+          esc = (v) =>
+            String(v).replace(
+              /[&<>"']/g,
+              (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
+            );
+        var say = (t) => {
+            $("status").textContent = t;
+          },
+          dialog = $("edit-dialog"),
+          pending = "";
+        function openDialog(title, action, content = "", label = "Details") {
+          (($("dialog-title").textContent = title),
+            ($("dialog-content").innerHTML = content),
+            ($("entry-label").textContent = label),
+            ($("entry").value = ""),
+            ($("entry").required = !!label),
+            ($("entry").hidden = $("entry-label").hidden = !label),
+            ($("dialog-save").textContent =
+              action === "reservation"
+                ? "Keep request preview"
+                : action === "cart"
+                  ? "Keep order preview"
+                  : "Save preview"),
+            (pending = action),
+            dialog.showModal());
+        }
+        $("cancel").addEventListener("click", () => dialog.close());
+        function projectRender() {
+          let search = ($("search")?.value || "").toLowerCase(),
+            rows = cfg.projects.filter((x) =>
+              [x.name, x.client, x.owner].join(" ").toLowerCase().includes(search),
+            );
+          (($("projects").innerHTML = rows
+            .map(
+              (x) =>
+                `<article class="project-row"><div><p>${esc(x.client)}</p><h3>${esc(x.name)}</h3><span class="pill ${x.status === "At risk" ? "warning" : ""}">${esc(x.status)}</span></div><div><p>${x.done} of ${x.total} tasks complete</p><progress value="${x.done}" max="${x.total || 1}" aria-label="${esc(x.name)} task completion"></progress></div><div><p>${esc(x.owner)}</p><strong>Due ${esc(x.due)}</strong></div></article>`,
+            )
+            .join("")),
+            ($("empty").hidden = rows.length > 0));
+        }
+        document.addEventListener("click", (event) => {
+          let b = event.target.closest("button");
+          if (b && b.dataset.dialog) {
+            let mode = b.dataset.dialog;
+            openDialog(
+              {
+                project: "Create a project",
+                task: "Add a sprint task",
+                update: "Draft an update request",
+                revision: "Request a revision",
+              }[mode],
+              mode,
+              "<p>Saved in this local preview only.</p>",
+              mode === "project" ? "Project name" : mode === "task" ? "Task title" : "Your note",
+            );
+          }
+        });
+        $("edit-form").addEventListener("submit", (event) => {
+          event.preventDefault();
+          let value = $("entry").value.trim();
+          ($("entry").required && !value) ||
+            (pending === "project" &&
+              (cfg.projects.push({
+                name: value,
+                client: "New project",
+                owner: "Unassigned",
+                done: 0,
+                total: 0,
+                due: "Not set",
+                status: "Planning",
+              }),
+              projectRender()),
+            say(
+              pending === "reservation"
+                ? "Reservation request preview kept. No table has been booked."
+                : pending === "cart"
+                  ? "Order preview kept. Nothing was sent to the caf\xE9."
+                  : pending === "brief"
+                    ? "Review brief closed."
+                    : "Saved in this preview only. No message or account change was sent.",
+            ),
+            dialog.close());
+        });
+        (projectRender(), $("search").addEventListener("input", projectRender));
+      })();
+    </script>
   </body>
 </html>

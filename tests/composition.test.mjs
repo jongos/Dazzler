@@ -106,7 +106,7 @@ test("Dial values are deterministic and monotone for numeric token effects, with
 test("Saved refinement resumes without cumulative drift; omitted controls preserve schema defaults", () => {
   const first = tokens({ refinement: { intent: "bolder", density: 7 } });
   assert.deepEqual(tokens(resumeConfig(first.system)), first);
-  assert.deepEqual(tokens({}), tokens({ schemaVersion: 2 }));
+  assert.deepEqual(tokens({}), tokens({ schemaVersion: 3 }));
   const plain = tokens({ schemaVersion: 1 });
   assert.equal(plain.system.schemaVersion, 1);
   assert(!plain.system.refinement);
@@ -156,8 +156,9 @@ test("Omitted controls preserve published 0.18 defaults and exact export strings
         // V8 versions vary below meaningful precision in color diagnostics.
         // Normalize numeric metadata only; every exported string stays exact.
         .update(
-          JSON.stringify(tokens(c.input), (_, v) =>
-            typeof v === "number" ? +v.toPrecision(12) : v,
+          JSON.stringify(
+            tokens({ ...c.input, schemaVersion: c.input.schemaVersion ?? 2 }),
+            (_, v) => (typeof v === "number" ? +v.toPrecision(12) : v),
           ),
         )
         .digest("hex"),

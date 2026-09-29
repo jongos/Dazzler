@@ -9,6 +9,11 @@ import shutil
 import subprocess
 import sys
 import tempfile
+
+sys.path.insert(
+    0, str(Path(__file__).resolve().parents[1] / "skills/dazzler-frontend/scripts")
+)
+from headings import heading, html_headings
 from template_documents import DOCS
 from template_interfaces import UIS, build_ui
 from template_editorial import render_docx, render_html
@@ -20,7 +25,7 @@ DOCS, UIS = enrich(DOCS, UIS)
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills/dazzler-frontend"
 OUT = SKILL / "assets/templates"
-VERSION = "0.15.0"
+VERSION = "0.21.0"
 
 
 def fonts():
@@ -98,6 +103,12 @@ def build():
         "templates": [],
     }
     for d in DOCS:
+        d["title"] = heading(d["title"])
+        for page in d["pages"]:
+            page["title"] = heading(page["title"])
+            for block in page.get("blocks", []):
+                if block.get("type") == "h":
+                    block["text"] = heading(block["text"])
         render_docx(d, OUT / "docx" / f"{d['id']}.docx")
         render_html(d, OUT / "html" / f"{d['id']}.html")
         for format in ["docx", "html"]:
@@ -123,6 +134,7 @@ def build():
                 )
             )
     for d in UIS:
+        d["title"] = heading(d["title"])
         build_ui(d, OUT / "ui" / d["id"])
         catalog["templates"].append(
             dict(
@@ -137,6 +149,17 @@ def build():
                 demo=True,
             )
         )
+    policy_css = "\n:root{--measure-body:60ch;--grid-columns:4;--grid-gutter:1rem;--grid-margin:1.5rem} :where(p,li,blockquote,figcaption,dd):not(:where(table *,nav *,pre *,code *)){max-inline-size:var(--measure-body)} [data-grid]{display:grid;grid-template-columns:repeat(var(--grid-columns),minmax(0,1fr));gap:var(--grid-gutter)} @media(min-width:48rem){:root{--grid-columns:8}} @media(min-width:75rem){:root{--grid-columns:12}}\n"
+    for path in [*(OUT / "html").glob("*.html"), *(OUT / "ui").glob("*/index.html")]:
+        text = html_headings(path.read_text(encoding="utf-8"))
+        if "</style>" in text:
+            text = text.replace("</style>", policy_css + "</style>", 1)
+        else:
+            css = path.parent / "styles.css"
+            css.write_text(
+                css.read_text(encoding="utf-8") + policy_css, encoding="utf-8"
+            )
+        path.write_text(text, encoding="utf-8")
     shutil.copy2(SKILL / "LICENSE.txt", OUT / "LICENSE.txt")
     (OUT / "NOTICE.txt").write_text(
         "Original Dazzler templates copyright 2026 Jon Gosier. Apache-2.0. All bundled fonts retain the notices in fonts/. Charts use the local Dazzler visualization workflow; the seating guide retains its accompanying runtime notices. All content is fictional sample material. DOCX fonts are referenced, not embedded.\n",

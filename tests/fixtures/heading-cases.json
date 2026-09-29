@@ -1,0 +1,75 @@
+[
+  {
+    "input": "a guide to good design",
+    "expected": "A Guide to Good Design"
+  },
+  {
+    "input": "set up your sign in flow",
+    "expected": "Set Up Your Sign In Flow"
+  },
+  {
+    "input": "iPhone and API design for NASA",
+    "expected": "iPhone and API Design for NASA"
+  },
+  {
+    "input": "work with `npm run build` and main.py",
+    "expected": "Work With `npm run build` And main.py"
+  },
+  {
+    "input": "read the https://example.com/docs URL",
+    "expected": "Read the https://example.com/docs URL"
+  },
+  {
+    "input": "save 24px and 1.5rem tokens",
+    "expected": "Save 24px and 1.5rem Tokens"
+  },
+  {
+    "input": "design: a way forward",
+    "expected": "Design: A Way Forward"
+  },
+  {
+    "input": "ALL CAPS STAYS",
+    "expected": "ALL CAPS STAYS"
+  },
+  {
+    "input": "a guide for everyone",
+    "options": {
+      "case": "sentence"
+    },
+    "expected": "a guide for everyone"
+  },
+  {
+    "input": "a guide for everyone",
+    "options": {
+      "case": "preserve"
+    },
+    "expected": "a guide for everyone"
+  },
+  {
+    "input": "le guide de design",
+    "options": {
+      "lang": "fr"
+    },
+    "expected": "le guide de design"
+  },
+  {
+    "input": "the eBay approach to design",
+    "options": {
+      "preserve": [
+        "eBay"
+      ]
+    },
+    "expected": "The eBay Approach to Design"
+  },
+  {
+    "input": "<em>in</em> harmony &amp; balance",
+    "expected": "<em>In</em> Harmony &amp; Balance"
+  },
+  {
+    "input": "iPhone and GitHub APIs",
+    "options": {
+      "case": "upper"
+    },
+    "expected": "iPhone AND GitHub APIS"
+  }
+]

@@ -5,6 +5,10 @@
   --bright: #f3c659;
   --paper: #eef5fb;
   --display: "Office Code Pro";
+  --measure-body: 60ch;
+  --grid-columns: 4;
+  --grid-gutter: 1rem;
+  --grid-margin: 1.5rem;
   --body-background: #f7f8fa;
   --body-color: #20252c;
   --button-button-color: white;

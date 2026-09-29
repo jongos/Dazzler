@@ -28,7 +28,7 @@ const { pathToFileURL } = require("node:url");
         );
         await page.locator('[data-region-button="garden"]').click();
         assert.equal(await page.locator("#illustration").getAttribute("data-selected"), "garden");
-        assert.equal(await page.locator(".hotspot-panel h2").textContent(), "Sculpture garden");
+        assert.equal(await page.locator(".hotspot-panel h2").textContent(), "Sculpture Garden");
         if (engine === "svg") {
           await page.locator('[data-dazzler-region="workshop"]').focus();
           await page.keyboard.press("Enter");

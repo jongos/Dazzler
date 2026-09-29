@@ -33,6 +33,12 @@ Use the pinned source command in the closing notes. Omit `--global` for project 
 
 The root marketplace manifest pins the full Claude plugin archive by release version and SHA-256. The build verifies that pin against the actual reproducible ZIP. In Claude Code, add the marketplace and install `dazzler@dazzler`, then invoke `/dazzler:dazzler-frontend`. Install either the plugin or standalone skill to avoid duplication. Local manifest/archive validation is not an actual Claude installation or cloud-upload acceptance test.
 
+## Migrate a Manual Install
+
+An installation without a Dazzler receipt is unmanaged. Move that directory to a safe location, retain any personal edits, then run a fresh managed install. Do not create or copy a receipt by hand. Keep the manual copy until the new installation has been checked.
+
+Rollback requires a previous managed update. With no backup, the installer says so directly. Project backups carry their own `.gitignore`; existing rules are preserved. Review backups already tracked by Git before separately untracking them. The installer does not alter the repository index.
+
 ## Notes and references
 
 - Pinned CLI: `npx skills@1.7.0 add https://github.com/jongos/Dazzler/tree/v0.20.0/skills/dazzler-frontend --skill dazzler-frontend --agent codex --copy`

@@ -131,13 +131,72 @@ async function collect(page) {
     const findings = [],
       texts = [],
       styles = [],
-      composition = [];
+      composition = [],
+      designReview = [];
+    const measureCanvas = document.createElement("canvas").getContext("2d");
+    const measureCache = new Map();
     let count = 0;
     for (const e of nodes) {
       if (!visible(e)) continue;
       const s = getComputedStyle(e),
         r = e.getBoundingClientRect(),
         selector = identify(e);
+      if (
+        e.matches("p,li,blockquote,figcaption,dd") &&
+        !e.closest("table,pre,code,nav") &&
+        e.textContent.trim().length > 80
+      ) {
+        if (!measureCache.has(s.font)) {
+          measureCanvas.font = s.font;
+          measureCache.set(s.font, measureCanvas.measureText("0").width);
+        }
+        const ch = measureCache.get(s.font);
+        const measureCh = ch
+          ? (r.width - parseFloat(s.paddingLeft) - parseFloat(s.paddingRight)) / ch
+          : 0;
+        if (measureCh > 60.5)
+          designReview.push({
+            check: "body-measure",
+            selector,
+            severity: "review",
+            estimatedCh: +measureCh.toFixed(1),
+            recommendedMaxCh: 60,
+            exception: "User width, grid/list structure, or short labels may justify retaining it",
+          });
+      }
+      if (/^H[1-6]$/.test(e.tagName)) {
+        const lang = e.closest("[lang]")?.getAttribute("lang") ?? document.documentElement.lang;
+        const value = e.textContent.trim();
+        if (/^en(?:-|$)/i.test(lang) && /^[a-z]/.test(value))
+          designReview.push({
+            check: "heading-case",
+            selector,
+            severity: "review",
+            reason:
+              "English heading begins lowercase; preserve brand, quotations and explicit style overrides",
+          });
+        if (s.textTransform === "capitalize")
+          designReview.push({
+            check: "heading-transform",
+            selector,
+            severity: "review",
+            reason: "CSS capitalize is not protected Title Case",
+          });
+      }
+      if (
+        e.matches("button,a[href],[role=button]") &&
+        (r.width < 24 || r.height < 24) &&
+        !e.closest("p,li,blockquote")
+      )
+        designReview.push({
+          check: "target-size",
+          selector,
+          severity: "review",
+          width: r.width,
+          height: r.height,
+          exception:
+            "Check spacing, equivalent controls, inline and essential exceptions before declaring a WCAG failure",
+        });
       if (r.right > innerWidth + 1 || r.left < -1)
         findings.push({
           check: "horizontal-overflow",
@@ -224,6 +283,7 @@ async function collect(page) {
           selector,
           font: s.fontFamily.slice(0, 256),
           size: s.fontSize,
+          textTransform: s.textTransform,
           color: s.color,
           background: s.backgroundColor,
           gap: s.gap,
@@ -241,6 +301,7 @@ async function collect(page) {
       findings: findings.slice(0, 5000),
       truncated: document.querySelectorAll("body *").length > 5000,
       texts,
+      designReview: designReview.slice(0, 1500),
       compositionMeasurements: composition,
       compositionLimitReached: composition.length === 1500,
       brand: {
@@ -289,6 +350,8 @@ async function inspect(page, engine, compositionContext = {}) {
     t.ratio = engine.getContrastRatio(a, b);
     t.minimum = t.fontSize >= 24 || (t.fontSize >= 18.66 && t.fontWeight >= 700) ? 3 : 4.5;
     t.status = t.ratio >= t.minimum ? "pass" : "fail";
+    t.aaa = { minimum: t.minimum === 3 ? 4.5 : 7, informational: true };
+    t.aaa.passes = t.ratio >= t.aaa.minimum;
     if (t.status === "fail")
       report.findings.push({
         check: "text-contrast",
@@ -346,6 +409,8 @@ async function audit(command, input, out, config = {}) {
         await page.evaluate(() => document.fonts.ready);
         const modified = await page.evaluate(
           ({ scenario, selectors }) => {
+            const measureCanvas = document.createElement("canvas").getContext("2d");
+            const measureCache = new Map();
             let count = 0;
             const change = (selector, fn) => {
               [...document.querySelectorAll(selector)].slice(0, 5000).forEach((e) => {

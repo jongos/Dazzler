@@ -28,7 +28,7 @@ function tokenize(css, context) {
     else rule.selectors = selectors;
   });
   tree.walkRules((rule) => {
-    if (rule.selector === ":root") {
+    if (rule.selector === ":root" && rule.parent.type === "root") {
       rule.walkDecls((d) => {
         if (d.prop.startsWith("--")) {
           values[d.prop] = d.value;

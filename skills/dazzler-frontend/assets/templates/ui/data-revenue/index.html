@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Metric — Revenue performance</title>
+    <title>Metric — Revenue Performance</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-revenue app">
@@ -19,7 +19,7 @@
     <main id="main">
       <header class="page-title">
         <p class="eyebrow">Metric / REVENUE</p>
-        <h1>Revenue performance</h1>
+        <h1>Revenue Performance</h1>
         <p>Full year 2027 • USD • Reconciled synthetic sales ledger</p>
       </header>
       <div class="section-head">
@@ -38,20 +38,20 @@
       <div id="revenue-metrics" class="metrics"></div>
       <section class="panel">
         <div class="section-head">
-          <h2>Monthly net revenue</h2>
+          <h2>Monthly Net Revenue</h2>
           <span class="pill">After refunds</span>
         </div>
         <div id="revenue-chart" class="revenue-chart" tabindex="0"></div>
         <p class="muted">Bars begin at zero. Exact values are shown below and in the export.</p>
       </section>
       <section class="panel" id="source-data">
-        <h2>Revenue reconciliation</h2>
+        <h2>Revenue Reconciliation</h2>
         <div class="table-wrap" tabindex="0" id="revenue-table"></div>
       </section>
       <section class="showcase-panel">
         <div>
           <p class="eyebrow">THE BIGGER PICTURE</p>
-          <h2>The year in net revenue</h2>
+          <h2>The Year in Net Revenue</h2>
           <p>
             A full-year view complements the period selector. Gross minus refunds reconciles to net
             for every month.
@@ -135,7 +135,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -150,7 +150,7 @@
         "category": "data-visualization",
         "layout": "revenue",
         "brand": "Metric",
-        "title": "Revenue performance",
+        "title": "Revenue Performance",
         "intro": "Full year 2027 • USD • Reconciled synthetic sales ledger",
         "accent": "#176A58",
         "tint": "#EDEFF7",
@@ -283,59 +283,94 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id);
-  var money = (n) => new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 2
-  }).format(n), say = (t) => {
-    $("status").textContent = t;
-  }, dialog = $("edit-dialog");
-  function selectedMonths() {
-    return cfg.months.filter(
-      (x, i) => $("period").value === "all" || Math.floor(i / 3) + 1 === Number($("period").value.slice(1))
-    );
-  }
-  function revenueRender() {
-    let rows = selectedMonths(), gross = rows.reduce((s, x) => s + x.gross, 0), refunds = rows.reduce((s, x) => s + x.refunds, 0), orders = rows.reduce((s, x) => s + x.orders, 0);
-    $("revenue-metrics").innerHTML = [
-      ["Net revenue", money(gross - refunds), "Gross less refunds"],
-      ["Refund rate", (refunds / gross * 100).toFixed(2) + "%", money(refunds) + " returned"],
-      ["Orders", orders.toLocaleString("en-US"), "Across the selected period"]
-    ].map(
-      ([a, b, c]) => `<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`
-    ).join("");
-    let max = Math.max(...cfg.months.map((x) => x.gross - x.refunds));
-    $("revenue-chart").innerHTML = rows.map(
-      (x) => `<div class="bar"><strong>${money((x.gross - x.refunds) / 1e3).replace(/0+$/, "").replace(
-        /\.$/,
-        ""
-      )}k</strong><div class="fill" style="height:${(x.gross - x.refunds) / max * 170}px" aria-hidden="true"></div><span>${x.month}</span></div>`
-    ).join(""), $("revenue-table").innerHTML = "<table><thead><tr><th>Month</th><th>Gross USD</th><th>Refunds USD</th><th>Net USD</th><th>Orders</th></tr></thead><tbody>" + rows.map(
-      (x) => `<tr><th scope="row">${x.month}</th><td>${money(x.gross)}</td><td>${money(x.refunds)}</td><td>${money(x.gross - x.refunds)}</td><td>${x.orders}</td></tr>`
-    ).join("") + `</tbody><tfoot><tr><th>Total</th><td>${money(gross)}</td><td>${money(refunds)}</td><td>${money(gross - refunds)}</td><td>${orders}</td></tr></tfoot></table>`;
-  }
-  document.addEventListener("click", (event) => {
-    let b = event.target.closest("button");
-    if (b && b.dataset.action === "download") {
-      let text = [
-        ["Month", "Gross USD", "Refunds USD", "Net USD", "Orders"],
-        ...selectedMonths().map((x) => [
-          x.month,
-          x.gross,
-          x.refunds,
-          x.gross - x.refunds,
-          x.orders
-        ])
-      ].map((row) => row.map((v) => '"' + String(v).replaceAll('"', '""') + '"').join(",")).join(`
-`), url = URL.createObjectURL(new Blob([text], { type: "text/csv" })), a = document.createElement("a");
-      a.href = url, a.download = cfg.id + "-sample.csv", a.click(), setTimeout(() => URL.revokeObjectURL(url), 1e3), say("The currently selected sample data was exported.");
-    }
-  });
-  revenueRender(), $("period").addEventListener("change", revenueRender);
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id);
+        var money = (n) =>
+            new Intl.NumberFormat("en-US", {
+              style: "currency",
+              currency: "USD",
+              maximumFractionDigits: 2,
+            }).format(n),
+          say = (t) => {
+            $("status").textContent = t;
+          },
+          dialog = $("edit-dialog");
+        function selectedMonths() {
+          return cfg.months.filter(
+            (x, i) =>
+              $("period").value === "all" ||
+              Math.floor(i / 3) + 1 === Number($("period").value.slice(1)),
+          );
+        }
+        function revenueRender() {
+          let rows = selectedMonths(),
+            gross = rows.reduce((s, x) => s + x.gross, 0),
+            refunds = rows.reduce((s, x) => s + x.refunds, 0),
+            orders = rows.reduce((s, x) => s + x.orders, 0);
+          $("revenue-metrics").innerHTML = [
+            ["Net revenue", money(gross - refunds), "Gross less refunds"],
+            [
+              "Refund rate",
+              ((refunds / gross) * 100).toFixed(2) + "%",
+              money(refunds) + " returned",
+            ],
+            ["Orders", orders.toLocaleString("en-US"), "Across the selected period"],
+          ]
+            .map(
+              ([a, b, c]) =>
+                `<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`,
+            )
+            .join("");
+          let max = Math.max(...cfg.months.map((x) => x.gross - x.refunds));
+          (($("revenue-chart").innerHTML = rows
+            .map(
+              (x) =>
+                `<div class="bar"><strong>${money((x.gross - x.refunds) / 1e3)
+                  .replace(/0+$/, "")
+                  .replace(
+                    /\.$/,
+                    "",
+                  )}k</strong><div class="fill" style="height:${((x.gross - x.refunds) / max) * 170}px" aria-hidden="true"></div><span>${x.month}</span></div>`,
+            )
+            .join("")),
+            ($("revenue-table").innerHTML =
+              "<table><thead><tr><th>Month</th><th>Gross USD</th><th>Refunds USD</th><th>Net USD</th><th>Orders</th></tr></thead><tbody>" +
+              rows
+                .map(
+                  (x) =>
+                    `<tr><th scope="row">${x.month}</th><td>${money(x.gross)}</td><td>${money(x.refunds)}</td><td>${money(x.gross - x.refunds)}</td><td>${x.orders}</td></tr>`,
+                )
+                .join("") +
+              `</tbody><tfoot><tr><th>Total</th><td>${money(gross)}</td><td>${money(refunds)}</td><td>${money(gross - refunds)}</td><td>${orders}</td></tr></tfoot></table>`));
+        }
+        document.addEventListener("click", (event) => {
+          let b = event.target.closest("button");
+          if (b && b.dataset.action === "download") {
+            let text = [
+                ["Month", "Gross USD", "Refunds USD", "Net USD", "Orders"],
+                ...selectedMonths().map((x) => [
+                  x.month,
+                  x.gross,
+                  x.refunds,
+                  x.gross - x.refunds,
+                  x.orders,
+                ]),
+              ].map((row) => row.map((v) => '"' + String(v).replaceAll('"', '""') + '"').join(","))
+                .join(`
+`),
+              url = URL.createObjectURL(new Blob([text], { type: "text/csv" })),
+              a = document.createElement("a");
+            ((a.href = url),
+              (a.download = cfg.id + "-sample.csv"),
+              a.click(),
+              setTimeout(() => URL.revokeObjectURL(url), 1e3),
+              say("The currently selected sample data was exported."));
+          }
+        });
+        (revenueRender(), $("period").addEventListener("change", revenueRender));
+      })();
+    </script>
   </body>
 </html>

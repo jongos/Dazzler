@@ -56,6 +56,23 @@ def validate(folder):
             entry = next(n for n in names if n.endswith("/SKILL.md"))
             prefix = entry.removesuffix("SKILL.md")
             text = z.read(entry).decode()
+            if "claude" in archive.name:
+                invocation = (
+                    "/dazzler:dazzler-frontend "
+                    if "plugin" in archive.name
+                    else "/dazzler-frontend "
+                )
+                wrong = (
+                    "/dazzler-frontend " if "plugin" in archive.name else "/dazzler:"
+                )
+                for starter in [
+                    entry,
+                    *[n for n in names if n.startswith(prefix + "references/starters")],
+                ]:
+                    prompt_text = z.read(starter).decode()
+                    assert wrong not in prompt_text, (archive.name, starter)
+                    if starter.endswith("starters.json") or starter == entry:
+                        assert invocation in prompt_text, (archive.name, starter)
             assert len(z.read(entry)) <= 8000, (archive.name, "entrypoint budget")
             for reference in names:
                 if reference.startswith(prefix + "references/") and reference.endswith(

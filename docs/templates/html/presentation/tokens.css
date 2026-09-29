@@ -5,6 +5,10 @@
   --paper: #181b36;
   --ink: #f8f8f0;
   --display: "Archivo";
+  --measure-body: 60ch;
+  --grid-columns: 4;
+  --grid-gutter: 1rem;
+  --grid-margin: 1.5rem;
   --body-background: #dddde4;
   --button-background: #172033;
   --button-color: white;

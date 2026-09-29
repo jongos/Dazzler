@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "type": "line",
-  "title": "A quieter notification rhythm",
+  "title": "A Quieter Notification Rhythm",
+  "lang": "en",
   "description": "Synthetic worked example. Exact values accompany the graphic.",
   "source": "Original Dazzler synthetic scenario",
   "unit": "sample notifications",

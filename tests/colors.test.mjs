@@ -78,7 +78,7 @@ test("normal brand generation validates both themes and preserves seeds", () => 
   for (const mode of Object.values(result.modes)) {
     assert.equal(mode.tokens.brand, "#345678");
     assert.ok(mode.checks.every((c) => c.passes && c.ratio >= c.minimum));
-    assert.equal(mode.checks.length, 22);
+    assert.equal(mode.checks.length, 23);
   }
   const oklch = converter("oklch");
   assert.ok(

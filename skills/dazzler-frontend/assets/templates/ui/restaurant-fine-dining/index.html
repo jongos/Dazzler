@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Juniper — The season, at the table.</title>
+    <title>Juniper — The Season, at the Table.</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-dining restaurant">
@@ -18,7 +18,7 @@
       <section class="dining-hero">
         <div>
           <p class="eyebrow">DINNER AT JUNIPER</p>
-          <h1>The season,<br />at the table.</h1>
+          <h1>The Season,<br />at the Table.</h1>
           <p class="intro">
             A small dining room, a changing menu, and an evening with room to linger.
           </p>
@@ -96,7 +96,7 @@
       <section class="tasting" id="menu">
         <div>
           <p class="eyebrow">THE SUMMER MENU</p>
-          <h2>Four courses.<br />One unhurried evening.</h2>
+          <h2>Four Courses.<br />One Unhurried Evening.</h2>
           <p>$85 per person • Illustrative menu</p>
           <p>
             A vegetable-led journey with a fish course. Speak with the team about dietary needs
@@ -135,7 +135,7 @@
         </ol>
       </section>
       <section class="visit" id="visit">
-        <h2>Come as you are.</h2>
+        <h2>Come as You Are.</h2>
         <div>
           <p>42 Orchard Lane, Sampletown<br />Fictional venue for this template</p>
           <p>For a table, contact hello@example.com.<br />Allow around two hours for the menu.</p>
@@ -147,7 +147,7 @@
       </section>
       <section class="producer-story">
         <p class="eyebrow">A FICTIONAL SEASONAL JOURNAL</p>
-        <h2>Good ingredients.<br /><em>Thoughtfully put together.</em></h2>
+        <h2>Good Ingredients.<br /><em>Thoughtfully Put Together.</em></h2>
         <div class="producer-grid">
           <article>
             <strong>Pears and soft herbs</strong>
@@ -186,7 +186,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -201,7 +201,7 @@
         "category": "restaurant",
         "layout": "dining",
         "brand": "Juniper",
-        "title": "The season, at the table.",
+        "title": "The Season, at the Table.",
         "intro": "A small dining room, a changing menu, and an evening with room to linger.",
         "accent": "#82283D",
         "tint": "#EDEFF7",
@@ -251,14 +251,15 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id);
-  var dialog = $("edit-dialog");
-  document.addEventListener("click", (event) => {
-    event.target.closest("button");
-  });
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id);
+        var dialog = $("edit-dialog");
+        document.addEventListener("click", (event) => {
+          event.target.closest("button");
+        });
+      })();
+    </script>
   </body>
 </html>

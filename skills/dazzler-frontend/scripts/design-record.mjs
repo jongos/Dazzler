@@ -122,7 +122,13 @@ export function exportDesign(system) {
       spacing: Object.fromEntries(Object.entries(system.spacing).map(([k, v]) => [k, `${v}rem`])),
       rounded: Object.fromEntries(Object.entries(system.radius).map(([k, v]) => [k, `${v}rem`])),
     },
-    body: "## Overview\n\nContinue this design using the adjacent design-system.json canonical record. Preserve established values unless the task authorizes a change.\n\n## Colors\n\nLight and dark semantic roles are measured against their paired backgrounds. Original explicit locks remain in the canonical record.\n\n## Typography\n\nStatic print sizes are exchanged here. Full fluid endpoints, selected-face capabilities and rationale remain in design-system.json. Font names do not prove installation or licensing; retain exported font notices.\n\n## Layout\n\nSpacing uses rem dimensions. Preserve established component structure.\n\n## Shapes\n\nRadius uses rem dimensions.\n",
+    body:
+      "## Overview\n\nContinue this design using the adjacent design-system.json canonical record. Preserve established values unless the task authorizes a change.\n\n## Colors\n\nLight and dark semantic roles are measured against their paired backgrounds. Original explicit locks remain in the canonical record.\n\n## Typography\n\nStatic print sizes are exchanged here. Full fluid endpoints, selected-face capabilities and rationale remain in design-system.json. Font names do not prove installation or licensing; retain exported font notices.\n\n## Layout\n\nSpacing uses rem dimensions. Preserve established component structure.\n\n## Shapes\n\nRadius uses rem dimensions.\n" +
+      (system.policy
+        ? "\n## Project Policy\n\nThese Dazzler-specific choices are preserved in design-system.json, not standardized interchange tokens.\n\n```json\n" +
+          JSON.stringify(system.policy, null, 2) +
+          "\n```\n"
+        : ""),
   });
 }
 export function importDesign(text, accepted = false) {
@@ -223,8 +229,8 @@ export function importDesign(text, accepted = false) {
 }
 
 export function resumeConfig(system) {
-  if (![1, 2].includes(system.schemaVersion)) throw Error("Unsupported design-system schema");
-  if (system.schemaVersion === 2 && system.configuration)
+  if (![1, 2, 3].includes(system.schemaVersion)) throw Error("Unsupported design-system schema");
+  if (system.schemaVersion >= 2 && system.configuration)
     return structuredClone(system.configuration);
   if (!system.fonts || !system.palette?.modes || !system.type?.step0)
     throw Error("Incomplete legacy design system");

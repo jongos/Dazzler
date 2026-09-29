@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Relay — Onboarding sprint</title>
+    <title>Relay — Onboarding Sprint</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-board app">
@@ -19,7 +19,7 @@
     <main id="main">
       <header class="page-title">
         <p class="eyebrow">Relay / BOARD</p>
-        <h1>Onboarding sprint</h1>
+        <h1>Onboarding Sprint</h1>
         <p>Sprint 08 • 21 June – 2 July • Goal: make first setup clearer</p>
       </header>
       <div class="section-head">
@@ -37,7 +37,7 @@
       <p id="board-summary" class="muted"></p>
       <div class="board" id="board"></div>
       <section class="note" id="sprint-notes">
-        <h2>Sprint notes</h2>
+        <h2>Sprint Notes</h2>
         <p>
           Keep tasks small enough to review in a day. High-priority cards cover access and keyboard
           usability. Move completed work through review before marking it done.
@@ -46,7 +46,7 @@
       <section class="showcase-panel">
         <div>
           <p class="eyebrow">THE BIGGER PICTURE</p>
-          <h2>Reference burn-down path</h2>
+          <h2>Reference Burn-Down Path</h2>
           <p>
             A reference path for the sprint, not a claim of achieved work. Use the live board above
             to move the current tasks.
@@ -122,7 +122,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -137,7 +137,7 @@
         "category": "general-webapp",
         "layout": "board",
         "brand": "Relay",
-        "title": "Onboarding sprint",
+        "title": "Onboarding Sprint",
         "intro": "Sprint 08 • 21 June – 2 July • Goal: make first setup clearer",
         "accent": "#563BB0",
         "tint": "#EDEFF7",
@@ -279,66 +279,108 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id), esc = (v) => String(v).replace(
-    /[&<>"']/g,
-    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]
-  );
-  var say = (t) => {
-    $("status").textContent = t;
-  }, dialog = $("edit-dialog"), pending = "";
-  function openDialog(title, action, content = "", label = "Details") {
-    $("dialog-title").textContent = title, $("dialog-content").innerHTML = content, $("entry-label").textContent = label, $("entry").value = "", $("entry").required = !!label, $("entry").hidden = $("entry-label").hidden = !label, $("dialog-save").textContent = action === "reservation" ? "Keep request preview" : action === "cart" ? "Keep order preview" : "Save preview", pending = action, dialog.showModal();
-  }
-  $("cancel").addEventListener("click", () => dialog.close());
-  function boardRender() {
-    let owner = $("owner-filter").value, tasks = cfg.tasks.filter((x) => owner === "Everyone" || x.owner === owner);
-    $("board-summary").textContent = `${tasks.length} visible tasks \xB7 ${cfg.tasks.filter((t) => t.stage === "Done").length} completed overall \xB7 ${cfg.tasks.reduce((n, t) => n + t.points, 0)} planned points`, $("board").innerHTML = ["Ready", "In progress", "Review", "Done"].map(
-      (stage) => `<section class="board-column"><h2>${stage}<span>${tasks.filter((t) => t.stage === stage).length}</span></h2>${tasks.filter((t) => t.stage === stage).map(
-        (t) => `<article class="task"><span class="task-id">${esc(t.id)}</span><h3>${esc(t.title)}</h3><p class="pill ${t.priority === "High" ? "warning" : ""}">${esc(t.priority)} priority</p><div class="task-meta"><span>${esc(t.owner)}</span><span>${t.points} points</span></div><button class="secondary" data-move="${esc(t.id)}">${stage === "Done" ? "Reopen in Ready" : "Move to " + ["In progress", "Review", "Done"][["Ready", "In progress", "Review"].indexOf(stage)]}</button></article>`
-      ).join("")}</section>`
-    ).join("");
-  }
-  document.addEventListener("click", (event) => {
-    let b = event.target.closest("button");
-    if (b) {
-      if (b.dataset.dialog) {
-        let mode = b.dataset.dialog;
-        openDialog(
-          {
-            project: "Create a project",
-            task: "Add a sprint task",
-            update: "Draft an update request",
-            revision: "Request a revision"
-          }[mode],
-          mode,
-          "<p>Saved in this local preview only.</p>",
-          mode === "project" ? "Project name" : mode === "task" ? "Task title" : "Your note"
-        );
-      }
-      if (b.dataset.move) {
-        let t = cfg.tasks.find((x) => x.id === b.dataset.move), stages = ["Ready", "In progress", "Review", "Done"];
-        t.stage = stages[(stages.indexOf(t.stage) + 1) % 4], boardRender(), say(`${t.id} moved to ${t.stage}.`);
-      }
-    }
-  });
-  $("edit-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    let value = $("entry").value.trim();
-    $("entry").required && !value || (pending === "task" && (cfg.tasks.push({
-      id: "ONB-" + (41 + cfg.tasks.length),
-      title: value,
-      owner: "Maya",
-      stage: "Ready",
-      points: 1,
-      priority: "Normal"
-    }), boardRender()), say(
-      pending === "reservation" ? "Reservation request preview kept. No table has been booked." : pending === "cart" ? "Order preview kept. Nothing was sent to the caf\xE9." : pending === "brief" ? "Review brief closed." : "Saved in this preview only. No message or account change was sent."
-    ), dialog.close());
-  });
-  boardRender(), $("owner-filter").addEventListener("change", boardRender);
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id),
+          esc = (v) =>
+            String(v).replace(
+              /[&<>"']/g,
+              (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
+            );
+        var say = (t) => {
+            $("status").textContent = t;
+          },
+          dialog = $("edit-dialog"),
+          pending = "";
+        function openDialog(title, action, content = "", label = "Details") {
+          (($("dialog-title").textContent = title),
+            ($("dialog-content").innerHTML = content),
+            ($("entry-label").textContent = label),
+            ($("entry").value = ""),
+            ($("entry").required = !!label),
+            ($("entry").hidden = $("entry-label").hidden = !label),
+            ($("dialog-save").textContent =
+              action === "reservation"
+                ? "Keep request preview"
+                : action === "cart"
+                  ? "Keep order preview"
+                  : "Save preview"),
+            (pending = action),
+            dialog.showModal());
+        }
+        $("cancel").addEventListener("click", () => dialog.close());
+        function boardRender() {
+          let owner = $("owner-filter").value,
+            tasks = cfg.tasks.filter((x) => owner === "Everyone" || x.owner === owner);
+          (($("board-summary").textContent =
+            `${tasks.length} visible tasks \xB7 ${cfg.tasks.filter((t) => t.stage === "Done").length} completed overall \xB7 ${cfg.tasks.reduce((n, t) => n + t.points, 0)} planned points`),
+            ($("board").innerHTML = ["Ready", "In progress", "Review", "Done"]
+              .map(
+                (stage) =>
+                  `<section class="board-column"><h2>${stage}<span>${tasks.filter((t) => t.stage === stage).length}</span></h2>${tasks
+                    .filter((t) => t.stage === stage)
+                    .map(
+                      (t) =>
+                        `<article class="task"><span class="task-id">${esc(t.id)}</span><h3>${esc(t.title)}</h3><p class="pill ${t.priority === "High" ? "warning" : ""}">${esc(t.priority)} priority</p><div class="task-meta"><span>${esc(t.owner)}</span><span>${t.points} points</span></div><button class="secondary" data-move="${esc(t.id)}">${stage === "Done" ? "Reopen in Ready" : "Move to " + ["In progress", "Review", "Done"][["Ready", "In progress", "Review"].indexOf(stage)]}</button></article>`,
+                    )
+                    .join("")}</section>`,
+              )
+              .join("")));
+        }
+        document.addEventListener("click", (event) => {
+          let b = event.target.closest("button");
+          if (b) {
+            if (b.dataset.dialog) {
+              let mode = b.dataset.dialog;
+              openDialog(
+                {
+                  project: "Create a project",
+                  task: "Add a sprint task",
+                  update: "Draft an update request",
+                  revision: "Request a revision",
+                }[mode],
+                mode,
+                "<p>Saved in this local preview only.</p>",
+                mode === "project" ? "Project name" : mode === "task" ? "Task title" : "Your note",
+              );
+            }
+            if (b.dataset.move) {
+              let t = cfg.tasks.find((x) => x.id === b.dataset.move),
+                stages = ["Ready", "In progress", "Review", "Done"];
+              ((t.stage = stages[(stages.indexOf(t.stage) + 1) % 4]),
+                boardRender(),
+                say(`${t.id} moved to ${t.stage}.`));
+            }
+          }
+        });
+        $("edit-form").addEventListener("submit", (event) => {
+          event.preventDefault();
+          let value = $("entry").value.trim();
+          ($("entry").required && !value) ||
+            (pending === "task" &&
+              (cfg.tasks.push({
+                id: "ONB-" + (41 + cfg.tasks.length),
+                title: value,
+                owner: "Maya",
+                stage: "Ready",
+                points: 1,
+                priority: "Normal",
+              }),
+              boardRender()),
+            say(
+              pending === "reservation"
+                ? "Reservation request preview kept. No table has been booked."
+                : pending === "cart"
+                  ? "Order preview kept. Nothing was sent to the caf\xE9."
+                  : pending === "brief"
+                    ? "Review brief closed."
+                    : "Saved in this preview only. No message or account change was sent.",
+            ),
+            dialog.close());
+        });
+        (boardRender(), $("owner-filter").addEventListener("change", boardRender));
+      })();
+    </script>
   </body>
 </html>

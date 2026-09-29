@@ -1516,3 +1516,21 @@ body.restaurant {
 .template-cafe .morning-note > div > .eyebrow {
   color: var(--template-cafe-cafe-heading-eyebrow-template-cafe-morning-note-div-eyebrow-color);
 }
+:where(p, li, blockquote, figcaption, dd):not(:where(table *, nav *, pre *, code *)) {
+  max-inline-size: var(--measure-body);
+}
+[data-grid] {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  gap: var(--grid-gutter);
+}
+@media (min-width: 48rem) {
+  :root {
+    --grid-columns: 8;
+  }
+}
+@media (min-width: 75rem) {
+  :root {
+    --grid-columns: 12;
+  }
+}

@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "type": "bar",
-  "title": "Mean height at day 14",
+  "title": "Mean Height at Day 14",
+  "lang": "en",
   "description": "Synthetic worked example. Exact values accompany the graphic.",
   "source": "Original Dazzler synthetic scenario",
   "unit": "cm",

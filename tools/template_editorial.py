@@ -420,4 +420,13 @@ def render_docx(d, path):
             r.italic = True
             r.font.size = Pt(8)
             color(r, "#505968")
+    for paragraph in doc.paragraphs:
+        if paragraph.style.name == "Normal" and len(paragraph.text) > 80:
+            section = doc.sections[0]
+            available = (
+                section.page_width - section.left_margin - section.right_margin
+            ) / 914400
+            paragraph.paragraph_format.right_indent = Inches(
+                max(0, available - 60 * body_size * 0.5 / 72)
+            )
     doc.save(path)

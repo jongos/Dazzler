@@ -44,7 +44,7 @@ Optional controls include mode static/fluid, minViewport, maxViewport, maxRatio 
 
 CSS uses clamp/rem/vw with print overrides. Tailwind v3 receives font-size tuples; v4 receives text variables and companion metrics. DTCG typography composites use static rem dimensions and a namespaced fluid extension. Consumers may ignore that extension. The basic HTML and DOCX exporters apply these metrics; the basic PPTX exporter retains its fixed slide layout. Use native host tooling for advanced slides and inspect each rendered page.
 
-For legacy behavior explicitly set `schemaVersion: 1`: static token output remains available and saved legacy records resume without introducing a new fluid scale. Never silently migrate an existing record to schema 2.
+For legacy behavior explicitly set `schemaVersion: 1`: static token output remains available and saved legacy records resume without introducing a new fluid scale. Explicit schema 2 retains its previous fluid defaults. New systems use schema 3 with the [design policy](design-philosophy.md). Never silently migrate an existing record.
 
 Inspect narrow/wide widths, 200% text scaling, long headings, actual multilingual text and every print page. A fixture passing these checks does not certify a user's final artifact.
 

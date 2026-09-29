@@ -59,6 +59,10 @@ def inventory(root):
 
 def clean_owned(root, host, scope):
     safe_path(root)
+    if not (root / RECEIPT).is_file():
+        raise ValueError(
+            f"Found an unmanaged Dazzler installation at {root}; preserve it by moving it aside before installing. See ONBOARDING: Migrate a Manual Install."
+        )
     receipt = json.loads(safe_path(root / RECEIPT).read_text(encoding="utf-8"))
     if (
         receipt.get("owner") != "dazzler-managed-v1"
@@ -146,6 +150,10 @@ def operate(
             shutil.rmtree(target)
         return {**result, "retainedBackup": backup.exists()}
     if action == "rollback":
+        if not backup.exists():
+            raise ValueError(
+                "No previous version to roll back to; install an update before using rollback"
+            )
         clean_owned(backup, host, scope)
         if not dry_run:
             swap = backup.parent / ("pending-" + uuid.uuid4().hex)
@@ -221,11 +229,27 @@ def operate(
             # Recheck immediately before changing managed files.
             if target.exists():
                 clean_owned(target, host, scope)
-            if backup.exists():
-                clean_owned(backup, host, scope)
-                shutil.rmtree(backup)
             if target.exists():
                 backup.parent.mkdir(parents=True, exist_ok=True)
+                ignore = safe_path(backup.parent / ".gitignore")
+                if scope == "project":
+                    # Preserve existing rules; hide all backups including this file.
+                    previous = (
+                        ignore.read_text(encoding="utf-8") if ignore.exists() else ""
+                    )
+                    if "*" not in previous.splitlines():
+                        with ignore.open("a", encoding="utf-8") as handle:
+                            handle.write(
+                                (
+                                    "\n"
+                                    if previous and not previous.endswith("\n")
+                                    else ""
+                                )
+                                + "*\n"
+                            )
+                if backup.exists():
+                    clean_owned(backup, host, scope)
+                    shutil.rmtree(backup)
                 target.rename(backup)
             try:
                 ready.rename(target)

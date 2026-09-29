@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Order status webhook delivery — Dazzler</title>
+    <title>Order Status Webhook Delivery — Dazzler</title>
     <link rel="stylesheet" href="../fonts/fonts.css" />
     <link rel="stylesheet" href="technical/tokens.css" />
     <link rel="stylesheet" href="technical/styles.css" />
@@ -16,7 +16,7 @@
     <main>
       <article class="sheet">
         <header class="folio"><span>PLATFORM ENGINEERING</span><span>01 / 02</span></header>
-        <h1>Order status webhook delivery</h1>
+        <h1>Order Status Webhook Delivery</h1>
         <p class="subtitle"><em>Technical design • RFC 014 • Proposed</em></p>
         <p class="prose">
           <strong class="keyword">Owner</strong>: Alex Rivera Reviewers: API + Reliability Updated:
@@ -35,13 +35,13 @@
             event_id; the service does not promise exactly-once processing.
           </p>
         </aside>
-        <h2 class="section-title">Context and boundaries</h2>
+        <h2 class="section-title">Context and Boundaries</h2>
         <p class="prose">
           Partners currently poll for order updates. This design adds signed event delivery to
           registered HTTPS endpoints. It excludes partner endpoint provisioning, historical
           backfills and delivery to arbitrary customer-supplied URLs.
         </p>
-        <h2 class="section-title">Delivery path</h2>
+        <h2 class="section-title">Delivery Path</h2>
         <p class="prose">
           Order transaction → transactional outbox → delivery queue → worker → registered partner
           endpoint. A delivery record stores each attempt and its result.
@@ -74,7 +74,7 @@
             </tbody>
           </table>
         </div>
-        <h2 class="section-title">Event example</h2>
+        <h2 class="section-title">Event Example</h2>
         <pre><code>{
   &quot;event_id&quot;: &quot;evt_demo_0042&quot;,
   &quot;type&quot;: &quot;order.shipped&quot;,
@@ -91,7 +91,7 @@
       </article>
       <article class="sheet">
         <header class="folio"><span>PLATFORM ENGINEERING</span><span>02 / 02</span></header>
-        <h1>Failures and release plan</h1>
+        <h1>Failures and Release Plan</h1>
         <figure class="chart">
           <figcaption>Synthetic delivery outcomes</figcaption>
           <img
@@ -156,7 +156,7 @@
             </tbody>
           </table>
         </div>
-        <h2 class="section-title">Release gate</h2>
+        <h2 class="section-title">Release Gate</h2>
         <p class="prose">
           Replay 1,000 <strong class="keyword">synthetic</strong> events. 960 succeed first time, 35
           after <strong class="keyword">retry</strong> and 5 remain held for

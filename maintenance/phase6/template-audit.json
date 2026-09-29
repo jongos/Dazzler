@@ -1,0 +1,267 @@
+{
+  "release": "0.21.0",
+  "baseline": "87a441bbf5895dcbcad4c4b966a8e08b7a053e27",
+  "method": "Source heading comparison; native Word pagination; local browser behavior/render checks. Counts are not aesthetic scores.",
+  "templates": [
+    {
+      "id": "docx-professional",
+      "headingCountBefore": 7,
+      "headingCountAfter": 7,
+      "changedHeadingPositions": 6,
+      "nativePages": 2,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-professional",
+      "headingCountBefore": 6,
+      "headingCountAfter": 6,
+      "changedHeadingPositions": 6,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-legal",
+      "headingCountBefore": 9,
+      "headingCountAfter": 9,
+      "changedHeadingPositions": 9,
+      "nativePages": 2,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-legal",
+      "headingCountBefore": 9,
+      "headingCountAfter": 9,
+      "changedHeadingPositions": 9,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-business",
+      "headingCountBefore": 11,
+      "headingCountAfter": 11,
+      "changedHeadingPositions": 10,
+      "nativePages": 2,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-business",
+      "headingCountBefore": 10,
+      "headingCountAfter": 10,
+      "changedHeadingPositions": 10,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-fun",
+      "headingCountBefore": 5,
+      "headingCountAfter": 5,
+      "changedHeadingPositions": 5,
+      "nativePages": 2,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-fun",
+      "headingCountBefore": 5,
+      "headingCountAfter": 5,
+      "changedHeadingPositions": 5,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-family",
+      "headingCountBefore": 3,
+      "headingCountAfter": 3,
+      "changedHeadingPositions": 3,
+      "nativePages": 1,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-family",
+      "headingCountBefore": 3,
+      "headingCountAfter": 3,
+      "changedHeadingPositions": 3,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-presentation",
+      "headingCountBefore": 7,
+      "headingCountAfter": 7,
+      "changedHeadingPositions": 5,
+      "nativePages": 3,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-presentation",
+      "headingCountBefore": 6,
+      "headingCountAfter": 6,
+      "changedHeadingPositions": 5,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-school",
+      "headingCountBefore": 8,
+      "headingCountAfter": 8,
+      "changedHeadingPositions": 6,
+      "nativePages": 2,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-school",
+      "headingCountBefore": 7,
+      "headingCountAfter": 7,
+      "changedHeadingPositions": 6,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-marketing",
+      "headingCountBefore": 9,
+      "headingCountAfter": 9,
+      "changedHeadingPositions": 8,
+      "nativePages": 2,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-marketing",
+      "headingCountBefore": 8,
+      "headingCountAfter": 8,
+      "changedHeadingPositions": 8,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-restaurant",
+      "headingCountBefore": 6,
+      "headingCountAfter": 6,
+      "changedHeadingPositions": 6,
+      "nativePages": 2,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-restaurant",
+      "headingCountBefore": 18,
+      "headingCountAfter": 18,
+      "changedHeadingPositions": 18,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "docx-technical",
+      "headingCountBefore": 7,
+      "headingCountAfter": 7,
+      "changedHeadingPositions": 6,
+      "nativePages": 2,
+      "bodyMeasure": "60ch approximate; paragraph indents, tables exempt"
+    },
+    {
+      "id": "html-technical",
+      "headingCountBefore": 6,
+      "headingCountAfter": 6,
+      "changedHeadingPositions": 6,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "webapp-workspace",
+      "headingCountBefore": 9,
+      "headingCountAfter": 9,
+      "changedHeadingPositions": 8,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "webapp-board",
+      "headingCountBefore": 6,
+      "headingCountAfter": 6,
+      "changedHeadingPositions": 4,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "webapp-settings",
+      "headingCountBefore": 6,
+      "headingCountAfter": 6,
+      "changedHeadingPositions": 5,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "data-revenue",
+      "headingCountBefore": 5,
+      "headingCountAfter": 5,
+      "changedHeadingPositions": 5,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "data-operations",
+      "headingCountBefore": 7,
+      "headingCountAfter": 7,
+      "changedHeadingPositions": 6,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "restaurant-fine-dining",
+      "headingCountBefore": 9,
+      "headingCountAfter": 9,
+      "changedHeadingPositions": 5,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "restaurant-cafe",
+      "headingCountBefore": 5,
+      "headingCountAfter": 5,
+      "changedHeadingPositions": 4,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "restaurant-reservations",
+      "headingCountBefore": 5,
+      "headingCountAfter": 5,
+      "changedHeadingPositions": 5,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "restaurant-menu",
+      "headingCountBefore": 5,
+      "headingCountAfter": 5,
+      "changedHeadingPositions": 4,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    },
+    {
+      "id": "business-portal",
+      "headingCountBefore": 10,
+      "headingCountAfter": 10,
+      "changedHeadingPositions": 8,
+      "measureToken": true,
+      "gridTokens": true,
+      "responsiveInteractions": "passed; see browser suite"
+    }
+  ]
+}

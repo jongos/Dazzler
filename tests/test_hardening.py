@@ -18,6 +18,12 @@ def module(name, path):
 
 health = module("health", ROOT / "skills/dazzler-frontend/scripts/health.py")
 offline = module("offline", ROOT / "tools/offline_build.py")
+import sys
+
+sys.path.insert(
+    0, str(Path(__file__).resolve().parents[1] / "skills/dazzler-frontend/scripts")
+)
+
 project = module(
     "hardening_project", ROOT / "skills/dazzler-frontend/scripts/project.py"
 )

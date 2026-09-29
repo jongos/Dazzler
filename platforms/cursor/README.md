@@ -2,7 +2,7 @@
 
 Full helper editions include eight purpose-based composition contracts, measured review candidates, and bounded refinement intents with optional saved controls. Read references/composition.md in the installed skill. Browser review requires the host browser runtime; critique stays read-only.
 
-Full helper editions share persistent design records, schema-2 fluid typography with print fallbacks, and compatible shadcn theme proposals. Read references/persistent-systems.md in the installed skill. These helpers do not install components or overwrite project records. Host-specific execution remains subject to available tools.
+Full helper editions share persistent design records, saved fluid typography with print fallbacks, and compatible shadcn theme proposals. Read references/persistent-systems.md in the installed skill. These helpers do not install components or overwrite project records. Host-specific execution remains subject to available tools.
 
 Download **dazzler-cursor.zip** from the closing download links.
 
@@ -38,12 +38,12 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 ## Quick starts
 
-The package includes 19 beginner prompts in `references/starters.md`, grouped by task. Read one category at a time. Host-specific invocation is applied during packaging; Claude plugin users prefix the command with `/dazzler:`. Advanced fields are optional.
+The package includes 19 beginner prompts in `references/starters.md`, grouped by task. Read one category at a time. Host-specific invocation is applied during packaging. Advanced fields are optional.
 
 ## Notes and credits
 
 Packaging reference (checked September 28, 2026): [official documentation](https://prod.cursor.com/docs/skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-cursor.zip](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-cursor.zip)
+- [dazzler-cursor.zip](https://github.com/jongos/Dazzler/releases/download/v0.21.0/dazzler-cursor.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.20.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.21.0/dazzler-templates.zip)

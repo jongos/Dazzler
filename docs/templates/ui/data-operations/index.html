@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Signal — Support command desk</title>
+    <title>Signal — Support Command Desk</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-operations app">
@@ -19,14 +19,14 @@
     <main id="main">
       <header class="page-title">
         <p class="eyebrow">Signal / OPERATIONS</p>
-        <h1>Support command desk</h1>
+        <h1>Support Command Desk</h1>
         <p>Snapshot • 21 June 2027, 09:40 • Sample service data</p>
       </header>
       <div class="metrics" id="ops-metrics"></div>
       <div class="split">
         <section class="panel">
           <div class="section-head">
-            <h2>Open work</h2>
+            <h2>Open Work</h2>
             <label class="check"
               ><input id="show-resolved" type="checkbox" />Include resolved</label
             >
@@ -43,10 +43,10 @@
           <div id="tickets"></div>
         </section>
         <aside class="rail">
-          <h2>Queue health</h2>
+          <h2>Queue Health</h2>
           <div id="queue-health"></div>
           <section class="note">
-            <h3>Response target</h3>
+            <h3>Response Target</h3>
             <p>
               High priority: first response within 30 minutes. Normal: within 60 minutes. Low:
               within 120 minutes.
@@ -60,7 +60,7 @@
       <section class="showcase-panel">
         <div>
           <p class="eyebrow">THE BIGGER PICTURE</p>
-          <h2>Arrivals across the shift</h2>
+          <h2>Arrivals Across the Shift</h2>
           <p>
             The arrival profile gives context to the queue snapshot. It is historical sample data,
             not a live forecast.
@@ -124,7 +124,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -139,7 +139,7 @@
         "category": "data-visualization",
         "layout": "operations",
         "brand": "Signal",
-        "title": "Support command desk",
+        "title": "Support Command Desk",
         "intro": "Snapshot • 21 June 2027, 09:40 • Sample service data",
         "accent": "#1B5681",
         "tint": "#EDEFF7",
@@ -344,51 +344,90 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id);
-  var say = (t) => {
-    $("status").textContent = t;
-  }, dialog = $("edit-dialog");
-  function filteredTickets() {
-    return cfg.tickets.filter(
-      (x) => ($("queue").value === "All queues" || x.queue === $("queue").value) && ($("show-resolved").checked || x.status === "Open")
-    );
-  }
-  function opsRender() {
-    let open = cfg.tickets.filter((x) => x.status === "Open"), late = open.filter((x) => x.age > { High: 30, Normal: 60, Low: 120 }[x.priority]);
-    $("ops-metrics").innerHTML = [
-      ["Open tickets", open.length, "Across all queues"],
-      ["Past first-response target", late.length, "Based on priority at this snapshot"],
-      [
-        "Oldest open ticket",
-        (open.length ? Math.max(...open.map((x) => x.age)) : 0) + " min",
-        "Age at 09:40 snapshot"
-      ]
-    ].map(
-      ([a, b, c]) => `<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`
-    ).join("");
-    let rows = filteredTickets();
-    $("tickets").innerHTML = rows.length ? rows.map(
-      (x) => `<article class="ticket"><div class="ticket-top"><small>${x.id} \xB7 ${x.queue}</small><span class="pill ${x.priority === "High" ? "warning" : ""}">${x.priority} priority</span></div><h3>${x.subject}</h3><div class="ticket-bottom"><small>${x.owner} \xB7 ${x.age} min old \xB7 ${x.status}</small><button class="secondary" data-resolve="${x.id}" ${x.status === "Resolved" ? "disabled" : ""}>${x.status === "Resolved" ? "Resolved" : "Resolve in preview"}</button></div></article>`
-    ).join("") : "<p>No tickets match these filters.</p>", $("queue-health").innerHTML = ["Access", "Billing", "Account"].map((q) => {
-      let n = open.filter((x) => x.queue === q).length;
-      return `<div class="queue-row"><div><strong>${q}</strong><span>${n} open</span></div><progress value="${n}" max="${Math.max(open.length, 1)}" aria-label="${q} share of open tickets"></progress></div>`;
-    }).join("");
-  }
-  document.addEventListener("click", (event) => {
-    let b = event.target.closest("button");
-    if (b && (b.dataset.resolve && (cfg.tickets.find((x) => x.id === b.dataset.resolve).status = "Resolved", opsRender(), say("Ticket resolved in this preview. No support system was changed.")), b.dataset.action === "download")) {
-      let text = [
-        ["Ticket", "Queue", "Priority", "Age minutes", "Owner", "Status"],
-        ...filteredTickets().map((x) => [x.id, x.queue, x.priority, x.age, x.owner, x.status])
-      ].map((row) => row.map((v) => '"' + String(v).replaceAll('"', '""') + '"').join(",")).join(`
-`), url = URL.createObjectURL(new Blob([text], { type: "text/csv" })), a = document.createElement("a");
-      a.href = url, a.download = cfg.id + "-sample.csv", a.click(), setTimeout(() => URL.revokeObjectURL(url), 1e3), say("The currently selected sample data was exported.");
-    }
-  });
-  opsRender(), $("queue").addEventListener("change", opsRender), $("show-resolved").addEventListener("change", opsRender);
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id);
+        var say = (t) => {
+            $("status").textContent = t;
+          },
+          dialog = $("edit-dialog");
+        function filteredTickets() {
+          return cfg.tickets.filter(
+            (x) =>
+              ($("queue").value === "All queues" || x.queue === $("queue").value) &&
+              ($("show-resolved").checked || x.status === "Open"),
+          );
+        }
+        function opsRender() {
+          let open = cfg.tickets.filter((x) => x.status === "Open"),
+            late = open.filter((x) => x.age > { High: 30, Normal: 60, Low: 120 }[x.priority]);
+          $("ops-metrics").innerHTML = [
+            ["Open tickets", open.length, "Across all queues"],
+            ["Past first-response target", late.length, "Based on priority at this snapshot"],
+            [
+              "Oldest open ticket",
+              (open.length ? Math.max(...open.map((x) => x.age)) : 0) + " min",
+              "Age at 09:40 snapshot",
+            ],
+          ]
+            .map(
+              ([a, b, c]) =>
+                `<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`,
+            )
+            .join("");
+          let rows = filteredTickets();
+          (($("tickets").innerHTML = rows.length
+            ? rows
+                .map(
+                  (x) =>
+                    `<article class="ticket"><div class="ticket-top"><small>${x.id} \xB7 ${x.queue}</small><span class="pill ${x.priority === "High" ? "warning" : ""}">${x.priority} priority</span></div><h3>${x.subject}</h3><div class="ticket-bottom"><small>${x.owner} \xB7 ${x.age} min old \xB7 ${x.status}</small><button class="secondary" data-resolve="${x.id}" ${x.status === "Resolved" ? "disabled" : ""}>${x.status === "Resolved" ? "Resolved" : "Resolve in preview"}</button></div></article>`,
+                )
+                .join("")
+            : "<p>No tickets match these filters.</p>"),
+            ($("queue-health").innerHTML = ["Access", "Billing", "Account"]
+              .map((q) => {
+                let n = open.filter((x) => x.queue === q).length;
+                return `<div class="queue-row"><div><strong>${q}</strong><span>${n} open</span></div><progress value="${n}" max="${Math.max(open.length, 1)}" aria-label="${q} share of open tickets"></progress></div>`;
+              })
+              .join("")));
+        }
+        document.addEventListener("click", (event) => {
+          let b = event.target.closest("button");
+          if (
+            b &&
+            (b.dataset.resolve &&
+              ((cfg.tickets.find((x) => x.id === b.dataset.resolve).status = "Resolved"),
+              opsRender(),
+              say("Ticket resolved in this preview. No support system was changed.")),
+            b.dataset.action === "download")
+          ) {
+            let text = [
+                ["Ticket", "Queue", "Priority", "Age minutes", "Owner", "Status"],
+                ...filteredTickets().map((x) => [
+                  x.id,
+                  x.queue,
+                  x.priority,
+                  x.age,
+                  x.owner,
+                  x.status,
+                ]),
+              ].map((row) => row.map((v) => '"' + String(v).replaceAll('"', '""') + '"').join(","))
+                .join(`
+`),
+              url = URL.createObjectURL(new Blob([text], { type: "text/csv" })),
+              a = document.createElement("a");
+            ((a.href = url),
+              (a.download = cfg.id + "-sample.csv"),
+              a.click(),
+              setTimeout(() => URL.revokeObjectURL(url), 1e3),
+              say("The currently selected sample data was exported."));
+          }
+        });
+        (opsRender(),
+          $("queue").addEventListener("change", opsRender),
+          $("show-resolved").addEventListener("change", opsRender));
+      })();
+    </script>
   </body>
 </html>

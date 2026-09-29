@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Forma — Profile &amp; preferences</title>
+    <title>Forma — Profile &amp; Preferences</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="template-settings app">
@@ -19,7 +19,7 @@
     <main id="main">
       <header class="page-title">
         <p class="eyebrow">Forma / SETTINGS</p>
-        <h1>Profile &amp; preferences</h1>
+        <h1>Profile &amp; Preferences</h1>
         <p>Manage how your team sees you and when you hear from us.</p>
       </header>
       <div class="settings-layout">
@@ -52,7 +52,7 @@
             </div>
           </section>
           <section class="panel" id="notifications">
-            <h2>Keep me informed</h2>
+            <h2>Keep Me Informed</h2>
             <label class="check"
               ><input type="checkbox" name="mentions" checked /><span
                 ><strong>Mentions and replies</strong
@@ -66,7 +66,7 @@
             >
           </section>
           <section class="panel" id="regional">
-            <h2>Regional settings</h2>
+            <h2>Regional Settings</h2>
             <div class="form-grid">
               <div class="field">
                 <label for="timezone">Time zone</label
@@ -95,7 +95,7 @@
       <section class="showcase-panel">
         <div>
           <p class="eyebrow">THE BIGGER PICTURE</p>
-          <h2>A quieter notification rhythm</h2>
+          <h2>A Quieter Notification Rhythm</h2>
           <p>
             Seven synthetic daily counts show why a digest can reduce interruptions. Preference
             changes stay in this preview.
@@ -159,7 +159,7 @@
     </footer>
     <dialog id="edit-dialog">
       <form id="edit-form">
-        <h2 id="dialog-title">Add details</h2>
+        <h2 id="dialog-title">Add Details</h2>
         <div id="dialog-content"></div>
         <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
         <div class="dialog-actions">
@@ -174,7 +174,7 @@
         "category": "general-webapp",
         "layout": "settings",
         "brand": "Forma",
-        "title": "Profile & preferences",
+        "title": "Profile & Preferences",
         "intro": "Manage how your team sees you and when you hear from us.",
         "accent": "#096B61",
         "tint": "#EDEFF7",
@@ -237,23 +237,29 @@
       }
     </script>
     <script>
-(() => {
-  // tools/template_interactions.js
-  var cfg = JSON.parse(document.getElementById("template-data").textContent), $ = (id) => document.getElementById(id);
-  var say = (t) => {
-    $("status").textContent = t;
-  }, dialog = $("edit-dialog");
-  document.addEventListener("click", (event) => {
-    event.target.closest("button");
-  });
-  $("settings").addEventListener("input", () => {
-    $("dirty").textContent = "Unsaved changes";
-  }), $("settings").addEventListener("reset", () => {
-    $("dirty").textContent = "No unsaved changes", say("Changes discarded.");
-  }), $("settings").addEventListener("submit", (event) => {
-    event.preventDefault(), $("dirty").textContent = "Saved for this preview", say("Preferences updated locally. Reloading restores the sample profile.");
-  });
-})();
-</script>
+      (() => {
+        // tools/template_interactions.js
+        var cfg = JSON.parse(document.getElementById("template-data").textContent),
+          $ = (id) => document.getElementById(id);
+        var say = (t) => {
+            $("status").textContent = t;
+          },
+          dialog = $("edit-dialog");
+        document.addEventListener("click", (event) => {
+          event.target.closest("button");
+        });
+        ($("settings").addEventListener("input", () => {
+          $("dirty").textContent = "Unsaved changes";
+        }),
+          $("settings").addEventListener("reset", () => {
+            (($("dirty").textContent = "No unsaved changes"), say("Changes discarded."));
+          }),
+          $("settings").addEventListener("submit", (event) => {
+            (event.preventDefault(),
+              ($("dirty").textContent = "Saved for this preview"),
+              say("Preferences updated locally. Reloading restores the sample profile."));
+          }));
+      })();
+    </script>
   </body>
 </html>

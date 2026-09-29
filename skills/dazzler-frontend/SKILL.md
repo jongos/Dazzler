@@ -16,13 +16,13 @@ Read `references/package-profile.json` when present: use only its installed font
 
 `Use $dazzler-frontend to ...` is enough. Infer purpose, audience and a coherent visual direction from the brief; choose suitable fonts, colors, composition and interactions yourself. Preserve the user's brand, stack, facts and explicit constraints. Deliver the requested artifact and inspect it. Ask only for indispensable inputs; routine aesthetic choices stay automatic. Use [optional controls](references/design-controls.md) when the user asks to choose or refine.
 
-For a small edit, change only what is needed. For substantial work, inspect existing components/tokens and read the relevant part of [the automatic workflow](references/automatic-workflow.md). Use [the design framework](references/deslop.md) when establishing a new direction; consult [interface craft](references/interface-craft.md) for component details.
+For substantial work, inspect existing components/tokens and use [the automatic workflow](references/automatic-workflow.md). Use [the design framework](references/deslop.md) when establishing a new direction; consult [interface craft](references/interface-craft.md) for component details.
 
 Before substantial design work, discover and read the existing project design record. Continue its designated fonts, colors and constraints. Follow [persistent systems](references/persistent-systems.md) for bounded discovery, safe interchange, fluid typography and compatible shadcn themes. Preserve the record location and existing prose; small edits and read-only critiques do not require a new record.
 
 ## Typography, color and editorial craft
 
-When selecting or changing fonts/colors, use the relevant offline helper. Keep accepted choices for small refinements:
+Apply [the design principles](references/design-philosophy.md): protected English Title Case, 60ch maximum body measure, spacing-based grids, expressive defaults with reserved treatment for high-stakes contexts, shipped open fonts and labeled red danger states. User, brand and language choices win. Preserve established choices for small refinements; use the relevant offline helper:
 
 ```shell
 python scripts/fonts.py recommend --role body --mood literary --text "Actual representative copy"
@@ -47,8 +47,6 @@ Use [local runtime guidance](references/local-runtime.md) for integrity, smalles
 - Actual charts, networks, maps and compact metrics: [visualization](references/visualization.md). Preserve source rows, units, missing values, labels and non-color cues. Native editable Office charts require their optional runtime; static images are not editable charts.
 - Clickable images, diagrams and floor plans: [interactive illustrations](references/interactive-illustrations.md). Provide named keyboard controls, useful region descriptions and a text equivalent.
 - Native documents/slides: use the host's artifact workflow when available; preserve the supplied content and verify the target renderer. Design print margins, table headers, page breaks and readable emphasis deliberately.
-
-For demonstrations, author rich, explicitly synthetic data with reconciled totals and dates, edge states and traceable source rows. Add relevant controls and charts, not features that obscure the task. Capture actual finished artifacts for requested previews; DOCX snapshots must come from a native document render, not its HTML companion.
 
 ## Implement with available capabilities
 

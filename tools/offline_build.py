@@ -39,6 +39,7 @@ def create(output):
         ".claude-plugin",
         ".github",
         "docs",
+        "maintenance/phase6",
     ):
         paths.extend(
             p

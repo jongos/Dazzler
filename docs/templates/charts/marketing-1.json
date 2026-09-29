@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "type": "bar",
-  "title": "Allocate by the job to be done",
+  "title": "Allocate by the Job to Be Done",
+  "lang": "en",
   "description": "Synthetic worked example. Exact values accompany the graphic.",
   "source": "Original Dazzler synthetic scenario",
   "unit": "USD",

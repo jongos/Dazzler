@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "type": "line",
-  "title": "Cumulative accepted deliverables",
+  "title": "Cumulative Accepted Deliverables",
+  "lang": "en",
   "description": "Synthetic worked example. Exact values accompany the graphic.",
   "source": "Original Dazzler synthetic scenario",
   "unit": "deliverables",

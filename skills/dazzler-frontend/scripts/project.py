@@ -1,5 +1,7 @@
 """Dazzler brand import, licensed assets, reversible changes and document exporters. Stdlib core."""
 
+from headings import heading as case_heading, options_from
+
 import argparse
 from collections import Counter, defaultdict
 import hashlib
@@ -74,7 +76,7 @@ def brand(source):
             flags=re.S,
         )
         for m in re.finditer(
-            r"(--[\w-]+|color|background-color|font-family|font-size|border-radius|gap|padding|margin)\s*:\s*([^;{}]+)",
+            r"(--[\w-]+|color|background-color|text-transform|font-family|font-size|border-radius|gap|padding|margin)\s*:\s*([^;{}]+)",
             css,
         ):
             key, value = m.groups()
@@ -225,7 +227,13 @@ def export_document(content, system, destination, mode="document"):
     """Portable HTML editions with optional native DOCX/PPTX from installed libraries."""
     if mode not in ("document", "slides", "docx", "pptx"):
         raise ValueError("Unknown document mode")
-    title = str(content.get("title", "Untitled"))
+    policy = options_from(content, system)
+    title = case_heading(str(content.get("title", "Untitled")), policy)
+    continued = case_heading(str(content.get("continuedLabel", "continued")), policy)
+    table_label = case_heading(str(content.get("tableLabel", "table")), policy)
+    measure = system.get("typography", {}).get("measure", 60)
+    if not isinstance(measure, (int, float)) or not 30 <= measure <= 100:
+        raise ValueError("Invalid body measure")
     sections = content.get("sections", [])
     if not isinstance(sections, list) or not sections:
         raise ValueError("Provide nonempty sections")
@@ -234,6 +242,10 @@ def export_document(content, system, destination, mode="document"):
             section.get("body", ""), str
         ):
             raise ValueError("Each section requires a string body")
+    sections = [
+        {**section, "heading": case_heading(str(section.get("heading", "")), policy)}
+        for section in sections
+    ]
     tokens = system["palette"]["modes"]["light"]["tokens"]
     font = system["fonts"]["body"]
     heading = system["fonts"]["heading"]
@@ -302,7 +314,16 @@ def export_document(content, system, destination, mode="document"):
                 doc.add_page_break()
             doc.add_heading(str(section.get("heading", "")), 1)
             for paragraph in section.get("body", "").split("\n\n"):
-                doc.add_paragraph(paragraph)
+                para = doc.add_paragraph(paragraph)
+                if len(paragraph) > 80:
+                    # Approximate zero-glyph width; target renderer remains authoritative.
+                    body_pt = normal.font.size.pt if normal.font.size else 11
+                    available = (
+                        sec.page_width - sec.left_margin - sec.right_margin
+                    ) / 914400
+                    para.paragraph_format.right_indent = Inches(
+                        max(0, available - measure * body_pt * 0.5 / 72)
+                    )
             if section.get("table"):
                 rows = section["table"]
                 table = doc.add_table(rows=0, cols=max(map(len, rows)))
@@ -374,7 +395,8 @@ def export_document(content, system, destination, mode="document"):
                         0.6,
                         11.9,
                         1.2,
-                        str(section.get("heading", "")) + (" (continued)" if i else ""),
+                        str(section.get("heading", ""))
+                        + (f" ({continued})" if i else ""),
                         30,
                         heading,
                     ),
@@ -407,7 +429,9 @@ def export_document(content, system, destination, mode="document"):
                     title_box = slide.shapes.add_textbox(
                         Inches(0.7), Inches(0.5), Inches(12), Inches(0.7)
                     )
-                    title_box.text = str(section.get("heading", "")) + " — table"
+                    title_box.text = (
+                        str(section.get("heading", "")) + " — " + table_label
+                    )
                     title_box.text_frame.paragraphs[0].font.size = Pt(26)
                     title_box.text_frame.paragraphs[0].font.name = heading
                     title_box.text_frame.paragraphs[0].font.color.rgb = (
@@ -459,7 +483,7 @@ def export_document(content, system, destination, mode="document"):
                     html_sections.append(
                         {
                             "heading": str(section.get("heading", ""))
-                            + (" (continued)" if i else ""),
+                            + (f" ({continued})" if i else ""),
                             "body": chunk,
                         }
                     )
@@ -468,7 +492,9 @@ def export_document(content, system, destination, mode="document"):
                     for i in range(1, len(rows), 6):
                         html_sections.append(
                             {
-                                "heading": str(section.get("heading", "")) + " — table",
+                                "heading": str(section.get("heading", ""))
+                                + " — "
+                                + table_label,
                                 "table": [rows[0], *rows[i : i + 6]],
                             }
                         )
@@ -510,6 +536,7 @@ def export_document(content, system, destination, mode="document"):
             + css_font(heading)
             + ",serif;line-height:1.2}"
         )
+        css += f"p,li,blockquote,figcaption,dd{{max-inline-size:{measure}ch}}"
         css += (
             "main{max-width:900px;margin:auto;padding:48px}h1{font-size:3rem}h2{font-size:2rem}section{padding:24px 0}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px;border-bottom:1px solid "
             + tokens["border"]

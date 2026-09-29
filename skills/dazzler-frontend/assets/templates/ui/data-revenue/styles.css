@@ -1509,3 +1509,21 @@ h1 {
 body.restaurant {
   background: var(--paper);
 }
+:where(p, li, blockquote, figcaption, dd):not(:where(table *, nav *, pre *, code *)) {
+  max-inline-size: var(--measure-body);
+}
+[data-grid] {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  gap: var(--grid-gutter);
+}
+@media (min-width: 48rem) {
+  :root {
+    --grid-columns: 8;
+  }
+}
+@media (min-width: 75rem) {
+  :root {
+    --grid-columns: 12;
+  }
+}

@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "type": "bar",
-  "title": "Sample baseline and pilot target",
+  "title": "Sample Baseline and Pilot Target",
+  "lang": "en",
   "description": "Synthetic worked example. Exact values accompany the graphic.",
   "source": "Original Dazzler synthetic scenario",
   "unit": "completion percent",

@@ -41,6 +41,7 @@ const roles = [
   "onActionHover",
   "focus",
   "danger",
+  "onDanger",
   "success",
   "warning",
   "info",
@@ -97,7 +98,7 @@ function validateConfig(input) {
   if (!input || typeof input !== "object" || Array.isArray(input))
     throw new Error("Configuration must be an object.");
   for (const key of Object.keys(input)) {
-    if (!["base", "palette", "mood", "harmony", "locked"].includes(key))
+    if (!["base", "palette", "mood", "harmony", "locked", "target"].includes(key))
       throw new Error(`Unknown configuration field: ${key}`);
   }
   if (
@@ -122,8 +123,11 @@ function validateConfig(input) {
   }
 }
 
-export function generate(input) {
+export function generate(input, { legacy = false } = {}) {
   validateConfig(input);
+  if (input.target !== undefined && !["AA", "AAA"].includes(input.target))
+    throw Error("Target must be AA or AAA");
+  const textMinimum = input.target === "AAA" ? 7 : 4.5;
   let palette;
   if (input.palette) {
     palette = catalog.palettes.find((p) => p.id === input.palette);
@@ -208,8 +212,8 @@ export function generate(input) {
       selections[role] = selection;
       tokens[role] = selection.selected?.hex ? hex(selection.selected.hex) : null;
     };
-    choose("text", neutralRamp.swatch, light ? 0.18 : 0.95, 0.008, 4.5);
-    choose("muted", neutralRamp.swatch, light ? 0.45 : 0.72, 0.008, 4.5);
+    choose("text", neutralRamp.swatch, light ? 0.18 : 0.95, 0.008, textMinimum);
+    choose("muted", neutralRamp.swatch, light ? 0.45 : 0.72, 0.008, textMinimum);
     choose("border", neutralRamp.swatch, light ? 0.6 : 0.55, 0.008, 3);
     const accentInfo = toOklch(accent);
     choose("action", primaryRamp.swatch, light ? 0.43 : 0.72, accentInfo.c, 3, accentInfo.h ?? hue);
@@ -224,11 +228,12 @@ export function generate(input) {
     choose("focus", primaryRamp.swatch, light ? 0.43 : 0.72, accentInfo.c, 3, accentInfo.h ?? hue);
     for (const [role, swatch] of Object.entries(statuses.swatches)) {
       const seed = toOklch(statuses.seeds[role]);
-      choose(role, swatch, light ? 0.43 : 0.75, seed.c, 4.5, seed.h);
+      choose(role, swatch, light ? 0.43 : 0.75, seed.c, textMinimum, seed.h);
     }
     for (const [role, background] of [
       ["onAction", "action"],
       ["onActionHover", "actionHover"],
+      ...(!legacy ? [["onDanger", "danger"]] : []),
     ]) {
       if (locks[role]) continue;
       if (!tokens[background]) {
@@ -238,7 +243,7 @@ export function generate(input) {
       const selection = selectReadableForeground(
         tokens[background],
         ["#000000", "#FFFFFF"],
-        4.5,
+        textMinimum,
         "first",
       );
       selections[role] = selection;
@@ -260,11 +265,12 @@ export function generate(input) {
     };
     for (const bg of ["background", "surface"]) {
       for (const fg of ["text", "muted", "danger", "success", "warning", "info"])
-        check(fg, bg, 4.5);
+        check(fg, bg, textMinimum);
       for (const fg of ["border", "action", "actionHover", "focus"]) check(fg, bg, 3);
     }
-    check("onAction", "action", 4.5);
-    check("onActionHover", "actionHover", 4.5);
+    check("onAction", "action", textMinimum);
+    check("onActionHover", "actionHover", textMinimum);
+    if (!legacy) check("onDanger", "danger", textMinimum);
     const failures = checks.filter((c) => !c.passes);
     result.modes[mode] = {
       tokens,
@@ -277,6 +283,16 @@ export function generate(input) {
           ? ["Hover color did not change; add an underline or another non-color affordance."]
           : [],
     };
+    if (!legacy) {
+      const brandHue = toOklch(tokens.brand).h ?? 0;
+      result.modes[mode].notes.push(
+        "Danger needs a text label and confirmation or undo; color alone is insufficient.",
+      );
+      if (toOklch(tokens.brand).c > 0.04 && (brandHue < 45 || brandHue > 350))
+        result.modes[mode].notes.push(
+          "Review red brand/danger distinction with labels, icons and placement; brand locks remain unchanged.",
+        );
+    }
     if (failures.length) result.status = "unresolved";
   }
   return result;

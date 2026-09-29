@@ -32,6 +32,8 @@ Routine design helpers run from local bundled resources. Standalone image intera
 
 For a supplied design file, read only through available authorized tools or use supplied exports; preserve source/mode evidence and existing brand rules. Generate a visual comp first only when requested and supported, then implement real accessible content and inspect it. A comp is a proposal, not proof of functionality. No Figma synchronization or validated native-app export is supplied.
 
+Default to expressive design, with reserved treatment for legal, financial, government, clinical and enterprise administration. Use a 60ch maximum for prose, a coherent responsive grid and protected English Title Case for headings. Preserve authored casing in other languages and explicit user/brand overrides. Choose openly licensed fonts unless the user supplies authorized local files; never assume those files can be redistributed. Measure WCAG 2 contrast ratios when tools are available, label danger states and use confirmation or undo where appropriate. Do not claim measurements in a text-only host.
+
 ## Notes and credits
 
 Created by Jon Gosier; feedback, feature requests and ideas: jon@filmhedge.com. Named after Dazzler, one of Jon's favorite X-Men characters. Independent project; no affiliation with Disney/Marvel or any AI vendor.

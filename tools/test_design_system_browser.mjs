@@ -107,6 +107,28 @@ try {
     await page.getByRole("button", { name: "Switch theme" }).focus();
     await page.keyboard.press("Enter");
   }
+  await page.setContent(
+    `<style>${first.css}</style><div data-grid><div>Example</div></div><p>Readable body</p>`,
+  );
+  for (const [width, columns] of [
+    [390, 4],
+    [800, 8],
+    [1440, 12],
+  ]) {
+    await page.setViewportSize({ width, height: 1000 });
+    assert.equal(
+      await page
+        .locator("[data-grid]")
+        .evaluate((e) => getComputedStyle(e).gridTemplateColumns.split(" ").length),
+      columns,
+    );
+    assert.equal(
+      await page
+        .locator("p")
+        .evaluate((e) => getComputedStyle(e).getPropertyValue("--measure-body").trim()),
+      "60ch",
+    );
+  }
   console.log(
     "Two-process continuation, 320/390/1440 reflow, 200% text, print endpoints, multilingual specimen and compiled light/dark component fixture passed",
   );

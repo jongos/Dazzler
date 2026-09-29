@@ -30,7 +30,7 @@ export function scaffold(root, config) {
   function activate(id) {
     const region = config.regions.find((r) => r.id === id);
     if (!region) return;
-    title.textContent = region.label;
+    title.textContent = region.heading ?? region.label;
     detail.textContent = region.description;
     for (const [key, button] of buttons) button.setAttribute("aria-pressed", String(key === id));
     highlight(id);
@@ -48,7 +48,8 @@ export function scaffold(root, config) {
   const all = el("details"),
     summary = el("summary", "Read all region descriptions");
   all.append(summary);
-  for (const r of config.regions) all.append(el("h3", r.label), el("p", r.description));
+  for (const r of config.regions)
+    all.append(el("h3", r.heading ?? r.label), el("p", r.description));
   root.append(all);
   const footer = el("footer", "", "hotspot-notes");
   footer.append(
