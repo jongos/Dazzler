@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.21.0 template continuation correction
+
+- **Changed:** Template token exports retain the 4/8/12 responsive grid after their semantic aliases are appended. Heading tokenization keeps accented words intact rather than treating their letters as separate words.
+- **Added:** A browser regression that applies a real template contract before measuring all three breakpoints, plus shared accented-name casing fixtures.
+- **Why:** A later root-level alias could otherwise override the earlier responsive declarations during retheming.
+- **Validation:** The real-template continuation fixture verifies 390/800/1440 widths, alongside existing text, print and saved-record checks. Runtime inventory, platform archives, marketplace pin and offline kit are regenerated together.
+
 ## 2026-09-28 — 0.21.0 release documentation correction
 
 - **Changed:** Moved the field manual's notes, credits, download links and footer after all feature chapters.

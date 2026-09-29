@@ -71,5 +71,16 @@
       "case": "upper"
     },
     "expected": "iPhone AND GitHub APIS"
+  },
+  {
+    "input": "Renée and a naïve approach",
+    "expected": "Renée and a Naïve Approach"
+  },
+  {
+    "input": "le guide de Renée",
+    "options": {
+      "lang": "fr"
+    },
+    "expected": "le guide de Renée"
   }
 ]

@@ -22,7 +22,7 @@ export function heading(text, options = {}) {
   for (const value of preserve)
     for (let p = text.indexOf(value); p !== -1; p = text.indexOf(value, p + value.length))
       spans.push([p, p + value.length]);
-  const words = [...text.matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)?/g)].filter(
+  const words = [...text.matchAll(/\p{L}+(?:['’]\p{L}+)?/gu)].filter(
     (m) => !spans.some(([a, b]) => m.index < b && m.index + m[0].length > a),
   );
   if (casing === "title" && text === text.toUpperCase()) return text;

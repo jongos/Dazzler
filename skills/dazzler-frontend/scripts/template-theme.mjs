@@ -35,6 +35,9 @@ export function templateCSS(contract, palette, fonts, policy = {}) {
   return (
     "\n/* Template semantic aliases; replace this file and review the rendered result. */\n:root {\n" +
     lines.join("\n") +
-    "\n}\n"
+    "\n}\n" +
+    (contract.bindings["--grid-columns"]
+      ? "@media(min-width:48rem){:root{--grid-columns:8}}\n@media(min-width:75rem){:root{--grid-columns:12}}\n"
+      : "")
   );
 }

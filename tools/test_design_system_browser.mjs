@@ -8,6 +8,7 @@ import { build } from "esbuild";
 import { tokens } from "../skills/dazzler-frontend/scripts/studio.mjs";
 import { specimen } from "../skills/dazzler-frontend/scripts/type-system.mjs";
 import { shadcnTheme } from "../skills/dazzler-frontend/scripts/shadcn-theme.mjs";
+import { templateCSS } from "../skills/dazzler-frontend/scripts/template-theme.mjs";
 
 const out = path.resolve(process.argv[2] ?? "dist/design-system-review");
 await fs.mkdir(out, { recursive: true });
@@ -107,8 +108,17 @@ try {
     await page.getByRole("button", { name: "Switch theme" }).focus();
     await page.keyboard.press("Enter");
   }
+  const contract = JSON.parse(
+    await fs.readFile(
+      "skills/dazzler-frontend/assets/templates/ui/webapp-workspace/tokens.json",
+      "utf8",
+    ),
+  );
+  const themed =
+    first.css +
+    templateCSS(contract, first.system.palette, first.system.fonts, first.system.policy);
   await page.setContent(
-    `<style>${first.css}</style><div data-grid><div>Example</div></div><p>Readable body</p>`,
+    `<style>${themed}</style><div data-grid><div>Example</div></div><p>Readable body</p>`,
   );
   for (const [width, columns] of [
     [390, 4],

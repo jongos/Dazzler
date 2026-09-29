@@ -36,7 +36,7 @@ def heading(text, options=None):
         spans.extend((m.start(), m.end()) for m in re.finditer(re.escape(value), text))
     words = [
         m
-        for m in re.finditer(r"[A-Za-z]+(?:['’][A-Za-z]+)?", text)
+        for m in re.finditer(r"[^\W\d_]+(?:['’][^\W\d_]+)?", text)
         if not any(m.start() < b and m.end() > a for a, b in spans)
     ]
     if case == "title" and text == text.upper():
