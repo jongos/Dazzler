@@ -1,5 +1,12 @@
 # Developer change notes
 
+## 2026-09-28 — 0.19.0 release validation correction
+
+- **Changed:** The cross-runtime default-output fixture normalizes numeric metadata to 12 significant digits while retaining exact comparisons for exported strings. Runtime output is unchanged.
+- **Added:** Portable baseline digests derived from the published 0.18.0 implementation, checked with Node 22 and 24; regenerated offline kit.
+- **Why:** GitHub's Node 20/22 jobs exposed V8 floating-point diagnostic differences of up to 1.14e-13 against Node 24. These were not design changes; same-runtime old/new outputs remain byte-identical.
+- **Validation:** Direct old/new comparisons for all three baseline inputs on Node 22 and 24, plus the composition regressions. Windows/Linux CI and uploaded asset hashes are checked before publishing the draft release.
+
 ## 2026-09-28 — 0.19.0: Purpose-based composition and controlled refinement
 
 - **Changed:** Substantial layout work now selects a content contract before styling. Browser inspection separates measured composition candidates from accessibility findings and retains contextual exceptions. Named refinements preserve existing facts, controls, brand tokens and framework; critique is read-only and harden is scoped to UI resilience. Small refinements keep accepted font/color choices. Omitted controls preserve the selected schema’s defaults.

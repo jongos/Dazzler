@@ -3,13 +3,15 @@
   "cases": [
     {
       "input": {},
-      "sha256": "9a746e3712eccd16cb11421f98d0148a7d6b14d0f85dd3126b8ac869b644947f"
+      "sha256": "9a746e3712eccd16cb11421f98d0148a7d6b14d0f85dd3126b8ac869b644947f",
+      "normalizedSha256": "2ac25671d082c51f876dffbbef99bb316c499149f23fdaa201d43b80498430f8"
     },
     {
       "input": {
         "schemaVersion": 1
       },
-      "sha256": "a72b8b151cfd906e1bfc54ebd1435b8da394f7ed1e42e887d2d04328c8dddf7e"
+      "sha256": "a72b8b151cfd906e1bfc54ebd1435b8da394f7ed1e42e887d2d04328c8dddf7e",
+      "normalizedSha256": "195cfde618709cb27045c78b1d67a83fcf5e6178d7b82fb952709089df1d04f6"
     },
     {
       "input": {
@@ -20,7 +22,9 @@
           "heading": "Young Serif"
         }
       },
-      "sha256": "9e5a8655bc6015ed3099020b4bb156ebe7edd897c39f25862ca283cdb7a639d1"
+      "sha256": "9e5a8655bc6015ed3099020b4bb156ebe7edd897c39f25862ca283cdb7a639d1",
+      "normalizedSha256": "f7cb923441e583b3728ebfad7a178e74329620df2aea6502dd01d7f80454fbeb"
     }
-  ]
+  ],
+  "normalization": "Only numeric metadata is rounded to 12 significant digits for V8 portability; all strings remain exact. sha256 records the original Node 24 baseline."
 }
