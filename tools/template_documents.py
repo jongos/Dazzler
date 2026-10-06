@@ -569,7 +569,7 @@ DOCS = [
     dict(
         id="school",
         title="How light affects seedling growth",
-        subtitle="Science investigation • Year 8",
+        subtitle="Science investigation • Year 7",
         accent="#285576",
         tint="#EAF3FA",
         font="Arial",

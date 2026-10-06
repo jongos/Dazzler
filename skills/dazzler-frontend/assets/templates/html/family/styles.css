@@ -498,6 +498,38 @@ li {
     padding-top: 6px;
   }
 }
+/* Each document has one focal treatment; data and reading order stay intact. */
+@media screen {
+  .sheet {
+    border-top: 0;
+    border-inline-start: 8px solid var(--accent);
+  }
+  .folio {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .section-title {
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--accent) 25%, var(--section-title-border-bottom));
+    padding-bottom: 0.35em;
+  }
+  .callout {
+    border-radius: 0 18px 18px 0;
+  }
+  .doc-family h1 {
+    background: var(--bright);
+    padding: 0.25em 0.4em;
+    max-width: none;
+  }
+  .doc-family .callout {
+    border-radius: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sheet {
+    padding-inline: 20px;
+  }
+}
 @page {
   size: letter landscape;
 }

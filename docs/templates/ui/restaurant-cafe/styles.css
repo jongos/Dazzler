@@ -1516,6 +1516,26 @@ body.restaurant {
 .template-cafe .morning-note > div > .eyebrow {
   color: var(--template-cafe-cafe-heading-eyebrow-template-cafe-morning-note-div-eyebrow-color);
 }
+/* Context-specific focal areas, with no decorative motion or new dependencies. */
+@media screen {
+  .template-cafe .cafe-heading {
+    border: 3px solid var(--accent);
+    border-radius: 36px 0 36px 0;
+    padding: 2rem;
+  }
+  .template-cafe .product {
+    border-radius: 0 20px 0 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .top {
+    height: auto;
+    min-height: 85px;
+  }
+  .template-cafe .cafe-heading {
+    padding: 1.2rem;
+  }
+}
 :where(p, li, blockquote, figcaption, dd):not(:where(table *, nav *, pre *, code *)) {
   max-inline-size: var(--measure-body);
 }

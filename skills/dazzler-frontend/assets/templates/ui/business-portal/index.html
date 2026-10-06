@@ -229,6 +229,102 @@
     </script>
     <script>
       (() => {
+        // skills/dazzler-frontend/scripts/headings.mjs
+        var rules = {
+          schemaVersion: 1,
+          style: "ap-like-protected",
+          smallWords: [
+            "a",
+            "an",
+            "the",
+            "and",
+            "but",
+            "or",
+            "for",
+            "nor",
+            "so",
+            "yet",
+            "at",
+            "by",
+            "in",
+            "of",
+            "off",
+            "on",
+            "out",
+            "per",
+            "to",
+            "up",
+            "via",
+            "as",
+          ],
+          phrasalPairs: ["set up", "sign in", "sign out", "log in", "log out", "back up"],
+          notes:
+            "Conservative English heading helper, not full grammatical AP editing. Preserve existing capitals, quoted/code spans, names and identifiers. Sentence mode preserves authored text. Review ambiguous phrases.",
+        };
+        function heading(text, options = {}) {
+          let { case: casing = "title", lang = "en", preserve = [] } = options;
+          if (typeof text != "string" || text.length > 1e4)
+            throw Error("Heading must be text of at most 10000 characters");
+          if (
+            !["title", "sentence", "upper", "preserve"].includes(casing) ||
+            typeof lang != "string"
+          )
+            throw Error("Invalid heading case or language");
+          if (
+            !Array.isArray(preserve) ||
+            preserve.length > 100 ||
+            preserve.some((x) => typeof x != "string" || !x || x.length > 160)
+          )
+            throw Error("Invalid heading preserve list");
+          if (!/^en(?:-|$)/i.test(lang) || ["sentence", "preserve"].includes(casing)) return text;
+          let protectedPattern =
+              /`[^`]*`|<(?:code|kbd|samp)\b[^>]*>[\s\S]*?<\/(?:code|kbd|samp)>|<[^>]*>|&(?:#[0-9]+|#x[0-9a-f]+|[a-z]+);|"[^"]*"|“[^”]*”|‘[^’]*’|«[^»]*»|(?<!\w)'[^']*'|(?:https?:\/\/|www\.)\S+|\S+@\S+|[^\s<>]*[0-9_/\\()][^\s<>]*|\b[A-Za-z]+\.[A-Za-z.]+\b/gi,
+            spans = [...text.matchAll(protectedPattern)].map((m) => [
+              m.index,
+              m.index + m[0].length,
+            ]);
+          for (let value of preserve)
+            for (let p = text.indexOf(value); p !== -1; p = text.indexOf(value, p + value.length))
+              spans.push([p, p + value.length]);
+          let protectedChars = new Uint8Array(text.length);
+          for (let [start, end2] of spans) protectedChars.fill(1, start, end2);
+          let words = [...text.matchAll(/\p{L}+(?:['’]\p{L}+)?/gu)].filter(
+            (m) => !protectedChars.subarray(m.index, m.index + m[0].length).includes(1),
+          );
+          if (casing === "title" && text === text.toUpperCase()) return text;
+          let result = "",
+            end = 0;
+          return (
+            words.forEach((m, i) => {
+              let word = m[0],
+                start = m.index,
+                stop = start + word.length,
+                replacement = word;
+              if (casing === "upper" || word === word.toLowerCase()) {
+                let between = i
+                    ? text.slice(words[i - 1].index + words[i - 1][0].length, start)
+                    : "",
+                  afterBreak = i === 0 || /[:—]\s*$/.test(between),
+                  pair =
+                    i > 0 &&
+                    /^\s+$/.test(between) &&
+                    rules.phrasalPairs.includes(
+                      words[i - 1][0].toLowerCase() + " " + word.toLowerCase(),
+                    );
+                casing === "upper"
+                  ? (replacement = /[a-z][A-Z]/.test(word) ? word : word.toUpperCase())
+                  : (afterBreak ||
+                      i === words.length - 1 ||
+                      pair ||
+                      !rules.smallWords.includes(word)) &&
+                    (replacement = word[0].toUpperCase() + word.slice(1));
+              }
+              ((result += text.slice(end, start) + replacement), (end = stop));
+            }),
+            result + text.slice(end)
+          );
+        }
+
         // tools/template_interactions.js
         var cfg = JSON.parse(document.getElementById("template-data").textContent),
           $ = (id) => document.getElementById(id),
@@ -243,7 +339,7 @@
           dialog = $("edit-dialog"),
           pending = "";
         function openDialog(title, action, content = "", label = "Details") {
-          (($("dialog-title").textContent = title),
+          (($("dialog-title").textContent = heading(title)),
             ($("dialog-content").innerHTML = content),
             ($("entry-label").textContent = label),
             ($("entry").value = ""),
@@ -263,7 +359,7 @@
           $("deliverable-list").innerHTML = cfg.deliverables
             .map(
               (x, i) =>
-                `<article class="deliverable"><header><div><small>${x.version} \xB7 Due ${x.due}</small><h3>${x.name}</h3></div><span class="pill">${x.status}</span></header><p>${x.description}</p><div class="actions"><button class="secondary" data-brief="${i}">View review brief</button>${i === 0 ? '<button data-approve="0">Approve in preview</button><button class="secondary" data-dialog="revision">Request a revision</button>' : ""}</div></article>`,
+                `<article class="deliverable"><header><div><small>${x.version} \xB7 Due ${x.due}</small><h3>${esc(heading(x.name))}</h3></div><span class="pill">${x.status}</span></header><p>${x.description}</p><div class="actions"><button class="secondary" data-brief="${i}">View review brief</button>${i === 0 ? '<button data-approve="0">Approve in preview</button><button class="secondary" data-dialog="revision">Request a revision</button>' : ""}</div></article>`,
             )
             .join("");
         }
@@ -295,7 +391,7 @@
               openDialog(
                 d.name,
                 "brief",
-                `<p>${esc(d.description)}</p><h3>Review checklist</h3><ul><li>Does this meet the agreed scope?</li><li>Are the facts and wording accurate?</li><li>What specific changes are needed?</li></ul><p>${esc(d.status)} \xB7 ${esc(d.version)}</p>`,
+                `<p>${esc(d.description)}</p><h3>Review Checklist</h3><ul><li>Does this meet the agreed scope?</li><li>Are the facts and wording accurate?</li><li>What specific changes are needed?</li></ul><p>${esc(d.status)} \xB7 ${esc(d.version)}</p>`,
                 "",
               );
             }

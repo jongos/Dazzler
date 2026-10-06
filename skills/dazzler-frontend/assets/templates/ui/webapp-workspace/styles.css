@@ -1492,6 +1492,30 @@ h1 {
 body.restaurant {
   background: var(--paper);
 }
+/* Context-specific focal areas, with no decorative motion or new dependencies. */
+@media screen {
+  .template-workspace .page-title {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 0 2rem;
+    align-items: end;
+  }
+  .template-workspace .page-title .eyebrow {
+    grid-column: 1 / -1;
+  }
+  .template-workspace .page-title h1 {
+    margin-block: 0.3em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .top {
+    height: auto;
+    min-height: 85px;
+  }
+  .template-workspace .page-title {
+    display: block;
+  }
+}
 :where(p, li, blockquote, figcaption, dd):not(:where(table *, nav *, pre *, code *)) {
   max-inline-size: var(--measure-body);
 }

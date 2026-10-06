@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 import tempfile
 import unittest
+import sys
 from collections import Counter
 from zipfile import ZipFile
 from xml.etree import ElementTree as ET
@@ -18,6 +19,16 @@ spec.loader.exec_module(templates)
 
 
 class TemplateTests(unittest.TestCase):
+    def test_generated_document_headings(self):
+        sys.path.insert(0, str(ROOT / "skills/dazzler-frontend/scripts"))
+        from heading_audit import audit, collect
+
+        for path in (ROOT / "skills/dazzler-frontend/assets/templates/docx").glob(
+            "*.docx"
+        ):
+            with self.subTest(template=path.name):
+                self.assertEqual(audit(collect(path))["status"], "pass")
+
     def test_ui_scripts_only_reference_existing_elements(self):
         scripts = set()
         for file in (ROOT / "skills/dazzler-frontend/assets/templates/ui").glob(
@@ -30,7 +41,8 @@ class TemplateTests(unittest.TestCase):
             self.assertFalse(
                 referenced - ids, f"{file.parent.name}: {referenced - ids}"
             )
-            self.assertLess(len(script.encode()), 6000)
+            # Includes the shared protected-casing rules; no network runtime.
+            self.assertLess(len(script.encode()), 12000)
             scripts.add(hashlib.sha256(script.encode()).hexdigest())
         self.assertEqual(len(scripts), 10)
 

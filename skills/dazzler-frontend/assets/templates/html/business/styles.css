@@ -435,6 +435,46 @@ li {
 }
 @media print {
 }
+/* Each document has one focal treatment; data and reading order stay intact. */
+@media screen {
+  .sheet {
+    border-top: 0;
+    border-inline-start: 8px solid var(--accent);
+  }
+  .folio {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .section-title {
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--accent) 25%, var(--section-title-border-bottom));
+    padding-bottom: 0.35em;
+  }
+  .callout {
+    border-radius: 0 18px 18px 0;
+  }
+  .doc-business .sheet:first-child h1 {
+    background: var(--accent);
+    color: var(--doc-business-sheet-first-child-h1-color);
+    padding: 0.4em 0.45em;
+    max-width: none;
+  }
+  .doc-business .metrics {
+    gap: 4px;
+    background: var(--doc-business-metrics-background);
+  }
+  .doc-business .metric {
+    background: var(--accent);
+  }
+  .doc-business .metric:nth-child(2) {
+    background: var(--secondary);
+  }
+}
+@media screen and (max-width: 600px) {
+  .sheet {
+    padding-inline: 20px;
+  }
+}
 :where(p, li, blockquote, figcaption, dd):not(:where(table *, nav *, pre *, code *)) {
   max-inline-size: var(--measure-body);
 }

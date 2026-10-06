@@ -543,7 +543,7 @@ def enrich(docs, uis):
             d["pages"][1]["blocks"] = [
                 chart(
                     "Mean height at day 14",
-                    [("4 hours light", 7.2), ("8 hours light", 8.2)],
+                    [("4 h/day", 7.2), ("8 h/day", 8.2)],
                     "bar",
                     "cm",
                 ),
@@ -696,9 +696,9 @@ def enrich(docs, uis):
                 chart(
                     "Synthetic delivery outcomes",
                     [
-                        ("First attempt", 960),
-                        ("After retry", 35),
-                        ("Held for review", 5),
+                        ("First try", 960),
+                        ("Retry", 35),
+                        ("Held", 5),
                     ],
                     "bar",
                     "events",

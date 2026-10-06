@@ -1,6 +1,7 @@
 // Compile one layout's offline preview behavior; esbuild is a build-only dependency.
 import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
+import { readFileSync } from "node:fs";
 const layout = process.argv[2];
 if (
   ![
@@ -26,5 +27,27 @@ const result = await build({
   treeShaking: true,
   minifySyntax: true,
   define: { DAZZLER_LAYOUT: JSON.stringify(layout) },
+  plugins: [
+    {
+      name: "local-heading-rules",
+      setup(build) {
+        build.onLoad({ filter: /[\\/]headings\.mjs$/ }, ({ path }) => {
+          const source = readFileSync(path, "utf8");
+          const rules = readFileSync(
+            new URL("../skills/dazzler-frontend/references/title-case.json", import.meta.url),
+            "utf8",
+          );
+          return {
+            contents:
+              "export const rules = " +
+              JSON.stringify(JSON.parse(rules)) +
+              ";\n" +
+              source.slice(source.indexOf("export function heading(")),
+            loader: "js",
+          };
+        });
+      },
+    },
+  ],
 });
 process.stdout.write(result.outputFiles[0].text);

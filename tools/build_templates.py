@@ -25,7 +25,7 @@ DOCS, UIS = enrich(DOCS, UIS)
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills/dazzler-frontend"
 OUT = SKILL / "assets/templates"
-VERSION = "0.21.0"
+VERSION = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))["version"]
 
 
 def fonts():
@@ -90,7 +90,9 @@ def refresh_hashes(catalog):
     )
 
 
-def build():
+def build(web_only=False):
+    if web_only and not all((OUT / "docx" / f"{d['id']}.docx").is_file() for d in DOCS):
+        raise ValueError("Build the Word templates before refreshing web previews")
     for name in ["docx", "html", "ui"]:
         (OUT / name).mkdir(parents=True, exist_ok=True)
     fonts()
@@ -109,7 +111,8 @@ def build():
             for block in page.get("blocks", []):
                 if block.get("type") == "h":
                     block["text"] = heading(block["text"])
-        render_docx(d, OUT / "docx" / f"{d['id']}.docx")
+        if not web_only:
+            render_docx(d, OUT / "docx" / f"{d['id']}.docx")
         render_html(d, OUT / "html" / f"{d['id']}.html")
         for format in ["docx", "html"]:
             catalog["templates"].append(
@@ -170,15 +173,20 @@ def build():
     )
     gallery()
     refresh_hashes(catalog)
-    print("Built 10 DOCX, 10 HTML and 10 purpose-specific UI templates.")
+    print(
+        "Built 20 web templates; retained Word files."
+        if web_only
+        else "Built 10 DOCX, 10 HTML and 10 purpose-specific UI templates."
+    )
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--gallery-only", action="store_true")
+    parser.add_argument("--web-only", action="store_true")
     args = parser.parse_args()
     if args.gallery_only:
         gallery()
         refresh_hashes(json.loads((OUT / "catalog.json").read_text(encoding="utf-8")))
     else:
-        build()
+        build(web_only=args.web_only)

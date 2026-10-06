@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-06 — 0.26.0: Rebuilt working collection
+
+**Changed:** Rebuilt all 30 templates with context-specific title treatments, tinted data tables, deliberate phrase emphasis and focused UI framing. Preserved the reconciled fictional data and existing interactions. Updated the field guide, gallery and host editions. The catalog now follows the package version.
+
+**Added:** Shared editorial profiles, Word heading regression checks and browser checks covering generated headings before and after interactions. The browser bundle embeds the existing local heading rules without a filesystem dependency. Snapshot capture waits for the seating map to load.
+
+**Why:** Make the shipped examples demonstrate the current design-first guidance, including purposeful color and protected Title Case. Correct a school-year mismatch and shorten two chart labels so they remain readable.
+
+**Validation:** All ten Word documents rendered in Microsoft Word to their expected 20 pages and were visually reviewed, together with the 20 browser templates. LibreOffice was unavailable; Word PDF export and PDFium provided the native-document verification. 79 Node tests and 64 Python tests pass (one platform-specific skip). All 20 web templates pass desktop/mobile layout, automated accessibility, heading and interaction checks; the field guide and all 30 gallery links pass. Local links, formatting and the 703-file runtime inventory pass. Host ZIPs remain below 24 MB compressed and unpacked. Browser script budgets allow 12 KB of readable source including the shared casing rules.
+
 ## 2026-10-06 — 0.25.1: Focused amplification within the existing design
 
 **Changed:** The bolder workflow now compares a weak section with its neighbors, reuses underused brand elements, strengthens one focal move and quiets competing emphasis. Reviews include adjacent pages or sections and scoped before/after checks. Existing Dazzler rules take precedence.

@@ -1499,6 +1499,22 @@ h1 {
 body.restaurant {
   background: var(--paper);
 }
+/* Context-specific focal areas, with no decorative motion or new dependencies. */
+@media screen {
+  .template-reservations .booking-card {
+    border-top: 8px solid var(--accent);
+    border-radius: 0 0 24px 24px;
+  }
+  .template-reservations h1 {
+    font-style: italic;
+  }
+}
+@media screen and (max-width: 700px) {
+  .top {
+    height: auto;
+    min-height: 85px;
+  }
+}
 :where(p, li, blockquote, figcaption, dd):not(:where(table *, nav *, pre *, code *)) {
   max-inline-size: var(--measure-body);
 }

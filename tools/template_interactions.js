@@ -1,3 +1,4 @@
+import { heading } from "../skills/dazzler-frontend/scripts/headings.mjs";
 // Local-only demo state. No fetch, storage, payment, booking, or messaging integration.
 const cfg = JSON.parse(document.getElementById("template-data").textContent);
 const $ = (id) => document.getElementById(id),
@@ -20,7 +21,7 @@ let pending = "",
   cart = {},
   category = "All";
 function openDialog(title, action, content = "", label = "Details") {
-  $("dialog-title").textContent = title;
+  $("dialog-title").textContent = heading(title);
   $("dialog-content").innerHTML = content;
   $("entry-label").textContent = label;
   $("entry").value = "";
@@ -51,7 +52,7 @@ function projectRender() {
   $("projects").innerHTML = rows
     .map(
       (x) =>
-        `<article class="project-row"><div><p>${esc(x.client)}</p><h3>${esc(x.name)}</h3><span class="pill ${x.status === "At risk" ? "warning" : ""}">${esc(x.status)}</span></div><div><p>${x.done} of ${x.total} tasks complete</p><progress value="${x.done}" max="${x.total || 1}" aria-label="${esc(x.name)} task completion"></progress></div><div><p>${esc(x.owner)}</p><strong>Due ${esc(x.due)}</strong></div></article>`,
+        `<article class="project-row"><div><p>${esc(x.client)}</p><h3>${esc(heading(x.name))}</h3><span class="pill ${x.status === "At risk" ? "warning" : ""}">${esc(x.status)}</span></div><div><p>${x.done} of ${x.total} tasks complete</p><progress value="${x.done}" max="${x.total || 1}" aria-label="${esc(x.name)} task completion"></progress></div><div><p>${esc(x.owner)}</p><strong>Due ${esc(x.due)}</strong></div></article>`,
     )
     .join("");
   $("empty").hidden = rows.length > 0;
@@ -64,11 +65,11 @@ function boardRender() {
   $("board").innerHTML = ["Ready", "In progress", "Review", "Done"]
     .map(
       (stage) =>
-        `<section class="board-column"><h2>${stage}<span>${tasks.filter((t) => t.stage === stage).length}</span></h2>${tasks
+        `<section class="board-column"><h2>${heading(stage)}<span>${tasks.filter((t) => t.stage === stage).length}</span></h2>${tasks
           .filter((t) => t.stage === stage)
           .map(
             (t) =>
-              `<article class="task"><span class="task-id">${esc(t.id)}</span><h3>${esc(t.title)}</h3><p class="pill ${t.priority === "High" ? "warning" : ""}">${esc(t.priority)} priority</p><div class="task-meta"><span>${esc(t.owner)}</span><span>${t.points} points</span></div><button class="secondary" data-move="${esc(t.id)}">${stage === "Done" ? "Reopen in Ready" : "Move to " + ["In progress", "Review", "Done"][["Ready", "In progress", "Review"].indexOf(stage)]}</button></article>`,
+              `<article class="task"><span class="task-id">${esc(t.id)}</span><h3>${esc(heading(t.title))}</h3><p class="pill ${t.priority === "High" ? "warning" : ""}">${esc(t.priority)} priority</p><div class="task-meta"><span>${esc(t.owner)}</span><span>${t.points} points</span></div><button class="secondary" data-move="${esc(t.id)}">${stage === "Done" ? "Reopen in Ready" : "Move to " + ["In progress", "Review", "Done"][["Ready", "In progress", "Review"].indexOf(stage)]}</button></article>`,
           )
           .join("")}</section>`,
     )
@@ -146,7 +147,7 @@ function opsRender() {
     ? rows
         .map(
           (x) =>
-            `<article class="ticket"><div class="ticket-top"><small>${x.id} · ${x.queue}</small><span class="pill ${x.priority === "High" ? "warning" : ""}">${x.priority} priority</span></div><h3>${x.subject}</h3><div class="ticket-bottom"><small>${x.owner} · ${x.age} min old · ${x.status}</small><button class="secondary" data-resolve="${x.id}" ${x.status === "Resolved" ? "disabled" : ""}>${x.status === "Resolved" ? "Resolved" : "Resolve in preview"}</button></div></article>`,
+            `<article class="ticket"><div class="ticket-top"><small>${x.id} · ${x.queue}</small><span class="pill ${x.priority === "High" ? "warning" : ""}">${x.priority} priority</span></div><h3>${esc(heading(x.subject))}</h3><div class="ticket-bottom"><small>${x.owner} · ${x.age} min old · ${x.status}</small><button class="secondary" data-resolve="${x.id}" ${x.status === "Resolved" ? "disabled" : ""}>${x.status === "Resolved" ? "Resolved" : "Resolve in preview"}</button></div></article>`,
         )
         .join("")
     : "<p>No tickets match these filters.</p>";
@@ -171,8 +172,8 @@ function menuRender() {
   $("products").innerHTML = items
     .map((x) =>
       DAZZLER_LAYOUT === "cafe"
-        ? `<article class="product"><small>${x.category}</small><h3>${x.name}</h3><p>${x.description}</p><div class="price"><strong>${money(x.price)}</strong><button data-add="${x.index}" aria-label="Add ${x.name}">Add +</button></div></article>`
-        : `<article class="menu-dish"><header><h3>${x.name}</h3><strong>${money(x.price)}</strong></header><p>${x.description}</p><span class="pill">${x.category}${x.vegan ? " · V" : ""}</span></article>`,
+        ? `<article class="product"><small>${x.category}</small><h3>${esc(heading(x.name))}</h3><p>${x.description}</p><div class="price"><strong>${money(x.price)}</strong><button data-add="${x.index}" aria-label="Add ${x.name}">Add +</button></div></article>`
+        : `<article class="menu-dish"><header><h3>${esc(heading(x.name))}</h3><strong>${money(x.price)}</strong></header><p>${x.description}</p><span class="pill">${x.category}${x.vegan ? " · V" : ""}</span></article>`,
     )
     .join("");
   if (DAZZLER_LAYOUT === "menu") $("menu-empty").hidden = items.length > 0;
@@ -193,7 +194,7 @@ function businessRender() {
   $("deliverable-list").innerHTML = cfg.deliverables
     .map(
       (x, i) =>
-        `<article class="deliverable"><header><div><small>${x.version} · Due ${x.due}</small><h3>${x.name}</h3></div><span class="pill">${x.status}</span></header><p>${x.description}</p><div class="actions"><button class="secondary" data-brief="${i}">View review brief</button>${i === 0 ? '<button data-approve="0">Approve in preview</button><button class="secondary" data-dialog="revision">Request a revision</button>' : ""}</div></article>`,
+        `<article class="deliverable"><header><div><small>${x.version} · Due ${x.due}</small><h3>${esc(heading(x.name))}</h3></div><span class="pill">${x.status}</span></header><p>${x.description}</p><div class="actions"><button class="secondary" data-brief="${i}">View review brief</button>${i === 0 ? '<button data-approve="0">Approve in preview</button><button class="secondary" data-dialog="revision">Request a revision</button>' : ""}</div></article>`,
     )
     .join("");
 }
@@ -260,7 +261,7 @@ document.addEventListener("click", (event) => {
     openDialog(
       d.name,
       "brief",
-      `<p>${esc(d.description)}</p><h3>Review checklist</h3><ul><li>Does this meet the agreed scope?</li><li>Are the facts and wording accurate?</li><li>What specific changes are needed?</li></ul><p>${esc(d.status)} · ${esc(d.version)}</p>`,
+      `<p>${esc(d.description)}</p><h3>Review Checklist</h3><ul><li>Does this meet the agreed scope?</li><li>Are the facts and wording accurate?</li><li>What specific changes are needed?</li></ul><p>${esc(d.status)} · ${esc(d.version)}</p>`,
       "",
     );
   }

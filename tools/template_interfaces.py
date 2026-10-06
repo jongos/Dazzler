@@ -542,6 +542,9 @@ def build_ui(d, folder):
         .with_name("template_showcase_ui.css")
         .read_text(encoding="utf-8")
     )
+    css += (
+        Path(__file__).with_name("template_ui_refresh.css").read_text(encoding="utf-8")
+    )
     (folder / "styles.css").write_text(css, encoding="utf-8")
     (folder / "template.json").write_text(
         json.dumps(data, indent=2) + "\n", encoding="utf-8"

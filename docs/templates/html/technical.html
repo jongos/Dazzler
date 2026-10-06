@@ -18,10 +18,7 @@
         <header class="folio"><span>PLATFORM ENGINEERING</span><span>01 / 02</span></header>
         <h1>Order Status Webhook Delivery</h1>
         <p class="subtitle"><em>Technical design • RFC 014 • Proposed</em></p>
-        <p class="prose">
-          <strong class="keyword">Owner</strong>: Alex Rivera Reviewers: API + Reliability Updated:
-          18 June 2027
-        </p>
+        <p class="prose">Owner: Alex Rivera Reviewers: API + Reliability Updated: 18 June 2027</p>
         <div class="metrics">
           <div class="metric"><strong>6</strong><span>attempt maximum</span></div>
           <div class="metric"><strong>10 sec</strong><span>request timeout</span></div>
@@ -103,15 +100,15 @@
             <table>
               <tbody>
                 <tr>
-                  <th>First attempt</th>
+                  <th>First try</th>
                   <td>960 events</td>
                 </tr>
                 <tr>
-                  <th>After retry</th>
+                  <th>Retry</th>
                   <td>35 events</td>
                 </tr>
                 <tr>
-                  <th>Held for review</th>
+                  <th>Held</th>
                   <td>5 events</td>
                 </tr>
               </tbody>
@@ -140,7 +137,7 @@
               </tr>
               <tr>
                 <th scope="row">HTTP 400</th>
-                <td>Stop and request configuration <strong class="keyword">review</strong></td>
+                <td>Stop and request configuration review</td>
                 <td>Held</td>
               </tr>
               <tr>
@@ -158,17 +155,15 @@
         </div>
         <h2 class="section-title">Release Gate</h2>
         <p class="prose">
-          Replay 1,000 <strong class="keyword">synthetic</strong> events. 960 succeed first time, 35
-          after <strong class="keyword">retry</strong> and 5 remain held for
-          <strong class="keyword">review</strong>: 99.5% eventually delivered in this fixture, not a
-          production SLO.
+          Replay 1,000 synthetic events. 960 succeed first time, 35 after
+          <strong class="keyword">retry</strong> and 5 remain held for review: 99.5% eventually
+          delivered in this fixture, not a production SLO.
         </p>
         <aside class="callout">
           <strong>ROLL BACK SAFELY</strong>
           <p>
             Pause new dispatch and retain the outbox and attempt history. Never log signing secrets.
-            Expand only after a measured <strong class="keyword">pilot</strong> and operational
-            <strong class="keyword">review</strong>.
+            Expand only after a measured pilot and operational review.
           </p>
         </aside>
         <footer class="page-foot">

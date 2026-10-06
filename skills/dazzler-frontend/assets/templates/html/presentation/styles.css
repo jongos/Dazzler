@@ -469,6 +469,36 @@ li {
 }
 @media print {
 }
+/* Each document has one focal treatment; data and reading order stay intact. */
+@media screen {
+  .sheet {
+    border-top: 0;
+    border-inline-start: 8px solid var(--accent);
+  }
+  .folio {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .section-title {
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--accent) 25%, var(--section-title-border-bottom));
+    padding-bottom: 0.35em;
+  }
+  .callout {
+    border-radius: 0 18px 18px 0;
+  }
+  .doc-presentation .sheet {
+    border-inline-start: 12px solid var(--bright);
+  }
+  .doc-presentation h1 {
+    max-width: 16ch;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sheet {
+    padding-inline: 20px;
+  }
+}
 @page {
   size: letter landscape;
 }

@@ -16,19 +16,19 @@
   "warnings": [],
   "data": [
     {
-      "x": "First attempt",
+      "x": "First try",
       "y": 960,
       "series": "Data",
       "_order": 0
     },
     {
-      "x": "After retry",
+      "x": "Retry",
       "y": 35,
       "series": "Data",
       "_order": 1
     },
     {
-      "x": "Held for review",
+      "x": "Held",
       "y": 5,
       "series": "Data",
       "_order": 2

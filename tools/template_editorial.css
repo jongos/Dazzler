@@ -321,7 +321,7 @@ li {
 .doc-marketing h1 {
   font-size: 72px;
   line-height: 0.98;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: -0.015em;
 }
 .doc-marketing .sheet {

@@ -108,15 +108,15 @@
           "label": "Synthetic delivery outcomes",
           "rows": [
             [
-              "First attempt",
+              "First try",
               960
             ],
             [
-              "After retry",
+              "Retry",
               35
             ],
             [
-              "Held for review",
+              "Held",
               5
             ]
           ],

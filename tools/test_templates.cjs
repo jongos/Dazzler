@@ -6,6 +6,14 @@ const { chromium } = require("playwright"),
 const { pathToFileURL } = require("node:url");
 (async () => {
   const capture = !process.argv.includes("--check-only");
+  const { heading } = await import("../skills/dazzler-frontend/scripts/headings.mjs");
+  async function checkHeadings(page, id) {
+    const texts = await page.locator("h1,h2,h3,h4,h5,h6,[role=heading]").allTextContents();
+    for (const raw of texts) {
+      const text = raw.replace(/\s+/g, " ").trim();
+      assert.equal(text, heading(text), id + ": rendered heading " + text);
+    }
+  }
   const root = path.resolve("skills/dazzler-frontend/assets/templates"),
     out = path.resolve(process.argv[2]);
   await fs.mkdir(out, { recursive: true });
@@ -37,8 +45,17 @@ const { pathToFileURL } = require("node:url");
         [],
         t.id + " broken images",
       );
+      await checkHeadings(page, t.id);
       for (const width of [1440, 390]) {
         await page.setViewportSize({ width, height: 1000 });
+        if (await page.locator("iframe").count()) {
+          await page.locator("iframe").scrollIntoViewIfNeeded();
+          const frame = page.frameLocator("iframe");
+          await frame.locator("#illustration").waitFor();
+          await frame.locator("img").evaluateAll(async (images) => {
+            await Promise.all(images.map((image) => image.decode()));
+          });
+        }
         const accessibility = await page.evaluate(() =>
           axe.run(document, {
             runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21aa"] },
@@ -54,12 +71,24 @@ const { pathToFileURL } = require("node:url");
           await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1),
           t.id + " overflow",
         );
+        if (t.format === "ui") {
+          assert(
+            await page.evaluate(() => {
+              const header = document.querySelector(".top").getBoundingClientRect();
+              return [...document.querySelectorAll(".top nav a")].every(
+                (link) => link.getBoundingClientRect().bottom <= header.bottom + 1,
+              );
+            }),
+            t.id + " navigation escaped its header",
+          );
+        }
         await page.screenshot({
           path: path.join(out, t.id + "-" + width + ".png"),
           fullPage: true,
         });
       }
       await page.setViewportSize({ width: 1440, height: 1000 });
+      await page.evaluate(() => scrollTo(0, 0));
       if (capture)
         await page.screenshot({
           path: path.join(root, "previews", t.id + ".jpg"),
@@ -220,7 +249,7 @@ const { pathToFileURL } = require("node:url");
         }
         if (cfg.layout === "business") {
           await page.locator('[data-brief="0"]').click();
-          assert((await page.locator("#dialog-content").innerText()).includes("Review checklist"));
+          assert((await page.locator("#dialog-content").innerText()).includes("Review Checklist"));
           await page.keyboard.press("Escape");
           await page.locator('[data-approve="0"]').click();
           assert(
@@ -244,6 +273,7 @@ const { pathToFileURL } = require("node:url");
         );
         assert.deepEqual(broken, [], t.id + " broken anchors");
       }
+      await checkHeadings(page, t.id);
       captures.push({
         id: t.id,
         engine: "Chromium",

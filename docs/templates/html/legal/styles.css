@@ -447,6 +447,38 @@ li {
 }
 @media print {
 }
+/* Each document has one focal treatment; data and reading order stay intact. */
+@media screen {
+  .sheet {
+    border-top: 0;
+    border-inline-start: 8px solid var(--accent);
+  }
+  .folio {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .section-title {
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--accent) 25%, var(--section-title-border-bottom));
+    padding-bottom: 0.35em;
+  }
+  .callout {
+    border-radius: 0 18px 18px 0;
+  }
+  .doc-legal .sheet {
+    border-inline-start: 0;
+    border-top: 5px double var(--accent);
+  }
+  .doc-legal h1 {
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.3em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sheet {
+    padding-inline: 20px;
+  }
+}
 :where(p, li, blockquote, figcaption, dd):not(:where(table *, nav *, pre *, code *)) {
   max-inline-size: var(--measure-body);
 }

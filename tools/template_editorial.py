@@ -3,10 +3,15 @@
 import html, re
 from datetime import datetime, timezone
 from pathlib import Path
+from template_refresh import EMPHASIS, TINTS
+from headings import heading
 
 
-def segments(text):
-    pattern = r"\b(pilot|evidence|synthetic|decision|target|approved|review|owner|scope|retry|allergies|RSVP|fictional|at-least-once|acceptance|budget)\b"
+def segments(text, phrases=()):
+    if not phrases:
+        yield str(text), False
+        return
+    pattern = r"(?<!\w)(?:" + "|".join(re.escape(p) for p in phrases) + r")(?!\w)"
     cursor = 0
     for match in list(re.finditer(pattern, str(text), re.I))[:3]:
         yield str(text)[cursor : match.start()], False
@@ -15,24 +20,29 @@ def segments(text):
     yield str(text)[cursor:], False
 
 
-def rich(text):
+def rich(text, phrases=()):
     return "".join(
         (
             '<strong class="keyword">' + html.escape(s) + "</strong>"
             if bold
             else html.escape(s)
         )
-        for s, bold in segments(text)
+        for s, bold in segments(text, phrases)
     )
 
 
 def render_html(d, path):
     e = lambda x: html.escape(str(x), quote=True)
 
+    format_rich = rich
+
+    def render_rich(text):
+        return format_rich(text, EMPHASIS[d["id"]])
+
     def block(b):
         k = b["type"]
         if k in ("p", "h"):
-            return f'<{"h2" if k=="h" else "p"} class="{"section-title" if k=="h" else "prose"}">{rich(b["text"])}</{"h2" if k=="h" else "p"}>'
+            return f'<{"h2" if k=="h" else "p"} class="{"section-title" if k=="h" else "prose"}">{render_rich(b["text"])}</{"h2" if k=="h" else "p"}>'
         if k == "metrics":
             return (
                 '<div class="metrics">'
@@ -72,13 +82,13 @@ def render_html(d, path):
                 '<aside class="callout"><strong>'
                 + e(b["label"])
                 + "</strong><p>"
-                + rich(b["text"])
+                + render_rich(b["text"])
                 + "</p></aside>"
             )
         if k == "list":
             return (
                 "<ul>"
-                + "".join("<li>" + rich(t) + "</li>" for t in b["items"])
+                + "".join("<li>" + render_rich(t) + "</li>" for t in b["items"])
                 + "</ul>"
             )
         if k == "code":
@@ -108,7 +118,7 @@ def render_html(d, path):
                     "<"
                     + ('th scope="row"' if i == 0 else "td")
                     + ">"
-                    + rich(v)
+                    + render_rich(v)
                     + "</"
                     + ("th" if i == 0 else "td")
                     + ">"
@@ -144,6 +154,7 @@ def render_html(d, path):
     css = (Path(__file__).with_name("template_editorial.css")).read_text(
         encoding="utf-8"
     )
+    css += Path(__file__).with_name("template_refresh.css").read_text(encoding="utf-8")
     if d.get("landscape"):
         css += "@page{size:letter landscape}"
     vars = f":root{{--accent:{d['accent']};--secondary:{d['secondary']};--bright:{d['bright']};--paper:{d['paper']};--ink:{d['ink']};--display:'{d['headingFont']}';}}"
@@ -201,7 +212,7 @@ def render_docx(d, path):
         node.append(el)
 
     def runs(para, text, size=None):
-        for value, bold in segments(text):
+        for value, bold in segments(text, EMPHASIS[d["id"]]):
             run = para.add_run(value)
             run.bold = bold
             if bold:
@@ -268,7 +279,7 @@ def render_docx(d, path):
     doc.core_properties.author = "Dazzler / Jon Gosier"
     doc.core_properties.subject = d["use"]
     doc.core_properties.created = doc.core_properties.modified = datetime(
-        2026, 9, 28, tzinfo=timezone.utc
+        2026, 10, 6, tzinfo=timezone.utc
     )
     footer = sec.footer.paragraphs[0]
     runs(
@@ -294,7 +305,8 @@ def render_docx(d, path):
                 cell.width = int(width * fractions[ci] / 100)
                 props = cell._tc.get_or_add_tcPr()
                 shade(
-                    props, accent if ri == 0 else ("#F0F2F6" if ri % 2 else "#FFFFFF")
+                    props,
+                    accent if ri == 0 else (TINTS[d["id"]] if ri % 2 else "#FFFFFF"),
                 )
                 margin = OxmlElement("w:tcMar")
                 for side in ("top", "left", "bottom", "right"):
@@ -342,6 +354,24 @@ def render_docx(d, path):
         r.font.size = Pt(8)
         color(r, accent)
         title = doc.add_paragraph(pg["title"], "Title")
+        if d["id"] in ("professional", "business", "marketing", "technical"):
+            shade(title._p.get_or_add_pPr(), accent)
+            for run in title.runs:
+                color(run, "#FFFFFF")
+        elif d["id"] in ("fun", "family", "school"):
+            shade(title._p.get_or_add_pPr(), d["bright"])
+        elif d["id"] == "legal":
+            border = OxmlElement("w:pBdr")
+            edge = OxmlElement("w:bottom")
+            for key, value in {
+                "val": "single",
+                "sz": "16",
+                "color": accent[1:],
+                "space": "4",
+            }.items():
+                edge.set(qn("w:" + key), value)
+            border.append(edge)
+            title._p.get_or_add_pPr().append(border)
         if d["id"] == "presentation":
             shade(title._p.get_or_add_pPr(), "232447")
             for run in title.runs:
@@ -371,7 +401,7 @@ def render_docx(d, path):
                     for name, description, price in b["rows"]:
                         para = doc.add_paragraph()
                         para.paragraph_format.space_before = Pt(12)
-                        r = para.add_run(name + "   /   " + price)
+                        r = para.add_run(heading(name) + "   /   " + price)
                         r.font.name = "Georgia"
                         r.font.size = Pt(17)
                         color(r, accent)
@@ -381,7 +411,7 @@ def render_docx(d, path):
                 else:
                     make_table(b["headers"], b["rows"], b.get("widths"))
             elif k == "chart":
-                para = doc.add_paragraph(b["label"], "Heading 2")
+                para = doc.add_paragraph(heading(b["label"]), "Heading 2")
                 para.paragraph_format.keep_with_next = True
                 doc.add_picture(
                     str(path.parents[1] / "charts" / f"{b['asset']}.png"),
@@ -400,7 +430,7 @@ def render_docx(d, path):
                 para = doc.add_paragraph()
                 shade(
                     para._p.get_or_add_pPr(),
-                    "F1EDF6" if d["id"] == "legal" else "EDF2F9",
+                    TINTS[d["id"]],
                 )
                 para.paragraph_format.space_before = Pt(6)
                 para.paragraph_format.space_after = Pt(8)

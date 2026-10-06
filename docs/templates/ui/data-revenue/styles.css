@@ -1509,6 +1509,22 @@ h1 {
 body.restaurant {
   background: var(--paper);
 }
+/* Context-specific focal areas, with no decorative motion or new dependencies. */
+@media screen {
+  .template-revenue .page-title {
+    border-bottom: 6px solid var(--bright);
+  }
+  .template-revenue .metric-card {
+    border-radius: 0;
+    border-top-width: 6px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .top {
+    height: auto;
+    min-height: 85px;
+  }
+}
 :where(p, li, blockquote, figcaption, dd):not(:where(table *, nav *, pre *, code *)) {
   max-inline-size: var(--measure-body);
 }

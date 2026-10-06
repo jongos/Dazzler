@@ -16,13 +16,13 @@
   "warnings": [],
   "data": [
     {
-      "x": "4 hours light",
+      "x": "4 h/day",
       "y": 7.2,
       "series": "Data",
       "_order": 0
     },
     {
-      "x": "8 hours light",
+      "x": "8 h/day",
       "y": 8.2,
       "series": "Data",
       "_order": 1
