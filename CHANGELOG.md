@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-06 — 0.25.0: Design-first editorial craft
+
+**Changed:** Dazzler now reviews newly authored or editable copy for empty phrasing, unsupported praise and inconsistent terminology. User intent, factual integrity, accessibility and the chosen design direction take precedence over writing preferences. Expressive formatting, purposeful fragments, protected wording and author voice remain intact.
+
+**Added:** A concise editorial workflow, eight manual review scenarios, pinned source provenance and the retained MIT notice. All host editions and the portable prompt inherit the guidance without a runtime dependency.
+
+**Why:** Improve the language inside designed artifacts without turning editorial heuristics into rigid bans or flattening the design. Visual-only work preserves supplied wording; critique-only work remains read-only.
+
+**Validation:** 77 Node tests and 64 Python tests pass (one Windows symlink case skipped), including entrypoint size, cross-host routing and retained-license checks. Manual scenarios are provided for observed host evaluation, not claimed as automated editorial-quality passes.
+
 ## 2026-10-06 — 0.24.0: Final heading gates and deliberate document design
 
 **Changed:** Every Dazzler document and web workflow now requires a final heading-case check, including custom exporters and other artifact tools. Document design defaults apply throughout the body: purposeful surfaces, editorial layouts, selective emphasis and useful callouts matched to the brief. Reserved styling retains a visual identity; explicit plain requests remain supported.

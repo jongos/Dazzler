@@ -14,3 +14,7 @@ Maintainers can use `tools/evaluate_codex.py` from the source checkout for fresh
 ## Design Principles Review
 
 Use `evals/design-principles.json` for six realistic briefs covering tone, measure, hierarchy, casing overrides, danger controls, private fonts and data integrity. These are review fixtures, not claimed real-host successes. Record the resulting artifacts and observed behavior before assigning outcomes.
+
+## Editorial and Design Conflicts
+
+Use `evals/editorial-cases.json` to review design-first choices, protected facts, visual-only scope, technical terms, critique-only requests, truthful controls, required summaries and author voice. Record actual host outputs before claiming success; package checks only establish that the guidance and notices ship together.

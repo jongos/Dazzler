@@ -35,7 +35,9 @@ Filter fonts by actual text coverage, weights, genuine italics, numeric features
 
 Use [the color workflow](references/color-workflow.md) to preserve brand locks, measure foreground/background roles and report unresolved contrast. Use display type, selective bold colored keywords, genuine italics and complementary or triadic accents where they clarify the content. Keep a legal memo disciplined, a planner printable and an invitation exuberant.
 
-Use [composition and refinement](references/composition.md) for substantial layouts, measured review candidates and the optional bolder/quieter/typeset/colorize/polish/harden/critique/distill intents. Critique is read-only; distill preserves required content and controls. Review candidates need context and never establish AI authorship.
+Use [composition and refinement](references/composition.md) for layouts and bolder/quieter/typeset/colorize/polish/harden/critique/distill requests. Critique is read-only; distill preserves required content. Review candidates never establish AI authorship.
+
+Apply [editorial craft](references/editorial-craft.md) to copy you create or may edit. Preserve voice and facts; favor good design over copy-pattern rules. Keep useful emphasis and rhythm. Visual-only changes preserve supplied wording.
 
 ## Select relevant capabilities
 
@@ -48,7 +50,7 @@ Use [local runtime guidance](references/local-runtime.md) for integrity, smalles
 - Brand import, shared tokens, stress tests, font specimens, original assets and reversible previews: select the relevant [studio workflow](references/design-studio.md).
 - Actual charts, networks, maps and compact metrics: [visualization](references/visualization.md). Preserve source rows, units, missing values, labels and non-color cues. Native editable Office charts require their optional runtime; static images are not editable charts.
 - Clickable images, diagrams and floor plans: [interactive illustrations](references/interactive-illustrations.md). Provide named keyboard controls, useful region descriptions and a text equivalent.
-- Native documents/slides: follow [document design](references/document-design.md) with the host's artifact workflow. Automatically compose purposeful background colors, varied layouts, selective bold/color/italics, genuine quotations and useful callouts to fit the brief. Design the whole document, not just its cover. Reserved work still needs visual identity; use generic/plain styling only when requested.
+- Native documents/slides: follow [document design](references/document-design.md). Compose backgrounds, layouts, selective bold/color/italics, supplied quotations and useful callouts throughout the work. Reserved styles still need identity; plain styling is a user choice.
 
 ## Implement with available capabilities
 

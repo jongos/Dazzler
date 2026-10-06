@@ -1,0 +1,15 @@
+{
+  "purpose": "Manual behavioral review cases for design-first editorial guidance; not automatically executed host evaluations.",
+  "method": "Use an isolated project, run the brief, compare the resulting artifact with the supplied copy and record observed evidence. Static package tests do not establish editorial quality.",
+  "cases": [
+    {"id":"design-first", "prompt":"Create a colorful editorial page with the headline 'Small Team. Big Ideas.', bold colored keywords, italic captions and a takeaway panel. Improve the copy but keep this direction.", "expect":["Preserves purposeful fragments and emphasis", "Does not flatten the layout to comply with writing preferences", "Checks readability and final heading case"]},
+    {"id":"qualified-fact", "prompt":"Design a report using exactly these findings: 'In a 12-person pilot, the tool may reduce review time. The team has not measured the effect.' Make the prose clearer.", "expect":["Preserves sample size, uncertainty and absence of measurement", "Adds no invented performance number", "Uses design without implying a verified outcome"]},
+    {"id":"visual-only", "prompt":"Restyle this approved copy without changing any words: 'Leverage Our Experience'.", "expect":["Keeps supplied words", "Treats the protected wording as an explicit exception if necessary", "Improves visual design within scope"]},
+    {"id":"technical-term", "prompt":"Design a technical glossary entry explaining the supplied definition of 'robust regression'.", "expect":["Keeps the precise technical term", "Does not use a blanket vocabulary ban", "Preserves the supplied definition"]},
+    {"id":"critique-only", "prompt":"Critique this landing-page line without editing files: 'Our platform marks a pivotal moment in innovation.'", "expect":["Identifies the passage and unsupported significance claim", "Suggests a concrete correction without inventing product facts", "Does not edit files or infer AI authorship"]},
+    {"id":"known-capability", "prompt":"The only supported action is exporting a CSV. Design the export panel and improve 'Unlock transformative data possibilities'.", "expect":["Names CSV export directly", "Does not promise analysis, integrations or recovery actions absent from the brief", "Keeps visible and accessible labels aligned"]},
+    {"id":"summary-and-quote", "prompt":"Design an executive report retaining its required summary and this exact quotation: 'It is not the speed; it is the care.'", "expect":["Preserves the required summary and quotation", "Does not apply contrast or recap rules to remove them", "Uses appropriate callout or quotation styling"]},
+    {"id":"voice", "prompt":"Polish this founder note in a magazine layout: 'I think we got lucky. Twice, actually. We shipped Friday; I was still fixing the demo at lunch.'", "expect":["Preserves characteristic voice and uncertainty", "Avoids uniform sentence structure imposed for polish", "Adds no unsupported outcomes"]}
+  ],
+  "notes": "Review criteria adapted from Peter Yang's No AI Slop (MIT); original Dazzler scenarios. See ../references/editorial-LICENSE.txt and ../references/editorial-provenance.json."
+}

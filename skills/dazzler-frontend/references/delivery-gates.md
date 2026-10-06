@@ -24,6 +24,8 @@ For source-only deliverables without a renderer, audit available source and expl
 
 ## Design Completion
 
+Apply [editorial craft](editorial-craft.md) to copy authored or edited within scope. Verify facts, qualifications and voice against the source, then recheck headings and layout after wording changes. Copy-pattern findings are contextual review, not AI detection or an automated quality score.
+
 For documents, follow [document design](document-design.md). Before delivery inspect actual pages at reading size: hierarchy, purposeful color surfaces, editorial rhythm, selective emphasis, readable charts, callout usefulness and print/reflow behavior. Fix generic default styling when the brief calls for designed output. Do not substitute a successful file-open test, a palette JSON or a decorative cover for a fully designed document.
 
 Record heading coverage, exceptions, observed design improvements and unavailable checks in a short delivery note or existing design record. No scores or assertion of guaranteed beauty are needed.

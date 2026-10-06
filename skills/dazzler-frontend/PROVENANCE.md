@@ -4,6 +4,8 @@ This file contains attribution and licensing notes accompanying Dazzler.
 
 ## Notes and credits
 
+Editorial integration, 2026-10-06 (0.25.0): adapted Peter Yang's `no-ai-slop` SKILL.md and eval.md at `000650b156983f5159695b441477f4e63b25dc85`. Copyright 2026 Peter Yang; the MIT notice is retained unchanged in `references/editorial-LICENSE.txt`. The adaptation adds design-first precedence, protected content, scoped editing and Dazzler heading/layout checks. Blanket vocabulary/format bans, fixed punctuation quotas, mandatory questions and standalone response formatting were not imported. Source hashes and destinations are recorded in `references/editorial-provenance.json`. No upstream executable or runtime dependency is included.
+
 Source: https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design
 
 Inspected on 2026-09-28 from the main branch. The source directory contained SKILL.md and LICENSE.txt only. No executable dependencies, bundled assets, linked helper scripts, or mandatory Claude tools were declared. The typography book mentioned in the source is guidance, not a runtime dependency. The surrounding repository's CLI installer is not required for this standalone skill.

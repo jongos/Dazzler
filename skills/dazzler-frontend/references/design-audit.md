@@ -14,6 +14,7 @@ Apply [final artifact gates](delivery-gates.md) for heading case and [document d
 | Direction | Does the rendered composition express the chosen organizing idea? | Fix hierarchy or structure before adding ornament |
 | Bare structure | Does the layout still make sense without color, textures or display type? | Rework unnecessary cards/sections or preserve a familiar structure that genuinely fits |
 | Typography | Real copy, measure, hierarchy, glyphs, weights and numeric columns | Use verified font capabilities and adjust spacing/scale |
+| Editorial clarity | [Copy in context](editorial-craft.md): meaning, voice, evidence, terminology and scope | Replace empty claims with supported specifics; preserve intentional emphasis and protected text |
 | Color | Actual text/surface/state pairs, locked brand values, light/dark if in scope | Use measured semantic variants; report an unresolved lock |
 | Grouping and density | Related items close together; unrelated sections distinguishable | Remove redundant boxes, adjust rhythm and content width |
 | Components | Applicable pressed, focus, disabled, loading, empty and error states | Complete the required state or recovery behavior |

@@ -3,7 +3,7 @@
 Download `dazzler-codex.zip`, `install_skill.py` and `SHA256SUMS.txt` from the same release. From that folder, with Python 3.10+ available:
 
 ```sh
-python install_skill.py install --host codex --scope project --root /absolute/project --version 0.24.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
+python install_skill.py install --host codex --scope project --root /absolute/project --version 0.25.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
 ```
 
 The project must exist. Add `--dry-run` to validate without installing. The installer verifies archive paths, checksums and every inventoried resource without executing package code. It refuses unmanaged installations or local edits and retains one prior managed version for rollback.
@@ -30,6 +30,6 @@ Archive, size and helper checks are automated. Real host activation, cloud uploa
 
 Creator: Jon Gosier. Feedback: jon@filmhedge.com. Apache-2.0; bundled assets retain their licenses.
 
-[Download native skill](https://github.com/jongos/Dazzler/releases/download/v0.24.0/dazzler-codex.zip) · [Checksums](https://github.com/jongos/Dazzler/releases/download/v0.24.0/SHA256SUMS.txt)
+[Download native skill](https://github.com/jongos/Dazzler/releases/download/v0.25.0/dazzler-codex.zip) · [Checksums](https://github.com/jongos/Dazzler/releases/download/v0.25.0/SHA256SUMS.txt)
 
 [Official skill discovery guidance](https://learn.chatgpt.com/docs/build-skills) · [Plugin distribution](https://developers.openai.com/plugins/build/plugins)
