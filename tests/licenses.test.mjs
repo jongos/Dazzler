@@ -3,6 +3,27 @@ import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import { createHash } from "node:crypto";
 
+test("focused amplification retains the reviewed Apache license", async () => {
+  const base = "skills/dazzler-frontend/";
+  const provenance = JSON.parse(
+    await fs.readFile(base + "references/bolder-provenance.json", "utf8"),
+  );
+  const license = (
+    await fs.readFile(base + "references/" + provenance.licenseFile, "utf8")
+  ).replaceAll("\r\n", "\n");
+  assert.equal(
+    createHash("sha256").update(license).digest("hex"),
+    provenance.sourceSha256Lf.LICENSE,
+  );
+  assert.match(license, /Apache License/);
+  for (const file of provenance.adaptedFiles) await fs.access(base + file);
+  assert(
+    (await fs.readFile("platforms/portable/DAZZLER-PROMPT.md", "utf8"))
+      .replaceAll("\r\n", "\n")
+      .includes(license),
+  );
+});
+
 test("editorial adaptation retains its pinned MIT notice and destinations", async () => {
   const base = "skills/dazzler-frontend/";
   const provenance = JSON.parse(

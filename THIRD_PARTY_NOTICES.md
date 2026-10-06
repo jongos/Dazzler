@@ -85,3 +85,7 @@ The maintenance-only DESIGN.md linter pins @google/design.md 0.4.0 (Apache-2.0),
 ## Editorial Guidance
 
 Adapted from Peter Yang's [No AI Slop](https://github.com/petergyang/no-ai-slop/tree/000650b156983f5159695b441477f4e63b25dc85), copyright 2026 Peter Yang, under MIT. The full notice is retained in `skills/dazzler-frontend/references/editorial-LICENSE.txt`; provenance records the reviewed source hashes. Dazzler's changes prioritize design, preserve facts and scope, and replace blanket bans with contextual review. This material retains its MIT terms; the surrounding project remains Apache-2.0.
+
+## Focused Design Amplification
+
+Adapted from Paul Bakaus's Impeccable `skill/reference/bolder.md` at `2a26f1c50b9c4f86d10c0fec8f74cf523a2236e7`, under Apache-2.0. The license is retained in `skills/dazzler-frontend/references/bolder-LICENSE.txt`; provenance records source hashes and the unavailable fork linked by MCP Market. Dazzler preserves its own rules, adds document context and omits mandatory questions or additional skill dependencies. No code, platform reference or asset was imported. The upstream NOTICE concerns unrelated iOS/Android material, which is not included here.

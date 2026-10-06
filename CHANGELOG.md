@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-06 — 0.25.1: Focused amplification within the existing design
+
+**Changed:** The bolder workflow now compares a weak section with its neighbors, reuses underused brand elements, strengthens one focal move and quiets competing emphasis. Reviews include adjacent pages or sections and scoped before/after checks. Existing Dazzler rules take precedence.
+
+**Added:** An internal refinement procedure with regression coverage for retained tokens, colors and motion, a concise amplification pass, reviewed-source provenance and its Apache-2.0 license. The listing's inaccessible fork is distinguished from the primary reference actually inspected. Runtime code is Dazzler's own implementation.
+
+**Why:** Fill a composition gap without adding extreme-scale defaults, palette bans, mandatory questions or another skill dependency. Keep the design-first editorial integration from 0.25.0.
+
+**Validation:** 79 Node tests pass, including bolder routing and preservation of explicit type ratios, spacing, fonts, colors and motion. Existing cross-host, heading, license, runtime and package checks remain applicable. The guidance is qualitative; no automated aesthetic-quality claim is made.
+
 ## 2026-10-06 — 0.25.0: Design-first editorial craft
 
 **Changed:** Dazzler now reviews newly authored or editable copy for empty phrasing, unsupported praise and inconsistent terminology. User intent, factual integrity, accessibility and the chosen design direction take precedence over writing preferences. Expressive formatting, purposeful fragments, protected wording and author voice remain intact.

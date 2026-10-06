@@ -4,6 +4,8 @@ This file contains attribution and licensing notes accompanying Dazzler.
 
 ## Notes and credits
 
+Focused amplification, 2026-10-06 (0.25.1): the MCP Market Design Boldness & Impact listing linked an unavailable fork. Reviewed and adapted only `skill/reference/bolder.md` from Paul Bakaus's primary Impeccable project at `2a26f1c50b9c4f86d10c0fec8f74cf523a2236e7`, under Apache-2.0. Dazzler's existing rules take precedence; the adaptation adds document context, keeps automatic decisions and introduces no runtime dependency. `references/bolder-provenance.json` records source hashes; `references/bolder-LICENSE.txt` retains the license.
+
 Editorial integration, 2026-10-06 (0.25.0): adapted Peter Yang's `no-ai-slop` SKILL.md and eval.md at `000650b156983f5159695b441477f4e63b25dc85`. Copyright 2026 Peter Yang; the MIT notice is retained unchanged in `references/editorial-LICENSE.txt`. The adaptation adds design-first precedence, protected content, scoped editing and Dazzler heading/layout checks. Blanket vocabulary/format bans, fixed punctuation quotas, mandatory questions and standalone response formatting were not imported. Source hashes and destinations are recorded in `references/editorial-provenance.json`. No upstream executable or runtime dependency is included.
 
 Source: https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design

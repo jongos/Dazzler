@@ -45,6 +45,8 @@ If constraints fail, revise unlocked choices and re-run the checks yourself. Kee
 
 ## 5. Complete the design
 
+When a section feels flat, use the [focused amplification pass](composition.md#strengthen-a-flat-section). Build on the existing visual vocabulary, strengthen one focal move and compare it with adjacent content; avoid making every element louder.
+
 Apply [editorial craft](editorial-craft.md) to newly written or editable copy. Keep claims supported, voice recognizable and terminology stable; preserve supplied wording in visual-only tasks. Fit text and composition together, then check wrapping after edits.
 
 For documents and slides, follow [document design](document-design.md) regardless of the authoring tool. Use context-appropriate color surfaces, editorial layouts, selective emphasis and content-based callouts throughout the work. Serious subjects call for disciplined design, not generic formatting.

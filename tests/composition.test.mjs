@@ -61,8 +61,35 @@ test("Refinement rejects invalid controls and critique cannot generate edits", (
   ]) {
     const result = resolveRefinement({ intent });
     assert(result.preserve.includes("Required content and controls"));
-    assert(result.procedure.length === 2);
+    assert(result.procedure.length >= 2);
   }
+});
+test("Bolder planning preserves explicit tokens and does not add motion or recolor", () => {
+  const input = {
+    typography: { maxRatio: 1.3 },
+    spacing: { 4: 2 },
+    motion: { normal: 0 },
+    fonts: { body: "Work Sans", heading: "Young Serif" },
+    colors: {
+      base: "#123456",
+      locked: { light: { brand: "#123456" }, dark: { brand: "#123456" } },
+    },
+  };
+  const before = structuredClone(input);
+  const plain = tokens(input);
+  const bold = tokens({ ...input, refinement: { intent: "bolder", variance: 2 } });
+  assert.deepEqual(input, before);
+  assert.equal(bold.system.typography.steps.step1.maxRem, 1.3);
+  assert.equal(bold.system.spacing[4], 2);
+  assert.equal(bold.system.motion.normal, 0);
+  assert.deepEqual(bold.system.palette, plain.system.palette);
+  assert.deepEqual(bold.system.fonts, plain.system.fonts);
+  const plan = resolveRefinement({ intent: "bolder", variance: 2 });
+  assert.equal(plan.effective.variance, 2);
+  assert.equal(plan.effective.motion, "auto");
+  assert(plan.procedure.some((step) => step.includes("adjacent sections")));
+  assert(plan.procedure.some((step) => step.includes("before and after")));
+  assert(route({ refinement: { intent: "bolder" } }).refinement.procedure.length > 2);
 });
 test("Dial values are deterministic and monotone for numeric token effects, with constraints intact", () => {
   let previous = null;

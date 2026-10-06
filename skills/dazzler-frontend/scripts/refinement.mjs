@@ -5,8 +5,12 @@ import { cli } from "./cli.mjs";
 import { readJSON } from "./runtime.mjs";
 const procedures = {
   bolder: [
-    "Strengthen display hierarchy within selected fonts; concentrate emphasis on the primary task",
-    "Compare actual hierarchy and paired contrast; preserve exact colors and facts",
+    "Compare the scoped target with adjacent sections; identify underused existing type, motifs and spacing",
+    "Strengthen one focal move within the selected design; quiet competing emphasis instead of enlarging everything",
+    "Vary sectional pace where useful while preserving reading order, primary actions and Dazzler's existing rules",
+    "Review structure using actual content; do not rely on a dramatic headline or an unfilled image placeholder",
+    "Compare before and after in context, including reflow and print; verify neighboring content and controls remain intact",
+    "Measure actual hierarchy and paired contrast; preserve exact colors, facts, explicit tokens and reduced motion",
   ],
   quieter: [
     "Reduce competing display emphasis and motion; review unnecessary shadows and accent surfaces",

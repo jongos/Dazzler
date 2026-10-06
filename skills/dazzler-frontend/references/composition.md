@@ -38,6 +38,18 @@ Review each material candidate against the brief. Retain intentional patterns wi
 
 ## Shared refinement resolver
 
+### Strengthen a Flat Section
+
+Use this pass for a requested bolder refinement, or when the normal design review finds an underemphasized section within scope. Dazzler's existing user, brand, accessibility, data, typography, color and motion rules take precedence over these suggestions. Infer the target from the brief; do not require a new questionnaire or a separate skill call.
+
+1. Compare the target with nearby sections or pages. Identify which established type role, motif, alignment, color surface or spacing pattern it underuses. Reuse that vocabulary before adding a competing visual system.
+2. Choose one main change that serves the content: a stronger display role, a more decisive content arrangement, or an existing motif used with greater confidence. Reduce competing emphasis around it. Making every element louder weakens hierarchy.
+3. Give the target a purposeful change of pace relative to its neighbors. Use whitespace, density or sectional contrast while keeping reading order and the primary task clear. In documents, review facing and adjacent pages as well as the isolated section.
+4. Inspect the proposed structure without relying on the headline's wording. It should communicate grouping and attention order. Keep real labels and content in the delivered artifact; an imagined image or placeholder is not evidence that the composition works.
+5. Compare before and after in context: the target should feel stronger and recognizably part of the same design. Check surrounding areas for unintended changes, reflow, print pagination and functioning controls. Repair alignment and state details before delivery.
+
+Do not force extreme type ratios, saturated colors, grid breaks, new assets or entrance animations. Existing tokens remain constraints in scoped refinements; broader design work can choose new tokens under Dazzler's normal workflow. Brand-approved gradients, common fonts and restrained palettes remain valid. Improved impact is a reviewed outcome, not a numeric quality score.
+
 ```shell
 node scripts/refinement.mjs controls.json
 node scripts/studio.mjs tokens --config brief.json --out NEW_PREVIEW --intent bolder --density 4
@@ -69,5 +81,7 @@ The resolver report uses schemaVersion 1 for its own report format; that is not 
 Omitted controls preserve the selected schema's existing defaults, including schema-1 legacy output. Schema 1 refuses active dials rather than silently migrating. All-auto has no token effect. Canonical resume checks the stored refinement and motion as well as type and palette. Output previews are new directories; adoption remains a reviewed project diff.
 
 ## Notes and credits
+
+Focused amplification guidance adapted from Paul Bakaus's [Impeccable bolder reference](https://github.com/pbakaus/impeccable/blob/2a26f1c50b9c4f86d10c0fec8f74cf523a2236e7/skill/reference/bolder.md), under [Apache-2.0](bolder-LICENSE.txt). Dazzler adds cross-format context and preserves its existing precedence and automatic workflow. The [MCP Market listing](https://mcpmarket.com/tools/skills/design-boldness-impact) prompted the review; its linked fork was unavailable. See [provenance](bolder-provenance.json).
 
 Original Dazzler catalog, resolver, rule registry and fixtures: Jon Gosier, Apache-2.0. Feature requests #18/#22/#23/#24 informed scope. Terminology references in those requests include Impeccable (Paul Bakaus) and Taste Skill (Leonxlnx); no runtime code or assets were imported. Existing design-framework and font notices remain in their respective closing notes.
