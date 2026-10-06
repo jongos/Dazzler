@@ -17,6 +17,8 @@ Apply these defaults automatically when establishing a direction. Existing proje
 
 ## Controls and Helpers
 
+Reserved treatment still needs deliberate typography, surfaces, layout and emphasis. Follow [document design](document-design.md) for authored documents and [final artifact gates](delivery-gates.md) for every delivery, including custom exporters. Heading case is a Dazzler delivery requirement unless explicitly overridden; it is not an accessibility conformance test.
+
 The token helper defaults to schema 3. Explicit schema 1/2 records retain their established output. `studio.mjs tokens` accepts `tone: "auto" | "expressive" | "reserved"`, bounded `context`, `measure: 30..100`, and `typography: {headingCase: "title" | "sentence" | "upper" | "preserve", lang: "en", preserve: ["eBay"]}`. `route.mjs` reports the same tone decision. Saved schema-3 configurations resume the chosen policy.
 
 `headings.py` and `headings.mjs` share rules and test vectors. This is a conservative AP-like helper, not a complete grammatical implementation of a style manual. Existing capitals are retained; `sentence` preserves authored text rather than guessing proper nouns. Prefer authored source headings over CSS `text-transform: capitalize`.
@@ -37,7 +39,7 @@ Import supports bounded TTF/OTF/WOFF metadata and rejects WOFF2/TTC with an acti
 | Rule | Current enforcement |
 | --- | --- |
 | Tone, body measure, grid, heading policy | Deterministic token defaults, route evidence, persisted configuration and template generation |
-| Heading protection | Shared Python/Node fixtures; native export and chart/illustration titles |
+| Heading protection | Shared Python/Node rules and a final DOCX/PPTX/HTML/Markdown/inventory audit; unsupported or nonsemantic headings require rendered comparison |
 | Color roles and locks | Numeric role-pair checks; explicit unresolved state; non-color review guidance |
 | Font licensing and coverage | Bundled license/hash gate; bounded local import; cmap coverage filter |
 | Reading width, target size, heading style | Bounded browser review candidates with exceptions; not automatic certification |

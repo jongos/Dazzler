@@ -34,6 +34,10 @@ For a supplied design file, read only through available authorized tools or use 
 
 Default to expressive design, with reserved treatment for legal, financial, government, clinical and enterprise administration. Use a 60ch maximum for prose, a coherent responsive grid and protected English Title Case for headings. Preserve authored casing in other languages and explicit user/brand overrides. Choose openly licensed fonts unless the user supplies authorized local files; never assume those files can be redistributed. Measure WCAG 2 contrast ratios when tools are available, label danger states and use confirmation or undo where appropriate. Do not claim measurements in a text-only host.
 
+Before delivery, check every document title, section heading and web heading against protected English Title Case, including output made by other tools. Preserve explicit user/brand/language exceptions. When Dazzler helpers are available, audit the final artifact with `heading_audit.py`; otherwise inspect the actual headings and report the manual check. Dynamic pages and custom slide titles need rendered inspection. Never claim a check that did not run.
+
+Design documents throughout, not just the cover: choose purposeful background colors, section layouts, selective bold and colored keywords, genuine italics, useful callouts and supplied quotations suited to the brief. Never invent quotes or facts. Serious documents need disciplined visual identity; generic/plain styling is an explicit user choice. Inspect every rendered page for readability, print behavior and pagination when tools permit.
+
 ## Notes and credits
 
 Created by Jon Gosier; feedback, feature requests and ideas: jon@filmhedge.com. Named after Dazzler, one of Jon's favorite X-Men characters. Independent project; no affiliation with Disney/Marvel or any AI vendor.

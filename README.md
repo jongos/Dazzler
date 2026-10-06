@@ -21,6 +21,8 @@ Use $dazzler-frontend to redesign this dashboard so the important numbers stand 
 | A design that fits the brief | Chooses expressive or restrained typography, colors and composition for the audience. |
 | Consistency across a project | Resumes saved design decisions and preserves your existing brand and components. |
 | Clear charts and reports | Carries shared colors and type into visualizations, documents and slides without changing the data. |
+| Documents with visual character | Automatically composes background panels, editorial layouts, selective emphasis and useful callouts to fit the brief. |
+| Consistent heading case | Audits saved headings across documents and pages, including work authored through other tools; reports coverage gaps. |
 | A useful starting point | Includes 30 worked templates with fictional data, editable structures and local assets. |
 | Fewer finishing problems | Checks rendered layouts, font loading, keyboard controls and relevant print pages when those tools are available. |
 | Control when you want it | Responds to “bolder,” “quieter,” “typeset,” “colorize” and other focused refinements. |
@@ -41,7 +43,7 @@ Requires Node 22.20+. Select your agent in the installer. This downloads the lar
 Download the host ZIP, `install_skill.py` and `SHA256SUMS.txt` from the release linked below. With Python 3.10+ available, run this from the download folder for an existing project:
 
 ```sh
-python install_skill.py install --host codex --scope project --root /absolute/project --version 0.23.1 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
+python install_skill.py install --host codex --scope project --root /absolute/project --version 0.24.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
 ```
 
 Restart or refresh the agent, then ask it to use `$dazzler-frontend`. Add `--dry-run` to inspect an installation first. The installer checks hashes and resource completeness without executing downloaded scripts; updates preserve one previous version and refuse local edits.
@@ -137,13 +139,13 @@ The directory listing is live. Its Gen Agent Trust Hub audit currently reports C
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.23.1/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.24.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).
 
-- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.23.1/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.23.1/dazzler-claude-compact.zip)
+- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.24.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.24.0/dazzler-claude-compact.zip)
 
 ### Comparison notes
 

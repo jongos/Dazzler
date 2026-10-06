@@ -45,6 +45,8 @@ If constraints fail, revise unlocked choices and re-run the checks yourself. Kee
 
 ## 5. Complete the design
 
+For documents and slides, follow [document design](document-design.md) regardless of the authoring tool. Use context-appropriate color surfaces, editorial layouts, selective emphasis and content-based callouts throughout the work. Serious subjects call for disciplined design, not generic formatting.
+
 Apply [interface craft](interface-craft.md) to the requested components and states. Choose spacing, radii, hierarchy, imagery and motion without making the user manage a control panel. Use existing components and licensed assets when appropriate; do not add packages merely for novelty. Respect the existing framework and the host's required authoring workflow.
 
 Use the actual selected fonts and colors together in the deliverable. The color helper's standalone system-font preview is a diagnostic aid, not the completed project or a substitute for font-aware rendering. When creating project documentation, follow [design-record.md](design-record.md) and record the integrated choices rather than separate competing font, color and deslop plans.
@@ -52,6 +54,8 @@ Use the actual selected fonts and colors together in the deliverable. The color 
 Inspect the real result using [design-audit.md](design-audit.md), including relevant viewport, keyboard, state, contrast, wrapping and font-load behavior. Fix observed failures within scope. Stop when the requested result and proportionate checks are complete; avoid endless aesthetic iteration. Deliver the artifact and a short explanation of the choices and checks. Do not stop at a shortlist, design plan or “would you like me to implement this?”
 
 ## Runtime and host fallbacks
+
+Before delivery apply [final artifact gates](delivery-gates.md). Check saved semantic headings or a rendered heading inventory; an external exporter does not waive Title Case. Repair casing at its source, regenerate and review wrapping and pagination. Report unavailable checks accurately.
 
 Locate the installed skill relative to its `SKILL.md`; do not hard-code the maintainer's Windows checkout into another project. Use available Python/Node runtimes and project tooling. The checked-in color bundle and standard-library font helper need no network installation. Do not ask the user to install development packages or operate the helpers.
 

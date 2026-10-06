@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-06 — 0.24.0: Final heading gates and deliberate document design
+
+**Changed:** Every Dazzler document and web workflow now requires a final heading-case check, including custom exporters and other artifact tools. Document design defaults apply throughout the body: purposeful surfaces, editorial layouts, selective emphasis and useful callouts matched to the brief. Reserved styling retains a visual identity; explicit plain requests remain supported.
+
+**Added:** A read-only, standard-library heading auditor for DOCX, PPTX, HTML, Markdown and rendered heading inventories; cross-host workflow tests; concise delivery and document-design guidance.
+
+**Why:** A custom Word exporter bypassed the existing authoring helper. Checking saved headings closes that workflow gap without flattening formatted runs. Clear composition requirements prevent font-and-heading-only styling from being treated as a finished design.
+
+**Validation:** 76 Node tests and 64 Python tests pass (one Windows symlink case skipped). Eight new regressions cover Word inheritance, tables, headers and split runs; nested HTML; slide titles; Markdown metadata; explicit exceptions; CLI outcomes; XML entity rejection; and cross-host delivery gates. Runtime integrity, links, formatting and version checks pass. Semantic coverage remains explicit: custom visual headings and dynamic pages need rendered comparison.
+
 ## 2026-09-29 — 0.23.1: Retire a flagged font dependency and constrain CSS import
 
 **Changed:** Removed the complete Gap Sans distribution and catalog entry after a directory audit flagged its attribution domain. No copyright text was edited in retained fonts; the earlier distribution remains unchanged in Git history and earlier releases. The full catalog now bundles 23 families; the compact six-family selection is unchanged. CSS token import omits resource references, executable expressions, markup, controls and escaped declarations, reporting an omission count.

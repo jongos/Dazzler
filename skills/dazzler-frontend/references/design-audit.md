@@ -6,6 +6,8 @@ Before delivery, compare the actual implementation/render with the brief and rec
 
 ## Review questions
 
+Apply [final artifact gates](delivery-gates.md) for heading case and [document design](document-design.md) for documents/slides, even when another tool creates the artifact. Verify the final text and rendered composition; a generator's style settings are insufficient evidence.
+
 | Dimension | Evidence to inspect | A useful correction |
 |---|---|---|
 | Task fit | Can the audience find and complete the primary task? | Reorder information, improve labels, expose the required control |

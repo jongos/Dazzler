@@ -48,13 +48,15 @@ Use [local runtime guidance](references/local-runtime.md) for integrity, smalles
 - Brand import, shared tokens, stress tests, font specimens, original assets and reversible previews: select the relevant [studio workflow](references/design-studio.md).
 - Actual charts, networks, maps and compact metrics: [visualization](references/visualization.md). Preserve source rows, units, missing values, labels and non-color cues. Native editable Office charts require their optional runtime; static images are not editable charts.
 - Clickable images, diagrams and floor plans: [interactive illustrations](references/interactive-illustrations.md). Provide named keyboard controls, useful region descriptions and a text equivalent.
-- Native documents/slides: use the host's artifact workflow when available; preserve the supplied content and verify the target renderer. Design print margins, table headers, page breaks and readable emphasis deliberately.
+- Native documents/slides: follow [document design](references/document-design.md) with the host's artifact workflow. Automatically compose purposeful background colors, varied layouts, selective bold/color/italics, genuine quotations and useful callouts to fit the brief. Design the whole document, not just its cover. Reserved work still needs visual identity; use generic/plain styling only when requested.
 
 ## Implement with available capabilities
 
 Follow [host routing](references/host-routing.md) only when a tool choice requires it. Use the current project's framework and available capabilities. Do not install optional integrations, change platforms, deploy or perform other external actions without the user's authorization. This skill grants no commit, push or publishing permission.
 
 ## Verify the result
+
+Apply [final artifact gates](references/delivery-gates.md) to **every Dazzler document and web page**, including output made by another skill or custom exporter. Audit final headings with `scripts/heading_audit.py`; repair failures before delivery. For dynamic pages or unsupported formats, audit a heading inventory and compare the rendered result. Preserve explicit user/brand/language exceptions; disclose unavailable coverage.
 
 Inspect narrow and wide layouts, font loading, content accuracy and the primary interactions. Check accessible names, keyboard/focus behavior, actual rendered contrast and relevant empty/error states. For print, inspect every rendered page and repair clipping, spillovers and inappropriate breaks. Run proportionate project tests. Use [the design audit](references/design-audit.md) for a substantial review; a build or screenshot alone proves neither usability nor complete accessibility.
 
