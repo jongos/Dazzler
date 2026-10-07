@@ -1,4 +1,4 @@
-"""Build the original Dazzler templates; python-docx is an authoring dependency only."""
+"""Reproduce legacy examples for maintenance; this is not prompt-driven release generation."""
 
 import argparse
 import hashlib
@@ -19,8 +19,10 @@ from template_interfaces import UIS, build_ui
 from template_editorial import render_docx, render_html
 from template_showcase import enrich
 from template_features import prepare
+from template_architecture import compose
 
 DOCS, UIS = enrich(DOCS, UIS)
+DOCS = [compose(d) for d in DOCS]
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills/dazzler-frontend"
@@ -129,6 +131,7 @@ def build(web_only=False):
                         else ["Work Sans", d["headingFont"]]
                     ),
                     design=d["voice"],
+                    architecture=d.get("architecture", {}).get("name"),
                     capabilities=d["capabilities"],
                     dataset="data/" + d["id"] + ".json",
                     plannedPages=len(d["pages"]),

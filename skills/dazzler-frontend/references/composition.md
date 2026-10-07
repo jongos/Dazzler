@@ -57,6 +57,8 @@ node scripts/studio.mjs tokens --config brief.json --out NEW_PREVIEW --intent bo
 
 Controls JSON is `{"intent":"bolder","variance":"auto","density":4,"motion":"auto"}`. In a studio brief put it under `refinement`. CLI flags override only the named controls. The resolver produces a bounded procedure, preserved constraints and effective choices; it does not edit a user's DOM. The agent implements justified UI changes using the existing project workflow and records actual before/after evidence. Rendering helpers and their reports are not proof of live backend behavior.
 
+Additional audit, layout, adapt, optimize, clarify and extract procedures are described in [agent workflows](agent-workflows.md). Audit shares critique's read-only boundary; the other new intents preserve all-auto token values unless explicitly controlled.
+
 | Intent | Scoped work | Required evidence |
 |---|---|---|
 | bolder | Strengthen display emphasis; default variance 8 where unspecified | Actual hierarchy and role contrast; preserve facts and locked colors |

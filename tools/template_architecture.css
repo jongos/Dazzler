@@ -1,0 +1,305 @@
+/* Geometry and hierarchy express three reading tasks before palette is applied. */
+.doc-legal .sheet {
+  max-width: 860px;
+  border: 0;
+  padding: 48px 76px 30px;
+  background: #fff;
+}
+.doc-legal .folio {
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 12px;
+}
+.doc-legal .sheet h1 {
+  font-size: clamp(28px, 3.3vw, 40px);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  border: 0;
+  padding: 0;
+  margin: 25px 0 10px;
+}
+.doc-legal .subtitle {
+  font-size: 15px;
+  color: var(--ink);
+}
+.doc-legal .prose,
+.doc-legal li {
+  font:
+    14px/1.7 "Libre Baskerville",
+    Georgia,
+    serif;
+}
+.doc-legal .section-title {
+  font:
+    700 16px/1.4 "Libre Baskerville",
+    Georgia,
+    serif;
+  border: 0;
+  margin-top: 25px;
+}
+.doc-legal .callout {
+  background: transparent;
+  border: 0;
+  border-left: 2px solid var(--accent);
+  border-radius: 0;
+  padding: 0 0 0 20px;
+}
+.doc-legal .callout p {
+  font:
+    16px/1.6 "Libre Baskerville",
+    Georgia,
+    serif;
+}
+.doc-legal .callout > strong {
+  color: var(--accent);
+}
+.doc-legal th,
+.doc-legal td {
+  background: white;
+  color: var(--ink);
+  border-bottom: 1px solid #d6d3d1;
+}
+.doc-legal thead th {
+  border-block: 1px solid var(--accent);
+  color: var(--accent);
+}
+.doc-legal .record {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  gap: 5px 12px;
+  font-size: 13px;
+  padding: 15px 0;
+  border-bottom: 1px solid #d6d3d1;
+}
+.record dt {
+  font-weight: 700;
+}
+.record dd {
+  margin: 0;
+}
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 18px 0;
+  padding: 12px 0;
+  border-block: 1px solid #b5bfcb;
+}
+.facts span {
+  font-size: 13px;
+}
+.facts strong {
+  margin-right: 0.35em;
+}
+.doc-legal .facts {
+  border: 0;
+  border-top: 1px solid #d6d3d1;
+  margin-top: 25px;
+  color: var(--ink);
+}
+.doc-legal .facts strong {
+  font-weight: 400;
+}
+.doc-professional .sheet {
+  border: 0;
+  border-top: 5px solid var(--accent);
+}
+.doc-professional .sheet:first-child h1,
+.doc-professional .sheet h1 {
+  background: transparent;
+  color: var(--ink);
+  padding: 0;
+  font-size: clamp(32px, 4.2vw, 49px);
+  max-width: 23ch;
+}
+.doc-professional .page-opener .callout {
+  border: 0;
+  border-left: 5px solid var(--accent);
+  border-radius: 0;
+  padding: 22px 26px;
+  background: #edf3ff;
+}
+.doc-professional .page-opener .callout p {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 48ch;
+}
+.doc-professional .page-opener .callout > strong {
+  color: var(--accent);
+}
+.doc-professional .facts strong {
+  font-size: 20px;
+  color: var(--accent);
+}
+.doc-professional .page-continuation h1 {
+  font-size: 30px;
+  margin-block: 20px 14px;
+}
+.doc-professional .page-continuation .facts strong {
+  font-size: 14px;
+}
+.doc-professional .page-continuation .section-title {
+  border: 0;
+}
+.doc-business .sheet {
+  border: 0;
+  border-top: 2px solid var(--accent);
+  padding: 48px 58px 30px;
+}
+.doc-business .sheet:first-child h1,
+.doc-business .sheet h1 {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: 400;
+  background: transparent;
+  color: var(--ink);
+  padding: 0;
+  font-size: clamp(35px, 4.8vw, 58px);
+  max-width: 23ch;
+  line-height: 1.12;
+}
+.doc-business .page-continuation h1 {
+  font-size: 38px;
+}
+.doc-business .subtitle {
+  color: var(--accent);
+  font-size: 17px;
+}
+.doc-business .offer-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin: 30px 0;
+}
+.doc-business .callout {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+.doc-business .callout p {
+  font-family: "Young Serif", Georgia, serif;
+  font-size: 22px;
+  line-height: 1.5;
+}
+.doc-business .callout > strong {
+  color: var(--accent);
+}
+.terms {
+  margin: 0;
+  border-left: 2px solid var(--accent);
+  padding-left: 24px;
+}
+.terms div {
+  padding-block: 0 14px;
+}
+.terms dt {
+  font-size: 13px;
+  color: var(--ink);
+}
+.terms dd {
+  font:
+    400 25px/1.3 "Young Serif",
+    Georgia,
+    serif;
+  margin: 0 0 3px;
+  color: var(--accent);
+}
+.sequence {
+  list-style: none;
+  padding: 0;
+  counter-reset: phase;
+}
+.sequence li {
+  counter-increment: phase;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 8px;
+  border-top: 1px solid #b5bfcb;
+  padding: 16px 0;
+  margin: 0;
+}
+.sequence li::before {
+  content: counter(phase, decimal-leading-zero);
+  color: var(--accent);
+  font:
+    24px "Young Serif",
+    Georgia,
+    serif;
+}
+.sequence h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+.sequence p {
+  margin: 0;
+  font-size: 14px;
+}
+.sequence .schedule {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.doc-business .section-title {
+  border: 0;
+}
+.doc-business th,
+.doc-business td {
+  background: transparent;
+  color: var(--ink);
+  border-bottom: 1px solid #b5bfcb;
+}
+.doc-business thead th {
+  color: var(--accent);
+  border-top: 2px solid var(--accent);
+}
+@media (max-width: 600px) {
+  .doc-legal .sheet,
+  .doc-business .sheet {
+    padding: 28px 20px;
+  }
+  .doc-business .offer-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .doc-professional .page-opener .callout p {
+    font-size: 19px;
+  }
+  .doc-legal .record {
+    grid-template-columns: 4em 1fr;
+  }
+}
+@media print {
+  .doc-legal .sheet,
+  .doc-business .sheet {
+    padding: 0;
+  }
+  .doc-legal .sheet h1 {
+    font-size: 24pt;
+  }
+  .doc-professional .sheet:first-child h1 {
+    font-size: 27pt;
+  }
+  .doc-business .sheet:first-child h1 {
+    font-size: 32pt;
+  }
+  .doc-professional .page-opener .callout p {
+    font-size: 12pt;
+  }
+  .doc-business .callout p {
+    font-size: 13pt;
+  }
+  .doc-business .offer-layout {
+    margin: 14px 0;
+    gap: 20px;
+  }
+  .sequence li {
+    padding: 8px 0;
+  }
+  .sequence p,
+  .doc-legal .prose,
+  .doc-legal li {
+    font-size: 10pt;
+  }
+}

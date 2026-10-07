@@ -1,265 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Juniper — The Season, at the Table.</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="template-dining restaurant">
-    <a class="skip" href="#main">Skip to content</a>
-    <div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div>
-    <header class="top">
-      <a class="brand" href="#main">Juniper<span class="brand-dot"></span></a>
-      <nav aria-label="Main navigation"><a href="#menu">Menu</a><a href="#visit">Visit</a></nav>
-      <span class="top-note">Dinner, slowly.</span>
-    </header>
-    <main id="main">
-      <section class="dining-hero">
-        <div>
-          <p class="eyebrow">DINNER AT JUNIPER</p>
-          <h1>The Season,<br />at the Table.</h1>
-          <p class="intro">
-            A small dining room, a changing menu, and an evening with room to linger.
-          </p>
-          <a class="button" href="#visit">Plan your evening</a>
-          <p class="service">Wednesday–Sunday<br />17:30–22:00</p>
-        </div>
-        <figure>
-          <svg
-            viewBox="0 0 420 480"
-            role="img"
-            aria-label="Original botanical illustration of a branch"
-          >
-            <rect width="420" height="480" fill="#DDE2C8" />
-            <path
-              d="M204 440Q220 310 202 215T260 34"
-              stroke="#435036"
-              stroke-width="6"
-              fill="none"
-            />
-            <ellipse
-              cx="174"
-              cy="350"
-              rx="53"
-              ry="18"
-              transform="rotate(34 174 350)"
-              fill="#7A875A"
-            />
-            <ellipse
-              cx="251"
-              cy="310"
-              rx="53"
-              ry="18"
-              transform="rotate(-34 251 310)"
-              fill="#435036"
-            />
-            <ellipse
-              cx="170"
-              cy="265"
-              rx="53"
-              ry="18"
-              transform="rotate(32 170 265)"
-              fill="#435036"
-            />
-            <ellipse
-              cx="242"
-              cy="217"
-              rx="53"
-              ry="18"
-              transform="rotate(-36 242 217)"
-              fill="#7A875A"
-            />
-            <ellipse
-              cx="197"
-              cy="158"
-              rx="53"
-              ry="18"
-              transform="rotate(34 197 158)"
-              fill="#7A875A"
-            />
-            <ellipse
-              cx="270"
-              cy="106"
-              rx="53"
-              ry="18"
-              transform="rotate(-34 270 106)"
-              fill="#435036"
-            />
-            <text x="30" y="445" fill="#435036" font-size="13" font-family="serif">
-              SUMMER AT JUNIPER
-            </text>
-          </svg>
-          <figcaption>Our kitchen follows what the season brings.</figcaption>
-        </figure>
-      </section>
-      <section class="tasting" id="menu">
-        <div>
-          <p class="eyebrow">THE SUMMER MENU</p>
-          <h2>Four Courses.<br />One Unhurried Evening.</h2>
-          <p>$85 per person • Illustrative menu</p>
-          <p>
-            A vegetable-led journey with a fish course. Speak with the team about dietary needs
-            before requesting a table.
-          </p>
-        </div>
-        <ol>
-          <li>
-            <span>01</span>
-            <div>
-              <h3>Garden</h3>
-              <p>Peas, soft herbs, fresh cheese and toasted rye</p>
-            </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <h3>Field</h3>
-              <p>Summer squash, white beans and sage</p>
-            </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <h3>Coast</h3>
-              <p>Market fish, fennel and lemon</p>
-            </div>
-          </li>
-          <li>
-            <span>04</span>
-            <div>
-              <h3>Orchard</h3>
-              <p>Warm pear, almond crumb and cream</p>
-            </div>
-          </li>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Vesper Tasting Room</title
+  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../../index.html">Dazzler Design Gallery</a
+      ><span class="small">Fictional Interactive Example</span>
+    </nav>
+    <main class="canvas">
+      <div class="vesper">
+        <header>
+          <p class="kicker">VESPER / TWELVE SEATS</p>
+          <h1>Five Courses.<br />One Long Evening.</h1>
+          <p class="lead">A seasonal tasting menu, served at the pace of the table.</p>
+          <p>Wednesday–Saturday · 19:00<br />Sample menu price: $95 per person before tax.</p>
+          <button id="courses-button" aria-expanded="false" aria-controls="courses">
+            Explore the Menu
+          </button>
+        </header>
+        <div class="course-number" aria-hidden="true">V</div>
+      </div>
+      <section id="courses" hidden>
+        <h2>The Five Courses</h2>
+        <ol class="courses">
+          <li>Tomato Water · Basil Oil</li>
+          <li>Roast Beet · Cultured Cream</li>
+          <li>Market Fish · Fennel</li>
+          <li>Summer Squash · Brown Butter</li>
+          <li>Plum · Almond · Vanilla</li>
         </ol>
       </section>
-      <section class="visit" id="visit">
-        <h2>Come as You Are.</h2>
-        <div>
-          <p>42 Orchard Lane, Sampletown<br />Fictional venue for this template</p>
-          <p>For a table, contact hello@example.com.<br />Allow around two hours for the menu.</p>
-        </div>
-        <div>
-          <p>Step-free entry at the front door.<br />Add verified access details before use.</p>
-          <p>Service-charge and tax policy: confirm with the operator.</p>
-        </div>
-      </section>
-      <section class="producer-story">
-        <p class="eyebrow">A FICTIONAL SEASONAL JOURNAL</p>
-        <h2>Good Ingredients.<br /><em>Thoughtfully Put Together.</em></h2>
-        <div class="producer-grid">
-          <article>
-            <strong>Pears and soft herbs</strong>
-            <p>Orchard plot · 18 km in this imagined supply map</p>
-          </article>
-          <article>
-            <strong>Rye and wheat flour</strong>
-            <p>Mill House · 32 km in this imagined supply map</p>
-          </article>
-          <article>
-            <strong>Daily fish selection</strong>
-            <p>Coast market · 46 km in this imagined supply map</p>
-          </article>
-        </div>
-        <p>
-          These producer relationships are invented for the design example, not sourcing claims
-          about a real restaurant.
-        </p>
-      </section>
-      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div class="columns">
+        <section>
+          <h2>At the Table</h2>
+          <p>
+            Arrive ten minutes before the seating. Tell the team about dietary needs before making a
+            request; substitutions and cross-contact controls require confirmation.
+          </p>
+        </section>
+        <section>
+          <h2>A Small Room</h2>
+          <p>
+            Step-free entrance. One shared counter and two small tables. This fictional website does
+            not accept reservations.
+          </p>
+        </section>
+      </div>
     </main>
-    <footer class="site-footer">
-      <span>Juniper · Fictional example by Dazzler</span>
-      <details>
-        <summary>Template notes</summary>
-        <p>
-          All names, contact details, dates, prices and figures are illustrative. Actions update
-          this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled
-          fonts retain their notices.
-        </p>
-        <p>
-          Design system: Supper journal / wine and parchment. Local fonts, synthetic data,
-          responsive layout, print styles and working preview states demonstrate Dazzler.
-        </p>
-      </details>
+    <footer>
+      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
+      data; no live service.
     </footer>
-    <dialog id="edit-dialog">
-      <form id="edit-form">
-        <h2 id="dialog-title">Add Details</h2>
-        <div id="dialog-content"></div>
-        <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
-        <div class="dialog-actions">
-          <button type="button" id="cancel" class="secondary">Cancel</button
-          ><button id="dialog-save">Save preview</button>
-        </div>
-      </form>
-    </dialog>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-fine-dining",
-        "category": "restaurant",
-        "layout": "dining",
-        "brand": "Juniper",
-        "title": "The Season, at the Table.",
-        "intro": "A small dining room, a changing menu, and an evening with room to linger.",
-        "accent": "#82283D",
-        "tint": "#EDEFF7",
-        "courses": [
-          ["Garden", "Peas, soft herbs, fresh cheese and toasted rye"],
-          ["Field", "Summer squash, white beans and sage"],
-          ["Coast", "Market fish, fennel and lemon"],
-          ["Orchard", "Warm pear, almond crumb and cream"]
-        ],
-        "secondary": "#536135",
-        "bright": "#E7BD6A",
-        "paper": "#FFF7E6",
-        "headingFont": "Young Serif",
-        "font": "Georgia",
-        "voice": "Supper journal / wine and parchment",
-        "ink": "#172033",
-        "sample": {
-          "fictional": true,
-          "asOf": "2027-06-21T09:40:00",
-          "seed": "dazzler-showcase-014",
-          "scope": "Local demonstration only; resets on reload"
+        "title": "Vesper Tasting Room",
+        "prompt": "Create a fictional intimate tasting-room website without stock photography. Use black plum, cream serif typography and an oversized course numeral. Let visitors reveal a five-course sequence and read seating details. Distinguish a request preview from a real reservation.",
+        "data": {
+          "courses": 5,
+          "seats": 12,
+          "price": 95
         },
-        "producers": [
-          {
-            "name": "Orchard plot",
-            "ingredient": "Pears and soft herbs",
-            "distanceKm": 18
-          },
-          {
-            "name": "Mill House",
-            "ingredient": "Rye and wheat flour",
-            "distanceKm": 32
-          },
-          {
-            "name": "Coast market",
-            "ingredient": "Daily fish selection",
-            "distanceKm": 46
-          }
-        ],
-        "seats": 28,
-        "schemaVersion": 2,
-        "license": "Apache-2.0",
-        "creator": "Jon Gosier",
-        "demo": true,
-        "persistence": "memory only",
-        "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+        "action": "Explore the Menu"
       }
     </script>
     <script>
-      (() => {
-        // tools/template_interactions.js
-        var cfg = JSON.parse(document.getElementById("template-data").textContent),
-          $ = (id) => document.getElementById(id);
-        var dialog = $("edit-dialog");
-        document.addEventListener("click", (event) => {
-          event.target.closest("button");
-        });
-      })();
+      document.querySelector("#courses-button").onclick = (e) => {
+        const section = document.querySelector("#courses");
+        section.hidden = !section.hidden;
+        e.target.setAttribute("aria-expanded", String(!section.hidden));
+        e.target.textContent = section.hidden ? "Explore the Menu" : "Close the Menu";
+      };
     </script>
   </body>
 </html>

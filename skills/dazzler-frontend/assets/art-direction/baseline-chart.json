@@ -1,0 +1,42 @@
+{
+  "type": "line",
+  "title": "Shade Coverage, 2020–2025",
+  "description": "Coverage increased by 24 percentage points, from 18% to 42%. The 2025 result is 2 points above the illustrative 40% target.",
+  "source": "Synthetic demonstration data, not a measured city or forecast. Coverage alone does not establish equitable access or a causal health benefit.",
+  "data": [
+    {
+      "x": "2020",
+      "y": 18
+    },
+    {
+      "x": "2021",
+      "y": 21
+    },
+    {
+      "x": "2022",
+      "y": 24
+    },
+    {
+      "x": "2023",
+      "y": 29
+    },
+    {
+      "x": "2024",
+      "y": 34
+    },
+    {
+      "x": "2025",
+      "y": 42
+    }
+  ],
+  "width": 780,
+  "height": 280,
+  "font": "Arial",
+  "colors": [
+    "#7048E8"
+  ],
+  "background": "#FFFFFF",
+  "xLabel": "Year",
+  "yLabel": "Shade Coverage",
+  "unit": "%"
+}

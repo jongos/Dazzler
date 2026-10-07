@@ -40,3 +40,7 @@ Fix the affected area, recheck the relevant evidence, and stop when the authoriz
 ## Notes and credits
 
 Adapted from Samuel Berthe's [slop-checklist.md](https://github.com/samber/cc-skills/blob/f866b800353719270a9ea101a41c5e2a2618d460/skills/frontend-design-deslop/references/slop-checklist.md) and divergence guidance, under [MIT](deslop-LICENSE.txt). This is an evidence-based review, not a blacklist of fonts, hues or popular components.
+
+## Verify Claimed Visual Improvement
+
+Compare final artifacts with a fixed baseline under the same rendering conditions. Record changed structure and retained content separately from subjective judgment. In a collection, compare monochrome silhouettes, first-read hierarchy, information density and page roles; color variation alone is insufficient evidence of diversity. Identify intentional repetition rather than treating all similarity as failure. A unit-test count, new instruction file or changed binary hash does not establish design quality. Inspect actual pages and primary interactions, then state the scope of the observed improvement.

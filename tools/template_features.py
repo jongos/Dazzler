@@ -115,6 +115,13 @@ def prepare(docs, uis, out):
                 "font": "Arial",
                 "unit": unit,
             }
+            if d.get("architecture"):
+                cfg["xLabel"] = (
+                    "Reporting week"
+                    if d["id"] == "professional"
+                    else "Delivery milestone"
+                )
+                cfg["yLabel"] = "Accepted" if d["id"] == "professional" else "Payment"
             file = scratch / (ident + ".json")
             file.write_text(json.dumps(cfg), encoding="utf-8")
             dest = scratch / ident

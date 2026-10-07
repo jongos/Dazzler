@@ -1,11 +1,11 @@
 # Dazzler for Gemini CLI
 
-For native extension installation, run `gemini extensions install https://github.com/jongos/Dazzler --ref v0.26.0`, review its consent prompt, then refresh Gemini. This uses the larger source checkout. For a compact local extension, extract `dazzler-gemini-extension.zip` and run `gemini extensions install /absolute/path/to/dazzler`. Skills are discovered under `skills/`. Do not install both standalone and extension copies. Use `gemini extensions list`, `update dazzler`, or `uninstall dazzler` to manage it.
+For native extension installation, run `gemini extensions install https://github.com/jongos/Dazzler --ref v0.27.0`, review its consent prompt, then refresh Gemini. This uses the larger source checkout. For a compact local extension, extract `dazzler-gemini-extension.zip` and run `gemini extensions install /absolute/path/to/dazzler`. Skills are discovered under `skills/`. Do not install both standalone and extension copies. Use `gemini extensions list`, `update dazzler`, or `uninstall dazzler` to manage it.
 
 Download `dazzler-gemini.zip`, `install_skill.py` and `SHA256SUMS.txt` from the same release. From that folder, with Python 3.10+ available:
 
 ```sh
-python install_skill.py install --host gemini --scope project --root /absolute/project --version 0.26.0 --archive dazzler-gemini.zip --checksums SHA256SUMS.txt
+python install_skill.py install --host gemini --scope project --root /absolute/project --version 0.27.0 --archive dazzler-gemini.zip --checksums SHA256SUMS.txt
 ```
 
 The project must exist. Add `--dry-run` to validate without installing. The installer verifies archive paths, checksums and every inventoried resource without executing package code. It refuses unmanaged installations or local edits and retains one prior managed version for rollback.
@@ -32,6 +32,6 @@ Archive, size and helper checks are automated. Real host activation, cloud uploa
 
 Packaging reference (checked September 28, 2026): [official documentation](https://geminicli.com/docs/cli/skills/). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.26.0/dazzler-gemini.zip)
+- [dazzler-gemini.zip](https://github.com/jongos/Dazzler/releases/download/v0.27.0/dazzler-gemini.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.26.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.27.0/dazzler-templates.zip)

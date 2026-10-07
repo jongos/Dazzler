@@ -1,0 +1,342 @@
+[
+  {
+    "id": "html-professional",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-legal",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-business",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-fun",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-family",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-presentation",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-school",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-marketing",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-restaurant",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "html-technical",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable"
+  },
+  {
+    "id": "webapp-workspace",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "webapp-board",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "webapp-settings",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "data-revenue",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "data-operations",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "restaurant-cafe",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "restaurant-reservations",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "restaurant-menu",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  },
+  {
+    "id": "business-portal",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass"
+  }
+]

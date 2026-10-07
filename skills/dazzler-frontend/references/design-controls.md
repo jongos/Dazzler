@@ -40,3 +40,7 @@ Generate color alternatives through the color helper with the current locked val
 Useful controls, selected to fit the request, include font pairing, palette character, light/dark mode, density, corner treatment and motion amount. Avoid dumping all controls into every task. Keep the current design visible and offer a reset when interactive edits are supported. Separate temporary preview changes from applying them to the project; apply when the user's request authorizes it. Never imply a local browser control persists to source files unless that behavior is implemented.
 
 After applying the chosen adjustment, update the existing tokens/design record where relevant and recheck the changed text, surfaces, layout and states. Continue with the new choices as constraints in subsequent work; do not repeat discovery or rerank the whole design unnecessarily.
+
+## Character Within the Existing Controls
+
+The [art-direction standard](art-direction.md) uses these controls and the existing token system. Basic, professional, quieter and minimal requests constrain intensity and vocabulary, not care or distinctiveness. Do not override explicit settings or maximize every dial mechanically. Seek the strongest coherent voice available within those settings.

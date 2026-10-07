@@ -26,6 +26,12 @@ For source-only deliverables without a renderer, audit available source and expl
 
 Apply [editorial craft](editorial-craft.md) to copy authored or edited within scope. Verify facts, qualifications and voice against the source, then recheck headings and layout after wording changes. Copy-pattern findings are contextual review, not AI detection or an automated quality score.
 
-For documents, follow [document design](document-design.md). Before delivery inspect actual pages at reading size: hierarchy, purposeful color surfaces, editorial rhythm, selective emphasis, readable charts, callout usefulness and print/reflow behavior. Fix generic default styling when the brief calls for designed output. Do not substitute a successful file-open test, a palette JSON or a decorative cover for a fully designed document.
+For documents, follow [document design](document-design.md). Before delivery inspect actual pages at reading size: hierarchy, purposeful color surfaces, editorial rhythm, selective emphasis, readable charts, callout usefulness and print/reflow behavior. Treat generic default styling as unfinished, including basic professional work; improve craft within the user's constraints. Do not substitute a successful file-open test, a palette JSON or a decorative cover for a fully designed document.
 
 Record heading coverage, exceptions, observed design improvements and unavailable checks in a short delivery note or existing design record. No scores or assertion of guaranteed beauty are needed.
+
+## Distinctive Voice
+
+Apply [art direction](art-direction.md) to every format and authoring path. Before delivery, identify the visible defining move, its connection to the prompt, supporting choices and intentional restraint in the actual rendered result. Inspect continuation pages, data and ordinary components as well as the opener. Small changes review the affected area and preserve the established identity.
+
+Interchangeable or incoherent output requires revision and another relevant render, not a passing style label. A strong professional document can pass through exacting proportion and typography without spectacle. Record honest observations in the existing design record; the workflow helper requires a structured review for a reported distinction pass. This checks evidence completeness, not beauty. No automated gate guarantees that a person will like the result.

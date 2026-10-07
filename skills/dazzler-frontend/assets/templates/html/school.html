@@ -1,198 +1,156 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>How Light Affects Seedling Growth — Dazzler</title>
-    <link rel="stylesheet" href="../fonts/fonts.css" />
-    <link rel="stylesheet" href="school/tokens.css" />
-    <link rel="stylesheet" href="school/styles.css" />
-  </head>
-  <body class="doc-school">
-    <nav class="tools">
-      <a href="../index.html">Dazzler template gallery</a
-      ><button onclick="print()">Print / save PDF</button>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Rain Garden Observation Notebook</title
+  ><link rel="stylesheet" href="../fonts/fonts.css" /><link
+    rel="stylesheet"
+    href="school/tokens.css"
+  /><link rel="stylesheet" href="school/styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../index.html">Dazzler Design Gallery</a
+      ><button onclick="print()">Print This Example</button>
     </nav>
-    <main>
-      <article class="sheet">
-        <header class="folio"><span>STUDENT RESEARCH REPORT</span><span>01 / 02</span></header>
-        <h1>How Light Affects Seedling Growth</h1>
-        <p class="subtitle"><em>Science investigation • Year 7</em></p>
-        <p class="prose">
-          Student: Avery Kim Class: Year 7 Science Teacher: Jo Lee Date: 21 June 2027
-        </p>
-        <h2 class="section-title">Question and Prediction</h2>
-        <p class="prose">
-          How does daily light exposure affect bean seedling height over two weeks? I predict that
-          the group receiving more light will show healthier leaf growth. Height alone may not
-          capture plant health.
-        </p>
-        <h2 class="section-title">Variables</h2>
-        <div class="table-wrap" tabindex="0">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Type</th>
-                <th scope="col">What is measured or controlled</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Independent</th>
-                <td>Daily light exposure: 4 hours or 8 hours</td>
-              </tr>
-              <tr>
-                <th scope="row">Dependent</th>
-                <td>Seedling height in centimeters; leaf appearance</td>
-              </tr>
-              <tr>
-                <th scope="row">Controlled</th>
-                <td>Seed type, soil, container, water and measurement time</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h2 class="section-title">Materials and Method</h2>
-        <ul>
-          <li>Prepare six similar seedlings in identical containers; label three A and three B.</li>
-          <li>
-            Place group A in 4 hours of light and group B in 8 hours. Keep other conditions
-            consistent.
-          </li>
-          <li>Water each container with the same measured amount daily.</li>
-          <li>
-            Measure height from soil level at the same time on days 0, 7 and 14. Record
-            observations.
-          </li>
-        </ul>
-        <h2 class="section-title">Care and Safety</h2>
-        <p class="prose">
-          Ask a teacher before using lamps. Keep water away from electrical equipment. Wash hands
-          after handling soil.
-        </p>
-        <aside class="callout">
-          <strong>RECORD HONESTLY</strong>
-          <p>
-            The next page contains example data to demonstrate the layout. Replace it with your own
-            measurements; do not present it as an experiment you performed.
+    <main class="canvas">
+      <div class="notebook">
+        <header>
+          <p class="kicker">FIELD SCIENCE / YEAR 8</p>
+          <h1>Where Does the Water Go</h1>
+          <p class="lead">
+            Compare drainage time in three soil samples. Record what happened before deciding why.
           </p>
+          <p>
+            In this fictional classroom investigation, three equal containers hold sand, garden soil
+            and clay-rich soil. Each receives the same water volume; students time the first 100 mL
+            collected.
+          </p>
+        </header>
+        <aside>
+          <div class="stat">240 mL</div>
+          <p class="stat-label">the same water volume for every sample</p>
+          <div class="figure">
+            <svg
+              viewBox="0 0 720 150"
+              role="img"
+              aria-label="Equal Volume then Same Container then Timed Drainage"
+            >
+              <path d="M70 65H650" stroke="currentColor" stroke-width="2" />
+              <circle
+                cx="110"
+                cy="65"
+                r="35"
+                fill="var(--paper)"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <text x="110" y="74" text-anchor="middle" fill="currentColor" font-size="25">1</text>
+              <text x="110" y="135" text-anchor="middle" fill="currentColor" font-size="18">
+                Equal Volume
+              </text>
+              <circle
+                cx="360"
+                cy="65"
+                r="35"
+                fill="var(--paper)"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <text x="360" y="74" text-anchor="middle" fill="currentColor" font-size="25">2</text>
+              <text x="360" y="135" text-anchor="middle" fill="currentColor" font-size="18">
+                Same Container
+              </text>
+              <circle
+                cx="610"
+                cy="65"
+                r="35"
+                fill="var(--paper)"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <text x="610" y="74" text-anchor="middle" fill="currentColor" font-size="25">3</text>
+              <text x="610" y="135" text-anchor="middle" fill="currentColor" font-size="18">
+                Timed Drainage
+              </text>
+            </svg>
+          </div>
         </aside>
-        <footer class="page-foot">
-          <span>FICTIONAL EXAMPLE / SCHOOL</span><span>Dazzler · 1</span>
-        </footer>
-      </article>
-      <article class="sheet">
-        <header class="folio"><span>STUDENT RESEARCH REPORT</span><span>02 / 02</span></header>
-        <h1>Results and Reflection</h1>
-        <figure class="chart">
-          <figcaption>Mean height at day 14</figcaption>
-          <img src="../charts/school-1.svg" alt="Mean height at day 14; exact values follow" />
-          <details>
-            <summary>Read the chart data</summary>
+        <article>
+          <section class="reading">
+            <h2>Keep the Test Fair</h2>
+            <p>
+              Use the same container size, water volume and timing method. Repeat each sample three
+              times. Describe any spills or delayed starts.
+            </p>
+          </section>
+          <section class="reading">
+            <h2>Read the Pattern</h2>
+            <p>
+              Sand drained fastest in the sample results. The test measures this setup only; it does
+              not establish how an entire garden will behave.
+            </p>
+          </section>
+          <section class="reading">
+            <h2>Ask a Better Question</h2>
+            <p>
+              How would compaction change the result? Plan one change at a time and state which
+              measurement would answer your question.
+            </p>
+          </section>
+        </article>
+        <section>
+          <h2>Observation Record</h2>
+          <p class="table-hint">Scroll the table sideways to see all columns.</p>
+          <div
+            class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Where Does the Water Go data"
+          >
             <table>
+              <thead>
+                <tr>
+                  <th scope="col">Sample</th>
+                  <th scope="col">Trial Times</th>
+                  <th scope="col">Median</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
-                  <th>4 h/day</th>
-                  <td>7.2 cm</td>
+                  <th scope="row">Sand</th>
+                  <td>38 / 41 / 40 sec</td>
+                  <td>40 sec</td>
                 </tr>
                 <tr>
-                  <th>8 h/day</th>
-                  <td>8.2 cm</td>
+                  <th scope="row">Garden soil</th>
+                  <td>84 / 90 / 87 sec</td>
+                  <td>87 sec</td>
+                </tr>
+                <tr>
+                  <th scope="row">Clay-rich soil</th>
+                  <td>165 / 172 / 168 sec</td>
+                  <td>168 sec</td>
                 </tr>
               </tbody>
             </table>
-          </details>
-        </figure>
-        <div class="table-wrap" tabindex="0">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Plant</th>
-                <th scope="col">Light hours</th>
-                <th scope="col">Day 0 cm</th>
-                <th scope="col">Day 7 cm</th>
-                <th scope="col">Day 14 cm</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">A1</th>
-                <td>4</td>
-                <td>2.0</td>
-                <td>4.3</td>
-                <td>7.1</td>
-              </tr>
-              <tr>
-                <th scope="row">A2</th>
-                <td>4</td>
-                <td>2.1</td>
-                <td>4.4</td>
-                <td>7.2</td>
-              </tr>
-              <tr>
-                <th scope="row">A3</th>
-                <td>4</td>
-                <td>2.2</td>
-                <td>4.5</td>
-                <td>7.3</td>
-              </tr>
-              <tr>
-                <th scope="row">B1</th>
-                <td>8</td>
-                <td>2.0</td>
-                <td>4.9</td>
-                <td>8.1</td>
-              </tr>
-              <tr>
-                <th scope="row">B2</th>
-                <td>8</td>
-                <td>2.1</td>
-                <td>5.0</td>
-                <td>8.2</td>
-              </tr>
-              <tr>
-                <th scope="row">B3</th>
-                <td>8</td>
-                <td>2.2</td>
-                <td>5.1</td>
-                <td>8.3</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h2 class="section-title">What the Example Suggests</h2>
-        <p class="prose">
-          Group A grew from 2.1 to 7.2 cm on average. Group B grew from 2.1 to 8.2 cm. The
-          difference in growth is 1.0 cm. With only three plants per group, this does not establish
-          a general rule.
-        </p>
-        <aside class="callout">
-          <strong>BETTER EVIDENCE</strong>
-          <p>
-            Height can increase when a seedling stretches for light. Add
-            <strong class="keyword">leaf count</strong>, color observations and
-            <strong class="keyword">more plants</strong> before interpreting health. These
-            measurements are synthetic, not an experiment performed by a student.
-          </p>
-        </aside>
-        <footer class="page-foot">
-          <span>FICTIONAL EXAMPLE / SCHOOL</span><span>Dazzler · 2</span>
-        </footer>
-      </article>
+          </div>
+          <label for="question">Your Next Question</label
+          ><textarea
+            id="question"
+            rows="5"
+            placeholder="What would you change in the next test?"
+          ></textarea>
+          <p class="small">Local notes are not submitted or saved.</p>
+        </section>
+      </div>
+      <p class="closing">
+        Synthetic classroom observations · Follow your teacher&#x27;s safety instructions.
+      </p>
     </main>
-    <footer class="notes">
-      <details>
-        <summary>Design notes and sample data</summary>
-        <p>
-          Traceable synthetic observations, chart and uncertainty. Field notebook / botanical triad.
-        </p>
-        <p>
-          All organizations, people, dates and measurements are fictional. Replace sample material
-          with verified project content. Original Dazzler design: Apache-2.0; local fonts retain
-          their notices. Desktop Word fonts are referenced, not embedded.
-        </p>
-        <a href="../data/school.json">Inspect the synthetic dataset</a>
-      </details>
+    <footer>
+      Fictional demonstration · Original Dazzler design · Apache-2.0. Local font licenses accompany
+      the files. No information is transmitted.
     </footer>
   </body>
 </html>

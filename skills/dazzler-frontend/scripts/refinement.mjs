@@ -4,6 +4,30 @@ import path from "node:path";
 import { cli } from "./cli.mjs";
 import { readJSON } from "./runtime.mjs";
 const procedures = {
+  audit: [
+    "Read-only: inspect technical accessibility, responsive behavior and measured frontend performance within scope",
+    "Return located findings, supporting evidence and unrun checks; keep design heuristics separate from verified failures",
+  ],
+  layout: [
+    "Use actual content to correct grouping, alignment and reading order within the existing composition",
+    "Compare affected and adjacent sections at narrow and wide widths; preserve required information and actions",
+  ],
+  adapt: [
+    "Find actual content breakpoints and preserve the primary task across viewport, zoom and input modes",
+    "Verify long labels, focus order, tables and sticky controls without hiding required information",
+  ],
+  optimize: [
+    "Measure the slow user task and identify its cause using existing project tools before changing code",
+    "Compare the same route, state and measurement conditions after the change; retest behavior and record unavailable measurements",
+  ],
+  clarify: [
+    "Make labels, instructions and recovery copy explain the action and next step using consistent product terminology",
+    "Preserve facts, required disclosures and protected wording; test wrapping and affected interaction states",
+  ],
+  extract: [
+    "Inspect existing primitives and repeated behavior; identify a stable shared component or token contract",
+    "Consolidate only justified repetition and verify affected consumers, semantics, focus and visual exceptions",
+  ],
   bolder: [
     "Compare the scoped target with adjacent sections; identify underused existing type, motifs and spacing",
     "Strengthen one focal move within the selected design; quiet competing emphasis instead of enlarging everything",
@@ -66,16 +90,16 @@ export function resolveRefinement(input = {}) {
     if (effective.motion === "auto") effective.motion = 2;
   }
   if (
-    intent === "critique" &&
+    ["critique", "audit"].includes(intent) &&
     ["variance", "density", "motion"].some((k) => requested[k] !== "auto")
   )
-    throw Error("Critique is read-only; omit change controls");
+    throw Error("Critique and audit are read-only; omit change controls");
   return {
     schemaVersion: 1,
     requested,
     effective,
     active: intent !== "auto" || Object.values(requested).some((v) => v !== "auto"),
-    readOnly: intent === "critique",
+    readOnly: ["critique", "audit"].includes(intent),
     procedure: procedures[intent] ?? [
       "Continue the existing direction and infer unspecified choices from the task",
     ],
@@ -96,7 +120,7 @@ export function prepareRefinement(input, resolution) {
     );
   if (resolution.readOnly)
     throw Error(
-      "Critique produces a read-only report; use refinement.mjs without token generation",
+      "Critique or audit produces a read-only report; use refinement.mjs without token generation",
     );
   if (
     (input.baseSize !== undefined && input.baseSize < 16) ||

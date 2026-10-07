@@ -37,12 +37,63 @@ def render_html(d, path):
     format_rich = rich
 
     def render_rich(text):
-        return format_rich(text, EMPHASIS[d["id"]])
+        return format_rich(
+            text,
+            (
+                EMPHASIS[d["id"]]
+                if d.get("architecture", {}).get("emphasis", True)
+                else ()
+            ),
+        )
 
     def block(b):
         k = b["type"]
         if k in ("p", "h"):
             return f'<{"h2" if k=="h" else "p"} class="{"section-title" if k=="h" else "prose"}">{render_rich(b["text"])}</{"h2" if k=="h" else "p"}>'
+        if k == "facts":
+            return (
+                '<div class="facts">'
+                + "".join(
+                    "<span><strong>" + e(a) + "</strong> " + e(c) + "</span>"
+                    for a, c in b["values"]
+                )
+                + "</div>"
+            )
+        if k == "terms":
+            return (
+                '<dl class="terms">'
+                + "".join(
+                    "<div><dt>" + e(c) + "</dt><dd>" + e(a) + "</dd></div>"
+                    for a, c in b["values"]
+                )
+                + "</dl>"
+            )
+        if k == "metadata":
+            return (
+                '<dl class="record">'
+                + "".join(
+                    "<dt>" + e(label) + "</dt><dd>" + e(value) + "</dd>"
+                    for label, value in zip(b["headers"], b["rows"][0])
+                )
+                + "</dl>"
+            )
+        if k == "sequence":
+            return (
+                '<p class="sequence-key">'
+                + e(" / ".join(b["headers"]))
+                + '</p><ol class="sequence">'
+                + "".join(
+                    "<li><div><h3>"
+                    + e(row[0])
+                    + '<span class="schedule">'
+                    + e(row[2])
+                    + "</span></h3><p>"
+                    + render_rich(row[1])
+                    + "</p></div></li>"
+                    for row in b["rows"]
+                )
+                + "</ol>"
+            )
         if k == "metrics":
             return (
                 '<div class="metrics">'
@@ -109,7 +160,9 @@ def render_html(d, path):
                 + "</div>"
             )
         return (
-            '<div class="table-wrap"><table><thead><tr>'
+            '<p class="table-hint">Scroll to view all columns.</p><div class="table-wrap" tabindex="0" role="region" aria-label="'
+            + e(" / ".join(b["headers"]) + " table")
+            + '"><table><thead><tr>'
             + "".join('<th scope="col">' + e(x) + "</th>" for x in b["headers"])
             + "</tr></thead><tbody>"
             + "".join(
@@ -130,8 +183,36 @@ def render_html(d, path):
             + "</tbody></table></div>"
         )
 
+    def body_blocks(pg):
+        blocks = pg["blocks"]
+        if d["id"] == "business" and d.get("architecture"):
+            output = []
+            j = 0
+            while j < len(blocks):
+                if (
+                    blocks[j]["type"] == "callout"
+                    and j + 1 < len(blocks)
+                    and blocks[j + 1]["type"] == "terms"
+                ):
+                    output.append(
+                        '<section class="offer-layout">'
+                        + block(blocks[j])
+                        + block(blocks[j + 1])
+                        + "</section>"
+                    )
+                    j += 2
+                else:
+                    output.append(block(blocks[j]))
+                    j += 1
+            return "".join(output)
+        return "".join(block(b) for b in blocks)
+
     pages = "".join(
-        '<article class="sheet"><header class="folio"><span>'
+        '<article class="sheet page-'
+        + ("opener" if i == 0 else "continuation")
+        + '" data-architecture="'
+        + e(d.get("architecture", {}).get("name", "legacy"))
+        + '"><header class="folio"><span>'
         + e(d["tag"])
         + "</span><span>"
         + f'{i+1:02d} / {len(d["pages"]):02d}'
@@ -143,7 +224,7 @@ def render_html(d, path):
             if i == 0
             else ""
         )
-        + "".join(block(b) for b in pg["blocks"])
+        + body_blocks(pg)
         + '<footer class="page-foot"><span>FICTIONAL EXAMPLE / '
         + e(d["id"].upper())
         + "</span><span>Dazzler · "
@@ -155,6 +236,12 @@ def render_html(d, path):
         encoding="utf-8"
     )
     css += Path(__file__).with_name("template_refresh.css").read_text(encoding="utf-8")
+    if d.get("architecture"):
+        css += (
+            Path(__file__)
+            .with_name("template_architecture.css")
+            .read_text(encoding="utf-8")
+        )
     if d.get("landscape"):
         css += "@page{size:letter landscape}"
     vars = f":root{{--accent:{d['accent']};--secondary:{d['secondary']};--bright:{d['bright']};--paper:{d['paper']};--ink:{d['ink']};--display:'{d['headingFont']}';}}"
@@ -192,12 +279,13 @@ def render_docx(d, path):
     from docx.oxml.ns import qn
 
     doc = Document()
+    arch = d.get("architecture", {})
     sec = doc.sections[0]
     land = d.get("landscape", False)
     sec.page_width = Inches(11 if land else 8.5)
     sec.page_height = Inches(8.5 if land else 11)
     sec.top_margin = sec.bottom_margin = Inches(0.52)
-    sec.left_margin = sec.right_margin = Inches(0.62)
+    sec.left_margin = sec.right_margin = Inches(arch.get("margin", 0.62))
     if land:
         sec.orientation = WD_ORIENT.LANDSCAPE
     accent = d["accent"] if d["id"] != "presentation" else "#393783"
@@ -212,7 +300,9 @@ def render_docx(d, path):
         node.append(el)
 
     def runs(para, text, size=None):
-        for value, bold in segments(text, EMPHASIS[d["id"]]):
+        for value, bold in segments(
+            text, EMPHASIS[d["id"]] if arch.get("emphasis", True) else ()
+        ):
             run = para.add_run(value)
             run.bold = bold
             if bold:
@@ -246,11 +336,13 @@ def render_docx(d, path):
             else 10.5 if d["id"] in ("technical", "school", "business", "legal") else 11
         )
     )
+    title_size = arch.get("title", title_size)
+    body_size = arch.get("body", body_size)
     for name, size in [
         ("Normal", body_size),
         ("Title", title_size),
         ("Subtitle", 12),
-        ("Heading 1", 15),
+        ("Heading 1", arch.get("heading", 15)),
         ("Heading 2", 12),
         ("List Bullet", body_size),
     ]:
@@ -270,11 +362,27 @@ def render_docx(d, path):
         st.paragraph_format.line_spacing = (
             1.0 if d["id"] in ("family", "presentation") else 1.1
         )
+        if arch:
+            st.paragraph_format.line_spacing = arch["leading"]
+            st.paragraph_format.space_after = Pt(arch.get("paragraph_after", 7))
+            if arch.get("name") == "service-proposal" and name == "Normal":
+                st.paragraph_format.keep_together = True
+            if name == "Title":
+                st.font.color.rgb = RGBColor.from_string(ink[1:])
         if name in ("Title", "Heading 1"):
             st.paragraph_format.keep_with_next = True
             st.font.bold = d["id"] not in ("legal", "restaurant", "family", "school")
+            if arch and d["id"] == "business":
+                st.font.bold = False
         if name == "Heading 1":
             st.paragraph_format.space_before = Pt(9)
+    if arch:
+        from docx.enum.style import WD_STYLE_TYPE
+
+        for name in ("Record", "Facts", "Offer", "Sequence", "Takeaway"):
+            st = doc.styles.add_style("Dazzler " + name, WD_STYLE_TYPE.PARAGRAPH)
+            st.base_style = doc.styles["Normal"]
+            st.paragraph_format.keep_together = True
     doc.core_properties.title = d["title"]
     doc.core_properties.author = "Dazzler / Jon Gosier"
     doc.core_properties.subject = d["use"]
@@ -306,8 +414,35 @@ def render_docx(d, path):
                 props = cell._tc.get_or_add_tcPr()
                 shade(
                     props,
-                    accent if ri == 0 else (TINTS[d["id"]] if ri % 2 else "#FFFFFF"),
+                    (
+                        (
+                            "#FFFFFF"
+                            if arch.get("table") == "rules"
+                            else (
+                                TINTS[d["id"]]
+                                if arch.get("table") == "tint"
+                                else accent
+                            )
+                        )
+                        if ri == 0
+                        else (
+                            "#FFFFFF"
+                            if arch.get("table") == "rules"
+                            else (TINTS[d["id"]] if ri % 2 else "#FFFFFF")
+                        )
+                    ),
                 )
+                if arch.get("table") == "rules":
+                    borders = OxmlElement("w:tcBorders")
+                    edge = OxmlElement("w:bottom")
+                    for key, val in {
+                        "val": "single",
+                        "sz": "6" if ri == 0 else "3",
+                        "color": accent[1:] if ri == 0 else "D5D5D5",
+                    }.items():
+                        edge.set(qn("w:" + key), val)
+                    borders.append(edge)
+                    props.append(borders)
                 margin = OxmlElement("w:tcMar")
                 for side in ("top", "left", "bottom", "right"):
                     el = OxmlElement("w:" + side)
@@ -338,7 +473,9 @@ def render_docx(d, path):
                     )
                 )
                 run.bold = ri == 0
-                color(run, "#FFFFFF" if ri == 0 else ink)
+                color(
+                    run, accent if ri == 0 and arch else ("#FFFFFF" if ri == 0 else ink)
+                )
         after = doc.add_paragraph()
         after.paragraph_format.space_after = Pt(0)
         after.paragraph_format.space_before = Pt(0)
@@ -346,15 +483,23 @@ def render_docx(d, path):
         after.add_run().font.size = Pt(3)
 
     for i, pg in enumerate(d["pages"]):
-        if i:
+        if i and arch.get("name") != "service-proposal":
             doc.add_page_break()
         kicker = doc.add_paragraph()
+        if arch.get("name") == "service-proposal":
+            kicker.paragraph_format.keep_with_next = True
         r = kicker.add_run(d["tag"] + "   /   " + str(i + 1).zfill(2))
         r.bold = True
         r.font.size = Pt(8)
         color(r, accent)
         title = doc.add_paragraph(pg["title"], "Title")
-        if d["id"] in ("professional", "business", "marketing", "technical"):
+        if arch:
+            if i:
+                for run in title.runs:
+                    run.font.size = Pt(arch["continuation"])
+            title.paragraph_format.space_before = Pt(10 if d["id"] == "business" else 3)
+            title.paragraph_format.space_after = Pt(10)
+        elif d["id"] in ("professional", "business", "marketing", "technical"):
             shade(title._p.get_or_add_pPr(), accent)
             for run in title.runs:
                 color(run, "#FFFFFF")
@@ -390,6 +535,49 @@ def render_docx(d, path):
                     doc.add_paragraph(style="Heading 1" if k == "h" else "Normal"),
                     b["text"],
                 )
+            elif k == "metadata":
+                for label, value in zip(b["headers"], b["rows"][0]):
+                    para = doc.add_paragraph(style="Dazzler Record")
+                    para.paragraph_format.space_after = Pt(3)
+                    para.paragraph_format.tab_stops.add_tab_stop(Inches(0.62))
+                    para.add_run(label + "\t").bold = True
+                    para.add_run(value)
+            elif k == "facts":
+                para = doc.add_paragraph(style="Dazzler Facts")
+                para.paragraph_format.space_before = Pt(7)
+                para.paragraph_format.space_after = Pt(10)
+                for j, (value, label) in enumerate(b["values"]):
+                    if j:
+                        para.add_run("    /    ")
+                    r = para.add_run(value)
+                    r.bold = d["id"] == "professional"
+                    r.font.size = Pt(13 if d["id"] == "professional" and i == 0 else 9)
+                    color(r, accent)
+                    r = para.add_run(" " + label)
+                    r.font.size = Pt(9)
+            elif k == "terms":
+                for value, label in b["values"]:
+                    para = doc.add_paragraph(style="Dazzler Offer")
+                    para.paragraph_format.space_after = Pt(4)
+                    r = para.add_run(value + "  ")
+                    r.font.name = "Georgia"
+                    r.font.size = Pt(17)
+                    color(r, accent)
+                    para.add_run(label)
+            elif k == "sequence":
+                para = doc.add_paragraph(
+                    " / ".join(b["headers"]), style="Dazzler Record"
+                )
+                for r in para.runs:
+                    r.font.size = Pt(8)
+                for number, row in enumerate(b["rows"], 1):
+                    para = doc.add_paragraph(style="Dazzler Sequence")
+                    para.paragraph_format.space_before = Pt(6)
+                    para.paragraph_format.space_after = Pt(6)
+                    r = para.add_run(f"{number:02d}   {row[0]}   /   {row[2]}\n")
+                    r.bold = True
+                    color(r, accent)
+                    para.add_run(row[1])
             elif k == "metrics":
                 make_table(
                     [x[0] for x in b["values"]],
@@ -413,10 +601,23 @@ def render_docx(d, path):
             elif k == "chart":
                 para = doc.add_paragraph(heading(b["label"]), "Heading 2")
                 para.paragraph_format.keep_with_next = True
-                doc.add_picture(
+                picture = doc.add_picture(
                     str(path.parents[1] / "charts" / f"{b['asset']}.png"),
-                    width=Inches(6.2 if land else 6.65),
+                    width=min(
+                        Inches(arch.get("chart_width", 6.2 if land else 6.65)),
+                        sec.page_width - sec.left_margin - sec.right_margin,
+                    ),
                 )
+                if arch:
+                    picture._inline.docPr.set(
+                        "descr",
+                        b["label"]
+                        + ". "
+                        + "; ".join(
+                            str(a) + ": " + str(v) + " " + b["unit"]
+                            for a, v in b["rows"]
+                        ),
+                    )
             elif k == "list":
                 for item in b["items"]:
                     runs(doc.add_paragraph(style="List Bullet"), item)
@@ -427,18 +628,24 @@ def render_docx(d, path):
                 run.font.name = "Consolas"
                 run.font.size = Pt(8)
             elif k == "callout":
-                para = doc.add_paragraph()
-                shade(
-                    para._p.get_or_add_pPr(),
-                    TINTS[d["id"]],
-                )
+                para = doc.add_paragraph(style="Dazzler Takeaway" if arch else "Normal")
+                if not arch or d["id"] == "professional":
+                    shade(para._p.get_or_add_pPr(), TINTS[d["id"]])
                 para.paragraph_format.space_before = Pt(6)
                 para.paragraph_format.space_after = Pt(8)
                 r = para.add_run(b["label"] + "\n")
                 r.bold = True
                 r.font.size = Pt(9)
                 color(r, accent)
-                runs(para, b["text"])
+                runs(
+                    para,
+                    b["text"],
+                    (
+                        13
+                        if arch and i == 0 and d["id"] in ("professional", "business")
+                        else None
+                    ),
+                )
         if i == len(d["pages"]) - 1:
             note = doc.add_paragraph()
             note.paragraph_format.space_before = Pt(7)

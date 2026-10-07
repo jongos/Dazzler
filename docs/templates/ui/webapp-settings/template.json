@@ -1,95 +1,14 @@
 {
   "id": "webapp-settings",
-  "category": "general-webapp",
-  "layout": "settings",
-  "brand": "Forma",
-  "title": "Profile & Preferences",
-  "intro": "Manage how your team sees you and when you hear from us.",
-  "accent": "#096B61",
-  "tint": "#EDEFF7",
-  "profile": {
-    "name": "Alex Morgan",
-    "email": "alex@example.com",
-    "role": "Product designer",
-    "timezone": "America/New_York",
-    "digest": true,
-    "mentions": true
-  },
-  "secondary": "#9E3D60",
-  "bright": "#BCE5D8",
-  "paper": "#F4FAF6",
-  "headingFont": "Work Sans",
-  "font": "Arial",
-  "voice": "Personal workspace / mint and rose",
-  "ink": "#172033",
-  "sample": {
-    "fictional": true,
-    "asOf": "2027-06-21T09:40:00",
-    "seed": "dazzler-showcase-014",
-    "scope": "Local demonstration only; resets on reload"
-  },
-  "activity": [
-    {
-      "device": "Desktop browser",
-      "location": "Sampletown",
-      "lastUsed": "Today 09:12",
-      "current": true
-    },
-    {
-      "device": "Mobile browser",
-      "location": "Sampletown",
-      "lastUsed": "Yesterday 18:40",
-      "current": false
-    }
-  ],
-  "notificationVolumes": [
-    8,
-    5,
-    9,
-    3,
-    6,
-    2,
-    1
-  ],
-  "showcaseChart": {
-    "asset": "webapp-settings",
-    "title": "A quieter notification rhythm",
-    "rows": [
-      [
-        "Mon",
-        8
-      ],
-      [
-        "Tue",
-        5
-      ],
-      [
-        "Wed",
-        9
-      ],
-      [
-        "Thu",
-        3
-      ],
-      [
-        "Fri",
-        6
-      ],
-      [
-        "Sat",
-        2
-      ],
-      [
-        "Sun",
-        1
-      ]
+  "title": "Still Notification Studio",
+  "prompt": "Design a fictional notification-settings interface centered on choosing a daily rhythm. Use a quiet blue field and a large schedule dial made from typography, not generic settings cards. Support a digest-time selector, three channel toggles and a save confirmation.",
+  "data": {
+    "digestTimes": [
+      "09:00",
+      "13:00",
+      "17:00"
     ],
-    "unit": "sample notifications"
+    "channels": 3
   },
-  "schemaVersion": 2,
-  "license": "Apache-2.0",
-  "creator": "Jon Gosier",
-  "demo": true,
-  "persistence": "memory only",
-  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+  "action": "Save Preferences"
 }

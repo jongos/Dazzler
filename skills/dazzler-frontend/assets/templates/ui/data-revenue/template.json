@@ -1,172 +1,32 @@
 {
   "id": "data-revenue",
-  "category": "data-visualization",
-  "layout": "revenue",
-  "brand": "Metric",
-  "title": "Revenue Performance",
-  "intro": "Full year 2027 \u2022 USD \u2022 Reconciled synthetic sales ledger",
-  "accent": "#176A58",
-  "tint": "#EDEFF7",
-  "months": [
-    {
-      "month": "Jan",
-      "gross": 42000,
-      "refunds": 1200,
-      "orders": 310
-    },
-    {
-      "month": "Feb",
-      "gross": 46000,
-      "refunds": 1400,
-      "orders": 338
-    },
-    {
-      "month": "Mar",
-      "gross": 51000,
-      "refunds": 1800,
-      "orders": 367
-    },
-    {
-      "month": "Apr",
-      "gross": 54000,
-      "refunds": 1500,
-      "orders": 402
-    },
-    {
-      "month": "May",
-      "gross": 61000,
-      "refunds": 2100,
-      "orders": 441
-    },
-    {
-      "month": "Jun",
-      "gross": 66000,
-      "refunds": 2000,
-      "orders": 472
-    },
-    {
-      "month": "Jul",
-      "gross": 70000,
-      "refunds": 2100,
-      "orders": 495
-    },
-    {
-      "month": "Aug",
-      "gross": 73500,
-      "refunds": 2200,
-      "orders": 512
-    },
-    {
-      "month": "Sep",
-      "gross": 78000,
-      "refunds": 2300,
-      "orders": 541
-    },
-    {
-      "month": "Oct",
-      "gross": 81500,
-      "refunds": 2450,
-      "orders": 566
-    },
-    {
-      "month": "Nov",
-      "gross": 86000,
-      "refunds": 2580,
-      "orders": 602
-    },
-    {
-      "month": "Dec",
-      "gross": 93000,
-      "refunds": 2790,
-      "orders": 648
-    }
-  ],
-  "secondary": "#6748B1",
-  "bright": "#D8EC75",
-  "paper": "#F5F9EF",
-  "headingFont": "Archivo",
-  "font": "Arial",
-  "voice": "Financial editorial / forest and citron",
-  "ink": "#172033",
-  "sample": {
-    "fictional": true,
-    "asOf": "2027-12-31T23:59:00",
-    "seed": "dazzler-showcase-014",
-    "scope": "Local demonstration only; resets on reload"
-  },
-  "channels": [
-    {
-      "channel": "Subscriptions",
-      "share": 62
-    },
-    {
-      "channel": "Services",
-      "share": 28
-    },
-    {
-      "channel": "Add-ons",
-      "share": 10
-    }
-  ],
-  "showcaseChart": {
-    "asset": "data-revenue",
-    "title": "The year in net revenue",
-    "rows": [
-      [
-        "Jan",
-        40800
-      ],
-      [
-        "Feb",
-        44600
-      ],
-      [
-        "Mar",
-        49200
-      ],
-      [
-        "Apr",
-        52500
-      ],
-      [
-        "May",
-        58900
-      ],
-      [
-        "Jun",
-        64000
-      ],
-      [
-        "Jul",
-        67900
-      ],
-      [
-        "Aug",
-        71300
-      ],
-      [
-        "Sep",
-        75700
-      ],
-      [
-        "Oct",
-        79050
-      ],
-      [
-        "Nov",
-        83420
-      ],
-      [
-        "Dec",
-        90210
-      ]
+  "title": "Common Ground Membership Observatory",
+  "prompt": "Build a fictional membership revenue explorer whose main surface is an annual chart, not KPI cards. Use ink blue, coral and cream. Switch between revenue and member counts with accurate axes, exact values and a data table. Make the selected metric visually and programmatically clear.",
+  "data": {
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
     ],
-    "unit": "USD"
+    "revenue": [
+      84,
+      98,
+      121,
+      143,
+      168,
+      192
+    ],
+    "members": [
+      210,
+      245,
+      302,
+      357,
+      420,
+      480
+    ]
   },
-  "schemaVersion": 2,
-  "license": "Apache-2.0",
-  "creator": "Jon Gosier",
-  "demo": true,
-  "persistence": "memory only",
-  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+  "action": "Members"
 }

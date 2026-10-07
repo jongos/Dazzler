@@ -211,6 +211,71 @@ class ProjectToolsTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 project.export_document({"sections": [{}]}, system, out)
 
+    def test_native_page_surface_and_explicit_palette_mode(self):
+        try:
+            from docx import Document
+            from docx.oxml.ns import qn
+        except ImportError:
+            self.skipTest("Native Word authoring dependency unavailable")
+        system = {
+            "fonts": {"body": "Calibri", "heading": "Georgia"},
+            "palette": {
+                "modes": {
+                    "light": {
+                        "tokens": {
+                            "text": "#111111",
+                            "background": "#FFD600",
+                            "border": "#444444",
+                        }
+                    },
+                    "dark": {
+                        "tokens": {
+                            "text": "#FFFFFF",
+                            "background": "#001144",
+                            "border": "#BBBBBB",
+                        }
+                    },
+                }
+            },
+        }
+        with tempfile.TemporaryDirectory() as td:
+            for mode, background in [("light", "#FFD600"), ("dark", "#001144")]:
+                out = Path(td) / (mode + ".docx")
+                project.export_document(
+                    {
+                        "title": "Surface Study",
+                        "paletteMode": mode,
+                        "sections": [
+                            {
+                                "heading": "Evidence",
+                                "body": "Editable native prose",
+                                "table": [["Year", "Value"], ["2025", "42%"]],
+                            }
+                        ],
+                    },
+                    system,
+                    out,
+                    "docx",
+                )
+                doc = Document(out)
+                self.assertIn(background, doc.sections[0].header._element.xml)
+                self.assertEqual(doc.tables[0].rows[1].cells[1].text, "42%")
+                fonts = (
+                    doc.styles["Title"].element.get_or_add_rPr().find(qn("w:rFonts"))
+                )
+                self.assertFalse(any("theme" in attr.lower() for attr in fonts.attrib))
+                self.assertEqual(
+                    doc.styles["Normal"].font.color.rgb.__str__(),
+                    system["palette"]["modes"][mode]["tokens"]["text"][1:],
+                )
+            with self.assertRaisesRegex(ValueError, "palette mode"):
+                project.export_document(
+                    {"paletteMode": "missing", "sections": [{"body": "Text"}]},
+                    system,
+                    Path(td) / "bad.docx",
+                    "docx",
+                )
+
     def test_evaluation_without_host_is_not_run(self):
         with tempfile.TemporaryDirectory() as td:
             result = evaluation.run(Path(td) / "eval", "unavailable-host")

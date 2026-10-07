@@ -1,65 +1,11 @@
 {
   "id": "restaurant-fine-dining",
-  "category": "restaurant",
-  "layout": "dining",
-  "brand": "Juniper",
-  "title": "The Season, at the Table.",
-  "intro": "A small dining room, a changing menu, and an evening with room to linger.",
-  "accent": "#82283D",
-  "tint": "#EDEFF7",
-  "courses": [
-    [
-      "Garden",
-      "Peas, soft herbs, fresh cheese and toasted rye"
-    ],
-    [
-      "Field",
-      "Summer squash, white beans and sage"
-    ],
-    [
-      "Coast",
-      "Market fish, fennel and lemon"
-    ],
-    [
-      "Orchard",
-      "Warm pear, almond crumb and cream"
-    ]
-  ],
-  "secondary": "#536135",
-  "bright": "#E7BD6A",
-  "paper": "#FFF7E6",
-  "headingFont": "Young Serif",
-  "font": "Georgia",
-  "voice": "Supper journal / wine and parchment",
-  "ink": "#172033",
-  "sample": {
-    "fictional": true,
-    "asOf": "2027-06-21T09:40:00",
-    "seed": "dazzler-showcase-014",
-    "scope": "Local demonstration only; resets on reload"
+  "title": "Vesper Tasting Room",
+  "prompt": "Create a fictional intimate tasting-room website without stock photography. Use black plum, cream serif typography and an oversized course numeral. Let visitors reveal a five-course sequence and read seating details. Distinguish a request preview from a real reservation.",
+  "data": {
+    "courses": 5,
+    "seats": 12,
+    "price": 95
   },
-  "producers": [
-    {
-      "name": "Orchard plot",
-      "ingredient": "Pears and soft herbs",
-      "distanceKm": 18
-    },
-    {
-      "name": "Mill House",
-      "ingredient": "Rye and wheat flour",
-      "distanceKm": 32
-    },
-    {
-      "name": "Coast market",
-      "ingredient": "Daily fish selection",
-      "distanceKm": 46
-    }
-  ],
-  "seats": 28,
-  "schemaVersion": 2,
-  "license": "Apache-2.0",
-  "creator": "Jon Gosier",
-  "demo": true,
-  "persistence": "memory only",
-  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+  "action": "Explore the Menu"
 }

@@ -1,6 +1,10 @@
 # Design the Document, Not Just Its Cover
 
-Use this workflow for Word, PDF, reports, guides, proposals and slides, regardless of the authoring tool. A Dazzler invocation requests deliberate design by default. Do not stop at a default template with a new font and colored headings. Plain or generic treatment requires an explicit user request; a serious subject calls for disciplined design, not an absence of design.
+Use this workflow for Word, PDF, reports, guides, proposals and slides, regardless of the authoring tool. A Dazzler invocation requests deliberate design by default. Do not stop at a default template with a new font and colored headings. A restrained page can be deliberately designed through type, alignment and reading order. Do not add a visual device merely to prove that design occurred; the reader's task determines the treatment.
+
+Select a content architecture using [document archetypes](document-archetypes.md), including opener/continuation roles, native styles, authored chart labels and editing resilience.
+
+For new documents, begin with [the generative design space](document-design-space.md). Explore structural alternatives and build the chosen opener plus a dense interior early; do not reduce the examples to a fixed menu of skins.
 
 ## Choose and Apply a Direction
 
@@ -19,7 +23,7 @@ Select treatments because the content benefits from them, not to fill a checklis
 | Chapter transition | A section opener, accent band, contrasting panel or varied layout proportion suited to the brief |
 | Action or sequence | A compact checklist, numbered steps or an emphasized next-action panel |
 
-Use several complementary techniques across a substantial document when they fit. Do not apply every technique to every page. Color must appear where it helps navigation and comprehension, not only in a cover. Keep selective emphasis selective; do not bold entire paragraphs or repeat an identical card for every thought.
+There is no quota of techniques. Start with the content hierarchy; use complementary treatments only when they carry different semantic jobs. Do not apply every technique to every page. Color must appear where it helps navigation and comprehension, not only in a cover. Keep selective emphasis selective; do not bold entire paragraphs or repeat an identical card for every thought.
 
 ## Match the Requested Style
 
@@ -31,7 +35,7 @@ Use several complementary techniques across a substantial document when they fit
 
 ## Implement in the Actual Format
 
-In Word use native paragraph styles, run-level bold/color/italics, paragraph or cell shading, controlled spacing, keep-with-next and deliberate page breaks. Keep essential text in reading order. Avoid floating boxes and layout tables that make editing or accessibility worse. Prefer section/callout shading over relying on a page background that may not print. For web output use semantic sections and responsive grids, genuine heading elements and print styles.
+In Word use native paragraph styles, run-level bold/color/italics, paragraph or cell shading, controlled spacing, keep-with-next and deliberate page breaks. Keep essential text in reading order. Use native sections and columns for reading structure. Anchored artwork and layout tables require explicit checks of overlap, reading order and reflow; keep essential text in the document flow. Do not reject richer composition simply because the exporter takes more care. Prefer section/callout shading over relying on a page background that may not print. For web output use semantic sections and responsive grids, genuine heading elements and print styles.
 
 Measure text/background contrast. Verify font availability and genuine styles in the target renderer. Check dark or saturated panels in print preview, chart labels at final size, table headers, section breaks and every page's overflow. Keep an ink-friendly print treatment when relevant. Use actual content; never fabricate quotations, statistics or assertions to justify a visual treatment.
 

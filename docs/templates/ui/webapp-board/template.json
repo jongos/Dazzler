@@ -1,186 +1,30 @@
 {
   "id": "webapp-board",
-  "category": "general-webapp",
-  "layout": "board",
-  "brand": "Relay",
-  "title": "Onboarding Sprint",
-  "intro": "Sprint 08 \u2022 21 June \u2013 2 July \u2022 Goal: make first setup clearer",
-  "accent": "#563BB0",
-  "tint": "#EDEFF7",
-  "tasks": [
-    {
-      "id": "ONB-41",
-      "title": "Map the first-login path",
-      "owner": "Maya",
-      "stage": "Done",
-      "points": 3,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-42",
-      "title": "Rewrite the welcome email",
-      "owner": "Sam",
-      "stage": "In progress",
-      "points": 2,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-43",
-      "title": "Handle an expired invite",
-      "owner": "Alex",
-      "stage": "Review",
-      "points": 5,
-      "priority": "High"
-    },
-    {
-      "id": "ONB-44",
-      "title": "Add setup checklist events",
-      "owner": "Alex",
-      "stage": "In progress",
-      "points": 3,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-45",
-      "title": "Test keyboard-only setup",
-      "owner": "Maya",
-      "stage": "Ready",
-      "points": 3,
-      "priority": "High"
-    },
-    {
-      "id": "ONB-46",
-      "title": "Document support handoff",
-      "owner": "Sam",
-      "stage": "Ready",
-      "points": 2,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-47",
-      "title": "Test empty accounts",
-      "owner": "Alex",
-      "stage": "Ready",
-      "points": 2,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-48",
-      "title": "Clarify billing copy",
-      "owner": "Sam",
-      "stage": "Review",
-      "points": 2,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-49",
-      "title": "Add screen-reader status",
-      "owner": "Maya",
-      "stage": "In progress",
-      "points": 3,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-50",
-      "title": "Review mobile wrapping",
-      "owner": "Alex",
-      "stage": "Done",
-      "points": 2,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-51",
-      "title": "Prepare help article",
-      "owner": "Sam",
-      "stage": "Ready",
-      "points": 1,
-      "priority": "Normal"
-    },
-    {
-      "id": "ONB-52",
-      "title": "Verify invitation expiry",
-      "owner": "Maya",
-      "stage": "Review",
-      "points": 3,
-      "priority": "Normal"
-    }
-  ],
-  "secondary": "#AC3A24",
-  "bright": "#F8D963",
-  "paper": "#F4EFFF",
-  "headingFont": "Poppins",
-  "font": "Arial",
-  "voice": "Sprint studio / violet and saffron",
-  "ink": "#172033",
-  "sample": {
-    "fictional": true,
-    "asOf": "2027-06-21T09:40:00",
-    "seed": "dazzler-showcase-014",
-    "scope": "Local demonstration only; resets on reload"
-  },
-  "burndown": [
-    22,
-    22,
-    20,
-    17,
-    14,
-    10,
-    8,
-    5,
-    2,
-    0
-  ],
-  "showcaseChart": {
-    "asset": "webapp-board",
-    "title": "Reference burn-down path",
-    "rows": [
+  "title": "Signal Production Board",
+  "prompt": "Create a fictional audio-production board whose workflow is visible as three horizontal lanes rather than a conventional card kanban. Use broadcast yellow and charcoal, clear owners and stage labels. A Move Forward action must update a task stage and the completion count.",
+  "data": {
+    "tasks": [
       [
-        "D1",
-        22
+        "Opening Mix",
+        "Ari",
+        "Edit"
       ],
       [
-        "D2",
-        22
+        "Fact Check",
+        "Noor",
+        "Review"
       ],
       [
-        "D3",
-        20
+        "Transcript",
+        "Sam",
+        "Review"
       ],
       [
-        "D4",
-        17
-      ],
-      [
-        "D5",
-        14
-      ],
-      [
-        "D6",
-        10
-      ],
-      [
-        "D7",
-        8
-      ],
-      [
-        "D8",
-        5
-      ],
-      [
-        "D9",
-        2
-      ],
-      [
-        "D10",
-        0
+        "Artwork",
+        "Dee",
+        "Ready"
       ]
-    ],
-    "unit": "remaining points"
+    ]
   },
-  "schemaVersion": 2,
-  "license": "Apache-2.0",
-  "creator": "Jon Gosier",
-  "demo": true,
-  "persistence": "memory only",
-  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+  "action": "Move Forward"
 }

@@ -1,193 +1,100 @@
 {
-  "schemaVersion": 1,
+  "id": "technical",
+  "title": "Relay Queue Recovery Runbook",
+  "short": "Restore the Queue Safely",
+  "tag": "RELAY / OPERATIONS RUNBOOK 07",
+  "lead": "Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch.",
+  "accent": "#07556A",
+  "paper": "#EAF5F5",
+  "font": "Office Code Pro",
+  "word": "Consolas",
+  "layout": "runbook",
+  "stat": "50",
+  "label": "events in the first recovery batch",
+  "intro": "This fictional runbook handles a stalled delivery queue. It demonstrates a safe sequence; adapt commands and thresholds to the actual system before operational use.",
+  "sections": [
+    [
+      "01 Stabilize",
+      "Pause the worker and record the last acknowledged event ID. Confirm that the consumer is healthy before attempting a replay."
+    ],
+    [
+      "02 Recover",
+      "Replay the next 50 events from the checkpoint. Check duplicate handling and compare delivered IDs with acknowledgements."
+    ],
+    [
+      "03 Verify",
+      "Resume only when the batch reconciles and error rate remains below the agreed threshold. If it fails, pause again and retain the evidence."
+    ]
+  ],
+  "headers": [
+    "Signal",
+    "Proceed",
+    "Stop"
+  ],
+  "rows": [
+    [
+      "Acknowledgements",
+      "50 of 50 matched",
+      "Any missing ID"
+    ],
+    [
+      "Duplicates",
+      "Handled idempotently",
+      "Side effect repeated"
+    ],
+    [
+      "Consumer health",
+      "Checks passing",
+      "Timeout or error"
+    ]
+  ],
+  "closing": "Synthetic operational example · Commands require environment-specific review.",
+  "prompt": "Create a fictional technical recovery runbook. Make the pause-replay-verify sequence the composition, with monospaced step labels, a cyan evidence rail and a high-contrast stop condition. Preserve exact operational language and provide a rollback branch, not a generic dashboard.",
   "fictional": true,
-  "asOf": "2027-06-21",
-  "scenario": "Technical RFC with delivery guarantees, payload, failure handling, tests and rollout",
-  "generation": "Deterministic authored fixtures; no client or external personal data",
-  "delivery": {
-    "firstAttempt": 960,
-    "retriedSuccess": 35,
-    "held": 5,
-    "total": 1000
+  "design": {
+    "accent": "#07556A",
+    "secondary": "#07556A",
+    "paper": "#EAF5F5"
   },
   "document": [
     {
-      "title": "Order status webhook delivery",
-      "blocks": [
-        {
-          "type": "p",
-          "text": "Owner: Alex Rivera    Reviewers: API + Reliability    Updated: 18 June 2027"
-        },
-        {
-          "type": "metrics",
-          "values": [
-            [
-              "6",
-              "attempt maximum"
-            ],
-            [
-              "10 sec",
-              "request timeout"
-            ],
-            [
-              "24 hr",
-              "retry window"
-            ]
-          ]
-        },
-        {
-          "type": "callout",
-          "label": "DESIGN DECISION",
-          "text": "Deliver order status events asynchronously with at-least-once delivery. Consumers deduplicate on event_id; the service does not promise exactly-once processing."
-        },
-        {
-          "type": "h",
-          "text": "Context and boundaries"
-        },
-        {
-          "type": "p",
-          "text": "Partners currently poll for order updates. This design adds signed event delivery to registered HTTPS endpoints. It excludes partner endpoint provisioning, historical backfills and delivery to arbitrary customer-supplied URLs."
-        },
-        {
-          "type": "h",
-          "text": "Delivery path"
-        },
-        {
-          "type": "p",
-          "text": "Order transaction \u2192 transactional outbox \u2192 delivery queue \u2192 worker \u2192 registered partner endpoint. A delivery record stores each attempt and its result."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Requirement",
-            "Design response"
-          ],
-          "rows": [
-            [
-              "No lost committed events",
-              "Write the outbox record in the order transaction"
-            ],
-            [
-              "Duplicate-safe processing",
-              "Keep event_id stable across retries"
-            ],
-            [
-              "Endpoint authenticity",
-              "Sign the raw request body with the partner secret"
-            ],
-            [
-              "Failure isolation",
-              "Separate per-partner concurrency and delivery limits"
-            ]
-          ],
-          "widths": [
-            34,
-            66
-          ]
-        },
-        {
-          "type": "h",
-          "text": "Event example"
-        },
-        {
-          "type": "code",
-          "text": "{\n  \"event_id\": \"evt_demo_0042\",\n  \"type\": \"order.shipped\",\n  \"occurred_at\": \"2027-06-18T14:05:00Z\",\n  \"data\": {\"order_id\": \"ord_demo_108\", \"status\": \"shipped\"}\n}"
-        },
-        {
-          "type": "p",
-          "text": "The identifiers and payload are illustrative. No credentials or customer information are included."
-        }
+      "title": "Relay Queue Recovery Runbook",
+      "sections": [
+        [
+          "01 Stabilize",
+          "Pause the worker and record the last acknowledged event ID. Confirm that the consumer is healthy before attempting a replay."
+        ],
+        [
+          "02 Recover",
+          "Replay the next 50 events from the checkpoint. Check duplicate handling and compare delivered IDs with acknowledgements."
+        ],
+        [
+          "03 Verify",
+          "Resume only when the batch reconciles and error rate remains below the agreed threshold. If it fails, pause again and retain the evidence."
+        ]
       ],
-      "kicker": null
-    },
-    {
-      "title": "Failures and release plan",
-      "blocks": [
-        {
-          "type": "chart",
-          "label": "Synthetic delivery outcomes",
-          "rows": [
-            [
-              "First try",
-              960
-            ],
-            [
-              "Retry",
-              35
-            ],
-            [
-              "Held",
-              5
-            ]
-          ],
-          "kind": "bar",
-          "unit": "events",
-          "asset": "technical-1"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Fixture",
-            "Expected behavior",
-            "Sample outcome"
-          ],
-          "rows": [
-            [
-              "Duplicate event",
-              "Consumer deduplicates stable event_id",
-              "1 business action"
-            ],
-            [
-              "HTTP 429",
-              "Respect bounded retry schedule",
-              "Delivered on attempt 3"
-            ],
-            [
-              "HTTP 400",
-              "Stop and request configuration review",
-              "Held"
-            ],
-            [
-              "Private destination",
-              "Reject before dispatch",
-              "Blocked"
-            ],
-            [
-              "Worker restart",
-              "Replay durable outbox",
-              "No missing event"
-            ]
-          ],
-          "widths": [
-            25,
-            48,
-            27
-          ]
-        },
-        {
-          "type": "h",
-          "text": "Release gate"
-        },
-        {
-          "type": "p",
-          "text": "Replay 1,000 synthetic events. 960 succeed first time, 35 after retry and 5 remain held for review: 99.5% eventually delivered in this fixture, not a production SLO."
-        },
-        {
-          "type": "callout",
-          "label": "ROLL BACK SAFELY",
-          "text": "Pause new dispatch and retain the outbox and attempt history. Never log signing secrets. Expand only after a measured pilot and operational review."
-        }
+      "headers": [
+        "Signal",
+        "Proceed",
+        "Stop"
       ],
-      "kicker": null
+      "rows": [
+        [
+          "Acknowledgements",
+          "50 of 50 matched",
+          "Any missing ID"
+        ],
+        [
+          "Duplicates",
+          "Handled idempotently",
+          "Side effect repeated"
+        ],
+        [
+          "Consumer health",
+          "Checks passing",
+          "Timeout or error"
+        ]
+      ]
     }
-  ],
-  "design": {
-    "accent": "#075D83",
-    "secondary": "#B33D21",
-    "bright": "#BAE9EA",
-    "paper": "#F1F8FB",
-    "headingFont": "Office Code Pro",
-    "voice": "Engineering field guide / ink and cyan"
-  },
-  "capabilities": "Monospace hierarchy, event data and failure-path design"
+  ]
 }

@@ -54,13 +54,15 @@ const { chromium } = require("playwright"),
         }
     }
     await page.goto(new URL("templates/index.html", base).href);
-    const links = await page.locator(".picture").evaluateAll((nodes) => nodes.map((a) => a.href));
+    const links = await page
+      .locator(".grid article > a")
+      .evaluateAll((nodes) => nodes.map((a) => a.href));
     assert.equal(new Set(links).size, 30);
     for (const url of links) {
       const response = await page.goto(url);
       if (response) assert(response.ok(), url);
       await ready();
-      if (url.includes("preview-")) assert((await page.locator("main img").count()) >= 1);
+      if (url.includes("preview-")) assert((await page.locator("img").count()) >= 1);
     }
     assert.deepEqual(errors, []);
     console.log(

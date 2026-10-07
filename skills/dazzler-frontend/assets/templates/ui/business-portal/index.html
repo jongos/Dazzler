@@ -1,423 +1,98 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Northstar — Alder Studio / Brand &amp; Website</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="template-business app">
-    <a class="skip" href="#main">Skip to content</a>
-    <div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div>
-    <header class="top">
-      <a class="brand" href="#main">Northstar<span class="brand-dot"></span></a>
-      <nav aria-label="Main navigation">
-        <a href="#deliverables">Deliverables</a><a href="#billing">Billing</a>
-      </nav>
-      <span class="avatar" aria-label="Alex Morgan">AM</span>
-    </header>
-    <main id="main">
-      <header class="page-title">
-        <p class="eyebrow">Northstar / BUSINESS</p>
-        <h1>Alder Studio / Brand &amp; Website</h1>
-        <p>Your project room • Updated 18 June 2027</p>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Fieldwork Client Ledger</title
+  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../../index.html">Dazzler Design Gallery</a
+      ><span class="small">Fictional Interactive Example</span>
+    </nav>
+    <main class="canvas">
+      <header class="portal">
+        <p class="kicker">FIELDWORK / CLIENT ROOM</p>
+        <h1>The Courtyard Project</h1>
+        <p class="lead">One decision is ready for your review.</p>
       </header>
-      <div class="client-banner">
-        <div>
-          <p class="eyebrow">NEXT STEP • BY 21 JUNE</p>
-          <h2>Your Brand Direction Is Ready to Review.</h2>
-          <p>Choose a direction or leave a revision note so we can move into page design.</p>
-          <a class="button" href="#deliverables">Review deliverables</a>
-        </div>
-        <div class="project-facts">
-          <strong>Project 027</strong><span>4-week engagement</span
-          ><span>Target handover • 12 July</span><span>Lead • Maya Chen</span>
-        </div>
-      </div>
-      <div class="split">
-        <section id="deliverables">
-          <h2>Deliverables and Decisions</h2>
-          <div id="deliverable-list"></div>
-          <section class="panel" id="billing">
-            <h2>Billing Schedule</h2>
-            <div class="table-wrap" tabindex="0">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Milestone</th>
-                    <th>USD</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Kickoff • 40%</td>
-                    <td>$4,800</td>
-                    <td>Paid</td>
-                  </tr>
-                  <tr>
-                    <td>Prototype review • 40%</td>
-                    <td>$4,800</td>
-                    <td>Upcoming</td>
-                  </tr>
-                  <tr>
-                    <td>Handover • 20%</td>
-                    <td>$2,400</td>
-                    <td>Not yet due</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-        </section>
-        <aside class="rail">
-          <h2>Your Project Team</h2>
-          <div class="person">
-            <span class="avatar">MC</span>
-            <div><strong>Maya Chen</strong><small>Project lead</small></div>
-          </div>
-          <p>Weekly review • Tuesday, 10:00<br />Reply window • Two working days</p>
-          <button data-dialog="update">Draft an update request</button>
-          <h2>Project Timeline</h2>
-          <ol class="activity">
-            <li><strong>Discovery completed</strong><small>14 June</small></li>
+      <div class="ledger">
+        <section>
+          <h2>Project Sequence</h2>
+          <ol class="milestones">
             <li>
-              <strong>Brand direction review</strong><small>Now • your feedback needed</small>
+              <strong>06 Jun</strong><span>Site Survey<br /><small>Complete</small></span>
             </li>
-            <li><strong>Website prototype</strong><small>25 June</small></li>
-            <li><strong>Handover</strong><small>12 July</small></li>
+            <li>
+              <strong>20 Jun</strong><span>Concept Review<br /><small>Complete</small></span>
+            </li>
+            <li class="current">
+              <strong>04 Jul</strong
+              ><span>Material Direction<br /><small>Awaiting Your Review</small></span>
+            </li>
+            <li>
+              <strong>18 Jul</strong><span>Detailed Design<br /><small>Planned</small></span>
+            </li>
           </ol>
+          <h2>Review Documents</h2>
+          <div class="actions">
+            <button data-doc="Materials">Materials</button
+            ><button data-doc="Schedule">Schedule</button>
+          </div>
+        </section>
+        <aside class="decision-panel">
+          <p class="kicker">DECISION 03</p>
+          <h2 id="preview-title">Materials</h2>
+          <p id="preview">
+            The proposal pairs reclaimed brick with pale timber and a permeable courtyard surface.
+            Final product specifications and costs remain subject to confirmation.
+          </p>
+          <button id="approve">Mark Reviewed Locally</button>
+          <p role="status" id="status" class="status"></p>
+          <p class="small">
+            This preview records no contractual approval and sends nothing to the studio.
+          </p>
         </aside>
       </div>
-      <section class="showcase-panel">
-        <div>
-          <p class="eyebrow">THE BIGGER PICTURE</p>
-          <h2>A Fee Tied to Delivery</h2>
-          <p>
-            Three milestones add to the $12,000 sample engagement. Approval and revision actions are
-            local demonstrations.
-          </p>
-        </div>
-        <figure>
-          <img src="../../charts/business-portal.svg" alt="A fee tied to delivery" />
-          <details>
-            <summary>Read exact values</summary>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Kickoff</th>
-                  <td>4800 USD</td>
-                </tr>
-                <tr>
-                  <th>Review</th>
-                  <td>4800 USD</td>
-                </tr>
-                <tr>
-                  <th>Handover</th>
-                  <td>2400 USD</td>
-                </tr>
-              </tbody>
-            </table>
-          </details>
-        </figure>
-      </section>
-      <p id="status" class="status" role="status" aria-live="polite"></p>
     </main>
-    <footer class="site-footer">
-      <span>Northstar · Fictional example by Dazzler</span>
-      <details>
-        <summary>Template notes</summary>
-        <p>
-          All names, contact details, dates, prices and figures are illustrative. Actions update
-          this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled
-          fonts retain their notices.
-        </p>
-        <p>
-          Design system: Client editorial / navy and raspberry. Local fonts, synthetic data,
-          responsive layout, print styles and working preview states demonstrate Dazzler.
-        </p>
-      </details>
+    <footer>
+      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
+      data; no live service.
     </footer>
-    <dialog id="edit-dialog">
-      <form id="edit-form">
-        <h2 id="dialog-title">Add Details</h2>
-        <div id="dialog-content"></div>
-        <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
-        <div class="dialog-actions">
-          <button type="button" id="cancel" class="secondary">Cancel</button
-          ><button id="dialog-save">Save preview</button>
-        </div>
-      </form>
-    </dialog>
     <script id="template-data" type="application/json">
       {
         "id": "business-portal",
-        "category": "generic-business",
-        "layout": "business",
-        "brand": "Northstar",
-        "title": "Alder Studio / Brand & Website",
-        "intro": "Your project room • Updated 18 June 2027",
-        "accent": "#193D7D",
-        "tint": "#EDEFF7",
-        "deliverables": [
-          {
-            "name": "Brand direction",
-            "version": "v2",
-            "status": "Needs review",
-            "due": "21 Jun",
-            "description": "Positioning, voice and visual direction. Please confirm the preferred route."
-          },
-          {
-            "name": "Homepage wireframe",
-            "version": "v1",
-            "status": "In progress",
-            "due": "25 Jun",
-            "description": "Structure and content hierarchy for the new homepage."
-          },
-          {
-            "name": "Launch checklist",
-            "version": "v1",
-            "status": "Scheduled",
-            "due": "08 Jul",
-            "description": "Content, analytics and deployment checks before launch."
-          },
-          {
-            "name": "Type and color system",
-            "version": "v1",
-            "status": "Ready",
-            "due": "28 Jun",
-            "description": "Semantic color roles, typography scale and component states."
-          },
-          {
-            "name": "Responsive QA report",
-            "version": "v1",
-            "status": "Scheduled",
-            "due": "09 Jul",
-            "description": "Mobile layout, keyboard checks and content review evidence."
-          }
-        ],
-        "secondary": "#A1395D",
-        "bright": "#ADCFC8",
-        "paper": "#F2F5FC",
-        "headingFont": "Archivo",
-        "font": "Arial",
-        "voice": "Client editorial / navy and raspberry",
-        "ink": "#172033",
-        "sample": {
-          "fictional": true,
-          "asOf": "2027-06-21T09:40:00",
-          "seed": "dazzler-showcase-014",
-          "scope": "Local demonstration only; resets on reload"
+        "title": "Fieldwork Client Ledger",
+        "prompt": "Create a fictional client portal for a small architecture studio. Organize the page as a project ledger with milestone dates and a focused decision panel, rather than a generic dashboard. Use brick red and warm white. Document selection must show a useful preview; approval must be explicitly local and reversible.",
+        "data": {
+          "milestones": ["06 Jun", "20 Jun", "04 Jul", "18 Jul"],
+          "documents": ["Materials", "Schedule"]
         },
-        "showcaseChart": {
-          "asset": "business-portal",
-          "title": "A fee tied to delivery",
-          "rows": [
-            ["Kickoff", 4800],
-            ["Review", 4800],
-            ["Handover", 2400]
-          ],
-          "unit": "USD"
-        },
-        "schemaVersion": 2,
-        "license": "Apache-2.0",
-        "creator": "Jon Gosier",
-        "demo": true,
-        "persistence": "memory only",
-        "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+        "action": "Mark Reviewed Locally"
       }
     </script>
     <script>
-      (() => {
-        // skills/dazzler-frontend/scripts/headings.mjs
-        var rules = {
-          schemaVersion: 1,
-          style: "ap-like-protected",
-          smallWords: [
-            "a",
-            "an",
-            "the",
-            "and",
-            "but",
-            "or",
-            "for",
-            "nor",
-            "so",
-            "yet",
-            "at",
-            "by",
-            "in",
-            "of",
-            "off",
-            "on",
-            "out",
-            "per",
-            "to",
-            "up",
-            "via",
-            "as",
-          ],
-          phrasalPairs: ["set up", "sign in", "sign out", "log in", "log out", "back up"],
-          notes:
-            "Conservative English heading helper, not full grammatical AP editing. Preserve existing capitals, quoted/code spans, names and identifiers. Sentence mode preserves authored text. Review ambiguous phrases.",
-        };
-        function heading(text, options = {}) {
-          let { case: casing = "title", lang = "en", preserve = [] } = options;
-          if (typeof text != "string" || text.length > 1e4)
-            throw Error("Heading must be text of at most 10000 characters");
-          if (
-            !["title", "sentence", "upper", "preserve"].includes(casing) ||
-            typeof lang != "string"
-          )
-            throw Error("Invalid heading case or language");
-          if (
-            !Array.isArray(preserve) ||
-            preserve.length > 100 ||
-            preserve.some((x) => typeof x != "string" || !x || x.length > 160)
-          )
-            throw Error("Invalid heading preserve list");
-          if (!/^en(?:-|$)/i.test(lang) || ["sentence", "preserve"].includes(casing)) return text;
-          let protectedPattern =
-              /`[^`]*`|<(?:code|kbd|samp)\b[^>]*>[\s\S]*?<\/(?:code|kbd|samp)>|<[^>]*>|&(?:#[0-9]+|#x[0-9a-f]+|[a-z]+);|"[^"]*"|“[^”]*”|‘[^’]*’|«[^»]*»|(?<!\w)'[^']*'|(?:https?:\/\/|www\.)\S+|\S+@\S+|[^\s<>]*[0-9_/\\()][^\s<>]*|\b[A-Za-z]+\.[A-Za-z.]+\b/gi,
-            spans = [...text.matchAll(protectedPattern)].map((m) => [
-              m.index,
-              m.index + m[0].length,
-            ]);
-          for (let value of preserve)
-            for (let p = text.indexOf(value); p !== -1; p = text.indexOf(value, p + value.length))
-              spans.push([p, p + value.length]);
-          let protectedChars = new Uint8Array(text.length);
-          for (let [start, end2] of spans) protectedChars.fill(1, start, end2);
-          let words = [...text.matchAll(/\p{L}+(?:['’]\p{L}+)?/gu)].filter(
-            (m) => !protectedChars.subarray(m.index, m.index + m[0].length).includes(1),
-          );
-          if (casing === "title" && text === text.toUpperCase()) return text;
-          let result = "",
-            end = 0;
-          return (
-            words.forEach((m, i) => {
-              let word = m[0],
-                start = m.index,
-                stop = start + word.length,
-                replacement = word;
-              if (casing === "upper" || word === word.toLowerCase()) {
-                let between = i
-                    ? text.slice(words[i - 1].index + words[i - 1][0].length, start)
-                    : "",
-                  afterBreak = i === 0 || /[:—]\s*$/.test(between),
-                  pair =
-                    i > 0 &&
-                    /^\s+$/.test(between) &&
-                    rules.phrasalPairs.includes(
-                      words[i - 1][0].toLowerCase() + " " + word.toLowerCase(),
-                    );
-                casing === "upper"
-                  ? (replacement = /[a-z][A-Z]/.test(word) ? word : word.toUpperCase())
-                  : (afterBreak ||
-                      i === words.length - 1 ||
-                      pair ||
-                      !rules.smallWords.includes(word)) &&
-                    (replacement = word[0].toUpperCase() + word.slice(1));
-              }
-              ((result += text.slice(end, start) + replacement), (end = stop));
-            }),
-            result + text.slice(end)
-          );
-        }
-
-        // tools/template_interactions.js
-        var cfg = JSON.parse(document.getElementById("template-data").textContent),
-          $ = (id) => document.getElementById(id),
-          esc = (v) =>
-            String(v).replace(
-              /[&<>"']/g,
-              (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
-            );
-        var say = (t) => {
-            $("status").textContent = t;
-          },
-          dialog = $("edit-dialog"),
-          pending = "";
-        function openDialog(title, action, content = "", label = "Details") {
-          (($("dialog-title").textContent = heading(title)),
-            ($("dialog-content").innerHTML = content),
-            ($("entry-label").textContent = label),
-            ($("entry").value = ""),
-            ($("entry").required = !!label),
-            ($("entry").hidden = $("entry-label").hidden = !label),
-            ($("dialog-save").textContent =
-              action === "reservation"
-                ? "Keep request preview"
-                : action === "cart"
-                  ? "Keep order preview"
-                  : "Save preview"),
-            (pending = action),
-            dialog.showModal());
-        }
-        $("cancel").addEventListener("click", () => dialog.close());
-        function businessRender() {
-          $("deliverable-list").innerHTML = cfg.deliverables
-            .map(
-              (x, i) =>
-                `<article class="deliverable"><header><div><small>${x.version} \xB7 Due ${x.due}</small><h3>${esc(heading(x.name))}</h3></div><span class="pill">${x.status}</span></header><p>${x.description}</p><div class="actions"><button class="secondary" data-brief="${i}">View review brief</button>${i === 0 ? '<button data-approve="0">Approve in preview</button><button class="secondary" data-dialog="revision">Request a revision</button>' : ""}</div></article>`,
-            )
-            .join("");
-        }
-        document.addEventListener("click", (event) => {
-          let b = event.target.closest("button");
-          if (b) {
-            if (b.dataset.dialog) {
-              let mode = b.dataset.dialog;
-              openDialog(
-                {
-                  project: "Create a project",
-                  task: "Add a sprint task",
-                  update: "Draft an update request",
-                  revision: "Request a revision",
-                }[mode],
-                mode,
-                "<p>Saved in this local preview only.</p>",
-                mode === "project" ? "Project name" : mode === "task" ? "Task title" : "Your note",
-              );
-            }
-            if (
-              (b.dataset.approve &&
-                ((cfg.deliverables[0].status = "Approved in preview"),
-                businessRender(),
-                say("Approval recorded locally. No client decision was sent.")),
-              b.dataset.brief !== void 0)
-            ) {
-              let d = cfg.deliverables[Number(b.dataset.brief)];
-              openDialog(
-                d.name,
-                "brief",
-                `<p>${esc(d.description)}</p><h3>Review Checklist</h3><ul><li>Does this meet the agreed scope?</li><li>Are the facts and wording accurate?</li><li>What specific changes are needed?</li></ul><p>${esc(d.status)} \xB7 ${esc(d.version)}</p>`,
-                "",
-              );
-            }
-          }
-        });
-        $("edit-form").addEventListener("submit", (event) => {
-          event.preventDefault();
-          let value = $("entry").value.trim();
-          ($("entry").required && !value) ||
-            (pending === "revision" &&
-              ((cfg.deliverables[0].status = "Revision requested"),
-              (cfg.deliverables[0].description = value),
-              businessRender()),
-            say(
-              pending === "reservation"
-                ? "Reservation request preview kept. No table has been booked."
-                : pending === "cart"
-                  ? "Order preview kept. Nothing was sent to the caf\xE9."
-                  : pending === "brief"
-                    ? "Review brief closed."
-                    : "Saved in this preview only. No message or account change was sent.",
-            ),
-            dialog.close());
-        });
-        businessRender();
-      })();
+      const docs = {
+        Materials:
+          "The proposal pairs reclaimed brick with pale timber and a permeable courtyard surface. Final product specifications and costs remain subject to confirmation.",
+        Schedule:
+          "Detailed design is planned for 18 July. Procurement dates depend on the confirmed scope and supplier lead times.",
+      };
+      document.querySelectorAll("[data-doc]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            document.querySelector("#preview-title").textContent = b.dataset.doc;
+            document.querySelector("#preview").textContent = docs[b.dataset.doc];
+          }),
+      );
+      let reviewed = false;
+      document.querySelector("#approve").onclick = (e) => {
+        reviewed = !reviewed;
+        e.target.textContent = reviewed ? "Undo Local Review" : "Mark Reviewed Locally";
+        document.querySelector("#status").textContent = reviewed
+          ? "Marked reviewed in this preview only."
+          : "Local review removed.";
+      };
     </script>
   </body>
 </html>

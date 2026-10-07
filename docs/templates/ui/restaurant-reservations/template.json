@@ -1,54 +1,13 @@
 {
   "id": "restaurant-reservations",
-  "category": "restaurant",
-  "layout": "reservations",
-  "brand": "The Long Table",
-  "title": "Make an Evening of It.",
-  "intro": "Request a table for dinner. We will show a summary before any next step.",
-  "accent": "#593478",
-  "tint": "#EDEFF7",
-  "times": [
-    "17:30",
-    "18:00",
-    "18:30",
-    "19:00",
-    "19:30",
-    "20:00"
-  ],
-  "secondary": "#236B62",
-  "bright": "#F0C876",
-  "paper": "#F8F0FD",
-  "headingFont": "Libre Baskerville",
-  "font": "Georgia",
-  "voice": "Evening invitation / orchid and jade",
-  "ink": "#172033",
-  "sample": {
-    "fictional": true,
-    "asOf": "2027-06-21T09:40:00",
-    "seed": "dazzler-showcase-014",
-    "scope": "Local demonstration only; resets on reload"
+  "title": "Solstice Table Planner",
+  "prompt": "Design a fictional restaurant seating-request page around a simple original room plan and a request form. Use olive and cream, distinct named table zones and an accessible text equivalent. Choosing a zone must update the request; submission must clearly remain an unconfirmed local preview.",
+  "data": {
+    "zones": [
+      "Window Table",
+      "Quiet Corner",
+      "Shared Table"
+    ]
   },
-  "rooms": [
-    {
-      "id": "window",
-      "label": "Window tables",
-      "description": "Bright street-facing seats for two to four. A preference only, not a booking guarantee."
-    },
-    {
-      "id": "quiet",
-      "label": "Quiet corner",
-      "description": "A calmer area away from the bar. Tell the team about access needs."
-    },
-    {
-      "id": "social",
-      "label": "Shared table",
-      "description": "A convivial central table for small groups. All availability remains illustrative."
-    }
-  ],
-  "schemaVersion": 2,
-  "license": "Apache-2.0",
-  "creator": "Jon Gosier",
-  "demo": true,
-  "persistence": "memory only",
-  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+  "action": "Quiet Corner"
 }

@@ -3,7 +3,7 @@
 Apply these defaults automatically when establishing a direction. Existing project records, user choices, language and brand rules take precedence. A small edit does not justify redesigning the surrounding project.
 
 1. **Make the next action clear.** Give the page one primary decision and use labels that describe its consequence. Review hierarchy and actual interaction; decoration is not a substitute for usefulness.
-2. **Fit the stakes.** Start expressive for portfolios, editorial stories, hospitality and consumer experiences. Prefer reserved treatment for legal, financial, government, clinical, compliance and enterprise administration. Explain the selected tone in the design record; explicit choices win.
+2. **Fit the stakes.** Push a distinctive, committed voice across industries. High stakes require accurate, legible information, not an automatic reserved aesthetic. A basic professional request constrains the visual vocabulary, not the ambition: maximize typographic precision, proportion and editorial character. Explain the selected tone in the design record; explicit choices win.
 3. **Make reading comfortable.** Use a maximum 60ch body measure, never a fixed width. Paragraphs, prose lists, quotations, captions and descriptions inherit it. Headings, tables, code, navigation and layout containers are exempt. Narrow screens must reflow. Word uses an approximate measure and requires rendered review.
 4. **Make headings recognizable.** Default to protected English Title Case. Preserve acronyms, mixed-case brands, code, URLs, quoted material, units and names. Other languages retain authored casing. Buttons, body copy, table labels and eyebrow text are not headings. Sentence case and preservation are valid project overrides.
 5. **Build a visible hierarchy.** Use meaningful type roles, real weights and genuine italics. Prefer selective emphasis over all-over emphasis. Fluid screen sizes need stable print fallbacks and readable body text at every endpoint.
@@ -14,6 +14,8 @@ Apply these defaults automatically when establishing a direction. Existing proje
 10. **Make controls usable beyond the mouse.** Use semantic controls, accessible names, visible focus and sensible touch targets. Test keyboard use and error recovery. A target-size candidate needs exception review; an automated screenshot cannot establish accessibility.
 11. **Show honest evidence.** Keep source values, units, missing data and uncertainty in charts and documents. Label synthetic demonstrations. Preserve a data table or text equivalent where appropriate; never improve the story by changing the data.
 12. **Verify and remember decisions.** Inspect the finished narrow/wide or printed artifact, not just source code. Save accepted tokens and overrides so the next session can continue them. Distinguish tested behavior, review candidates and unavailable host checks.
+
+The [art-direction standard](art-direction.md) applies these same principles with maximum coherent character. It does not replace their typography, color, composition, evidence or usability constraints, and it introduces no parallel theme system.
 
 ## Controls and Helpers
 

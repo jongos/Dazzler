@@ -1,534 +1,101 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Signal — Support Command Desk</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="template-operations app">
-    <a class="skip" href="#main">Skip to content</a>
-    <div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div>
-    <header class="top">
-      <a class="brand" href="#main">Signal<span class="brand-dot"></span></a>
-      <nav aria-label="Main navigation">
-        <a href="#tickets">Queue</a><a href="#queue-health">Health</a>
-      </nav>
-      <span class="avatar" aria-label="Alex Morgan">AM</span>
-    </header>
-    <main id="main">
-      <header class="page-title">
-        <p class="eyebrow">Signal / OPERATIONS</p>
-        <h1>Support Command Desk</h1>
-        <p>Snapshot • 21 June 2027, 09:40 • Sample service data</p>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Tide Water Operations</title
+  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../../index.html">Dazzler Design Gallery</a
+      ><span class="small">Fictional Interactive Example</span>
+    </nav>
+    <main class="canvas">
+      <header>
+        <p class="kicker">TIDE / SYNTHETIC OPERATIONS</p>
+        <h1>Follow the Flow</h1>
+        <p class="lead">Four stations. One reading needs attention.</p>
       </header>
-      <div class="metrics" id="ops-metrics"></div>
-      <div class="split">
-        <section class="panel">
-          <div class="section-head">
-            <h2>Open Work</h2>
-            <label class="check"
-              ><input id="show-resolved" type="checkbox" />Include resolved</label
-            >
-          </div>
-          <div class="filters">
-            <label for="queue">Queue</label
-            ><select id="queue">
-              <option>All queues</option>
-              <option>Access</option>
-              <option>Billing</option>
-              <option>Account</option></select
-            ><button data-action="download">Export queue</button>
-          </div>
-          <div id="tickets"></div>
-        </section>
-        <aside class="rail">
-          <h2>Queue Health</h2>
-          <div id="queue-health"></div>
-          <section class="note">
-            <h3>Response Target</h3>
+      <div class="flow">
+        <button data-station="0">01<br />Intake</button><span aria-hidden="true">→</span
+        ><button data-station="1">02<br />Filter</button><span aria-hidden="true">→</span
+        ><button data-station="2">03<br />Storage</button><span aria-hidden="true">→</span
+        ><button data-station="3">04<br />Outlet</button>
+      </div>
+      <div class="ops">
+        <section id="inspector" aria-live="polite"></section>
+        <aside>
+          <h2>Review Queue</h2>
+          <div class="alert">
+            <strong>Attention · Filter</strong>
             <p>
-              High priority: first response within 30 minutes. Normal: within 60 minutes. Low:
-              within 120 minutes.
+              Pressure is above the illustrative operating band. Inspect the filter before changing
+              the flow setting.
             </p>
-            <p>
-              Age is fixed at this sample snapshot. Resolving a ticket updates this preview only.
-            </p>
-          </section>
+          </div>
+          <p>Readings are synthetic snapshots. This interface cannot control equipment.</p>
         </aside>
       </div>
-      <section class="showcase-panel">
-        <div>
-          <p class="eyebrow">THE BIGGER PICTURE</p>
-          <h2>Arrivals Across the Shift</h2>
-          <p>
-            The arrival profile gives context to the queue snapshot. It is historical sample data,
-            not a live forecast.
-          </p>
-        </div>
-        <figure>
-          <img src="../../charts/data-operations.svg" alt="Arrivals across the shift" />
-          <details>
-            <summary>Read exact values</summary>
-            <table>
-              <tbody>
-                <tr>
-                  <th>8:00</th>
-                  <td>12 tickets</td>
-                </tr>
-                <tr>
-                  <th>9:00</th>
-                  <td>18 tickets</td>
-                </tr>
-                <tr>
-                  <th>10:00</th>
-                  <td>24 tickets</td>
-                </tr>
-                <tr>
-                  <th>11:00</th>
-                  <td>21 tickets</td>
-                </tr>
-                <tr>
-                  <th>12:00</th>
-                  <td>16 tickets</td>
-                </tr>
-                <tr>
-                  <th>13:00</th>
-                  <td>11 tickets</td>
-                </tr>
-                <tr>
-                  <th>14:00</th>
-                  <td>8 tickets</td>
-                </tr>
-              </tbody>
-            </table>
-          </details>
-        </figure>
-      </section>
-      <p id="status" class="status" role="status" aria-live="polite"></p>
     </main>
-    <footer class="site-footer">
-      <span>Signal · Fictional example by Dazzler</span>
-      <details>
-        <summary>Template notes</summary>
-        <p>
-          All names, contact details, dates, prices and figures are illustrative. Actions update
-          this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled
-          fonts retain their notices.
-        </p>
-        <p>
-          Design system: Operations console / blue and amber. Local fonts, synthetic data,
-          responsive layout, print styles and working preview states demonstrate Dazzler.
-        </p>
-      </details>
+    <footer>
+      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
+      data; no live service.
     </footer>
-    <dialog id="edit-dialog">
-      <form id="edit-form">
-        <h2 id="dialog-title">Add Details</h2>
-        <div id="dialog-content"></div>
-        <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
-        <div class="dialog-actions">
-          <button type="button" id="cancel" class="secondary">Cancel</button
-          ><button id="dialog-save">Save preview</button>
-        </div>
-      </form>
-    </dialog>
     <script id="template-data" type="application/json">
       {
         "id": "data-operations",
-        "category": "data-visualization",
-        "layout": "operations",
-        "brand": "Signal",
-        "title": "Support Command Desk",
-        "intro": "Snapshot • 21 June 2027, 09:40 • Sample service data",
-        "accent": "#1B5681",
-        "tint": "#EDEFF7",
-        "tickets": [
-          {
-            "id": "SUP-2041",
-            "subject": "Account invitation expired",
-            "queue": "Access",
-            "priority": "High",
-            "age": 47,
-            "owner": "Maya",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2042",
-            "subject": "Invoice export missing June",
-            "queue": "Billing",
-            "priority": "Normal",
-            "age": 31,
-            "owner": "Sam",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2043",
-            "subject": "New teammate cannot sign in",
-            "queue": "Access",
-            "priority": "High",
-            "age": 64,
-            "owner": "Alex",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2044",
-            "subject": "Change workspace owner",
-            "queue": "Account",
-            "priority": "Normal",
-            "age": 18,
-            "owner": "Maya",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2045",
-            "subject": "Receipt address correction",
-            "queue": "Billing",
-            "priority": "Normal",
-            "age": 12,
-            "owner": "Sam",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2046",
-            "subject": "Notification preference question",
-            "queue": "Account",
-            "priority": "Low",
-            "age": 8,
-            "owner": "Alex",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2047",
-            "subject": "Reset a team invitation",
-            "queue": "Access",
-            "priority": "High",
-            "age": 14,
-            "owner": "Maya",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2048",
-            "subject": "Reconcile payment reference",
-            "queue": "Billing",
-            "priority": "Normal",
-            "age": 72,
-            "owner": "Sam",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2049",
-            "subject": "Update contact details",
-            "queue": "Account",
-            "priority": "Low",
-            "age": 38,
-            "owner": "Alex",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2050",
-            "subject": "Review workspace access",
-            "queue": "Access",
-            "priority": "High",
-            "age": 95,
-            "owner": "Maya",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2051",
-            "subject": "Reset a team invitation",
-            "queue": "Billing",
-            "priority": "Normal",
-            "age": 22,
-            "owner": "Sam",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2052",
-            "subject": "Reconcile payment reference",
-            "queue": "Account",
-            "priority": "Low",
-            "age": 11,
-            "owner": "Alex",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2053",
-            "subject": "Update contact details",
-            "queue": "Access",
-            "priority": "High",
-            "age": 35,
-            "owner": "Maya",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2054",
-            "subject": "Review workspace access",
-            "queue": "Billing",
-            "priority": "Normal",
-            "age": 49,
-            "owner": "Sam",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2055",
-            "subject": "Reset a team invitation",
-            "queue": "Account",
-            "priority": "Low",
-            "age": 126,
-            "owner": "Alex",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2056",
-            "subject": "Reconcile payment reference",
-            "queue": "Access",
-            "priority": "High",
-            "age": 18,
-            "owner": "Maya",
-            "status": "Open"
-          },
-          {
-            "id": "SUP-2057",
-            "subject": "Update contact details",
-            "queue": "Billing",
-            "priority": "Normal",
-            "age": 63,
-            "owner": "Sam",
-            "status": "Resolved"
-          },
-          {
-            "id": "SUP-2058",
-            "subject": "Review workspace access",
-            "queue": "Account",
-            "priority": "Low",
-            "age": 7,
-            "owner": "Alex",
-            "status": "Resolved"
-          }
-        ],
-        "secondary": "#B63838",
-        "bright": "#F3C659",
-        "paper": "#EEF5FB",
-        "headingFont": "Office Code Pro",
-        "font": "Arial",
-        "voice": "Operations console / blue and amber",
-        "ink": "#172033",
-        "sample": {
-          "fictional": true,
-          "asOf": "2027-06-21T09:40:00",
-          "seed": "dazzler-showcase-014",
-          "scope": "Local demonstration only; resets on reload"
+        "title": "Tide Water Operations",
+        "prompt": "Create a fictional water-operations console focused on four stations and one alert, with a clear spatial flow diagram, measured readings and a station inspector. Use dark navy with cyan signals, text status labels and a high-contrast alert. Station buttons must update the inspector; no live telemetry claims.",
+        "data": {
+          "stations": ["Intake", "Filter", "Storage", "Outlet"],
+          "values": [18.4, 2.8, 72, 17.9]
         },
-        "arrivals": [12, 18, 24, 21, 16, 11, 8],
-        "showcaseChart": {
-          "asset": "data-operations",
-          "title": "Arrivals across the shift",
-          "rows": [
-            ["8:00", 12],
-            ["9:00", 18],
-            ["10:00", 24],
-            ["11:00", 21],
-            ["12:00", 16],
-            ["13:00", 11],
-            ["14:00", 8]
-          ],
-          "unit": "tickets"
-        },
-        "schemaVersion": 2,
-        "license": "Apache-2.0",
-        "creator": "Jon Gosier",
-        "demo": true,
-        "persistence": "memory only",
-        "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+        "action": "01 Intake"
       }
     </script>
     <script>
-      (() => {
-        // skills/dazzler-frontend/scripts/headings.mjs
-        var rules = {
-          schemaVersion: 1,
-          style: "ap-like-protected",
-          smallWords: [
-            "a",
-            "an",
-            "the",
-            "and",
-            "but",
-            "or",
-            "for",
-            "nor",
-            "so",
-            "yet",
-            "at",
-            "by",
-            "in",
-            "of",
-            "off",
-            "on",
-            "out",
-            "per",
-            "to",
-            "up",
-            "via",
-            "as",
-          ],
-          phrasalPairs: ["set up", "sign in", "sign out", "log in", "log out", "back up"],
-          notes:
-            "Conservative English heading helper, not full grammatical AP editing. Preserve existing capitals, quoted/code spans, names and identifiers. Sentence mode preserves authored text. Review ambiguous phrases.",
-        };
-        function heading(text, options = {}) {
-          let { case: casing = "title", lang = "en", preserve = [] } = options;
-          if (typeof text != "string" || text.length > 1e4)
-            throw Error("Heading must be text of at most 10000 characters");
-          if (
-            !["title", "sentence", "upper", "preserve"].includes(casing) ||
-            typeof lang != "string"
-          )
-            throw Error("Invalid heading case or language");
-          if (
-            !Array.isArray(preserve) ||
-            preserve.length > 100 ||
-            preserve.some((x) => typeof x != "string" || !x || x.length > 160)
-          )
-            throw Error("Invalid heading preserve list");
-          if (!/^en(?:-|$)/i.test(lang) || ["sentence", "preserve"].includes(casing)) return text;
-          let protectedPattern =
-              /`[^`]*`|<(?:code|kbd|samp)\b[^>]*>[\s\S]*?<\/(?:code|kbd|samp)>|<[^>]*>|&(?:#[0-9]+|#x[0-9a-f]+|[a-z]+);|"[^"]*"|“[^”]*”|‘[^’]*’|«[^»]*»|(?<!\w)'[^']*'|(?:https?:\/\/|www\.)\S+|\S+@\S+|[^\s<>]*[0-9_/\\()][^\s<>]*|\b[A-Za-z]+\.[A-Za-z.]+\b/gi,
-            spans = [...text.matchAll(protectedPattern)].map((m) => [
-              m.index,
-              m.index + m[0].length,
-            ]);
-          for (let value of preserve)
-            for (let p = text.indexOf(value); p !== -1; p = text.indexOf(value, p + value.length))
-              spans.push([p, p + value.length]);
-          let protectedChars = new Uint8Array(text.length);
-          for (let [start, end2] of spans) protectedChars.fill(1, start, end2);
-          let words = [...text.matchAll(/\p{L}+(?:['’]\p{L}+)?/gu)].filter(
-            (m) => !protectedChars.subarray(m.index, m.index + m[0].length).includes(1),
-          );
-          if (casing === "title" && text === text.toUpperCase()) return text;
-          let result = "",
-            end = 0;
-          return (
-            words.forEach((m, i) => {
-              let word = m[0],
-                start = m.index,
-                stop = start + word.length,
-                replacement = word;
-              if (casing === "upper" || word === word.toLowerCase()) {
-                let between = i
-                    ? text.slice(words[i - 1].index + words[i - 1][0].length, start)
-                    : "",
-                  afterBreak = i === 0 || /[:—]\s*$/.test(between),
-                  pair =
-                    i > 0 &&
-                    /^\s+$/.test(between) &&
-                    rules.phrasalPairs.includes(
-                      words[i - 1][0].toLowerCase() + " " + word.toLowerCase(),
-                    );
-                casing === "upper"
-                  ? (replacement = /[a-z][A-Z]/.test(word) ? word : word.toUpperCase())
-                  : (afterBreak ||
-                      i === words.length - 1 ||
-                      pair ||
-                      !rules.smallWords.includes(word)) &&
-                    (replacement = word[0].toUpperCase() + word.slice(1));
-              }
-              ((result += text.slice(end, start) + replacement), (end = stop));
-            }),
-            result + text.slice(end)
-          );
-        }
-
-        // tools/template_interactions.js
-        var cfg = JSON.parse(document.getElementById("template-data").textContent),
-          $ = (id) => document.getElementById(id),
-          esc = (v) =>
-            String(v).replace(
-              /[&<>"']/g,
-              (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
-            );
-        var say = (t) => {
-            $("status").textContent = t;
-          },
-          dialog = $("edit-dialog");
-        function filteredTickets() {
-          return cfg.tickets.filter(
-            (x) =>
-              ($("queue").value === "All queues" || x.queue === $("queue").value) &&
-              ($("show-resolved").checked || x.status === "Open"),
-          );
-        }
-        function opsRender() {
-          let open = cfg.tickets.filter((x) => x.status === "Open"),
-            late = open.filter((x) => x.age > { High: 30, Normal: 60, Low: 120 }[x.priority]);
-          $("ops-metrics").innerHTML = [
-            ["Open tickets", open.length, "Across all queues"],
-            ["Past first-response target", late.length, "Based on priority at this snapshot"],
-            [
-              "Oldest open ticket",
-              (open.length ? Math.max(...open.map((x) => x.age)) : 0) + " min",
-              "Age at 09:40 snapshot",
-            ],
-          ]
-            .map(
-              ([a, b, c]) =>
-                `<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`,
-            )
-            .join("");
-          let rows = filteredTickets();
-          (($("tickets").innerHTML = rows.length
-            ? rows
-                .map(
-                  (x) =>
-                    `<article class="ticket"><div class="ticket-top"><small>${x.id} \xB7 ${x.queue}</small><span class="pill ${x.priority === "High" ? "warning" : ""}">${x.priority} priority</span></div><h3>${esc(heading(x.subject))}</h3><div class="ticket-bottom"><small>${x.owner} \xB7 ${x.age} min old \xB7 ${x.status}</small><button class="secondary" data-resolve="${x.id}" ${x.status === "Resolved" ? "disabled" : ""}>${x.status === "Resolved" ? "Resolved" : "Resolve in preview"}</button></div></article>`,
-                )
-                .join("")
-            : "<p>No tickets match these filters.</p>"),
-            ($("queue-health").innerHTML = ["Access", "Billing", "Account"]
-              .map((q) => {
-                let n = open.filter((x) => x.queue === q).length;
-                return `<div class="queue-row"><div><strong>${q}</strong><span>${n} open</span></div><progress value="${n}" max="${Math.max(open.length, 1)}" aria-label="${q} share of open tickets"></progress></div>`;
-              })
-              .join("")));
-        }
-        document.addEventListener("click", (event) => {
-          let b = event.target.closest("button");
-          if (
-            b &&
-            (b.dataset.resolve &&
-              ((cfg.tickets.find((x) => x.id === b.dataset.resolve).status = "Resolved"),
-              opsRender(),
-              say("Ticket resolved in this preview. No support system was changed.")),
-            b.dataset.action === "download")
-          ) {
-            let text = [
-                ["Ticket", "Queue", "Priority", "Age minutes", "Owner", "Status"],
-                ...filteredTickets().map((x) => [
-                  x.id,
-                  x.queue,
-                  x.priority,
-                  x.age,
-                  x.owner,
-                  x.status,
-                ]),
-              ].map((row) => row.map((v) => '"' + String(v).replaceAll('"', '""') + '"').join(","))
-                .join(`
-`),
-              url = URL.createObjectURL(new Blob([text], { type: "text/csv" })),
-              a = document.createElement("a");
-            ((a.href = url),
-              (a.download = cfg.id + "-sample.csv"),
-              a.click(),
-              setTimeout(() => URL.revokeObjectURL(url), 1e3),
-              say("The currently selected sample data was exported."));
-          }
-        });
-        (opsRender(),
-          $("queue").addEventListener("change", opsRender),
-          $("show-resolved").addEventListener("change", opsRender));
-      })();
+      const stations = [
+        {
+          name: "Intake",
+          value: "18.4",
+          unit: "L/s",
+          state: "Within Band",
+          note: "Incoming flow is steady.",
+        },
+        {
+          name: "Filter",
+          value: "2.8",
+          unit: "bar",
+          state: "Attention",
+          note: "Illustrative operating band: 1.5–2.5 bar.",
+        },
+        {
+          name: "Storage",
+          value: "72",
+          unit: "% full",
+          state: "Within Band",
+          note: "Illustrative operating band: 30–85%.",
+        },
+        {
+          name: "Outlet",
+          value: "17.9",
+          unit: "L/s",
+          state: "Within Band",
+          note: "Downstream flow is steady.",
+        },
+      ];
+      function inspect(i) {
+        const s = stations[i];
+        document.querySelector("#inspector").innerHTML =
+          `<p class="kicker">STATION 0${i + 1}</p><h2>${s.name}</h2><p class="reading-value">${s.value}</p><p>${s.unit} · ${s.state}</p><p>${s.note}</p>`;
+        document
+          .querySelectorAll("[data-station]")
+          .forEach((b) => b.setAttribute("aria-pressed", String(Number(b.dataset.station) === i)));
+      }
+      inspect(1);
+      document
+        .querySelectorAll("[data-station]")
+        .forEach((b) => (b.onclick = () => inspect(Number(b.dataset.station))));
     </script>
   </body>
 </html>

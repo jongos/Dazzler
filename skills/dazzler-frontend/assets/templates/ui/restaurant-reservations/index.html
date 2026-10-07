@@ -1,379 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>The Long Table — Make an Evening of It.</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="template-reservations restaurant">
-    <a class="skip" href="#main">Skip to content</a>
-    <div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div>
-    <header class="top">
-      <a class="brand" href="#main">The Long Table<span class="brand-dot"></span></a>
-      <nav aria-label="Main navigation">
-        <a href="#reservation">Your visit</a><a href="#main">Restaurant</a>
-      </nav>
-      <span class="top-note">Made for good company.</span>
-    </header>
-    <main id="main">
-      <div class="reservation-layout">
-        <section>
-          <p class="eyebrow">THE LONG TABLE</p>
-          <h1>Make an<br />Evening of It.</h1>
-          <p class="intro">Dinner is better with something to look forward to.</p>
-          <div class="booking-notes">
-            <h2>Before You Book</h2>
-            <p>Dinner • Tuesday–Saturday<br />17:30–22:00</p>
-            <p>
-              Tables of up to six can use this form. For larger groups, contact the restaurant
-              directly.
-            </p>
-            <p>
-              Please include access or dietary needs in your request. The team must confirm that it
-              can accommodate them.
-            </p>
-            <p class="muted">18 Lantern Row, Sampletown<br />Fictional restaurant details.</p>
-          </div>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Solstice Table Planner</title
+  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../../index.html">Dazzler Design Gallery</a
+      ><span class="small">Fictional Interactive Example</span>
+    </nav>
+    <main class="canvas">
+      <header>
+        <p class="kicker">SOLSTICE / A PLACE AT THE TABLE</p>
+        <h1>Choose Your Corner</h1>
+        <p class="lead">A room for conversation.<br />A preference, not a confirmed reservation.</p>
+      </header>
+      <div class="reservation">
+        <section class="room" aria-label="Room Preferences">
+          <div class="window-label">STREET WINDOWS</div>
+          <button data-zone="Window Table" class="window">
+            Window Table<br /><small>Bright · Seats 2</small></button
+          ><button data-zone="Quiet Corner" class="quiet">
+            Quiet Corner<br /><small>Lower Traffic · Seats 2</small></button
+          ><button data-zone="Shared Table" class="shared">
+            Shared Table<br /><small>Social · Seats 6</small>
+          </button>
+          <p class="door">Step-Free Entrance →</p>
         </section>
-        <form id="reservation" class="booking-card">
-          <p class="step">01 / YOUR VISIT</p>
-          <h2>Find a Time That Suits You</h2>
-          <div class="form-grid">
-            <div class="field">
-              <label for="date">Date</label
-              ><input id="date" name="date" type="date" value="" required />
-            </div>
-            <div class="field">
-              <label for="guests">Guests</label
-              ><select id="guests" name="guests">
-                <option>2</option>
-                <option>1</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-              </select>
-            </div>
-          </div>
-          <fieldset>
-            <legend>Preferred time</legend>
-            <div class="time-slots">
-              <label
-                ><input type="radio" name="time" value="17:30" required /><span>17:30</span></label
-              ><label
-                ><input type="radio" name="time" value="18:00" required /><span>18:00</span></label
-              ><label
-                ><input type="radio" name="time" value="18:30" required /><span>18:30</span></label
-              ><label
-                ><input type="radio" name="time" value="19:00" required /><span>19:00</span></label
-              ><label
-                ><input type="radio" name="time" value="19:30" required /><span>19:30</span></label
-              ><label
-                ><input type="radio" name="time" value="20:00" required /><span>20:00</span></label
-              >
-            </div>
-          </fieldset>
-          <p class="muted">Sample time options; no live availability is checked.</p>
-          <p class="step">02 / YOUR DETAILS</p>
-          <div class="form-grid">
-            <div class="field">
-              <label for="guest">Full name</label
-              ><input id="guest" name="guest" type="text" value="" required />
-            </div>
-            <div class="field">
-              <label for="guest-email">Email</label
-              ><input id="guest-email" name="guest-email" type="email" value="" required />
-            </div>
-          </div>
-          <div class="field">
-            <label for="booking-note">Anything we should know? <small>Optional</small></label
-            ><textarea
-              id="booking-note"
-              maxlength="500"
-              placeholder="Dietary needs, access needs or a special occasion"
-            ></textarea>
-          </div>
-          <button class="wide">Review request</button>
-          <p class="muted">
-            This demo shows a request summary. It does not reserve a table or send your information.
+        <form id="booking">
+          <h2>Your Request</h2>
+          <label for="zone">Preferred Area</label
+          ><input id="zone" value="Window Table" readonly /><label for="party">Party Size</label
+          ><select id="party">
+            <option>2 guests</option>
+            <option>4 guests</option>
+            <option>6 guests</option></select
+          ><label for="date">Preferred Date</label><input id="date" type="date" required /><button>
+            Preview Request
+          </button>
+          <p id="status" role="status" class="status"></p>
+          <p class="small">
+            No information is sent. Access, availability and dietary requirements must be confirmed
+            with the venue.
           </p>
         </form>
       </div>
-      <section class="room-guide">
-        <h2>A Place That Suits Your Evening</h2>
-        <p>
-          Explore the room before making a request. Seating preferences are illustrative and never
-          confirm availability.
-        </p>
-        <iframe
-          src="seating/index.html"
-          title="Interactive seating preferences"
-          loading="lazy"
-        ></iframe
-        ><img class="print-plan" src="seating/illustration.svg" alt="Sample dining room plan" />
-        <p class="print-plan">
-          Window tables: bright and social. Quiet corner: away from the bar. Shared table: group
-          conversation. Confirm access and availability directly.
-        </p>
-      </section>
-      <p id="status" class="status" role="status" aria-live="polite"></p>
     </main>
-    <footer class="site-footer">
-      <span>The Long Table · Fictional example by Dazzler</span>
-      <details>
-        <summary>Template notes</summary>
-        <p>
-          All names, contact details, dates, prices and figures are illustrative. Actions update
-          this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled
-          fonts retain their notices.
-        </p>
-        <p>
-          Design system: Evening invitation / orchid and jade. Local fonts, synthetic data,
-          responsive layout, print styles and working preview states demonstrate Dazzler.
-        </p>
-      </details>
+    <footer>
+      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
+      data; no live service.
     </footer>
-    <dialog id="edit-dialog">
-      <form id="edit-form">
-        <h2 id="dialog-title">Add Details</h2>
-        <div id="dialog-content"></div>
-        <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
-        <div class="dialog-actions">
-          <button type="button" id="cancel" class="secondary">Cancel</button
-          ><button id="dialog-save">Save preview</button>
-        </div>
-      </form>
-    </dialog>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-reservations",
-        "category": "restaurant",
-        "layout": "reservations",
-        "brand": "The Long Table",
-        "title": "Make an Evening of It.",
-        "intro": "Request a table for dinner. We will show a summary before any next step.",
-        "accent": "#593478",
-        "tint": "#EDEFF7",
-        "times": ["17:30", "18:00", "18:30", "19:00", "19:30", "20:00"],
-        "secondary": "#236B62",
-        "bright": "#F0C876",
-        "paper": "#F8F0FD",
-        "headingFont": "Libre Baskerville",
-        "font": "Georgia",
-        "voice": "Evening invitation / orchid and jade",
-        "ink": "#172033",
-        "sample": {
-          "fictional": true,
-          "asOf": "2027-06-21T09:40:00",
-          "seed": "dazzler-showcase-014",
-          "scope": "Local demonstration only; resets on reload"
+        "title": "Solstice Table Planner",
+        "prompt": "Design a fictional restaurant seating-request page around a simple original room plan and a request form. Use olive and cream, distinct named table zones and an accessible text equivalent. Choosing a zone must update the request; submission must clearly remain an unconfirmed local preview.",
+        "data": {
+          "zones": ["Window Table", "Quiet Corner", "Shared Table"]
         },
-        "rooms": [
-          {
-            "id": "window",
-            "label": "Window tables",
-            "description": "Bright street-facing seats for two to four. A preference only, not a booking guarantee."
-          },
-          {
-            "id": "quiet",
-            "label": "Quiet corner",
-            "description": "A calmer area away from the bar. Tell the team about access needs."
-          },
-          {
-            "id": "social",
-            "label": "Shared table",
-            "description": "A convivial central table for small groups. All availability remains illustrative."
-          }
-        ],
-        "schemaVersion": 2,
-        "license": "Apache-2.0",
-        "creator": "Jon Gosier",
-        "demo": true,
-        "persistence": "memory only",
-        "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+        "action": "Quiet Corner"
       }
     </script>
     <script>
-      (() => {
-        // skills/dazzler-frontend/scripts/headings.mjs
-        var rules = {
-          schemaVersion: 1,
-          style: "ap-like-protected",
-          smallWords: [
-            "a",
-            "an",
-            "the",
-            "and",
-            "but",
-            "or",
-            "for",
-            "nor",
-            "so",
-            "yet",
-            "at",
-            "by",
-            "in",
-            "of",
-            "off",
-            "on",
-            "out",
-            "per",
-            "to",
-            "up",
-            "via",
-            "as",
-          ],
-          phrasalPairs: ["set up", "sign in", "sign out", "log in", "log out", "back up"],
-          notes:
-            "Conservative English heading helper, not full grammatical AP editing. Preserve existing capitals, quoted/code spans, names and identifiers. Sentence mode preserves authored text. Review ambiguous phrases.",
-        };
-        function heading(text, options = {}) {
-          let { case: casing = "title", lang = "en", preserve = [] } = options;
-          if (typeof text != "string" || text.length > 1e4)
-            throw Error("Heading must be text of at most 10000 characters");
-          if (
-            !["title", "sentence", "upper", "preserve"].includes(casing) ||
-            typeof lang != "string"
-          )
-            throw Error("Invalid heading case or language");
-          if (
-            !Array.isArray(preserve) ||
-            preserve.length > 100 ||
-            preserve.some((x) => typeof x != "string" || !x || x.length > 160)
-          )
-            throw Error("Invalid heading preserve list");
-          if (!/^en(?:-|$)/i.test(lang) || ["sentence", "preserve"].includes(casing)) return text;
-          let protectedPattern =
-              /`[^`]*`|<(?:code|kbd|samp)\b[^>]*>[\s\S]*?<\/(?:code|kbd|samp)>|<[^>]*>|&(?:#[0-9]+|#x[0-9a-f]+|[a-z]+);|"[^"]*"|“[^”]*”|‘[^’]*’|«[^»]*»|(?<!\w)'[^']*'|(?:https?:\/\/|www\.)\S+|\S+@\S+|[^\s<>]*[0-9_/\\()][^\s<>]*|\b[A-Za-z]+\.[A-Za-z.]+\b/gi,
-            spans = [...text.matchAll(protectedPattern)].map((m) => [
-              m.index,
-              m.index + m[0].length,
-            ]);
-          for (let value of preserve)
-            for (let p = text.indexOf(value); p !== -1; p = text.indexOf(value, p + value.length))
-              spans.push([p, p + value.length]);
-          let protectedChars = new Uint8Array(text.length);
-          for (let [start, end2] of spans) protectedChars.fill(1, start, end2);
-          let words = [...text.matchAll(/\p{L}+(?:['’]\p{L}+)?/gu)].filter(
-            (m) => !protectedChars.subarray(m.index, m.index + m[0].length).includes(1),
-          );
-          if (casing === "title" && text === text.toUpperCase()) return text;
-          let result = "",
-            end = 0;
-          return (
-            words.forEach((m, i) => {
-              let word = m[0],
-                start = m.index,
-                stop = start + word.length,
-                replacement = word;
-              if (casing === "upper" || word === word.toLowerCase()) {
-                let between = i
-                    ? text.slice(words[i - 1].index + words[i - 1][0].length, start)
-                    : "",
-                  afterBreak = i === 0 || /[:—]\s*$/.test(between),
-                  pair =
-                    i > 0 &&
-                    /^\s+$/.test(between) &&
-                    rules.phrasalPairs.includes(
-                      words[i - 1][0].toLowerCase() + " " + word.toLowerCase(),
-                    );
-                casing === "upper"
-                  ? (replacement = /[a-z][A-Z]/.test(word) ? word : word.toUpperCase())
-                  : (afterBreak ||
-                      i === words.length - 1 ||
-                      pair ||
-                      !rules.smallWords.includes(word)) &&
-                    (replacement = word[0].toUpperCase() + word.slice(1));
-              }
-              ((result += text.slice(end, start) + replacement), (end = stop));
-            }),
-            result + text.slice(end)
-          );
-        }
-
-        // tools/template_interactions.js
-        var cfg = JSON.parse(document.getElementById("template-data").textContent),
-          $ = (id) => document.getElementById(id),
-          esc = (v) =>
-            String(v).replace(
-              /[&<>"']/g,
-              (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
-            );
-        var say = (t) => {
-            $("status").textContent = t;
-          },
-          dialog = $("edit-dialog"),
-          pending = "";
-        function openDialog(title, action, content = "", label = "Details") {
-          (($("dialog-title").textContent = heading(title)),
-            ($("dialog-content").innerHTML = content),
-            ($("entry-label").textContent = label),
-            ($("entry").value = ""),
-            ($("entry").required = !!label),
-            ($("entry").hidden = $("entry-label").hidden = !label),
-            ($("dialog-save").textContent =
-              action === "reservation"
-                ? "Keep request preview"
-                : action === "cart"
-                  ? "Keep order preview"
-                  : "Save preview"),
-            (pending = action),
-            dialog.showModal());
-        }
-        $("cancel").addEventListener("click", () => dialog.close());
-        document.addEventListener("click", (event) => {
-          event.target.closest("button");
-        });
-        $("edit-form").addEventListener("submit", (event) => {
-          event.preventDefault();
-          let value = $("entry").value.trim();
-          ($("entry").required && !value) ||
-            (say(
-              pending === "reservation"
-                ? "Reservation request preview kept. No table has been booked."
-                : pending === "cart"
-                  ? "Order preview kept. Nothing was sent to the caf\xE9."
-                  : pending === "brief"
-                    ? "Review brief closed."
-                    : "Saved in this preview only. No message or account change was sent.",
-            ),
-            dialog.close());
-        });
-        {
-          let today = /* @__PURE__ */ new Date(),
-            localDate = (d) =>
-              [
-                d.getFullYear(),
-                String(d.getMonth() + 1).padStart(2, "0"),
-                String(d.getDate()).padStart(2, "0"),
-              ].join("-");
-          for (
-            $("date").min = localDate(today), today.setDate(today.getDate() + 7);
-            [0, 1].includes(today.getDay());
-          )
-            today.setDate(today.getDate() + 1);
-          (($("date").value = localDate(today)),
-            $("date").addEventListener("change", () => {
-              let day = /* @__PURE__ */ new Date($("date").value + "T12:00:00").getDay();
-              $("date").setCustomValidity(
-                [0, 1].includes(day)
-                  ? "Dinner service runs Tuesday through Saturday. Choose another date."
-                  : "",
-              );
-            }),
-            $("reservation").addEventListener("submit", (event) => {
-              event.preventDefault();
-              let f = new FormData(event.target);
-              openDialog(
-                "Review your table request",
-                "reservation",
-                `<p><strong>${esc(f.get("guest"))}</strong><br>${esc(f.get("guests"))} guests \xB7 ${esc(f.get("date"))} at ${esc(f.get("time"))}</p><p>${esc(f.get("guest-email"))}</p><p>${esc($("booking-note").value)}</p><p>No availability has been checked and no booking will be made by this preview.</p>`,
-                "",
-              );
-            }));
-        }
-      })();
+      const zones = document.querySelectorAll("[data-zone]");
+      zones[0].setAttribute("aria-pressed", "true");
+      zones.forEach(
+        (b) =>
+          (b.onclick = () => {
+            document.querySelector("#zone").value = b.dataset.zone;
+            zones.forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+          }),
+      );
+      document.querySelector("#booking").onsubmit = (e) => {
+        e.preventDefault();
+        document.querySelector("#status").textContent =
+          "Preview only: " +
+          document.querySelector("#party").value +
+          ", " +
+          document.querySelector("#zone").value +
+          " on " +
+          document.querySelector("#date").value +
+          ". Not confirmed.";
+      };
     </script>
   </body>
 </html>

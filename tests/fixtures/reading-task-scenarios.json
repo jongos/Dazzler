@@ -1,0 +1,14 @@
+{
+  "provenance": { "date": "2026-10-07", "surface": "Official TypeSafe Chrome playground", "requestedModel": "jev-latest", "limits": "Observed synthetic decisions with rounded UI probabilities; not a blind visual study or calibrated accuracy." },
+  "cases": [
+    { "id": "essay", "purpose": "A 4000-word museum essay for sustained reading with a few notes", "readingTask": "continuous", "content": ["prose"], "expectedGrid": ["single", "asymmetric"], "expectedDensity": ["open", "balanced"], "observedChoice": "Primary reading column with supporting notes", "displayedProbability": "99%" },
+    { "id": "essay-locked", "purpose": "A 4000-word museum essay; user requires two equal columns and compact density", "readingTask": "continuous", "content": ["prose"], "locks": { "grid": "two-column", "density": "compact" }, "expectedGrid": ["two-column"], "expectedDensity": ["compact"], "observedChoice": "Preserve explicit two-column compact layout", "displayedProbability": "100%" },
+    { "id": "comparison", "purpose": "Compare three public service plans across the same eight attributes", "readingTask": "comparison", "content": ["prose", "data", "comparison"], "expectedGrid": ["two-column", "modular"], "expectedDensity": ["balanced", "compact"], "observedChoice": "Aligned comparison with consistent row order", "displayedProbability": "100%" },
+    { "id": "reference", "purpose": "A maintenance reference with 50 short entries, stable identifiers and cross-references", "readingTask": "reference", "content": ["prose", "steps"], "expectedGrid": ["two-column", "modular"], "expectedDensity": ["balanced", "compact"], "observedChoice": "Grouped entries with clear index", "displayedProbability": "100%" }
+  ],
+  "additionalObservedDecisions": [
+    { "scenario": "Mixed explanation, comparison table and lookup entries", "decision": "Section-specific structures with shared typography/color", "displayedProbability": "100%" },
+    { "scenario": "Essay without data or images", "decision": "Typography and rhythm without invented assets", "displayedProbability": "100%" },
+    { "scenario": "Narrow-screen keyboard access to report tables across all categories", "decision": "Focusable labelled table regions beyond the existing pilot categories", "displayedProbability": "100%" }
+  ]
+}

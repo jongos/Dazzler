@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/jongos/style-science",
+  "version": "0.1.0",
+  "sourceRevision": "443f60c05385284548369057fa10fd4e9f1450a9",
+  "files": {
+    "engine.mjs": "cec18bfc39dcf7a512ce1e446024663e0534414907f3b04b27e7b9f679490f20",
+    "gdc.py": "74c3eadf09baa00d8be950cc504bf5d5add6ae0c8c8e7a2b66f4d1d06b5a242a",
+    "html.mjs": "2751ee624cccac15cb6e64ef02844081806dad341f65720ff150cea1b365b1e3",
+    "registry.json": "ea41aab49c2e61abfffdecc2985ccb1f22938162607013fb13f63c759924af64",
+    "plan.schema.json": "538ef475ccd76007cdad01b6f977dd04b80aaa607dedd49f7ad4738f1fa2fd74",
+    "example-plan.json": "fc7cb16ea23b04461540ecbc35ce06f58e28ab18685124877d0bfb2d47722cc3",
+    "LICENSE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  }
+}

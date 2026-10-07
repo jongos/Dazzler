@@ -1,367 +1,97 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Olive &amp; Grain — Good Food. Your Kind of Lunch.</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="template-menu restaurant">
-    <a class="skip" href="#main">Skip to content</a>
-    <div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div>
-    <header class="top">
-      <a class="brand" href="#main">Olive &amp; Grain<span class="brand-dot"></span></a>
-      <nav aria-label="Main navigation">
-        <a href="#products">Menu</a><a href="#dietary">Dietary notes</a>
-      </nav>
-      <span class="top-note">Made for good company.</span>
-    </header>
-    <main id="main">
-      <header class="menu-heading">
-        <p class="eyebrow">OLIVE & GRAIN • LUNCH</p>
-        <h1>Good Food.<br />Your Kind of Lunch.</h1>
-        <p>Served 11:30–16:00 • Dine in or take away</p>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Saffron Lunch Index</title
+  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../../index.html">Dazzler Design Gallery</a
+      ><span class="small">Fictional Interactive Example</span>
+    </nav>
+    <main class="canvas">
+      <header class="menu-head">
+        <p class="kicker">SAFFRON / LUNCH UNTIL 15:00</p>
+        <h1>Good Lunch.<br />No Guesswork.</h1>
       </header>
-      <div class="menu-tools">
-        <div class="filters" id="menu-filters"></div>
-        <div class="filters">
-          <label for="menu-search">Find a dish</label
-          ><input id="menu-search" type="search" placeholder="Ingredient or dish name" /><label
-            class="check"
-            ><input type="checkbox" id="vegan" />Vegan recipes</label
-          >
-        </div>
+      <div class="menu-controls">
+        <label for="search"
+          >Find a Dish<input id="search" type="search" placeholder="Try lentil or chicken" /></label
+        ><label class="veg"><input id="veg" type="checkbox" /> Vegetarian Only</label>
       </div>
-      <div class="menu-grid" id="products"></div>
-      <p id="menu-empty" hidden>No dishes match. Try another category or clear the filters.</p>
-      <aside class="allergen" id="dietary">
-        <h2>A Note on Dietary Needs</h2>
+      <p id="result-count" role="status"></p>
+      <div id="menu-items"></div>
+      <aside class="allergy">
+        <h2>Before You Order</h2>
         <p>
-          V marks a vegan recipe in this sample menu. It is not an allergen or cross-contact
-          guarantee. Speak with the restaurant team before ordering. Prices are illustrative USD;
-          confirm local tax and service information.
+          Vegetarian labels describe ingredients, not allergy safety. Ask about preparation and
+          cross-contact. Prices are sample USD amounts; this demo does not accept orders.
         </p>
       </aside>
-      <section class="market-note">
-        <p class="eyebrow">A MENU THAT MAKES ROOM</p>
-        <h2>Find a New Favorite.</h2>
-        <p>
-          Filter by course, search an ingredient or explore vegan recipes. Labels describe the
-          example recipe; speak with the team about allergies and cross-contact.
-        </p>
-        <strong>Summer 2027 / 14 dishes and drinks / Freshly imagined</strong>
-      </section>
-      <p id="status" class="status" role="status" aria-live="polite"></p>
     </main>
-    <footer class="site-footer">
-      <span>Olive &amp; Grain · Fictional example by Dazzler</span>
-      <details>
-        <summary>Template notes</summary>
-        <p>
-          All names, contact details, dates, prices and figures are illustrative. Actions update
-          this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled
-          fonts retain their notices.
-        </p>
-        <p>
-          Design system: Market board / leaf and tomato. Local fonts, synthetic data, responsive
-          layout, print styles and working preview states demonstrate Dazzler.
-        </p>
-      </details>
+    <footer>
+      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
+      data; no live service.
     </footer>
-    <dialog id="edit-dialog">
-      <form id="edit-form">
-        <h2 id="dialog-title">Add Details</h2>
-        <div id="dialog-content"></div>
-        <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
-        <div class="dialog-actions">
-          <button type="button" id="cancel" class="secondary">Cancel</button
-          ><button id="dialog-save">Save preview</button>
-        </div>
-      </form>
-    </dialog>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-menu",
-        "category": "restaurant",
-        "layout": "menu",
-        "brand": "Olive & Grain",
-        "title": "Good Food. Your Kind of Lunch.",
-        "intro": "Bowls, small plates, something sweet. Served 11:30–16:00.",
-        "accent": "#3A6325",
-        "tint": "#EDEFF7",
-        "items": [
-          {
-            "name": "Roasted vegetable bowl",
-            "category": "Bowls",
-            "description": "Brown rice, squash, chickpeas, tahini dressing.",
-            "price": 18,
-            "vegan": true
-          },
-          {
-            "name": "Green goddess bowl",
-            "category": "Bowls",
-            "description": "Herb rice, avocado, soft egg, yogurt dressing.",
-            "price": 19,
-            "vegan": false
-          },
-          {
-            "name": "Crisp potato plate",
-            "category": "Small plates",
-            "description": "Roasted potatoes, smoked paprika, lemon.",
-            "price": 9,
-            "vegan": true
-          },
-          {
-            "name": "Whipped feta",
-            "category": "Small plates",
-            "description": "Feta, roasted peppers, warm flatbread.",
-            "price": 11,
-            "vegan": false
-          },
-          {
-            "name": "Lemon olive oil cake",
-            "category": "Dessert",
-            "description": "Lemon syrup and thick cream.",
-            "price": 8,
-            "vegan": false
-          },
-          {
-            "name": "Seasonal fruit",
-            "category": "Dessert",
-            "description": "Fresh fruit with mint and citrus.",
-            "price": 7,
-            "vegan": true
-          },
-          {
-            "name": "Orange blossom tea",
-            "category": "Drinks",
-            "description": "Fragrant black tea, served hot or iced.",
-            "price": 5,
-            "vegan": true
-          },
-          {
-            "name": "House lemonade",
-            "category": "Drinks",
-            "description": "Lemon, a little sugar, sparkling water.",
-            "price": 6,
-            "vegan": true
-          },
-          {
-            "name": "Smoky bean bowl",
-            "category": "Bowls",
-            "description": "Black beans, corn, lime rice, salsa.",
-            "price": 18,
-            "vegan": true
-          },
-          {
-            "name": "Roasted carrot dip",
-            "category": "Small plates",
-            "description": "Carrot, cumin, seeded crackers.",
-            "price": 10,
-            "vegan": true
-          },
-          {
-            "name": "Herb chicken bowl",
-            "category": "Bowls",
-            "description": "Chicken, grains, greens, herb dressing.",
-            "price": 22,
-            "vegan": false
-          },
-          {
-            "name": "Peach iced tea",
-            "category": "Drinks",
-            "description": "Black tea, peach, mint.",
-            "price": 5.5,
-            "vegan": true
-          },
-          {
-            "name": "Brown butter cookie",
-            "category": "Dessert",
-            "description": "Chocolate, brown butter, sea salt.",
-            "price": 5,
-            "vegan": false
-          },
-          {
-            "name": "Tomato and white bean salad",
-            "category": "Small plates",
-            "description": "White beans, tomato, basil.",
-            "price": 12,
-            "vegan": true
-          }
-        ],
-        "secondary": "#A63E25",
-        "bright": "#F6D762",
-        "paper": "#F7F8E8",
-        "headingFont": "Young Serif",
-        "font": "Georgia",
-        "voice": "Market board / leaf and tomato",
-        "ink": "#172033",
-        "sample": {
-          "fictional": true,
-          "asOf": "2027-06-21T09:40:00",
-          "seed": "dazzler-showcase-014",
-          "scope": "Local demonstration only; resets on reload"
+        "title": "Saffron Lunch Index",
+        "prompt": "Make a fictional lunch-menu interface that behaves like a searchable culinary index. Use saffron yellow, ink black and a bold condensed masthead. Search and vegetarian filtering must work without changing prices or claiming allergy safety. Avoid product-photo cards.",
+        "data": {
+          "dishes": [
+            {
+              "name": "Roast Carrot Bowl",
+              "price": 14
+            },
+            {
+              "name": "Lemon Chicken Plate",
+              "price": 17
+            },
+            {
+              "name": "Green Lentil Soup",
+              "price": 11
+            },
+            {
+              "name": "Market Fish Sandwich",
+              "price": 18
+            }
+          ]
         },
-        "season": "Summer 2027",
-        "serviceWindow": "11:30–16:00",
-        "schemaVersion": 2,
-        "license": "Apache-2.0",
-        "creator": "Jon Gosier",
-        "demo": true,
-        "persistence": "memory only",
-        "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+        "action": "Vegetarian Only"
       }
     </script>
     <script>
-      (() => {
-        // skills/dazzler-frontend/scripts/headings.mjs
-        var rules = {
-          schemaVersion: 1,
-          style: "ap-like-protected",
-          smallWords: [
-            "a",
-            "an",
-            "the",
-            "and",
-            "but",
-            "or",
-            "for",
-            "nor",
-            "so",
-            "yet",
-            "at",
-            "by",
-            "in",
-            "of",
-            "off",
-            "on",
-            "out",
-            "per",
-            "to",
-            "up",
-            "via",
-            "as",
-          ],
-          phrasalPairs: ["set up", "sign in", "sign out", "log in", "log out", "back up"],
-          notes:
-            "Conservative English heading helper, not full grammatical AP editing. Preserve existing capitals, quoted/code spans, names and identifiers. Sentence mode preserves authored text. Review ambiguous phrases.",
-        };
-        function heading(text, options = {}) {
-          let { case: casing = "title", lang = "en", preserve = [] } = options;
-          if (typeof text != "string" || text.length > 1e4)
-            throw Error("Heading must be text of at most 10000 characters");
-          if (
-            !["title", "sentence", "upper", "preserve"].includes(casing) ||
-            typeof lang != "string"
-          )
-            throw Error("Invalid heading case or language");
-          if (
-            !Array.isArray(preserve) ||
-            preserve.length > 100 ||
-            preserve.some((x) => typeof x != "string" || !x || x.length > 160)
-          )
-            throw Error("Invalid heading preserve list");
-          if (!/^en(?:-|$)/i.test(lang) || ["sentence", "preserve"].includes(casing)) return text;
-          let protectedPattern =
-              /`[^`]*`|<(?:code|kbd|samp)\b[^>]*>[\s\S]*?<\/(?:code|kbd|samp)>|<[^>]*>|&(?:#[0-9]+|#x[0-9a-f]+|[a-z]+);|"[^"]*"|“[^”]*”|‘[^’]*’|«[^»]*»|(?<!\w)'[^']*'|(?:https?:\/\/|www\.)\S+|\S+@\S+|[^\s<>]*[0-9_/\\()][^\s<>]*|\b[A-Za-z]+\.[A-Za-z.]+\b/gi,
-            spans = [...text.matchAll(protectedPattern)].map((m) => [
-              m.index,
-              m.index + m[0].length,
-            ]);
-          for (let value of preserve)
-            for (let p = text.indexOf(value); p !== -1; p = text.indexOf(value, p + value.length))
-              spans.push([p, p + value.length]);
-          let protectedChars = new Uint8Array(text.length);
-          for (let [start, end2] of spans) protectedChars.fill(1, start, end2);
-          let words = [...text.matchAll(/\p{L}+(?:['’]\p{L}+)?/gu)].filter(
-            (m) => !protectedChars.subarray(m.index, m.index + m[0].length).includes(1),
+      const dishes = [
+        { name: "Roast Carrot Bowl", note: "Lentils, herbs, tahini", price: 14, veg: true },
+        { name: "Lemon Chicken Plate", note: "Rice, cucumber, yogurt", price: 17, veg: false },
+        { name: "Green Lentil Soup", note: "Leek, lemon, toasted bread", price: 11, veg: true },
+        {
+          name: "Market Fish Sandwich",
+          note: "Slaw, caper dressing, sourdough",
+          price: 18,
+          veg: false,
+        },
+      ];
+      function render() {
+        const query = document.querySelector("#search").value.toLowerCase(),
+          veg = document.querySelector("#veg").checked,
+          rows = dishes.filter(
+            (d) => (!veg || d.veg) && (d.name + " " + d.note).toLowerCase().includes(query),
           );
-          if (casing === "title" && text === text.toUpperCase()) return text;
-          let result = "",
-            end = 0;
-          return (
-            words.forEach((m, i) => {
-              let word = m[0],
-                start = m.index,
-                stop = start + word.length,
-                replacement = word;
-              if (casing === "upper" || word === word.toLowerCase()) {
-                let between = i
-                    ? text.slice(words[i - 1].index + words[i - 1][0].length, start)
-                    : "",
-                  afterBreak = i === 0 || /[:—]\s*$/.test(between),
-                  pair =
-                    i > 0 &&
-                    /^\s+$/.test(between) &&
-                    rules.phrasalPairs.includes(
-                      words[i - 1][0].toLowerCase() + " " + word.toLowerCase(),
-                    );
-                casing === "upper"
-                  ? (replacement = /[a-z][A-Z]/.test(word) ? word : word.toUpperCase())
-                  : (afterBreak ||
-                      i === words.length - 1 ||
-                      pair ||
-                      !rules.smallWords.includes(word)) &&
-                    (replacement = word[0].toUpperCase() + word.slice(1));
-              }
-              ((result += text.slice(end, start) + replacement), (end = stop));
-            }),
-            result + text.slice(end)
-          );
-        }
-
-        // tools/template_interactions.js
-        var cfg = JSON.parse(document.getElementById("template-data").textContent),
-          $ = (id) => document.getElementById(id),
-          esc = (v) =>
-            String(v).replace(
-              /[&<>"']/g,
-              (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
-            ),
-          money = (n) =>
-            new Intl.NumberFormat("en-US", {
-              style: "currency",
-              currency: "USD",
-              maximumFractionDigits: 2,
-            }).format(n);
-        var dialog = $("edit-dialog");
-        var category = "All";
-        function menuRender() {
-          let search = $("menu-search").value.toLowerCase(),
-            vegan = $("vegan").checked,
-            items = cfg.items
-              .map((x, i) => ({ ...x, index: i }))
-              .filter(
-                (x) =>
-                  (category === "All" || x.category === category) &&
-                  (!vegan || x.vegan) &&
-                  [x.name, x.description].join(" ").toLowerCase().includes(search),
-              );
-          (($("products").innerHTML = items
+        document.querySelector("#menu-items").innerHTML =
+          rows
             .map(
-              (x) =>
-                `<article class="menu-dish"><header><h3>${esc(heading(x.name))}</h3><strong>${money(x.price)}</strong></header><p>${x.description}</p><span class="pill">${x.category}${x.vegan ? " \xB7 V" : ""}</span></article>`,
+              (d, i) =>
+                `<article class="dish-row"><span class="dish-number">0${i + 1}</span><div><h2>${d.name}</h2><p>${d.note}${d.veg ? " · Vegetarian" : ""}</p></div><strong class="price">$${d.price}</strong></article>`,
             )
-            .join("")),
-            ($("menu-empty").hidden = items.length > 0));
-        }
-        document.addEventListener("click", (event) => {
-          let b = event.target.closest("button");
-          b &&
-            b.dataset.filter &&
-            ((category = b.dataset.filter),
-            document
-              .querySelectorAll("[data-filter]")
-              .forEach((x) => x.setAttribute("aria-pressed", String(x === b))),
-            menuRender());
-        });
-        (($("menu-filters").innerHTML = ["All", ...new Set(cfg.items.map((x) => x.category))]
-          .map((c) => `<button data-filter="${c}" aria-pressed="${c === "All"}">${c}</button>`)
-          .join("")),
-          menuRender(),
-          $("menu-search").addEventListener("input", menuRender),
-          $("vegan").addEventListener("change", menuRender));
-      })();
+            .join("") || "<p>No dishes match. Try another search.</p>";
+        document.querySelector("#result-count").textContent = rows.length + " dishes shown";
+      }
+      render();
+      document.querySelector("#search").oninput = render;
+      document.querySelector("#veg").onchange = render;
     </script>
   </body>
 </html>

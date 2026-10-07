@@ -1,0 +1,532 @@
+[
+  {
+    "id": "professional",
+    "title": "Harbor Exchange Launch Decision",
+    "short": "The Launch Decision",
+    "tag": "NORTHLINE / OPERATING REVIEW",
+    "lead": "Release the exchange in two stages. Keep the settlement hold until reconciliation is complete.",
+    "accent": "#123A8C",
+    "paper": "#EEF3FF",
+    "font": "Archivo",
+    "word": "Arial",
+    "layout": "decision",
+    "stat": "92%",
+    "label": "of pilot transactions reconciled",
+    "intro": "The six-week pilot processed 1,250 synthetic transactions. Reconciliation matched 1,150; the remaining 100 need manual review before settlement can be enabled.",
+    "sections": [
+      [
+        "Approve the Limited Release",
+        "Open account setup and order tracking on 14 July. Keep settlement disabled until the exception queue is empty and Finance signs the control record."
+      ],
+      [
+        "What Changed",
+        "A single owner now resolves each exception. The support team has a tested escalation route, and the release can be rolled back without losing the review history."
+      ],
+      [
+        "Decision Owners",
+        "Mara Chen owns reconciliation; Omar Diaz owns rollback readiness. Both report to the release lead at 09:00 on launch day."
+      ]
+    ],
+    "headers": [
+      "Gate",
+      "Evidence",
+      "State"
+    ],
+    "rows": [
+      [
+        "Account setup",
+        "240 completed test journeys",
+        "Ready"
+      ],
+      [
+        "Tracking",
+        "98% delivered within 2 seconds",
+        "Ready"
+      ],
+      [
+        "Settlement",
+        "100 unmatched records",
+        "Hold"
+      ]
+    ],
+    "closing": "Decision due 10 July \u00b7 Approve the limited scope, not settlement.",
+    "prompt": "Create a fictional executive launch-decision brief for an operations committee. Make the decision, unresolved gate and accountable owners unmistakable. Use a cobalt decision spread with precise numbers and a compact gate register; avoid a generic KPI dashboard."
+  },
+  {
+    "id": "legal",
+    "title": "Orchard Lane Notice Review",
+    "short": "Notice and Evidence",
+    "tag": "MATTER 026 / INTERNAL REVIEW",
+    "lead": "The record supports delivery. It does not yet establish that the recipient accepted the revised terms.",
+    "accent": "#69283E",
+    "paper": "#FAF5EC",
+    "font": "Libre Baskerville",
+    "word": "Georgia",
+    "layout": "chronology",
+    "stat": "03",
+    "label": "events establish the sequence",
+    "intro": "This fictional matter note separates the available correspondence from the questions counsel must resolve. It contains no jurisdiction-specific legal conclusion.",
+    "sections": [
+      [
+        "Issue Presented",
+        "Which version of the terms accompanied the notice, and what evidence records the recipient's response? Review the document trail before drawing a conclusion."
+      ],
+      [
+        "Record Gaps",
+        "The dispatch log identifies an attachment but does not preserve its hash. A reply refers to revised dates without identifying a signed amendment."
+      ],
+      [
+        "Next Review",
+        "Obtain the original attachment and complete message headers. Keep the current chronology provisional until the underlying files are reconciled."
+      ]
+    ],
+    "headers": [
+      "Date",
+      "Record",
+      "Significance"
+    ],
+    "rows": [
+      [
+        "04 May",
+        "Notice dispatched",
+        "Delivery initiated"
+      ],
+      [
+        "06 May",
+        "Receipt acknowledged",
+        "Receipt only"
+      ],
+      [
+        "09 May",
+        "Dates discussed",
+        "Acceptance unresolved"
+      ]
+    ],
+    "closing": "Prepared for counsel \u00b7 Fictional training material, not legal advice.",
+    "prompt": "Design a fictional legal evidence-review memorandum. Use a narrow plum chronology and a quiet cream reading field with serif hierarchy. Distinguish documented events from unresolved conclusions; no legal advice, invented authorities or decorative legal icons."
+  },
+  {
+    "id": "business",
+    "title": "Juniper Studio Service Proposal",
+    "short": "A Better Booking Journey",
+    "tag": "JUNIPER / SCOPE 014",
+    "lead": "Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages.",
+    "accent": "#145A45",
+    "paper": "#F1F6E9",
+    "font": "Young Serif",
+    "word": "Georgia",
+    "layout": "proposal",
+    "stat": "$24,000",
+    "label": "fixed fee for the defined scope",
+    "intro": "The fictional engagement covers research synthesis, interaction design and a tested frontend prototype for a neighborhood arts venue. Production integration is a separate engagement.",
+    "sections": [
+      [
+        "Included",
+        "Two stakeholder workshops, six core screens, responsive specifications, accessible component states and a documented prototype handoff."
+      ],
+      [
+        "Working Together",
+        "One named decision owner consolidates feedback within three working days. Each stage ends with a review, not an implied approval."
+      ],
+      [
+        "Commercial Terms",
+        "Invoices follow the milestones below. The estimate excludes taxes, third-party subscriptions, production hosting and changes outside the agreed six screens."
+      ]
+    ],
+    "headers": [
+      "Stage",
+      "Deliverable",
+      "Fee"
+    ],
+    "rows": [
+      [
+        "01 Discover",
+        "Journey and success measures",
+        "$6,000"
+      ],
+      [
+        "02 Design",
+        "Six screens and component states",
+        "$10,000"
+      ],
+      [
+        "03 Validate",
+        "Prototype and handoff",
+        "$8,000"
+      ]
+    ],
+    "closing": "Offer valid for 30 days \u00b7 Start date follows written acceptance.",
+    "prompt": "Make a fictional creative-service proposal for an arts venue. Give the scope and fixed fee strong editorial hierarchy. Compose an oversized fee beside a three-stage delivery ledger, with forest green, pale lime and genuine serif italics; keep exclusions legible."
+  },
+  {
+    "id": "fun",
+    "title": "Night Market on Alder Street",
+    "short": "Meet After Sunset",
+    "tag": "ALDER STREET / SATURDAY 17 JULY",
+    "lead": "An evening of food, records and small discoveries. Bring a friend and leave room for dessert.",
+    "accent": "#64204C",
+    "paper": "#FFE9A8",
+    "font": "Oswald",
+    "word": "Arial",
+    "layout": "poster",
+    "stat": "17 JUL",
+    "label": "17:00\u201322:00 \u00b7 free entry",
+    "intro": "This fictional neighborhood night market fills the pedestrian block between Pine and Alder. No tickets are required; individual stalls set their own prices.",
+    "sections": [
+      [
+        "Make an Evening of It",
+        "Start at the community table, browse the makers and catch the sunset set. Seating is shared and the route is step-free."
+      ],
+      [
+        "Come Prepared",
+        "Bring a reusable bottle. Water refill points are beside the information tent; quiet seating is at the library end of the block."
+      ],
+      [
+        "Weather Plan",
+        "If heavy rain is forecast, the event moves to Alder Hall. Check the information board before traveling."
+      ]
+    ],
+    "headers": [
+      "Time",
+      "Find",
+      "Where"
+    ],
+    "rows": [
+      [
+        "17:00",
+        "Food Stalls Open",
+        "East end"
+      ],
+      [
+        "18:30",
+        "Listening Session",
+        "Record tent"
+      ],
+      [
+        "20:00",
+        "Sunset Set",
+        "Community stage"
+      ]
+    ],
+    "closing": "Fictional event \u00b7 No real booking or attendance service.",
+    "prompt": "Create a joyful fictional neighborhood night-market program. Use a typographic date poster, aubergine ink on warm yellow, a bold schedule ribbon and generous negative space. Make access, quiet seating and the rain plan as useful as the event headline."
+  },
+  {
+    "id": "family",
+    "title": "River House Weekend Plan",
+    "short": "One Weekend Together",
+    "tag": "THE RIVER HOUSE / 23\u201325 JULY",
+    "lead": "A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday.",
+    "accent": "#224A74",
+    "paper": "#FFF7E6",
+    "font": "Work Sans",
+    "word": "Arial",
+    "layout": "planner",
+    "stat": "3 DAYS",
+    "label": "one shared list \u00b7 fewer messages",
+    "intro": "A fictional family plan for two adults and two children. Keep food, travel and quiet time visible; check items as they are packed rather than assuming they are done.",
+    "sections": [
+      [
+        "Pack Together",
+        "Rain jackets, refillable bottles, medication, chargers and one book each. Keep medication with the adult responsible for it."
+      ],
+      [
+        "Food Plan",
+        "Bring Friday supper. Buy breakfast ingredients locally. Confirm dietary needs before Saturday lunch; the sample plan does not assume medical requirements."
+      ],
+      [
+        "If Plans Change",
+        "Use the shared notice space for the new meeting time. Agree on one pickup point before anyone leaves the house."
+      ]
+    ],
+    "headers": [
+      "Day",
+      "Anchor Plan",
+      "Leave Open"
+    ],
+    "rows": [
+      [
+        "Friday",
+        "Arrive before 18:00",
+        "Games after supper"
+      ],
+      [
+        "Saturday",
+        "Lunch at 12:30",
+        "Walk or quiet time"
+      ],
+      [
+        "Sunday",
+        "Pack by 11:00",
+        "One last river stop"
+      ]
+    ],
+    "closing": "Fictional household \u00b7 Adapt the plan to your family and access needs.",
+    "prompt": "Design a warm practical family weekend planner. Use three day columns, a packing checklist and a shared-notice strip. It should feel like a considered fridge sheet in cream, navy and coral, not a corporate report or a childish worksheet."
+  },
+  {
+    "id": "presentation",
+    "title": "Library After Hours Pilot",
+    "short": "Open Later for More People",
+    "tag": "CIVIC LAB / THREE MINUTE BRIEF",
+    "lead": "Test one late opening each week before committing to a permanent change.",
+    "accent": "#482884",
+    "paper": "#F5EFFF",
+    "font": "Archivo",
+    "word": "Arial",
+    "layout": "storyboard",
+    "stat": "6 WEEKS",
+    "label": "a bounded pilot with a clear review point",
+    "intro": "This fictional presentation handout proposes Thursday openings until 21:00. Attendance, staffing and quiet-study demand will determine the next decision.",
+    "sections": [
+      [
+        "The Need",
+        "Evening visitors need access after work and classes. The pilot tests demand rather than assuming every weekday should open later."
+      ],
+      [
+        "The Experiment",
+        "Open on six Thursdays. Keep a quiet study zone, a staffed help point and a clear closing routine. Record occupancy every hour."
+      ],
+      [
+        "The Decision",
+        "Continue only if demand is sustained and the staffing plan is workable. Publish the measured results, including low-attendance evenings."
+      ]
+    ],
+    "headers": [
+      "Measure",
+      "Collection",
+      "Review"
+    ],
+    "rows": [
+      [
+        "Visitors",
+        "Hourly count",
+        "Demand by hour"
+      ],
+      [
+        "Quiet seats",
+        "Occupied / available",
+        "Capacity pressure"
+      ],
+      [
+        "Staff hours",
+        "Scheduled and actual",
+        "Operating effort"
+      ]
+    ],
+    "closing": "Pilot proposal only \u00b7 Synthetic example, not a funded program.",
+    "prompt": "Create a landscape presentation handout for a fictional late-opening library pilot. Organize it as three visual beats: need, experiment, decision. Use large purple typographic numerals, concise evidence, and an evaluation strip rather than a report page or a fake slide deck."
+  },
+  {
+    "id": "school",
+    "title": "Rain Garden Observation Notebook",
+    "short": "Where Does the Water Go",
+    "tag": "FIELD SCIENCE / YEAR 8",
+    "lead": "Compare drainage time in three soil samples. Record what happened before deciding why.",
+    "accent": "#28592E",
+    "paper": "#F3F1D9",
+    "font": "Young Serif",
+    "word": "Georgia",
+    "layout": "notebook",
+    "stat": "240 mL",
+    "label": "the same water volume for every sample",
+    "intro": "In this fictional classroom investigation, three equal containers hold sand, garden soil and clay-rich soil. Each receives the same water volume; students time the first 100 mL collected.",
+    "sections": [
+      [
+        "Keep the Test Fair",
+        "Use the same container size, water volume and timing method. Repeat each sample three times. Describe any spills or delayed starts."
+      ],
+      [
+        "Read the Pattern",
+        "Sand drained fastest in the sample results. The test measures this setup only; it does not establish how an entire garden will behave."
+      ],
+      [
+        "Ask a Better Question",
+        "How would compaction change the result? Plan one change at a time and state which measurement would answer your question."
+      ]
+    ],
+    "headers": [
+      "Sample",
+      "Trial Times",
+      "Median"
+    ],
+    "rows": [
+      [
+        "Sand",
+        "38 / 41 / 40 sec",
+        "40 sec"
+      ],
+      [
+        "Garden soil",
+        "84 / 90 / 87 sec",
+        "87 sec"
+      ],
+      [
+        "Clay-rich soil",
+        "165 / 172 / 168 sec",
+        "168 sec"
+      ]
+    ],
+    "closing": "Synthetic classroom observations \u00b7 Follow your teacher's safety instructions.",
+    "prompt": "Make a fictional Year 8 science field notebook on soil drainage. Use botanical green, warm paper, ruled observations and a labeled experimental diagram. Keep methods, measurements and limitations distinct; invite a next question rather than dressing a generic report in green."
+  },
+  {
+    "id": "marketing",
+    "title": "Second Life Repair Campaign",
+    "short": "Keep the Good Things",
+    "tag": "SECOND LIFE / CAMPAIGN EDITION 01",
+    "lead": "Make repair feel like a first choice. Show the work, explain the process and make booking simple.",
+    "accent": "#9B301C",
+    "paper": "#FFF0E5",
+    "font": "Oswald",
+    "word": "Arial",
+    "layout": "editorial",
+    "stat": "120",
+    "label": "illustrative repair slots over four weeks",
+    "intro": "A fictional campaign for a local repair collective. The offer covers a 20-minute assessment; repair price and turnaround are confirmed after inspection.",
+    "sections": [
+      [
+        "The Story",
+        "Lead with a well-used object and its repair, not an unsupported sustainability promise. Explain what can be fixed and what cannot."
+      ],
+      [
+        "The Offer",
+        "Book an assessment, bring the item and receive a written estimate. No repair begins without approval. Parts may affect timing."
+      ],
+      [
+        "Measure the Journey",
+        "Track assessment bookings, attended appointments and approved repairs separately. Do not present bookings as completed repairs."
+      ]
+    ],
+    "headers": [
+      "Channel",
+      "Message",
+      "Action"
+    ],
+    "rows": [
+      [
+        "Window poster",
+        "Keep the Good Things",
+        "Scan for times"
+      ],
+      [
+        "Email",
+        "See a repair in progress",
+        "Book assessment"
+      ],
+      [
+        "Workshop",
+        "Meet the repair team",
+        "Bring one item"
+      ]
+    ],
+    "closing": "Fictional campaign \u00b7 Capacity figures are planning assumptions.",
+    "prompt": "Build a bold fictional repair-campaign editorial. Use a large condensed headline, rust and peach color fields, a diagram of the repair journey and a channel ledger. Avoid generic marketing cards and unsupported environmental claims."
+  },
+  {
+    "id": "restaurant",
+    "title": "Morrow Seasonal Supper Menu",
+    "short": "An Evening at Morrow",
+    "tag": "MORROW / LATE SUMMER",
+    "lead": "A short menu built around what is ready now. Choose a few dishes and share the table.",
+    "accent": "#713541",
+    "paper": "#F9F1DF",
+    "font": "Libre Baskerville",
+    "word": "Georgia",
+    "layout": "menu",
+    "stat": "18:00",
+    "label": "first seating \u00b7 Wednesday to Sunday",
+    "intro": "A fictional neighborhood supper room. Prices are sample USD amounts before tax. Ask the team about ingredients and cross-contact; dietary labels are not safety guarantees.",
+    "sections": [
+      [
+        "To Begin",
+        "Charred peach, tomato and basil \u00b7 12\nWhite bean broth, lemon and herbs \u00b7 10"
+      ],
+      [
+        "For the Table",
+        "Roast squash, farro and sage \u00b7 24\nPan-roasted trout, potatoes and greens \u00b7 29"
+      ],
+      [
+        "Something Sweet",
+        "Plum tart with cultured cream \u00b7 11\nOlive oil cake and poached pear \u00b7 10"
+      ]
+    ],
+    "headers": [
+      "Pairing",
+      "Glass",
+      "Character"
+    ],
+    "rows": [
+      [
+        "Orchard Spritz",
+        "9",
+        "Apple / rosemary / soda"
+      ],
+      [
+        "House White",
+        "12",
+        "Dry / citrus / mineral"
+      ],
+      [
+        "Garden Tonic",
+        "8",
+        "Cucumber / mint / tonic"
+      ]
+    ],
+    "closing": "Sample menu \u00b7 Tell the team about allergies before ordering.",
+    "prompt": "Design an original seasonal supper menu for fictional Morrow. Use a wine-colored vertical wordmark, elegant serif course hierarchy, aligned prices and a botanical line motif. Give ingredient and allergy information readable space; avoid a report shell or stock-food hero."
+  },
+  {
+    "id": "technical",
+    "title": "Relay Queue Recovery Runbook",
+    "short": "Restore the Queue Safely",
+    "tag": "RELAY / OPERATIONS RUNBOOK 07",
+    "lead": "Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch.",
+    "accent": "#07556A",
+    "paper": "#EAF5F5",
+    "font": "Office Code Pro",
+    "word": "Consolas",
+    "layout": "runbook",
+    "stat": "50",
+    "label": "events in the first recovery batch",
+    "intro": "This fictional runbook handles a stalled delivery queue. It demonstrates a safe sequence; adapt commands and thresholds to the actual system before operational use.",
+    "sections": [
+      [
+        "01 Stabilize",
+        "Pause the worker and record the last acknowledged event ID. Confirm that the consumer is healthy before attempting a replay."
+      ],
+      [
+        "02 Recover",
+        "Replay the next 50 events from the checkpoint. Check duplicate handling and compare delivered IDs with acknowledgements."
+      ],
+      [
+        "03 Verify",
+        "Resume only when the batch reconciles and error rate remains below the agreed threshold. If it fails, pause again and retain the evidence."
+      ]
+    ],
+    "headers": [
+      "Signal",
+      "Proceed",
+      "Stop"
+    ],
+    "rows": [
+      [
+        "Acknowledgements",
+        "50 of 50 matched",
+        "Any missing ID"
+      ],
+      [
+        "Duplicates",
+        "Handled idempotently",
+        "Side effect repeated"
+      ],
+      [
+        "Consumer health",
+        "Checks passing",
+        "Timeout or error"
+      ]
+    ],
+    "closing": "Synthetic operational example \u00b7 Commands require environment-specific review.",
+    "prompt": "Create a fictional technical recovery runbook. Make the pause-replay-verify sequence the composition, with monospaced step labels, a cyan evidence rail and a high-contrast stop condition. Preserve exact operational language and provide a rollback branch, not a generic dashboard."
+  }
+]

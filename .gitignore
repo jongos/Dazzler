@@ -8,3 +8,12 @@ dist/
 work/
 
 maintenance/offline-build/*.zip
+
+# Gallery review intermediates; final captures and previous-release evidence are tracked.
+maintenance/gallery-production/*/artifacts/
+maintenance/gallery-production/*/reviewed-library/
+maintenance/gallery-production/*/renders/
+maintenance/gallery-production/*/review/
+maintenance/gallery-production/*/word-*/
+maintenance/gallery-production/*/lo-*/
+maintenance/gallery-production/*/tmp*/

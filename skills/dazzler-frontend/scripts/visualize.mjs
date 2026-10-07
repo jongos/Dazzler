@@ -156,6 +156,49 @@ export function normalize(input) {
     n.warnings.push(
       "One or more supplied graphic colors are below 3:1 against the chart background.",
     );
+  // Editorial layers refer to source rows; never fabricate annotation coordinates.
+  n.annotations = input.annotations ?? [];
+  n.referenceLines = input.referenceLines ?? [];
+  if (
+    !Array.isArray(n.annotations) ||
+    n.annotations.length > 6 ||
+    !Array.isArray(n.referenceLines) ||
+    n.referenceLines.length > 3
+  )
+    throw Error("Use at most six annotations and three reference lines");
+  if (
+    (n.annotations.length || n.referenceLines.length) &&
+    (!["bar", "line", "scatter"].includes(n.type) ||
+      n.series.length !== 1 ||
+      !["html", "svg"].includes(input.format ?? "html"))
+  )
+    throw Error("Editorial layers support single-series bar, line or scatter HTML/SVG charts");
+  n.annotations = n.annotations.map((a) => {
+    if (
+      !a ||
+      typeof a.text !== "string" ||
+      !a.text.trim() ||
+      a.text.length > 80 ||
+      Object.keys(a).some((k) => !["x", "text", "position"].includes(k)) ||
+      !["above", "below"].includes(a.position ?? "above")
+    )
+      throw Error("Annotation requires x, text and optional above/below position");
+    const row = n.data.find((r) => r.x === a.x && r.y !== null);
+    if (!row) throw Error("Annotation must anchor to an existing nonmissing source row");
+    return { x: row.x, y: row.y, text: a.text, position: a.position ?? "above" };
+  });
+  n.referenceLines = n.referenceLines.map((r) => {
+    if (
+      !r ||
+      !finite(r.y) ||
+      typeof r.label !== "string" ||
+      !r.label.trim() ||
+      r.label.length > 80 ||
+      Object.keys(r).some((k) => !["y", "label"].includes(k))
+    )
+      throw Error("Reference line requires a finite y and a label");
+    return { y: r.y, label: r.label };
+  });
   n.format = input.format ?? "html";
   if (!["html", "svg", "react", "docx", "pptx"].includes(n.format))
     throw Error("Unsupported output format");
@@ -249,6 +292,44 @@ export function specification(n) {
       title: n.unit || n.yLabel,
     };
   }
+  const layers = [{ mark, encoding: enc }];
+  for (const reference of n.referenceLines ?? []) {
+    const data = { values: [reference] };
+    layers.push({
+      data,
+      mark: { type: "rule", color: ink, strokeDash: [5, 5], opacity: 0.65 },
+      encoding: { y: { field: "y", type: "quantitative" } },
+    });
+    layers.push({
+      data,
+      mark: { type: "text", align: "left", dx: 6, dy: -8, color: ink, fontSize: 12 },
+      encoding: {
+        x: { value: 0 },
+        y: { field: "y", type: "quantitative" },
+        text: { field: "label" },
+      },
+    });
+  }
+  for (const annotation of n.annotations ?? []) {
+    const data = { values: [annotation] };
+    const position = { x: { ...enc.x, axis: undefined }, y: { ...enc.y, axis: undefined } };
+    layers.push({
+      data,
+      mark: { type: "point", filled: true, size: 100, color: n.colors[0] },
+      encoding: position,
+    });
+    layers.push({
+      data,
+      mark: {
+        type: "text",
+        dy: annotation.position === "below" ? 20 : -18,
+        fontSize: 13,
+        fontWeight: 600,
+        color: ink,
+      },
+      encoding: { ...position, text: { field: "text" } },
+    });
+  }
   return {
     $schema: "https://vega.github.io/schema/vega-lite/v6.json",
     description: n.description,
@@ -256,8 +337,7 @@ export function specification(n) {
     width: n.width,
     height: n.height,
     background: n.background,
-    mark,
-    encoding: enc,
+    ...(layers.length > 1 ? { layer: layers } : { mark, encoding: enc }),
     ...(n.type === "scatter"
       ? { params: [{ name: "zoom", select: "interval", bind: "scales" }] }
       : {}),

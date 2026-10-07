@@ -30,6 +30,9 @@ jobs:
       - run: python skills/dazzler-frontend/scripts/health.py
       - run: python tools/validate_fonts.py
       - run: python tools/validate_release.py
+      - name: Require fresh gallery evidence for release tags
+        if: startsWith(github.ref, 'refs/tags/')
+        run: python tools/validate_gallery_release.py maintenance/gallery-release.json
       - run: python tools/check_links.py
       - run: python tools/build_platforms.py --out dist/ci-platforms
       - run: python tools/validate_platforms.py dist/ci-platforms
@@ -54,6 +57,8 @@ jobs:
       - run: node tools/test_template_gallery.cjs
       - run: node tools/test_composition_browser.mjs dist/browser/composition
       - run: node tools/test_design_system_browser.mjs dist/browser/design-system
+      - run: node tools/build_web_exploration.mjs dist/browser/web-exploration
+      - run: node tools/test_web_exploration.cjs dist/browser/web-exploration
       - run: node tools/test_starters.cjs
       - run: node tools/test_handoff.mjs dist/browser/handoff
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

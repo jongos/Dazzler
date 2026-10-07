@@ -1,456 +1,136 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Daybreak — Your Usual, or Something New.</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="template-cafe restaurant">
-    <a class="skip" href="#main">Skip to content</a>
-    <div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div>
-    <header class="top">
-      <a class="brand" href="#main">Daybreak<span class="brand-dot"></span></a>
-      <nav aria-label="Main navigation">
-        <a href="#products">Order</a><a href="#order">Your bag</a>
-      </nav>
-      <span class="top-note">Made for good company.</span>
-    </header>
-    <main id="main">
-      <div class="pickup-strip">
-        <span><strong>Daybreak • Market Street</strong><small>Fictional café location</small></span
-        ><span
-          >Pickup in about 15–20 min<br /><small
-            >Sample estimate, not live availability</small
-          ></span
-        >
-      </div>
-      <div class="cafe-heading">
-        <p class="eyebrow">ORDER A LITTLE BRIGHTER</p>
-        <h1>Your Usual,<br />or Something New.</h1>
-        <p>Coffee, something warm, and a good start to the day.</p>
-      </div>
-      <div class="order-layout">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Daybreak Coffee Counter</title
+  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../../index.html">Dazzler Design Gallery</a
+      ><span class="small">Fictional Interactive Example</span>
+    </nav>
+    <main class="canvas">
+      <header class="cafe">
+        <div>
+          <p class="kicker">DAYBREAK / COFFEE COUNTER</p>
+          <h1>Your Morning,<br />Written to Order.</h1>
+        </div>
+        <p>Open 07:00–15:00<br />Fictional Pickup Demo</p>
+      </header>
+      <div class="counter">
         <section>
-          <div class="filters" id="menu-filters"></div>
-          <div class="product-grid" id="products"></div>
+          <div class="actions">
+            <button data-filter="all" aria-pressed="true">All</button
+            ><button data-filter="coffee" aria-pressed="false">Coffee</button
+            ><button data-filter="bakery" aria-pressed="false">Bakery</button>
+          </div>
+          <div id="products"></div>
         </section>
-        <aside class="order" id="order">
-          <p class="eyebrow">PICKUP ORDER</p>
-          <h2>Your Morning</h2>
-          <div id="cart-lines"></div>
-          <div class="total"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
-          <p class="muted">USD • Taxes or service fees are not calculated in this preview.</p>
-          <button data-action="cart" class="wide">Review pickup order</button
-          ><button data-action="clear" class="text-button">Clear order</button>
+        <aside class="ticket">
+          <p class="kicker">YOUR ORDER / 001</p>
+          <h2>The Morning Ticket</h2>
+          <div id="cart">Your ticket is empty.</div>
+          <p class="total">Subtotal <strong id="total">$0.00</strong></p>
+          <p class="small">
+            Sample USD prices. Taxes and service fees are not included. No order is sent.
+          </p>
+          <button id="clear">Clear Ticket</button>
+          <p role="status" id="status"></p>
         </aside>
       </div>
-      <section class="morning-note">
-        <div>
-          <p class="eyebrow">BAKED FOR THE MORNING</p>
-          <h2>Small Rituals.<br /><em>A Brighter Day.</em></h2>
-          <p>
-            84 pastries in today’s fictional bake. Choose a coffee, a warm bite and a pickup
-            preview. The bag calculates from your selected quantities.
-          </p>
-        </div>
-        <svg
-          viewBox="0 0 420 280"
-          role="img"
-          aria-label="Original illustration of a coffee cup and a pastry"
-        >
-          <rect width="420" height="280" rx="140" fill="#F5C735" />
-          <ellipse cx="185" cy="230" rx="100" ry="15" fill="#AA4B2933" />
-          <path d="M95 85h150l-15 128H115z" fill="#FFF9EC" />
-          <ellipse cx="170" cy="85" rx="75" ry="22" fill="#753819" />
-          <ellipse cx="170" cy="85" rx="48" ry="14" fill="#DDA977" />
-          <path
-            d="M246 114q70-8 55 55q-10 28-62 9"
-            fill="none"
-            stroke="#FFF9EC"
-            stroke-width="18"
-          />
-          <path
-            d="M160 48q-22-18 0-34M191 49q-22-18 0-34"
-            fill="none"
-            stroke="#753819"
-            stroke-width="4"
-          />
-          <path d="M280 226q25-90 94-41l-15 54z" fill="#B95522" />
-          <path d="M303 205l18 25M326 192l18 34M351 193l4 24" stroke="#F0B256" stroke-width="8" />
-        </svg>
-      </section>
-      <p id="status" class="status" role="status" aria-live="polite"></p>
     </main>
-    <footer class="site-footer">
-      <span>Daybreak · Fictional example by Dazzler</span>
-      <details>
-        <summary>Template notes</summary>
-        <p>
-          All names, contact details, dates, prices and figures are illustrative. Actions update
-          this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled
-          fonts retain their notices.
-        </p>
-        <p>
-          Design system: Morning energy / orange and cobalt. Local fonts, synthetic data, responsive
-          layout, print styles and working preview states demonstrate Dazzler.
-        </p>
-      </details>
+    <footer>
+      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
+      data; no live service.
     </footer>
-    <dialog id="edit-dialog">
-      <form id="edit-form">
-        <h2 id="dialog-title">Add Details</h2>
-        <div id="dialog-content"></div>
-        <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
-        <div class="dialog-actions">
-          <button type="button" id="cancel" class="secondary">Cancel</button
-          ><button id="dialog-save">Save preview</button>
-        </div>
-      </form>
-    </dialog>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-cafe",
-        "category": "restaurant",
-        "layout": "cafe",
-        "brand": "Daybreak",
-        "title": "Your Usual, or Something New.",
-        "intro": "Order ahead for pickup • Sample café location",
-        "accent": "#A83B19",
-        "tint": "#EDEFF7",
-        "items": [
-          {
-            "name": "Flat white",
-            "category": "Coffee",
-            "description": "Double espresso, steamed milk, fine foam.",
-            "price": 4.5
-          },
-          {
-            "name": "Iced oat latte",
-            "category": "Coffee",
-            "description": "Espresso over ice with oat drink.",
-            "price": 5.5
-          },
-          {
-            "name": "Filter coffee",
-            "category": "Coffee",
-            "description": "Today’s batch, served black or with milk.",
-            "price": 3.5
-          },
-          {
-            "name": "Almond croissant",
-            "category": "Bakery",
-            "description": "Twice baked with almond cream.",
-            "price": 4.5
-          },
-          {
-            "name": "Morning bun",
-            "category": "Bakery",
-            "description": "Orange sugar and a soft, buttery center.",
-            "price": 4
-          },
-          {
-            "name": "Tomato toast",
-            "category": "Kitchen",
-            "description": "Sourdough, tomatoes, whipped ricotta, herbs.",
-            "price": 9
-          },
-          {
-            "name": "Cocoa cloud",
-            "category": "Coffee",
-            "description": "Espresso, cocoa, steamed milk.",
-            "price": 5
-          },
-          {
-            "name": "Cinnamon knot",
-            "category": "Bakery",
-            "description": "Soft dough, cinnamon sugar.",
-            "price": 4.25
-          },
-          {
-            "name": "Breakfast roll",
-            "category": "Kitchen",
-            "description": "Egg, cheddar, greens, soft bun.",
-            "price": 8.5
-          },
-          {
-            "name": "Orange cooler",
-            "category": "Cold drinks",
-            "description": "Orange, sparkling water, ice.",
-            "price": 4.75
-          },
-          {
-            "name": "Berry yogurt pot",
-            "category": "Kitchen",
-            "description": "Yogurt, berries and oat crunch.",
-            "price": 6
-          },
-          {
-            "name": "Chocolate cookie",
-            "category": "Bakery",
-            "description": "Dark chocolate chunks, sea salt.",
-            "price": 3.75
-          }
-        ],
-        "secondary": "#3C4B9C",
-        "bright": "#F9C638",
-        "paper": "#FFF3DA",
-        "headingFont": "Poppins",
-        "font": "Arial",
-        "voice": "Morning energy / orange and cobalt",
-        "ink": "#172033",
-        "sample": {
-          "fictional": true,
-          "asOf": "2027-06-21T09:40:00",
-          "seed": "dazzler-showcase-014",
-          "scope": "Local demonstration only; resets on reload"
+        "title": "Daybreak Coffee Counter",
+        "prompt": "Build a fictional cafe pickup interface centered on a large typographic order ticket. Use espresso brown and apricot, category filters, three products and an honest local cart total. Adding items must update quantities and totals; no checkout or real pickup promise.",
+        "data": {
+          "products": [
+            {
+              "name": "Flat White",
+              "price": 4.5
+            },
+            {
+              "name": "Filter Coffee",
+              "price": 3.5
+            },
+            {
+              "name": "Almond Bun",
+              "price": 5
+            }
+          ]
         },
-        "dailyBatch": {
-          "pastriesBaked": 84,
-          "coffeeGramsPerDose": 18,
-          "samplePickupMinutes": [15, 20]
-        },
-        "schemaVersion": 2,
-        "license": "Apache-2.0",
-        "creator": "Jon Gosier",
-        "demo": true,
-        "persistence": "memory only",
-        "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+        "action": "Add Flat White"
       }
     </script>
     <script>
-      (() => {
-        // skills/dazzler-frontend/scripts/headings.mjs
-        var rules = {
-          schemaVersion: 1,
-          style: "ap-like-protected",
-          smallWords: [
-            "a",
-            "an",
-            "the",
-            "and",
-            "but",
-            "or",
-            "for",
-            "nor",
-            "so",
-            "yet",
-            "at",
-            "by",
-            "in",
-            "of",
-            "off",
-            "on",
-            "out",
-            "per",
-            "to",
-            "up",
-            "via",
-            "as",
-          ],
-          phrasalPairs: ["set up", "sign in", "sign out", "log in", "log out", "back up"],
-          notes:
-            "Conservative English heading helper, not full grammatical AP editing. Preserve existing capitals, quoted/code spans, names and identifiers. Sentence mode preserves authored text. Review ambiguous phrases.",
-        };
-        function heading(text, options = {}) {
-          let { case: casing = "title", lang = "en", preserve = [] } = options;
-          if (typeof text != "string" || text.length > 1e4)
-            throw Error("Heading must be text of at most 10000 characters");
-          if (
-            !["title", "sentence", "upper", "preserve"].includes(casing) ||
-            typeof lang != "string"
-          )
-            throw Error("Invalid heading case or language");
-          if (
-            !Array.isArray(preserve) ||
-            preserve.length > 100 ||
-            preserve.some((x) => typeof x != "string" || !x || x.length > 160)
-          )
-            throw Error("Invalid heading preserve list");
-          if (!/^en(?:-|$)/i.test(lang) || ["sentence", "preserve"].includes(casing)) return text;
-          let protectedPattern =
-              /`[^`]*`|<(?:code|kbd|samp)\b[^>]*>[\s\S]*?<\/(?:code|kbd|samp)>|<[^>]*>|&(?:#[0-9]+|#x[0-9a-f]+|[a-z]+);|"[^"]*"|“[^”]*”|‘[^’]*’|«[^»]*»|(?<!\w)'[^']*'|(?:https?:\/\/|www\.)\S+|\S+@\S+|[^\s<>]*[0-9_/\\()][^\s<>]*|\b[A-Za-z]+\.[A-Za-z.]+\b/gi,
-            spans = [...text.matchAll(protectedPattern)].map((m) => [
-              m.index,
-              m.index + m[0].length,
-            ]);
-          for (let value of preserve)
-            for (let p = text.indexOf(value); p !== -1; p = text.indexOf(value, p + value.length))
-              spans.push([p, p + value.length]);
-          let protectedChars = new Uint8Array(text.length);
-          for (let [start, end2] of spans) protectedChars.fill(1, start, end2);
-          let words = [...text.matchAll(/\p{L}+(?:['’]\p{L}+)?/gu)].filter(
-            (m) => !protectedChars.subarray(m.index, m.index + m[0].length).includes(1),
-          );
-          if (casing === "title" && text === text.toUpperCase()) return text;
-          let result = "",
-            end = 0;
-          return (
-            words.forEach((m, i) => {
-              let word = m[0],
-                start = m.index,
-                stop = start + word.length,
-                replacement = word;
-              if (casing === "upper" || word === word.toLowerCase()) {
-                let between = i
-                    ? text.slice(words[i - 1].index + words[i - 1][0].length, start)
-                    : "",
-                  afterBreak = i === 0 || /[:—]\s*$/.test(between),
-                  pair =
-                    i > 0 &&
-                    /^\s+$/.test(between) &&
-                    rules.phrasalPairs.includes(
-                      words[i - 1][0].toLowerCase() + " " + word.toLowerCase(),
-                    );
-                casing === "upper"
-                  ? (replacement = /[a-z][A-Z]/.test(word) ? word : word.toUpperCase())
-                  : (afterBreak ||
-                      i === words.length - 1 ||
-                      pair ||
-                      !rules.smallWords.includes(word)) &&
-                    (replacement = word[0].toUpperCase() + word.slice(1));
-              }
-              ((result += text.slice(end, start) + replacement), (end = stop));
-            }),
-            result + text.slice(end)
-          );
-        }
-
-        // tools/template_interactions.js
-        var cfg = JSON.parse(document.getElementById("template-data").textContent),
-          $ = (id) => document.getElementById(id),
-          esc = (v) =>
-            String(v).replace(
-              /[&<>"']/g,
-              (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
-            ),
-          money = (n) =>
-            new Intl.NumberFormat("en-US", {
-              style: "currency",
-              currency: "USD",
-              maximumFractionDigits: 2,
-            }).format(n),
-          say = (t) => {
-            $("status").textContent = t;
+      const products = [
+          {
+            name: "Flat White",
+            category: "coffee",
+            price: 4.5,
+            note: "Double espresso · steamed milk",
           },
-          dialog = $("edit-dialog"),
-          pending = "",
-          cart = {},
-          category = "All";
-        function openDialog(title, action, content = "", label = "Details") {
-          (($("dialog-title").textContent = heading(title)),
-            ($("dialog-content").innerHTML = content),
-            ($("entry-label").textContent = label),
-            ($("entry").value = ""),
-            ($("entry").required = !!label),
-            ($("entry").hidden = $("entry-label").hidden = !label),
-            ($("dialog-save").textContent =
-              action === "reservation"
-                ? "Keep request preview"
-                : action === "cart"
-                  ? "Keep order preview"
-                  : "Save preview"),
-            (pending = action),
-            dialog.showModal());
+          { name: "Filter Coffee", category: "coffee", price: 3.5, note: "Seasonal single origin" },
+          {
+            name: "Almond Bun",
+            category: "bakery",
+            price: 5,
+            note: "Contains wheat, dairy and nuts",
+          },
+        ],
+        cart = [0, 0, 0];
+      function list(filter) {
+        document.querySelector("#products").innerHTML = products
+          .map((p, i) =>
+            filter === "all" || p.category === filter
+              ? `<article class="product"><div><h2>${p.name}</h2><p>${p.note}</p><strong>$${p.price.toFixed(2)}</strong></div><button data-add="${i}" aria-label="Add ${p.name}">Add</button></article>`
+              : "",
+          )
+          .join("");
+      }
+      function ticket() {
+        document.querySelector("#cart").innerHTML = cart.some(Boolean)
+          ? products
+              .map((p, i) =>
+                cart[i]
+                  ? `<div class="cart-line"><span>${cart[i]} × ${p.name}</span><strong>$${(cart[i] * p.price).toFixed(2)}</strong></div>`
+                  : "",
+              )
+              .join("")
+          : "Your ticket is empty.";
+        document.querySelector("#total").textContent =
+          "$" + cart.reduce((s, n, i) => s + n * products[i].price, 0).toFixed(2);
+      }
+      list("all");
+      document.querySelectorAll("[data-filter]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            list(b.dataset.filter);
+            document
+              .querySelectorAll("[data-filter]")
+              .forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+          }),
+      );
+      document.querySelector("#products").onclick = (e) => {
+        const b = e.target.closest("[data-add]");
+        if (b) {
+          cart[Number(b.dataset.add)]++;
+          ticket();
+          document.querySelector("#status").textContent =
+            products[Number(b.dataset.add)].name + " added.";
         }
-        $("cancel").addEventListener("click", () => dialog.close());
-        function menuRender() {
-          let items = cfg.items
-            .map((x, i) => ({ ...x, index: i }))
-            .filter(
-              (x) =>
-                (category === "All" || x.category === category) &&
-                !0 &&
-                [x.name, x.description].join(" ").toLowerCase().includes(""),
-            );
-          $("products").innerHTML = items
-            .map(
-              (x) =>
-                `<article class="product"><small>${x.category}</small><h3>${esc(heading(x.name))}</h3><p>${x.description}</p><div class="price"><strong>${money(x.price)}</strong><button data-add="${x.index}" aria-label="Add ${x.name}">Add +</button></div></article>`,
-            )
-            .join("");
-        }
-        function cartRender() {
-          let ids = Object.keys(cart).filter((i) => cart[i] > 0);
-          (($("cart-lines").innerHTML = ids.length
-            ? ids
-                .map(
-                  (i) =>
-                    `<div class="cart-line"><strong>${cfg.items[i].name}</strong><small>${money(cfg.items[i].price * cart[i])}</small><div class="quantity"><button class="secondary" data-quantity="${i}" data-delta="-1" aria-label="Remove one ${cfg.items[i].name}">\u2212</button><span>${cart[i]}</span><button class="secondary" data-quantity="${i}" data-delta="1" aria-label="Add one ${cfg.items[i].name}">+</button></div></div>`,
-                )
-                .join("")
-            : '<p class="muted">Your bag is empty. Add a coffee or something from the kitchen.</p>'),
-            ($("subtotal").textContent = money(
-              ids.reduce((s, i) => s + cfg.items[i].price * cart[i], 0),
-            )));
-        }
-        document.addEventListener("click", (event) => {
-          let b = event.target.closest("button");
-          if (
-            b &&
-            (b.dataset.filter &&
-              ((category = b.dataset.filter),
-              document
-                .querySelectorAll("[data-filter]")
-                .forEach((x) => x.setAttribute("aria-pressed", String(x === b))),
-              menuRender()),
-            b.dataset.add !== void 0 &&
-              ((cart[b.dataset.add] = (cart[b.dataset.add] || 0) + 1),
-              cartRender(),
-              say("Added to your pickup preview.")),
-            b.dataset.quantity !== void 0 &&
-              ((cart[b.dataset.quantity] = Math.max(
-                0,
-                (cart[b.dataset.quantity] || 0) + Number(b.dataset.delta),
-              )),
-              cartRender()),
-            b.dataset.action === "clear" &&
-              ((cart = {}), cartRender(), say("Order preview cleared.")),
-            b.dataset.action === "cart")
-          ) {
-            let ids = Object.keys(cart).filter((i) => cart[i] > 0);
-            if (!ids.length) {
-              say("Add an item before reviewing your order.");
-              return;
-            }
-            openDialog(
-              "Your pickup order",
-              "cart",
-              "<ul>" +
-                ids
-                  .map(
-                    (i) =>
-                      `<li>${cart[i]} \xD7 ${cfg.items[i].name} \u2014 ${money(cfg.items[i].price * cart[i])}</li>`,
-                  )
-                  .join("") +
-                "</ul><p><strong>Subtotal " +
-                $("subtotal").textContent +
-                "</strong></p><p>Sample pickup estimate: 15\u201320 minutes. No order or payment is submitted.</p>",
-              "",
-            );
-          }
-        });
-        $("edit-form").addEventListener("submit", (event) => {
-          event.preventDefault();
-          let value = $("entry").value.trim();
-          ($("entry").required && !value) ||
-            (say(
-              pending === "reservation"
-                ? "Reservation request preview kept. No table has been booked."
-                : pending === "cart"
-                  ? "Order preview kept. Nothing was sent to the caf\xE9."
-                  : pending === "brief"
-                    ? "Review brief closed."
-                    : "Saved in this preview only. No message or account change was sent.",
-            ),
-            dialog.close());
-        });
-        (($("menu-filters").innerHTML = ["All", ...new Set(cfg.items.map((x) => x.category))]
-          .map((c) => `<button data-filter="${c}" aria-pressed="${c === "All"}">${c}</button>`)
-          .join("")),
-          menuRender(),
-          cartRender());
-      })();
+      };
+      document.querySelector("#clear").onclick = () => {
+        cart.fill(0);
+        ticket();
+        document.querySelector("#status").textContent = "Ticket cleared.";
+      };
     </script>
   </body>
 </html>

@@ -21,18 +21,11 @@ export function reviewComposition(measurements, context = {}) {
     return { registryVersion: registry.registryVersion, status: "not-requested", findings: [] };
   if (!context || typeof context !== "object" || Array.isArray(context))
     throw Error("Invalid composition context");
-  const purposes = [
-    "editorial-feature",
-    "split-narrative",
-    "list-detail",
-    "dense-workspace",
-    "analytic-report",
-    "focused-form",
-    "catalog-menu",
-    "poster-event",
-  ];
-  if (context.purpose !== undefined && !purposes.includes(context.purpose))
-    throw Error("Unknown composition purpose");
+  if (
+    context.purpose !== undefined &&
+    (typeof context.purpose !== "string" || !context.purpose.trim() || context.purpose.length > 120)
+  )
+    throw Error("Describe the composition purpose in 1–120 characters");
   const exceptions = context.exceptions ?? [];
   if (
     !Array.isArray(exceptions) ||

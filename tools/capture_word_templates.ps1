@@ -1,6 +1,7 @@
-param([Parameter(Mandatory=$true)][string]$Output)
+param([Parameter(Mandatory=$true)][string]$Output, [string]$Source)
 $ErrorActionPreference='Stop'
 $templateSource=Join-Path (Split-Path $PSScriptRoot -Parent) 'skills/dazzler-frontend/assets/templates/docx'
+if ($Source) { $templateSource=[IO.Path]::GetFullPath($Source) }
 $templateOutput=[IO.Path]::GetFullPath($Output)
 New-Item -ItemType Directory -Path $templateOutput -Force | Out-Null
 $templateWord=New-Object -ComObject Word.Application

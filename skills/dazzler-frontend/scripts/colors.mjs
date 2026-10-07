@@ -20,6 +20,8 @@ import {
   filterDeficiencyTrit,
 } from "./vendor/color-engine.mjs";
 
+import { paletteSpace, diversePalettes } from "./palette-space.mjs";
+
 const skill = fileURLToPath(new URL("../", import.meta.url));
 const catalog = JSON.parse(
   await readFile(new URL("../references/color-palettes.json", import.meta.url), "utf8"),
@@ -98,8 +100,37 @@ function validateConfig(input) {
   if (!input || typeof input !== "object" || Array.isArray(input))
     throw new Error("Configuration must be an object.");
   for (const key of Object.keys(input)) {
-    if (!["base", "palette", "mood", "harmony", "locked", "target"].includes(key))
+    if (
+      !["base", "palette", "mood", "harmony", "locked", "target", "seeds", "surfaces"].includes(key)
+    )
       throw new Error(`Unknown configuration field: ${key}`);
+  }
+  for (const [field, allowed] of [
+    ["seeds", ["secondary", "accent", "neutral"]],
+    ["surfaces", ["light", "dark"]],
+  ]) {
+    if (input[field] === undefined) continue;
+    const value = input[field];
+    if (
+      !value ||
+      typeof value !== "object" ||
+      Array.isArray(value) ||
+      Object.keys(value).some((k) => !allowed.includes(k))
+    )
+      throw Error("Invalid " + field);
+    for (const item of Object.values(value)) {
+      if (field === "seeds") hex(item);
+      else {
+        if (
+          !item ||
+          typeof item !== "object" ||
+          Array.isArray(item) ||
+          Object.keys(item).some((k) => !["background", "surface"].includes(k))
+        )
+          throw Error("Invalid surfaces");
+        Object.values(item).forEach(hex);
+      }
+    }
   }
   if (
     input.locked !== undefined &&
@@ -144,12 +175,20 @@ export function generate(input, { legacy = false } = {}) {
   const generated = generateHarmonyRoleColors(base, harmony);
   // Explicit brand/harmony input takes precedence over the inspiration palette.
   const useCurated = palette && !input.base && !input.harmony;
-  const secondary = hex(useCurated ? palette.colors.secondary : (generated.secondary?.hex ?? base));
-  const accent = hex(useCurated ? palette.colors.accent : (generated.tertiary?.hex ?? secondary));
-  const hue = toOklch(base).h ?? 0;
+  const secondary = hex(
+    input.seeds?.secondary ??
+      (useCurated ? palette.colors.secondary : (generated.secondary?.hex ?? base)),
+  );
+  const accent = hex(
+    input.seeds?.accent ??
+      (useCurated ? palette.colors.accent : (generated.tertiary?.hex ?? secondary)),
+  );
+  const neutralInfo = toOklch(input.seeds?.neutral ?? base);
+  const hue = neutralInfo.h ?? 0;
+  const neutralChroma = input.seeds?.neutral ? neutralInfo.c : 0.008;
   const primaryRamp = generateColorSwatch(accent);
   const neutralRamp = generateColorSwatch(
-    formatHex(gamut({ mode: "oklch", l: 0.55, c: 0.008, h: hue })),
+    formatHex(gamut({ mode: "oklch", l: 0.55, c: neutralChroma, h: hue })),
   );
   const statuses = createDefaultSemanticStatusSwatches();
   const result = {
@@ -160,9 +199,13 @@ export function generate(input, { legacy = false } = {}) {
       palette: palette
         ? { id: palette.id, name: palette.name, mood: palette.mood, source: palette.source }
         : null,
-      paletteUse: useCurated
-        ? "curated hues; role colors derived and validated"
-        : "brand/harmony overrides palette hues",
+      paletteUse: input.seeds
+        ? "authored seed overrides; existing role engine validates functional tokens"
+        : useCurated
+          ? "curated hues; role colors derived and validated"
+          : "brand/harmony overrides palette hues",
+      ...(input.seeds ? { authoredSeeds: input.seeds } : {}),
+      ...(input.surfaces ? { authoredSurfaces: input.surfaces } : {}),
       base,
       harmony: useCurated ? "curated" : harmony,
       engine: "@ankhorage/color-theory 0.3.1 + culori 4.0.2",
@@ -189,13 +232,17 @@ export function generate(input, { legacy = false } = {}) {
     const locks = Object.fromEntries(
       Object.entries(input.locked?.[mode] ?? {}).map(([k, v]) => [k, hex(v)]),
     );
-    const neutral = (l) => hex(formatHex(gamut({ mode: "oklch", l, c: 0.008, h: hue })));
+    const neutral = (l) => hex(formatHex(gamut({ mode: "oklch", l, c: neutralChroma, h: hue })));
     const tokens = {
       brand: base,
       secondary,
       accent,
-      background: neutral(light ? 0.985 : 0.12),
-      surface: neutral(light ? 0.95 : 0.19),
+      background: input.surfaces?.[mode]?.background
+        ? hex(input.surfaces[mode].background)
+        : neutral(light ? 0.985 : 0.12),
+      surface: input.surfaces?.[mode]?.surface
+        ? hex(input.surfaces[mode].surface)
+        : neutral(light ? 0.95 : 0.19),
       ...locks,
     };
     const selections = {};
@@ -212,9 +259,9 @@ export function generate(input, { legacy = false } = {}) {
       selections[role] = selection;
       tokens[role] = selection.selected?.hex ? hex(selection.selected.hex) : null;
     };
-    choose("text", neutralRamp.swatch, light ? 0.18 : 0.95, 0.008, textMinimum);
-    choose("muted", neutralRamp.swatch, light ? 0.45 : 0.72, 0.008, textMinimum);
-    choose("border", neutralRamp.swatch, light ? 0.6 : 0.55, 0.008, 3);
+    choose("text", neutralRamp.swatch, light ? 0.18 : 0.95, neutralChroma, textMinimum);
+    choose("muted", neutralRamp.swatch, light ? 0.45 : 0.72, neutralChroma, textMinimum);
+    choose("border", neutralRamp.swatch, light ? 0.6 : 0.55, neutralChroma, 3);
     const accentInfo = toOklch(accent);
     choose("action", primaryRamp.swatch, light ? 0.43 : 0.72, accentInfo.c, 3, accentInfo.h ?? hue);
     choose(
@@ -296,6 +343,37 @@ export function generate(input, { legacy = false } = {}) {
     if (failures.length) result.status = "unresolved";
   }
   return result;
+}
+
+export function explore(input) {
+  const space = paletteSpace(input);
+  const pool = [],
+    failures = [];
+  for (const config of space.configs) {
+    const result = generate(config);
+    if (result.status === "pass") pool.push(result);
+    else if (failures.length < 3) failures.push(result);
+  }
+  const candidates = diversePalettes(pool, space.count);
+  return {
+    schemaVersion: 1,
+    status:
+      candidates.length === space.count
+        ? "candidates"
+        : candidates.length
+          ? "partial"
+          : "unresolved",
+    seed: space.seed,
+    brief: space.brief,
+    ranges: space.ranges,
+    requested: space.count,
+    attempted: space.configs.length,
+    passing: pool.length,
+    candidates,
+    failures,
+    limits:
+      "Seed-rotated Halton sampling of continuous OKLCH relationships with a 24-step sRGB chroma-boundary solve, mapped to sRGB and checked by the existing role engine. Distance encourages variation, not beauty or prompt understanding. The agent authors ranges from the brief and selects using rendered context. Finite search may miss feasible choices; partial/unresolved results never relax locks.",
+  };
 }
 
 const cssName = (name) => name.replace(/[A-Z]/g, (m) => "-" + m.toLowerCase());
@@ -400,7 +478,7 @@ async function main() {
   });
   if (values.help) {
     console.log(
-      'colors.mjs list | recommend --mood "cozy minimal" [--limit 3] | generate [--base #RRGGBB | --palette ID | --mood WORDS] [--harmony analogous] [--config input.json] [--out NEW_DIRECTORY]',
+      'colors.mjs explore --config intent.json [--out NEW_DIRECTORY] | list | recommend --mood "cozy minimal" [--limit 3] | generate [--base #RRGGBB | --palette ID | --mood WORDS] [--harmony analogous] [--config input.json] [--out NEW_DIRECTORY]',
     );
     return;
   }
@@ -410,6 +488,18 @@ async function main() {
   else if (positionals[0] === "recommend") {
     result = recommend(values.mood, Number(values.limit ?? 3));
     if (!result.length) process.exitCode = 2;
+  } else if (positionals[0] === "explore") {
+    if (!values.config) throw Error("Explore requires an agent-authored intent config");
+    if (["mood", "palette", "base", "harmony", "limit"].some((k) => values[k] !== undefined))
+      throw Error("Put exploration constraints in its config; catalog flags do not apply");
+    result = explore(await readJSON(values.config));
+    if (values.out) {
+      const dest = await createOutput(values.out);
+      await writeFile(path.join(dest, "exploration.json"), JSON.stringify(result, null, 2));
+      for (let i = 0; i < result.candidates.length; i++)
+        await exportResult(result.candidates[i], path.join(dest, "candidate-" + (i + 1)));
+    }
+    if (result.status !== "candidates") process.exitCode = 2;
   } else if (positionals[0] === "generate") {
     const config = values.config ? await readJSON(values.config) : {};
     const input = {
@@ -424,7 +514,21 @@ async function main() {
     if (values.out) await exportResult(result, values.out);
     if (result.status !== "pass") process.exitCode = 2;
   } else throw new Error("Unknown command. Use --help.");
-  console.log(JSON.stringify(result, null, 2));
+  console.log(
+    JSON.stringify(
+      positionals[0] === "explore" && values.out
+        ? {
+            status: result.status,
+            seed: result.seed,
+            candidates: result.candidates.length,
+            attempted: result.attempted,
+            out: values.out,
+          }
+        : result,
+      null,
+      2,
+    ),
+  );
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

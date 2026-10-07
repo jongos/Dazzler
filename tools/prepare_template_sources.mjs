@@ -4,7 +4,7 @@ import path from "node:path";
 import postcss from "postcss";
 import prettier from "prettier";
 import { getContrastRatio } from "../skills/dazzler-frontend/scripts/vendor/color-engine.mjs";
-const root = path.resolve("skills/dazzler-frontend/assets/templates");
+const root = path.resolve(process.argv[2] || "skills/dazzler-frontend/assets/templates");
 const colors =
   /#(?:[\da-f]{8}|[\da-f]{6}|[\da-f]{4}|[\da-f]{3})\b|(?:rgba?|hsla?)\([^()]*\)|\b(?:white|black|transparent)\b/gi;
 const slug = (s) =>
@@ -14,7 +14,7 @@ const slug = (s) =>
     .replace(/^-|-$/g, "")
     .slice(0, 90);
 
-function tokenize(css, context) {
+function tokenize(css, context, previous = {}) {
   const tree = postcss.parse(css),
     values = {},
     bindings = {};
@@ -55,7 +55,9 @@ function tokenize(css, context) {
           "--paper": "background",
           "--ink": "text",
           "--tint": "surface",
-        }[key] ?? null,
+        }[key] ??
+        previous.bindings?.[key]?.role ??
+        null,
       value,
     };
   tree.walkDecls((decl) => {
@@ -119,13 +121,21 @@ for (const name of (await fs.readdir(path.join(root, "html"))).filter((n) => n.e
     dir = name.slice(0, -5);
   let html = await fs.readFile(file, "utf8");
   const match = html.match(/<style>([\s\S]*?)<\/style>/);
-  if (!match) throw Error("Expected generated inline document stylesheet: " + name);
-  const result = tokenize(match[1], dir);
+  const source = match
+    ? match[1]
+    : (await fs.readFile(path.join(root, "html", dir, "tokens.css"), "utf8")) +
+      (await fs.readFile(path.join(root, "html", dir, "styles.css"), "utf8"));
+  const previous = await fs
+    .readFile(path.join(root, "html", dir, "tokens.json"), "utf8")
+    .then(JSON.parse)
+    .catch(() => ({}));
+  const result = tokenize(source, dir, previous);
   await fs.mkdir(path.join(root, "html", dir), { recursive: true });
-  html = html.replace(
-    match[0],
-    `<link rel="stylesheet" href="${dir}/tokens.css"><link rel="stylesheet" href="${dir}/styles.css">`,
-  );
+  if (match)
+    html = html.replace(
+      match[0],
+      `<link rel="stylesheet" href="${dir}/tokens.css"><link rel="stylesheet" href="${dir}/styles.css">`,
+    );
   await write(path.join(root, "html", dir, "styles.css"), result.css, "css");
   await write(path.join(root, "html", dir, "tokens.css"), result.tokens, "css");
   await fs.writeFile(
@@ -138,8 +148,17 @@ for (const name of await fs.readdir(path.join(root, "ui"))) {
   const dir = path.join(root, "ui", name),
     file = path.join(dir, "styles.css");
   let css = await fs.readFile(file, "utf8");
+  if (css.includes('@import url("tokens.css")')) {
+    css =
+      (await fs.readFile(path.join(dir, "tokens.css"), "utf8")) +
+      css.replace('@import url("tokens.css");', "");
+  }
   const data = JSON.parse(await fs.readFile(path.join(dir, "template.json"), "utf8"));
-  const result = tokenize(css, data.layout);
+  const previous = await fs
+    .readFile(path.join(dir, "tokens.json"), "utf8")
+    .then(JSON.parse)
+    .catch(() => ({}));
+  const result = tokenize(css, data.layout, previous);
   await write(file, '@import url("tokens.css");\n' + result.css, "css");
   await write(path.join(dir, "tokens.css"), result.tokens, "css");
   await fs.writeFile(
@@ -153,22 +172,24 @@ for (const name of await fs.readdir(path.join(root, "ui"))) {
   );
 }
 const seating = path.join(root, "ui/restaurant-reservations/seating");
-let roomHTML = await fs.readFile(path.join(seating, "index.html"), "utf8");
-let roomCSS = await fs.readFile(path.join(seating, "hotspots.css"), "utf8");
-roomHTML = roomHTML.replace(/<style>([\s\S]*?)<\/style>/g, (_, css) => {
-  roomCSS += "\n" + css;
-  return "";
-});
-const room = tokenize(roomCSS, "seating");
-await fs.writeFile(path.join(seating, "index.html"), roomHTML);
-await write(
-  path.join(seating, "hotspots.css"),
-  '@import url("../tokens.css");\n' + room.css,
-  "css",
-);
-await fs.appendFile(path.join(seating, "../tokens.css"), room.tokens);
-const contractPath = path.join(seating, "../tokens.json");
-const contract = JSON.parse(await fs.readFile(contractPath, "utf8"));
-Object.assign(contract.bindings, room.contract.bindings);
-await fs.writeFile(contractPath, JSON.stringify(contract, null, 2) + "\n");
+if (await fs.stat(seating).catch(() => null)) {
+  let roomHTML = await fs.readFile(path.join(seating, "index.html"), "utf8");
+  let roomCSS = await fs.readFile(path.join(seating, "hotspots.css"), "utf8");
+  roomHTML = roomHTML.replace(/<style>([\s\S]*?)<\/style>/g, (_, css) => {
+    roomCSS += "\n" + css;
+    return "";
+  });
+  const room = tokenize(roomCSS, "seating");
+  await fs.writeFile(path.join(seating, "index.html"), roomHTML);
+  await write(
+    path.join(seating, "hotspots.css"),
+    '@import url("../tokens.css");\n' + room.css,
+    "css",
+  );
+  await fs.appendFile(path.join(seating, "../tokens.css"), room.tokens);
+  const contractPath = path.join(seating, "../tokens.json");
+  const contract = JSON.parse(await fs.readFile(contractPath, "utf8"));
+  Object.assign(contract.bindings, room.contract.bindings);
+  await fs.writeFile(contractPath, JSON.stringify(contract, null, 2) + "\n");
+}
 console.log("Formatted and tokenized 20 HTML/UI template sources.");

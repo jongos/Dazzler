@@ -1,131 +1,26 @@
 {
   "id": "restaurant-menu",
-  "category": "restaurant",
-  "layout": "menu",
-  "brand": "Olive & Grain",
-  "title": "Good Food. Your Kind of Lunch.",
-  "intro": "Bowls, small plates, something sweet. Served 11:30\u201316:00.",
-  "accent": "#3A6325",
-  "tint": "#EDEFF7",
-  "items": [
-    {
-      "name": "Roasted vegetable bowl",
-      "category": "Bowls",
-      "description": "Brown rice, squash, chickpeas, tahini dressing.",
-      "price": 18,
-      "vegan": true
-    },
-    {
-      "name": "Green goddess bowl",
-      "category": "Bowls",
-      "description": "Herb rice, avocado, soft egg, yogurt dressing.",
-      "price": 19,
-      "vegan": false
-    },
-    {
-      "name": "Crisp potato plate",
-      "category": "Small plates",
-      "description": "Roasted potatoes, smoked paprika, lemon.",
-      "price": 9,
-      "vegan": true
-    },
-    {
-      "name": "Whipped feta",
-      "category": "Small plates",
-      "description": "Feta, roasted peppers, warm flatbread.",
-      "price": 11,
-      "vegan": false
-    },
-    {
-      "name": "Lemon olive oil cake",
-      "category": "Dessert",
-      "description": "Lemon syrup and thick cream.",
-      "price": 8,
-      "vegan": false
-    },
-    {
-      "name": "Seasonal fruit",
-      "category": "Dessert",
-      "description": "Fresh fruit with mint and citrus.",
-      "price": 7,
-      "vegan": true
-    },
-    {
-      "name": "Orange blossom tea",
-      "category": "Drinks",
-      "description": "Fragrant black tea, served hot or iced.",
-      "price": 5,
-      "vegan": true
-    },
-    {
-      "name": "House lemonade",
-      "category": "Drinks",
-      "description": "Lemon, a little sugar, sparkling water.",
-      "price": 6,
-      "vegan": true
-    },
-    {
-      "name": "Smoky bean bowl",
-      "category": "Bowls",
-      "description": "Black beans, corn, lime rice, salsa.",
-      "price": 18,
-      "vegan": true
-    },
-    {
-      "name": "Roasted carrot dip",
-      "category": "Small plates",
-      "description": "Carrot, cumin, seeded crackers.",
-      "price": 10,
-      "vegan": true
-    },
-    {
-      "name": "Herb chicken bowl",
-      "category": "Bowls",
-      "description": "Chicken, grains, greens, herb dressing.",
-      "price": 22,
-      "vegan": false
-    },
-    {
-      "name": "Peach iced tea",
-      "category": "Drinks",
-      "description": "Black tea, peach, mint.",
-      "price": 5.5,
-      "vegan": true
-    },
-    {
-      "name": "Brown butter cookie",
-      "category": "Dessert",
-      "description": "Chocolate, brown butter, sea salt.",
-      "price": 5,
-      "vegan": false
-    },
-    {
-      "name": "Tomato and white bean salad",
-      "category": "Small plates",
-      "description": "White beans, tomato, basil.",
-      "price": 12,
-      "vegan": true
-    }
-  ],
-  "secondary": "#A63E25",
-  "bright": "#F6D762",
-  "paper": "#F7F8E8",
-  "headingFont": "Young Serif",
-  "font": "Georgia",
-  "voice": "Market board / leaf and tomato",
-  "ink": "#172033",
-  "sample": {
-    "fictional": true,
-    "asOf": "2027-06-21T09:40:00",
-    "seed": "dazzler-showcase-014",
-    "scope": "Local demonstration only; resets on reload"
+  "title": "Saffron Lunch Index",
+  "prompt": "Make a fictional lunch-menu interface that behaves like a searchable culinary index. Use saffron yellow, ink black and a bold condensed masthead. Search and vegetarian filtering must work without changing prices or claiming allergy safety. Avoid product-photo cards.",
+  "data": {
+    "dishes": [
+      {
+        "name": "Roast Carrot Bowl",
+        "price": 14
+      },
+      {
+        "name": "Lemon Chicken Plate",
+        "price": 17
+      },
+      {
+        "name": "Green Lentil Soup",
+        "price": 11
+      },
+      {
+        "name": "Market Fish Sandwich",
+        "price": 18
+      }
+    ]
   },
-  "season": "Summer 2027",
-  "serviceWindow": "11:30\u201316:00",
-  "schemaVersion": 2,
-  "license": "Apache-2.0",
-  "creator": "Jon Gosier",
-  "demo": true,
-  "persistence": "memory only",
-  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+  "action": "Vegetarian Only"
 }

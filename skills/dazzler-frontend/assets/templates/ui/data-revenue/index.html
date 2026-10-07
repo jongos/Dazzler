@@ -1,376 +1,99 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Metric — Revenue Performance</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="template-revenue app">
-    <a class="skip" href="#main">Skip to content</a>
-    <div class="demo">FICTIONAL WORKED TEMPLATE · Local preview · No information is sent</div>
-    <header class="top">
-      <a class="brand" href="#main">Metric<span class="brand-dot"></span></a>
-      <nav aria-label="Main navigation">
-        <a href="#main">Overview</a><a href="#source-data">Source data</a>
-      </nav>
-      <span class="avatar" aria-label="Alex Morgan">AM</span>
-    </header>
-    <main id="main">
-      <header class="page-title">
-        <p class="eyebrow">Metric / REVENUE</p>
-        <h1>Revenue Performance</h1>
-        <p>Full year 2027 • USD • Reconciled synthetic sales ledger</p>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Common Ground Membership Observatory</title
+  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../../index.html">Dazzler Design Gallery</a
+      ><span class="small">Fictional Interactive Example</span>
+    </nav>
+    <main class="canvas">
+      <header class="observatory">
+        <p class="kicker">COMMON GROUND / ANNUAL OBSERVATORY</p>
+        <h1>A Community<br />That Keeps Growing</h1>
+        <p class="lead">Six years of membership, seen through two measures.</p>
       </header>
-      <div class="section-head">
-        <p>Net revenue = gross revenue less refunds. All amounts are USD.</p>
-        <div class="filters">
-          <label for="period">Period</label
-          ><select id="period">
-            <option value="all">Full year 2027</option>
-            <option value="q1">Q1 · Jan–Mar</option>
-            <option value="q2">Q2 · Apr–Jun</option>
-            <option value="q3">Q3 · Jul–Sep</option>
-            <option value="q4">Q4 · Oct–Dec</option></select
-          ><button data-action="download">Export CSV</button>
-        </div>
+      <div class="actions" aria-label="Chart Metric">
+        <button data-metric="revenue" aria-pressed="true">Revenue</button
+        ><button data-metric="members" aria-pressed="false">Members</button>
       </div>
-      <div id="revenue-metrics" class="metrics"></div>
-      <section class="panel">
-        <div class="section-head">
-          <h2>Monthly Net Revenue</h2>
-          <span class="pill">After refunds</span>
-        </div>
-        <div id="revenue-chart" class="revenue-chart" tabindex="0"></div>
-        <p class="muted">Bars begin at zero. Exact values are shown below and in the export.</p>
-      </section>
-      <section class="panel" id="source-data">
-        <h2>Revenue Reconciliation</h2>
-        <div class="table-wrap" tabindex="0" id="revenue-table"></div>
-      </section>
-      <section class="showcase-panel">
-        <div>
-          <p class="eyebrow">THE BIGGER PICTURE</p>
-          <h2>The Year in Net Revenue</h2>
-          <p>
-            A full-year view complements the period selector. Gross minus refunds reconciles to net
-            for every month.
-          </p>
-        </div>
-        <figure>
-          <img src="../../charts/data-revenue.svg" alt="The year in net revenue" />
-          <details>
-            <summary>Read exact values</summary>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Jan</th>
-                  <td>40800 USD</td>
-                </tr>
-                <tr>
-                  <th>Feb</th>
-                  <td>44600 USD</td>
-                </tr>
-                <tr>
-                  <th>Mar</th>
-                  <td>49200 USD</td>
-                </tr>
-                <tr>
-                  <th>Apr</th>
-                  <td>52500 USD</td>
-                </tr>
-                <tr>
-                  <th>May</th>
-                  <td>58900 USD</td>
-                </tr>
-                <tr>
-                  <th>Jun</th>
-                  <td>64000 USD</td>
-                </tr>
-                <tr>
-                  <th>Jul</th>
-                  <td>67900 USD</td>
-                </tr>
-                <tr>
-                  <th>Aug</th>
-                  <td>71300 USD</td>
-                </tr>
-                <tr>
-                  <th>Sep</th>
-                  <td>75700 USD</td>
-                </tr>
-                <tr>
-                  <th>Oct</th>
-                  <td>79050 USD</td>
-                </tr>
-                <tr>
-                  <th>Nov</th>
-                  <td>83420 USD</td>
-                </tr>
-                <tr>
-                  <th>Dec</th>
-                  <td>90210 USD</td>
-                </tr>
-              </tbody>
-            </table>
-          </details>
-        </figure>
-      </section>
-      <p id="status" class="status" role="status" aria-live="polite"></p>
-    </main>
-    <footer class="site-footer">
-      <span>Metric · Fictional example by Dazzler</span>
-      <details>
-        <summary>Template notes</summary>
-        <p>
-          All names, contact details, dates, prices and figures are illustrative. Actions update
-          this page only and reset on reload. Original layout/code: Jon Gosier, Apache-2.0. Bundled
-          fonts retain their notices.
-        </p>
-        <p>
-          Design system: Financial editorial / forest and citron. Local fonts, synthetic data,
-          responsive layout, print styles and working preview states demonstrate Dazzler.
+      <figure class="chart-field">
+        <figcaption id="chart-title">Membership Revenue · USD Thousands</figcaption>
+        <div id="chart"></div>
+      </figure>
+      <p id="status" role="status"></p>
+      <details open>
+        <summary>Exact Values and Notes</summary>
+        <div id="values"></div>
+        <p class="small">
+          Synthetic annual observations. Revenue and membership are separate measures; this chart
+          does not establish causality.
         </p>
       </details>
+    </main>
+    <footer>
+      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
+      data; no live service.
     </footer>
-    <dialog id="edit-dialog">
-      <form id="edit-form">
-        <h2 id="dialog-title">Add Details</h2>
-        <div id="dialog-content"></div>
-        <label id="entry-label" for="entry">Details</label><input id="entry" maxlength="160" />
-        <div class="dialog-actions">
-          <button type="button" id="cancel" class="secondary">Cancel</button
-          ><button id="dialog-save">Save preview</button>
-        </div>
-      </form>
-    </dialog>
     <script id="template-data" type="application/json">
       {
         "id": "data-revenue",
-        "category": "data-visualization",
-        "layout": "revenue",
-        "brand": "Metric",
-        "title": "Revenue Performance",
-        "intro": "Full year 2027 • USD • Reconciled synthetic sales ledger",
-        "accent": "#176A58",
-        "tint": "#EDEFF7",
-        "months": [
-          {
-            "month": "Jan",
-            "gross": 42000,
-            "refunds": 1200,
-            "orders": 310
-          },
-          {
-            "month": "Feb",
-            "gross": 46000,
-            "refunds": 1400,
-            "orders": 338
-          },
-          {
-            "month": "Mar",
-            "gross": 51000,
-            "refunds": 1800,
-            "orders": 367
-          },
-          {
-            "month": "Apr",
-            "gross": 54000,
-            "refunds": 1500,
-            "orders": 402
-          },
-          {
-            "month": "May",
-            "gross": 61000,
-            "refunds": 2100,
-            "orders": 441
-          },
-          {
-            "month": "Jun",
-            "gross": 66000,
-            "refunds": 2000,
-            "orders": 472
-          },
-          {
-            "month": "Jul",
-            "gross": 70000,
-            "refunds": 2100,
-            "orders": 495
-          },
-          {
-            "month": "Aug",
-            "gross": 73500,
-            "refunds": 2200,
-            "orders": 512
-          },
-          {
-            "month": "Sep",
-            "gross": 78000,
-            "refunds": 2300,
-            "orders": 541
-          },
-          {
-            "month": "Oct",
-            "gross": 81500,
-            "refunds": 2450,
-            "orders": 566
-          },
-          {
-            "month": "Nov",
-            "gross": 86000,
-            "refunds": 2580,
-            "orders": 602
-          },
-          {
-            "month": "Dec",
-            "gross": 93000,
-            "refunds": 2790,
-            "orders": 648
-          }
-        ],
-        "secondary": "#6748B1",
-        "bright": "#D8EC75",
-        "paper": "#F5F9EF",
-        "headingFont": "Archivo",
-        "font": "Arial",
-        "voice": "Financial editorial / forest and citron",
-        "ink": "#172033",
-        "sample": {
-          "fictional": true,
-          "asOf": "2027-12-31T23:59:00",
-          "seed": "dazzler-showcase-014",
-          "scope": "Local demonstration only; resets on reload"
+        "title": "Common Ground Membership Observatory",
+        "prompt": "Build a fictional membership revenue explorer whose main surface is an annual chart, not KPI cards. Use ink blue, coral and cream. Switch between revenue and member counts with accurate axes, exact values and a data table. Make the selected metric visually and programmatically clear.",
+        "data": {
+          "years": [2021, 2022, 2023, 2024, 2025, 2026],
+          "revenue": [84, 98, 121, 143, 168, 192],
+          "members": [210, 245, 302, 357, 420, 480]
         },
-        "channels": [
-          {
-            "channel": "Subscriptions",
-            "share": 62
-          },
-          {
-            "channel": "Services",
-            "share": 28
-          },
-          {
-            "channel": "Add-ons",
-            "share": 10
-          }
-        ],
-        "showcaseChart": {
-          "asset": "data-revenue",
-          "title": "The year in net revenue",
-          "rows": [
-            ["Jan", 40800],
-            ["Feb", 44600],
-            ["Mar", 49200],
-            ["Apr", 52500],
-            ["May", 58900],
-            ["Jun", 64000],
-            ["Jul", 67900],
-            ["Aug", 71300],
-            ["Sep", 75700],
-            ["Oct", 79050],
-            ["Nov", 83420],
-            ["Dec", 90210]
-          ],
-          "unit": "USD"
-        },
-        "schemaVersion": 2,
-        "license": "Apache-2.0",
-        "creator": "Jon Gosier",
-        "demo": true,
-        "persistence": "memory only",
-        "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+        "action": "Members"
       }
     </script>
     <script>
-      (() => {
-        // tools/template_interactions.js
-        var cfg = JSON.parse(document.getElementById("template-data").textContent),
-          $ = (id) => document.getElementById(id);
-        var money = (n) =>
-            new Intl.NumberFormat("en-US", {
-              style: "currency",
-              currency: "USD",
-              maximumFractionDigits: 2,
-            }).format(n),
-          say = (t) => {
-            $("status").textContent = t;
-          },
-          dialog = $("edit-dialog");
-        function selectedMonths() {
-          return cfg.months.filter(
-            (x, i) =>
-              $("period").value === "all" ||
-              Math.floor(i / 3) + 1 === Number($("period").value.slice(1)),
-          );
-        }
-        function revenueRender() {
-          let rows = selectedMonths(),
-            gross = rows.reduce((s, x) => s + x.gross, 0),
-            refunds = rows.reduce((s, x) => s + x.refunds, 0),
-            orders = rows.reduce((s, x) => s + x.orders, 0);
-          $("revenue-metrics").innerHTML = [
-            ["Net revenue", money(gross - refunds), "Gross less refunds"],
-            [
-              "Refund rate",
-              ((refunds / gross) * 100).toFixed(2) + "%",
-              money(refunds) + " returned",
-            ],
-            ["Orders", orders.toLocaleString("en-US"), "Across the selected period"],
-          ]
+      const series = {
+          revenue: [84, 98, 121, 143, 168, 192],
+          members: [210, 245, 302, 357, 420, 480],
+        },
+        years = [2021, 2022, 2023, 2024, 2025, 2026];
+      function draw(metric) {
+        const a = series[metric],
+          max = metric === "revenue" ? 200 : 500;
+        document.querySelector("#chart-title").textContent =
+          metric === "revenue"
+            ? "Membership Revenue · USD Thousands · Scale 0–200"
+            : "Members · People · Scale 0–500";
+        document.querySelector("#chart").innerHTML =
+          '<div class="bars">' +
+          a
             .map(
-              ([a, b, c]) =>
-                `<div class="metric-card"><small>${a}</small><strong>${b}</strong><p>${c}</p></div>`,
+              (v, i) =>
+                `<div class="bar"><strong>${v}</strong><i style="height:${(v / max) * 240}px"></i><span>${years[i]}</span></div>`,
             )
-            .join("");
-          let max = Math.max(...cfg.months.map((x) => x.gross - x.refunds));
-          (($("revenue-chart").innerHTML = rows
+            .join("") +
+          "</div>";
+        document.querySelector("#values").innerHTML =
+          '<div class="table-scroll" tabindex="0" role="region" aria-label="Annual values"><table><thead><tr><th>Year</th><th>Revenue USD Thousands</th><th>Members</th></tr></thead><tbody>' +
+          years
             .map(
-              (x) =>
-                `<div class="bar"><strong>${money((x.gross - x.refunds) / 1e3)
-                  .replace(/0+$/, "")
-                  .replace(
-                    /\.$/,
-                    "",
-                  )}k</strong><div class="fill" style="height:${((x.gross - x.refunds) / max) * 170}px" aria-hidden="true"></div><span>${x.month}</span></div>`,
+              (y, i) =>
+                `<tr><th scope="row">${y}</th><td>${series.revenue[i]}</td><td>${series.members[i]}</td></tr>`,
             )
-            .join("")),
-            ($("revenue-table").innerHTML =
-              "<table><thead><tr><th>Month</th><th>Gross USD</th><th>Refunds USD</th><th>Net USD</th><th>Orders</th></tr></thead><tbody>" +
-              rows
-                .map(
-                  (x) =>
-                    `<tr><th scope="row">${x.month}</th><td>${money(x.gross)}</td><td>${money(x.refunds)}</td><td>${money(x.gross - x.refunds)}</td><td>${x.orders}</td></tr>`,
-                )
-                .join("") +
-              `</tbody><tfoot><tr><th>Total</th><td>${money(gross)}</td><td>${money(refunds)}</td><td>${money(gross - refunds)}</td><td>${orders}</td></tr></tfoot></table>`));
-        }
-        document.addEventListener("click", (event) => {
-          let b = event.target.closest("button");
-          if (b && b.dataset.action === "download") {
-            let text = [
-                ["Month", "Gross USD", "Refunds USD", "Net USD", "Orders"],
-                ...selectedMonths().map((x) => [
-                  x.month,
-                  x.gross,
-                  x.refunds,
-                  x.gross - x.refunds,
-                  x.orders,
-                ]),
-              ].map((row) => row.map((v) => '"' + String(v).replaceAll('"', '""') + '"').join(","))
-                .join(`
-`),
-              url = URL.createObjectURL(new Blob([text], { type: "text/csv" })),
-              a = document.createElement("a");
-            ((a.href = url),
-              (a.download = cfg.id + "-sample.csv"),
-              a.click(),
-              setTimeout(() => URL.revokeObjectURL(url), 1e3),
-              say("The currently selected sample data was exported."));
-          }
-        });
-        (revenueRender(), $("period").addEventListener("change", revenueRender));
-      })();
+            .join("") +
+          "</tbody></table></div>";
+        document
+          .querySelectorAll("[data-metric]")
+          .forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.metric === metric)));
+      }
+      draw("revenue");
+      document.querySelectorAll("[data-metric]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            draw(b.dataset.metric);
+            document.querySelector("#status").textContent = "Showing " + b.dataset.metric + ".";
+          }),
+      );
     </script>
   </body>
 </html>

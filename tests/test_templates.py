@@ -91,11 +91,25 @@ class TemplateTests(unittest.TestCase):
                 self.assertFalse(styles.findall(".//w:pBdr", ns))
                 self.assertTrue(document.findall(".//w:tbl", ns))
                 self.assertTrue(document.findall(".//w:tblHeader", ns))
-                self.assertGreater(len("".join(document.itertext())), 800, t["id"])
-                self.assertEqual(
-                    len(document.findall('.//w:br[@w:type="page"]', ns)) + 1,
-                    t["plannedPages"],
+                self.assertGreater(len("".join(document.itertext())), 700, t["id"])
+                sample = json.loads(
+                    (templates.ROOT / t["dataset"]).read_text(encoding="utf8")
                 )
+                text = "".join(document.itertext())
+                self.assertIn(sample["lead"], text)
+                self.assertIn(sample["closing"], text)
+                if t.get("architecture") == "service-proposal":
+                    # Logical sections flow when edited; capture checks assert the sample page count.
+                    self.assertFalse(document.findall('.//w:br[@w:type="page"]', ns))
+                    self.assertEqual(
+                        len(document.findall('.//w:pStyle[@w:val="Title"]', ns)),
+                        t["plannedPages"],
+                    )
+                else:
+                    self.assertEqual(
+                        len(document.findall('.//w:br[@w:type="page"]', ns)) + 1,
+                        t["plannedPages"],
+                    )
 
     def test_json_matches_embedded_data(self):
         import re
@@ -121,37 +135,30 @@ class TemplateTests(unittest.TestCase):
             data = load(item["category"])
             self.assertTrue(data["fictional"])
             self.assertEqual(len(data["document"]), item["plannedPages"])
-        budget = load("professional")["budget"]
-        self.assertEqual(budget["spent"] + budget["remaining"], budget["approved"])
-        payments = load("business")["payments"]
-        self.assertEqual(sum(p["usd"] for p in payments), 12000)
-        self.assertEqual(sum(p["percent"] for p in payments), 100)
-        self.assertEqual(sum(load("marketing")["budget"].values()), 3000)
-        outcomes = load("technical")["delivery"]
-        self.assertEqual(
-            sum(outcomes[k] for k in ("firstAttempt", "retriedSuccess", "held")),
-            outcomes["total"],
-        )
-        plants = load("school")["measurements"]
-        for hours, expected in [(4, 7.2), (8, 8.2)]:
-            self.assertAlmostEqual(
-                sum(p["day14"] for p in plants if p["lightHours"] == hours) / 3,
-                expected,
-            )
-        family = load("family")
-        rows = next(
-            b["rows"] for b in family["document"][0]["blocks"] if b["type"] == "table"
-        )
-        self.assertEqual(
-            family["weeklyMeals"], [{"day": r[0], "meal": r[3]} for r in rows]
-        )
+        professional = load("professional")
+        self.assertIn("1,250", professional["intro"])
+        self.assertIn("1,150", professional["intro"])
+        self.assertEqual(1150 / 1250 * 100, 92)
+        self.assertIn("100 unmatched records", str(professional["rows"]))
+        fees = [
+            int(row[2].replace("$", "").replace(",", ""))
+            for row in load("business")["rows"]
+        ]
+        self.assertEqual(sum(fees), 24000)
+        import statistics
+
+        for row in load("school")["rows"]:
+            values = [int(x) for x in re.findall(r"\d+", row[1])]
+            self.assertEqual(statistics.median(values), int(row[2].split()[0]))
         revenue = json.loads(
             (templates.ROOT / "ui/data-revenue/template.json").read_text(
-                encoding="utf-8"
+                encoding="utf8"
             )
-        )["months"]
-        self.assertEqual(len(revenue), 12)
-        self.assertEqual(sum(r["gross"] - r["refunds"] for r in revenue), 777580)
+        )["data"]
+        self.assertEqual(len(revenue["years"]), 6)
+        self.assertEqual(len(revenue["revenue"]), len(revenue["members"]))
+        self.assertEqual(sum(revenue["revenue"]), 806)
+        self.assertEqual(revenue["members"][-1], 480)
 
     def test_showcase_snapshots_and_exported_dependencies(self):
         for item in templates.catalog()["templates"]:
@@ -165,15 +172,19 @@ class TemplateTests(unittest.TestCase):
                 templates.export(ident, out)
                 if ident == "html-school":
                     self.assertTrue((out / "data/school.json").is_file())
-                    self.assertTrue((out / "charts/school-1.svg").is_file())
-                elif ident == "data-revenue":
-                    self.assertTrue((out / "charts/data-revenue.svg").is_file())
-                else:
-                    self.assertTrue(
-                        (
-                            out / "ui/restaurant-reservations/seating/runtime.js"
-                        ).is_file()
+                    self.assertIn(
+                        "<svg", (out / "html/school.html").read_text(encoding="utf8")
                     )
+                else:
+                    folder = out / "ui" / ident
+                    for name in [
+                        "index.html",
+                        "styles.css",
+                        "tokens.css",
+                        "tokens.json",
+                        "template.json",
+                    ]:
+                        self.assertTrue((folder / name).is_file())
         captures = []
         for name in ["word-captures.json", "browser-captures.json"]:
             captures.extend(

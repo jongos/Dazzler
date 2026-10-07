@@ -4,40 +4,52 @@ Use this when choosing or materially changing a palette. Preserve existing token
 
 ## Choose a direction
 
-The [palette catalog](color-palettes.json) contains 88 attributed starting points across calm, bold, romantic, luxurious, earthy, playful, professional, dramatic, cozy, minimal and Japanese-inspired categories. The last category is the upstream editorial grouping, not a rule about Japanese audiences. Search relevant moods or use the helper's shortlist. It matches explicit mood words and documented synonyms, not semantic understanding; the agent evaluates the candidates against the project. Do not force a catalog palette on a brand or invent a match when none fits.
+For a new palette, default to mathematical exploration of an agent-authored color intent. The [palette catalog](color-palettes.json) contains 88 attributed reference examples, not the available design space or a default lookup table. Existing projects and explicit catalog selections retain their exact behavior. Translate the user's subject, mood, material, culture-specific context and brand into ranges and role relationships; the local helper does not understand natural language. Do not use industry stereotypes as color rules.
 
-Use a brand seed or palette as a starting point. Select monochromatic, analogous, complementary, split-complementary, triadic, tetradic or square relationships where appropriate. Three colors and a 60/30/10 composition can be useful constraints, but neither is mandatory. Area, chroma and lightness affect hierarchy as much as hue. Harmony does not imply readable contrast.
+Explore independent hue offsets, lightness, chroma, colored neutrals and colored page fields. Use complementary or analogous relationships when useful, but the seven named harmonies are not boundaries. A small sharp accent against a chromatic field, warm/cool neutral tension, a narrow hue family with large lightness separation, or several related luminous hues can each fit different content. Neither three colors nor 60/30/10 area ratios are mandatory. Evaluate color area and adjacency in the actual composition, not swatches alone.
 
-The helper preserves curated primary/secondary/accent hues when a palette alone is selected. An explicit base or harmony overrides those hues. With a base alone, it defaults to analogous; choose another harmony when the brief warrants it. Exact `brand` colors are retained, while functional tokens use related variants. Backgrounds and role colors are newly derived, not copies of the upstream palette's accessibility claims.
+### Geometry and Perception
 
-## Generate locally
+Use the [relationship knowledge](color-relationships.json) for formulas, coordinate-space distinctions and perceptual correction. Square tetrads are a special case of rectangular tetrads. HSL/HSV angles cannot be relabeled as OKLCH hues; convert actual colors first. When explaining a mathematical palette, report raw angles/colors beside adjusted values and their actual coordinates. Infer a base when absent. Named families seed continuous exploration, never bound it. Four-color relationships require four explicit composition roles; three decorative seeds alone do not form a tetrad. Judge area, adjacency and typography in context.
 
-The agent operates this helper and integrates its output. The user does not need to supply a mood, seed, palette ID, harmony or configuration file. Keep candidate selection internal unless alternatives are requested; the standalone preview is an optional review aid, not a required approval step.
+### Mathematical Exploration
 
-Node.js 22 or newer is recommended. No npm installation, API key, network request or system settings change is needed for normal use. If Node is unavailable, use the guidance with available tools and report contrast as unverified until measured; do not fabricate numerical results or automatically install a runtime.
+`colors.mjs explore` uses a seed-rotated Halton sequence to distribute candidates across continuous coordinates instead of drawing only random triples. For each requested lightness and hue, a 24-step bisection estimates the maximum in-gamut sRGB chroma along that OKLCH ray. The sampled `gamutFraction` caps chroma relative to that boundary; absolute chroma ranges remain caps too. This reduces clipping-driven convergence between different requests. Final mapping and quantization still use the existing Culori/Ankhorage engine.
 
-From the project directory, replacing `/path/to/frontend-design` with the installed skill's absolute path:
+Each candidate goes through the established semantic-role generator, brand-lock precedence and unrounded contrast checks. Failed candidates are not exported as CSS. A farthest-first selection then maximizes the minimum RMS OKLab distance across brand/secondary/accent and both background/surface pairs. A 0.025 separation threshold prevents padding the results with near-duplicates. This is a geometric diversity heuristic, not an aesthetic score or a proven perceptual just-noticeable difference. The first candidate is not the best design.
 
-```shell
-node /path/to/frontend-design/scripts/colors.mjs recommend --mood "cozy minimal"
-node /path/to/frontend-design/scripts/colors.mjs list
-node /path/to/frontend-design/scripts/colors.mjs generate --palette CLM-01 --out ./palette-review
-node /path/to/frontend-design/scripts/colors.mjs generate --base '#345678' --harmony splitComplementary --out ./brand-review
-node /path/to/frontend-design/scripts/colors.mjs generate --config ./brand-input.json --out ./locked-review
-```
-
-Output destinations must be new directories outside the skill, with an existing parent. Existing directories are never overwritten. Configuration accepts `base`, `palette`, `mood`, `harmony`, and `locked`; CLI values override corresponding configuration values. Example:
+The default explores 48 configurations and returns up to six separated passing systems. Record its seed for replay. Quantization and constraints collapse possibilities; seed size does not prove uniqueness or aesthetic quality.
 
 ```json
 {
-  "base": "#345678",
-  "harmony": "analogous",
-  "locked": {
-    "light": { "background": "#FFFFFF", "action": "#345678" },
-    "dark": { "brand": "#345678" }
+  "brief": "Warm mineral paper with cool, vivid botanical accents",
+  "count": 6,
+  "ranges": {
+    "hue": [110, 170],
+    "secondaryOffset": [-110, -50],
+    "accentOffset": [100, 180],
+    "neutralOffset": [-110, -70],
+    "chroma": [0.08, 0.26],
+    "gamutFraction": [0.55, 0.95],
+    "lightSurface": [0.85, 0.96],
+    "surfaceChroma": [0.025, 0.08]
   }
 }
 ```
+
+The agent writes this configuration; do not ask users for numeric ranges. Other ranges are `lightness`, `neutralChroma`, `darkSurface`. Offsets are degrees relative to the base hue, not named harmony presets. Absolute hue spans 0–360; offsets allow -360–360. Chroma is an OKLCH coordinate, not percent saturation. Supported ranges are validated by `palette-space.mjs`; equal endpoints fix a coordinate. `base` preserves an explicit seed; `locked` and `target` use the existing engine contract. Fresh starts explore; refinements retain approved colors unless the request authorizes changes.
+
+```shell
+node /path/to/frontend-design/scripts/colors.mjs explore --config ./color-intent.json --out ./color-exploration
+```
+
+The output contains `exploration.json` and passing candidate folders with the ordinary palette, CSS, preview and licenses. `partial` or `unresolved` returns exit 2; the finite search may miss feasible choices and never relaxes a lock. Inspect failures and revise permitted ranges. Pick one using actual content and color-area balance, then pass its `palette.json` **input** as `colors` to the existing studio configuration. Save that chosen input, not a fresh random exploration request, in the persistent design record. Native document and chart workflows consume the same semantic tokens. Use `seeds` for exact secondary/accent/neutral choices and `surfaces` for deliberate light/dark background/surface values; explicit `locked` tokens win over both.
+
+## Generate locally
+
+Use Node.js 22+; no installation or network is needed. If unavailable, report numerical contrast as unverified.
+
+Existing deterministic generation remains available: `colors.mjs generate --config input.json --out NEW_DIRECTORY`. Its configuration accepts `base`, `palette`, `mood`, `harmony`, `locked`, `target`, `seeds` and `surfaces`; CLI values override named fields. `recommend` and `list` are explicit catalog lookup tools. Output directories must be new and outside the skill.
 
 Supported locked tokens are `brand`, `secondary`, `accent`, `background`, `surface`, `text`, `muted`, `border`, `action`, `onAction`, `actionHover`, `onActionHover`, `focus`, `danger`, `success`, `warning`, `info`. Locking a token preserves that exact value; it does not automatically regenerate the seeds. Use `base` for the generation seed. Never silently change an owner's locked color to make a check pass.
 
@@ -74,3 +86,5 @@ Prefer a single contextual choice with a short rationale. Offer alternatives onl
 - [Ankhorage color-theory](https://github.com/ankhorage/color-theory): pinned published 0.3.1 engine with [MIT notice](../scripts/vendor/ankhorage-color-theory-LICENSE.txt); [Culori](https://github.com/Evercoder/culori) 4.0.2 with [MIT notice](../scripts/vendor/culori-LICENSE.txt). Bundle hashes and versions: [provenance](../scripts/vendor/provenance.json).
 - [bivex/brand-color-palette-generator](https://github.com/bivex/brand-color-palette-generator/tree/34120ac72e8153dd26ce2f995dba277477c74ce6): preview/export interaction inspiration only; no code copied and no dependency on Colormind.
 - [WCAG 2.2 text contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) and [non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html).
+
+Mathematical background: [Oklab's author](https://bottosson.github.io/posts/oklab/), [CSS Color 4](https://www.w3.org/TR/css-color-4/#ok-lab) and [Culori's API](https://culorijs.org/api/). Continuous sampling, chroma-boundary exploration and candidate selection are original Dazzler orchestration around the existing licensed engine; no upstream bundle was replaced. Mathematical separation does not establish harmony, universal emotion or accessible chart-category distinction.

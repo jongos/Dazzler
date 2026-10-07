@@ -1,223 +1,100 @@
 {
-  "schemaVersion": 1,
+  "id": "presentation",
+  "title": "Library After Hours Pilot",
+  "short": "Open Later for More People",
+  "tag": "CIVIC LAB / THREE MINUTE BRIEF",
+  "lead": "Test one late opening each week before committing to a permanent change.",
+  "accent": "#482884",
+  "paper": "#F5EFFF",
+  "font": "Archivo",
+  "word": "Arial",
+  "layout": "storyboard",
+  "stat": "6 WEEKS",
+  "label": "a bounded pilot with a clear review point",
+  "intro": "This fictional presentation handout proposes Thursday openings until 21:00. Attendance, staffing and quiet-study demand will determine the next decision.",
+  "sections": [
+    [
+      "The Need",
+      "Evening visitors need access after work and classes. The pilot tests demand rather than assuming every weekday should open later."
+    ],
+    [
+      "The Experiment",
+      "Open on six Thursdays. Keep a quiet study zone, a staffed help point and a clear closing routine. Record occupancy every hour."
+    ],
+    [
+      "The Decision",
+      "Continue only if demand is sustained and the staffing plan is workable. Publish the measured results, including low-attendance evenings."
+    ]
+  ],
+  "headers": [
+    "Measure",
+    "Collection",
+    "Review"
+  ],
+  "rows": [
+    [
+      "Visitors",
+      "Hourly count",
+      "Demand by hour"
+    ],
+    [
+      "Quiet seats",
+      "Occupied / available",
+      "Capacity pressure"
+    ],
+    [
+      "Staff hours",
+      "Scheduled and actual",
+      "Operating effort"
+    ]
+  ],
+  "closing": "Pilot proposal only · Synthetic example, not a funded program.",
+  "prompt": "Create a landscape presentation handout for a fictional late-opening library pilot. Organize it as three visual beats: need, experiment, decision. Use large purple typographic numerals, concise evidence, and an evaluation strip rather than a report page or a fake slide deck.",
   "fictional": true,
-  "asOf": "2027-06-21",
-  "scenario": "Three-page landscape decision presentation with evidence, options and an action plan",
-  "generation": "Deterministic authored fixtures; no client or external personal data",
-  "baselinePercent": 55,
-  "targetPercent": 80,
-  "targetsAreResults": false,
+  "design": {
+    "accent": "#482884",
+    "secondary": "#482884",
+    "paper": "#F5EFFF"
+  },
   "document": [
     {
-      "title": "Approve the onboarding pilot",
-      "blocks": [
-        {
-          "type": "metrics",
-          "values": [
-            [
-              "20",
-              "pilot customers"
-            ],
-            [
-              "4 weeks",
-              "learning window"
-            ],
-            [
-              "$6,000",
-              "spend ceiling"
-            ]
-          ]
-        },
-        {
-          "type": "callout",
-          "label": "THE ASK",
-          "text": "Approve a limited onboarding pilot with Maya Chen accountable for delivery. Keep the existing platform; test a clearer welcome sequence and one checklist."
-        },
-        {
-          "type": "h",
-          "text": "A small bet with a visible exit"
-        },
-        {
-          "type": "p",
-          "text": "The team needs evidence before committing to a full rollout. The pilot tests completion, time to first value and support handoffs. It does not promise a revenue result."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Today",
-            "Pilot change",
-            "Decision gate"
-          ],
-          "rows": [
-            [
-              "3 separate setup emails",
-              "1 sequenced checklist",
-              "Review after four weeks"
-            ],
-            [
-              "Ownership is unclear",
-              "Named success owner",
-              "No scope expansion without review"
-            ]
-          ],
-          "widths": null
-        }
+      "title": "Library After Hours Pilot",
+      "sections": [
+        [
+          "The Need",
+          "Evening visitors need access after work and classes. The pilot tests demand rather than assuming every weekday should open later."
+        ],
+        [
+          "The Experiment",
+          "Open on six Thursdays. Keep a quiet study zone, a staffed help point and a clear closing routine. Record occupancy every hour."
+        ],
+        [
+          "The Decision",
+          "Continue only if demand is sustained and the staffing plan is workable. Publish the measured results, including low-attendance evenings."
+        ]
       ],
-      "kicker": null
-    },
-    {
-      "title": "Compare the options",
-      "blocks": [
-        {
-          "type": "chart",
-          "label": "Sample baseline and pilot target",
-          "rows": [
-            [
-              "Baseline",
-              55
-            ],
-            [
-              "Target",
-              80
-            ]
-          ],
-          "kind": "bar",
-          "unit": "completion percent",
-          "asset": "presentation-1"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Option",
-            "Benefit",
-            "Trade-off"
-          ],
-          "rows": [
-            [
-              "Keep the current process",
-              "No near-term delivery cost",
-              "Existing handoffs remain"
-            ],
-            [
-              "Pilot with 20 customers",
-              "Tests the approach before a broad change",
-              "Requires four weeks and a dedicated owner"
-            ],
-            [
-              "Rebuild immediately",
-              "Moves directly to a single experience",
-              "Commits more resources before learning"
-            ]
-          ],
-          "widths": [
-            24,
-            38,
-            38
-          ]
-        },
-        {
-          "type": "h",
-          "text": "Recommended option"
-        },
-        {
-          "type": "p",
-          "text": "Run the limited pilot. Use the current system, rewrite the welcome sequence and add one checklist; defer any platform migration."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Measure",
-            "Pilot target",
-            "Source"
-          ],
-          "rows": [
-            [
-              "Setup completed within 7 days",
-              "At least 16 of 20 participants",
-              "Checklist event log"
-            ],
-            [
-              "Support contacts in first week",
-              "Record per participant; compare with baseline",
-              "Support ticket report"
-            ],
-            [
-              "Serious account issues",
-              "Zero unresolved at closeout",
-              "Incident log"
-            ]
-          ],
-          "widths": null
-        },
-        {
-          "type": "p",
-          "text": "Presenter note: targets are proposed thresholds for this sample, not reported results."
-        }
+      "headers": [
+        "Measure",
+        "Collection",
+        "Review"
       ],
-      "kicker": null
-    },
-    {
-      "title": "Make the next month measurable",
-      "blocks": [
-        {
-          "type": "table",
-          "headers": [
-            "Week",
-            "Work",
-            "Accountable owner"
-          ],
-          "rows": [
-            [
-              "1",
-              "Finalize copy and baseline measures",
-              "Maya \u2022 Customer success"
-            ],
-            [
-              "2",
-              "Invite participants and start the pilot",
-              "Sam \u2022 Operations"
-            ],
-            [
-              "3",
-              "Review exceptions and fix copy gaps",
-              "Alex \u2022 Product"
-            ],
-            [
-              "4",
-              "Report findings and recommend next step",
-              "Maya \u2022 Customer success"
-            ]
-          ],
-          "widths": null
-        },
-        {
-          "type": "h",
-          "text": "Guardrails"
-        },
-        {
-          "type": "list",
-          "items": [
-            "Pause new invitations if account access is affected.",
-            "Keep the existing onboarding path available during the test.",
-            "Do not expand the pilot without reviewing the final evidence."
-          ]
-        },
-        {
-          "type": "callout",
-          "label": "RECORD THE DECISION",
-          "text": "Sponsor: Avery Kim    Outcome: Pilot proposal for review\nOwner confirmed: Avery Kim    Review meeting: 21 June 2027"
-        }
-      ],
-      "kicker": null
+      "rows": [
+        [
+          "Visitors",
+          "Hourly count",
+          "Demand by hour"
+        ],
+        [
+          "Quiet seats",
+          "Occupied / available",
+          "Capacity pressure"
+        ],
+        [
+          "Staff hours",
+          "Scheduled and actual",
+          "Operating effort"
+        ]
+      ]
     }
-  ],
-  "design": {
-    "accent": "#D8F36A",
-    "secondary": "#D1B6FF",
-    "bright": "#FFBA8F",
-    "paper": "#181B36",
-    "headingFont": "Archivo",
-    "voice": "Decision deck / luminous on midnight"
-  },
-  "capabilities": "Large type, strong contrast and decision-centered storytelling"
+  ]
 }

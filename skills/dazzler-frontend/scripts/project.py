@@ -258,7 +258,10 @@ def export_document(content, system, destination, mode="document"):
         {**section, "heading": case_heading(str(section.get("heading", "")), policy)}
         for section in sections
     ]
-    tokens = system["palette"]["modes"]["light"]["tokens"]
+    palette_mode = content.get("paletteMode", system.get("paletteMode", "light"))
+    if palette_mode not in system["palette"]["modes"]:
+        raise ValueError("Requested document palette mode is unavailable")
+    tokens = system["palette"]["modes"][palette_mode]["tokens"]
     font = system["fonts"]["body"]
     heading = system["fonts"]["heading"]
     type_steps = system.get("typography", {}).get("steps", {})
@@ -373,6 +376,27 @@ def export_document(content, system, destination, mode="document"):
                                 tokens["text"][1:]
                             )
                             run.bold = ri == 0
+        # An anchored native rectangle preserves the selected page color in Word/PDF
+        # without changing the user's print-background preferences or flattening text.
+        from lxml import etree
+
+        width = sec.page_width / 12700
+        height = sec.page_height / 12700
+        surface = etree.fromstring(
+            f'<w:pict xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" '
+            f'xmlns:v="urn:schemas-microsoft-com:vml"><v:rect id="DazzlerPageSurface" '
+            f'style="position:absolute;margin-left:0;margin-top:0;width:{width}pt;height:{height}pt;'
+            f'z-index:-251654144;mso-position-horizontal-relative:page;mso-position-vertical-relative:page" '
+            f'fillcolor="{tokens["background"]}" stroked="f"><v:fill color="{tokens["background"]}"/>'
+            "</v:rect></w:pict>"
+        )
+        sec.header.paragraphs[0].add_run()._r.append(surface)
+        for style_name in ["Normal", "Title", "Heading 1", "Heading 2"]:
+            fonts = doc.styles[style_name].element.get_or_add_rPr().find(qn("w:rFonts"))
+            if fonts is not None:
+                for attr in list(fonts.attrib):
+                    if "theme" in attr.lower():
+                        del fonts.attrib[attr]
         doc.save(destination)
     elif mode == "pptx":
         try:

@@ -467,6 +467,23 @@ def validate(folder):
                     check=True,
                 )
                 assert json.loads(refinement_result.stdout)["readOnly"] is True
+                workflow_task = Path(temp) / "workflow-task.json"
+                workflow_task.write_text('{"intent":"audit","features":["forms"]}')
+                workflow_result = subprocess.run(
+                    [
+                        "node",
+                        str(skill / "scripts/workflow.mjs"),
+                        "plan",
+                        str(workflow_task),
+                    ],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                )
+                workflow_plan = json.loads(workflow_result.stdout)
+                assert workflow_plan["readOnly"] is True
+                assert all(c["status"] == "not-run" for c in workflow_plan["checks"])
+                assert any(c["id"] == "forms" for c in workflow_plan["checks"])
                 subprocess.run(
                     [
                         sys.executable,

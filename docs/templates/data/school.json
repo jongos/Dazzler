@@ -1,226 +1,100 @@
 {
-  "schemaVersion": 1,
-  "fictional": true,
-  "asOf": "2027-06-21",
-  "scenario": "Science report with variables, repeatable method, sample data and reflection",
-  "generation": "Deterministic authored fixtures; no client or external personal data",
-  "measurements": [
-    {
-      "plant": "A1",
-      "lightHours": 4,
-      "day0": 2.0,
-      "day7": 4.3,
-      "day14": 7.1
-    },
-    {
-      "plant": "A2",
-      "lightHours": 4,
-      "day0": 2.1,
-      "day7": 4.4,
-      "day14": 7.2
-    },
-    {
-      "plant": "A3",
-      "lightHours": 4,
-      "day0": 2.2,
-      "day7": 4.5,
-      "day14": 7.3
-    },
-    {
-      "plant": "B1",
-      "lightHours": 8,
-      "day0": 2.0,
-      "day7": 4.9,
-      "day14": 8.1
-    },
-    {
-      "plant": "B2",
-      "lightHours": 8,
-      "day0": 2.1,
-      "day7": 5.0,
-      "day14": 8.2
-    },
-    {
-      "plant": "B3",
-      "lightHours": 8,
-      "day0": 2.2,
-      "day7": 5.1,
-      "day14": 8.3
-    }
+  "id": "school",
+  "title": "Rain Garden Observation Notebook",
+  "short": "Where Does the Water Go",
+  "tag": "FIELD SCIENCE / YEAR 8",
+  "lead": "Compare drainage time in three soil samples. Record what happened before deciding why.",
+  "accent": "#28592E",
+  "paper": "#F3F1D9",
+  "font": "Young Serif",
+  "word": "Georgia",
+  "layout": "notebook",
+  "stat": "240 mL",
+  "label": "the same water volume for every sample",
+  "intro": "In this fictional classroom investigation, three equal containers hold sand, garden soil and clay-rich soil. Each receives the same water volume; students time the first 100 mL collected.",
+  "sections": [
+    [
+      "Keep the Test Fair",
+      "Use the same container size, water volume and timing method. Repeat each sample three times. Describe any spills or delayed starts."
+    ],
+    [
+      "Read the Pattern",
+      "Sand drained fastest in the sample results. The test measures this setup only; it does not establish how an entire garden will behave."
+    ],
+    [
+      "Ask a Better Question",
+      "How would compaction change the result? Plan one change at a time and state which measurement would answer your question."
+    ]
   ],
+  "headers": [
+    "Sample",
+    "Trial Times",
+    "Median"
+  ],
+  "rows": [
+    [
+      "Sand",
+      "38 / 41 / 40 sec",
+      "40 sec"
+    ],
+    [
+      "Garden soil",
+      "84 / 90 / 87 sec",
+      "87 sec"
+    ],
+    [
+      "Clay-rich soil",
+      "165 / 172 / 168 sec",
+      "168 sec"
+    ]
+  ],
+  "closing": "Synthetic classroom observations · Follow your teacher's safety instructions.",
+  "prompt": "Make a fictional Year 8 science field notebook on soil drainage. Use botanical green, warm paper, ruled observations and a labeled experimental diagram. Keep methods, measurements and limitations distinct; invite a next question rather than dressing a generic report in green.",
+  "fictional": true,
+  "design": {
+    "accent": "#28592E",
+    "secondary": "#28592E",
+    "paper": "#F3F1D9"
+  },
   "document": [
     {
-      "title": "How light affects seedling growth",
-      "blocks": [
-        {
-          "type": "p",
-          "text": "Student: Avery Kim    Class: Year 7 Science    Teacher: Jo Lee    Date: 21 June 2027"
-        },
-        {
-          "type": "h",
-          "text": "Question and prediction"
-        },
-        {
-          "type": "p",
-          "text": "How does daily light exposure affect bean seedling height over two weeks? I predict that the group receiving more light will show healthier leaf growth. Height alone may not capture plant health."
-        },
-        {
-          "type": "h",
-          "text": "Variables"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Type",
-            "What is measured or controlled"
-          ],
-          "rows": [
-            [
-              "Independent",
-              "Daily light exposure: 4 hours or 8 hours"
-            ],
-            [
-              "Dependent",
-              "Seedling height in centimeters; leaf appearance"
-            ],
-            [
-              "Controlled",
-              "Seed type, soil, container, water and measurement time"
-            ]
-          ],
-          "widths": [
-            24,
-            76
-          ]
-        },
-        {
-          "type": "h",
-          "text": "Materials and method"
-        },
-        {
-          "type": "list",
-          "items": [
-            "Prepare six similar seedlings in identical containers; label three A and three B.",
-            "Place group A in 4 hours of light and group B in 8 hours. Keep other conditions consistent.",
-            "Water each container with the same measured amount daily.",
-            "Measure height from soil level at the same time on days 0, 7 and 14. Record observations."
-          ]
-        },
-        {
-          "type": "h",
-          "text": "Care and safety"
-        },
-        {
-          "type": "p",
-          "text": "Ask a teacher before using lamps. Keep water away from electrical equipment. Wash hands after handling soil."
-        },
-        {
-          "type": "callout",
-          "label": "RECORD HONESTLY",
-          "text": "The next page contains example data to demonstrate the layout. Replace it with your own measurements; do not present it as an experiment you performed."
-        }
+      "title": "Rain Garden Observation Notebook",
+      "sections": [
+        [
+          "Keep the Test Fair",
+          "Use the same container size, water volume and timing method. Repeat each sample three times. Describe any spills or delayed starts."
+        ],
+        [
+          "Read the Pattern",
+          "Sand drained fastest in the sample results. The test measures this setup only; it does not establish how an entire garden will behave."
+        ],
+        [
+          "Ask a Better Question",
+          "How would compaction change the result? Plan one change at a time and state which measurement would answer your question."
+        ]
       ],
-      "kicker": null
-    },
-    {
-      "title": "Results and reflection",
-      "blocks": [
-        {
-          "type": "chart",
-          "label": "Mean height at day 14",
-          "rows": [
-            [
-              "4 h/day",
-              7.2
-            ],
-            [
-              "8 h/day",
-              8.2
-            ]
-          ],
-          "kind": "bar",
-          "unit": "cm",
-          "asset": "school-1"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Plant",
-            "Light hours",
-            "Day 0 cm",
-            "Day 7 cm",
-            "Day 14 cm"
-          ],
-          "rows": [
-            [
-              "A1",
-              4,
-              2.0,
-              4.3,
-              7.1
-            ],
-            [
-              "A2",
-              4,
-              2.1,
-              4.4,
-              7.2
-            ],
-            [
-              "A3",
-              4,
-              2.2,
-              4.5,
-              7.3
-            ],
-            [
-              "B1",
-              8,
-              2.0,
-              4.9,
-              8.1
-            ],
-            [
-              "B2",
-              8,
-              2.1,
-              5.0,
-              8.2
-            ],
-            [
-              "B3",
-              8,
-              2.2,
-              5.1,
-              8.3
-            ]
-          ],
-          "widths": null
-        },
-        {
-          "type": "h",
-          "text": "What the example suggests"
-        },
-        {
-          "type": "p",
-          "text": "Group A grew from 2.1 to 7.2 cm on average. Group B grew from 2.1 to 8.2 cm. The difference in growth is 1.0 cm. With only three plants per group, this does not establish a general rule."
-        },
-        {
-          "type": "callout",
-          "label": "BETTER EVIDENCE",
-          "text": "Height can increase when a seedling stretches for light. Add leaf count, color observations and more plants before interpreting health. These measurements are synthetic, not an experiment performed by a student."
-        }
+      "headers": [
+        "Sample",
+        "Trial Times",
+        "Median"
       ],
-      "kicker": null
+      "rows": [
+        [
+          "Sand",
+          "38 / 41 / 40 sec",
+          "40 sec"
+        ],
+        [
+          "Garden soil",
+          "84 / 90 / 87 sec",
+          "87 sec"
+        ],
+        [
+          "Clay-rich soil",
+          "165 / 172 / 168 sec",
+          "168 sec"
+        ]
+      ]
     }
-  ],
-  "design": {
-    "accent": "#216348",
-    "secondary": "#6E3CA1",
-    "bright": "#F3D553",
-    "paper": "#FCFFF8",
-    "headingFont": "Libre Baskerville",
-    "voice": "Field notebook / botanical triad"
-  },
-  "capabilities": "Traceable synthetic observations, chart and uncertainty"
+  ]
 }

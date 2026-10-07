@@ -1,0 +1,198 @@
+[
+  {
+    "id": "webapp-workspace",
+    "title": "Margin Writing Room",
+    "prompt": "Build a fictional writing workspace around the manuscript itself, with a narrow chapter index and an editorial note rail. Warm paper and literary type should support sustained writing. Make word count and saving a local draft work; no fake collaborative service.",
+    "data": {
+      "chapter": "At the River",
+      "mode": "local manuscript"
+    },
+    "action": "Save Draft Locally"
+  },
+  {
+    "id": "webapp-board",
+    "title": "Signal Production Board",
+    "prompt": "Create a fictional audio-production board whose workflow is visible as three horizontal lanes rather than a conventional card kanban. Use broadcast yellow and charcoal, clear owners and stage labels. A Move Forward action must update a task stage and the completion count.",
+    "data": {
+      "tasks": [
+        [
+          "Opening Mix",
+          "Ari",
+          "Edit"
+        ],
+        [
+          "Fact Check",
+          "Noor",
+          "Review"
+        ],
+        [
+          "Transcript",
+          "Sam",
+          "Review"
+        ],
+        [
+          "Artwork",
+          "Dee",
+          "Ready"
+        ]
+      ]
+    },
+    "action": "Move Forward"
+  },
+  {
+    "id": "webapp-settings",
+    "title": "Still Notification Studio",
+    "prompt": "Design a fictional notification-settings interface centered on choosing a daily rhythm. Use a quiet blue field and a large schedule dial made from typography, not generic settings cards. Support a digest-time selector, three channel toggles and a save confirmation.",
+    "data": {
+      "digestTimes": [
+        "09:00",
+        "13:00",
+        "17:00"
+      ],
+      "channels": 3
+    },
+    "action": "Save Preferences"
+  },
+  {
+    "id": "data-revenue",
+    "title": "Common Ground Membership Observatory",
+    "prompt": "Build a fictional membership revenue explorer whose main surface is an annual chart, not KPI cards. Use ink blue, coral and cream. Switch between revenue and member counts with accurate axes, exact values and a data table. Make the selected metric visually and programmatically clear.",
+    "data": {
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "revenue": [
+        84,
+        98,
+        121,
+        143,
+        168,
+        192
+      ],
+      "members": [
+        210,
+        245,
+        302,
+        357,
+        420,
+        480
+      ]
+    },
+    "action": "Members"
+  },
+  {
+    "id": "data-operations",
+    "title": "Tide Water Operations",
+    "prompt": "Create a fictional water-operations console focused on four stations and one alert, with a clear spatial flow diagram, measured readings and a station inspector. Use dark navy with cyan signals, text status labels and a high-contrast alert. Station buttons must update the inspector; no live telemetry claims.",
+    "data": {
+      "stations": [
+        "Intake",
+        "Filter",
+        "Storage",
+        "Outlet"
+      ],
+      "values": [
+        18.4,
+        2.8,
+        72,
+        17.9
+      ]
+    },
+    "action": "01 Intake"
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "title": "Vesper Tasting Room",
+    "prompt": "Create a fictional intimate tasting-room website without stock photography. Use black plum, cream serif typography and an oversized course numeral. Let visitors reveal a five-course sequence and read seating details. Distinguish a request preview from a real reservation.",
+    "data": {
+      "courses": 5,
+      "seats": 12,
+      "price": 95
+    },
+    "action": "Explore the Menu"
+  },
+  {
+    "id": "restaurant-cafe",
+    "title": "Daybreak Coffee Counter",
+    "prompt": "Build a fictional cafe pickup interface centered on a large typographic order ticket. Use espresso brown and apricot, category filters, three products and an honest local cart total. Adding items must update quantities and totals; no checkout or real pickup promise.",
+    "data": {
+      "products": [
+        {
+          "name": "Flat White",
+          "price": 4.5
+        },
+        {
+          "name": "Filter Coffee",
+          "price": 3.5
+        },
+        {
+          "name": "Almond Bun",
+          "price": 5
+        }
+      ]
+    },
+    "action": "Add Flat White"
+  },
+  {
+    "id": "restaurant-reservations",
+    "title": "Solstice Table Planner",
+    "prompt": "Design a fictional restaurant seating-request page around a simple original room plan and a request form. Use olive and cream, distinct named table zones and an accessible text equivalent. Choosing a zone must update the request; submission must clearly remain an unconfirmed local preview.",
+    "data": {
+      "zones": [
+        "Window Table",
+        "Quiet Corner",
+        "Shared Table"
+      ]
+    },
+    "action": "Quiet Corner"
+  },
+  {
+    "id": "restaurant-menu",
+    "title": "Saffron Lunch Index",
+    "prompt": "Make a fictional lunch-menu interface that behaves like a searchable culinary index. Use saffron yellow, ink black and a bold condensed masthead. Search and vegetarian filtering must work without changing prices or claiming allergy safety. Avoid product-photo cards.",
+    "data": {
+      "dishes": [
+        {
+          "name": "Roast Carrot Bowl",
+          "price": 14
+        },
+        {
+          "name": "Lemon Chicken Plate",
+          "price": 17
+        },
+        {
+          "name": "Green Lentil Soup",
+          "price": 11
+        },
+        {
+          "name": "Market Fish Sandwich",
+          "price": 18
+        }
+      ]
+    },
+    "action": "Vegetarian Only"
+  },
+  {
+    "id": "business-portal",
+    "title": "Fieldwork Client Ledger",
+    "prompt": "Create a fictional client portal for a small architecture studio. Organize the page as a project ledger with milestone dates and a focused decision panel, rather than a generic dashboard. Use brick red and warm white. Document selection must show a useful preview; approval must be explicitly local and reversible.",
+    "data": {
+      "milestones": [
+        "06 Jun",
+        "20 Jun",
+        "04 Jul",
+        "18 Jul"
+      ],
+      "documents": [
+        "Materials",
+        "Schedule"
+      ]
+    },
+    "action": "Mark Reviewed Locally"
+  }
+]

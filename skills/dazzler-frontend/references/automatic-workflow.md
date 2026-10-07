@@ -6,26 +6,38 @@ For persistent records, fluid typography, safe token interchange and compatible 
 
 This is the default orchestration for frontend-design. The agent handles the choices and tools; the user supplies the task. The existing helpers are internal implementation tools, not setup instructions the user must follow.
 
+For a new design or substantial restyle, begin with [art direction](art-direction.md): choose and implement the content-specific idea directly from the prompt. Examples demonstrate possibilities; reuse one only when explicitly selected. Helper output alone is not a finished design.
+
 ## 1. Read the situation
 
 Inspect the relevant project, supplied references, actual content, brand assets, token files and existing design record. Preserve the designated source of truth. Decide whether this is a small fix, a new component, a substantial design or a review. Do only what the requested scope warrants. A small spacing fix does not trigger font and palette generation; a screenshot-only review does not authorize file edits.
 
-Infer artifact type, audience, primary task, visual character and density from context. When preferences are unspecified, choose sensible defaults yourself. Do not ask the user to name adjectives or pick a design system. Use truthful supplied copy; clearly distinguish illustrative content if the brief calls for a mockup. Ask only if an indispensable task input cannot be inferred, not because multiple good aesthetic choices exist.
+Infer artifact type, audience, primary task, visual character and density from context. When preferences are unspecified, choose a distinctive, committed direction yourself. Do not ask the user to name adjectives or pick a design system. Use truthful supplied copy; clearly distinguish illustrative content if the brief calls for a mockup. Ask only if an indispensable task input cannot be inferred, not because multiple good aesthetic choices exist.
+
+For new palettes, use the existing [color workflow](color-workflow.md) to explore continuous relationships. The 88 reference palettes are examples, not the default candidate space. The agent authors intent ranges and selects against actual content.
 
 ## 2. Select one coherent direction
 
-For substantial design, use [the deslop framework](deslop.md) to connect purpose to composition. Compare a few directions internally where useful, then choose one based on the task, not alphabetic order, fashion or a fixed default. Make the type, palette, spacing, media, controls and motion express the same direction. State the direction briefly as progress and keep working; do not wait for routine approval.
+For substantial design, use [the deslop framework](deslop.md) to connect purpose to composition. Apply the [art-direction standard](art-direction.md) through these same building blocks. Compare contrasting directions internally, then choose one based on the task, not alphabetic order, fashion or a fixed default. Make the type, palette, spacing, media, controls and motion express the same direction. State the direction briefly as progress and keep working; do not wait for routine approval.
 
 The following translations are examples of agent reasoning, not mandatory presets:
 
+For document sections, infer sustained reading, comparison or reference lookup from the content and pass the corresponding `readingTask` to `document-directions.mjs` when using that helper. Keep mixed documents section-specific and preserve explicit locks. See [document design space](document-design-space.md) for the controls; the user need not choose them.
+
 | Inferred task | Font helper role and possible mood tags | Color direction to explore | Composition and behavior |
 |---|---|---|---|
-| Repeated operational work | `ui`; practical, clean, technical | Restrained brand seed or professional/minimal catalog entries | Grouped controls, readable numeric density, immediate feedback |
-| Sustained editorial reading | `body`; literary, editorial, quiet | Quiet surfaces with a purposeful accent | Strong measure, section hierarchy, restrained chrome |
+| Repeated operational work | `ui`; practical, clean, technical | Deliberate surfaces and strong role contrast within the brand | Grouped controls, readable numeric density, immediate feedback |
+| Sustained editorial reading | `body`; literary, editorial, quiet | An authored surface rhythm that supports sustained reading | Strong measure, section hierarchy, restrained chrome |
 | Warm community or craft product | `body`/`heading`; warm, friendly, handmade | Cozy/earthy candidates or an existing brand seed | Relevant imagery, approachable labels, clear primary action |
 | Expressive portfolio | `display` plus readable `body`; expressive, architectural, bold | Brief-specific custom seed or bold/dramatic candidates | Work-led composition and one meaningful signature |
 
 Map the brief to each catalog's actual vocabulary. Font tags and color moods are different vocabularies; never pass the same arbitrary mood to both and assume they agree. No-match results call for better mapping or a suitable custom seed, not a preference questionnaire or silent relaxation of hard constraints.
+
+## Check Structure Before Styling
+
+For a new or substantially reshaped artifact, identify what the reader must understand or do first. Choose the order of content and the representation of its evidence before fonts or colors. A legal issue, purchasing offer and operational decision need not share a hero/three-metric/callout skeleton. Reuse a component because the behavior fits, not because it is the easiest available example.
+
+For a collection, compare page silhouettes and hierarchy with color removed. Look for repeated opening sequences, display metrics, boxed prose and identical continuation pages. Keep repetition that serves comparison or a shared brand; revise repetition that hides different reader tasks. Do not enforce arbitrary uniqueness or change an approved layout during a small fix. Require an actual rendered before/after artifact when claiming visual improvement; changed instructions or passing helper tests are insufficient.
 
 ## 3. Choose and apply typography
 
@@ -42,6 +54,8 @@ Read [color-workflow.md](color-workflow.md). Use `scripts/colors.mjs` internally
 For a successful generated system, integrate its semantic CSS into the existing stack and retain its report and notices in a suitable project location. Use action/on-action for controls, measured text roles for copy, and raw brand/accent values only in contexts where they are appropriate. The catalog's first match is a starting point, not the final aesthetic decision.
 
 If constraints fail, revise unlocked choices and re-run the checks yourself. Keep locked colors fixed and try a compliant role variant, allowed surface treatment, or non-color cue. If hard requirements genuinely cannot coexist, explain the specific conflict and ask for the minimum necessary decision. Never ask “which palette?” merely because a generated candidate failed.
+
+For substantial interfaces, use [frontend engineering](frontend-engineering.md) for component reuse and measured performance. [Agent workflows](agent-workflows.md) can plan relevant checks and track supplied evidence without claiming to run them.
 
 ## 5. Complete the design
 
@@ -66,3 +80,7 @@ Locate the installed skill relative to its `SKILL.md`; do not hard-code the main
 If a runtime is missing, use the readable catalogs, licensed local assets and available host/project tools to complete as much as possible. For example, an existing browser or project's color library may measure a role pair. Prefer a usable permitted fallback over making the user set up tooling. Be explicit about checks that could not run; do not invent numerical results. If the required artifact fundamentally cannot be produced in the available environment, name that concrete limitation rather than presenting a helper command as completed work.
 
 Automatic aesthetic choices do not authorize purchases, accepting new terms, OS changes, publishing, or unrelated project edits. Choose a suitable already-available option by default. Ask for external action only when it is actually needed and not already authorized.
+
+## Executable Design Knowledge
+
+For substantial browser-rendered documents and interfaces, use the [GDC workflow](gdc.md) for scoped measurements in JavaScript or Python. Keep native generation and final visual review. Report unsupported measurements as unknown; no aesthetic score overrides a required constraint.

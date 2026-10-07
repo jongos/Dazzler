@@ -1,5 +1,55 @@
 # Developer change notes
 
+## 2026-10-07 — 0.27.0: Rebuild the Complete Demonstration Gallery
+
+**Changed:** Replaced all 30 legacy examples with newly authored Word, HTML and interface compositions. Half the Word collection uses deliberate colored page surfaces; native text and tables remain editable. Gallery thumbnails show complete compositions. The README and field guide now describe the new scenarios and correctly identify LibreOffice as the Word preview renderer.
+
+**Added:** Fresh synthetic briefs, full desktop/mobile captures, per-example visual review and previous-release comparisons. The local export gets a working return page. The authoring pipeline preserves theme contracts when rerun, and browser checks cover the new controls, heading case and accessible reflow.
+
+**Why:** The old fixed builder and viewport crops concealed the newer art-direction capabilities. Recoloring those artifacts could not demonstrate a different composition. The replacement collection organizes each example around its reader's task.
+
+**Validation:** All 30 examples were visually inspected, including all ten rendered Word pages and desktop/mobile browser layouts. Repairs addressed title-rule inheritance, table crowding, proposal overflow, date spacing, clock fit and chart-label contrast. Regression and provenance results are recorded in `maintenance/gallery-production/v0.27.0/REVIEW.md`. Release checks passed: 99 Node tests, 70 Python tests (one optional skip), ten extracted platform/template archives, browser checks and all 30 gallery provenance entries. The offline kit now includes gallery briefs and prior-release evidence; gallery identity hashes are portable across Windows and Linux line endings.
+
+## 2026-10-07 — 0.27.0: Reader-task scenario regressions
+
+**Changed:** Document direction generation can condition grid, density and reference navigation on the section's reading task. Explicit layout locks still win. All HTML document data tables now receive the labelled keyboard-scroll treatment previously limited to three categories; shared hint CSS replaces duplicate pilot rules.
+
+**Added:** Synthetic reader scenarios evaluated externally in the browser, with seeded local regression coverage for sustained reading, comparison, reference lookup and user overrides. Mixed-document guidance selects structure per section. No hosted runtime dependency or upstream classifier code is included.
+
+**Why:** Independent random axis choices did not account for how readers use content, and keyboard table access depended on category rather than behavior.
+
+**Validation:** 99 Node tests, nine template tests and three architecture tests passed. All 20 rebuilt web templates passed desktop/mobile browser checks; the refreshed 737-file runtime inventory passed. Results and limitations are recorded in `maintenance/JEV-DESIGN-EVALUATION.md`. These changes belong to the current unreleased 0.27.0 development version; no visual-superiority claim or publication is implied.
+
+## 2026-10-07 — 0.27.0: Prompt-led surfaces and gallery provenance
+
+**Changed:** New document guidance selects page surfaces from the prompt, never an assumed white background. The native exporter honors paletteMode, paints the selected full-page background and removes conflicting Word theme-font bindings. Template examples no longer drive automatic design selection. Every shipment requires fresh prompt-generated gallery outputs and visual comparison against peers and the previous release.
+
+**Added:** Optional structural direction exploration with the existing color engine, exact background locks, native Word/PDF proof builder, and a fail-closed release-gallery evidence validator. Reference observations cover Adobe, Envato and DesignCrowd without importing commercial assets.
+
+**Why:** Fixed template constructors and default white paper constrained visible output despite broad available capabilities. Prompt-driven composition and renderer verification must determine the final design.
+
+**Validation:** 89 JavaScript tests and 69 Python tests passed (one optional Python test skipped); ten development packages validated. Six two-page native Word/PDF studies, two editing-stress copies and yellow/dark-blue native-export fixtures were rendered and checked. See maintenance/DOCUMENT-DESIGN-REVIEW.md. The legacy gallery has not completed the new regeneration gate and is not certified for shipment. Color contrast and categorical distance are not aesthetic quality scores.
+
+## 2026-10-07 — 0.27.0 development: Activate art direction and chart storytelling
+
+**Changed:** New designs and substantial restyles now start with a subject-specific visual idea in the skill entrypoint and automatic workflow. Substantial workflow evidence includes a rendered distinction check. The token helper identifies unconfigured font/color defaults as scaffolding rather than a selected identity. Existing small scopes, brand locks and numerical defaults remain compatible.
+
+**Added:** Validated source-anchored annotations and labelled reference lines for single-series bar/line/scatter HTML/SVG charts. Unsupported adapters reject editorial layers rather than silently discard them. Added a reproducible same-content specimen: neutral baseline, field atlas, public campaign and evidence-first dossier, including real bundled fonts, a data-derived coverage graphic and separately composed mobile charts.
+
+**Why:** Optional catalogs were not reliably activated; generic defaults and recipe-based compositions remained easy to deliver. The installed local skill was also a separate stale unmanaged copy. The correction connects an art-direction decision to visible output and its review, rather than counting capabilities or equating numerical checks with taste.
+
+**Validation:** Targeted chart/workflow tests passed. Four specimens passed actual font loading, exact source values, keyboard disclosure, axe and reflow at 1440/390; desktop and mobile captures were visually reviewed. Full-suite and package results are recorded in the activation report. This remains local development; no blind superiority claim or external publication is implied.
+
+## 2026-10-06 — 0.27.0: Content-led templates and scoped agent workflows
+
+**Changed:** Rebuilt Legal, Professional and Business Word/HTML templates around different reader tasks. The memo uses native metadata and quiet record counts, the brief puts its decision before compact measures, and the proposal uses explicit terms and a delivery sequence. Updated typography, table treatment, continuation hierarchy, chart axes, native image descriptions and actual gallery captures. Proposal sections flow under editing rather than forcing a sparse intervening page. Removed the guidance-level quota for decorative treatments and added structure-before-styling and rendered comparison requirements. Retained the other seven document and ten UI compositions.
+
+**Added:** A shared content-preserving architecture transformation, native paragraph roles, regression checks for content and hierarchy, and labelled keyboard-scrollable mobile tables. Also includes the original task-aware workflow/evidence helper and audit, layout, adapt, optimize, clarify and extract procedures from this local development cycle. Audit and critique remain read-only; evidence coverage is not independent verification.
+
+**Why:** The first benchmark found every template unchanged: workflow guidance had not reached the generator. Shared title/metric/callout recipes produced surface variation despite different reading tasks. The fix changes actual artifact structure and preserves an immutable before/after comparison rather than treating test counts or color changes as design quality.
+
+**Validation:** 85 Node tests and 67 Python tests pass, with one symlink-permission skip. All 20 browser templates pass desktop/mobile, axe, font, content and interaction checks, including keyboard scrolling in pilot tables. All ten Word samples render to the expected 20 pages; the six pilot pages were visually inspected against baseline renders made in the same Word environment. All authored content values and baseline Word text tokens are retained. Three combined editing-stress cases were rendered: Legal and Professional retain two pages; Business grows to three and retains a sparse closing page, so heavy edits still require repagination. Formatting, local links and the 707-file runtime inventory pass. All ten fresh ZIPs pass structure/resource checks and extracted-helper smoke tests within the 24 MB limits. The local gallery passes all 30 links and both viewports, and the field guide passes its browser regression suite. Changes are local and unpublished; no blind study or repeated agent-generation benchmark is claimed.
+
 ## 2026-10-06 — 0.26.0: Rebuilt working collection
 
 **Changed:** Rebuilt all 30 templates with context-specific title treatments, tinted data tables, deliberate phrase emphasis and focused UI framing. Preserved the reconciled fictional data and existing interactions. Updated the field guide, gallery and host editions. The catalog now follows the package version.
@@ -285,3 +335,47 @@ Historical note for commit `1a84ba1` (recorded with the following maintenance up
 Version 0.4.0 adapted Samuel Berthe’s frontend-design-deslop framework. Version 0.3.0 used hue3 palette entries, @ankhorage/color-theory 0.3.1 and Culori 4.0.2. Version 0.11.0 credited bkrsln/dataviz for chart-reference discovery. Original notices and pinned provenance remain included.
 
 Version 0.12.0 credits SVG.js 3.2.8, React Img Mapper 2.0.2, Vue Img Mapper 0.1.0, their React/Vue runtimes, and @xmldom/xmldom 0.9.12. See the third-party notice inventory for exact versions and original MIT terms.
+
+## 2026-10-07 — Open Web Composition (0.27.0 Local Development)
+
+**Changed:** New designs default to expressive treatment across industries; older saved policy remains stable on resume. Custom composition purposes are accepted.
+
+**Added:** Optional authored page-composition CSS export with responsive regions, arbitrary proportional columns, deliberate surfaces and preserved design records; autonomous web design guidance grounded in reviewed references.
+
+**Why:** Industry stereotypes and finite layout vocabulary were constraining the agent before it could make a subject-specific design.
+
+**Validation:** Regression tests cover output, bounds, contrast and persistence. Rendered proof and final check results are recorded in the local web design review. This is not a published release or evidence of universal aesthetic superiority.
+
+## 2026-10-07 — Maximum Character Within the Brief (0.27.0 Local Development)
+
+**Changed:** Every Dazzler output now aims for an emphatic prompt-specific voice, including basic professional work; generic output requires revision. Small edits preserve scope and established identity.
+
+**Added:** Research-grounded art-direction principles and structured distinction evidence across all workflow kinds/scopes. Passing claims without an observed design review, or with a generic/incoherent verdict, are rejected.
+
+**Why:** An expressive default alone allowed acceptable-but-interchangeable work to count as finished. Constraints should redirect ambition into the available design dimensions rather than remove ambition.
+
+**Validation:** Workflow regression tests exercise all output kinds, missing evidence, rejected generic passes and read-only behavior. Aesthetic effectiveness still requires rendered outputs and human evaluation; no universal reaction is guaranteed.
+
+## 2026-10-07 — Continuous Palette Mathematics (0.27.0 Local Development)
+
+**Changed:** New-palette guidance defaults to continuous exploration beyond the 88 reference palettes and seven named harmonies. Existing selected palettes and saved systems remain compatible.
+
+**Added:** Original seed-rotated Halton exploration, a 24-step gamut chroma-boundary solve, perceptual farthest-first candidate selection, authored secondary/accent/neutral seeds and chromatic surfaces in the existing color generator; ordinary studio and export integration.
+
+**Why:** Catalog matching, fixed hue offsets and nearly neutral surfaces limited the usable output space. The upstream math is now a foundation for new combinations, not a limit on the design vocabulary.
+
+**Validation:** Regression coverage includes gamut boundaries, replay, separation, persisted studio output, malformed ranges, conflicting locks and honest partial/unresolved results. Mathematical diversity is not proof of aesthetic superiority.
+
+### 2026-10-07 — Color relationship knowledge (local development)
+
+- **Changed:** Active color workflow now connects geometric starting points to perceptual correction and continuous exploration.
+- **Added:** Structured relationship formulas, square/rectangle distinction, coordinate-space and accessibility math, with community context separated from technical sources.
+- **Why:** Extend the existing framework without forcing preset families or routine base-color questions.
+- **Validation:** JSON parsing, reference/size checks and sealed runtime health; unchanged palette runtime retains the tested generation behavior.
+
+### 2026-10-07 — Independent Style Science GDC consumer (0.27.0 local development)
+
+- **Changed:** Browser document/interface workflow now routes to scoped GDC measurement in addition to existing design and delivery gates.
+- **Added:** Versioned JavaScript/Python runtime copy, schema, example, provenance hashes and importer from the independent Style Science checkout.
+- **Why:** Separate portable executable knowledge from plugin prompts, while retaining native medium semantics and honest unknown outcomes.
+- **Validation:** Numerical, missing-evidence and cross-language conformance fixtures; actual browser adapter checks. Human quality benefits remain untested.

@@ -1,85 +1,18 @@
 {
   "id": "business-portal",
-  "category": "generic-business",
-  "layout": "business",
-  "brand": "Northstar",
-  "title": "Alder Studio / Brand & Website",
-  "intro": "Your project room \u2022 Updated 18 June 2027",
-  "accent": "#193D7D",
-  "tint": "#EDEFF7",
-  "deliverables": [
-    {
-      "name": "Brand direction",
-      "version": "v2",
-      "status": "Needs review",
-      "due": "21 Jun",
-      "description": "Positioning, voice and visual direction. Please confirm the preferred route."
-    },
-    {
-      "name": "Homepage wireframe",
-      "version": "v1",
-      "status": "In progress",
-      "due": "25 Jun",
-      "description": "Structure and content hierarchy for the new homepage."
-    },
-    {
-      "name": "Launch checklist",
-      "version": "v1",
-      "status": "Scheduled",
-      "due": "08 Jul",
-      "description": "Content, analytics and deployment checks before launch."
-    },
-    {
-      "name": "Type and color system",
-      "version": "v1",
-      "status": "Ready",
-      "due": "28 Jun",
-      "description": "Semantic color roles, typography scale and component states."
-    },
-    {
-      "name": "Responsive QA report",
-      "version": "v1",
-      "status": "Scheduled",
-      "due": "09 Jul",
-      "description": "Mobile layout, keyboard checks and content review evidence."
-    }
-  ],
-  "secondary": "#A1395D",
-  "bright": "#ADCFC8",
-  "paper": "#F2F5FC",
-  "headingFont": "Archivo",
-  "font": "Arial",
-  "voice": "Client editorial / navy and raspberry",
-  "ink": "#172033",
-  "sample": {
-    "fictional": true,
-    "asOf": "2027-06-21T09:40:00",
-    "seed": "dazzler-showcase-014",
-    "scope": "Local demonstration only; resets on reload"
-  },
-  "showcaseChart": {
-    "asset": "business-portal",
-    "title": "A fee tied to delivery",
-    "rows": [
-      [
-        "Kickoff",
-        4800
-      ],
-      [
-        "Review",
-        4800
-      ],
-      [
-        "Handover",
-        2400
-      ]
+  "title": "Fieldwork Client Ledger",
+  "prompt": "Create a fictional client portal for a small architecture studio. Organize the page as a project ledger with milestone dates and a focused decision panel, rather than a generic dashboard. Use brick red and warm white. Document selection must show a useful preview; approval must be explicitly local and reversible.",
+  "data": {
+    "milestones": [
+      "06 Jun",
+      "20 Jun",
+      "04 Jul",
+      "18 Jul"
     ],
-    "unit": "USD"
+    "documents": [
+      "Materials",
+      "Schedule"
+    ]
   },
-  "schemaVersion": 2,
-  "license": "Apache-2.0",
-  "creator": "Jon Gosier",
-  "demo": true,
-  "persistence": "memory only",
-  "customization": "Edit content/data here and synchronize the embedded template-data JSON. The local runtime derives interactive figures and lists from that data. Layout/copy live in HTML/CSS."
+  "action": "Mark Reviewed Locally"
 }

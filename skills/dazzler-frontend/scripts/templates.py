@@ -2,6 +2,7 @@
 
 import argparse
 import hashlib
+import html
 import json
 from pathlib import Path
 import shutil
@@ -78,6 +79,20 @@ def export(identifier, destination):
     (target / "selection.json").write_text(
         json.dumps(selection, indent=2) + "\n", encoding="utf-8"
     )
+    if template["format"] != "docx":
+        entry = rel + ("/index.html" if template["format"] == "ui" else "")
+        (target / "index.html").write_text(
+            '<!doctype html><html lang="en"><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            "<title>Exported Dazzler Example</title><main><h1>"
+            + html.escape(template["title"])
+            + '</h1><p><a href="'
+            + html.escape(entry, quote=True)
+            + '">Open the Example</a></p>'
+            "<p>This copy contains one selected fictional example and its local dependencies.</p>"
+            '<p><a href="NOTICE.txt">Credits and Notices</a></p></main></html>',
+            encoding="utf-8",
+        )
     return selection
 
 

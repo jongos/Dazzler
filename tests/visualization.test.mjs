@@ -180,3 +180,36 @@ test("area stacking groups by category without creating phantom zero points", as
   assert.deepEqual(stack.groupby, ["x"]);
   assert(!svg.includes("NaN"));
 });
+
+test("Editorial layers anchor to source values and render labelled benchmarks", async () => {
+  const input = {
+    ...sample,
+    type: "line",
+    annotations: [{ x: "Q2", text: "Peak: 18" }],
+    referenceLines: [{ y: 20, label: "Target: 20" }],
+  };
+  const saved = structuredClone(input);
+  const n = normalize(input);
+  assert.deepEqual(input, saved);
+  assert.equal(n.annotations[0].y, 18);
+  const { svg } = await vegaSVG(specification(n));
+  assert.match(svg, /Peak: 18/);
+  assert.match(svg, /Target: 20/);
+  for (const override of [
+    { annotations: [{ x: "missing", text: "No" }] },
+    { annotations: [{ x: "Q2", y: 999, text: "False" }] },
+    { referenceLines: [{ y: NaN, label: "No" }] },
+    { type: "area" },
+    { format: "docx" },
+  ])
+    assert.throws(() => normalize({ ...input, ...override }));
+  assert.throws(() =>
+    normalize({
+      ...input,
+      data: [
+        { x: "Q2", y: null },
+        { x: "Q3", y: 3 },
+      ],
+    }),
+  );
+});

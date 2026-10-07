@@ -68,3 +68,7 @@ For interactive regions on artwork rather than plotted observations, use [intera
 - [bkrsln/dataviz](https://github.com/bkrsln/dataviz): credited discovery directory, not a runtime dependency or copied asset collection. Its linked [From Data to Viz](https://www.data-to-viz.com/) and [FT Visual Vocabulary](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary) are useful chart-selection references. Consult their original sources; no graphics or prose are vendored from them.
 
 Bundle versions, constituent licenses and hashes are in `scripts/vendor/viz/provenance.json`. Rebuild through repository `tools/build_visualization.mjs`; do not edit generated engines. Existing font/color notices remain separate.
+
+## Source-Anchored Editorial Layers
+
+For single-series bar, line or scatter in HTML/SVG, add `annotations: [{"x":"Mar","text":"Peak: 42"}]` and `referenceLines: [{"y":30,"label":"Approved target: 30"}]`. An annotation derives y from an existing nonmissing source row; optional `position` is `above` or `below`. Supply at most six annotations and three reference lines. Other engines/encodings reject these layers rather than silently drop them. The caller must verify the annotation wording and reference source. Render and inspect collisions; use shorter labels or adjacent prose if needed. No automatic takeaway or causal inference is generated.

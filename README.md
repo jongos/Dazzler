@@ -44,7 +44,7 @@ Requires Node 22.20+. Select your agent in the installer. This downloads the lar
 Download the host ZIP, `install_skill.py` and `SHA256SUMS.txt` from the release linked below. With Python 3.10+ available, run this from the download folder for an existing project:
 
 ```sh
-python install_skill.py install --host codex --scope project --root /absolute/project --version 0.26.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
+python install_skill.py install --host codex --scope project --root /absolute/project --version 0.27.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
 ```
 
 Restart or refresh the agent, then ask it to use `$dazzler-frontend`. Add `--dry-run` to inspect an installation first. The installer checks hashes and resource completeness without executing downloaded scripts; updates preserve one previous version and refuse local edits.
@@ -67,7 +67,7 @@ Browse [19 starter prompts](https://jongos.github.io/Dazzler/starters/), the [co
 
 ## Thirty examples to build on
 
-Ten Word documents, ten editorial HTML documents and ten interactive interfaces show distinct typography, color and layout. Rebuilt with Dazzler 0.26.0, the collection pairs context-specific title panels, intentional phrase emphasis and tinted data tables with focused interface layouts. Headings are checked in generated documents and interactive states. Their data is fictional; adapt it to your project. Word previews are actual rendered pages, and interface actions are local demonstrations.
+Ten Word documents, ten editorial HTML documents and ten interactive interfaces show distinct typography, color and layout. Dazzler 0.27.0 adds distinct matter-memo, decision-brief and service-proposal architectures to the document collection, with native reading order and quieter continuation pages. Headings are checked in generated documents and interactive states. Their data is fictional; adapt it to your project. Word previews are actual rendered pages, and interface actions are local demonstrations.
 
 <details>
 <summary>View the complete snapshot gallery</summary>
@@ -114,6 +114,10 @@ Developers can start with [the tools guide](tools/README.md). Release validation
 
 Send ideas, feature requests and feedback to **Jon Gosier at [jon@filmhedge.com](mailto:jon@filmhedge.com)**.
 
+## Agent Workflow Improvements
+
+Focused audit, layout, adapt, optimize, clarify and extract procedures complement the existing design controls. Task-aware planning selects relevant checks; evidence assessment keeps failures and unrun checks visible. See [agent workflows](skills/dazzler-frontend/references/agent-workflows.md), [frontend engineering](skills/dazzler-frontend/references/frontend-engineering.md) and the [research/change plan](maintenance/DESIGN-CHANGE-PLAN.md). The Legal, Professional and Business document pilots now use task-specific architectures in Word and HTML; the remaining examples retain their existing compositions.
+
 ## Notes and credits
 
 Editorial guidance includes an adaptation of Peter Yang's [No AI Slop](https://github.com/petergyang/no-ai-slop), under [MIT](skills/dazzler-frontend/references/editorial-LICENSE.txt). Dazzler's design-first changes and pinned source are recorded in its provenance.
@@ -142,13 +146,13 @@ The directory listing is live. Its Gen Agent Trust Hub audit currently reports C
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.26.0/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.27.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).
 
-- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.26.0/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.26.0/dazzler-claude-compact.zip)
+- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.27.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.27.0/dazzler-claude-compact.zip)
 
 ### Comparison notes
 

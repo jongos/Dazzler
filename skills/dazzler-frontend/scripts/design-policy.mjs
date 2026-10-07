@@ -7,7 +7,10 @@ export function resolvePolicy(input = {}) {
   const match = context.match(
     /\b(legal|finance|financial|banking|insurance|government|clinical|compliance|contract|board (?:report|memo|meeting|pack|paper)|enterprise|B2B|admin|RFC|access-critical)\b/i,
   );
-  const tone = requested === "auto" ? (match ? "reserved" : "expressive") : requested;
+  const generation = input.policyGeneration ?? 2;
+  if (![1, 2].includes(generation)) throw Error("Unsupported policy generation");
+  const reserved = generation === 1 && match;
+  const tone = requested === "auto" ? (reserved ? "reserved" : "expressive") : requested;
   const measure = input.measure ?? 60;
   if (!Number.isFinite(measure) || measure < 30 || measure > 100)
     throw Error("Measure must be 30–100ch");
@@ -20,7 +23,7 @@ export function resolvePolicy(input = {}) {
     reason:
       requested !== "auto"
         ? "Explicit project choice"
-        : match
+        : reserved
           ? `Reserved context: ${match[0].toLowerCase()}`
           : "Expressive default",
     measure,

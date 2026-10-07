@@ -230,8 +230,12 @@ export function importDesign(text, accepted = false) {
 
 export function resumeConfig(system) {
   if (![1, 2, 3].includes(system.schemaVersion)) throw Error("Unsupported design-system schema");
-  if (system.schemaVersion >= 2 && system.configuration)
-    return structuredClone(system.configuration);
+  if (system.schemaVersion >= 2 && system.configuration) {
+    const config = structuredClone(system.configuration);
+    if (system.schemaVersion === 3 && config.policyGeneration === undefined)
+      config.policyGeneration = 1;
+    return config;
+  }
   if (!system.fonts || !system.palette?.modes || !system.type?.step0)
     throw Error("Incomplete legacy design system");
   return {

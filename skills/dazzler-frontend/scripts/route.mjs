@@ -4,6 +4,7 @@ import path from "node:path";
 import { resolvePolicy } from "./design-policy.mjs";
 import { recommend } from "./layouts.mjs";
 import { resolveRefinement } from "./refinement.mjs";
+import { planWorkflow } from "./workflow.mjs";
 import { readJSON } from "./runtime.mjs";
 export function route(input = {}) {
   const { kind = "interface", framework = "none", format = "html", interactive = false } = input;
@@ -23,6 +24,21 @@ export function route(input = {}) {
   };
   if (input.composition) result.composition = recommend(input.composition);
   if (input.refinement) result.refinement = resolveRefinement(input.refinement);
+  if (Object.hasOwn(input, "workflow")) {
+    if (
+      !input.workflow ||
+      typeof input.workflow !== "object" ||
+      Array.isArray(input.workflow) ||
+      Object.keys(input.workflow).some((k) => !["scope", "features"].includes(k))
+    )
+      throw Error("Workflow accepts scope and features; use route kind, framework and refinement");
+    result.workflow = planWorkflow({
+      ...input.workflow,
+      kind,
+      framework,
+      intent: result.refinement?.requested.intent ?? "auto",
+    });
+  }
   if (input.designContext?.found === true) {
     result.designContext = {
       found: true,
@@ -92,9 +108,29 @@ export function route(input = {}) {
       "Font coverage and contrast",
     ];
   }
+  if (!result.refinement?.readOnly) {
+    result.options.paletteExplorer = "colors.mjs explore";
+    result.reasons.push(
+      "For new palettes, author continuous color-intent ranges and select using actual content; preserve approved colors for small edits. Catalog palettes are optional references, not the search boundary.",
+    );
+  }
+  if (kind === "interface" && !result.refinement?.readOnly) {
+    result.options.compositionInput = "pageComposition";
+    result.reasons.push(
+      "For substantial new work, independently select a distinctive content-led direction using web-design-space.md. The studio exporter accepts authored section and region relationships; no template selection is required. Small edits preserve the existing system.",
+    );
+  }
+  if (kind === "document" && !result.refinement?.readOnly) {
+    result.options.directionHelper = "document-directions.mjs";
+    result.reasons.push(
+      "For new documents or substantial restyles, develop structurally distinct candidates with document-design-space.md, then render and select for content fit. Preserve existing design on small edits.",
+    );
+  }
   if (result.refinement?.readOnly) {
     result.options.readOnly = true;
-    result.reasons.push("Critique is report-only; do not generate or apply project edits.");
+    result.reasons.push(
+      "Critique and audit are report-only; do not generate or apply project edits.",
+    );
   }
   return result;
 }

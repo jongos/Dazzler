@@ -42,6 +42,7 @@ def create(output):
         ".github",
         "docs",
         "maintenance/phase6",
+        "maintenance/gallery-production/v0.27.0/previous-v0.26.0",
     ):
         paths.extend(
             p
@@ -59,6 +60,12 @@ def create(output):
             "AGENTS.md",
             "maintenance/MAINTENANCE.md",
             "maintenance/requirements.txt",
+            "maintenance/GALLERY-GENERATION.md",
+            "maintenance/gallery-release.json",
+            "maintenance/gallery-production/v0.27.0/document-briefs.json",
+            "maintenance/gallery-production/v0.27.0/interface-briefs.json",
+            "maintenance/gallery-production/v0.27.0/browser-checks.json",
+            "maintenance/gallery-production/v0.27.0/REVIEW.md",
             "maintenance/ONBOARDING.md",
             "maintenance/DESIGN-PHILOSOPHY.md",
             "maintenance/RELEASE-023.md",

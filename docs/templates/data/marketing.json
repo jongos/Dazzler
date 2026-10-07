@@ -1,197 +1,100 @@
 {
-  "schemaVersion": 1,
+  "id": "marketing",
+  "title": "Second Life Repair Campaign",
+  "short": "Keep the Good Things",
+  "tag": "SECOND LIFE / CAMPAIGN EDITION 01",
+  "lead": "Make repair feel like a first choice. Show the work, explain the process and make booking simple.",
+  "accent": "#9B301C",
+  "paper": "#FFF0E5",
+  "font": "Oswald",
+  "word": "Arial",
+  "layout": "editorial",
+  "stat": "120",
+  "label": "illustrative repair slots over four weeks",
+  "intro": "A fictional campaign for a local repair collective. The offer covers a 20-minute assessment; repair price and turnaround are confirmed after inspection.",
+  "sections": [
+    [
+      "The Story",
+      "Lead with a well-used object and its repair, not an unsupported sustainability promise. Explain what can be fixed and what cannot."
+    ],
+    [
+      "The Offer",
+      "Book an assessment, bring the item and receive a written estimate. No repair begins without approval. Parts may affect timing."
+    ],
+    [
+      "Measure the Journey",
+      "Track assessment bookings, attended appointments and approved repairs separately. Do not present bookings as completed repairs."
+    ]
+  ],
+  "headers": [
+    "Channel",
+    "Message",
+    "Action"
+  ],
+  "rows": [
+    [
+      "Window poster",
+      "Keep the Good Things",
+      "Scan for times"
+    ],
+    [
+      "Email",
+      "See a repair in progress",
+      "Book assessment"
+    ],
+    [
+      "Workshop",
+      "Meet the repair team",
+      "Bring one item"
+    ]
+  ],
+  "closing": "Fictional campaign · Capacity figures are planning assumptions.",
+  "prompt": "Build a bold fictional repair-campaign editorial. Use a large condensed headline, rust and peach color fields, a diagram of the repair journey and a channel ledger. Avoid generic marketing cards and unsupported environmental claims.",
   "fictional": true,
-  "asOf": "2027-06-21",
-  "scenario": "Campaign brief with audience, message, channel budget, production details and measurement",
-  "generation": "Deterministic authored fixtures; no client or external personal data",
-  "funnel": {
-    "visits": 8000,
-    "menuOpens": 1200,
-    "starts": 180,
-    "inquiries": 120
-  },
-  "budget": {
-    "paidSocial": 1400,
-    "print": 600,
-    "content": 700,
-    "reserve": 300
+  "design": {
+    "accent": "#9B301C",
+    "secondary": "#9B301C",
+    "paper": "#FFF0E5"
   },
   "document": [
     {
-      "title": "Make the first visit easy",
-      "blocks": [
-        {
-          "type": "p",
-          "text": "Owner: Lena Ortiz    Campaign: 1\u201331 July 2027    Review: 18 June 2027"
-        },
-        {
-          "type": "metrics",
-          "values": [
-            [
-              "120",
-              "inquiry target"
-            ],
-            [
-              "$3,000",
-              "sample budget"
-            ],
-            [
-              "31 days",
-              "launch window"
-            ]
-          ]
-        },
-        {
-          "type": "callout",
-          "label": "PRIMARY OBJECTIVE",
-          "text": "Generate 120 qualified reservation inquiries during the launch month. This is a sample target, not a forecast or an achieved result."
-        },
-        {
-          "type": "h",
-          "text": "Who we are speaking to"
-        },
-        {
-          "type": "p",
-          "text": "People living or working within the local neighborhood who want a relaxed place for a midweek dinner. They need to understand the menu, typical spend and how to book before deciding."
-        },
-        {
-          "type": "h",
-          "text": "Message and response"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Main message",
-            "Supporting content",
-            "Call to action"
-          ],
-          "rows": [
-            [
-              "A seasonal dinner close to home",
-              "Menu highlights, room details, service hours and booking instructions",
-              "View the menu and request a table"
-            ]
-          ],
-          "widths": null
-        },
-        {
-          "type": "h",
-          "text": "Creative direction"
-        },
-        {
-          "type": "p",
-          "text": "Warm food-led photography, short ingredient descriptions and readable menu typography. Show the actual space when photographs are supplied. Avoid invented reviews, awards or claims about local sourcing."
-        },
-        {
-          "type": "h",
-          "text": "Required information"
-        },
-        {
-          "type": "list",
-          "items": [
-            "Approved menu and prices; service dates and hours.",
-            "A clear booking route and accurate location information.",
-            "Confirmed dietary and accessibility guidance from the operator."
-          ]
-        },
-        {
-          "type": "h",
-          "text": "Approval route"
-        },
-        {
-          "type": "p",
-          "text": "Chef reviews menu descriptions. Operations confirms hours and booking information. Campaign owner approves final copy before publication."
-        }
+      "title": "Second Life Repair Campaign",
+      "sections": [
+        [
+          "The Story",
+          "Lead with a well-used object and its repair, not an unsupported sustainability promise. Explain what can be fixed and what cannot."
+        ],
+        [
+          "The Offer",
+          "Book an assessment, bring the item and receive a written estimate. No repair begins without approval. Parts may affect timing."
+        ],
+        [
+          "Measure the Journey",
+          "Track assessment bookings, attended appointments and approved repairs separately. Do not present bookings as completed repairs."
+        ]
       ],
-      "kicker": null
-    },
-    {
-      "title": "Channels and measurement",
-      "blocks": [
-        {
-          "type": "chart",
-          "label": "Allocate by the job to be done",
-          "rows": [
-            [
-              "Paid social",
-              1400
-            ],
-            [
-              "Local print",
-              600
-            ],
-            [
-              "Content",
-              700
-            ],
-            [
-              "Reserve",
-              300
-            ]
-          ],
-          "kind": "bar",
-          "unit": "USD",
-          "asset": "marketing-1"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Week",
-            "Asset",
-            "Decision signal"
-          ],
-          "rows": [
-            [
-              "01",
-              "Menu story and launch email",
-              "Are people reaching the menu?"
-            ],
-            [
-              "02",
-              "Chef interview and neighborhood card",
-              "Are inquiry starts increasing?"
-            ],
-            [
-              "03",
-              "Midweek creative variation",
-              "Which message produces qualified interest?"
-            ],
-            [
-              "04",
-              "Retrospective and follow-up",
-              "What should be retained?"
-            ]
-          ],
-          "widths": [
-            14,
-            42,
-            44
-          ]
-        },
-        {
-          "type": "h",
-          "text": "Measure the actual journey"
-        },
-        {
-          "type": "p",
-          "text": "Synthetic funnel: 8,000 landing visits \u2192 1,200 menu opens \u2192 180 inquiry starts \u2192 120 completed inquiries. Completion is 1.5% of visits and 66.7% of starts. An inquiry is not a confirmed booking."
-        },
-        {
-          "type": "callout",
-          "label": "SPEND WITH A QUESTION",
-          "text": "If the menu attracts attention but the form loses people, improve the form before buying more traffic. Targets and illustrative funnel values are not forecasts."
-        }
+      "headers": [
+        "Channel",
+        "Message",
+        "Action"
       ],
-      "kicker": null
+      "rows": [
+        [
+          "Window poster",
+          "Keep the Good Things",
+          "Scan for times"
+        ],
+        [
+          "Email",
+          "See a repair in progress",
+          "Book assessment"
+        ],
+        [
+          "Workshop",
+          "Meet the repair team",
+          "Bring one item"
+        ]
+      ]
     }
-  ],
-  "design": {
-    "accent": "#B3381B",
-    "secondary": "#5040A8",
-    "bright": "#FBD66F",
-    "paper": "#FFF9F3",
-    "headingFont": "Oswald",
-    "voice": "Campaign editorial / vermilion and violet"
-  },
-  "capabilities": "Editorial emphasis, reconciled budget and funnel semantics"
+  ]
 }

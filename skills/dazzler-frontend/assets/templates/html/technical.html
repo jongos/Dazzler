@@ -1,190 +1,152 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Order Status Webhook Delivery — Dazzler</title>
-    <link rel="stylesheet" href="../fonts/fonts.css" />
-    <link rel="stylesheet" href="technical/tokens.css" />
-    <link rel="stylesheet" href="technical/styles.css" />
-  </head>
-  <body class="doc-technical">
-    <nav class="tools">
-      <a href="../index.html">Dazzler template gallery</a
-      ><button onclick="print()">Print / save PDF</button>
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Relay Queue Recovery Runbook</title
+  ><link rel="stylesheet" href="../fonts/fonts.css" /><link
+    rel="stylesheet"
+    href="technical/tokens.css"
+  /><link rel="stylesheet" href="technical/styles.css" />
+  <body>
+    <nav class="top">
+      <a href="../index.html">Dazzler Design Gallery</a
+      ><button onclick="print()">Print This Example</button>
     </nav>
-    <main>
-      <article class="sheet">
-        <header class="folio"><span>PLATFORM ENGINEERING</span><span>01 / 02</span></header>
-        <h1>Order Status Webhook Delivery</h1>
-        <p class="subtitle"><em>Technical design • RFC 014 • Proposed</em></p>
-        <p class="prose">Owner: Alex Rivera Reviewers: API + Reliability Updated: 18 June 2027</p>
-        <div class="metrics">
-          <div class="metric"><strong>6</strong><span>attempt maximum</span></div>
-          <div class="metric"><strong>10 sec</strong><span>request timeout</span></div>
-          <div class="metric"><strong>24 hr</strong><span>retry window</span></div>
-        </div>
-        <aside class="callout">
-          <strong>DESIGN DECISION</strong>
-          <p>
-            Deliver order status events asynchronously with
-            <strong class="keyword">at-least-once</strong> delivery. Consumers deduplicate on
-            event_id; the service does not promise exactly-once processing.
-          </p>
+    <main class="canvas">
+      <header class="runbook">
+        <p class="kicker">RELAY / OPERATIONS RUNBOOK 07</p>
+        <h1>Restore the Queue Safely</h1>
+        <p class="lead">
+          Pause delivery before replaying events. Confirm the checkpoint, then resume in a
+          controlled batch.
+        </p>
+        <aside>
+          <div class="stat">50</div>
+          <p class="stat-label">events in the first recovery batch</p>
         </aside>
-        <h2 class="section-title">Context and Boundaries</h2>
-        <p class="prose">
-          Partners currently poll for order updates. This design adds signed event delivery to
-          registered HTTPS endpoints. It excludes partner endpoint provisioning, historical
-          backfills and delivery to arbitrary customer-supplied URLs.
-        </p>
-        <h2 class="section-title">Delivery Path</h2>
-        <p class="prose">
-          Order transaction → transactional outbox → delivery queue → worker → registered partner
-          endpoint. A delivery record stores each attempt and its result.
-        </p>
-        <div class="table-wrap" tabindex="0">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Requirement</th>
-                <th scope="col">Design response</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">No lost committed events</th>
-                <td>Write the outbox record in the order transaction</td>
-              </tr>
-              <tr>
-                <th scope="row">Duplicate-safe processing</th>
-                <td>Keep event_id stable across retries</td>
-              </tr>
-              <tr>
-                <th scope="row">Endpoint authenticity</th>
-                <td>Sign the raw request body with the partner secret</td>
-              </tr>
-              <tr>
-                <th scope="row">Failure isolation</th>
-                <td>Separate per-partner concurrency and delivery limits</td>
-              </tr>
-            </tbody>
-          </table>
+      </header>
+      <div class="columns">
+        <div>
+          <p>
+            This fictional runbook handles a stalled delivery queue. It demonstrates a safe
+            sequence; adapt commands and thresholds to the actual system before operational use.
+          </p>
+          <section class="reading">
+            <h2>01 Stabilize</h2>
+            <p>
+              Pause the worker and record the last acknowledged event ID. Confirm that the consumer
+              is healthy before attempting a replay.
+            </p>
+          </section>
+          <section class="reading">
+            <h2>02 Recover</h2>
+            <p>
+              Replay the next 50 events from the checkpoint. Check duplicate handling and compare
+              delivered IDs with acknowledgements.
+            </p>
+          </section>
+          <section class="reading">
+            <h2>03 Verify</h2>
+            <p>
+              Resume only when the batch reconciles and error rate remains below the agreed
+              threshold. If it fails, pause again and retain the evidence.
+            </p>
+          </section>
         </div>
-        <h2 class="section-title">Event Example</h2>
-        <pre><code>{
-  &quot;event_id&quot;: &quot;evt_demo_0042&quot;,
-  &quot;type&quot;: &quot;order.shipped&quot;,
-  &quot;occurred_at&quot;: &quot;2027-06-18T14:05:00Z&quot;,
-  &quot;data&quot;: {&quot;order_id&quot;: &quot;ord_demo_108&quot;, &quot;status&quot;: &quot;shipped&quot;}
-}</code></pre>
-        <p class="prose">
-          The identifiers and payload are illustrative. No credentials or customer information are
-          included.
-        </p>
-        <footer class="page-foot">
-          <span>FICTIONAL EXAMPLE / TECHNICAL</span><span>Dazzler · 1</span>
-        </footer>
-      </article>
-      <article class="sheet">
-        <header class="folio"><span>PLATFORM ENGINEERING</span><span>02 / 02</span></header>
-        <h1>Failures and Release Plan</h1>
-        <figure class="chart">
-          <figcaption>Synthetic delivery outcomes</figcaption>
-          <img
-            src="../charts/technical-1.svg"
-            alt="Synthetic delivery outcomes; exact values follow"
-          />
-          <details>
-            <summary>Read the chart data</summary>
+        <aside>
+          <div class="figure">
+            <svg viewBox="0 0 720 150" role="img" aria-label="Pause then Replay then Verify">
+              <path d="M70 65H650" stroke="currentColor" stroke-width="2" />
+              <circle
+                cx="110"
+                cy="65"
+                r="35"
+                fill="var(--paper)"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <text x="110" y="74" text-anchor="middle" fill="currentColor" font-size="25">1</text>
+              <text x="110" y="135" text-anchor="middle" fill="currentColor" font-size="18">
+                Pause
+              </text>
+              <circle
+                cx="360"
+                cy="65"
+                r="35"
+                fill="var(--paper)"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <text x="360" y="74" text-anchor="middle" fill="currentColor" font-size="25">2</text>
+              <text x="360" y="135" text-anchor="middle" fill="currentColor" font-size="18">
+                Replay
+              </text>
+              <circle
+                cx="610"
+                cy="65"
+                r="35"
+                fill="var(--paper)"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <text x="610" y="74" text-anchor="middle" fill="currentColor" font-size="25">3</text>
+              <text x="610" y="135" text-anchor="middle" fill="currentColor" font-size="18">
+                Verify
+              </text>
+            </svg>
+          </div>
+          <h2>Proceed or Stop</h2>
+          <p class="table-hint">Scroll the table sideways to see all columns.</p>
+          <div
+            class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Restore the Queue Safely data"
+          >
             <table>
+              <thead>
+                <tr>
+                  <th scope="col">Signal</th>
+                  <th scope="col">Proceed</th>
+                  <th scope="col">Stop</th>
+                </tr>
+              </thead>
               <tbody>
                 <tr>
-                  <th>First try</th>
-                  <td>960 events</td>
+                  <th scope="row">Acknowledgements</th>
+                  <td>50 of 50 matched</td>
+                  <td>Any missing ID</td>
                 </tr>
                 <tr>
-                  <th>Retry</th>
-                  <td>35 events</td>
+                  <th scope="row">Duplicates</th>
+                  <td>Handled idempotently</td>
+                  <td>Side effect repeated</td>
                 </tr>
                 <tr>
-                  <th>Held</th>
-                  <td>5 events</td>
+                  <th scope="row">Consumer health</th>
+                  <td>Checks passing</td>
+                  <td>Timeout or error</td>
                 </tr>
               </tbody>
             </table>
-          </details>
-        </figure>
-        <div class="table-wrap" tabindex="0">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Fixture</th>
-                <th scope="col">Expected behavior</th>
-                <th scope="col">Sample outcome</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Duplicate event</th>
-                <td>Consumer deduplicates stable event_id</td>
-                <td>1 business action</td>
-              </tr>
-              <tr>
-                <th scope="row">HTTP 429</th>
-                <td>Respect bounded <strong class="keyword">retry</strong> schedule</td>
-                <td>Delivered on attempt 3</td>
-              </tr>
-              <tr>
-                <th scope="row">HTTP 400</th>
-                <td>Stop and request configuration review</td>
-                <td>Held</td>
-              </tr>
-              <tr>
-                <th scope="row">Private destination</th>
-                <td>Reject before dispatch</td>
-                <td>Blocked</td>
-              </tr>
-              <tr>
-                <th scope="row">Worker restart</th>
-                <td>Replay durable outbox</td>
-                <td>No missing event</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h2 class="section-title">Release Gate</h2>
-        <p class="prose">
-          Replay 1,000 synthetic events. 960 succeed first time, 35 after
-          <strong class="keyword">retry</strong> and 5 remain held for review: 99.5% eventually
-          delivered in this fixture, not a production SLO.
-        </p>
-        <aside class="callout">
-          <strong>ROLL BACK SAFELY</strong>
-          <p>
-            Pause new dispatch and retain the outbox and attempt history. Never log signing secrets.
-            Expand only after a measured pilot and operational review.
-          </p>
+          </div>
+          <div class="band">
+            <h2>Stop Condition</h2>
+            <p>
+              If any event is unmatched, pause delivery and preserve the checkpoint. Do not widen
+              the replay batch.
+            </p>
+          </div>
         </aside>
-        <footer class="page-foot">
-          <span>FICTIONAL EXAMPLE / TECHNICAL</span><span>Dazzler · 2</span>
-        </footer>
-      </article>
+      </div>
+      <p class="closing">
+        Synthetic operational example · Commands require environment-specific review.
+      </p>
     </main>
-    <footer class="notes">
-      <details>
-        <summary>Design notes and sample data</summary>
-        <p>
-          Monospace hierarchy, event data and failure-path design. Engineering field guide / ink and
-          cyan.
-        </p>
-        <p>
-          All organizations, people, dates and measurements are fictional. Replace sample material
-          with verified project content. Original Dazzler design: Apache-2.0; local fonts retain
-          their notices. Desktop Word fonts are referenced, not embedded.
-        </p>
-        <a href="../data/technical.json">Inspect the synthetic dataset</a>
-      </details>
+    <footer>
+      Fictional demonstration · Original Dazzler design · Apache-2.0. Local font licenses accompany
+      the files. No information is transmitted.
     </footer>
   </body>
 </html>

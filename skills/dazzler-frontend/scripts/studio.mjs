@@ -6,6 +6,7 @@ import { parseArgs } from "node:util";
 import { pathToFileURL } from "node:url";
 import path from "node:path";
 import { preparePolicy, applyPolicy } from "./design-policy.mjs";
+import { compilePageComposition } from "./page-composition.mjs";
 import { templateCSS } from "./template-theme.mjs";
 import { resolveRefinement, prepareRefinement, refinementCSS } from "./refinement.mjs";
 import { enhanceType, specimen } from "./type-system.mjs";
@@ -134,6 +135,16 @@ export function tokens(input = {}) {
     palette,
     provenance: input.brand?.source ?? null,
     notes: [
+      ...(modern && !originalInput.fonts && !originalInput.brand?.fonts
+        ? [
+            "Typography is unconfigured: system fonts are scaffolding. Select and load appropriate project fonts before claiming a finished art direction.",
+          ]
+        : []),
+      ...(modern && !originalInput.colors && !originalInput.brand?.seed
+        ? [
+            "Color direction is unconfigured: the default seed is scaffolding, not a selected project identity.",
+          ]
+        : []),
       ...Object.values(fontRoles)
         .filter((x) => !x.known && x.inferred)
         .map(
@@ -247,10 +258,18 @@ export function tokens(input = {}) {
     `\n  --font-${fontRoles.body.fallback.replace(/^ui-/, "").replace("system-ui", "sans").replace("sans-serif", "sans").replace("monospace", "mono")}: var(--font-body);\n  --font-display: var(--font-heading);\n}\n`;
   const result = enhanceType({ system, css, dtcg, tailwind, theme }, input);
   if (modern) applyPolicy(result, input);
+  if (input.pageComposition !== undefined) {
+    if (!modern) throw Error("Page composition requires schema 3");
+    const composition = compilePageComposition(input.pageComposition);
+    result.css += "\n" + composition.css;
+    result.system.pageComposition = composition.plan;
+    result.system.notes.push(...composition.notes);
+  }
   if (result.system.schemaVersion >= 2)
     result.system.configuration = structuredClone({
       ...originalInput,
       schemaVersion: modern ? 3 : 2,
+      ...(modern ? { policyGeneration: input.policyGeneration ?? 2 } : {}),
     });
   if (refinement.active) {
     result.system.refinement = refinement;
@@ -453,6 +472,7 @@ async function main() {
       "motion",
       "policy",
       "grid",
+      "pageComposition",
     ])
       if (
         input[field] !== undefined &&
