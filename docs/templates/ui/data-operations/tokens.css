@@ -1,7 +1,11 @@
 :root {
-  --accent: #0b4659;
-  --paper: #e8f4f2;
+  --accent: #21bb59;
+  --paper: #061f27;
   --display: "Office Code Pro";
+  --ink: #eff5f7;
+  --on-accent: #000000;
+  --signal: #38e170;
+  --counter: #99bffa;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -23,4 +27,15 @@
   --reading-value-color: #0b4659;
   --alert-border-left: #9a3b18;
   --alert-background: #ffe8d4;
+  --flow-background-2: #061f27;
+  --flow-color-2: #65ffd6;
+  --flow-border: #65ffd6;
+  --flow-button-color: #65ffd6;
+  --flow-button-border-color: #65ffd6;
+  --flow-button-aria-pressed-true-background-2: #65ffd6;
+  --flow-button-aria-pressed-true-color-2: #061f27;
+  --reading-value-color-2: #65ffd6;
+  --alert-background-2: #ffb75e;
+  --alert-color: #241b08;
+  --alert-border-color: #ffb75e;
 }

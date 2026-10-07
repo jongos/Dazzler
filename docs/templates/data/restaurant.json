@@ -4,8 +4,8 @@
   "short": "An Evening at Morrow",
   "tag": "MORROW / LATE SUMMER",
   "lead": "A short menu built around what is ready now. Choose a few dishes and share the table.",
-  "accent": "#713541",
-  "paper": "#F9F1DF",
+  "accent": "#F0B601",
+  "paper": "#082D26",
   "font": "Libre Baskerville",
   "word": "Georgia",
   "layout": "menu",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Sample menu · Tell the team about allergies before ordering.",
-  "prompt": "Design an original seasonal supper menu for fictional Morrow. Use a wine-colored vertical wordmark, elegant serif course hierarchy, aligned prices and a botanical line motif. Give ingredient and allergy information readable space; avoid a report shell or stock-food hero.",
+  "prompt": "Design an original seasonal supper menu for fictional Morrow. Use a wine-colored vertical wordmark, elegant serif course hierarchy, aligned prices and a botanical line motif. Give ingredient and allergy information readable space; avoid a report shell or stock-food hero. Color direction: Midnight-green supper menu with warm luminous type and citrus course markers.",
+  "fontSelection": {
+    "id": "libre-baskerville",
+    "css_family": "Libre Baskerville",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#713541",
+  "originalPaper": "#F9F1DF",
+  "colorDirection": "Midnight-green supper menu with warm luminous type and citrus course markers.",
   "fictional": true,
   "design": {
-    "accent": "#713541",
-    "secondary": "#713541",
-    "paper": "#F9F1DF"
+    "accent": "#F0B601",
+    "secondary": "#F0B601",
+    "paper": "#082D26",
+    "text": "#F4F4F0",
+    "accentText": "#F0B601",
+    "onAccent": "#000000"
   },
   "document": [
     {

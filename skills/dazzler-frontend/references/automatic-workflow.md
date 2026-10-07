@@ -1,10 +1,10 @@
 # One brief to a finished design
 
-See [composition and refinement](composition.md) for purpose-based layout contracts, measured review candidates and bounded refinement intents. Preserve intentional repetition and record exceptions; these candidates remain separate from accessibility failures.
+See [composition and refinement](composition.md) for layout contracts and bounded refinement. Preserve intentional repetition; keep advisory findings separate from accessibility failures.
 
-For persistent records, fluid typography, safe token interchange and compatible theme proposals, follow [persistent systems](persistent-systems.md). Discover the existing project record before choosing a new direction.
+Use [persistent systems](persistent-systems.md) for records, fluid type and token interchange. Read the existing record first.
 
-This is the default orchestration for frontend-design. The agent handles the choices and tools; the user supplies the task. The existing helpers are internal implementation tools, not setup instructions the user must follow.
+The agent handles design choices and tools; the user supplies the task. Helpers are internal tools, not user setup requirements.
 
 For a new design or substantial restyle, begin with [art direction](art-direction.md): choose and implement the content-specific idea directly from the prompt. Examples demonstrate possibilities; reuse one only when explicitly selected. Helper output alone is not a finished design.
 
@@ -20,7 +20,7 @@ For new palettes, use the existing [color workflow](color-workflow.md) to explor
 
 For substantial design, use [the deslop framework](deslop.md) to connect purpose to composition. Apply the [art-direction standard](art-direction.md) through these same building blocks. Compare contrasting directions internally, then choose one based on the task, not alphabetic order, fashion or a fixed default. Make the type, palette, spacing, media, controls and motion express the same direction. State the direction briefly as progress and keep working; do not wait for routine approval.
 
-The following translations are examples of agent reasoning, not mandatory presets:
+Consider [recipe starting points](design-recipes.md) alongside original directions; adapt a varied shortlist to the brief. These are examples, not presets:
 
 For document sections, infer sustained reading, comparison or reference lookup from the content and pass the corresponding `readingTask` to `document-directions.mjs` when using that helper. Keep mixed documents section-specific and preserve explicit locks. See [document design space](document-design-space.md) for the controls; the user need not choose them.
 
@@ -28,7 +28,7 @@ For document sections, infer sustained reading, comparison or reference lookup f
 |---|---|---|---|
 | Repeated operational work | `ui`; practical, clean, technical | Deliberate surfaces and strong role contrast within the brand | Grouped controls, readable numeric density, immediate feedback |
 | Sustained editorial reading | `body`; literary, editorial, quiet | An authored surface rhythm that supports sustained reading | Strong measure, section hierarchy, restrained chrome |
-| Warm community or craft product | `body`/`heading`; warm, friendly, handmade | Cozy/earthy candidates or an existing brand seed | Relevant imagery, approachable labels, clear primary action |
+| Warm community or craft product | `body`/`heading`; warm, friendly, handmade | Content-specific warm or contrasting fields; preserve an existing brand seed | Relevant imagery, approachable labels, clear primary action |
 | Expressive portfolio | `display` plus readable `body`; expressive, architectural, bold | Brief-specific custom seed or bold/dramatic candidates | Work-led composition and one meaningful signature |
 
 Map the brief to each catalog's actual vocabulary. Font tags and color moods are different vocabularies; never pass the same arbitrary mood to both and assume they agree. No-match results call for better mapping or a suitable custom seed, not a preference questionnaire or silent relaxation of hard constraints.
@@ -37,7 +37,7 @@ Map the brief to each catalog's actual vocabulary. Font tags and color moods are
 
 For a new or substantially reshaped artifact, identify what the reader must understand or do first. Choose the order of content and the representation of its evidence before fonts or colors. A legal issue, purchasing offer and operational decision need not share a hero/three-metric/callout skeleton. Reuse a component because the behavior fits, not because it is the easiest available example.
 
-For a collection, compare page silhouettes and hierarchy with color removed. Look for repeated opening sequences, display metrics, boxed prose and identical continuation pages. Keep repetition that serves comparison or a shared brand; revise repetition that hides different reader tasks. Do not enforce arbitrary uniqueness or change an approved layout during a small fix. Require an actual rendered before/after artifact when claiming visual improvement; changed instructions or passing helper tests are insufficient.
+For a collection, review dominant surfaces and color area using the color workflow before approval. Different accent hues do not establish different visual character. Then compare page silhouettes and hierarchy with color removed. Look for repeated opening sequences, display metrics, boxed prose and identical continuation pages. Keep repetition that serves comparison or a shared brand; revise repetition that hides different reader tasks. Do not enforce arbitrary uniqueness or change an approved layout during a small fix. Require an actual rendered before/after artifact when claiming visual improvement; changed instructions or passing helper tests are insufficient.
 
 ## 3. Choose and apply typography
 

@@ -1,7 +1,11 @@
 :root {
-  --accent: #123a8c;
-  --paper: #eef3ff;
+  --accent: #705c00;
+  --paper: #ffffff;
   --display: "Archivo";
+  --ink: #1a1719;
+  --on-accent: #ffffff;
+  --signal: #a79118;
+  --counter: #fc9da8;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -15,4 +19,7 @@
   --footer-border-top: #17252b40;
   --band-color: white;
   --body-background: white;
+  --decision-aside-background: #1547ef;
+  --decision-aside-color: white;
+  --decision-h1-color: #1547ef;
 }

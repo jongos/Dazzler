@@ -1,7 +1,11 @@
 :root {
-  --accent: #543020;
-  --paper: #ffe8cc;
+  --accent: #532e00;
+  --paper: #ff6726;
   --display: "Archivo";
+  --ink: #151918;
+  --on-accent: #ffffff;
+  --signal: #e7a235;
+  --counter: #623abc;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -20,4 +24,12 @@
   --ticket-border-top: #543020;
   --button-aria-pressed-true-background: #543020;
   --button-aria-pressed-true-color: white;
+  --ticket-background-2: #ffffff;
+  --ticket-color: #172a72;
+  --ticket-border-color: #1640ba;
+  --counter-product-button-button-aria-pressed-true-background: #1634a6;
+  --counter-product-button-button-aria-pressed-true-color: white;
+  --counter-product-button-button-aria-pressed-true-border-color: #1634a6;
+  --cafe-h1-color: #111;
+  --ticket-button-color: #172a72;
 }

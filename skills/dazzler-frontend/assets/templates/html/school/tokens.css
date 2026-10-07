@@ -1,7 +1,11 @@
 :root {
-  --accent: #28592e;
-  --paper: #f3f1d9;
+  --accent: #5d5704;
+  --paper: #ffde26;
   --display: "Young Serif";
+  --ink: #151a17;
+  --on-accent: #ffffff;
+  --signal: #5d5704;
+  --counter: #f178fe;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -17,4 +21,9 @@
   --body-background: white;
   --textarea-background: #fff;
   --textarea-background-2: #c6cbbb;
+  --notebook-aside-background: #12512f;
+  --notebook-aside-color: #ffffff;
+  --notebook-textarea-background: #ffffff;
+  --notebook-textarea-color: #171717;
+  --notebook-h1-color: #12512f;
 }

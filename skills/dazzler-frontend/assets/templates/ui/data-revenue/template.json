@@ -1,7 +1,7 @@
 {
   "id": "data-revenue",
   "title": "Common Ground Membership Observatory",
-  "prompt": "Build a fictional membership revenue explorer whose main surface is an annual chart, not KPI cards. Use ink blue, coral and cream. Switch between revenue and member counts with accurate axes, exact values and a data table. Make the selected metric visually and programmatically clear.",
+  "prompt": "Build a fictional membership revenue explorer whose main surface is an annual chart, not KPI cards. . Switch between revenue and member counts with accurate axes, exact values and a data table. Make the selected metric visually and programmatically clear. Color direction: White analytical canvas with vivid violet bars and a black chart field; exact labels stay primary.",
   "data": {
     "years": [
       2021,

@@ -333,3 +333,97 @@ blockquote {
     gap: 25px;
   }
 }
+/* Selected engine roles; accent fills and labels have separate foregrounds. */
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+p,
+li,
+blockquote {
+  max-width: 60ch;
+}
+.top,
+footer,
+td,
+th,
+.event,
+.notes,
+.task,
+.product,
+.dish-row,
+.menu-controls,
+.ledger {
+  border-color: var(--accent);
+}
+button,
+input,
+select,
+textarea {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+input,
+select,
+textarea {
+  background: var(--paper);
+}
+button {
+  background: var(--button-background);
+}
+button[aria-pressed="true"],
+.band,
+.schedule,
+thead,
+.beats section:nth-child(2) {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.kicker,
+.closing {
+  color: var(--ink);
+}
+.stat,
+.event,
+.reading-value {
+  color: var(--accent);
+}
+@media print {
+  body {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+.flow {
+  background: var(--flow-background-2);
+  color: var(--flow-color-2);
+  border: 2px solid var(--flow-border);
+}
+.flow button {
+  color: var(--flow-button-color);
+  border-color: var(--flow-button-border-color);
+}
+.flow button[aria-pressed="true"] {
+  background: var(--flow-button-aria-pressed-true-background-2);
+  color: var(--flow-button-aria-pressed-true-color-2);
+}
+.reading-value {
+  color: var(--reading-value-color-2);
+}
+.alert {
+  background: var(--alert-background-2);
+  color: var(--alert-color);
+  border-color: var(--alert-border-color);
+}

@@ -54,6 +54,9 @@ function tokenize(css, context, previous = {}) {
           "--bright": "surface",
           "--paper": "background",
           "--ink": "text",
+          "--on-accent": "onAction",
+          "--signal": "accent",
+          "--counter": "secondary",
           "--tint": "surface",
         }[key] ??
         previous.bindings?.[key]?.role ??

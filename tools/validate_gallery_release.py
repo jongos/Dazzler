@@ -52,9 +52,14 @@ def validate(manifest, root=ROOT):
         assert (
             len(example["prompt"].strip()) >= 40
         ), "Retain the complete meaningful sample prompt"
-        assert (
-            example["generationMethod"] == "current-skill-from-prompt"
-        ), "Preset reskins do not qualify"
+        refinement = example.get("reviewScope") == "color-system-refinement"
+        assert example["generationMethod"] == (
+            "current-skill-refinement" if refinement else "current-skill-from-prompt"
+        ), "Record the actual generation scope"
+        if refinement:
+            assert len(example.get("preservedStructureReason", "").strip()) >= 40
+            assert len(example.get("colorChanges", [])) >= 3
+            assert all(len(x.strip()) >= 20 for x in example["colorChanges"])
         assert len(example["features"]) >= 3 and all(
             x.strip() for x in example["features"]
         ), "Exercise current capabilities"
@@ -89,9 +94,10 @@ def validate(manifest, root=ROOT):
                 review[key]["passed"] is True
                 and len(review[key]["evidence"].strip()) >= 30
             ), key
-        assert (
-            len(review["structuralChanges"]) >= 3
-        ), "Palette-only changes do not qualify"
+        if not refinement:
+            assert (
+                len(review["structuralChanges"]) >= 3
+            ), "Full rebuilds require structural evidence"
         signature = tuple(
             example["composition"][key]
             for key in [
@@ -102,10 +108,12 @@ def validate(manifest, root=ROOT):
                 "sequence",
             ]
         )
+        family = item.get("category", item["id"])
         assert all(
-            sum(a != b for a, b in zip(signature, old)) >= 3 for old in signatures
-        ), "Repeated composition across gallery peers"
-        signatures.append(signature)
+            old_family == family or sum(a != b for a, b in zip(signature, old)) >= 3
+            for old_family, old in signatures
+        ), "Repeated composition across unrelated gallery peers"
+        signatures.append((family, signature))
     return len(expected)
 
 

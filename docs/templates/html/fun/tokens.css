@@ -1,7 +1,11 @@
 :root {
-  --accent: #64204c;
-  --paper: #ffe9a8;
+  --accent: #4d00c2;
+  --paper: #ff542e;
   --display: "Oswald";
+  --ink: #191818;
+  --on-accent: #ffffff;
+  --signal: #682cf5;
+  --counter: #fab32d;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -16,4 +20,8 @@
   --band-color: white;
   --body-background: white;
   --schedule-color: white;
+  --poster-date-color: #29104f;
+  --schedule-background: #29104f;
+  --schedule-color-2: #ffff6c;
+  --poster-h1-color: #161016;
 }

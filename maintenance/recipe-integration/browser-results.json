@@ -1,0 +1,92 @@
+[
+  {
+    "context": "editorial",
+    "width": 1440,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "editorial",
+    "width": 390,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "commerce",
+    "width": 1440,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "commerce",
+    "width": 390,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "culture",
+    "width": 1440,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "culture",
+    "width": 390,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "information",
+    "width": 1440,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "information",
+    "width": 390,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "software",
+    "width": 1440,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  },
+  {
+    "context": "software",
+    "width": 390,
+    "fontsLoaded": true,
+    "overflow": false,
+    "axeViolations": [],
+    "keyboardControl": "passed",
+    "interaction": "passed"
+  }
+]

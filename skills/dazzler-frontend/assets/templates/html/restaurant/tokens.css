@@ -1,7 +1,11 @@
 :root {
-  --accent: #713541;
-  --paper: #f9f1df;
+  --accent: #759cff;
+  --paper: #082d26;
   --display: "Libre Baskerville";
+  --ink: #f4f4f0;
+  --on-accent: #000000;
+  --signal: #759cff;
+  --counter: #73ba01;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -15,4 +19,6 @@
   --footer-border-top: #17252b40;
   --band-color: white;
   --body-background: white;
+  --price-menu-price-color: #e2ff89;
+  --h1-color: #e2ff89;
 }

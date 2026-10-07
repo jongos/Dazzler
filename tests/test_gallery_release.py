@@ -89,6 +89,22 @@ class GalleryReleaseTests(unittest.TestCase):
                 return gate.validate(manifest, root)
 
             self.assertEqual(run(data), 1)
+            refinement = copy.deepcopy(data)
+            refined = refinement["examples"][0]
+            refined["reviewScope"] = "color-system-refinement"
+            refined["generationMethod"] = "current-skill-refinement"
+            refined["visualReview"]["structuralChanges"] = []
+            with self.assertRaises(AssertionError):
+                run(refinement)
+            refined["preservedStructureReason"] = (
+                "The requested color correction preserves the approved reading structure."
+            )
+            refined["colorChanges"] = [
+                "Replace pale background with a deliberately saturated field.",
+                "Resolve text against actual page and cell backgrounds.",
+                "Review accent area and neighboring roles in the rendered collection.",
+            ]
+            self.assertEqual(run(refinement), 1)
             for field, value in [
                 ("generationMethod", "preset-reskin"),
                 ("previousRenderedPages", [current]),

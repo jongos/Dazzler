@@ -1,7 +1,11 @@
 :root {
-  --accent: #123e59;
-  --paper: #f8f3e8;
+  --accent: #2900c9;
+  --paper: #ffffff;
   --display: "Young Serif";
+  --ink: #17181b;
+  --on-accent: #ffffff;
+  --signal: #3a22fe;
+  --counter: #a5ad04;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -21,4 +25,8 @@
   --bar-i-background: #e79f84;
   --button-aria-pressed-true-background: #123e59;
   --button-aria-pressed-true-color: white;
+  --chart-field-background-2: #161321;
+  --bar-i-background-2: #c596ff;
+  --chart-field-figcaption-color: white;
+  --button-aria-pressed-true-background-2: #6822cf;
 }

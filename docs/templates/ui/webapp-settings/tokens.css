@@ -1,7 +1,11 @@
 :root {
-  --accent: #173f71;
-  --paper: #eaf1fc;
+  --accent: #98d1cf;
+  --paper: #1648e8;
   --display: "Work Sans";
+  --ink: #f3f3f4;
+  --on-accent: #000000;
+  --signal: #1a7170;
+  --counter: #c82139;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -17,4 +21,11 @@
   --body-background: white;
   --clock-border: #173f71;
   --fieldset-border-top: #173f71;
+  --clock-background: #c3fcff;
+  --clock-color: #082457;
+  --clock-border-color: #c3fcff;
+  --settings-form-border-top: #c3fcff;
+  --fieldset-border-color: #c3fcff;
+  --select-background: #ffffff;
+  --select-color: #082457;
 }

@@ -259,6 +259,17 @@ def main():
                 if fmt == "docx"
                 else (web, web_type, web_surface)
             )
+        surface = d["colorDirection"]
+        craft = (
+            "Reviewed complete desktop/mobile compositions and native pages. "
+            + surface
+            + " Text roles, wrapping and local interactions were checked; collection-level color review is recorded separately."
+        )
+        previous = (
+            "Compared with the retained v0.27 snapshot: "
+            + surface
+            + " Changes the previous color roles and surface balance while preserving the useful reading structure."
+        )
         composition = dict(
             zip(
                 ["structure", "typography", "surface", "imageOrDataRole", "sequence"],
@@ -291,7 +302,14 @@ def main():
                     if fmt == "docx"
                     else ""
                 ),
-                "generationMethod": "current-skill-from-prompt",
+                "generationMethod": "current-skill-refinement",
+                "reviewScope": "color-system-refinement",
+                "preservedStructureReason": "The requested correction concerns muted color bias; preserve the established task-specific structure unless rendered review identifies a reason to change it.",
+                "colorChanges": [
+                    surface,
+                    "Functional foregrounds are resolved against the selected page or local field.",
+                    "Color area is reviewed across the complete collection rather than accent hue alone.",
+                ],
                 "features": [type_, surface, data, structure],
                 "designRationale": structure
                 + " serves the task by making "
@@ -305,7 +323,7 @@ def main():
                 "artifactFiles": [file_entry(p) for p in resources if p.is_file()],
                 "renderedPages": [file_entry(p) for p in renders],
                 "previousRenderedPages": [
-                    file_entry(STAGE / "previous-v0.26.0" / f"{ident}.jpg")
+                    file_entry(STAGE / "previous-v0.27.0" / f"{ident}.jpg")
                 ],
                 "composition": composition,
                 "visualReview": {
@@ -330,17 +348,22 @@ def main():
                         "passed": True,
                         "evidence": previous,
                     },
-                    "structuralChanges": [structure, type_, data],
+                    "structuralChanges": (
+                        ["Proposal scope and fee ledger now sit side by side"]
+                        if cat == "business" and fmt == "docx"
+                        else []
+                    ),
                 },
             }
         )
     save_json(
         ROOT / "maintenance/gallery-release.json",
         {
-            "version": "0.27.0",
-            "previousVersion": "0.26.0",
+            "version": "0.28.0",
+            "previousVersion": "0.27.0",
             "runtimeSha256": digest(SKILL / "references/integrity.json"),
             "skillSha256": digest(SKILL / "SKILL.md"),
+            "recipeConsideration": file_entry(STAGE / "recipe-consideration.json"),
             "examples": examples,
         },
     )

@@ -8,10 +8,12 @@ import hashlib
 import html
 import json
 import shutil
+import subprocess
 from pathlib import Path
 from PIL import Image
 from gallery_027 import ROOT, SKILL, STAGE, OUT as AUTHORED, DOCS
 from gallery_027_ui import U
+from gallery_color_design import decision, contrast, ink
 
 TARGET = SKILL / "assets/templates"
 OUT = STAGE / "reviewed-library"
@@ -46,14 +48,14 @@ def assemble():
     for name in ["html", "ui", "fonts", "data", "previews"]:
         shutil.copytree(AUTHORED / name, OUT / name, dirs_exist_ok=True)
     (OUT / "docx").mkdir(exist_ok=True)
-    backup = ROOT / "work/gallery-before-027"
+    backup = ROOT / "work/gallery-before-028"
     if not backup.exists():
         shutil.copytree(TARGET, backup)
     for name in ["LICENSE.txt", "NOTICE.txt"]:
         shutil.copy2(TARGET / name, OUT / name)
     catalog = {
         "schemaVersion": 3,
-        "version": "0.27.0",
+        "version": "0.28.0",
         "creator": "Jon Gosier",
         "license": "Apache-2.0",
         "templates": [],
@@ -62,11 +64,7 @@ def assemble():
     for d in DOCS:
         source = STAGE / "word-sources" / f"{d['id']}.docx"
         shutil.copy2(source, OUT / "docx" / source.name)
-        render = STAGE / (
-            "word-final-business"
-            if d["id"] == "business"
-            else "word-reviewed/" + d["id"]
-        )
+        render = STAGE / "word-reviewed" / d["id"]
         pages = sorted(render.glob("page-*.png"))
         assert len(pages) == 1, f"Review unexpected page count: {d['id']}"
         data = {
@@ -76,6 +74,13 @@ def assemble():
                 "accent": d["accent"],
                 "secondary": d["accent"],
                 "paper": d["paper"],
+                "text": decision(d["id"])["tokens"]["text"],
+                "accentText": (
+                    d["accent"]
+                    if contrast(d["accent"], d["paper"]) >= 4.5
+                    else ink(d["paper"])
+                ),
+                "onAccent": ink(d["accent"]),
             },
             "document": [
                 {
@@ -245,14 +250,23 @@ def assemble():
             + "</p></article>"
         )
     (OUT / "index.html").write_text(
-        """<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dazzler — Thirty Ways to Make It Matter</title><link rel="stylesheet" href="fonts/fonts.css"><style>*{box-sizing:border-box}body{margin:0;background:#f6f1e7;color:#202332;font:17px/1.5 "Work Sans",Arial}header,main,footer{max-width:1440px;margin:auto;padding:40px 5vw}header{border-bottom:4px solid #55308a}h1{font:400 clamp(3rem,7vw,6.5rem)/1 "Young Serif";max-width:15ch;letter-spacing:-.05em}header p{max-width:65ch}.label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#55308a}.filters{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}button{font:inherit;padding:12px 24px;border:1px solid #55308a;background:transparent;color:#55308a;cursor:pointer}button[aria-pressed=true]{background:#55308a;color:white}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #b94320;outline-offset:5px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px 24px}article{min-width:0;border-top:1px solid #55308a;padding-top:18px}article[hidden]{display:none}article a{text-decoration:none}article img{width:100%;height:390px;object-fit:contain;background:#e8e3db}article h2{font-size:24px;line-height:1.2;margin:10px 0}article>p{font-size:14px}footer{border-top:1px solid #55308a;font-size:13px}@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.grid{grid-template-columns:1fr}article img{height:440px}}</style><header><p class="label">Dazzler / The 0.27 Collection</p><h1>Thirty Ways to Make It Matter.</h1><p>Decision briefs. Reading rooms. Night markets. Each example starts with a different task and earns its own typography, color and composition.</p><p>Open a complete design, try its local controls or download editable Word content. These are fictional demonstrations, not default layouts for your next project.</p><div class="filters" aria-label="Example Format"><button data-filter="all" aria-pressed="true">All 30</button><button data-filter="docx" aria-pressed="false">Word</button><button data-filter="html" aria-pressed="false">HTML</button><button data-filter="ui" aria-pressed="false">Interfaces</button></div><p id="count" role="status">30 examples</p></header><main class="grid">"""
+        """<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dazzler — Thirty Ways to Make It Matter</title><link rel="stylesheet" href="fonts/fonts.css"><style>*{box-sizing:border-box}body{margin:0;background:#FFFFFF;color:#202332;font:17px/1.5 "Work Sans",Arial}header,main,footer{max-width:1440px;margin:auto;padding:40px 5vw}header{border-bottom:4px solid #55308a}h1{font:400 clamp(3rem,7vw,6.5rem)/1 "Young Serif";max-width:15ch;letter-spacing:-.05em}header p{max-width:65ch}.label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#55308a}.filters{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}button{font:inherit;padding:12px 24px;border:1px solid #55308a;background:transparent;color:#55308a;cursor:pointer}button[aria-pressed=true]{background:#55308a;color:white}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #b94320;outline-offset:5px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px 24px}article{min-width:0;border-top:1px solid #55308a;padding-top:18px}article[hidden]{display:none}article a{text-decoration:none}article img{width:100%;height:390px;object-fit:contain;background:#F2F2F2}article h2{font-size:24px;line-height:1.2;margin:10px 0}article>p{font-size:14px}footer{border-top:1px solid #55308a;font-size:13px}@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.grid{grid-template-columns:1fr}article img{height:440px}}</style><header><p class="label">Dazzler / The 0.28 Collection</p><h1>Thirty Ways to Make It Matter.</h1><p>Decision briefs. Reading rooms. Night markets. Each example starts with a different task and earns its own typography, color and composition.</p><p>Open a complete design, try its local controls or download editable Word content. These are fictional demonstrations, not default layouts for your next project.</p><div class="filters" aria-label="Example Format"><button data-filter="all" aria-pressed="true">All 30</button><button data-filter="docx" aria-pressed="false">Word</button><button data-filter="html" aria-pressed="false">HTML</button><button data-filter="ui" aria-pressed="false">Interfaces</button></div><p id="count" role="status">30 examples</p></header><main class="grid">"""
         + "".join(cards)
         + """</main><footer>Full-page browser captures and complete LibreOffice-rendered Word pages. Recheck layout after edits; other renderers can differ. Original designs and synthetic data by Jon Gosier, Apache-2.0. Font licenses accompany the files. <a href="NOTICE.txt">Credits and Notices</a></footer><script>document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{const f=b.dataset.filter;let n=0;document.querySelectorAll('article').forEach(a=>{a.hidden=f!=='all'&&a.dataset.format!==f;if(!a.hidden)n++});document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelector('#count').textContent=n+' examples'});</script></html>""",
         encoding="utf8",
     )
+    subprocess.run(
+        ["node", str(ROOT / "tools/prepare_template_sources.mjs"), str(OUT)],
+        cwd=ROOT,
+        check=True,
+    )
     for kind, rows in captures.items():
         for row in rows:
             t = next(t for t in catalog["templates"] if t["id"] == row["id"])
+            source = OUT / t["path"]
+            row["sourceSha256"] = digest(
+                source / "index.html" if source.is_dir() else source
+            )
             files = (
                 [OUT / t["path"]]
                 if t["format"] == "docx"

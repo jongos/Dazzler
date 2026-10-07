@@ -1,7 +1,11 @@
 :root {
-  --accent: #514017;
-  --paper: #fff1a3;
+  --accent: #0f4f95;
+  --paper: #bcf432;
   --display: "Oswald";
+  --ink: #181818;
+  --on-accent: #ffffff;
+  --signal: #0f4f95;
+  --counter: #e797fa;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -17,4 +21,9 @@
   --body-background: white;
   --menu-controls-border-block: #514017;
   --dish-row-border-bottom: #514017;
+  --dish-number-color: #651278;
+  --dish-row-h2-menu-head-h1-color: #2c1037;
+  --menu-controls-border-color: #2c1037;
+  --menu-controls-input-background: #ffffff;
+  --menu-controls-input-color: #2c1037;
 }

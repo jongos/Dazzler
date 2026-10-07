@@ -1,7 +1,11 @@
 :root {
-  --accent: #3e5132;
-  --paper: #f4f0dd;
+  --accent: #7b490b;
+  --paper: #ffffff;
   --display: "Young Serif";
+  --ink: #181818;
+  --on-accent: #ffffff;
+  --signal: #7b490b;
+  --counter: #7e25bb;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -21,4 +25,17 @@
   --room-button-background: #faf7ec;
   --room-button-aria-pressed-true-background: #3e5132;
   --room-button-aria-pressed-true-color: white;
+  --room-background-2: #ffffff;
+  --room-border-color: #086d3c;
+  --room-button-background-2: #ffffff;
+  --room-button-color: #086d3c;
+  --room-button-border-color: #086d3c;
+  --room-button-aria-pressed-true-background-2: #086d3c;
+  --reservation-form-background: #ffe0d7;
+  --reservation-form-color: #371c12;
+  --reservation-form-input-reservation-form-select-background: white;
+  --reservation-form-input-reservation-form-select-color: #171717;
+  --reservation-form-button-background: #086d3c;
+  --reservation-form-button-color: white;
+  --window-label-border-color: #086d3c;
 }

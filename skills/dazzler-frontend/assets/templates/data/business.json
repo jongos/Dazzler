@@ -4,8 +4,8 @@
   "short": "A Better Booking Journey",
   "tag": "JUNIPER / SCOPE 014",
   "lead": "Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages.",
-  "accent": "#145A45",
-  "paper": "#F1F6E9",
+  "accent": "#256E00",
+  "paper": "#C9FF32",
   "font": "Young Serif",
   "word": "Georgia",
   "layout": "proposal",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Offer valid for 30 days · Start date follows written acceptance.",
-  "prompt": "Make a fictional creative-service proposal for an arts venue. Give the scope and fixed fee strong editorial hierarchy. Compose an oversized fee beside a three-stage delivery ledger, with forest green, pale lime and genuine serif italics; keep exclusions legible.",
+  "prompt": "Make a fictional creative-service proposal for an arts venue. Give the scope and fixed fee strong editorial hierarchy. Compose an oversized fee beside a three-stage delivery ledger, with forest green, pale lime and genuine serif italics; keep exclusions legible. Color direction: Acid-lime proposal with deep green delivery ledger; optimistic commercial energy.",
+  "fontSelection": {
+    "id": "young-serif",
+    "css_family": "Young Serif",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#145A45",
+  "originalPaper": "#F1F6E9",
+  "colorDirection": "Acid-lime proposal with deep green delivery ledger; optimistic commercial energy.",
   "fictional": true,
   "design": {
-    "accent": "#145A45",
-    "secondary": "#145A45",
-    "paper": "#F1F6E9"
+    "accent": "#256E00",
+    "secondary": "#256E00",
+    "paper": "#C9FF32",
+    "text": "#131A17",
+    "accentText": "#256E00",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

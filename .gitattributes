@@ -25,3 +25,4 @@ maintenance/offline-build/*.zip -text
 
 # Vendored design-check inputs retain their recorded source bytes.
 skills/dazzler-frontend/scripts/gdc/** -text -whitespace
+skills/dazzler-frontend/references/recipes/** -text -whitespace

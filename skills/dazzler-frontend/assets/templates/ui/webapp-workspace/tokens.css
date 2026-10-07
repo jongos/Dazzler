@@ -1,7 +1,11 @@
 :root {
-  --accent: #553c2e;
-  --paper: #f5f0e5;
+  --accent: #940000;
+  --paper: #fcfcf8;
   --display: "Young Serif";
+  --ink: #1b1716;
+  --on-accent: #ffffff;
+  --signal: #dd3208;
+  --counter: #0c93aa;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -18,4 +22,7 @@
   --manuscript-textarea-background: transparent;
   --manuscript-textarea-border-bottom: #553c2e;
   --notes-border-left: #553c2e50;
+  --notes-border-left-2: #bf3e08;
+  --manuscript-textarea-color: #151515;
+  --chapters-border-top: #bf3e08;
 }

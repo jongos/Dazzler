@@ -4,8 +4,8 @@
   "short": "Restore the Queue Safely",
   "tag": "RELAY / OPERATIONS RUNBOOK 07",
   "lead": "Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch.",
-  "accent": "#07556A",
-  "paper": "#EAF5F5",
+  "accent": "#19DDE7",
+  "paper": "#091522",
   "font": "Office Code Pro",
   "word": "Consolas",
   "layout": "runbook",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Synthetic operational example · Commands require environment-specific review.",
-  "prompt": "Create a fictional technical recovery runbook. Make the pause-replay-verify sequence the composition, with monospaced step labels, a cyan evidence rail and a high-contrast stop condition. Preserve exact operational language and provide a rollback branch, not a generic dashboard.",
+  "prompt": "Create a fictional technical recovery runbook. Make the pause-replay-verify sequence the composition, with monospaced step labels, a cyan evidence rail and a high-contrast stop condition. Preserve exact operational language and provide a rollback branch, not a generic dashboard. Color direction: Night-mode recovery runbook with cyan steps and a separately labelled red stop condition.",
+  "fontSelection": {
+    "id": "office-code-pro",
+    "css_family": "Office Code Pro",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#07556A",
+  "originalPaper": "#EAF5F5",
+  "colorDirection": "Night-mode recovery runbook with cyan steps and a separately labelled red stop condition.",
   "fictional": true,
   "design": {
-    "accent": "#07556A",
-    "secondary": "#07556A",
-    "paper": "#EAF5F5"
+    "accent": "#19DDE7",
+    "secondary": "#19DDE7",
+    "paper": "#091522",
+    "text": "#F3F3F4",
+    "accentText": "#19DDE7",
+    "onAccent": "#000000"
   },
   "document": [
     {

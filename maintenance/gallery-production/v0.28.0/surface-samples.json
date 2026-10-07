@@ -1,0 +1,2654 @@
+[
+  {
+    "id": "business-portal",
+    "pixels": 25380,
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "pixels": 16918
+      },
+      {
+        "hex": "#feffff",
+        "pixels": 8
+      },
+      {
+        "hex": "#fefefe",
+        "pixels": 244
+      },
+      {
+        "hex": "#fcfdfd",
+        "pixels": 242
+      },
+      {
+        "hex": "#fdfcfc",
+        "pixels": 234
+      },
+      {
+        "hex": "#f7fafb",
+        "pixels": 265
+      },
+      {
+        "hex": "#fbf9f9",
+        "pixels": 193
+      },
+      {
+        "hex": "#f9f7f7",
+        "pixels": 202
+      },
+      {
+        "hex": "#4777bd",
+        "pixels": 85
+      },
+      {
+        "hex": "#f4f4f4",
+        "pixels": 160
+      },
+      {
+        "hex": "#e9eff0",
+        "pixels": 72
+      },
+      {
+        "hex": "#e0eced",
+        "pixels": 386
+      },
+      {
+        "hex": "#eaebed",
+        "pixels": 177
+      },
+      {
+        "hex": "#dee9e5",
+        "pixels": 37
+      },
+      {
+        "hex": "#3e63d8",
+        "pixels": 228
+      },
+      {
+        "hex": "#e3e1e3",
+        "pixels": 209
+      },
+      {
+        "hex": "#fffffe",
+        "pixels": 5
+      },
+      {
+        "hex": "#075943",
+        "pixels": 340
+      },
+      {
+        "hex": "#d3d7df",
+        "pixels": 300
+      },
+      {
+        "hex": "#1f51dd",
+        "pixels": 87
+      },
+      {
+        "hex": "#1649e8",
+        "pixels": 102
+      },
+      {
+        "hex": "#1648e8",
+        "pixels": 2858
+      },
+      {
+        "hex": "#1547e8",
+        "pixels": 160
+      },
+      {
+        "hex": "#1245e8",
+        "pixels": 173
+      },
+      {
+        "hex": "#d2c3c1",
+        "pixels": 294
+      },
+      {
+        "hex": "#bec3d0",
+        "pixels": 223
+      },
+      {
+        "hex": "#1043e7",
+        "pixels": 206
+      },
+      {
+        "hex": "#0c40e7",
+        "pixels": 245
+      },
+      {
+        "hex": "#99a8ca",
+        "pixels": 218
+      },
+      {
+        "hex": "#768cd0",
+        "pixels": 258
+      },
+      {
+        "hex": "#5e86d1",
+        "pixels": 251
+      }
+    ]
+  },
+  {
+    "id": "data-operations",
+    "pixels": 22500,
+    "colors": [
+      {
+        "hex": "#606d6d",
+        "pixels": 383
+      },
+      {
+        "hex": "#5decc7",
+        "pixels": 357
+      },
+      {
+        "hex": "#346362",
+        "pixels": 185
+      },
+      {
+        "hex": "#051e25",
+        "pixels": 4
+      },
+      {
+        "hex": "#b2d9c7",
+        "pixels": 205
+      },
+      {
+        "hex": "#1c504d",
+        "pixels": 418
+      },
+      {
+        "hex": "#314e53",
+        "pixels": 164
+      },
+      {
+        "hex": "#061f26",
+        "pixels": 4
+      },
+      {
+        "hex": "#061e26",
+        "pixels": 244
+      },
+      {
+        "hex": "#2d3e40",
+        "pixels": 329
+      },
+      {
+        "hex": "#ffba62",
+        "pixels": 52
+      },
+      {
+        "hex": "#ffb75e",
+        "pixels": 544
+      },
+      {
+        "hex": "#13373b",
+        "pixels": 414
+      },
+      {
+        "hex": "#f7b25c",
+        "pixels": 310
+      },
+      {
+        "hex": "#09302d",
+        "pixels": 331
+      },
+      {
+        "hex": "#0e2d32",
+        "pixels": 478
+      },
+      {
+        "hex": "#0c262d",
+        "pixels": 425
+      },
+      {
+        "hex": "#072328",
+        "pixels": 345
+      },
+      {
+        "hex": "#082129",
+        "pixels": 211
+      },
+      {
+        "hex": "#051e27",
+        "pixels": 20
+      },
+      {
+        "hex": "#071f27",
+        "pixels": 48
+      },
+      {
+        "hex": "#061f27",
+        "pixels": 14209
+      },
+      {
+        "hex": "#051f27",
+        "pixels": 37
+      },
+      {
+        "hex": "#061e27",
+        "pixels": 368
+      },
+      {
+        "hex": "#051e26",
+        "pixels": 688
+      },
+      {
+        "hex": "#051d25",
+        "pixels": 247
+      },
+      {
+        "hex": "#041d25",
+        "pixels": 227
+      },
+      {
+        "hex": "#011c25",
+        "pixels": 211
+      },
+      {
+        "hex": "#041b24",
+        "pixels": 600
+      },
+      {
+        "hex": "#011821",
+        "pixels": 250
+      },
+      {
+        "hex": "#b0956d",
+        "pixels": 177
+      },
+      {
+        "hex": "#061f28",
+        "pixels": 15
+      }
+    ]
+  },
+  {
+    "id": "data-revenue",
+    "pixels": 36900,
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "pixels": 22918
+      },
+      {
+        "hex": "#feffff",
+        "pixels": 17
+      },
+      {
+        "hex": "#fefeff",
+        "pixels": 546
+      },
+      {
+        "hex": "#faf9fb",
+        "pixels": 352
+      },
+      {
+        "hex": "#f4f4f5",
+        "pixels": 483
+      },
+      {
+        "hex": "#f2f0fa",
+        "pixels": 476
+      },
+      {
+        "hex": "#f0eff6",
+        "pixels": 80
+      },
+      {
+        "hex": "#eceaf4",
+        "pixels": 336
+      },
+      {
+        "hex": "#e7e4f3",
+        "pixels": 51
+      },
+      {
+        "hex": "#e6e2de",
+        "pixels": 37
+      },
+      {
+        "hex": "#e1e1e1",
+        "pixels": 372
+      },
+      {
+        "hex": "#161321",
+        "pixels": 3054
+      },
+      {
+        "hex": "#e5e0f9",
+        "pixels": 495
+      },
+      {
+        "hex": "#fffffe",
+        "pixels": 6
+      },
+      {
+        "hex": "#e5dff9",
+        "pixels": 590
+      },
+      {
+        "hex": "#cdcdce",
+        "pixels": 426
+      },
+      {
+        "hex": "#c19deb",
+        "pixels": 74
+      },
+      {
+        "hex": "#c696ff",
+        "pixels": 506
+      },
+      {
+        "hex": "#c596ff",
+        "pixels": 1738
+      },
+      {
+        "hex": "#97969a",
+        "pixels": 316
+      },
+      {
+        "hex": "#9787bf",
+        "pixels": 337
+      },
+      {
+        "hex": "#7e6b9b",
+        "pixels": 358
+      },
+      {
+        "hex": "#49425a",
+        "pixels": 676
+      },
+      {
+        "hex": "#1c1927",
+        "pixels": 590
+      },
+      {
+        "hex": "#171321",
+        "pixels": 44
+      },
+      {
+        "hex": "#161320",
+        "pixels": 62
+      },
+      {
+        "hex": "#151321",
+        "pixels": 325
+      },
+      {
+        "hex": "#120f1c",
+        "pixels": 546
+      },
+      {
+        "hex": "#0c0a16",
+        "pixels": 204
+      },
+      {
+        "hex": "#2900c9",
+        "pixels": 885
+      }
+    ]
+  },
+  {
+    "id": "html-business",
+    "pixels": 35820,
+    "colors": [
+      {
+        "hex": "#d0ff33",
+        "pixels": 231
+      },
+      {
+        "hex": "#cdff33",
+        "pixels": 389
+      },
+      {
+        "hex": "#ccff32",
+        "pixels": 321
+      },
+      {
+        "hex": "#cbff32",
+        "pixels": 730
+      },
+      {
+        "hex": "#caff32",
+        "pixels": 1746
+      },
+      {
+        "hex": "#c9ff32",
+        "pixels": 23952
+      },
+      {
+        "hex": "#c8ff32",
+        "pixels": 11
+      },
+      {
+        "hex": "#c8fd32",
+        "pixels": 470
+      },
+      {
+        "hex": "#c6fc31",
+        "pixels": 274
+      },
+      {
+        "hex": "#c4fb31",
+        "pixels": 444
+      },
+      {
+        "hex": "#c4f931",
+        "pixels": 309
+      },
+      {
+        "hex": "#c2f631",
+        "pixels": 332
+      },
+      {
+        "hex": "#bef330",
+        "pixels": 344
+      },
+      {
+        "hex": "#b9ef2e",
+        "pixels": 401
+      },
+      {
+        "hex": "#b5ed2d",
+        "pixels": 314
+      },
+      {
+        "hex": "#b9eb30",
+        "pixels": 361
+      },
+      {
+        "hex": "#b3e32f",
+        "pixels": 496
+      },
+      {
+        "hex": "#abda2e",
+        "pixels": 420
+      },
+      {
+        "hex": "#a6d22d",
+        "pixels": 310
+      },
+      {
+        "hex": "#9fcc2c",
+        "pixels": 318
+      },
+      {
+        "hex": "#98c22c",
+        "pixels": 545
+      },
+      {
+        "hex": "#85af28",
+        "pixels": 453
+      },
+      {
+        "hex": "#699223",
+        "pixels": 521
+      },
+      {
+        "hex": "#cbff33",
+        "pixels": 70
+      },
+      {
+        "hex": "#caff33",
+        "pixels": 3
+      },
+      {
+        "hex": "#336e0d",
+        "pixels": 333
+      },
+      {
+        "hex": "#365721",
+        "pixels": 511
+      },
+      {
+        "hex": "#21381f",
+        "pixels": 70
+      },
+      {
+        "hex": "#232e19",
+        "pixels": 38
+      },
+      {
+        "hex": "#112e21",
+        "pixels": 768
+      },
+      {
+        "hex": "#102e21",
+        "pixels": 77
+      },
+      {
+        "hex": "#0e2920",
+        "pixels": 258
+      }
+    ]
+  },
+  {
+    "id": "html-family",
+    "pixels": 33480,
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "pixels": 21296
+      },
+      {
+        "hex": "#feffff",
+        "pixels": 21
+      },
+      {
+        "hex": "#fefefe",
+        "pixels": 542
+      },
+      {
+        "hex": "#fafafa",
+        "pixels": 250
+      },
+      {
+        "hex": "#f4f9f8",
+        "pixels": 430
+      },
+      {
+        "hex": "#ffde29",
+        "pixels": 140
+      },
+      {
+        "hex": "#def7fe",
+        "pixels": 122
+      },
+      {
+        "hex": "#d4f5ff",
+        "pixels": 312
+      },
+      {
+        "hex": "#d4f4fd",
+        "pixels": 4
+      },
+      {
+        "hex": "#d3f4ff",
+        "pixels": 1943
+      },
+      {
+        "hex": "#d2f4ff",
+        "pixels": 349
+      },
+      {
+        "hex": "#d1f2fd",
+        "pixels": 253
+      },
+      {
+        "hex": "#eff1f1",
+        "pixels": 466
+      },
+      {
+        "hex": "#ccedf7",
+        "pixels": 365
+      },
+      {
+        "hex": "#e2eae9",
+        "pixels": 663
+      },
+      {
+        "hex": "#d4f4ff",
+        "pixels": 1
+      },
+      {
+        "hex": "#e9e9e9",
+        "pixels": 342
+      },
+      {
+        "hex": "#fffffe",
+        "pixels": 20
+      },
+      {
+        "hex": "#dfdfdf",
+        "pixels": 544
+      },
+      {
+        "hex": "#ffde24",
+        "pixels": 122
+      },
+      {
+        "hex": "#ffdc29",
+        "pixels": 836
+      },
+      {
+        "hex": "#e2d382",
+        "pixels": 56
+      },
+      {
+        "hex": "#c4d2d8",
+        "pixels": 505
+      },
+      {
+        "hex": "#c8c8b7",
+        "pixels": 331
+      },
+      {
+        "hex": "#b0b6b5",
+        "pixels": 625
+      },
+      {
+        "hex": "#a5857e",
+        "pixels": 305
+      },
+      {
+        "hex": "#ff794f",
+        "pixels": 155
+      },
+      {
+        "hex": "#ff784e",
+        "pixels": 697
+      },
+      {
+        "hex": "#ff764c",
+        "pixels": 288
+      },
+      {
+        "hex": "#4b4d75",
+        "pixels": 368
+      },
+      {
+        "hex": "#1648e6",
+        "pixels": 1101
+      },
+      {
+        "hex": "#1243de",
+        "pixels": 28
+      }
+    ]
+  },
+  {
+    "id": "html-fun",
+    "pixels": 38700,
+    "colors": [
+      {
+        "hex": "#ff552e",
+        "pixels": 1039
+      },
+      {
+        "hex": "#ff562f",
+        "pixels": 275
+      },
+      {
+        "hex": "#ff552f",
+        "pixels": 47
+      },
+      {
+        "hex": "#ca7246",
+        "pixels": 126
+      },
+      {
+        "hex": "#ff562d",
+        "pixels": 533
+      },
+      {
+        "hex": "#ff542d",
+        "pixels": 156
+      },
+      {
+        "hex": "#6c5656",
+        "pixels": 155
+      },
+      {
+        "hex": "#ff552d",
+        "pixels": 289
+      },
+      {
+        "hex": "#ff542e",
+        "pixels": 26465
+      },
+      {
+        "hex": "#fe542f",
+        "pixels": 341
+      },
+      {
+        "hex": "#fb532e",
+        "pixels": 333
+      },
+      {
+        "hex": "#f6522e",
+        "pixels": 253
+      },
+      {
+        "hex": "#f85132",
+        "pixels": 218
+      },
+      {
+        "hex": "#f2512d",
+        "pixels": 395
+      },
+      {
+        "hex": "#ed4d38",
+        "pixels": 394
+      },
+      {
+        "hex": "#e94d33",
+        "pixels": 234
+      },
+      {
+        "hex": "#de4b2b",
+        "pixels": 491
+      },
+      {
+        "hex": "#d2482a",
+        "pixels": 504
+      },
+      {
+        "hex": "#d04533",
+        "pixels": 204
+      },
+      {
+        "hex": "#c34428",
+        "pixels": 491
+      },
+      {
+        "hex": "#b53e31",
+        "pixels": 425
+      },
+      {
+        "hex": "#9a3c30",
+        "pixels": 276
+      },
+      {
+        "hex": "#772c2e",
+        "pixels": 319
+      },
+      {
+        "hex": "#3d2043",
+        "pixels": 363
+      },
+      {
+        "hex": "#28123d",
+        "pixels": 47
+      },
+      {
+        "hex": "#2b104f",
+        "pixels": 278
+      },
+      {
+        "hex": "#29104f",
+        "pixels": 2841
+      },
+      {
+        "hex": "#260f50",
+        "pixels": 412
+      },
+      {
+        "hex": "#260d4f",
+        "pixels": 405
+      },
+      {
+        "hex": "#180d37",
+        "pixels": 391
+      }
+    ]
+  },
+  {
+    "id": "html-legal",
+    "pixels": 31500,
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "pixels": 26765
+      },
+      {
+        "hex": "#feffff",
+        "pixels": 19
+      },
+      {
+        "hex": "#fefefe",
+        "pixels": 206
+      },
+      {
+        "hex": "#fbfcfc",
+        "pixels": 122
+      },
+      {
+        "hex": "#fdfbfb",
+        "pixels": 197
+      },
+      {
+        "hex": "#faf9fa",
+        "pixels": 114
+      },
+      {
+        "hex": "#fbf8f8",
+        "pixels": 236
+      },
+      {
+        "hex": "#f9f6f6",
+        "pixels": 128
+      },
+      {
+        "hex": "#f4f4f4",
+        "pixels": 217
+      },
+      {
+        "hex": "#f2eeee",
+        "pixels": 158
+      },
+      {
+        "hex": "#ebecec",
+        "pixels": 175
+      },
+      {
+        "hex": "#f5e8e9",
+        "pixels": 236
+      },
+      {
+        "hex": "#e8e8e8",
+        "pixels": 177
+      },
+      {
+        "hex": "#f3e5e6",
+        "pixels": 185
+      },
+      {
+        "hex": "#e4e4e4",
+        "pixels": 219
+      },
+      {
+        "hex": "#e1e1e1",
+        "pixels": 184
+      },
+      {
+        "hex": "#fffffe",
+        "pixels": 17
+      },
+      {
+        "hex": "#e0dcdb",
+        "pixels": 151
+      },
+      {
+        "hex": "#d9dada",
+        "pixels": 171
+      },
+      {
+        "hex": "#d6d6d7",
+        "pixels": 121
+      },
+      {
+        "hex": "#d6d4d3",
+        "pixels": 144
+      },
+      {
+        "hex": "#d6cecd",
+        "pixels": 105
+      },
+      {
+        "hex": "#cacccc",
+        "pixels": 181
+      },
+      {
+        "hex": "#c7c7c7",
+        "pixels": 151
+      },
+      {
+        "hex": "#474747",
+        "pixels": 137
+      },
+      {
+        "hex": "#c4c3c3",
+        "pixels": 164
+      },
+      {
+        "hex": "#c4bdbd",
+        "pixels": 81
+      },
+      {
+        "hex": "#babbbc",
+        "pixels": 187
+      },
+      {
+        "hex": "#b4b4b5",
+        "pixels": 197
+      },
+      {
+        "hex": "#c4a8a5",
+        "pixels": 108
+      },
+      {
+        "hex": "#a2a2a3",
+        "pixels": 144
+      },
+      {
+        "hex": "#a58985",
+        "pixels": 103
+      }
+    ]
+  },
+  {
+    "id": "html-marketing",
+    "pixels": 45900,
+    "colors": [
+      {
+        "hex": "#ff3293",
+        "pixels": 101
+      },
+      {
+        "hex": "#ff3193",
+        "pixels": 553
+      },
+      {
+        "hex": "#ff3192",
+        "pixels": 2097
+      },
+      {
+        "hex": "#ff3294",
+        "pixels": 318
+      },
+      {
+        "hex": "#ff318f",
+        "pixels": 341
+      },
+      {
+        "hex": "#6c3e73",
+        "pixels": 20
+      },
+      {
+        "hex": "#ff3296",
+        "pixels": 388
+      },
+      {
+        "hex": "#f2328c",
+        "pixels": 337
+      },
+      {
+        "hex": "#e83289",
+        "pixels": 502
+      },
+      {
+        "hex": "#dd3285",
+        "pixels": 383
+      },
+      {
+        "hex": "#ff3191",
+        "pixels": 32856
+      },
+      {
+        "hex": "#fe3191",
+        "pixels": 406
+      },
+      {
+        "hex": "#fa318f",
+        "pixels": 360
+      },
+      {
+        "hex": "#ec3195",
+        "pixels": 146
+      },
+      {
+        "hex": "#cc3195",
+        "pixels": 9
+      },
+      {
+        "hex": "#f8308d",
+        "pixels": 541
+      },
+      {
+        "hex": "#f3308b",
+        "pixels": 417
+      },
+      {
+        "hex": "#ec2f87",
+        "pixels": 464
+      },
+      {
+        "hex": "#e52e84",
+        "pixels": 469
+      },
+      {
+        "hex": "#dc2d7f",
+        "pixels": 376
+      },
+      {
+        "hex": "#d22c7a",
+        "pixels": 548
+      },
+      {
+        "hex": "#ca2b76",
+        "pixels": 371
+      },
+      {
+        "hex": "#172bc9",
+        "pixels": 558
+      },
+      {
+        "hex": "#112bca",
+        "pixels": 300
+      },
+      {
+        "hex": "#c12a72",
+        "pixels": 447
+      },
+      {
+        "hex": "#a12a76",
+        "pixels": 318
+      },
+      {
+        "hex": "#b6296c",
+        "pixels": 566
+      },
+      {
+        "hex": "#7f2351",
+        "pixels": 548
+      },
+      {
+        "hex": "#4b236b",
+        "pixels": 17
+      },
+      {
+        "hex": "#2c1a31",
+        "pixels": 268
+      },
+      {
+        "hex": "#1c171c",
+        "pixels": 476
+      },
+      {
+        "hex": "#0e1516",
+        "pixels": 399
+      }
+    ]
+  },
+  {
+    "id": "html-presentation",
+    "pixels": 29880,
+    "colors": [
+      {
+        "hex": "#fffff6",
+        "pixels": 219
+      },
+      {
+        "hex": "#f9ff50",
+        "pixels": 209
+      },
+      {
+        "hex": "#f6ff53",
+        "pixels": 384
+      },
+      {
+        "hex": "#f4ff53",
+        "pixels": 902
+      },
+      {
+        "hex": "#f3ff53",
+        "pixels": 325
+      },
+      {
+        "hex": "#d67d7a",
+        "pixels": 669
+      },
+      {
+        "hex": "#b27199",
+        "pixels": 336
+      },
+      {
+        "hex": "#e2e589",
+        "pixels": 159
+      },
+      {
+        "hex": "#7d64d2",
+        "pixels": 1034
+      },
+      {
+        "hex": "#4821cf",
+        "pixels": 7
+      },
+      {
+        "hex": "#7e4cb9",
+        "pixels": 175
+      },
+      {
+        "hex": "#6a44cc",
+        "pixels": 576
+      },
+      {
+        "hex": "#5f38cb",
+        "pixels": 346
+      },
+      {
+        "hex": "#5532ce",
+        "pixels": 513
+      },
+      {
+        "hex": "#5b2bc1",
+        "pixels": 882
+      },
+      {
+        "hex": "#5229cb",
+        "pixels": 347
+      },
+      {
+        "hex": "#b0a5bb",
+        "pixels": 349
+      },
+      {
+        "hex": "#4f25c7",
+        "pixels": 391
+      },
+      {
+        "hex": "#4b24ce",
+        "pixels": 416
+      },
+      {
+        "hex": "#4921ce",
+        "pixels": 287
+      },
+      {
+        "hex": "#4821ce",
+        "pixels": 17712
+      },
+      {
+        "hex": "#4721ce",
+        "pixels": 424
+      },
+      {
+        "hex": "#4820ce",
+        "pixels": 87
+      },
+      {
+        "hex": "#4720ce",
+        "pixels": 617
+      },
+      {
+        "hex": "#471fce",
+        "pixels": 199
+      },
+      {
+        "hex": "#461fcf",
+        "pixels": 792
+      },
+      {
+        "hex": "#451fd0",
+        "pixels": 324
+      },
+      {
+        "hex": "#451ecc",
+        "pixels": 549
+      },
+      {
+        "hex": "#441ed0",
+        "pixels": 537
+      },
+      {
+        "hex": "#4019ca",
+        "pixels": 113
+      }
+    ]
+  },
+  {
+    "id": "html-professional",
+    "pixels": 31500,
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "pixels": 23342
+      },
+      {
+        "hex": "#feffff",
+        "pixels": 22
+      },
+      {
+        "hex": "#fefefe",
+        "pixels": 337
+      },
+      {
+        "hex": "#797e8b",
+        "pixels": 174
+      },
+      {
+        "hex": "#fcfcfc",
+        "pixels": 296
+      },
+      {
+        "hex": "#fafaf8",
+        "pixels": 293
+      },
+      {
+        "hex": "#f8f8f9",
+        "pixels": 191
+      },
+      {
+        "hex": "#f5f5f5",
+        "pixels": 285
+      },
+      {
+        "hex": "#4c73f3",
+        "pixels": 306
+      },
+      {
+        "hex": "#f3f2ef",
+        "pixels": 233
+      },
+      {
+        "hex": "#efefec",
+        "pixels": 249
+      },
+      {
+        "hex": "#edebe2",
+        "pixels": 436
+      },
+      {
+        "hex": "#e8e9eb",
+        "pixels": 283
+      },
+      {
+        "hex": "#e4e4e4",
+        "pixels": 262
+      },
+      {
+        "hex": "#dee0e5",
+        "pixels": 192
+      },
+      {
+        "hex": "#fffffe",
+        "pixels": 9
+      },
+      {
+        "hex": "#d9d9da",
+        "pixels": 309
+      },
+      {
+        "hex": "#6d5900",
+        "pixels": 270
+      },
+      {
+        "hex": "#3259da",
+        "pixels": 71
+      },
+      {
+        "hex": "#d4d2d2",
+        "pixels": 342
+      },
+      {
+        "hex": "#ccd1de",
+        "pixels": 119
+      },
+      {
+        "hex": "#634d00",
+        "pixels": 5
+      },
+      {
+        "hex": "#c9cacc",
+        "pixels": 315
+      },
+      {
+        "hex": "#194aef",
+        "pixels": 185
+      },
+      {
+        "hex": "#1647ef",
+        "pixels": 13
+      },
+      {
+        "hex": "#1547ef",
+        "pixels": 1681
+      },
+      {
+        "hex": "#1646ef",
+        "pixels": 1
+      },
+      {
+        "hex": "#0f42ef",
+        "pixels": 278
+      },
+      {
+        "hex": "#c2c1c0",
+        "pixels": 399
+      },
+      {
+        "hex": "#b5baca",
+        "pixels": 89
+      },
+      {
+        "hex": "#a9a494",
+        "pixels": 238
+      },
+      {
+        "hex": "#859cea",
+        "pixels": 275
+      }
+    ]
+  },
+  {
+    "id": "html-restaurant",
+    "pixels": 30240,
+    "colors": [
+      {
+        "hex": "#062b24",
+        "pixels": 444
+      },
+      {
+        "hex": "#5d7880",
+        "pixels": 488
+      },
+      {
+        "hex": "#4e6864",
+        "pixels": 500
+      },
+      {
+        "hex": "#082d27",
+        "pixels": 94
+      },
+      {
+        "hex": "#072c23",
+        "pixels": 45
+      },
+      {
+        "hex": "#3b5d66",
+        "pixels": 319
+      },
+      {
+        "hex": "#31504d",
+        "pixels": 525
+      },
+      {
+        "hex": "#274c58",
+        "pixels": 237
+      },
+      {
+        "hex": "#1d403e",
+        "pixels": 445
+      },
+      {
+        "hex": "#163a3b",
+        "pixels": 95
+      },
+      {
+        "hex": "#14393d",
+        "pixels": 899
+      },
+      {
+        "hex": "#123636",
+        "pixels": 293
+      },
+      {
+        "hex": "#0f332f",
+        "pixels": 325
+      },
+      {
+        "hex": "#0b312d",
+        "pixels": 385
+      },
+      {
+        "hex": "#8db0c6",
+        "pixels": 133
+      },
+      {
+        "hex": "#0b302a",
+        "pixels": 347
+      },
+      {
+        "hex": "#0a2f29",
+        "pixels": 300
+      },
+      {
+        "hex": "#092d26",
+        "pixels": 76
+      },
+      {
+        "hex": "#082d26",
+        "pixels": 20293
+      },
+      {
+        "hex": "#072d26",
+        "pixels": 87
+      },
+      {
+        "hex": "#082c25",
+        "pixels": 17
+      },
+      {
+        "hex": "#072c25",
+        "pixels": 666
+      },
+      {
+        "hex": "#072b24",
+        "pixels": 3
+      },
+      {
+        "hex": "#062b22",
+        "pixels": 235
+      },
+      {
+        "hex": "#042a23",
+        "pixels": 356
+      },
+      {
+        "hex": "#04291f",
+        "pixels": 347
+      },
+      {
+        "hex": "#032922",
+        "pixels": 150
+      },
+      {
+        "hex": "#022720",
+        "pixels": 101
+      },
+      {
+        "hex": "#082d25",
+        "pixels": 354
+      },
+      {
+        "hex": "#759cfe",
+        "pixels": 770
+      },
+      {
+        "hex": "#7090b1",
+        "pixels": 148
+      },
+      {
+        "hex": "#072c24",
+        "pixels": 763
+      }
+    ]
+  },
+  {
+    "id": "html-school",
+    "pixels": 32580,
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "pixels": 1346
+      },
+      {
+        "hex": "#807e21",
+        "pixels": 344
+      },
+      {
+        "hex": "#fafcff",
+        "pixels": 208
+      },
+      {
+        "hex": "#497542",
+        "pixels": 497
+      },
+      {
+        "hex": "#f5eba5",
+        "pixels": 170
+      },
+      {
+        "hex": "#ffe226",
+        "pixels": 733
+      },
+      {
+        "hex": "#ffe026",
+        "pixels": 768
+      },
+      {
+        "hex": "#fbe026",
+        "pixels": 8
+      },
+      {
+        "hex": "#ffdf26",
+        "pixels": 1539
+      },
+      {
+        "hex": "#fddf26",
+        "pixels": 8
+      },
+      {
+        "hex": "#ffde26",
+        "pixels": 17453
+      },
+      {
+        "hex": "#fdde26",
+        "pixels": 41
+      },
+      {
+        "hex": "#fddc26",
+        "pixels": 555
+      },
+      {
+        "hex": "#ffdf22",
+        "pixels": 88
+      },
+      {
+        "hex": "#fada25",
+        "pixels": 859
+      },
+      {
+        "hex": "#f4da45",
+        "pixels": 95
+      },
+      {
+        "hex": "#f8d926",
+        "pixels": 363
+      },
+      {
+        "hex": "#44581a",
+        "pixels": 407
+      },
+      {
+        "hex": "#f3d425",
+        "pixels": 427
+      },
+      {
+        "hex": "#125233",
+        "pixels": 120
+      },
+      {
+        "hex": "#12512f",
+        "pixels": 2597
+      },
+      {
+        "hex": "#11512e",
+        "pixels": 120
+      },
+      {
+        "hex": "#efd023",
+        "pixels": 730
+      },
+      {
+        "hex": "#eecd24",
+        "pixels": 286
+      },
+      {
+        "hex": "#e2cd40",
+        "pixels": 12
+      },
+      {
+        "hex": "#104d2b",
+        "pixels": 478
+      },
+      {
+        "hex": "#e2c624",
+        "pixels": 385
+      },
+      {
+        "hex": "#e2c523",
+        "pixels": 293
+      },
+      {
+        "hex": "#d1b723",
+        "pixels": 632
+      },
+      {
+        "hex": "#12512e",
+        "pixels": 28
+      },
+      {
+        "hex": "#bcad2c",
+        "pixels": 515
+      },
+      {
+        "hex": "#a49c28",
+        "pixels": 475
+      }
+    ]
+  },
+  {
+    "id": "html-technical",
+    "pixels": 30780,
+    "colors": [
+      {
+        "hex": "#776f63",
+        "pixels": 725
+      },
+      {
+        "hex": "#2f616a",
+        "pixels": 663
+      },
+      {
+        "hex": "#19e0ea",
+        "pixels": 786
+      },
+      {
+        "hex": "#081421",
+        "pixels": 460
+      },
+      {
+        "hex": "#091521",
+        "pixels": 15
+      },
+      {
+        "hex": "#19dde7",
+        "pixels": 4902
+      },
+      {
+        "hex": "#18dde9",
+        "pixels": 5
+      },
+      {
+        "hex": "#bbdce4",
+        "pixels": 667
+      },
+      {
+        "hex": "#19dae4",
+        "pixels": 435
+      },
+      {
+        "hex": "#19dde6",
+        "pixels": 39
+      },
+      {
+        "hex": "#603a4e",
+        "pixels": 190
+      },
+      {
+        "hex": "#35b79c",
+        "pixels": 162
+      },
+      {
+        "hex": "#2a3642",
+        "pixels": 802
+      },
+      {
+        "hex": "#14b1bc",
+        "pixels": 732
+      },
+      {
+        "hex": "#b8ae58",
+        "pixels": 457
+      },
+      {
+        "hex": "#1c272c",
+        "pixels": 676
+      },
+      {
+        "hex": "#122329",
+        "pixels": 428
+      },
+      {
+        "hex": "#091523",
+        "pixels": 21
+      },
+      {
+        "hex": "#0e1a22",
+        "pixels": 692
+      },
+      {
+        "hex": "#19dde8",
+        "pixels": 232
+      },
+      {
+        "hex": "#091622",
+        "pixels": 538
+      },
+      {
+        "hex": "#5c1530",
+        "pixels": 89
+      },
+      {
+        "hex": "#091522",
+        "pixels": 13307
+      },
+      {
+        "hex": "#071522",
+        "pixels": 201
+      },
+      {
+        "hex": "#0a1421",
+        "pixels": 186
+      },
+      {
+        "hex": "#081422",
+        "pixels": 464
+      },
+      {
+        "hex": "#071320",
+        "pixels": 533
+      },
+      {
+        "hex": "#06121f",
+        "pixels": 413
+      },
+      {
+        "hex": "#04101f",
+        "pixels": 666
+      },
+      {
+        "hex": "#080e1b",
+        "pixels": 101
+      },
+      {
+        "hex": "#7c062a",
+        "pixels": 1
+      },
+      {
+        "hex": "#a7022f",
+        "pixels": 1192
+      }
+    ]
+  },
+  {
+    "id": "restaurant-cafe",
+    "pixels": 24480,
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "pixels": 1921
+      },
+      {
+        "hex": "#feffff",
+        "pixels": 17
+      },
+      {
+        "hex": "#fcfafa",
+        "pixels": 168
+      },
+      {
+        "hex": "#f1f1f4",
+        "pixels": 257
+      },
+      {
+        "hex": "#f06b34",
+        "pixels": 64
+      },
+      {
+        "hex": "#ff6826",
+        "pixels": 798
+      },
+      {
+        "hex": "#fd6826",
+        "pixels": 5
+      },
+      {
+        "hex": "#ff6726",
+        "pixels": 16649
+      },
+      {
+        "hex": "#fd6726",
+        "pixels": 289
+      },
+      {
+        "hex": "#fd6626",
+        "pixels": 173
+      },
+      {
+        "hex": "#fa6525",
+        "pixels": 300
+      },
+      {
+        "hex": "#f46325",
+        "pixels": 180
+      },
+      {
+        "hex": "#ff6827",
+        "pixels": 259
+      },
+      {
+        "hex": "#ff621f",
+        "pixels": 151
+      },
+      {
+        "hex": "#ed6122",
+        "pixels": 297
+      },
+      {
+        "hex": "#ea6022",
+        "pixels": 294
+      },
+      {
+        "hex": "#e86024",
+        "pixels": 76
+      },
+      {
+        "hex": "#fffffe",
+        "pixels": 18
+      },
+      {
+        "hex": "#e55e23",
+        "pixels": 292
+      },
+      {
+        "hex": "#db5c2a",
+        "pixels": 112
+      },
+      {
+        "hex": "#d5591e",
+        "pixels": 161
+      },
+      {
+        "hex": "#d45822",
+        "pixels": 177
+      },
+      {
+        "hex": "#ff6823",
+        "pixels": 186
+      },
+      {
+        "hex": "#c95525",
+        "pixels": 184
+      },
+      {
+        "hex": "#d4d8e6",
+        "pixels": 240
+      },
+      {
+        "hex": "#b85230",
+        "pixels": 198
+      },
+      {
+        "hex": "#8f4532",
+        "pixels": 192
+      },
+      {
+        "hex": "#1a3aac",
+        "pixels": 272
+      },
+      {
+        "hex": "#622f18",
+        "pixels": 194
+      },
+      {
+        "hex": "#dca799",
+        "pixels": 151
+      },
+      {
+        "hex": "#2a1e28",
+        "pixels": 184
+      },
+      {
+        "hex": "#ff6725",
+        "pixels": 21
+      }
+    ]
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "pixels": 23580,
+    "colors": [
+      {
+        "hex": "#24103c",
+        "pixels": 5
+      },
+      {
+        "hex": "#806f82",
+        "pixels": 258
+      },
+      {
+        "hex": "#230f3d",
+        "pixels": 100
+      },
+      {
+        "hex": "#705e77",
+        "pixels": 268
+      },
+      {
+        "hex": "#625372",
+        "pixels": 287
+      },
+      {
+        "hex": "#efca9f",
+        "pixels": 146
+      },
+      {
+        "hex": "#5a4767",
+        "pixels": 257
+      },
+      {
+        "hex": "#24103e",
+        "pixels": 7
+      },
+      {
+        "hex": "#4d3c5f",
+        "pixels": 216
+      },
+      {
+        "hex": "#e0b58d",
+        "pixels": 350
+      },
+      {
+        "hex": "#433056",
+        "pixels": 273
+      },
+      {
+        "hex": "#3b284f",
+        "pixels": 220
+      },
+      {
+        "hex": "#382149",
+        "pixels": 85
+      },
+      {
+        "hex": "#230f3b",
+        "pixels": 6
+      },
+      {
+        "hex": "#321f49",
+        "pixels": 114
+      },
+      {
+        "hex": "#351e4e",
+        "pixels": 341
+      },
+      {
+        "hex": "#301945",
+        "pixels": 304
+      },
+      {
+        "hex": "#2d1745",
+        "pixels": 245
+      },
+      {
+        "hex": "#2a1642",
+        "pixels": 208
+      },
+      {
+        "hex": "#26123f",
+        "pixels": 196
+      },
+      {
+        "hex": "#a8908f",
+        "pixels": 253
+      },
+      {
+        "hex": "#25103d",
+        "pixels": 56
+      },
+      {
+        "hex": "#24103d",
+        "pixels": 17322
+      },
+      {
+        "hex": "#23103d",
+        "pixels": 50
+      },
+      {
+        "hex": "#240f3d",
+        "pixels": 20
+      },
+      {
+        "hex": "#230f3c",
+        "pixels": 646
+      },
+      {
+        "hex": "#230e3c",
+        "pixels": 35
+      },
+      {
+        "hex": "#220e3c",
+        "pixels": 304
+      },
+      {
+        "hex": "#210d3b",
+        "pixels": 336
+      },
+      {
+        "hex": "#200c3a",
+        "pixels": 240
+      },
+      {
+        "hex": "#1e0b39",
+        "pixels": 308
+      },
+      {
+        "hex": "#1b0736",
+        "pixels": 124
+      }
+    ]
+  },
+  {
+    "id": "restaurant-menu",
+    "pixels": 35460,
+    "colors": [
+      {
+        "hex": "#eafcbc",
+        "pixels": 269
+      },
+      {
+        "hex": "#c1fc32",
+        "pixels": 278
+      },
+      {
+        "hex": "#bff932",
+        "pixels": 619
+      },
+      {
+        "hex": "#bef732",
+        "pixels": 368
+      },
+      {
+        "hex": "#bdf731",
+        "pixels": 27
+      },
+      {
+        "hex": "#bef632",
+        "pixels": 143
+      },
+      {
+        "hex": "#bdf632",
+        "pixels": 396
+      },
+      {
+        "hex": "#bef531",
+        "pixels": 900
+      },
+      {
+        "hex": "#bdf532",
+        "pixels": 458
+      },
+      {
+        "hex": "#bcf532",
+        "pixels": 153
+      },
+      {
+        "hex": "#bbf52b",
+        "pixels": 18
+      },
+      {
+        "hex": "#bdf432",
+        "pixels": 859
+      },
+      {
+        "hex": "#bcf432",
+        "pixels": 23970
+      },
+      {
+        "hex": "#bbf432",
+        "pixels": 10
+      },
+      {
+        "hex": "#bbf232",
+        "pixels": 335
+      },
+      {
+        "hex": "#b7ef35",
+        "pixels": 960
+      },
+      {
+        "hex": "#b8ee32",
+        "pixels": 334
+      },
+      {
+        "hex": "#ceeb99",
+        "pixels": 60
+      },
+      {
+        "hex": "#b8ea35",
+        "pixels": 42
+      },
+      {
+        "hex": "#b3e831",
+        "pixels": 198
+      },
+      {
+        "hex": "#afe231",
+        "pixels": 312
+      },
+      {
+        "hex": "#a9e23d",
+        "pixels": 916
+      },
+      {
+        "hex": "#adde31",
+        "pixels": 337
+      },
+      {
+        "hex": "#a6d036",
+        "pixels": 410
+      },
+      {
+        "hex": "#9bc62e",
+        "pixels": 394
+      },
+      {
+        "hex": "#94b931",
+        "pixels": 467
+      },
+      {
+        "hex": "#8aa732",
+        "pixels": 470
+      },
+      {
+        "hex": "#738133",
+        "pixels": 445
+      },
+      {
+        "hex": "#545035",
+        "pixels": 355
+      },
+      {
+        "hex": "#301637",
+        "pixels": 431
+      },
+      {
+        "hex": "#bcf430",
+        "pixels": 42
+      },
+      {
+        "hex": "#250537",
+        "pixels": 484
+      }
+    ]
+  },
+  {
+    "id": "restaurant-reservations",
+    "pixels": 24660,
+    "colors": [
+      {
+        "hex": "#ffffff",
+        "pixels": 16482
+      },
+      {
+        "hex": "#feffff",
+        "pixels": 31
+      },
+      {
+        "hex": "#fdfdfc",
+        "pixels": 183
+      },
+      {
+        "hex": "#ffdfd5",
+        "pixels": 319
+      },
+      {
+        "hex": "#f8fbf9",
+        "pixels": 314
+      },
+      {
+        "hex": "#fbfaf8",
+        "pixels": 520
+      },
+      {
+        "hex": "#fdf8f6",
+        "pixels": 4
+      },
+      {
+        "hex": "#f5f7f6",
+        "pixels": 148
+      },
+      {
+        "hex": "#2b744f",
+        "pixels": 105
+      },
+      {
+        "hex": "#eaf3ee",
+        "pixels": 358
+      },
+      {
+        "hex": "#fcf1ee",
+        "pixels": 191
+      },
+      {
+        "hex": "#eeeeee",
+        "pixels": 184
+      },
+      {
+        "hex": "#e5eeea",
+        "pixels": 316
+      },
+      {
+        "hex": "#0b6d3d",
+        "pixels": 135
+      },
+      {
+        "hex": "#066c3b",
+        "pixels": 594
+      },
+      {
+        "hex": "#f1ebe5",
+        "pixels": 395
+      },
+      {
+        "hex": "#e6e5e1",
+        "pixels": 267
+      },
+      {
+        "hex": "#ffe4db",
+        "pixels": 174
+      },
+      {
+        "hex": "#ffe0d8",
+        "pixels": 159
+      },
+      {
+        "hex": "#ffe1d8",
+        "pixels": 246
+      },
+      {
+        "hex": "#ffe0d7",
+        "pixels": 1224
+      },
+      {
+        "hex": "#fffffe",
+        "pixels": 135
+      },
+      {
+        "hex": "#f7ddd3",
+        "pixels": 362
+      },
+      {
+        "hex": "#285a41",
+        "pixels": 95
+      },
+      {
+        "hex": "#cad9d2",
+        "pixels": 267
+      },
+      {
+        "hex": "#f5d8cd",
+        "pixels": 234
+      },
+      {
+        "hex": "#afd0c0",
+        "pixels": 322
+      },
+      {
+        "hex": "#d4ceca",
+        "pixels": 187
+      },
+      {
+        "hex": "#ccc0bc",
+        "pixels": 277
+      },
+      {
+        "hex": "#b6a9a4",
+        "pixels": 168
+      },
+      {
+        "hex": "#ffe0d6",
+        "pixels": 5
+      },
+      {
+        "hex": "#679278",
+        "pixels": 259
+      }
+    ]
+  },
+  {
+    "id": "webapp-board",
+    "pixels": 26100,
+    "colors": [
+      {
+        "hex": "#fdff00",
+        "pixels": 243
+      },
+      {
+        "hex": "#fbff00",
+        "pixels": 221
+      },
+      {
+        "hex": "#f9ff00",
+        "pixels": 397
+      },
+      {
+        "hex": "#f8ff00",
+        "pixels": 733
+      },
+      {
+        "hex": "#f7ff00",
+        "pixels": 716
+      },
+      {
+        "hex": "#f6ff00",
+        "pixels": 678
+      },
+      {
+        "hex": "#f5ff00",
+        "pixels": 18035
+      },
+      {
+        "hex": "#f4ff00",
+        "pixels": 53
+      },
+      {
+        "hex": "#f3fc00",
+        "pixels": 139
+      },
+      {
+        "hex": "#eefa05",
+        "pixels": 322
+      },
+      {
+        "hex": "#eff801",
+        "pixels": 149
+      },
+      {
+        "hex": "#eaf403",
+        "pixels": 149
+      },
+      {
+        "hex": "#70711e",
+        "pixels": 229
+      },
+      {
+        "hex": "#e6ee05",
+        "pixels": 262
+      },
+      {
+        "hex": "#dced11",
+        "pixels": 322
+      },
+      {
+        "hex": "#dbec11",
+        "pixels": 482
+      },
+      {
+        "hex": "#dbe90e",
+        "pixels": 27
+      },
+      {
+        "hex": "#dce405",
+        "pixels": 268
+      },
+      {
+        "hex": "#cce21b",
+        "pixels": 289
+      },
+      {
+        "hex": "#cae01b",
+        "pixels": 150
+      },
+      {
+        "hex": "#f6ff02",
+        "pixels": 8
+      },
+      {
+        "hex": "#d2da04",
+        "pixels": 220
+      },
+      {
+        "hex": "#bed520",
+        "pixels": 190
+      },
+      {
+        "hex": "#5f5459",
+        "pixels": 26
+      },
+      {
+        "hex": "#c4cb06",
+        "pixels": 305
+      },
+      {
+        "hex": "#433a3f",
+        "pixels": 42
+      },
+      {
+        "hex": "#5939a9",
+        "pixels": 245
+      },
+      {
+        "hex": "#b3b80f",
+        "pixels": 241
+      },
+      {
+        "hex": "#4420b9",
+        "pixels": 180
+      },
+      {
+        "hex": "#401abc",
+        "pixels": 198
+      },
+      {
+        "hex": "#969917",
+        "pixels": 262
+      },
+      {
+        "hex": "#18151e",
+        "pixels": 319
+      }
+    ]
+  },
+  {
+    "id": "webapp-settings",
+    "pixels": 22500,
+    "colors": [
+      {
+        "hex": "#f0ffff",
+        "pixels": 221
+      },
+      {
+        "hex": "#c5feff",
+        "pixels": 175
+      },
+      {
+        "hex": "#c3fcff",
+        "pixels": 395
+      },
+      {
+        "hex": "#5278e8",
+        "pixels": 290
+      },
+      {
+        "hex": "#b6eef6",
+        "pixels": 69
+      },
+      {
+        "hex": "#e6ecf5",
+        "pixels": 298
+      },
+      {
+        "hex": "#3f68ea",
+        "pixels": 265
+      },
+      {
+        "hex": "#1e5eed",
+        "pixels": 10
+      },
+      {
+        "hex": "#2e5be9",
+        "pixels": 316
+      },
+      {
+        "hex": "#2457e5",
+        "pixels": 387
+      },
+      {
+        "hex": "#2454e8",
+        "pixels": 277
+      },
+      {
+        "hex": "#1e4fe8",
+        "pixels": 218
+      },
+      {
+        "hex": "#1b4ce8",
+        "pixels": 124
+      },
+      {
+        "hex": "#1a4ce7",
+        "pixels": 378
+      },
+      {
+        "hex": "#1a4be8",
+        "pixels": 92
+      },
+      {
+        "hex": "#184ae8",
+        "pixels": 79
+      },
+      {
+        "hex": "#1748e8",
+        "pixels": 41
+      },
+      {
+        "hex": "#1648e8",
+        "pixels": 15962
+      },
+      {
+        "hex": "#1548e8",
+        "pixels": 69
+      },
+      {
+        "hex": "#1647e8",
+        "pixels": 16
+      },
+      {
+        "hex": "#1547e8",
+        "pixels": 877
+      },
+      {
+        "hex": "#1447e8",
+        "pixels": 92
+      },
+      {
+        "hex": "#b3c6ec",
+        "pixels": 215
+      },
+      {
+        "hex": "#1546e8",
+        "pixels": 6
+      },
+      {
+        "hex": "#1446e8",
+        "pixels": 301
+      },
+      {
+        "hex": "#1346e8",
+        "pixels": 152
+      },
+      {
+        "hex": "#1245e8",
+        "pixels": 383
+      },
+      {
+        "hex": "#0f42e7",
+        "pixels": 193
+      },
+      {
+        "hex": "#77a3eb",
+        "pixels": 246
+      },
+      {
+        "hex": "#1547e7",
+        "pixels": 1
+      },
+      {
+        "hex": "#6787e8",
+        "pixels": 341
+      },
+      {
+        "hex": "#1a4ce8",
+        "pixels": 11
+      }
+    ]
+  },
+  {
+    "id": "webapp-workspace",
+    "pixels": 22500,
+    "colors": [
+      {
+        "hex": "#fffffb",
+        "pixels": 261
+      },
+      {
+        "hex": "#fdfffc",
+        "pixels": 32
+      },
+      {
+        "hex": "#fefefa",
+        "pixels": 250
+      },
+      {
+        "hex": "#fdfefa",
+        "pixels": 468
+      },
+      {
+        "hex": "#fcfefa",
+        "pixels": 1
+      },
+      {
+        "hex": "#fefdf9",
+        "pixels": 13
+      },
+      {
+        "hex": "#fdfdf9",
+        "pixels": 570
+      },
+      {
+        "hex": "#fcfdf9",
+        "pixels": 472
+      },
+      {
+        "hex": "#fbfdfb",
+        "pixels": 3
+      },
+      {
+        "hex": "#fdfcf8",
+        "pixels": 29
+      },
+      {
+        "hex": "#fcfcf8",
+        "pixels": 16176
+      },
+      {
+        "hex": "#fbfcf8",
+        "pixels": 15
+      },
+      {
+        "hex": "#fbfbf7",
+        "pixels": 303
+      },
+      {
+        "hex": "#f9f9f4",
+        "pixels": 334
+      },
+      {
+        "hex": "#fcfcf7",
+        "pixels": 14
+      },
+      {
+        "hex": "#f6f6f2",
+        "pixels": 283
+      },
+      {
+        "hex": "#f9f5f1",
+        "pixels": 393
+      },
+      {
+        "hex": "#f1f0ec",
+        "pixels": 181
+      },
+      {
+        "hex": "#e9e8e4",
+        "pixels": 250
+      },
+      {
+        "hex": "#e3e2df",
+        "pixels": 217
+      },
+      {
+        "hex": "#f1e1dd",
+        "pixels": 392
+      },
+      {
+        "hex": "#fffffe",
+        "pixels": 212
+      },
+      {
+        "hex": "#fdfdfa",
+        "pixels": 21
+      },
+      {
+        "hex": "#fcfdfa",
+        "pixels": 4
+      },
+      {
+        "hex": "#d9d7d4",
+        "pixels": 296
+      },
+      {
+        "hex": "#c8c8c4",
+        "pixels": 419
+      },
+      {
+        "hex": "#fefef9",
+        "pixels": 29
+      },
+      {
+        "hex": "#c4bcb6",
+        "pixels": 552
+      },
+      {
+        "hex": "#fcfcf9",
+        "pixels": 18
+      },
+      {
+        "hex": "#fdfdf8",
+        "pixels": 25
+      },
+      {
+        "hex": "#fcfdf8",
+        "pixels": 1
+      },
+      {
+        "hex": "#a58a7d",
+        "pixels": 266
+      }
+    ]
+  }
+]

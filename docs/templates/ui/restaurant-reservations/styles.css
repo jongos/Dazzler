@@ -343,3 +343,106 @@ form button {
     padding: 20px;
   }
 }
+/* Selected engine roles; accent fills and labels have separate foregrounds. */
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+p,
+li,
+blockquote {
+  max-width: 60ch;
+}
+.top,
+footer,
+td,
+th,
+.event,
+.notes,
+.task,
+.product,
+.dish-row,
+.menu-controls,
+.ledger {
+  border-color: var(--accent);
+}
+button,
+input,
+select,
+textarea {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+input,
+select,
+textarea {
+  background: var(--paper);
+}
+button {
+  background: var(--button-background);
+}
+button[aria-pressed="true"],
+.band,
+.schedule,
+thead,
+.beats section:nth-child(2) {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.kicker,
+.closing {
+  color: var(--ink);
+}
+.stat,
+.event,
+.reading-value {
+  color: var(--accent);
+}
+@media print {
+  body {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+.room {
+  background: var(--room-background-2);
+  border-color: var(--room-border-color);
+}
+.room button {
+  background: var(--room-button-background-2);
+  color: var(--room-button-color);
+  border-color: var(--room-button-border-color);
+}
+.room button[aria-pressed="true"] {
+  background: var(--room-button-aria-pressed-true-background-2);
+  color: var(--room-button-aria-pressed-true-color);
+}
+.reservation form {
+  background: var(--reservation-form-background);
+  color: var(--reservation-form-color);
+  padding: 28px;
+}
+.reservation form input,
+.reservation form select {
+  background: var(--reservation-form-input-reservation-form-select-background);
+  color: var(--reservation-form-input-reservation-form-select-color);
+}
+.reservation form button {
+  background: var(--reservation-form-button-background);
+  color: var(--reservation-form-button-color);
+}
+.window-label {
+  border-color: var(--window-label-border-color);
+}

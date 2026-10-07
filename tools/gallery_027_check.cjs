@@ -4,7 +4,7 @@ const fs = require("node:fs/promises"),
   assert = require("node:assert/strict");
 const { pathToFileURL } = require("node:url");
 (async () => {
-  const root = path.resolve("maintenance/gallery-production/v0.27.0"),
+  const root = path.resolve("maintenance/gallery-production/v0.28.0"),
     out = path.join(root, "renders");
   await fs.mkdir(out, { recursive: true });
   const source = process.env.DAZZLER_GALLERY_SOURCE || path.join(root, "artifacts");

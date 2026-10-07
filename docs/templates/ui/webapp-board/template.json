@@ -1,7 +1,7 @@
 {
   "id": "webapp-board",
   "title": "Signal Production Board",
-  "prompt": "Create a fictional audio-production board whose workflow is visible as three horizontal lanes rather than a conventional card kanban. Use broadcast yellow and charcoal, clear owners and stage labels. A Move Forward action must update a task stage and the completion count.",
+  "prompt": "Create a fictional audio-production board whose workflow is visible as three horizontal lanes rather than a conventional card kanban. . A Move Forward action must update a task stage and the completion count. Color direction: Broadcast-yellow production lanes with black ink and electric violet stage controls.",
   "data": {
     "tasks": [
       [

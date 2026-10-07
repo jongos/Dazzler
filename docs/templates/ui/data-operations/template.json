@@ -1,7 +1,7 @@
 {
   "id": "data-operations",
   "title": "Tide Water Operations",
-  "prompt": "Create a fictional water-operations console focused on four stations and one alert, with a clear spatial flow diagram, measured readings and a station inspector. Use dark navy with cyan signals, text status labels and a high-contrast alert. Station buttons must update the inspector; no live telemetry claims.",
+  "prompt": "Create a fictional water-operations console focused on four stations and one alert, with a clear spatial flow diagram, measured readings and a station inspector. Use dark navy with cyan signals, text status labels and a high-contrast alert. Station buttons must update the inspector; no live telemetry claims. Color direction: Dark instrument panel with electric mint readings and orange warning evidence.",
   "data": {
     "stations": [
       "Intake",

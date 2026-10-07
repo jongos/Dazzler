@@ -1,7 +1,11 @@
 :root {
-  --accent: #34312b;
-  --paper: #fff2b8;
+  --accent: #004fa0;
+  --paper: #f5ff00;
   --display: "Archivo";
+  --ink: #181818;
+  --on-accent: #ffffff;
+  --signal: #0a6ecb;
+  --counter: #cd1096;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -16,4 +20,9 @@
   --band-color: white;
   --body-background: white;
   --task-border-top: #34312b;
+  --board-title-h1-color: #111;
+  --task-button-background: #4521b8;
+  --task-button-color: white;
+  --task-button-border-color: #4521b8;
+  --stage-color: #4521b8;
 }

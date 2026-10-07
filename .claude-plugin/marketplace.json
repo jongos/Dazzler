@@ -11,8 +11,8 @@
       "description": "Automatic typography, color, interfaces, charts and document design",
       "source": {
         "source": "archive",
-        "url": "https://github.com/jongos/Dazzler/releases/download/v0.27.0/dazzler-claude-plugin.zip",
-        "sha256": "c98c2bd00bf45df7523c43f612f0560e718c1fe4ee9aa6ac81e36be6036cfb72"
+        "url": "https://github.com/jongos/Dazzler/releases/download/v0.28.0/dazzler-claude-plugin.zip",
+        "sha256": "655ff252da6a20f2f89ee917e1f7be34f1430432802f43775fee5394b4f0ca08"
       }
     }
   ]

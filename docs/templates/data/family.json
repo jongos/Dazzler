@@ -4,8 +4,8 @@
   "short": "One Weekend Together",
   "tag": "THE RIVER HOUSE / 23–25 JULY",
   "lead": "A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday.",
-  "accent": "#224A74",
-  "paper": "#FFF7E6",
+  "accent": "#056182",
+  "paper": "#FFFFFF",
   "font": "Work Sans",
   "word": "Arial",
   "layout": "planner",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Fictional household · Adapt the plan to your family and access needs.",
-  "prompt": "Design a warm practical family weekend planner. Use three day columns, a packing checklist and a shared-notice strip. It should feel like a considered fridge sheet in cream, navy and coral, not a corporate report or a childish worksheet.",
+  "prompt": "Design a warm practical family weekend planner. Use three day columns, a packing checklist and a shared-notice strip. It should feel like a considered fridge sheet in cream, navy and coral, not a corporate report or a childish worksheet. Color direction: Bright sky-blue itinerary, sunny packing field and coral day markers on white.",
+  "fontSelection": {
+    "id": "work-sans",
+    "css_family": "Work Sans",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#224A74",
+  "originalPaper": "#FFF7E6",
+  "colorDirection": "Bright sky-blue itinerary, sunny packing field and coral day markers on white.",
   "fictional": true,
   "design": {
-    "accent": "#224A74",
-    "secondary": "#224A74",
-    "paper": "#FFF7E6"
+    "accent": "#056182",
+    "secondary": "#056182",
+    "paper": "#FFFFFF",
+    "text": "#15191B",
+    "accentText": "#056182",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

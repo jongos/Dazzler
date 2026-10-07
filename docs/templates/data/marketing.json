@@ -4,8 +4,8 @@
   "short": "Keep the Good Things",
   "tag": "SECOND LIFE / CAMPAIGN EDITION 01",
   "lead": "Make repair feel like a first choice. Show the work, explain the process and make booking simple.",
-  "accent": "#9B301C",
-  "paper": "#FFF0E5",
+  "accent": "#003931",
+  "paper": "#FF3191",
   "font": "Oswald",
   "word": "Arial",
   "layout": "editorial",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Fictional campaign · Capacity figures are planning assumptions.",
-  "prompt": "Build a bold fictional repair-campaign editorial. Use a large condensed headline, rust and peach color fields, a diagram of the repair journey and a channel ledger. Avoid generic marketing cards and unsupported environmental claims.",
+  "prompt": "Build a bold fictional repair-campaign editorial. Use a large condensed headline, rust and peach color fields, a diagram of the repair journey and a channel ledger. Avoid generic marketing cards and unsupported environmental claims. Color direction: Hot-pink repair campaign with a cobalt evidence band and black typography.",
+  "fontSelection": {
+    "id": "oswald",
+    "css_family": "Oswald",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#9B301C",
+  "originalPaper": "#FFF0E5",
+  "colorDirection": "Hot-pink repair campaign with a cobalt evidence band and black typography.",
   "fictional": true,
   "design": {
-    "accent": "#9B301C",
-    "secondary": "#9B301C",
-    "paper": "#FFF0E5"
+    "accent": "#003931",
+    "secondary": "#003931",
+    "paper": "#FF3191",
+    "text": "#19171D",
+    "accentText": "#000000",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

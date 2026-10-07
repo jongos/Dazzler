@@ -1,0 +1,198 @@
+[
+  {
+    "id": "webapp-workspace",
+    "title": "Margin Writing Room",
+    "prompt": "Build a fictional writing workspace around the manuscript itself, with a narrow chapter index and an editorial note rail. Warm paper and literary type should support sustained writing. Make word count and saving a local draft work; no fake collaborative service. Color direction: Quiet neutral writing paper with a precise orange editorial rail; the manuscript remains calm.",
+    "data": {
+      "chapter": "At the River",
+      "mode": "local manuscript"
+    },
+    "action": "Save Draft Locally"
+  },
+  {
+    "id": "webapp-board",
+    "title": "Signal Production Board",
+    "prompt": "Create a fictional audio-production board whose workflow is visible as three horizontal lanes rather than a conventional card kanban. . A Move Forward action must update a task stage and the completion count. Color direction: Broadcast-yellow production lanes with black ink and electric violet stage controls.",
+    "data": {
+      "tasks": [
+        [
+          "Opening Mix",
+          "Ari",
+          "Edit"
+        ],
+        [
+          "Fact Check",
+          "Noor",
+          "Review"
+        ],
+        [
+          "Transcript",
+          "Sam",
+          "Review"
+        ],
+        [
+          "Artwork",
+          "Dee",
+          "Ready"
+        ]
+      ]
+    },
+    "action": "Move Forward"
+  },
+  {
+    "id": "webapp-settings",
+    "title": "Still Notification Studio",
+    "prompt": "Design a fictional notification-settings interface centered on choosing a daily rhythm. . Support a digest-time selector, three channel toggles and a save confirmation. Color direction: Full royal-blue schedule studio with white controls and a luminous cyan clock.",
+    "data": {
+      "digestTimes": [
+        "09:00",
+        "13:00",
+        "17:00"
+      ],
+      "channels": 3
+    },
+    "action": "Save Preferences"
+  },
+  {
+    "id": "data-revenue",
+    "title": "Common Ground Membership Observatory",
+    "prompt": "Build a fictional membership revenue explorer whose main surface is an annual chart, not KPI cards. . Switch between revenue and member counts with accurate axes, exact values and a data table. Make the selected metric visually and programmatically clear. Color direction: White analytical canvas with vivid violet bars and a black chart field; exact labels stay primary.",
+    "data": {
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "revenue": [
+        84,
+        98,
+        121,
+        143,
+        168,
+        192
+      ],
+      "members": [
+        210,
+        245,
+        302,
+        357,
+        420,
+        480
+      ]
+    },
+    "action": "Members"
+  },
+  {
+    "id": "data-operations",
+    "title": "Tide Water Operations",
+    "prompt": "Create a fictional water-operations console focused on four stations and one alert, with a clear spatial flow diagram, measured readings and a station inspector. Use dark navy with cyan signals, text status labels and a high-contrast alert. Station buttons must update the inspector; no live telemetry claims. Color direction: Dark instrument panel with electric mint readings and orange warning evidence.",
+    "data": {
+      "stations": [
+        "Intake",
+        "Filter",
+        "Storage",
+        "Outlet"
+      ],
+      "values": [
+        18.4,
+        2.8,
+        72,
+        17.9
+      ]
+    },
+    "action": "01 Intake"
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "title": "Vesper Tasting Room",
+    "prompt": "Create a fictional intimate tasting-room website without stock photography. Use black plum, cream serif typography and an oversized course numeral. Let visitors reveal a five-course sequence and read seating details. Distinguish a request preview from a real reservation. Color direction: Aubergine dining theatre with a luminous apricot course numeral.",
+    "data": {
+      "courses": 5,
+      "seats": 12,
+      "price": 95
+    },
+    "action": "Explore the Menu"
+  },
+  {
+    "id": "restaurant-cafe",
+    "title": "Daybreak Coffee Counter",
+    "prompt": "Build a fictional cafe pickup interface centered on a large typographic order ticket. Use espresso brown and apricot, category filters, three products and an honest local cart total. Adding items must update quantities and totals; no checkout or real pickup promise. Color direction: Orange coffee counter with electric blue ordering controls and a white receipt.",
+    "data": {
+      "products": [
+        {
+          "name": "Flat White",
+          "price": 4.5
+        },
+        {
+          "name": "Filter Coffee",
+          "price": 3.5
+        },
+        {
+          "name": "Almond Bun",
+          "price": 5
+        }
+      ]
+    },
+    "action": "Add Flat White"
+  },
+  {
+    "id": "restaurant-reservations",
+    "title": "Solstice Table Planner",
+    "prompt": "Design a fictional restaurant seating-request page around a simple original room plan and a request form. Use olive and cream, distinct named table zones and an accessible text equivalent. Choosing a zone must update the request; submission must clearly remain an unconfirmed local preview. Color direction: White room-planning canvas with vivid green selected tables and coral request panel.",
+    "data": {
+      "zones": [
+        "Window Table",
+        "Quiet Corner",
+        "Shared Table"
+      ]
+    },
+    "action": "Quiet Corner"
+  },
+  {
+    "id": "restaurant-menu",
+    "title": "Saffron Lunch Index",
+    "prompt": "Make a fictional lunch-menu interface that behaves like a searchable culinary index. Use saffron yellow, ink black and a bold condensed masthead. Search and vegetarian filtering must work without changing prices or claiming allergy safety. Avoid product-photo cards. Color direction: Lime lunch index with plum type, magenta category marks and clear prices.",
+    "data": {
+      "dishes": [
+        {
+          "name": "Roast Carrot Bowl",
+          "price": 14
+        },
+        {
+          "name": "Lemon Chicken Plate",
+          "price": 17
+        },
+        {
+          "name": "Green Lentil Soup",
+          "price": 11
+        },
+        {
+          "name": "Market Fish Sandwich",
+          "price": 18
+        }
+      ]
+    },
+    "action": "Vegetarian Only"
+  },
+  {
+    "id": "business-portal",
+    "title": "Fieldwork Client Ledger",
+    "prompt": "Create a fictional client portal for a small architecture studio. Organize the page as a project ledger with milestone dates and a focused decision panel, rather than a generic dashboard. Use brick red and warm white. Document selection must show a useful preview; approval must be explicitly local and reversible. Color direction: White client ledger with a cobalt project masthead and green review evidence.",
+    "data": {
+      "milestones": [
+        "06 Jun",
+        "20 Jun",
+        "04 Jul",
+        "18 Jul"
+      ],
+      "documents": [
+        "Materials",
+        "Schedule"
+      ]
+    },
+    "action": "Mark Reviewed Locally"
+  }
+]

@@ -1,7 +1,11 @@
 :root {
-  --accent: #07556a;
-  --paper: #eaf5f5;
+  --accent: #96ac00;
+  --paper: #091522;
   --display: "Office Code Pro";
+  --ink: #f3f3f4;
+  --on-accent: #000000;
+  --signal: #b6cf19;
+  --counter: #e21267;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -18,4 +22,12 @@
   --runbook-background: #102d38;
   --runbook-color: white;
   --runbook-aside-color: #a7eff0;
+  --runbook-background-2: #19dde7;
+  --runbook-color-2: #05212c;
+  --runbook-aside-color-2: #05212c;
+  --runbook-kicker-runbook-stat-color: #05212c;
+  --band-background: #a6002e;
+  --figure-color: #bbf7ff;
+  --closing-background: #ffd5dd;
+  --closing-color: #6b0015;
 }

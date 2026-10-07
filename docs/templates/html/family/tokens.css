@@ -1,7 +1,11 @@
 :root {
-  --accent: #224a74;
-  --paper: #fff7e6;
+  --accent: #005646;
+  --paper: #ffffff;
   --display: "Work Sans";
+  --ink: #15191b;
+  --on-accent: #ffffff;
+  --signal: #10ac94;
+  --counter: #930542;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -17,4 +21,12 @@
   --body-background: white;
   --packing-background: #f8d6c4;
   --packing-label-border-bottom: #17252b40;
+  --days-section-nth-child-1-background: #1648e8;
+  --days-section-nth-child-1-color: white;
+  --days-section-nth-child-2-background: #ffdc29;
+  --days-section-nth-child-2-color: #171717;
+  --days-section-nth-child-3-background: #ff784e;
+  --days-section-nth-child-3-color: #171717;
+  --packing-background-2: #d3f4ff;
+  --packing-color: #082841;
 }

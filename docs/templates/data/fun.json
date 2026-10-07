@@ -4,8 +4,8 @@
   "short": "Meet After Sunset",
   "tag": "ALDER STREET / SATURDAY 17 JULY",
   "lead": "An evening of food, records and small discoveries. Bring a friend and leave room for dessert.",
-  "accent": "#64204C",
-  "paper": "#FFE9A8",
+  "accent": "#4D00C2",
+  "paper": "#FF542E",
   "font": "Oswald",
   "word": "Arial",
   "layout": "poster",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Fictional event · No real booking or attendance service.",
-  "prompt": "Create a joyful fictional neighborhood night-market program. Use a typographic date poster, aubergine ink on warm yellow, a bold schedule ribbon and generous negative space. Make access, quiet seating and the rain plan as useful as the event headline.",
+  "prompt": "Create a joyful fictional neighborhood night-market program. Use a typographic date poster, aubergine ink on warm yellow, a bold schedule ribbon and generous negative space. Make access, quiet seating and the rain plan as useful as the event headline. Color direction: Vermilion night-market poster with violet and lemon counterpoints.",
+  "fontSelection": {
+    "id": "oswald",
+    "css_family": "Oswald",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#64204C",
+  "originalPaper": "#FFE9A8",
+  "colorDirection": "Vermilion night-market poster with violet and lemon counterpoints.",
   "fictional": true,
   "design": {
-    "accent": "#64204C",
-    "secondary": "#64204C",
-    "paper": "#FFE9A8"
+    "accent": "#4D00C2",
+    "secondary": "#4D00C2",
+    "paper": "#FF542E",
+    "text": "#191818",
+    "accentText": "#000000",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

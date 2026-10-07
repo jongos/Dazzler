@@ -1,7 +1,7 @@
 {
   "id": "webapp-workspace",
   "title": "Margin Writing Room",
-  "prompt": "Build a fictional writing workspace around the manuscript itself, with a narrow chapter index and an editorial note rail. Warm paper and literary type should support sustained writing. Make word count and saving a local draft work; no fake collaborative service.",
+  "prompt": "Build a fictional writing workspace around the manuscript itself, with a narrow chapter index and an editorial note rail. Warm paper and literary type should support sustained writing. Make word count and saving a local draft work; no fake collaborative service. Color direction: Quiet neutral writing paper with a precise orange editorial rail; the manuscript remains calm.",
   "data": {
     "chapter": "At the River",
     "mode": "local manuscript"

@@ -1,7 +1,7 @@
 {
   "id": "business-portal",
   "title": "Fieldwork Client Ledger",
-  "prompt": "Create a fictional client portal for a small architecture studio. Organize the page as a project ledger with milestone dates and a focused decision panel, rather than a generic dashboard. Use brick red and warm white. Document selection must show a useful preview; approval must be explicitly local and reversible.",
+  "prompt": "Create a fictional client portal for a small architecture studio. Organize the page as a project ledger with milestone dates and a focused decision panel, rather than a generic dashboard. Use brick red and warm white. Document selection must show a useful preview; approval must be explicitly local and reversible. Color direction: White client ledger with a cobalt project masthead and green review evidence.",
   "data": {
     "milestones": [
       "06 Jun",

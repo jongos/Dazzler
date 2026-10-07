@@ -1,0 +1,638 @@
+[
+  {
+    "id": "professional",
+    "family": "archivo",
+    "role": "heading",
+    "text": "Harbor Exchange Launch Decision Release the exchange in two stages. Keep the settlement hold until reconciliation is complete.",
+    "selected": {
+      "id": "archivo",
+      "name": "Archivo",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+      "roles": [
+        "ui",
+        "body",
+        "heading",
+        "display"
+      ],
+      "reference": "references/fonts/archivo.md",
+      "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+      "license": "OFL-1.1",
+      "file": "Archivo[wdth,wght].ttf",
+      "css_family": "Archivo",
+      "css_weight": "100 900",
+      "css_style": "normal",
+      "bytes": 658596,
+      "alternatives": [
+        "Archivo[wdth,wght].ttf"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Arial"
+  },
+  {
+    "id": "legal",
+    "family": "libre-baskerville",
+    "role": "heading",
+    "text": "Orchard Lane Notice Review The record supports delivery. It does not yet establish that the recipient accepted the revised terms.",
+    "selected": {
+      "id": "libre-baskerville",
+      "name": "Libre Baskerville",
+      "score": 10,
+      "matched_moods": [],
+      "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+      "roles": [
+        "body",
+        "heading"
+      ],
+      "reference": "references/fonts/libre-baskerville.md",
+      "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+      "license": "OFL-1.1",
+      "file": "LibreBaskerville[wght].woff2",
+      "css_family": "Libre Baskerville",
+      "css_weight": "400 700",
+      "css_style": "normal",
+      "bytes": 63980,
+      "alternatives": [
+        "LibreBaskerville[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Georgia"
+  },
+  {
+    "id": "business",
+    "family": "young-serif",
+    "role": "heading",
+    "text": "Juniper Studio Service Proposal Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages.",
+    "selected": {
+      "id": "young-serif",
+      "name": "Young Serif",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+      "roles": [
+        "heading",
+        "body",
+        "display"
+      ],
+      "reference": "references/fonts/young-serif.md",
+      "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+      "license": "OFL-1.1",
+      "file": "Young-Serif[wght].woff2",
+      "css_family": "Young Serif",
+      "css_weight": "300 700",
+      "css_style": "normal",
+      "bytes": 94656,
+      "alternatives": [
+        "Young-Serif[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Georgia"
+  },
+  {
+    "id": "fun",
+    "family": "oswald",
+    "role": "heading",
+    "text": "Night Market on Alder Street An evening of food, records and small discoveries. Bring a friend and leave room for dessert.",
+    "selected": {
+      "id": "oswald",
+      "name": "Oswald",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+      "roles": [
+        "heading",
+        "display"
+      ],
+      "reference": "references/fonts/oswald.md",
+      "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+      "license": "OFL-1.1",
+      "file": "Oswald[wght].woff2",
+      "css_family": "Oswald",
+      "css_weight": "200 700",
+      "css_style": "normal",
+      "bytes": 71904,
+      "alternatives": [
+        "Oswald[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Arial"
+  },
+  {
+    "id": "family",
+    "family": "work-sans",
+    "role": "heading",
+    "text": "River House Weekend Plan A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday.",
+    "selected": {
+      "id": "work-sans",
+      "name": "Work Sans",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A relaxed grotesque with a useful balance of personality and readability. Suitable for approachable editorial sites and product interfaces.",
+      "roles": [
+        "ui",
+        "body",
+        "heading"
+      ],
+      "reference": "references/fonts/work-sans.md",
+      "cautions": "The bundle uses variable upright and italic TTF files. Copy only the styles needed by a project and budget their full-file download sizes.",
+      "license": "OFL-1.1",
+      "file": "WorkSans[wght].ttf",
+      "css_family": "Work Sans",
+      "css_weight": "100 900",
+      "css_style": "normal",
+      "bytes": 361072,
+      "alternatives": [
+        "WorkSans[wght].ttf"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Arial"
+  },
+  {
+    "id": "presentation",
+    "family": "archivo",
+    "role": "heading",
+    "text": "Library After Hours Pilot Test one late opening each week before committing to a permanent change.",
+    "selected": {
+      "id": "archivo",
+      "name": "Archivo",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+      "roles": [
+        "ui",
+        "body",
+        "heading",
+        "display"
+      ],
+      "reference": "references/fonts/archivo.md",
+      "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+      "license": "OFL-1.1",
+      "file": "Archivo[wdth,wght].ttf",
+      "css_family": "Archivo",
+      "css_weight": "100 900",
+      "css_style": "normal",
+      "bytes": 658596,
+      "alternatives": [
+        "Archivo[wdth,wght].ttf"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Arial"
+  },
+  {
+    "id": "school",
+    "family": "young-serif",
+    "role": "heading",
+    "text": "Rain Garden Observation Notebook Compare drainage time in three soil samples. Record what happened before deciding why.",
+    "selected": {
+      "id": "young-serif",
+      "name": "Young Serif",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+      "roles": [
+        "heading",
+        "body",
+        "display"
+      ],
+      "reference": "references/fonts/young-serif.md",
+      "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+      "license": "OFL-1.1",
+      "file": "Young-Serif[wght].woff2",
+      "css_family": "Young Serif",
+      "css_weight": "300 700",
+      "css_style": "normal",
+      "bytes": 94656,
+      "alternatives": [
+        "Young-Serif[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Georgia"
+  },
+  {
+    "id": "marketing",
+    "family": "oswald",
+    "role": "heading",
+    "text": "Second Life Repair Campaign Make repair feel like a first choice. Show the work, explain the process and make booking simple.",
+    "selected": {
+      "id": "oswald",
+      "name": "Oswald",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+      "roles": [
+        "heading",
+        "display"
+      ],
+      "reference": "references/fonts/oswald.md",
+      "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+      "license": "OFL-1.1",
+      "file": "Oswald[wght].woff2",
+      "css_family": "Oswald",
+      "css_weight": "200 700",
+      "css_style": "normal",
+      "bytes": 71904,
+      "alternatives": [
+        "Oswald[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Arial"
+  },
+  {
+    "id": "restaurant",
+    "family": "libre-baskerville",
+    "role": "heading",
+    "text": "Morrow Seasonal Supper Menu A short menu built around what is ready now. Choose a few dishes and share the table.",
+    "selected": {
+      "id": "libre-baskerville",
+      "name": "Libre Baskerville",
+      "score": 10,
+      "matched_moods": [],
+      "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+      "roles": [
+        "body",
+        "heading"
+      ],
+      "reference": "references/fonts/libre-baskerville.md",
+      "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+      "license": "OFL-1.1",
+      "file": "LibreBaskerville[wght].woff2",
+      "css_family": "Libre Baskerville",
+      "css_weight": "400 700",
+      "css_style": "normal",
+      "bytes": 63980,
+      "alternatives": [
+        "LibreBaskerville[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Georgia"
+  },
+  {
+    "id": "technical",
+    "family": "office-code-pro",
+    "role": "code",
+    "text": "Relay Queue Recovery Runbook Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch.",
+    "selected": {
+      "id": "office-code-pro",
+      "name": "Office Code Pro",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+      "roles": [
+        "code",
+        "ui"
+      ],
+      "reference": "references/fonts/office-code-pro.md",
+      "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+      "license": "OFL-1.1",
+      "file": "OfficeCodePro-Regular.woff2",
+      "css_family": "Office Code Pro",
+      "css_weight": "400",
+      "css_style": "normal",
+      "bytes": 29216,
+      "alternatives": [
+        "OfficeCodePro-Regular.woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": "Consolas"
+  },
+  {
+    "id": "webapp-workspace",
+    "family": "young-serif",
+    "role": "heading",
+    "text": "Margin Writing Room ",
+    "selected": {
+      "id": "young-serif",
+      "name": "Young Serif",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+      "roles": [
+        "heading",
+        "body",
+        "display"
+      ],
+      "reference": "references/fonts/young-serif.md",
+      "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+      "license": "OFL-1.1",
+      "file": "Young-Serif[wght].woff2",
+      "css_family": "Young Serif",
+      "css_weight": "300 700",
+      "css_style": "normal",
+      "bytes": 94656,
+      "alternatives": [
+        "Young-Serif[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "webapp-board",
+    "family": "archivo",
+    "role": "heading",
+    "text": "Signal Production Board ",
+    "selected": {
+      "id": "archivo",
+      "name": "Archivo",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+      "roles": [
+        "ui",
+        "body",
+        "heading",
+        "display"
+      ],
+      "reference": "references/fonts/archivo.md",
+      "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+      "license": "OFL-1.1",
+      "file": "Archivo[wdth,wght].ttf",
+      "css_family": "Archivo",
+      "css_weight": "100 900",
+      "css_style": "normal",
+      "bytes": 658596,
+      "alternatives": [
+        "Archivo[wdth,wght].ttf"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "webapp-settings",
+    "family": "work-sans",
+    "role": "heading",
+    "text": "Still Notification Studio ",
+    "selected": {
+      "id": "work-sans",
+      "name": "Work Sans",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A relaxed grotesque with a useful balance of personality and readability. Suitable for approachable editorial sites and product interfaces.",
+      "roles": [
+        "ui",
+        "body",
+        "heading"
+      ],
+      "reference": "references/fonts/work-sans.md",
+      "cautions": "The bundle uses variable upright and italic TTF files. Copy only the styles needed by a project and budget their full-file download sizes.",
+      "license": "OFL-1.1",
+      "file": "WorkSans[wght].ttf",
+      "css_family": "Work Sans",
+      "css_weight": "100 900",
+      "css_style": "normal",
+      "bytes": 361072,
+      "alternatives": [
+        "WorkSans[wght].ttf"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "data-revenue",
+    "family": "young-serif",
+    "role": "heading",
+    "text": "Common Ground Membership Observatory ",
+    "selected": {
+      "id": "young-serif",
+      "name": "Young Serif",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+      "roles": [
+        "heading",
+        "body",
+        "display"
+      ],
+      "reference": "references/fonts/young-serif.md",
+      "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+      "license": "OFL-1.1",
+      "file": "Young-Serif[wght].woff2",
+      "css_family": "Young Serif",
+      "css_weight": "300 700",
+      "css_style": "normal",
+      "bytes": 94656,
+      "alternatives": [
+        "Young-Serif[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "data-operations",
+    "family": "office-code-pro",
+    "role": "code",
+    "text": "Tide Water Operations ",
+    "selected": {
+      "id": "office-code-pro",
+      "name": "Office Code Pro",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+      "roles": [
+        "code",
+        "ui"
+      ],
+      "reference": "references/fonts/office-code-pro.md",
+      "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+      "license": "OFL-1.1",
+      "file": "OfficeCodePro-Regular.woff2",
+      "css_family": "Office Code Pro",
+      "css_weight": "400",
+      "css_style": "normal",
+      "bytes": 29216,
+      "alternatives": [
+        "OfficeCodePro-Regular.woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "family": "libre-baskerville",
+    "role": "heading",
+    "text": "Vesper Tasting Room ",
+    "selected": {
+      "id": "libre-baskerville",
+      "name": "Libre Baskerville",
+      "score": 10,
+      "matched_moods": [],
+      "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+      "roles": [
+        "body",
+        "heading"
+      ],
+      "reference": "references/fonts/libre-baskerville.md",
+      "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+      "license": "OFL-1.1",
+      "file": "LibreBaskerville[wght].woff2",
+      "css_family": "Libre Baskerville",
+      "css_weight": "400 700",
+      "css_style": "normal",
+      "bytes": 63980,
+      "alternatives": [
+        "LibreBaskerville[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "restaurant-cafe",
+    "family": "archivo",
+    "role": "heading",
+    "text": "Daybreak Coffee Counter ",
+    "selected": {
+      "id": "archivo",
+      "name": "Archivo",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+      "roles": [
+        "ui",
+        "body",
+        "heading",
+        "display"
+      ],
+      "reference": "references/fonts/archivo.md",
+      "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+      "license": "OFL-1.1",
+      "file": "Archivo[wdth,wght].ttf",
+      "css_family": "Archivo",
+      "css_weight": "100 900",
+      "css_style": "normal",
+      "bytes": 658596,
+      "alternatives": [
+        "Archivo[wdth,wght].ttf"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "restaurant-reservations",
+    "family": "young-serif",
+    "role": "heading",
+    "text": "Solstice Table Planner ",
+    "selected": {
+      "id": "young-serif",
+      "name": "Young Serif",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+      "roles": [
+        "heading",
+        "body",
+        "display"
+      ],
+      "reference": "references/fonts/young-serif.md",
+      "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+      "license": "OFL-1.1",
+      "file": "Young-Serif[wght].woff2",
+      "css_family": "Young Serif",
+      "css_weight": "300 700",
+      "css_style": "normal",
+      "bytes": 94656,
+      "alternatives": [
+        "Young-Serif[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "restaurant-menu",
+    "family": "oswald",
+    "role": "heading",
+    "text": "Saffron Lunch Index ",
+    "selected": {
+      "id": "oswald",
+      "name": "Oswald",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+      "roles": [
+        "heading",
+        "display"
+      ],
+      "reference": "references/fonts/oswald.md",
+      "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+      "license": "OFL-1.1",
+      "file": "Oswald[wght].woff2",
+      "css_family": "Oswald",
+      "css_weight": "200 700",
+      "css_style": "normal",
+      "bytes": 71904,
+      "alternatives": [
+        "Oswald[wght].woff2"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  },
+  {
+    "id": "business-portal",
+    "family": "work-sans",
+    "role": "heading",
+    "text": "Fieldwork Client Ledger ",
+    "selected": {
+      "id": "work-sans",
+      "name": "Work Sans",
+      "score": 10,
+      "matched_moods": [],
+      "description": "A relaxed grotesque with a useful balance of personality and readability. Suitable for approachable editorial sites and product interfaces.",
+      "roles": [
+        "ui",
+        "body",
+        "heading"
+      ],
+      "reference": "references/fonts/work-sans.md",
+      "cautions": "The bundle uses variable upright and italic TTF files. Copy only the styles needed by a project and budget their full-file download sizes.",
+      "license": "OFL-1.1",
+      "file": "WorkSans[wght].ttf",
+      "css_family": "Work Sans",
+      "css_weight": "100 900",
+      "css_style": "normal",
+      "bytes": 361072,
+      "alternatives": [
+        "WorkSans[wght].ttf"
+      ],
+      "coverage_checked": true,
+      "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+    },
+    "nativeWordFallback": null
+  }
+]

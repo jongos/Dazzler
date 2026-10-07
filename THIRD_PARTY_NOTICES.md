@@ -89,3 +89,7 @@ Adapted from Peter Yang's [No AI Slop](https://github.com/petergyang/no-ai-slop/
 ## Focused Design Amplification
 
 Adapted from Paul Bakaus's Impeccable `skill/reference/bolder.md` at `2a26f1c50b9c4f86d10c0fec8f74cf523a2236e7`, under Apache-2.0. The license is retained in `skills/dazzler-frontend/references/bolder-LICENSE.txt`; provenance records source hashes and the unavailable fork linked by MCP Market. Dazzler preserves its own rules, adds document context and omits mandatory questions or additional skill dependencies. No code, platform reference or asset was imported. The upstream NOTICE concerns unrelated iOS/Android material, which is not included here.
+
+## Recipe Starting Points
+
+Retained recipe knowledge from Jon Gosier's [Style Science](https://github.com/jongos/style-science), under Apache-2.0. Original license and exact source-file hashes are in `skills/dazzler-frontend/references/recipes/`. Dazzler omits study machinery, rejected recipes and repeated reference IDs, and adds its own discovery and adaptation workflow. Jev judgments are text-only heuristics, not rendered validation or human preference evidence. Dataset provenance does not grant licenses to named fonts or referenced websites.

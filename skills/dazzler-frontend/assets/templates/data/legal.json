@@ -4,8 +4,8 @@
   "short": "Notice and Evidence",
   "tag": "MATTER 026 / INTERNAL REVIEW",
   "lead": "The record supports delivery. It does not yet establish that the recipient accepted the revised terms.",
-  "accent": "#69283E",
-  "paper": "#FAF5EC",
+  "accent": "#C25529",
+  "paper": "#FFFFFF",
   "font": "Libre Baskerville",
   "word": "Georgia",
   "layout": "chronology",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Prepared for counsel · Fictional training material, not legal advice.",
-  "prompt": "Design a fictional legal evidence-review memorandum. Use a narrow plum chronology and a quiet cream reading field with serif hierarchy. Distinguish documented events from unresolved conclusions; no legal advice, invented authorities or decorative legal icons.",
+  "prompt": "Design a fictional legal evidence-review memorandum. Use a narrow plum chronology and a quiet cream reading field with serif hierarchy. Distinguish documented events from unresolved conclusions; no legal advice, invented authorities or decorative legal icons. Color direction: Black-letter evidence with vermilion marginal findings; restrained white is intentional.",
+  "fontSelection": {
+    "id": "libre-baskerville",
+    "css_family": "Libre Baskerville",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#69283E",
+  "originalPaper": "#FAF5EC",
+  "colorDirection": "Black-letter evidence with vermilion marginal findings; restrained white is intentional.",
   "fictional": true,
   "design": {
-    "accent": "#69283E",
-    "secondary": "#69283E",
-    "paper": "#FAF5EC"
+    "accent": "#C25529",
+    "secondary": "#C25529",
+    "paper": "#FFFFFF",
+    "text": "#181818",
+    "accentText": "#C25529",
+    "onAccent": "#000000"
   },
   "document": [
     {

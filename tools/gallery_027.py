@@ -13,7 +13,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills/dazzler-frontend"
-STAGE = ROOT / "maintenance/gallery-production/v0.27.0"
+STAGE = ROOT / "maintenance/gallery-production/v0.28.0"
 OUT = STAGE / "artifacts"
 sys.path.insert(0, str(SKILL / "scripts"))
 from headings import heading
@@ -392,6 +392,11 @@ DOCS = [
 ]
 
 
+from gallery_color_design import apply as apply_color, css as color_css, restyle_word
+
+DOCS = [apply_color(d) for d in DOCS]
+
+
 def esc(x):
     return html.escape(str(x), quote=True)
 
@@ -664,7 +669,9 @@ def document_html(d):
     body += '<p class="closing">' + esc(d["closing"]) + "</p>"
     folder = OUT / "html" / d["id"]
     folder.mkdir(parents=True, exist_ok=True)
-    (folder / "styles.css").write_text(BASE + "\n" + css, encoding="utf8")
+    (folder / "styles.css").write_text(
+        BASE + "\n" + css + color_css(d), encoding="utf8"
+    )
     (folder / "tokens.css").write_text(
         ":root{--accent:"
         + d["accent"]
@@ -956,6 +963,7 @@ def word_document(d, destination=None):
         r.font.color.rgb = RGBColor.from_string(d["accent"][1:])
     doc.core_properties.title = d["title"]
     doc.core_properties.author = "Jon Gosier"
+    restyle_word(doc, d)
     doc.save(destination or OUT / "docx" / f"{d['id']}.docx")
 
 
@@ -964,7 +972,11 @@ def prepare():
         (OUT / p).mkdir(parents=True, exist_ok=True)
     if not (OUT / "fonts").exists():
         shutil.copytree(SKILL / "assets/templates/fonts", OUT / "fonts")
-    old = STAGE / "previous-v0.26.0"
+    (OUT / "index.html").write_text(
+        "<title>Dazzler Review Staging</title><p>Internal rendering workspace.</p>",
+        encoding="utf8",
+    )
+    old = STAGE / "previous-v0.27.0"
     old.mkdir(exist_ok=True)
     catalog = json.loads(
         (SKILL / "assets/templates/catalog.json").read_text(encoding="utf8")
@@ -977,7 +989,7 @@ def prepare():
                     [
                         "git",
                         "show",
-                        "362f92e:skills/dazzler-frontend/assets/templates/previews/"
+                        "5defca0:skills/dazzler-frontend/assets/templates/previews/"
                         + t["id"]
                         + ".jpg",
                     ],

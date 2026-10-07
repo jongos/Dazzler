@@ -1,7 +1,11 @@
 :root {
-  --accent: #4a2738;
-  --paper: #f7eee2;
+  --accent: #d97376;
+  --paper: #24103d;
   --display: "Libre Baskerville";
+  --ink: #f8f2f3;
+  --on-accent: #000000;
+  --signal: #b52e3e;
+  --counter: #297195;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -21,4 +25,7 @@
   --course-number-color: #d8bba3;
   --columns-border-top: #f7eee250;
   --button-border-color: #f7eee2;
+  --course-number-color-2: #ffbd75;
+  --vesper-h1-color: #fff5e3;
+  --top-footer-columns-border-color: #ab80c5;
 }

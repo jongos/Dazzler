@@ -32,6 +32,6 @@ See [manual workflow installation](grokbot/README.md). The release contains a de
 
 ## Notes and downloads
 
-[Release files](https://github.com/jongos/Dazzler/releases/tag/v0.27.0) · [Field manual](https://jongos.github.io/Dazzler/) · [Template gallery](https://jongos.github.io/Dazzler/templates/)
+[Release files](https://github.com/jongos/Dazzler/releases/tag/v0.28.0) · [Field manual](https://jongos.github.io/Dazzler/) · [Template gallery](https://jongos.github.io/Dazzler/templates/)
 
 Created by Jon Gosier. Feedback: jon@filmhedge.com. Dazzler code is Apache-2.0; bundled resources retain their own licenses.

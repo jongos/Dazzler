@@ -4,8 +4,8 @@
   "short": "Open Later for More People",
   "tag": "CIVIC LAB / THREE MINUTE BRIEF",
   "lead": "Test one late opening each week before committing to a permanent change.",
-  "accent": "#482884",
-  "paper": "#F5EFFF",
+  "accent": "#FB7C52",
+  "paper": "#4821CE",
   "font": "Archivo",
   "word": "Arial",
   "layout": "storyboard",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Pilot proposal only · Synthetic example, not a funded program.",
-  "prompt": "Create a landscape presentation handout for a fictional late-opening library pilot. Organize it as three visual beats: need, experiment, decision. Use large purple typographic numerals, concise evidence, and an evaluation strip rather than a report page or a fake slide deck.",
+  "prompt": "Create a landscape presentation handout for a fictional late-opening library pilot. Organize it as three visual beats: need, experiment, decision. Use large purple typographic numerals, concise evidence, and an evaluation strip rather than a report page or a fake slide deck. Color direction: Immersive violet presentation with luminous yellow numerals.",
+  "fontSelection": {
+    "id": "archivo",
+    "css_family": "Archivo",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#482884",
+  "originalPaper": "#F5EFFF",
+  "colorDirection": "Immersive violet presentation with luminous yellow numerals.",
   "fictional": true,
   "design": {
-    "accent": "#482884",
-    "secondary": "#482884",
-    "paper": "#F5EFFF"
+    "accent": "#FB7C52",
+    "secondary": "#FB7C52",
+    "paper": "#4821CE",
+    "text": "#F3F4F3",
+    "accentText": "#FFFFFF",
+    "onAccent": "#000000"
   },
   "document": [
     {

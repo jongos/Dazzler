@@ -333,3 +333,90 @@ blockquote {
     gap: 30px;
   }
 }
+/* Selected engine roles; accent fills and labels have separate foregrounds. */
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+p,
+li,
+blockquote {
+  max-width: 60ch;
+}
+.top,
+footer,
+td,
+th,
+.event,
+.notes,
+.task,
+.product,
+.dish-row,
+.menu-controls,
+.ledger {
+  border-color: var(--accent);
+}
+button,
+input,
+select,
+textarea {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+input,
+select,
+textarea {
+  background: var(--paper);
+}
+button {
+  background: var(--button-background);
+}
+button[aria-pressed="true"],
+.band,
+.schedule,
+thead,
+.beats section:nth-child(2) {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.kicker,
+.closing {
+  color: var(--ink);
+}
+.stat,
+.event,
+.reading-value {
+  color: var(--accent);
+}
+@media print {
+  body {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+.portal {
+  background: var(--portal-background);
+  color: var(--portal-color);
+  border: 0;
+  padding: 30px;
+}
+.portal .kicker {
+  color: var(--portal-kicker-color);
+}
+.ledger button {
+  background: var(--ledger-button-background);
+  color: var(--ledger-button-color);
+  border-color: var(--ledger-button-border-color);
+}

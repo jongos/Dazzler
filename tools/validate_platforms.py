@@ -264,6 +264,42 @@ def validate(folder):
                     timeout=30,
                 )
                 assert json.loads(health.stdout)["status"] == "pass"
+                recipe = subprocess.run(
+                    [sys.executable, str(skill / "scripts/recipes.py"), "get", "R0001"],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                    timeout=30,
+                )
+                recipe_data = json.loads(recipe.stdout)
+                assert recipe_data["status"] == "ok"
+                assert recipe_data["recipe"]["checks"]["renderedStatus"] == "not-run"
+                brief = Path(temp) / "recipe-brief.json"
+                brief.write_text(
+                    json.dumps(
+                        {
+                            "contexts": ["software"],
+                            "brief": "Complete repeated operational tasks",
+                            "preferArrangements": ["workspace"],
+                        }
+                    )
+                )
+                selection = subprocess.run(
+                    [
+                        sys.executable,
+                        str(skill / "scripts/recipes.py"),
+                        "shortlist",
+                        str(brief),
+                    ],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                    timeout=30,
+                )
+                assert (
+                    json.loads(selection.stdout)["candidates"][0]["context"]
+                    == "software"
+                )
                 if archive.name == "dazzler-grokbot.zip":
                     task = Path(temp) / "task.json"
                     task.write_text('{"kind":"chart"}')

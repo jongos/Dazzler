@@ -1,7 +1,11 @@
 :root {
-  --accent: #145a45;
-  --paper: #f1f6e9;
+  --accent: #256e00;
+  --paper: #c9ff32;
   --display: "Young Serif";
+  --ink: #131a17;
+  --on-accent: #ffffff;
+  --signal: #54a71f;
+  --counter: #2cc0eb;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -15,4 +19,7 @@
   --footer-border-top: #17252b40;
   --band-color: white;
   --body-background: white;
+  --proposal-aside-background: #112e21;
+  --proposal-aside-color: #c9ff32;
+  --proposal-border-bottom: #112e21;
 }

@@ -216,8 +216,12 @@ class TemplateTests(unittest.TestCase):
             theme = json.loads(
                 (templates.ROOT / item["dataset"]).read_text(encoding="utf-8")
             )["design"]
-            for role in ["accent", "secondary"]:
-                values = sorted([luminance(theme[role]), luminance(theme["paper"])])
+            for role, surface in [
+                ("text", "paper"),
+                ("accentText", "paper"),
+                ("onAccent", "accent"),
+            ]:
+                values = sorted([luminance(theme[role]), luminance(theme[surface])])
                 self.assertGreaterEqual(
                     (values[1] + 0.05) / (values[0] + 0.05),
                     4.5,

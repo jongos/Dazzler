@@ -1,7 +1,11 @@
 :root {
-  --accent: #853b2c;
-  --paper: #f5efe9;
+  --accent: #005f67;
+  --paper: #ffffff;
   --display: "Work Sans";
+  --ink: #16181b;
+  --on-accent: #ffffff;
+  --signal: #35ccd8;
+  --counter: #f08c2a;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -21,4 +25,10 @@
   --current-border-left: #853b2c;
   --decision-panel-background: #fff;
   --decision-panel-border-top: #853b2c;
+  --portal-background: #1648e8;
+  --portal-color: white;
+  --portal-kicker-color: white;
+  --ledger-button-background: #085c3a;
+  --ledger-button-color: white;
+  --ledger-button-border-color: #085c3a;
 }

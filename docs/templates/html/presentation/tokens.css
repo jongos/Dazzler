@@ -1,7 +1,11 @@
 :root {
-  --accent: #482884;
-  --paper: #f5efff;
+  --accent: #fb7c52;
+  --paper: #4821ce;
   --display: "Archivo";
+  --ink: #f3f4f3;
+  --on-accent: #000000;
+  --signal: #fb7c52;
+  --counter: #22ae99;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -17,4 +21,8 @@
   --body-background: white;
   --beats-section-nth-child-2-color: white;
   --beats-section-nth-child-2-beat-no-color: white;
+  --beat-no-color: #f4ff53;
+  --beats-section-nth-child-2-background: #f4ff53;
+  --beats-section-nth-child-2-color-2: #251367;
+  --beats-section-nth-child-2-beat-no-color-2: #251367;
 }

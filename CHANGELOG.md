@@ -1,5 +1,25 @@
 # Developer change notes
 
+## 2026-10-07 — 0.28.0: Recipe Starting Points
+
+**Changed:** Substantial design work can consider contextual recipes alongside original directions. Brand requirements, existing systems and Dazzler's design and delivery rules remain authoritative.
+
+**Added:** A hash-pinned, winner-only dataset with a compact local index, individual recipe lookup, varied brief-based shortlists and internal derivation records. Data and helper ship through existing platform packages without new runtime dependencies. Focused loading, filtering, fallback, evidence and cross-context tests accompany the integration.
+
+**Why:** Reuse useful color/type/layout relationships without turning a text-only study into a fixed template library or aesthetic score. Source agreement only breaks otherwise equal choices; adapted designs need their own rendered checks.
+
+**Validation:** See `maintenance/reports/recipes-028.md` for test, browser and package results. After publication approval, all 30 gallery artifacts were regenerated and visually reviewed with the current runtime. The release gallery gate passes. The source study was not expanded. No rejected recipes, credentials or network inference are included.
+
+## 2026-10-07 — 0.28.0: Restore Color Range to the Collection
+
+**Changed:** Rebuilt the 30 examples with independently selected vivid, dark, white and neutral directions. Palette exploration now supplies compatible roles to the gallery authoring pipeline. Native Word ink is checked against page and cell fills; the proposal uses a side-by-side scope and fee ledger.
+
+**Added:** Reproducible color and font selection records, an advisory collection-color helper, regression coverage for pale palettes with different hues, and refreshed complete-page/mobile previews. Gallery assembly now runs theme tokenization before hashing, so rebuilding preserves editable color contracts without a manual repair step.
+
+**Why:** Fixed pale-paper/dark-accent pairs bypassed the palette engine and made unrelated templates look like one house style. A successful contrast or provenance check did not establish collection-wide visual range.
+
+**Validation:** Rendered review and package results are recorded in maintenance/gallery-production/v0.28.0/REVIEW.md. All 40 browser captures remained byte-identical after final CSS tokenization; the CSS contract regression check is retained.
+
 ## 2026-10-07 — Preserve Vendored Provenance Across Checkouts
 
 **Changed:** Preserve exact bytes for vendored design-check inputs in Git and platform archives.

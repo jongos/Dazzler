@@ -1,7 +1,7 @@
 {
   "id": "webapp-settings",
   "title": "Still Notification Studio",
-  "prompt": "Design a fictional notification-settings interface centered on choosing a daily rhythm. Use a quiet blue field and a large schedule dial made from typography, not generic settings cards. Support a digest-time selector, three channel toggles and a save confirmation.",
+  "prompt": "Design a fictional notification-settings interface centered on choosing a daily rhythm. . Support a digest-time selector, three channel toggles and a save confirmation. Color direction: Full royal-blue schedule studio with white controls and a luminous cyan clock.",
   "data": {
     "digestTimes": [
       "09:00",

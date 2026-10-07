@@ -4,8 +4,8 @@
   "short": "Where Does the Water Go",
   "tag": "FIELD SCIENCE / YEAR 8",
   "lead": "Compare drainage time in three soil samples. Record what happened before deciding why.",
-  "accent": "#28592E",
-  "paper": "#F3F1D9",
+  "accent": "#067433",
+  "paper": "#FFDE26",
   "font": "Young Serif",
   "word": "Georgia",
   "layout": "notebook",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Synthetic classroom observations · Follow your teacher's safety instructions.",
-  "prompt": "Make a fictional Year 8 science field notebook on soil drainage. Use botanical green, warm paper, ruled observations and a labeled experimental diagram. Keep methods, measurements and limitations distinct; invite a next question rather than dressing a generic report in green.",
+  "prompt": "Make a fictional Year 8 science field notebook on soil drainage. Use botanical green, warm paper, ruled observations and a labeled experimental diagram. Keep methods, measurements and limitations distinct; invite a next question rather than dressing a generic report in green. Color direction: Sun-yellow field notebook with botanical green evidence and blue observations.",
+  "fontSelection": {
+    "id": "young-serif",
+    "css_family": "Young Serif",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#28592E",
+  "originalPaper": "#F3F1D9",
+  "colorDirection": "Sun-yellow field notebook with botanical green evidence and blue observations.",
   "fictional": true,
   "design": {
-    "accent": "#28592E",
-    "secondary": "#28592E",
-    "paper": "#F3F1D9"
+    "accent": "#067433",
+    "secondary": "#067433",
+    "paper": "#FFDE26",
+    "text": "#151A17",
+    "accentText": "#000000",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

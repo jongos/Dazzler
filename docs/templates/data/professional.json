@@ -4,8 +4,8 @@
   "short": "The Launch Decision",
   "tag": "NORTHLINE / OPERATING REVIEW",
   "lead": "Release the exchange in two stages. Keep the settlement hold until reconciliation is complete.",
-  "accent": "#123A8C",
-  "paper": "#EEF3FF",
+  "accent": "#084DC0",
+  "paper": "#FFFFFF",
   "font": "Archivo",
   "word": "Arial",
   "layout": "decision",
@@ -49,12 +49,24 @@
     ]
   ],
   "closing": "Decision due 10 July · Approve the limited scope, not settlement.",
-  "prompt": "Create a fictional executive launch-decision brief for an operations committee. Make the decision, unresolved gate and accountable owners unmistakable. Use a cobalt decision spread with precise numbers and a compact gate register; avoid a generic KPI dashboard.",
+  "prompt": "Create a fictional executive launch-decision brief for an operations committee. Make the decision, unresolved gate and accountable owners unmistakable. Use a cobalt decision spread with precise numbers and a compact gate register; avoid a generic KPI dashboard. Color direction: Electric cobalt on white; the settlement decision owns the blue field.",
+  "fontSelection": {
+    "id": "archivo",
+    "css_family": "Archivo",
+    "coverage_checked": true,
+    "license": "OFL-1.1"
+  },
+  "originalAccent": "#123A8C",
+  "originalPaper": "#EEF3FF",
+  "colorDirection": "Electric cobalt on white; the settlement decision owns the blue field.",
   "fictional": true,
   "design": {
-    "accent": "#123A8C",
-    "secondary": "#123A8C",
-    "paper": "#EEF3FF"
+    "accent": "#084DC0",
+    "secondary": "#084DC0",
+    "paper": "#FFFFFF",
+    "text": "#1A1719",
+    "accentText": "#084DC0",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

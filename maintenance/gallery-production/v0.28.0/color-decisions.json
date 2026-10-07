@@ -1,0 +1,4182 @@
+{
+  "professional": {
+    "brief": "Electric cobalt on white; the settlement decision owns the blue field.",
+    "mode": "light",
+    "config": {
+      "brief": "Electric cobalt on white; the settlement decision owns the blue field.",
+      "seed": "dazzler-028-professional",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          255,
+          265
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#7AA5F1",
+          "seeds": {
+            "secondary": "#BE2F75",
+            "accent": "#34611B",
+            "neutral": "#717173"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F0F1FD",
+              "surface": "#E2E5FB"
+            },
+            "dark": {
+              "background": "#080329",
+              "surface": "#100D35"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#7AA5F1",
+          "secondary": "#BE2F75",
+          "accent": "#34611B",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181819",
+          "muted": "#535355",
+          "border": "#717173",
+          "action": "#34611B",
+          "actionHover": "#1C4301",
+          "focus": "#34611B",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#084DC0",
+          "seeds": {
+            "secondary": "#FC9DA8",
+            "accent": "#A79118",
+            "neutral": "#747073"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FED6F9",
+              "surface": "#F6C8F1"
+            },
+            "dark": {
+              "background": "#480B46",
+              "surface": "#4C2749"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#084DC0",
+          "secondary": "#FC9DA8",
+          "accent": "#A79118",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1A1719",
+          "muted": "#565355",
+          "border": "#747073",
+          "action": "#705C00",
+          "actionHover": "#3E3100",
+          "focus": "#705C00",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#89ACF1",
+          "seeds": {
+            "secondary": "#F390C8",
+            "accent": "#3993D4",
+            "neutral": "#737173"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#EFD5F9",
+              "surface": "#E7C7F4"
+            },
+            "dark": {
+              "background": "#3B114B",
+              "surface": "#41284B"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#89ACF1",
+          "secondary": "#F390C8",
+          "accent": "#3993D4",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#191819",
+          "muted": "#555355",
+          "border": "#737173",
+          "action": "#005D94",
+          "actionHover": "#002F5C",
+          "focus": "#005D94",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#084DC0",
+      "secondary": "#FC9DA8",
+      "accent": "#A79118",
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#1A1719",
+      "muted": "#565355",
+      "border": "#747073",
+      "action": "#705C00",
+      "actionHover": "#3E3100",
+      "focus": "#705C00",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "legal": {
+    "brief": "Black-letter evidence with vermilion marginal findings; restrained white is intentional.",
+    "mode": "light",
+    "config": {
+      "brief": "Black-letter evidence with vermilion marginal findings; restrained white is intentional.",
+      "seed": "dazzler-028-legal",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          35,
+          45
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#C25529",
+          "seeds": {
+            "secondary": "#4CD2C0",
+            "accent": "#9B2328",
+            "neutral": "#717171"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#E0CAAC",
+              "surface": "#CEC0AD"
+            },
+            "dark": {
+              "background": "#241804",
+              "surface": "#2E2313"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#C25529",
+          "secondary": "#4CD2C0",
+          "accent": "#9B2328",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181818",
+          "muted": "#535353",
+          "border": "#717171",
+          "action": "#9B2328",
+          "actionHover": "#730211",
+          "focus": "#9B2328",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#F8AB97",
+          "seeds": {
+            "secondary": "#694915",
+            "accent": "#1959C5",
+            "neutral": "#72726F"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#DDDAA7",
+              "surface": "#D0CDAD"
+            },
+            "dark": {
+              "background": "#242105",
+              "surface": "#2E2C11"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#F8AB97",
+          "secondary": "#694915",
+          "accent": "#1959C5",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181817",
+          "muted": "#545452",
+          "border": "#72726F",
+          "action": "#003B99",
+          "actionHover": "#002481",
+          "focus": "#003B99",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#813311",
+          "seeds": {
+            "secondary": "#688820",
+            "accent": "#7673F3",
+            "neutral": "#757168"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FEF6E5",
+              "surface": "#F0EADF"
+            },
+            "dark": {
+              "background": "#0D0801",
+              "surface": "#16120A"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#813311",
+          "secondary": "#688820",
+          "accent": "#7673F3",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1A1812",
+          "muted": "#57534C",
+          "border": "#757168",
+          "action": "#483FAD",
+          "actionHover": "#322784",
+          "focus": "#483FAD",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 0,
+    "tokens": {
+      "brand": "#C25529",
+      "secondary": "#4CD2C0",
+      "accent": "#9B2328",
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#181818",
+      "muted": "#535353",
+      "border": "#717171",
+      "action": "#9B2328",
+      "actionHover": "#730211",
+      "focus": "#9B2328",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "business": {
+    "brief": "Acid-lime proposal with deep green delivery ledger; optimistic commercial energy.",
+    "mode": "light",
+    "config": {
+      "brief": "Acid-lime proposal with deep green delivery ledger; optimistic commercial energy.",
+      "seed": "dazzler-028-business",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          155,
+          165
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#C9FF32",
+          "surface": "#C9FF32",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#176543",
+          "seeds": {
+            "secondary": "#1C6FC0",
+            "accent": "#8E3F14",
+            "neutral": "#6D746C"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#BCD2BA",
+              "surface": "#B6C4B5"
+            },
+            "dark": {
+              "background": "#041304",
+              "surface": "#111C11"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#C9FF32",
+              "surface": "#C9FF32",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#176543",
+          "secondary": "#1C6FC0",
+          "accent": "#8E3F14",
+          "background": "#C9FF32",
+          "surface": "#C9FF32",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#151A15",
+          "muted": "#50564F",
+          "border": "#6D746C",
+          "action": "#8E3F14",
+          "actionHover": "#692500",
+          "focus": "#8E3F14",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#34E697",
+          "seeds": {
+            "secondary": "#2CC0EB",
+            "accent": "#54A71F",
+            "neutral": "#6A7470"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#E8FEF4",
+              "surface": "#E2F0EA"
+            },
+            "dark": {
+              "background": "#1E2F28",
+              "surface": "#2E3935"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#C9FF32",
+              "surface": "#C9FF32",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#34E697",
+          "secondary": "#2CC0EB",
+          "accent": "#54A71F",
+          "background": "#C9FF32",
+          "surface": "#C9FF32",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#131A17",
+          "muted": "#4D5653",
+          "border": "#6A7470",
+          "action": "#256E00",
+          "actionHover": "#135100",
+          "focus": "#256E00",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#3DC686",
+          "seeds": {
+            "secondary": "#BF2FCC",
+            "accent": "#6B6B1D",
+            "neutral": "#707272"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#A7E4DA",
+              "surface": "#AED4CD"
+            },
+            "dark": {
+              "background": "#031A17",
+              "surface": "#052522"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#C9FF32",
+              "surface": "#C9FF32",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#3DC686",
+          "secondary": "#BF2FCC",
+          "accent": "#6B6B1D",
+          "background": "#C9FF32",
+          "surface": "#C9FF32",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#171818",
+          "muted": "#535454",
+          "border": "#707272",
+          "action": "#4D4D01",
+          "actionHover": "#3A3900",
+          "focus": "#4D4D01",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#34E697",
+      "secondary": "#2CC0EB",
+      "accent": "#54A71F",
+      "background": "#C9FF32",
+      "surface": "#C9FF32",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#131A17",
+      "muted": "#4D5653",
+      "border": "#6A7470",
+      "action": "#256E00",
+      "actionHover": "#135100",
+      "focus": "#256E00",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "fun": {
+    "brief": "Vermilion night-market poster with violet and lemon counterpoints.",
+    "mode": "light",
+    "config": {
+      "brief": "Vermilion night-market poster with violet and lemon counterpoints.",
+      "seed": "dazzler-028-fun",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          305,
+          315
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FF542E",
+          "surface": "#FF542E",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#A61DF5",
+          "seeds": {
+            "secondary": "#987714",
+            "accent": "#24BEA6",
+            "neutral": "#727172"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FEE8F6",
+              "surface": "#EEDEE8"
+            },
+            "dark": {
+              "background": "#1A0B15",
+              "surface": "#22171E"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF542E",
+              "surface": "#FF542E",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#A61DF5",
+          "secondary": "#987714",
+          "accent": "#24BEA6",
+          "background": "#FF542E",
+          "surface": "#FF542E",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181818",
+          "muted": "#282828",
+          "border": "#414041",
+          "action": "#00392E",
+          "actionHover": "#00392E",
+          "focus": "#00392E",
+          "danger": "#3E0000",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#A354D9",
+          "seeds": {
+            "secondary": "#FAB32D",
+            "accent": "#682CF5",
+            "neutral": "#737171"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#ECD7D8",
+              "surface": "#DCCECE"
+            },
+            "dark": {
+              "background": "#0C0303",
+              "surface": "#130B0B"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF542E",
+              "surface": "#FF542E",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#A354D9",
+          "secondary": "#FAB32D",
+          "accent": "#682CF5",
+          "background": "#FF542E",
+          "surface": "#FF542E",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#191818",
+          "muted": "#292828",
+          "border": "#414040",
+          "action": "#4D00C2",
+          "actionHover": "#3B009F",
+          "focus": "#4D00C2",
+          "danger": "#3E0000",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#D2B0F8",
+          "seeds": {
+            "secondary": "#C19A2F",
+            "accent": "#165D2F",
+            "neutral": "#717177"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#C4BFF9",
+              "surface": "#BAB6DD"
+            },
+            "dark": {
+              "background": "#201645",
+              "surface": "#2A2645"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF542E",
+              "surface": "#FF542E",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#D2B0F8",
+          "secondary": "#C19A2F",
+          "accent": "#165D2F",
+          "background": "#FF542E",
+          "surface": "#FF542E",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#18181C",
+          "muted": "#28282C",
+          "border": "#404045",
+          "action": "#003F17",
+          "actionHover": "#003F17",
+          "focus": "#003F17",
+          "danger": "#3E0000",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#A354D9",
+      "secondary": "#FAB32D",
+      "accent": "#682CF5",
+      "background": "#FF542E",
+      "surface": "#FF542E",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#191818",
+      "muted": "#292828",
+      "border": "#414040",
+      "action": "#4D00C2",
+      "actionHover": "#3B009F",
+      "focus": "#4D00C2",
+      "danger": "#3E0000",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "family": {
+    "brief": "Bright sky-blue itinerary, sunny packing field and coral day markers on white.",
+    "mode": "light",
+    "config": {
+      "brief": "Bright sky-blue itinerary, sunny packing field and coral day markers on white.",
+      "seed": "dazzler-028-family",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          225,
+          235
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#3EA2D3",
+          "seeds": {
+            "secondary": "#7D7FEC",
+            "accent": "#547024",
+            "neutral": "#6B7377"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#B7C5CB",
+              "surface": "#B0B8BD"
+            },
+            "dark": {
+              "background": "#02070C",
+              "surface": "#0A1013"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#3EA2D3",
+          "secondary": "#7D7FEC",
+          "accent": "#547024",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#14191B",
+          "muted": "#4E5559",
+          "border": "#6B7377",
+          "action": "#3A510A",
+          "actionHover": "#273D00",
+          "focus": "#3A510A",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#056182",
+          "seeds": {
+            "secondary": "#930542",
+            "accent": "#10AC94",
+            "neutral": "#6C7376"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#CBEFFF",
+              "surface": "#B1E6FE"
+            },
+            "dark": {
+              "background": "#01202C",
+              "surface": "#012C3B"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#056182",
+          "secondary": "#930542",
+          "accent": "#10AC94",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#15191B",
+          "muted": "#4F5558",
+          "border": "#6C7376",
+          "action": "#005646",
+          "actionHover": "#004134",
+          "focus": "#005646",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#78CEFC",
+          "seeds": {
+            "secondary": "#7719DB",
+            "accent": "#C89F21",
+            "neutral": "#717171"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F4F5FE",
+              "surface": "#E8EAF2"
+            },
+            "dark": {
+              "background": "#23242E",
+              "surface": "#2F3036"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#78CEFC",
+          "secondary": "#7719DB",
+          "accent": "#C89F21",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181818",
+          "muted": "#535353",
+          "border": "#717171",
+          "action": "#6D5000",
+          "actionHover": "#573E00",
+          "focus": "#6D5000",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#056182",
+      "secondary": "#930542",
+      "accent": "#10AC94",
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#15191B",
+      "muted": "#4F5558",
+      "border": "#6C7376",
+      "action": "#005646",
+      "actionHover": "#004134",
+      "focus": "#005646",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "presentation": {
+    "brief": "Immersive violet presentation with luminous yellow numerals.",
+    "mode": "dark",
+    "config": {
+      "brief": "Immersive violet presentation with luminous yellow numerals.",
+      "seed": "dazzler-028-presentation",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          85,
+          95
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "dark": {
+          "background": "#4821CE",
+          "surface": "#4821CE",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#816511",
+          "seeds": {
+            "secondary": "#22AE99",
+            "accent": "#FB7C52",
+            "neutral": "#717270"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F0F6ED",
+              "surface": "#E6EAE4"
+            },
+            "dark": {
+              "background": "#191D16",
+              "surface": "#242722"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#4821CE",
+              "surface": "#4821CE",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#816511",
+          "secondary": "#22AE99",
+          "accent": "#FB7C52",
+          "background": "#4821CE",
+          "surface": "#4821CE",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F3F4F3",
+          "muted": "#D4D5D3",
+          "border": "#A0A19F",
+          "action": "#FB7C52",
+          "actionHover": "#FB7C52",
+          "focus": "#FB7C52",
+          "danger": "#FFE7E2",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#A98D18",
+          "seeds": {
+            "secondary": "#094FAF",
+            "accent": "#4030E5",
+            "neutral": "#717171"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#C2E3A6",
+              "surface": "#BED4AD"
+            },
+            "dark": {
+              "background": "#040A00",
+              "surface": "#091501"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#4821CE",
+              "surface": "#4821CE",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#A98D18",
+          "secondary": "#094FAF",
+          "accent": "#4030E5",
+          "background": "#4821CE",
+          "surface": "#4821CE",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F3F3F3",
+          "muted": "#D4D4D4",
+          "border": "#A0A0A0",
+          "action": "#A3B5FF",
+          "actionHover": "#A3B5FF",
+          "focus": "#A3B5FF",
+          "danger": "#FFE7E2",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#ECBC12",
+          "seeds": {
+            "secondary": "#16DADD",
+            "accent": "#9B050A",
+            "neutral": "#74726A"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#DDCD99",
+              "surface": "#CCC2A2"
+            },
+            "dark": {
+              "background": "#060400",
+              "surface": "#100B00"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#4821CE",
+              "surface": "#4821CE",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#ECBC12",
+          "secondary": "#16DADD",
+          "accent": "#9B050A",
+          "background": "#4821CE",
+          "surface": "#4821CE",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F5F4EF",
+          "muted": "#D7D5CE",
+          "border": "#A2A19A",
+          "action": "#F88E80",
+          "actionHover": "#F88E80",
+          "focus": "#F88E80",
+          "danger": "#FFE7E2",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      }
+    ],
+    "selected": 0,
+    "tokens": {
+      "brand": "#816511",
+      "secondary": "#22AE99",
+      "accent": "#FB7C52",
+      "background": "#4821CE",
+      "surface": "#4821CE",
+      "success": "#FFFFFF",
+      "warning": "#FFFFFF",
+      "info": "#FFFFFF",
+      "text": "#F3F4F3",
+      "muted": "#D4D5D3",
+      "border": "#A0A19F",
+      "action": "#FB7C52",
+      "actionHover": "#FB7C52",
+      "focus": "#FB7C52",
+      "danger": "#FFE7E2",
+      "onAction": "#000000",
+      "onActionHover": "#000000",
+      "onDanger": "#000000"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "school": {
+    "brief": "Sun-yellow field notebook with botanical green evidence and blue observations.",
+    "mode": "light",
+    "config": {
+      "brief": "Sun-yellow field notebook with botanical green evidence and blue observations.",
+      "seed": "dazzler-028-school",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          145,
+          155
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FFDE26",
+          "surface": "#FFDE26",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#43B96F",
+          "seeds": {
+            "secondary": "#3081B0",
+            "accent": "#DE803A",
+            "neutral": "#6B7470"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#ACFBD7",
+              "surface": "#B1EBCF"
+            },
+            "dark": {
+              "background": "#010A06",
+              "surface": "#03150D"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFDE26",
+              "surface": "#FFDE26",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#43B96F",
+          "secondary": "#3081B0",
+          "accent": "#DE803A",
+          "background": "#FFDE26",
+          "surface": "#FFDE26",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#141A17",
+          "muted": "#4E5653",
+          "border": "#6B7470",
+          "action": "#7A3600",
+          "actionHover": "#642400",
+          "focus": "#7A3600",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#067433",
+          "seeds": {
+            "secondary": "#F178FE",
+            "accent": "#5D5704",
+            "neutral": "#6C7470"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#9CDDBC",
+              "surface": "#A3CCB7"
+            },
+            "dark": {
+              "background": "#012517",
+              "surface": "#0B3121"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFDE26",
+              "surface": "#FFDE26",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#067433",
+          "secondary": "#F178FE",
+          "accent": "#5D5704",
+          "background": "#FFDE26",
+          "surface": "#FFDE26",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#151A17",
+          "muted": "#4F5653",
+          "border": "#6C7470",
+          "action": "#5D5704",
+          "actionHover": "#403A00",
+          "focus": "#5D5704",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#0E6332",
+          "seeds": {
+            "secondary": "#0A4E93",
+            "accent": "#B8163E",
+            "neutral": "#717272"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#91E9FD",
+              "surface": "#98DBEA"
+            },
+            "dark": {
+              "background": "#032D34",
+              "surface": "#053942"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFDE26",
+              "surface": "#FFDE26",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#0E6332",
+          "secondary": "#0A4E93",
+          "accent": "#B8163E",
+          "background": "#FFDE26",
+          "surface": "#FFDE26",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181818",
+          "muted": "#535454",
+          "border": "#717272",
+          "action": "#8D0026",
+          "actionHover": "#6D0019",
+          "focus": "#8D0026",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#067433",
+      "secondary": "#F178FE",
+      "accent": "#5D5704",
+      "background": "#FFDE26",
+      "surface": "#FFDE26",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#151A17",
+      "muted": "#4F5653",
+      "border": "#6C7470",
+      "action": "#5D5704",
+      "actionHover": "#403A00",
+      "focus": "#5D5704",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "marketing": {
+    "brief": "Hot-pink repair campaign with a cobalt evidence band and black typography.",
+    "mode": "light",
+    "config": {
+      "brief": "Hot-pink repair campaign with a cobalt evidence band and black typography.",
+      "seed": "dazzler-028-marketing",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          255,
+          265
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FF3191",
+          "surface": "#FF3191",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#076FF4",
+          "seeds": {
+            "secondary": "#921FFD",
+            "accent": "#0DA293",
+            "neutral": "#737079"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F9F6FF",
+              "surface": "#EFE8FF"
+            },
+            "dark": {
+              "background": "#140328",
+              "surface": "#1C122A"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF3191",
+              "surface": "#FF3191",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#076FF4",
+          "secondary": "#921FFD",
+          "accent": "#0DA293",
+          "background": "#FF3191",
+          "surface": "#FF3191",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#19171D",
+          "muted": "#19171D",
+          "border": "#413F46",
+          "action": "#003931",
+          "actionHover": "#003931",
+          "focus": "#003931",
+          "danger": "#3E0000",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#A6C5F6",
+          "seeds": {
+            "secondary": "#F49269",
+            "accent": "#EEB647",
+            "neutral": "#746F77"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#E9D6F8",
+              "surface": "#DACEE4"
+            },
+            "dark": {
+              "background": "#2F203A",
+              "surface": "#382E3F"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF3191",
+              "surface": "#FF3191",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#A6C5F6",
+          "secondary": "#F49269",
+          "accent": "#EEB647",
+          "background": "#FF3191",
+          "surface": "#FF3191",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1A161B",
+          "muted": "#1A161B",
+          "border": "#423E45",
+          "action": "#FFEFBA",
+          "actionHover": "#FFEFBA",
+          "focus": "#FFEFBA",
+          "danger": "#3E0000",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#296CC8",
+          "seeds": {
+            "secondary": "#EDA548",
+            "accent": "#55511B",
+            "neutral": "#766F76"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F8D6F9",
+              "surface": "#E5D0E6"
+            },
+            "dark": {
+              "background": "#391F3B",
+              "surface": "#402F41"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF3191",
+              "surface": "#FF3191",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#296CC8",
+          "secondary": "#EDA548",
+          "accent": "#55511B",
+          "background": "#FF3191",
+          "surface": "#FF3191",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1B161B",
+          "muted": "#1B161B",
+          "border": "#443E44",
+          "action": "#393502",
+          "actionHover": "#393502",
+          "focus": "#393502",
+          "danger": "#3E0000",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 0,
+    "tokens": {
+      "brand": "#076FF4",
+      "secondary": "#921FFD",
+      "accent": "#0DA293",
+      "background": "#FF3191",
+      "surface": "#FF3191",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#19171D",
+      "muted": "#19171D",
+      "border": "#413F46",
+      "action": "#003931",
+      "actionHover": "#003931",
+      "focus": "#003931",
+      "danger": "#3E0000",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "restaurant": {
+    "brief": "Midnight-green supper menu with warm luminous type and citrus course markers.",
+    "mode": "dark",
+    "config": {
+      "brief": "Midnight-green supper menu with warm luminous type and citrus course markers.",
+      "seed": "dazzler-028-restaurant",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          80,
+          90
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "dark": {
+          "background": "#082D26",
+          "surface": "#082D26",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#7F6525",
+          "seeds": {
+            "secondary": "#3DA0BC",
+            "accent": "#EF5473",
+            "neutral": "#73716F"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F3BD8A",
+              "surface": "#D9B796"
+            },
+            "dark": {
+              "background": "#0D0501",
+              "surface": "#190C02"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#082D26",
+              "surface": "#082D26",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#7F6525",
+          "secondary": "#3DA0BC",
+          "accent": "#EF5473",
+          "background": "#082D26",
+          "surface": "#082D26",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F5F3F2",
+          "muted": "#A1A09E",
+          "border": "#73716F",
+          "action": "#EF5473",
+          "actionHover": "#FF9FAD",
+          "focus": "#EF5473",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#D8AC38",
+          "seeds": {
+            "secondary": "#1B6549",
+            "accent": "#2738BE",
+            "neutral": "#73716F"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FDEFDE",
+              "surface": "#F8E3C7"
+            },
+            "dark": {
+              "background": "#2B1B04",
+              "surface": "#36260E"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#082D26",
+              "surface": "#082D26",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#D8AC38",
+          "secondary": "#1B6549",
+          "accent": "#2738BE",
+          "background": "#082D26",
+          "surface": "#082D26",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F5F3F2",
+          "muted": "#A1A09E",
+          "border": "#73716F",
+          "action": "#87A8FF",
+          "actionHover": "#87A8FF",
+          "focus": "#87A8FF",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#F0B601",
+          "seeds": {
+            "secondary": "#73BA01",
+            "accent": "#759CFF",
+            "neutral": "#72726C"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#DFD97D",
+              "surface": "#D0CC94"
+            },
+            "dark": {
+              "background": "#0F0D00",
+              "surface": "#191700"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#082D26",
+              "surface": "#082D26",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#F0B601",
+          "secondary": "#73BA01",
+          "accent": "#759CFF",
+          "background": "#082D26",
+          "surface": "#082D26",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F4F4F0",
+          "muted": "#A1A19C",
+          "border": "#72726C",
+          "action": "#759CFF",
+          "actionHover": "#B8D2FF",
+          "focus": "#759CFF",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      }
+    ],
+    "selected": 2,
+    "tokens": {
+      "brand": "#F0B601",
+      "secondary": "#73BA01",
+      "accent": "#759CFF",
+      "background": "#082D26",
+      "surface": "#082D26",
+      "success": "#FFFFFF",
+      "warning": "#FFFFFF",
+      "info": "#FFFFFF",
+      "text": "#F4F4F0",
+      "muted": "#A1A19C",
+      "border": "#72726C",
+      "action": "#759CFF",
+      "actionHover": "#B8D2FF",
+      "focus": "#759CFF",
+      "danger": "#FF948C",
+      "onAction": "#000000",
+      "onActionHover": "#000000",
+      "onDanger": "#000000"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "technical": {
+    "brief": "Night-mode recovery runbook with cyan steps and a separately labelled red stop condition.",
+    "mode": "dark",
+    "config": {
+      "brief": "Night-mode recovery runbook with cyan steps and a separately labelled red stop condition.",
+      "seed": "dazzler-028-technical",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          195,
+          205
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "dark": {
+          "background": "#091522",
+          "surface": "#091522",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#41C4CF",
+          "seeds": {
+            "secondary": "#721D93",
+            "accent": "#A89530",
+            "neutral": "#707270"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#A3C2A5",
+              "surface": "#9FB3A1"
+            },
+            "dark": {
+              "background": "#0F2913",
+              "surface": "#223223"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#091522",
+              "surface": "#091522",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#41C4CF",
+          "secondary": "#721D93",
+          "accent": "#A89530",
+          "background": "#091522",
+          "surface": "#091522",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F3F4F3",
+          "muted": "#9FA19F",
+          "border": "#707270",
+          "action": "#A89530",
+          "actionHover": "#D4C782",
+          "focus": "#A89530",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#0D5D60",
+          "seeds": {
+            "secondary": "#C559FA",
+            "accent": "#963B0C",
+            "neutral": "#6E7372"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#C6F4ED",
+              "surface": "#C8E5E0"
+            },
+            "dark": {
+              "background": "#011A17",
+              "surface": "#0C2522"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#091522",
+              "surface": "#091522",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#0D5D60",
+          "secondary": "#C559FA",
+          "accent": "#963B0C",
+          "background": "#091522",
+          "surface": "#091522",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F2F5F4",
+          "muted": "#9DA1A1",
+          "border": "#6E7372",
+          "action": "#F3A688",
+          "actionHover": "#F3A688",
+          "focus": "#F3A688",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#065B5C",
+          "seeds": {
+            "secondary": "#E21267",
+            "accent": "#B6CF19",
+            "neutral": "#717172"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#D4D9E4",
+              "surface": "#CACED5"
+            },
+            "dark": {
+              "background": "#090C13",
+              "surface": "#14161B"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#091522",
+              "surface": "#091522",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#065B5C",
+          "secondary": "#E21267",
+          "accent": "#B6CF19",
+          "background": "#091522",
+          "surface": "#091522",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F3F3F4",
+          "muted": "#A0A0A0",
+          "border": "#717172",
+          "action": "#96AC00",
+          "actionHover": "#B6CF19",
+          "focus": "#96AC00",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      }
+    ],
+    "selected": 2,
+    "tokens": {
+      "brand": "#065B5C",
+      "secondary": "#E21267",
+      "accent": "#B6CF19",
+      "background": "#091522",
+      "surface": "#091522",
+      "success": "#FFFFFF",
+      "warning": "#FFFFFF",
+      "info": "#FFFFFF",
+      "text": "#F3F3F4",
+      "muted": "#A0A0A0",
+      "border": "#717172",
+      "action": "#96AC00",
+      "actionHover": "#B6CF19",
+      "focus": "#96AC00",
+      "danger": "#FF948C",
+      "onAction": "#000000",
+      "onActionHover": "#000000",
+      "onDanger": "#000000"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "webapp-workspace": {
+    "brief": "Quiet neutral writing paper with a precise orange editorial rail; the manuscript remains calm.",
+    "mode": "light",
+    "config": {
+      "brief": "Quiet neutral writing paper with a precise orange editorial rail; the manuscript remains calm.",
+      "seed": "dazzler-028-webapp-workspace",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          40,
+          50
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FCFCF8",
+          "surface": "#FCFCF8",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#F57C42",
+          "seeds": {
+            "secondary": "#747121",
+            "accent": "#7A36DB",
+            "neutral": "#717270"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F7F9C6",
+              "surface": "#EAECCB"
+            },
+            "dark": {
+              "background": "#0A0A01",
+              "surface": "#141402"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FCFCF8",
+              "surface": "#FCFCF8",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#F57C42",
+          "secondary": "#747121",
+          "accent": "#7A36DB",
+          "background": "#FCFCF8",
+          "surface": "#FCFCF8",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181817",
+          "muted": "#535453",
+          "border": "#717270",
+          "action": "#5B17AC",
+          "actionHover": "#490094",
+          "focus": "#5B17AC",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#8E3702",
+          "seeds": {
+            "secondary": "#A0CC0C",
+            "accent": "#70AAFE",
+            "neutral": "#757070"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FFDDDD",
+              "surface": "#F6D1D0"
+            },
+            "dark": {
+              "background": "#44191C",
+              "surface": "#482B2B"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FCFCF8",
+              "surface": "#FCFCF8",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#8E3702",
+          "secondary": "#A0CC0C",
+          "accent": "#70AAFE",
+          "background": "#FCFCF8",
+          "surface": "#FCFCF8",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1A1717",
+          "muted": "#575353",
+          "border": "#757070",
+          "action": "#2E5894",
+          "actionHover": "#032E67",
+          "focus": "#2E5894",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#FE7B13",
+          "seeds": {
+            "secondary": "#0C93AA",
+            "accent": "#DD3208",
+            "neutral": "#76706E"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FCAB9A",
+              "surface": "#DDA99E"
+            },
+            "dark": {
+              "background": "#290300",
+              "surface": "#340E07"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FCFCF8",
+              "surface": "#FCFCF8",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#FE7B13",
+          "secondary": "#0C93AA",
+          "accent": "#DD3208",
+          "background": "#FCFCF8",
+          "surface": "#FCFCF8",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1B1716",
+          "muted": "#585351",
+          "border": "#76706E",
+          "action": "#940000",
+          "actionHover": "#680000",
+          "focus": "#940000",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 2,
+    "tokens": {
+      "brand": "#FE7B13",
+      "secondary": "#0C93AA",
+      "accent": "#DD3208",
+      "background": "#FCFCF8",
+      "surface": "#FCFCF8",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#1B1716",
+      "muted": "#585351",
+      "border": "#76706E",
+      "action": "#940000",
+      "actionHover": "#680000",
+      "focus": "#940000",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "webapp-board": {
+    "brief": "Broadcast-yellow production lanes with black ink and electric violet stage controls.",
+    "mode": "light",
+    "config": {
+      "brief": "Broadcast-yellow production lanes with black ink and electric violet stage controls.",
+      "seed": "dazzler-028-webapp-board",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          265,
+          275
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#F5FF00",
+          "surface": "#F5FF00",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#3325E8",
+          "seeds": {
+            "secondary": "#CD1096",
+            "accent": "#0A6ECB",
+            "neutral": "#717172"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#C9D0FE",
+              "surface": "#C0C6E8"
+            },
+            "dark": {
+              "background": "#20234C",
+              "surface": "#2E314C"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#F5FF00",
+              "surface": "#F5FF00",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#3325E8",
+          "secondary": "#CD1096",
+          "accent": "#0A6ECB",
+          "background": "#F5FF00",
+          "surface": "#F5FF00",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181818",
+          "muted": "#535354",
+          "border": "#717172",
+          "action": "#004FA0",
+          "actionHover": "#003A88",
+          "focus": "#004FA0",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#AFBDF6",
+          "seeds": {
+            "secondary": "#B27F2F",
+            "accent": "#31936E",
+            "neutral": "#747073"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FBD2F6",
+              "surface": "#EFC6EB"
+            },
+            "dark": {
+              "background": "#10010F",
+              "surface": "#1E031D"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#F5FF00",
+              "surface": "#F5FF00",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#AFBDF6",
+          "secondary": "#B27F2F",
+          "accent": "#31936E",
+          "background": "#F5FF00",
+          "surface": "#F5FF00",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1A1719",
+          "muted": "#565355",
+          "border": "#747073",
+          "action": "#005C3E",
+          "actionHover": "#004128",
+          "focus": "#005C3E",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#3334E8",
+          "seeds": {
+            "secondary": "#F47C6C",
+            "accent": "#AA9531",
+            "neutral": "#6D7279"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#ECF4FD",
+              "surface": "#DEE9F6"
+            },
+            "dark": {
+              "background": "#06111E",
+              "surface": "#131B24"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#F5FF00",
+              "surface": "#F5FF00",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#3334E8",
+          "secondary": "#F47C6C",
+          "accent": "#AA9531",
+          "background": "#F5FF00",
+          "surface": "#F5FF00",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#15181D",
+          "muted": "#50545A",
+          "border": "#6D7279",
+          "action": "#564600",
+          "actionHover": "#423400",
+          "focus": "#564600",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 0,
+    "tokens": {
+      "brand": "#3325E8",
+      "secondary": "#CD1096",
+      "accent": "#0A6ECB",
+      "background": "#F5FF00",
+      "surface": "#F5FF00",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#181818",
+      "muted": "#535354",
+      "border": "#717172",
+      "action": "#004FA0",
+      "actionHover": "#003A88",
+      "focus": "#004FA0",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "webapp-settings": {
+    "brief": "Full royal-blue schedule studio with white controls and a luminous cyan clock.",
+    "mode": "dark",
+    "config": {
+      "brief": "Full royal-blue schedule studio with white controls and a luminous cyan clock.",
+      "seed": "dazzler-028-webapp-settings",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          210,
+          220
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "dark": {
+          "background": "#1648E8",
+          "surface": "#1648E8",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#279AB0",
+          "seeds": {
+            "secondary": "#C82139",
+            "accent": "#1A7170",
+            "neutral": "#717172"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F1F2FE",
+              "surface": "#E4E6FD"
+            },
+            "dark": {
+              "background": "#221B59",
+              "surface": "#2D2D55"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#1648E8",
+              "surface": "#1648E8",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#279AB0",
+          "secondary": "#C82139",
+          "accent": "#1A7170",
+          "background": "#1648E8",
+          "surface": "#1648E8",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F3F3F4",
+          "muted": "#D4D4D5",
+          "border": "#D4D4D5",
+          "action": "#98D1CF",
+          "actionHover": "#98D1CF",
+          "focus": "#98D1CF",
+          "danger": "#FFE7E2",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#4CC7E1",
+          "seeds": {
+            "secondary": "#78C3F4",
+            "accent": "#44BD7C",
+            "neutral": "#6F7272"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#91FBF7",
+              "surface": "#A3EAE6"
+            },
+            "dark": {
+              "background": "#062020",
+              "surface": "#0A2C2B"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#1648E8",
+              "surface": "#1648E8",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#4CC7E1",
+          "secondary": "#78C3F4",
+          "accent": "#44BD7C",
+          "background": "#1648E8",
+          "surface": "#1648E8",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F2F4F4",
+          "muted": "#D2D5D5",
+          "border": "#D2D5D5",
+          "action": "#97EAB7",
+          "actionHover": "#97EAB7",
+          "focus": "#97EAB7",
+          "danger": "#FFE7E2",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#185662",
+          "seeds": {
+            "secondary": "#C385F4",
+            "accent": "#BB872E",
+            "neutral": "#70717A"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#D2D5FA",
+              "surface": "#C7C9EF"
+            },
+            "dark": {
+              "background": "#100A35",
+              "surface": "#1A1A35"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#1648E8",
+              "surface": "#1648E8",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#185662",
+          "secondary": "#C385F4",
+          "accent": "#BB872E",
+          "background": "#1648E8",
+          "surface": "#1648E8",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F3F4F9",
+          "muted": "#D3D4DC",
+          "border": "#D3D4DC",
+          "action": "#E4BB7F",
+          "actionHover": "#E4BB7F",
+          "focus": "#E4BB7F",
+          "danger": "#FFE7E2",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      }
+    ],
+    "selected": 0,
+    "tokens": {
+      "brand": "#279AB0",
+      "secondary": "#C82139",
+      "accent": "#1A7170",
+      "background": "#1648E8",
+      "surface": "#1648E8",
+      "success": "#FFFFFF",
+      "warning": "#FFFFFF",
+      "info": "#FFFFFF",
+      "text": "#F3F3F4",
+      "muted": "#D4D4D5",
+      "border": "#D4D4D5",
+      "action": "#98D1CF",
+      "actionHover": "#98D1CF",
+      "focus": "#98D1CF",
+      "danger": "#FFE7E2",
+      "onAction": "#000000",
+      "onActionHover": "#000000",
+      "onDanger": "#000000"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "data-revenue": {
+    "brief": "White analytical canvas with vivid violet bars and a black chart field; exact labels stay primary.",
+    "mode": "light",
+    "config": {
+      "brief": "White analytical canvas with vivid violet bars and a black chart field; exact labels stay primary.",
+      "seed": "dazzler-028-data-revenue",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          300,
+          310
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#7724BC",
+          "seeds": {
+            "secondary": "#685A18",
+            "accent": "#49B02F",
+            "neutral": "#747071"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#F89FAA",
+              "surface": "#DC9EA5"
+            },
+            "dark": {
+              "background": "#500A1D",
+              "surface": "#55232B"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#7724BC",
+          "secondary": "#685A18",
+          "accent": "#49B02F",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1A1718",
+          "muted": "#565353",
+          "border": "#747071",
+          "action": "#005900",
+          "actionHover": "#004400",
+          "focus": "#005900",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#A153EF",
+          "seeds": {
+            "secondary": "#A5AD04",
+            "accent": "#3A22FE",
+            "neutral": "#707176"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#EDEEFF",
+              "surface": "#DFE2FF"
+            },
+            "dark": {
+              "background": "#1A0D52",
+              "surface": "#24234D"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#A153EF",
+          "secondary": "#A5AD04",
+          "accent": "#3A22FE",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#17181B",
+          "muted": "#535358",
+          "border": "#707176",
+          "action": "#2900C9",
+          "actionHover": "#2900C9",
+          "focus": "#2900C9",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#C09CF4",
+          "seeds": {
+            "secondary": "#B72A56",
+            "accent": "#40B6C2",
+            "neutral": "#6F7177"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#C0C6DC",
+              "surface": "#B7BBC9"
+            },
+            "dark": {
+              "background": "#040612",
+              "surface": "#0C0F18"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#C09CF4",
+          "secondary": "#B72A56",
+          "accent": "#40B6C2",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#16181B",
+          "muted": "#525358",
+          "border": "#6F7177",
+          "action": "#006069",
+          "actionHover": "#00363D",
+          "focus": "#006069",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#A153EF",
+      "secondary": "#A5AD04",
+      "accent": "#3A22FE",
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#17181B",
+      "muted": "#535358",
+      "border": "#707176",
+      "action": "#2900C9",
+      "actionHover": "#2900C9",
+      "focus": "#2900C9",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "data-operations": {
+    "brief": "Dark instrument panel with electric mint readings and orange warning evidence.",
+    "mode": "dark",
+    "config": {
+      "brief": "Dark instrument panel with electric mint readings and orange warning evidence.",
+      "seed": "dazzler-028-data-operations",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          170,
+          180
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "dark": {
+          "background": "#061F27",
+          "surface": "#061F27",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#30B798",
+          "seeds": {
+            "secondary": "#DF2AB9",
+            "accent": "#9D9325",
+            "neutral": "#687477"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#DAE9EC",
+              "surface": "#D3DCDE"
+            },
+            "dark": {
+              "background": "#010709",
+              "surface": "#091011"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#061F27",
+              "surface": "#061F27",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#30B798",
+          "secondary": "#DF2AB9",
+          "accent": "#9D9325",
+          "background": "#061F27",
+          "surface": "#061F27",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#EEF5F7",
+          "muted": "#99A2A5",
+          "border": "#687477",
+          "action": "#9D9325",
+          "actionHover": "#CAC47B",
+          "focus": "#9D9325",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#1F5F4F",
+          "seeds": {
+            "secondary": "#236868",
+            "accent": "#7B4F1E",
+            "neutral": "#717270"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#D6DACE",
+              "surface": "#CBCEC6"
+            },
+            "dark": {
+              "background": "#22261D",
+              "surface": "#2E302A"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#061F27",
+              "surface": "#061F27",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#1F5F4F",
+          "secondary": "#236868",
+          "accent": "#7B4F1E",
+          "background": "#061F27",
+          "surface": "#061F27",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F3F4F3",
+          "muted": "#A0A19F",
+          "border": "#717270",
+          "action": "#D8B28E",
+          "actionHover": "#D8B28E",
+          "focus": "#D8B28E",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#135D51",
+          "seeds": {
+            "secondary": "#99BFFA",
+            "accent": "#38E170",
+            "neutral": "#6A7476"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#7DD9EB",
+              "surface": "#91C8D4"
+            },
+            "dark": {
+              "background": "#031E24",
+              "surface": "#052A31"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#061F27",
+              "surface": "#061F27",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#135D51",
+          "secondary": "#99BFFA",
+          "accent": "#38E170",
+          "background": "#061F27",
+          "surface": "#061F27",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#EFF5F7",
+          "muted": "#9AA2A4",
+          "border": "#6A7476",
+          "action": "#21BB59",
+          "actionHover": "#38E170",
+          "focus": "#21BB59",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      }
+    ],
+    "selected": 2,
+    "tokens": {
+      "brand": "#135D51",
+      "secondary": "#99BFFA",
+      "accent": "#38E170",
+      "background": "#061F27",
+      "surface": "#061F27",
+      "success": "#FFFFFF",
+      "warning": "#FFFFFF",
+      "info": "#FFFFFF",
+      "text": "#EFF5F7",
+      "muted": "#9AA2A4",
+      "border": "#6A7476",
+      "action": "#21BB59",
+      "actionHover": "#38E170",
+      "focus": "#21BB59",
+      "danger": "#FF948C",
+      "onAction": "#000000",
+      "onActionHover": "#000000",
+      "onDanger": "#000000"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "restaurant-fine-dining": {
+    "brief": "Aubergine dining theatre with a luminous apricot course numeral.",
+    "mode": "dark",
+    "config": {
+      "brief": "Aubergine dining theatre with a luminous apricot course numeral.",
+      "seed": "dazzler-028-restaurant-fine-dining",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          70,
+          80
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "dark": {
+          "background": "#24103D",
+          "surface": "#24103D",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#B07B12",
+          "seeds": {
+            "secondary": "#E4BE20",
+            "accent": "#074C95",
+            "neutral": "#73716F"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FEECD8",
+              "surface": "#FADEC2"
+            },
+            "dark": {
+              "background": "#1D0E01",
+              "surface": "#2B1701"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#24103D",
+              "surface": "#24103D",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#B07B12",
+          "secondary": "#E4BE20",
+          "accent": "#074C95",
+          "background": "#24103D",
+          "surface": "#24103D",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F5F3F2",
+          "muted": "#A1A09E",
+          "border": "#73716F",
+          "action": "#80AFEB",
+          "actionHover": "#AACDFA",
+          "focus": "#80AFEB",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#F4AD50",
+          "seeds": {
+            "secondary": "#297195",
+            "accent": "#B52E3E",
+            "neutral": "#786F71"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#CCC1C3",
+              "surface": "#BEB7B8"
+            },
+            "dark": {
+              "background": "#261D1F",
+              "surface": "#2F292A"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#24103D",
+              "surface": "#24103D",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#F4AD50",
+          "secondary": "#297195",
+          "accent": "#B52E3E",
+          "background": "#24103D",
+          "surface": "#24103D",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F8F2F3",
+          "muted": "#A59EA0",
+          "border": "#786F71",
+          "action": "#D97376",
+          "actionHover": "#FFABAC",
+          "focus": "#D97376",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      },
+      {
+        "input": {
+          "base": "#754A02",
+          "seeds": {
+            "secondary": "#036A20",
+            "accent": "#6E2BB2",
+            "neutral": "#73726D"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#FFF9E0",
+              "surface": "#F9EDBF"
+            },
+            "dark": {
+              "background": "#1E1700",
+              "surface": "#2A2100"
+            }
+          },
+          "locked": {
+            "dark": {
+              "background": "#24103D",
+              "surface": "#24103D",
+              "success": "#FFFFFF",
+              "warning": "#FFFFFF",
+              "info": "#FFFFFF"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#754A02",
+          "secondary": "#036A20",
+          "accent": "#6E2BB2",
+          "background": "#24103D",
+          "surface": "#24103D",
+          "success": "#FFFFFF",
+          "warning": "#FFFFFF",
+          "info": "#FFFFFF",
+          "text": "#F5F4F1",
+          "muted": "#A1A19D",
+          "border": "#73726D",
+          "action": "#C99FFF",
+          "actionHover": "#C99FFF",
+          "focus": "#C99FFF",
+          "danger": "#FF948C",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#F4AD50",
+      "secondary": "#297195",
+      "accent": "#B52E3E",
+      "background": "#24103D",
+      "surface": "#24103D",
+      "success": "#FFFFFF",
+      "warning": "#FFFFFF",
+      "info": "#FFFFFF",
+      "text": "#F8F2F3",
+      "muted": "#A59EA0",
+      "border": "#786F71",
+      "action": "#D97376",
+      "actionHover": "#FFABAC",
+      "focus": "#D97376",
+      "danger": "#FF948C",
+      "onAction": "#000000",
+      "onActionHover": "#000000",
+      "onDanger": "#000000"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "restaurant-cafe": {
+    "brief": "Orange coffee counter with electric blue ordering controls and a white receipt.",
+    "mode": "light",
+    "config": {
+      "brief": "Orange coffee counter with electric blue ordering controls and a white receipt.",
+      "seed": "dazzler-028-restaurant-cafe",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          230,
+          240
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FF6726",
+          "surface": "#FF6726",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 23,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#2072A1",
+          "seeds": {
+            "secondary": "#623ABC",
+            "accent": "#E7A235",
+            "neutral": "#6D7371"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#5CDAC1",
+              "surface": "#7EC7B6"
+            },
+            "dark": {
+              "background": "#031C17",
+              "surface": "#052821"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF6726",
+              "surface": "#FF6726",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#2072A1",
+          "secondary": "#623ABC",
+          "accent": "#E7A235",
+          "background": "#FF6726",
+          "surface": "#FF6726",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#151918",
+          "muted": "#252928",
+          "border": "#3D4140",
+          "action": "#532E00",
+          "actionHover": "#532E00",
+          "focus": "#532E00",
+          "danger": "#610000",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#3BC4FB",
+          "seeds": {
+            "secondary": "#FA514E",
+            "accent": "#4E7A12",
+            "neutral": "#6D7371"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#A7FEE9",
+              "surface": "#B3ECDD"
+            },
+            "dark": {
+              "background": "#000906",
+              "surface": "#01130F"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF6726",
+              "surface": "#FF6726",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#3BC4FB",
+          "secondary": "#FA514E",
+          "accent": "#4E7A12",
+          "background": "#FF6726",
+          "surface": "#FF6726",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#151918",
+          "muted": "#252928",
+          "border": "#3D4140",
+          "action": "#224500",
+          "actionHover": "#224500",
+          "focus": "#224500",
+          "danger": "#610000",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#21ADE8",
+          "seeds": {
+            "secondary": "#5466F9",
+            "accent": "#0E6265",
+            "neutral": "#717172"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#BFDAFD",
+              "surface": "#BCCEE5"
+            },
+            "dark": {
+              "background": "#0F2640",
+              "surface": "#233143"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FF6726",
+              "surface": "#FF6726",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#21ADE8",
+          "secondary": "#5466F9",
+          "accent": "#0E6265",
+          "background": "#FF6726",
+          "surface": "#FF6726",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181818",
+          "muted": "#282828",
+          "border": "#404041",
+          "action": "#004446",
+          "actionHover": "#004446",
+          "focus": "#004446",
+          "danger": "#610000",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 0,
+    "tokens": {
+      "brand": "#2072A1",
+      "secondary": "#623ABC",
+      "accent": "#E7A235",
+      "background": "#FF6726",
+      "surface": "#FF6726",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#151918",
+      "muted": "#252928",
+      "border": "#3D4140",
+      "action": "#532E00",
+      "actionHover": "#532E00",
+      "focus": "#532E00",
+      "danger": "#610000",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "restaurant-reservations": {
+    "brief": "White room-planning canvas with vivid green selected tables and coral request panel.",
+    "mode": "light",
+    "config": {
+      "brief": "White room-planning canvas with vivid green selected tables and coral request panel.",
+      "seed": "dazzler-028-restaurant-reservations",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          155,
+          165
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#27D382",
+          "seeds": {
+            "secondary": "#7E25BB",
+            "accent": "#7B490B",
+            "neutral": "#717271"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#ADCA79",
+              "surface": "#A8BB89"
+            },
+            "dark": {
+              "background": "#060A00",
+              "surface": "#0D1501"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#27D382",
+          "secondary": "#7E25BB",
+          "accent": "#7B490B",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181818",
+          "muted": "#535453",
+          "border": "#717271",
+          "action": "#7B490B",
+          "actionHover": "#592E00",
+          "focus": "#7B490B",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#206246",
+          "seeds": {
+            "secondary": "#CD7DF0",
+            "accent": "#F05461",
+            "neutral": "#6F7271"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#C7FCEA",
+              "surface": "#B4F3DE"
+            },
+            "dark": {
+              "background": "#0A2D24",
+              "surface": "#103A2F"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#206246",
+          "secondary": "#CD7DF0",
+          "accent": "#F05461",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#161818",
+          "muted": "#525453",
+          "border": "#6F7271",
+          "action": "#A91F34",
+          "actionHover": "#6A0010",
+          "focus": "#A91F34",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#286C51",
+          "seeds": {
+            "secondary": "#2B7168",
+            "accent": "#675C22",
+            "neutral": "#707270"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#BDC4BE",
+              "surface": "#B3B8B4"
+            },
+            "dark": {
+              "background": "#070C08",
+              "surface": "#121512"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#286C51",
+          "secondary": "#2B7168",
+          "accent": "#675C22",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#171817",
+          "muted": "#535453",
+          "border": "#707270",
+          "action": "#675C22",
+          "actionHover": "#493F09",
+          "focus": "#675C22",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 0,
+    "tokens": {
+      "brand": "#27D382",
+      "secondary": "#7E25BB",
+      "accent": "#7B490B",
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#181818",
+      "muted": "#535453",
+      "border": "#717271",
+      "action": "#7B490B",
+      "actionHover": "#592E00",
+      "focus": "#7B490B",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "restaurant-menu": {
+    "brief": "Lime lunch index with plum type, magenta category marks and clear prices.",
+    "mode": "light",
+    "config": {
+      "brief": "Lime lunch index with plum type, magenta category marks and clear prices.",
+      "seed": "dazzler-028-restaurant-menu",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          300,
+          310
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#BCF432",
+          "surface": "#BCF432",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#CFB7F4",
+          "seeds": {
+            "secondary": "#7A712B",
+            "accent": "#789136",
+            "neutral": "#727079"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#DAD7EB",
+              "surface": "#CFCDD9"
+            },
+            "dark": {
+              "background": "#06040F",
+              "surface": "#0F0D16"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#BCF432",
+              "surface": "#BCF432",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#CFB7F4",
+          "secondary": "#7A712B",
+          "accent": "#789136",
+          "background": "#BCF432",
+          "surface": "#BCF432",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#18171D",
+          "muted": "#54535A",
+          "border": "#727079",
+          "action": "#475B00",
+          "actionHover": "#304000",
+          "focus": "#475B00",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#8D49D5",
+          "seeds": {
+            "secondary": "#E797FA",
+            "accent": "#0F4F95",
+            "neutral": "#727172"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#DAC6D1",
+              "surface": "#CABDC4"
+            },
+            "dark": {
+              "background": "#2E1F28",
+              "surface": "#362C32"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#BCF432",
+              "surface": "#BCF432",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#8D49D5",
+          "secondary": "#E797FA",
+          "accent": "#0F4F95",
+          "background": "#BCF432",
+          "surface": "#BCF432",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#181818",
+          "muted": "#545354",
+          "border": "#727172",
+          "action": "#0F4F95",
+          "actionHover": "#00326E",
+          "focus": "#0F4F95",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#7207B5",
+          "seeds": {
+            "secondary": "#D6B012",
+            "accent": "#6BCFFE",
+            "neutral": "#776F76"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#CFC4CE",
+              "surface": "#C1BAC0"
+            },
+            "dark": {
+              "background": "#271F26",
+              "surface": "#302B2F"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#BCF432",
+              "surface": "#BCF432",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#7207B5",
+          "secondary": "#D6B012",
+          "accent": "#6BCFFE",
+          "background": "#BCF432",
+          "surface": "#BCF432",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#1B161B",
+          "muted": "#595258",
+          "border": "#776F76",
+          "action": "#004D6D",
+          "actionHover": "#004D6D",
+          "focus": "#004D6D",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#8D49D5",
+      "secondary": "#E797FA",
+      "accent": "#0F4F95",
+      "background": "#BCF432",
+      "surface": "#BCF432",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#181818",
+      "muted": "#545354",
+      "border": "#727172",
+      "action": "#0F4F95",
+      "actionHover": "#00326E",
+      "focus": "#0F4F95",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  },
+  "business-portal": {
+    "brief": "White client ledger with a cobalt project masthead and green review evidence.",
+    "mode": "light",
+    "config": {
+      "brief": "White client ledger with a cobalt project masthead and green review evidence.",
+      "seed": "dazzler-028-business-portal",
+      "count": 3,
+      "ranges": {
+        "hue": [
+          255,
+          265
+        ],
+        "chroma": [
+          0.18,
+          0.32
+        ],
+        "gamutFraction": [
+          0.8,
+          1
+        ],
+        "neutralChroma": [
+          0,
+          0.015
+        ]
+      },
+      "locked": {
+        "light": {
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000"
+        }
+      }
+    },
+    "attempted": 24,
+    "passing": 24,
+    "alternatives": [
+      {
+        "input": {
+          "base": "#3C82FD",
+          "seeds": {
+            "secondary": "#840BF4",
+            "accent": "#768A07",
+            "neutral": "#6C7376"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#C6EAFF",
+              "surface": "#B2E0FA"
+            },
+            "dark": {
+              "background": "#01202F",
+              "surface": "#012C3E"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#3C82FD",
+          "secondary": "#840BF4",
+          "accent": "#768A07",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#15191B",
+          "muted": "#4F5558",
+          "border": "#6C7376",
+          "action": "#465500",
+          "actionHover": "#2F3A00",
+          "focus": "#465500",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#2457F3",
+          "seeds": {
+            "secondary": "#F08C2A",
+            "accent": "#35CCD8",
+            "neutral": "#6E7277"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#AED1FB",
+              "surface": "#ADC5E1"
+            },
+            "dark": {
+              "background": "#010D1F",
+              "surface": "#06172B"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#2457F3",
+          "secondary": "#F08C2A",
+          "accent": "#35CCD8",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#16181B",
+          "muted": "#515459",
+          "border": "#6E7277",
+          "action": "#005F67",
+          "actionHover": "#00474E",
+          "focus": "#005F67",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      },
+      {
+        "input": {
+          "base": "#8BB4F8",
+          "seeds": {
+            "secondary": "#D898F8",
+            "accent": "#F3B536",
+            "neutral": "#707179"
+          },
+          "surfaces": {
+            "light": {
+              "background": "#D0D3FB",
+              "surface": "#C4C7F2"
+            },
+            "dark": {
+              "background": "#0F0538",
+              "surface": "#181737"
+            }
+          },
+          "locked": {
+            "light": {
+              "background": "#FFFFFF",
+              "surface": "#FFFFFF",
+              "success": "#000000",
+              "warning": "#000000",
+              "info": "#000000"
+            }
+          }
+        },
+        "tokens": {
+          "brand": "#8BB4F8",
+          "secondary": "#D898F8",
+          "accent": "#F3B536",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "success": "#000000",
+          "warning": "#000000",
+          "info": "#000000",
+          "text": "#17181D",
+          "muted": "#53535A",
+          "border": "#707179",
+          "action": "#7B5100",
+          "actionHover": "#603D00",
+          "focus": "#7B5100",
+          "danger": "#A70017",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      }
+    ],
+    "selected": 1,
+    "tokens": {
+      "brand": "#2457F3",
+      "secondary": "#F08C2A",
+      "accent": "#35CCD8",
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "success": "#000000",
+      "warning": "#000000",
+      "info": "#000000",
+      "text": "#16181B",
+      "muted": "#515459",
+      "border": "#6E7277",
+      "action": "#005F67",
+      "actionHover": "#00474E",
+      "focus": "#005F67",
+      "danger": "#A70017",
+      "onAction": "#FFFFFF",
+      "onActionHover": "#FFFFFF",
+      "onDanger": "#FFFFFF"
+    },
+    "selectionReason": "Authored surface supports the stated content direction; functional companions pass role checks. Final composition requires rendered review."
+  }
+}

@@ -1,7 +1,11 @@
 :root {
-  --accent: #9b301c;
-  --paper: #fff0e5;
+  --accent: #003931;
+  --paper: #ff3191;
   --display: "Oswald";
+  --ink: #19171d;
+  --on-accent: #ffffff;
+  --signal: #0da293;
+  --counter: #921ffd;
   --body-color: #17252b;
   --button-background: transparent;
   --button-hover-background: #ffffff30;
@@ -15,4 +19,7 @@
   --footer-border-top: #17252b40;
   --band-color: white;
   --body-background: white;
+  --campaign-border-bottom: #171717;
+  --campaign-mark-color: #111;
+  --thead-background: #172bc9;
 }

@@ -312,3 +312,86 @@ blockquote {
     grid-template-columns: 1fr;
   }
 }
+/* Selected engine roles; accent fills and labels have separate foregrounds. */
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+p,
+li,
+blockquote {
+  max-width: 60ch;
+}
+.top,
+footer,
+td,
+th,
+.event,
+.notes,
+.task,
+.product,
+.dish-row,
+.menu-controls,
+.ledger {
+  border-color: var(--accent);
+}
+button,
+input,
+select,
+textarea {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+input,
+select,
+textarea {
+  background: var(--paper);
+}
+button {
+  background: var(--button-background);
+}
+button[aria-pressed="true"],
+.band,
+.schedule,
+thead,
+.beats section:nth-child(2) {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.kicker,
+.closing {
+  color: var(--ink);
+}
+.stat,
+.event,
+.reading-value {
+  color: var(--accent);
+}
+@media print {
+  body {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+.beat-no {
+  color: var(--beat-no-color);
+}
+.beats section:nth-child(2) {
+  background: var(--beats-section-nth-child-2-background);
+  color: var(--beats-section-nth-child-2-color-2);
+}
+.beats section:nth-child(2) .beat-no {
+  color: var(--beats-section-nth-child-2-beat-no-color-2);
+}

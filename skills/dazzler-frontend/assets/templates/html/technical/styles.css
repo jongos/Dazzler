@@ -313,3 +313,99 @@ blockquote {
     padding: 30px 22px;
   }
 }
+/* Selected engine roles; accent fills and labels have separate foregrounds. */
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+p,
+li,
+blockquote {
+  max-width: 60ch;
+}
+.top,
+footer,
+td,
+th,
+.event,
+.notes,
+.task,
+.product,
+.dish-row,
+.menu-controls,
+.ledger {
+  border-color: var(--accent);
+}
+button,
+input,
+select,
+textarea {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+input,
+select,
+textarea {
+  background: var(--paper);
+}
+button {
+  background: var(--button-background);
+}
+button[aria-pressed="true"],
+.band,
+.schedule,
+thead,
+.beats section:nth-child(2) {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.kicker,
+.closing {
+  color: var(--ink);
+}
+.stat,
+.event,
+.reading-value {
+  color: var(--accent);
+}
+@media print {
+  body {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+.runbook {
+  background: var(--runbook-background-2);
+  color: var(--runbook-color-2);
+}
+.runbook aside {
+  color: var(--runbook-aside-color-2);
+}
+.runbook .kicker,
+.runbook .stat {
+  color: var(--runbook-kicker-runbook-stat-color);
+}
+.band {
+  background: var(--band-background);
+  color: var(--band-color);
+}
+.figure {
+  color: var(--figure-color);
+}
+.closing {
+  background: var(--closing-background);
+  color: var(--closing-color);
+  padding: 18px;
+}

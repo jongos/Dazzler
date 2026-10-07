@@ -1,0 +1,256 @@
+{
+  "rows": [
+    {
+      "id": "professional",
+      "background": "#FFFFFF",
+      "lightness": 1.0000000000000002,
+      "chroma": 0,
+      "treatment": "white-or-neutral"
+    },
+    {
+      "id": "legal",
+      "background": "#FFFFFF",
+      "lightness": 1.0000000000000002,
+      "chroma": 0,
+      "treatment": "white-or-neutral"
+    },
+    {
+      "id": "business",
+      "background": "#C9FF32",
+      "lightness": 0.9298881546233871,
+      "chroma": 0.21925308490401313,
+      "treatment": "chromatic"
+    },
+    {
+      "id": "fun",
+      "background": "#FF542E",
+      "lightness": 0.6767341318185291,
+      "chroma": 0.21335570919870117,
+      "treatment": "chromatic"
+    },
+    {
+      "id": "family",
+      "background": "#FFFFFF",
+      "lightness": 1.0000000000000002,
+      "chroma": 0,
+      "treatment": "white-or-neutral"
+    },
+    {
+      "id": "presentation",
+      "background": "#4821CE",
+      "lightness": 0.43845867507904634,
+      "chroma": 0.2375381390556891,
+      "treatment": "dark"
+    },
+    {
+      "id": "school",
+      "background": "#FFDE26",
+      "lightness": 0.9014265919073429,
+      "chroma": 0.17931734375559033,
+      "treatment": "chromatic"
+    },
+    {
+      "id": "marketing",
+      "background": "#FF3191",
+      "lightness": 0.6664238779345298,
+      "chroma": 0.2449147569927458,
+      "treatment": "chromatic"
+    },
+    {
+      "id": "restaurant",
+      "background": "#082D26",
+      "lightness": 0.2690636798493888,
+      "chroma": 0.04314924997173582,
+      "treatment": "dark"
+    },
+    {
+      "id": "technical",
+      "background": "#091522",
+      "lightness": 0.19189878498928423,
+      "chroma": 0.031722169034701576,
+      "treatment": "dark"
+    },
+    {
+      "id": "webapp-workspace",
+      "background": "#FCFCF8",
+      "lightness": 0.9899648861938034,
+      "chroma": 0.005263169946638272,
+      "treatment": "white-or-neutral"
+    },
+    {
+      "id": "webapp-board",
+      "background": "#F5FF00",
+      "lightness": 0.9600752637862249,
+      "chroma": 0.21352739199538004,
+      "treatment": "chromatic"
+    },
+    {
+      "id": "webapp-settings",
+      "background": "#1648E8",
+      "lightness": 0.49179931133556093,
+      "chroma": 0.2442580963824132,
+      "treatment": "dark"
+    },
+    {
+      "id": "data-revenue",
+      "background": "#FFFFFF",
+      "lightness": 1.0000000000000002,
+      "chroma": 0,
+      "treatment": "white-or-neutral"
+    },
+    {
+      "id": "data-operations",
+      "background": "#061F27",
+      "lightness": 0.22411009217126468,
+      "chroma": 0.03422493368777521,
+      "treatment": "dark"
+    },
+    {
+      "id": "restaurant-fine-dining",
+      "background": "#24103D",
+      "lightness": 0.23056252517221132,
+      "chroma": 0.08265751575732601,
+      "treatment": "dark"
+    },
+    {
+      "id": "restaurant-cafe",
+      "background": "#FF6726",
+      "lightness": 0.6983249978062146,
+      "chroma": 0.1990633142405172,
+      "treatment": "chromatic"
+    },
+    {
+      "id": "restaurant-reservations",
+      "background": "#FFFFFF",
+      "lightness": 1.0000000000000002,
+      "chroma": 0,
+      "treatment": "white-or-neutral"
+    },
+    {
+      "id": "restaurant-menu",
+      "background": "#BCF432",
+      "lightness": 0.8967635246838624,
+      "chroma": 0.2128852375289624,
+      "treatment": "chromatic"
+    },
+    {
+      "id": "business-portal",
+      "background": "#FFFFFF",
+      "lightness": 1.0000000000000002,
+      "chroma": 0,
+      "treatment": "white-or-neutral"
+    }
+  ],
+  "counts": {
+    "dark": 6,
+    "chromatic": 7,
+    "white-or-neutral": 7,
+    "light-tinted": 0
+  },
+  "flags": [],
+  "requiresVisualReview": true,
+  "limits": "Background coordinates omit color area, typography, images and nested surfaces. Related format variants should be counted once. Flags can be justified by a shared brand; they never force recoloring or certify beauty.",
+  "renderedArea": [
+    {
+      "id": "business-portal",
+      "paleLowChromaFraction": 0.7743104806934594,
+      "chromaticFraction": 0.1731678486997636
+    },
+    {
+      "id": "data-operations",
+      "paleLowChromaFraction": 0.009111111111111111,
+      "chromaticFraction": 0.056133333333333334
+    },
+    {
+      "id": "data-revenue",
+      "paleLowChromaFraction": 0.7251761517615176,
+      "chromaticFraction": 0.08479674796747967
+    },
+    {
+      "id": "html-business",
+      "paleLowChromaFraction": 0,
+      "chromaticFraction": 0.9519262981574539
+    },
+    {
+      "id": "html-family",
+      "paleLowChromaFraction": 0.8491039426523298,
+      "chromaticFraction": 0.10056750298685782
+    },
+    {
+      "id": "html-fun",
+      "paleLowChromaFraction": 0,
+      "chromaticFraction": 0.8653488372093023
+    },
+    {
+      "id": "html-legal",
+      "paleLowChromaFraction": 0.9538730158730159,
+      "chromaticFraction": 0
+    },
+    {
+      "id": "html-marketing",
+      "paleLowChromaFraction": 0,
+      "chromaticFraction": 0.9746623093681918
+    },
+    {
+      "id": "html-presentation",
+      "paleLowChromaFraction": 0.007329317269076306,
+      "chromaticFraction": 0.9420348058902276
+    },
+    {
+      "id": "html-professional",
+      "paleLowChromaFraction": 0.8634920634920635,
+      "chromaticFraction": 0.08047619047619048
+    },
+    {
+      "id": "html-restaurant",
+      "paleLowChromaFraction": 0,
+      "chromaticFraction": 0.02546296296296296
+    },
+    {
+      "id": "html-school",
+      "paleLowChromaFraction": 0.047697974217311236,
+      "chromaticFraction": 0.8061694290976059
+    },
+    {
+      "id": "html-technical",
+      "paleLowChromaFraction": 0.021669915529564654,
+      "chromaticFraction": 0.24665367121507473
+    },
+    {
+      "id": "restaurant-cafe",
+      "paleLowChromaFraction": 0.10706699346405228,
+      "chromaticFraction": 0.8634803921568628
+    },
+    {
+      "id": "restaurant-fine-dining",
+      "paleLowChromaFraction": 0,
+      "chromaticFraction": 0
+    },
+    {
+      "id": "restaurant-menu",
+      "paleLowChromaFraction": 0,
+      "chromaticFraction": 0.9423575860124084
+    },
+    {
+      "id": "restaurant-reservations",
+      "paleLowChromaFraction": 0.9207218167072182,
+      "chromaticFraction": 0
+    },
+    {
+      "id": "webapp-board",
+      "paleLowChromaFraction": 0,
+      "chromaticFraction": 0.9763984674329502
+    },
+    {
+      "id": "webapp-settings",
+      "paleLowChromaFraction": 0.05146666666666667,
+      "chromaticFraction": 0.9280444444444444
+    },
+    {
+      "id": "webapp-workspace",
+      "paleLowChromaFraction": 0.9450222222222222,
+      "chromaticFraction": 0
+    }
+  ],
+  "renderedAreaMethod": "Quantized full-page desktop captures at up to 180x500; approximate area evidence, including text and nested fields, not a beauty metric."
+}

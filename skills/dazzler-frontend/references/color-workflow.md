@@ -1,12 +1,18 @@
 # Color selection and implementation
 
-Use this when choosing or materially changing a palette. Preserve existing tokens for small edits. Infer direction from the brief, content, audience and brand and choose unspecified preferences yourself. Ask only for an indispensable task input or an unresolved hard constraint, not a routine aesthetic choice. A mood describes a design intent, not a universal psychological or cultural effect.
+Use for new palettes or substantial changes; preserve tokens for small edits. Infer unspecified choices from the brief, content, audience and brand. Ask only about indispensable inputs or conflicting hard constraints. Mood describes intent, not universal psychology.
+
+## Avoid Accidental House Style
+
+A pale surface and dark accent are one option, not a default for professional work. Compare surface lightness, chroma, color area and adjacent roles as well as hue. Preserve explicit brand locks. When a saturated field fails a fixed status ramp, adapt the functional foreground or place the status on a compatible local surface; do not automatically desaturate the whole design. Text needs its text contrast target even when the same color passes the lower action-fill target.
+
+For collections, call `reviewCollection` from `scripts/collection-color.mjs` with unique design IDs and opaque backgrounds; count related formats once. It flags surface convergence, including different pale hues. Review contact sheets for color area, nested surfaces and typography. Justify shared identity and record candidate selection. Flags neither demand brightness nor certify quality.
 
 ## Choose a direction
 
-For a new palette, default to mathematical exploration of an agent-authored color intent. The [palette catalog](color-palettes.json) contains 88 attributed reference examples, not the available design space or a default lookup table. Existing projects and explicit catalog selections retain their exact behavior. Translate the user's subject, mood, material, culture-specific context and brand into ranges and role relationships; the local helper does not understand natural language. Do not use industry stereotypes as color rules.
+For new palettes, explore an agent-authored intent. The [88 reference palettes](color-palettes.json) do not bound the design space. Preserve existing projects and explicit catalog selections. Translate subject, mood, material, cultural context and brand into ranges and role relationships; the helper does not interpret natural language. Avoid industry stereotypes.
 
-Explore independent hue offsets, lightness, chroma, colored neutrals and colored page fields. Use complementary or analogous relationships when useful, but the seven named harmonies are not boundaries. A small sharp accent against a chromatic field, warm/cool neutral tension, a narrow hue family with large lightness separation, or several related luminous hues can each fit different content. Neither three colors nor 60/30/10 area ratios are mandatory. Evaluate color area and adjacency in the actual composition, not swatches alone.
+Explore hue offsets, lightness, chroma, colored neutrals and page fields. Named harmonies, three-color schemes and 60/30/10 ratios are optional. Consider sharp accents on chromatic fields, warm/cool tension, lightness separation or related luminous hues. Evaluate area and adjacency in the composition.
 
 ### Geometry and Perception
 
@@ -18,7 +24,7 @@ Use the [relationship knowledge](color-relationships.json) for formulas, coordin
 
 Each candidate goes through the established semantic-role generator, brand-lock precedence and unrounded contrast checks. Failed candidates are not exported as CSS. A farthest-first selection then maximizes the minimum RMS OKLab distance across brand/secondary/accent and both background/surface pairs. A 0.025 separation threshold prevents padding the results with near-duplicates. This is a geometric diversity heuristic, not an aesthetic score or a proven perceptual just-noticeable difference. The first candidate is not the best design.
 
-The default explores 48 configurations and returns up to six separated passing systems. Record its seed for replay. Quantization and constraints collapse possibilities; seed size does not prove uniqueness or aesthetic quality.
+Defaults: 48 configurations, up to six separated passing systems. Record the seed for replay; seed size proves neither uniqueness nor quality.
 
 ```json
 {
@@ -47,7 +53,7 @@ The output contains `exploration.json` and passing candidate folders with the or
 
 ## Generate locally
 
-Use Node.js 22+; no installation or network is needed. If unavailable, report numerical contrast as unverified.
+Requires Node.js 22+, no network. Without it, report numerical contrast as unverified.
 
 Existing deterministic generation remains available: `colors.mjs generate --config input.json --out NEW_DIRECTORY`. Its configuration accepts `base`, `palette`, `mood`, `harmony`, `locked`, `target`, `seeds` and `surfaces`; CLI values override named fields. `recommend` and `list` are explicit catalog lookup tools. Output directories must be new and outside the skill.
 
@@ -76,9 +82,9 @@ The helper accepts only opaque six-digit hex. Composite translucent content agai
 
 ## Review with typography and export
 
-Select fonts through [the typography workflow](typography.md). The generic preview uses system fonts intentionally; apply the project's chosen licensed fonts and actual copy when implementing. Inspect body text, muted labels, small numbers, buttons, errors and keyboard focus at mobile and desktop widths. Check font weights, anti-aliasing, reading density, color area and visual hierarchy together.
+Follow [typography](typography.md). Replace preview system fonts with the chosen licensed fonts and actual copy. Review text, numbers, controls, errors and focus at mobile and desktop widths; judge weight, reading density, color area and hierarchy together.
 
-Prefer a single contextual choice with a short rationale. Offer alternatives only when the decision is materially open. Keep generated brand artifacts in the user's project, not this plugin's source repository. Preserve provenance and license notices when exporting. Never describe a mathematical shortlist as an objectively best aesthetic or a passing role table as full WCAG compliance.
+Choose one direction with a short rationale. Keep generated artifacts in the user's project and preserve export notices. Mathematical shortlists do not establish aesthetic superiority; role checks do not establish full WCAG compliance.
 
 ## Notes and credits
 

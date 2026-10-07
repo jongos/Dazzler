@@ -195,6 +195,11 @@ add(
 )
 
 
+from gallery_color_design import apply as apply_color, css as color_css
+
+U = [apply_color(d) for d in U]
+
+
 def build():
     for d in U:
         folder = OUT / "ui" / d["id"]
@@ -210,6 +215,7 @@ def build():
             + BASE
             + "\n"
             + d["css"]
+            + color_css(d)
         )
         (folder / "styles.css").write_text(css, encoding="utf8")
         (folder / "template.json").write_text(

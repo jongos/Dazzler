@@ -14,3 +14,7 @@ The old `build_templates.py` reproduces legacy fixed examples for maintenance on
 ## Notes
 
 Original Dazzler maintenance guidance, Apache-2.0. Reference observations are retained in the skill's document-design-space guide.
+
+## Scoped Color Refinements
+
+When the user requests color correction while retaining useful layouts, record `reviewScope: color-system-refinement`, the preserved-structure reason and specific color changes. Keep the same final-render, contrast, peer and previous-release review gates. Do not invent structural changes to satisfy a rebuild checklist. Use the advisory collection check and inspect actual color area before accepting the set.
