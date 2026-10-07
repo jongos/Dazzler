@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-07 — Preserve Vendored Provenance Across Checkouts
+
+**Changed:** Preserve exact bytes for vendored design-check inputs in Git and platform archives.
+
+**Added:** Extracted-package provenance validation.
+
+**Why:** Fresh CI checkouts normalized source line endings and invalidated the recorded source hash, although the local files passed.
+
+**Validation:** The provenance regression passes locally; refreshed checkout checks run on Windows and Linux before publication.
+
 ## 2026-10-07 — 0.27.0: Rebuild the Complete Demonstration Gallery
 
 **Changed:** Replaced all 30 legacy examples with newly authored Word, HTML and interface compositions. Half the Word collection uses deliberate colored page surfaces; native text and tables remain editable. Gallery thumbnails show complete compositions. The README and field guide now describe the new scenarios and correctly identify LibreOffice as the Word preview renderer.

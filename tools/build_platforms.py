@@ -226,7 +226,7 @@ def assemble(platform, target, profile="compact", plugin=False):
 def canonical_bytes(path):
     data = path.read_bytes()
     preserved = (
-        any(part in ("assets", "vendor") for part in path.parts)
+        any(part in ("assets", "vendor", "gdc") for part in path.parts)
         or path.name.endswith("-LICENSE.txt")
         or "dazzler-templates" in path.parts
     )

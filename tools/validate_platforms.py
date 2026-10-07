@@ -247,6 +247,15 @@ def validate(folder):
                     operate("uninstall", **args)
                 z.extractall(temp)
                 skill = Path(temp) / prefix
+                provenance_dir = skill / "scripts/gdc"
+                provenance = json.loads(
+                    (provenance_dir / "provenance.json").read_text()
+                )
+                for name, digest in provenance["files"].items():
+                    assert (
+                        hashlib.sha256((provenance_dir / name).read_bytes()).hexdigest()
+                        == digest
+                    ), name
                 health = subprocess.run(
                     [sys.executable, str(skill / "scripts/health.py")],
                     capture_output=True,

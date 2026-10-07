@@ -22,3 +22,6 @@ docs/visualizations/** -text -whitespace
 docs/illustrations/** -text -whitespace
 
 maintenance/offline-build/*.zip -text
+
+# Vendored design-check inputs retain their recorded source bytes.
+skills/dazzler-frontend/scripts/gdc/** -text -whitespace
