@@ -359,7 +359,7 @@ def main():
     save_json(
         ROOT / "maintenance/gallery-release.json",
         {
-            "version": "0.28.0",
+            "version": json.loads((ROOT / "package.json").read_text())["version"],
             "previousVersion": "0.27.0",
             "runtimeSha256": digest(SKILL / "references/integrity.json"),
             "skillSha256": digest(SKILL / "SKILL.md"),

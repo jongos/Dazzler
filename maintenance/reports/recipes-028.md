@@ -1,6 +1,6 @@
 # Recipe Integration — October 7, 2026
 
-Implemented locally as part of the existing, unreleased 0.28.0 update. No study expansion, rejected recipes, inference calls, installation changes, commit or publication occurred. The source study files were read without modification.
+Initially implemented locally for 0.28.0, then approved for shipment. The corrected release is 0.28.1 after a maintenance lockfile error blocked 0.28.0 CI. No study expansion, rejected recipes, inference calls or installation changes were made. The source study files were read without modification.
 
 ## What Changed
 
@@ -43,7 +43,7 @@ Machine evidence and screenshots are in [the integration evidence folder](../rec
 
 ## Publication Gate
 
-The initial gate correctly failed with **Regenerate after runtime changes**. Following explicit approval to ship, all 30 artifacts were rebuilt with the current skill, all ten Word pages and 40 desktop/mobile browser views were inspected, and the evidence manifest was renewed. `python tools/validate_gallery_release.py maintenance/gallery-release.json` now passes. Theme tokenization is part of assembly; all 40 final browser captures match the inspected output exactly. The [gallery review](../gallery-production/v0.28.0/REVIEW.md) records the scope and recipe consideration. Hosted CI and cross-OS archive reproducibility remain separate release checks; local checks do not establish their result.
+The initial gate correctly failed with **Regenerate after runtime changes**. Following explicit approval to ship, all 30 artifacts were rebuilt with the current skill, all ten Word pages and 40 desktop/mobile browser views were inspected, and the evidence manifest was renewed. `python tools/validate_gallery_release.py maintenance/gallery-release.json` now passes. Theme tokenization is part of assembly; all 40 final browser captures match the inspected output exactly. The [gallery review](../gallery-production/v0.28.0/REVIEW.md) records the scope and recipe consideration. The first hosted run exposed a scheduler dependency corrupted by the earlier broad version bump. The 0.28.1 correction restores the last published dependency metadata, adds an installed-metadata regression and passes a clean isolated npm installation plus 79 Python tests (one optional skip). Hosted CI and cross-OS archive reproducibility remain separate release checks; local checks do not establish their result.
 
 ## Notes
 

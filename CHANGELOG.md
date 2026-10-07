@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-07 — 0.28.1: Preserve Dependency Pins During Release Bumps
+
+**Changed:** Restore React DOM's scheduler requirement and scheduler 0.27.0 tarball from the last published lockfile. Only Dazzler's own version fields move to 0.28.1. The pushed 0.28.0 tag is preserved and its failed release remains unpublished.
+
+**Added:** A regression check comparing installed React DOM/scheduler versions and dependency requirements with the lockfile.
+
+**Why:** A broad earlier version replacement changed dependency metadata without changing its checksum. Cached local dependencies concealed the error; clean GitHub installs correctly rejected it. No dependency upgrade is intended.
+
+**Validation:** Clean dependency installation passed in an isolated folder; all 79 Python tests ran with one optional skip and no failures. Formatting and release metadata checks passed. Runtime design files and inspected gallery renders are unchanged by this maintenance correction; platform archives and the offline kit are rebuilt for 0.28.1.
+
 ## 2026-10-07 — 0.28.0: Recipe Starting Points
 
 **Changed:** Substantial design work can consider contextual recipes alongside original directions. Brand requirements, existing systems and Dazzler's design and delivery rules remain authoritative.

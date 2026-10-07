@@ -10,6 +10,21 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ReleaseMetadataTests(unittest.TestCase):
+    def test_release_bump_preserves_installed_dependency_metadata(self):
+        lock = json.loads((ROOT / "package-lock.json").read_text())["packages"]
+        for name in ("react-dom", "scheduler"):
+            path = ROOT / "node_modules" / name / "package.json"
+            if not path.exists():
+                self.skipTest(
+                    "Install maintenance dependencies to compare their metadata"
+                )
+            installed = json.loads(path.read_text())
+            entry = lock["node_modules/" + name]
+            self.assertEqual(entry["version"], installed["version"], name)
+            self.assertEqual(
+                entry.get("dependencies", {}), installed.get("dependencies", {}), name
+            )
+
     def test_all_current_version_references_and_drift_guards(self):
         spec = importlib.util.spec_from_file_location(
             "release", ROOT / "tools/validate_release.py"

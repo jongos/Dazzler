@@ -55,7 +55,7 @@ def assemble():
         shutil.copy2(TARGET / name, OUT / name)
     catalog = {
         "schemaVersion": 3,
-        "version": "0.28.0",
+        "version": json.loads((ROOT / "package.json").read_text())["version"],
         "creator": "Jon Gosier",
         "license": "Apache-2.0",
         "templates": [],

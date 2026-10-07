@@ -3,7 +3,7 @@
 Download `dazzler-cursor.zip`, `install_skill.py` and `SHA256SUMS.txt` from the same release. From that folder, with Python 3.10+ available:
 
 ```sh
-python install_skill.py install --host cursor --scope project --root /absolute/project --version 0.28.0 --archive dazzler-cursor.zip --checksums SHA256SUMS.txt
+python install_skill.py install --host cursor --scope project --root /absolute/project --version 0.28.1 --archive dazzler-cursor.zip --checksums SHA256SUMS.txt
 ```
 
 The project must exist. Add `--dry-run` to validate without installing. The installer verifies archive paths, checksums and every inventoried resource without executing package code. It refuses unmanaged installations or local edits and retains one prior managed version for rollback.
@@ -30,6 +30,6 @@ Archive, size and helper checks are automated. Real host activation, cloud uploa
 
 Packaging reference (checked September 28, 2026): [official documentation](https://prod.cursor.com/docs/skills). Creator: Jon Gosier. Feedback: jon@filmhedge.com. Original Dazzler code/instructions are Apache-2.0; bundled third-party resources retain their own licenses.
 
-- [dazzler-cursor.zip](https://github.com/jongos/Dazzler/releases/download/v0.28.0/dazzler-cursor.zip)
+- [dazzler-cursor.zip](https://github.com/jongos/Dazzler/releases/download/v0.28.1/dazzler-cursor.zip)
 - [Browse the gallery](https://jongos.github.io/Dazzler/templates/)
-- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.28.0/dazzler-templates.zip)
+- [download only the templates](https://github.com/jongos/Dazzler/releases/download/v0.28.1/dazzler-templates.zip)
