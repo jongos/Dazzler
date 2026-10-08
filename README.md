@@ -161,4 +161,4 @@ Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with ru
 
 ### Comparison notes
 
-[Where Dazzler fits](docs/COMPARISON.md) separates **verified here**, **documented**, and **not assessed** claims, with primary sources and current limitations. Reviewed September 28, 2026. No popularity or speculative candidate lists are used.
+[Where Dazzler fits](docs/COMPARISON.md) compared to similar tools and resources out there.
