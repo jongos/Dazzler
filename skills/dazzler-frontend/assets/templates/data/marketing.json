@@ -4,11 +4,11 @@
   "short": "Keep the Good Things",
   "tag": "SECOND LIFE / CAMPAIGN EDITION 01",
   "lead": "Make repair feel like a first choice. Show the work, explain the process and make booking simple.",
-  "accent": "#003931",
-  "paper": "#FF3191",
-  "font": "Oswald",
+  "accent": "#861028",
+  "paper": "#FFAB91",
+  "font": "Poppins",
   "word": "Arial",
-  "layout": "editorial",
+  "layout": "dispatch",
   "stat": "120",
   "label": "illustrative repair slots over four weeks",
   "intro": "A fictional campaign for a local repair collective. The offer covers a 20-minute assessment; repair price and turnaround are confirmed after inspection.",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Fictional campaign · Capacity figures are planning assumptions.",
-  "prompt": "Build a bold fictional repair-campaign editorial. Use a large condensed headline, rust and peach color fields, a diagram of the repair journey and a channel ledger. Avoid generic marketing cards and unsupported environmental claims. Color direction: Hot-pink repair campaign with a cobalt evidence band and black typography.",
+  "prompt": "Use Dazzler to create a fictional marketing document for its real reader task: Make repair feel like a first choice. Show the work, explain the process and make booking simple. Preserve the supplied numbers and qualifications. Develop a new campaign dispatch composition, with a channel-to-action map presents the campaign as a working assignment with capacity qualified as planning. Use Poppins in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #861028 color against #FFAB91. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "oswald",
     "css_family": "Oswald",
@@ -61,11 +61,11 @@
   "colorDirection": "Hot-pink repair campaign with a cobalt evidence band and black typography.",
   "fictional": true,
   "design": {
-    "accent": "#003931",
-    "secondary": "#003931",
-    "paper": "#FF3191",
-    "text": "#19171D",
-    "accentText": "#000000",
+    "accent": "#861028",
+    "secondary": "#861028",
+    "paper": "#FFAB91",
+    "text": "#17212B",
+    "accentText": "#861028",
     "onAccent": "#FFFFFF"
   },
   "document": [

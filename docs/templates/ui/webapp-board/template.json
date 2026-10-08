@@ -1,7 +1,7 @@
 {
   "id": "webapp-board",
-  "title": "Signal Production Board",
-  "prompt": "Create a fictional audio-production board whose workflow is visible as three horizontal lanes rather than a conventional card kanban. . A Move Forward action must update a task stage and the completion count. Color direction: Broadcast-yellow production lanes with black ink and electric violet stage controls.",
+  "title": "The Production Rack",
+  "prompt": "Use Dazzler to build a fictional the production rack. A production rack puts four assignments into vertical ticket columns beneath a narrow deadline spine. Preserve all synthetic data and working local controls. Use Oswald with #4D21A3 on #F0E8FF. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "tasks": [
       [

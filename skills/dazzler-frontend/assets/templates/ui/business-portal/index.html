@@ -3,67 +3,54 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Fieldwork Client Ledger</title
+  /><title>The Review Folio</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
-      <header class="portal">
-        <p class="kicker">FIELDWORK / CLIENT ROOM</p>
+    <main>
+      <header>
+        <p class="eyebrow">FIELDWORK / CLIENT REVIEW</p>
         <h1>The Courtyard Project</h1>
-        <p class="lead">One decision is ready for your review.</p>
+        <p class="lead">Review the material direction before detailed design begins.</p>
       </header>
-      <div class="ledger">
-        <section>
-          <h2>Project Sequence</h2>
-          <ol class="milestones">
-            <li>
-              <strong>06 Jun</strong><span>Site Survey<br /><small>Complete</small></span>
-            </li>
-            <li>
-              <strong>20 Jun</strong><span>Concept Review<br /><small>Complete</small></span>
-            </li>
-            <li class="current">
-              <strong>04 Jul</strong
-              ><span>Material Direction<br /><small>Awaiting Your Review</small></span>
-            </li>
-            <li>
-              <strong>18 Jul</strong><span>Detailed Design<br /><small>Planned</small></span>
-            </li>
-          </ol>
-          <h2>Review Documents</h2>
-          <div class="actions">
-            <button data-doc="Materials">Materials</button
-            ><button data-doc="Schedule">Schedule</button>
-          </div>
-        </section>
-        <aside class="decision-panel">
-          <p class="kicker">DECISION 03</p>
+      <div class="folio-review">
+        <nav class="documents" aria-label="Project Documents">
+          <button data-doc="Materials">Materials</button
+          ><button data-doc="Schedule">Schedule</button>
+        </nav>
+        <article>
+          <p class="eyebrow">DOCUMENT PREVIEW</p>
           <h2 id="preview-title">Materials</h2>
           <p id="preview">
             The proposal pairs reclaimed brick with pale timber and a permeable courtyard surface.
-            Final product specifications and costs remain subject to confirmation.
+            Final specifications and costs remain subject to confirmation.
           </p>
           <button id="approve">Mark Reviewed Locally</button>
-          <p role="status" id="status" class="status"></p>
-          <p class="small">
-            This preview records no contractual approval and sends nothing to the studio.
-          </p>
-        </aside>
+          <p id="status" role="status"></p>
+        </article>
       </div>
+      <section class="milestone-ribbon">
+        <h2>Project Sequence</h2>
+        <ol>
+          <li>06 Jun<br />Site Survey · Complete</li>
+          <li>20 Jun<br />Concept Review · Complete</li>
+          <li>04 Jul<br />Material Direction · Review</li>
+          <li>18 Jul<br />Detailed Design · Planned</li>
+        </ol>
+      </section>
+      <p>No approval or message is sent. Local review can be undone.</p>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "business-portal",
-        "title": "Fieldwork Client Ledger",
-        "prompt": "Create a fictional client portal for a small architecture studio. Organize the page as a project ledger with milestone dates and a focused decision panel, rather than a generic dashboard. Use brick red and warm white. Document selection must show a useful preview; approval must be explicitly local and reversible. Color direction: White client ledger with a cobalt project masthead and green review evidence.",
+        "title": "The Review Folio",
+        "prompt": "Use Dazzler to build a fictional the review folio. A two-page-like review folio makes the document preview primary, with a bottom milestone ribbon and reversible approval state. Preserve all synthetic data and working local controls. Use Libre Baskerville with #174878 on #E7F1FF. Compose for desktop and mobile; do not imply a live service.",
         "data": {
           "milestones": ["06 Jun", "20 Jun", "04 Jul", "18 Jul"],
           "documents": ["Materials", "Schedule"]

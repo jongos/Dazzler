@@ -1,0 +1,192 @@
+[
+  {
+    "id": "webapp-workspace",
+    "prompt": "Use Dazzler to build a fictional the revision desk. A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk. Preserve all synthetic data and working local controls. Use Libre Baskerville with #79321A on #FFF4E9. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "The Revision Desk",
+    "rationale": "A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk.",
+    "font": "Libre Baskerville",
+    "surface": "#FFF4E9 / #79321A",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "The Revision Desk",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk.",
+      "Moves the primary interaction into the new the revision desk sequence",
+      "Uses Libre Baskerville hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "webapp-board",
+    "prompt": "Use Dazzler to build a fictional the production rack. A production rack puts four assignments into vertical ticket columns beneath a narrow deadline spine. Preserve all synthetic data and working local controls. Use Oswald with #4D21A3 on #F0E8FF. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "The Production Rack",
+    "rationale": "A production rack puts four assignments into vertical ticket columns beneath a narrow deadline spine.",
+    "font": "Oswald",
+    "surface": "#F0E8FF / #4D21A3",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "The Production Rack",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "A production rack puts four assignments into vertical ticket columns beneath a narrow deadline spine.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with A production rack puts four assignments into vertical ticket columns beneath a narrow deadline spine.",
+      "Moves the primary interaction into the new the production rack sequence",
+      "Uses Oswald hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "webapp-settings",
+    "prompt": "Use Dazzler to build a fictional your notification day. A horizontal daily rhythm pairs a schedule band with a two-column preferences form and explicit urgent-message exception. Preserve all synthetic data and working local controls. Use Work Sans with #00534A on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "Your Notification Day",
+    "rationale": "A horizontal daily rhythm pairs a schedule band with a two-column preferences form and explicit urgent-message exception.",
+    "font": "Work Sans",
+    "surface": "#FFFFFF / #00534A",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "Your Notification Day",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "A horizontal daily rhythm pairs a schedule band with a two-column preferences form and explicit urgent-message exception.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with A horizontal daily rhythm pairs a schedule band with a two-column preferences form and explicit urgent-message exception.",
+      "Moves the primary interaction into the new your notification day sequence",
+      "Uses Work Sans hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "data-revenue",
+    "prompt": "Use Dazzler to build a fictional annual evidence ledger. An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead. Preserve all synthetic data and working local controls. Use Archivo with #154A9B on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "Annual Evidence Ledger",
+    "rationale": "An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead.",
+    "font": "Archivo",
+    "surface": "#FFFFFF / #154A9B",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "Annual Evidence Ledger",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead.",
+      "Moves the primary interaction into the new annual evidence ledger sequence",
+      "Uses Archivo hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "data-operations",
+    "prompt": "Use Dazzler to build a fictional station inspection log. A vertical station selector becomes an inspection instrument beside a large live reading and a separate exception log. Preserve all synthetic data and working local controls. Use Office Code Pro with #006A70 on #E0FFFF. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "Station Inspection Log",
+    "rationale": "A vertical station selector becomes an inspection instrument beside a large live reading and a separate exception log.",
+    "font": "Office Code Pro",
+    "surface": "#062F36 outer field / white instrument / #006A70 controls",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "Station Inspection Log",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "A vertical station selector becomes an inspection instrument beside a large live reading and a separate exception log.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with A vertical station selector becomes an inspection instrument beside a large live reading and a separate exception log.",
+      "Moves the primary interaction into the new station inspection log sequence",
+      "Uses Office Code Pro hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "prompt": "Use Dazzler to build a fictional the seasonal folio. A botanical course folio replaces the numeral poster with a table-centered menu reveal and a small service ledger. Preserve all synthetic data and working local controls. Use Young Serif with #6B224B on #FFF1F6. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "The Seasonal Folio",
+    "rationale": "A botanical course folio replaces the numeral poster with a table-centered menu reveal and a small service ledger.",
+    "font": "Young Serif",
+    "surface": "#FFF1F6 / #6B224B",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "The Seasonal Folio",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "A botanical course folio replaces the numeral poster with a table-centered menu reveal and a small service ledger.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with A botanical course folio replaces the numeral poster with a table-centered menu reveal and a small service ledger.",
+      "Moves the primary interaction into the new the seasonal folio sequence",
+      "Uses Young Serif hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "restaurant-cafe",
+    "prompt": "Use Dazzler to build a fictional the counter ledger. A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket. Preserve all synthetic data and working local controls. Use Oswald with #A52D10 on #FFC64D. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "The Counter Ledger",
+    "rationale": "A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket.",
+    "font": "Oswald",
+    "surface": "#FFC64D / #A52D10",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "The Counter Ledger",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket.",
+      "Moves the primary interaction into the new the counter ledger sequence",
+      "Uses Oswald hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "restaurant-reservations",
+    "prompt": "Use Dazzler to build a fictional a table that fits. A request-first reservation sheet aligns date and party controls above three explicitly labeled atmosphere choices. Preserve all synthetic data and working local controls. Use Poppins with #215B38 on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "A Table That Fits",
+    "rationale": "A request-first reservation sheet aligns date and party controls above three explicitly labeled atmosphere choices.",
+    "font": "Poppins",
+    "surface": "#FFFFFF / #215B38",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "A Table That Fits",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "A request-first reservation sheet aligns date and party controls above three explicitly labeled atmosphere choices.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with A request-first reservation sheet aligns date and party controls above three explicitly labeled atmosphere choices.",
+      "Moves the primary interaction into the new a table that fits sequence",
+      "Uses Poppins hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "restaurant-menu",
+    "prompt": "Use Dazzler to build a fictional the lunch index. An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note. Preserve all synthetic data and working local controls. Use Work Sans with #9D2226 on #FFE154. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "The Lunch Index",
+    "rationale": "An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note.",
+    "font": "Work Sans",
+    "surface": "#FFE154 / #9D2226",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "The Lunch Index",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note.",
+      "Moves the primary interaction into the new the lunch index sequence",
+      "Uses Work Sans hierarchy with newly grouped control and evidence regions"
+    ]
+  },
+  {
+    "id": "business-portal",
+    "prompt": "Use Dazzler to build a fictional the review folio. A two-page-like review folio makes the document preview primary, with a bottom milestone ribbon and reversible approval state. Preserve all synthetic data and working local controls. Use Libre Baskerville with #174878 on #E7F1FF. Compose for desktop and mobile; do not imply a live service.",
+    "direction": "The Review Folio",
+    "rationale": "A two-page-like review folio makes the document preview primary, with a bottom milestone ribbon and reversible approval state.",
+    "font": "Libre Baskerville",
+    "surface": "#E7F1FF / #174878",
+    "directionsConsidered": [
+      "A conventional card dashboard",
+      "The Review Folio",
+      "An immersive editorial cover"
+    ],
+    "selectionReason": "A two-page-like review folio makes the document preview primary, with a bottom milestone ribbon and reversible approval state.",
+    "structuralChanges": [
+      "Replaces the previous spatial arrangement with A two-page-like review folio makes the document preview primary, with a bottom milestone ribbon and reversible approval state.",
+      "Moves the primary interaction into the new the review folio sequence",
+      "Uses Libre Baskerville hierarchy with newly grouped control and evidence regions"
+    ]
+  }
+]

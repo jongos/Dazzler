@@ -1,25 +1,13 @@
 :root {
-  --accent: #9b2328;
-  --paper: #ffffff;
+  --accent: #702659;
+  --paper: #fff4fa;
   --display: "Libre Baskerville";
-  --ink: #181818;
-  --on-accent: #ffffff;
-  --signal: #9b2328;
-  --counter: #4cd2c0;
-  --body-color: #17252b;
-  --button-background: transparent;
-  --button-hover-background: #ffffff30;
-  --input-select-border: #637079;
-  --input-select-background: #fff;
-  --input-select-color: #17252b;
-  --a-focus-visible-button-focus-visible-input-focus-visible-select-focus-visible-tabindex-foc-outline: #ae471d;
-  --top-border-bottom: #17252b40;
-  --th-td-border-bottom: #17252b40;
+  --body-color: #17212b;
+  --feature-color: white;
+  --th-td-border-bottom: #8b9299;
+  --thead-background: #17212b;
   --thead-color: white;
-  --footer-border-top: #17252b40;
-  --band-color: white;
+  --button-color: white;
+  --focus-visible-outline: #d84100;
   --body-background: white;
-  --legal-rail-event-border-left: #c52a12;
-  --legal-rail-h1-color: #101010;
-  --legal-rail-blockquote-border-color: #c52a12;
 }

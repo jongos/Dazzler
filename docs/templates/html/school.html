@@ -9,139 +9,106 @@
     href="school/tokens.css"
   /><link rel="stylesheet" href="school/styles.css" />
   <body>
-    <nav class="top">
-      <a href="../index.html">Dazzler Design Gallery</a
-      ><button onclick="print()">Print This Example</button>
+    <nav>
+      <a href="../index.html">Dazzler Design Gallery</a><span>Fictional The Lab Bench</span>
     </nav>
-    <main class="canvas">
-      <div class="notebook">
-        <header>
-          <p class="kicker">FIELD SCIENCE / YEAR 8</p>
-          <h1>Where Does the Water Go</h1>
-          <p class="lead">
-            Compare drainage time in three soil samples. Record what happened before deciding why.
-          </p>
+    <main>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">FIELD SCIENCE / YEAR 8 / The Lab Bench</p>
+          <h1>Rain Garden Observation Notebook</h1>
+        </div>
+        <p class="lead">
+          Compare drainage time in three soil samples. Record what happened before deciding why.
+        </p>
+      </header>
+      <div class="labbench">
+        <div>
+          <aside class="feature">
+            <strong>240 mL</strong>
+            <p>the same water volume for every sample</p>
+          </aside>
           <p>
             In this fictional classroom investigation, three equal containers hold sand, garden soil
             and clay-rich soil. Each receives the same water volume; students time the first 100 mL
             collected.
           </p>
-        </header>
-        <aside>
-          <div class="stat">240 mL</div>
-          <p class="stat-label">the same water volume for every sample</p>
-          <div class="figure">
-            <svg
-              viewBox="0 0 720 150"
-              role="img"
-              aria-label="Equal Volume then Same Container then Timed Drainage"
-            >
-              <path d="M70 65H650" stroke="currentColor" stroke-width="2" />
-              <circle
-                cx="110"
-                cy="65"
-                r="35"
-                fill="var(--paper)"
-                stroke="currentColor"
-                stroke-width="3"
-              />
-              <text x="110" y="74" text-anchor="middle" fill="currentColor" font-size="25">1</text>
-              <text x="110" y="135" text-anchor="middle" fill="currentColor" font-size="18">
-                Equal Volume
-              </text>
-              <circle
-                cx="360"
-                cy="65"
-                r="35"
-                fill="var(--paper)"
-                stroke="currentColor"
-                stroke-width="3"
-              />
-              <text x="360" y="74" text-anchor="middle" fill="currentColor" font-size="25">2</text>
-              <text x="360" y="135" text-anchor="middle" fill="currentColor" font-size="18">
-                Same Container
-              </text>
-              <circle
-                cx="610"
-                cy="65"
-                r="35"
-                fill="var(--paper)"
-                stroke="currentColor"
-                stroke-width="3"
-              />
-              <text x="610" y="74" text-anchor="middle" fill="currentColor" font-size="25">3</text>
-              <text x="610" y="135" text-anchor="middle" fill="currentColor" font-size="18">
-                Timed Drainage
-              </text>
-            </svg>
-          </div>
-        </aside>
-        <article>
-          <section class="reading">
-            <h2>Keep the Test Fair</h2>
-            <p>
-              Use the same container size, water volume and timing method. Repeat each sample three
-              times. Describe any spills or delayed starts.
-            </p>
-          </section>
-          <section class="reading">
-            <h2>Read the Pattern</h2>
-            <p>
-              Sand drained fastest in the sample results. The test measures this setup only; it does
-              not establish how an entire garden will behave.
-            </p>
-          </section>
-          <section class="reading">
-            <h2>Ask a Better Question</h2>
-            <p>
-              How would compaction change the result? Plan one change at a time and state which
-              measurement would answer your question.
-            </p>
-          </section>
-        </article>
-        <section>
-          <h2>Observation Record</h2>
-          <p class="table-hint">Scroll the table sideways to see all columns.</p>
-          <div
-            class="table-scroll"
-            tabindex="0"
-            role="region"
-            aria-label="Where Does the Water Go data"
-          >
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Sample</th>
-                  <th scope="col">Trial Times</th>
-                  <th scope="col">Median</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Sand</th>
-                  <td>38 / 41 / 40 sec</td>
-                  <td>40 sec</td>
-                </tr>
-                <tr>
-                  <th scope="row">Garden soil</th>
-                  <td>84 / 90 / 87 sec</td>
-                  <td>87 sec</td>
-                </tr>
-                <tr>
-                  <th scope="row">Clay-rich soil</th>
-                  <td>165 / 172 / 168 sec</td>
-                  <td>168 sec</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <label for="question">Your Next Question</label
-          ><textarea
-            id="question"
-            rows="5"
-            placeholder="What would you change in the next test?"
-          ></textarea>
-          <p class="small">Local notes are not submitted or saved.</p>
+        </div>
+        <svg
+          viewBox="0 0 600 230"
+          role="img"
+          aria-label="Median drainage times in seconds, zero baseline: sand 40, garden soil 87, clay-rich soil 168"
+        >
+          <path d="M170 15V200H580" fill="none" stroke="#17212B" />
+          <text x="0" y="45" font-size="16">Sand</text>
+          <rect x="170" y="20" width="80" height="35" fill="#0B613D" />
+          <text x="260" y="45" font-size="16">40</text>
+          <text x="0" y="110" font-size="16">Garden soil</text>
+          <rect x="170" y="85" width="174" height="35" fill="#0B613D" />
+          <text x="354" y="110" font-size="16">87</text>
+          <text x="0" y="175" font-size="16">Clay-rich soil</text>
+          <rect x="170" y="150" width="336" height="35" fill="#0B613D" />
+          <text x="516" y="175" font-size="16">168</text>
+          <text x="170" y="225" font-size="14">0 · Seconds, common zero baseline</text>
+        </svg>
+      </div>
+      <div
+        class="table-wrap"
+        tabindex="0"
+        role="region"
+        aria-label="Rain Garden Observation Notebook evidence"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th>Sample</th>
+              <th>Trial Times</th>
+              <th>Median</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Sand</th>
+              <td>38 / 41 / 40 sec</td>
+              <td>40 sec</td>
+            </tr>
+            <tr>
+              <th scope="row">Garden soil</th>
+              <td>84 / 90 / 87 sec</td>
+              <td>87 sec</td>
+            </tr>
+            <tr>
+              <th scope="row">Clay-rich soil</th>
+              <td>165 / 172 / 168 sec</td>
+              <td>168 sec</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notes">
+        <section class="note note-0">
+          <p class="eyebrow">01 / school</p>
+          <h2>Keep the Test Fair</h2>
+          <p>
+            Use the same container size, water volume and timing method. Repeat each sample three
+            times. Describe any spills or delayed starts.
+          </p>
+        </section>
+        <section class="note note-1">
+          <p class="eyebrow">02 / school</p>
+          <h2>Read the Pattern</h2>
+          <p>
+            Sand drained fastest in the sample results. The test measures this setup only; it does
+            not establish how an entire garden will behave.
+          </p>
+        </section>
+        <section class="note note-2">
+          <p class="eyebrow">03 / school</p>
+          <h2>Ask a Better Question</h2>
+          <p>
+            How would compaction change the result? Plan one change at a time and state which
+            measurement would answer your question.
+          </p>
         </section>
       </div>
       <p class="closing">
@@ -149,8 +116,7 @@
       </p>
     </main>
     <footer>
-      Fictional demonstration · Original Dazzler design · Apache-2.0. Local font licenses accompany
-      the files. No information is transmitted.
+      Original design and synthetic facts · Apache-2.0. Font notices accompany the files.
     </footer>
   </body>
 </html>

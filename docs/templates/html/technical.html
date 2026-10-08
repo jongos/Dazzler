@@ -9,144 +9,94 @@
     href="technical/tokens.css"
   /><link rel="stylesheet" href="technical/styles.css" />
   <body>
-    <nav class="top">
+    <nav>
       <a href="../index.html">Dazzler Design Gallery</a
-      ><button onclick="print()">Print This Example</button>
+      ><span>Fictional Recovery Decision Tree</span>
     </nav>
-    <main class="canvas">
-      <header class="runbook">
-        <p class="kicker">RELAY / OPERATIONS RUNBOOK 07</p>
-        <h1>Restore the Queue Safely</h1>
+    <main>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">RELAY / OPERATIONS RUNBOOK 07 / Recovery Decision Tree</p>
+          <h1>Relay Queue Recovery Runbook</h1>
+        </div>
         <p class="lead">
           Pause delivery before replaying events. Confirm the checkpoint, then resume in a
           controlled batch.
         </p>
-        <aside>
-          <div class="stat">50</div>
-          <p class="stat-label">events in the first recovery batch</p>
-        </aside>
       </header>
-      <div class="columns">
-        <div>
+      <aside class="feature">
+        <strong>50</strong>
+        <p>events in the first recovery batch</p>
+      </aside>
+      <p>
+        This fictional runbook handles a stalled delivery queue. It demonstrates a safe sequence;
+        adapt commands and thresholds to the actual system before operational use.
+      </p>
+      <div class="notes">
+        <section class="note note-0">
+          <p class="eyebrow">01 / technical</p>
+          <h2>01 Stabilize</h2>
           <p>
-            This fictional runbook handles a stalled delivery queue. It demonstrates a safe
-            sequence; adapt commands and thresholds to the actual system before operational use.
+            Pause the worker and record the last acknowledged event ID. Confirm that the consumer is
+            healthy before attempting a replay.
           </p>
-          <section class="reading">
-            <h2>01 Stabilize</h2>
-            <p>
-              Pause the worker and record the last acknowledged event ID. Confirm that the consumer
-              is healthy before attempting a replay.
-            </p>
-          </section>
-          <section class="reading">
-            <h2>02 Recover</h2>
-            <p>
-              Replay the next 50 events from the checkpoint. Check duplicate handling and compare
-              delivered IDs with acknowledgements.
-            </p>
-          </section>
-          <section class="reading">
-            <h2>03 Verify</h2>
-            <p>
-              Resume only when the batch reconciles and error rate remains below the agreed
-              threshold. If it fails, pause again and retain the evidence.
-            </p>
-          </section>
-        </div>
-        <aside>
-          <div class="figure">
-            <svg viewBox="0 0 720 150" role="img" aria-label="Pause then Replay then Verify">
-              <path d="M70 65H650" stroke="currentColor" stroke-width="2" />
-              <circle
-                cx="110"
-                cy="65"
-                r="35"
-                fill="var(--paper)"
-                stroke="currentColor"
-                stroke-width="3"
-              />
-              <text x="110" y="74" text-anchor="middle" fill="currentColor" font-size="25">1</text>
-              <text x="110" y="135" text-anchor="middle" fill="currentColor" font-size="18">
-                Pause
-              </text>
-              <circle
-                cx="360"
-                cy="65"
-                r="35"
-                fill="var(--paper)"
-                stroke="currentColor"
-                stroke-width="3"
-              />
-              <text x="360" y="74" text-anchor="middle" fill="currentColor" font-size="25">2</text>
-              <text x="360" y="135" text-anchor="middle" fill="currentColor" font-size="18">
-                Replay
-              </text>
-              <circle
-                cx="610"
-                cy="65"
-                r="35"
-                fill="var(--paper)"
-                stroke="currentColor"
-                stroke-width="3"
-              />
-              <text x="610" y="74" text-anchor="middle" fill="currentColor" font-size="25">3</text>
-              <text x="610" y="135" text-anchor="middle" fill="currentColor" font-size="18">
-                Verify
-              </text>
-            </svg>
-          </div>
-          <h2>Proceed or Stop</h2>
-          <p class="table-hint">Scroll the table sideways to see all columns.</p>
-          <div
-            class="table-scroll"
-            tabindex="0"
-            role="region"
-            aria-label="Restore the Queue Safely data"
-          >
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Signal</th>
-                  <th scope="col">Proceed</th>
-                  <th scope="col">Stop</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Acknowledgements</th>
-                  <td>50 of 50 matched</td>
-                  <td>Any missing ID</td>
-                </tr>
-                <tr>
-                  <th scope="row">Duplicates</th>
-                  <td>Handled idempotently</td>
-                  <td>Side effect repeated</td>
-                </tr>
-                <tr>
-                  <th scope="row">Consumer health</th>
-                  <td>Checks passing</td>
-                  <td>Timeout or error</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="band">
-            <h2>Stop Condition</h2>
-            <p>
-              If any event is unmatched, pause delivery and preserve the checkpoint. Do not widen
-              the replay batch.
-            </p>
-          </div>
-        </aside>
+        </section>
+        <section class="note note-1">
+          <p class="eyebrow">02 / technical</p>
+          <h2>02 Recover</h2>
+          <p>
+            Replay the next 50 events from the checkpoint. Check duplicate handling and compare
+            delivered IDs with acknowledgements.
+          </p>
+        </section>
+        <section class="note note-2">
+          <p class="eyebrow">03 / technical</p>
+          <h2>03 Verify</h2>
+          <p>
+            Resume only when the batch reconciles and error rate remains below the agreed threshold.
+            If it fails, pause again and retain the evidence.
+          </p>
+        </section>
+      </div>
+      <div
+        class="table-wrap"
+        tabindex="0"
+        role="region"
+        aria-label="Relay Queue Recovery Runbook evidence"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Proceed</th>
+              <th>Stop</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Acknowledgements</th>
+              <td>50 of 50 matched</td>
+              <td>Any missing ID</td>
+            </tr>
+            <tr>
+              <th scope="row">Duplicates</th>
+              <td>Handled idempotently</td>
+              <td>Side effect repeated</td>
+            </tr>
+            <tr>
+              <th scope="row">Consumer health</th>
+              <td>Checks passing</td>
+              <td>Timeout or error</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <p class="closing">
         Synthetic operational example · Commands require environment-specific review.
       </p>
     </main>
     <footer>
-      Fictional demonstration · Original Dazzler design · Apache-2.0. Local font licenses accompany
-      the files. No information is transmitted.
+      Original design and synthetic facts · Apache-2.0. Font notices accompany the files.
     </footer>
   </body>
 </html>

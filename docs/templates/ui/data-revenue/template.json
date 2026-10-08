@@ -1,7 +1,7 @@
 {
   "id": "data-revenue",
-  "title": "Common Ground Membership Observatory",
-  "prompt": "Build a fictional membership revenue explorer whose main surface is an annual chart, not KPI cards. . Switch between revenue and member counts with accurate axes, exact values and a data table. Make the selected metric visually and programmatically clear. Color direction: White analytical canvas with vivid violet bars and a black chart field; exact labels stay primary.",
+  "title": "Annual Evidence Ledger",
+  "prompt": "Use Dazzler to build a fictional annual evidence ledger. An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead. Preserve all synthetic data and working local controls. Use Archivo with #154A9B on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "years": [
       2021,

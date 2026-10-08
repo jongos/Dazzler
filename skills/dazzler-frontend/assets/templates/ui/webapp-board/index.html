@@ -3,47 +3,44 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Signal Production Board</title
+  /><title>The Production Rack</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
-      <header class="board-title">
-        <div>
-          <p class="kicker">SIGNAL / EPISODE 08</p>
-          <h1>From Tape<br />to Release</h1>
-        </div>
-        <p class="lead">
-          A production rhythm for<br /><strong>The Night Shift</strong><br /><span id="done"
-            >1 of 4 ready</span
-          >
-        </p>
-      </header>
-      <div class="lane-labels">
-        <span>Assignment</span><span>Owner</span><span>Stage</span><span>Next Action</span>
+    <main>
+      <div class="rack">
+        <header>
+          <p class="eyebrow">SIGNAL / EPISODE 08</p>
+          <h1>The Night Shift</h1>
+          <p class="lead">Four assignments between the recording and the release.</p>
+          <p class="deadline">FRIDAY<br /><strong>16:00</strong></p>
+          <p id="done"></p>
+        </header>
+        <section>
+          <h2>Move the Work Forward</h2>
+          <div id="tasks"></div>
+          <p id="status" role="status"></p>
+          <aside class="release-note">
+            <h2>Before Publication</h2>
+            <p>
+              Fact check and transcript approval are required. Each button advances only this local
+              demonstration; no production system changes.
+            </p>
+          </aside>
+        </section>
       </div>
-      <div id="tasks"></div>
-      <p class="status" role="status" id="status"></p>
-      <section class="board-foot">
-        <h2>Release Window</h2>
-        <p>
-          Friday, 16:00. Fact check and transcript approval are required before publication. Actions
-          in this demo update only the local board.
-        </p>
-      </section>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "webapp-board",
-        "title": "Signal Production Board",
-        "prompt": "Create a fictional audio-production board whose workflow is visible as three horizontal lanes rather than a conventional card kanban. . A Move Forward action must update a task stage and the completion count. Color direction: Broadcast-yellow production lanes with black ink and electric violet stage controls.",
+        "title": "The Production Rack",
+        "prompt": "Use Dazzler to build a fictional the production rack. A production rack puts four assignments into vertical ticket columns beneath a narrow deadline spine. Preserve all synthetic data and working local controls. Use Oswald with #4D21A3 on #F0E8FF. Compose for desktop and mobile; do not imply a live service.",
         "data": {
           "tasks": [
             ["Opening Mix", "Ari", "Edit"],

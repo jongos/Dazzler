@@ -7,7 +7,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "3acea788c437a39f4fdb9a58a496f4434fdda3c7c2d546ab5e2386108e2fbfd6",
+    "sourceSha256": "4e50a103393b8814839f02ad260a3ef3bf344d12752950409a7db89a03e1d182",
     "preview": "previews/html-professional.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -58,10 +58,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/professional.html": "3acea788c437a39f4fdb9a58a496f4434fdda3c7c2d546ab5e2386108e2fbfd6",
-      "html/professional/styles.css": "d60b6e30bf9beda4a1d99ba84634eeea110b3b9eb71b87d09a9676e189ffda72",
-      "html/professional/tokens.css": "a8e548f0dc3c504568ee14baff92502461c8e6065514ea46b646a54c05212582",
-      "html/professional/tokens.json": "7a29a150f686e8720012b689364219c49dac9a998229970f1eaee6edc8dcecd1"
+      "html/professional.html": "4e50a103393b8814839f02ad260a3ef3bf344d12752950409a7db89a03e1d182",
+      "html/professional/styles.css": "a67aaad494dfc0cdcf1f5b9f88d634d6e735c80e6df5573894c6412114108128",
+      "html/professional/tokens.css": "da1ee35df8adb702cc7160ebef7ebd05f92b9ebcc984a520842a98d41e0377b6",
+      "html/professional/tokens.json": "ed039675a798c14b239c30019913b176b275b6a377ab9b2ae2b194e68792529b"
     }
   },
   {
@@ -72,7 +72,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "5e1d3e4889d8592feca95c1d67bab31fa31d644050efb518cff4ace4b20d32ee",
+    "sourceSha256": "dabe16a3827a681c753151f4cc73f2608fb111b5791e5ff78e41278237e9ede7",
     "preview": "previews/html-legal.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -123,10 +123,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/legal.html": "5e1d3e4889d8592feca95c1d67bab31fa31d644050efb518cff4ace4b20d32ee",
-      "html/legal/styles.css": "57cd2660c7e1f61e3c3ae330124bfda72d9d3f13e35c63a9dd9fc7d0e203a16e",
-      "html/legal/tokens.css": "adb19ad046b1ee9f539ab151bb7098ccd87f1e3e8f0e5e7f05afb85609d67ea8",
-      "html/legal/tokens.json": "ee0209dfcca511f75748036cec7d8dcf76f4278dc471a81b3f19d9657567a5d2"
+      "html/legal.html": "dabe16a3827a681c753151f4cc73f2608fb111b5791e5ff78e41278237e9ede7",
+      "html/legal/styles.css": "d1de3b0c3ad6e1cec96fa2db9911bdc6a61e62906366b82b4e4a8fd89475684d",
+      "html/legal/tokens.css": "33dabc34b1c03d0ea69b4f6b8713d4f9335a51f48dd11c0c5e38f002ae994eef",
+      "html/legal/tokens.json": "694d4a2e106d8bc86e136065b4581d847991cd3994d3a6bd52716ac582523ab3"
     }
   },
   {
@@ -137,7 +137,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "2e5646c9e5b6ff73aa02f279cd4c3acbab7de0c75b237a81ce25de8ee1e6454b",
+    "sourceSha256": "e1a55a4b2be1b21a524ee0120689c9021557c70cbaa9efb09d839f95767ee268",
     "preview": "previews/html-business.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -188,10 +188,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/business.html": "2e5646c9e5b6ff73aa02f279cd4c3acbab7de0c75b237a81ce25de8ee1e6454b",
-      "html/business/styles.css": "f8641a5993ab7718af505ca635fb70c66de5dc4b028e39d0fd0e34b69387154d",
-      "html/business/tokens.css": "dc4e5f6c6b584856b1a9b47769803e67811206468e9049b3f39d6a3eb9cf95a5",
-      "html/business/tokens.json": "5b5a57db24554a246dde0c71109336e822d71228db6b0feafadd4532d792bbe8"
+      "html/business.html": "e1a55a4b2be1b21a524ee0120689c9021557c70cbaa9efb09d839f95767ee268",
+      "html/business/styles.css": "cbdaf122632b3a0d45858f6b6554b526ca21114a1e4f2d15de099e69e460f591",
+      "html/business/tokens.css": "d1729463dc1d70565432db599dddd2deba5db38e67e057b3d6771675a907c93e",
+      "html/business/tokens.json": "c475b55dc27ec363460c89103f662ec570348a58e7cd6fc217865b113efb7ff4"
     }
   },
   {
@@ -202,7 +202,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "6fd1870fb6a718c3d3fa44d8b984a99789e2500c40cfe1028526faf638b44b50",
+    "sourceSha256": "3da7b3cc36bb1415704986a816be55d542e3ed46ad650cae9b693085952f9dfa",
     "preview": "previews/html-fun.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -253,10 +253,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/fun.html": "6fd1870fb6a718c3d3fa44d8b984a99789e2500c40cfe1028526faf638b44b50",
-      "html/fun/styles.css": "6dd1a571fa33fc9d0871700f5ba346b45910592983bae57522420013d28c4986",
-      "html/fun/tokens.css": "94091fdc41489b716f876d289ac25633053ad59352f6566a19d955324c0589dc",
-      "html/fun/tokens.json": "3a34a6accbe013c0136a611282cd7b8b68400f1d7545eaae8dd14b3d38fb8840"
+      "html/fun.html": "3da7b3cc36bb1415704986a816be55d542e3ed46ad650cae9b693085952f9dfa",
+      "html/fun/styles.css": "224ce2776de1353702454080c128752a275e9693973eabcaa56e85fcabfd0863",
+      "html/fun/tokens.css": "492ab66445a2c9757afb4aa1c8ca48a32ab9e7a7ea447361bc27f7ca10b869ab",
+      "html/fun/tokens.json": "adc07dc2a24ed1692ca5d7d3878e2992660ec6256c5159f0342393c16a6e1a10"
     }
   },
   {
@@ -267,7 +267,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "a5cfb3ba670c0a4d8148f17ce612dfc6acbb591f43ba8096678859cbf44fc7f1",
+    "sourceSha256": "9c92699595d9e2caec6d76849c42ba6731a669af55d8c3379772077fe42acdc7",
     "preview": "previews/html-family.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -318,10 +318,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/family.html": "a5cfb3ba670c0a4d8148f17ce612dfc6acbb591f43ba8096678859cbf44fc7f1",
-      "html/family/styles.css": "6dbd719a1c0f07e77f19aaa5cf6e179bb1249cb3de877377bb9c0f082e341a60",
-      "html/family/tokens.css": "c6d1f90c64250e49ec627f2d3fff935ced00776faf3430e2927626629c9b7f01",
-      "html/family/tokens.json": "f6dbc9c4a8977c5e887995ada652c2642012a9d08c37155bed31dca4c0bed9c5"
+      "html/family.html": "9c92699595d9e2caec6d76849c42ba6731a669af55d8c3379772077fe42acdc7",
+      "html/family/styles.css": "009e36b3f9f5a74db5c3d511b3077c8025932a687da57758306e327025d9173c",
+      "html/family/tokens.css": "2546188100becb92f4d35fb69efdaf806c038b60d3d88c91cc8916bf2144e97a",
+      "html/family/tokens.json": "135a72e02289466a3c328a7d9f815647b65c74fa097bf76c361db4fd2dddc352"
     }
   },
   {
@@ -332,7 +332,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "b8313f2e09cd61e0cf551d01876736a1a131095cc01af1448a8b38f0173c8ad1",
+    "sourceSha256": "af77d301bd4471042cb30fd74c355b1c175369f70b0f91577490f5669aecf631",
     "preview": "previews/html-presentation.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -383,10 +383,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/presentation.html": "b8313f2e09cd61e0cf551d01876736a1a131095cc01af1448a8b38f0173c8ad1",
-      "html/presentation/styles.css": "766e194f30d457f5ceebee178f75d8fa200d753b6d2705cc47a255d81f1c97f1",
-      "html/presentation/tokens.css": "0707479d6bbc4f5d23e98161dad391604c362f3e5a37bbc319a3efffaa8e13e9",
-      "html/presentation/tokens.json": "390ec6d4c7686286000ff9623d00e8ac26eee48e2a85f6fa1f5846fa9a79293e"
+      "html/presentation.html": "af77d301bd4471042cb30fd74c355b1c175369f70b0f91577490f5669aecf631",
+      "html/presentation/styles.css": "6d23b5265ee1e4a98fce874865dfd86a891a889331fd215b95e3c33b4c1f63b0",
+      "html/presentation/tokens.css": "69009aa1fe70eb23b558fcc5e1faa2bf576c3cb49dfd29b64d26064dda968696",
+      "html/presentation/tokens.json": "4dc64c9d468525aefe9b464ad113d4dfaad00f7c267db74d381d0f3e30a61b37"
     }
   },
   {
@@ -397,7 +397,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "a105928a51fbe0e99d25823c493cc8b8c8ba21b892bfb41c6c9997c3be7ad80d",
+    "sourceSha256": "751ce615a1abdfd1c8a5edfd684413baa8ebe7114fabd3434d822081f576dd98",
     "preview": "previews/html-school.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -448,10 +448,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/school.html": "a105928a51fbe0e99d25823c493cc8b8c8ba21b892bfb41c6c9997c3be7ad80d",
-      "html/school/styles.css": "13cc9d364c7d831f2d0d07b525f8e9716ac6a8cb5ad13f4eb64c413694f1f6df",
-      "html/school/tokens.css": "c5a5c7534fc8b401fd35cfff282b63392fef286a23f2443bfaaf45a58d640462",
-      "html/school/tokens.json": "5274ce65f2f8c69154d78873c8598dc283cb8cfa585057f65c8593174ff3df94"
+      "html/school.html": "751ce615a1abdfd1c8a5edfd684413baa8ebe7114fabd3434d822081f576dd98",
+      "html/school/styles.css": "092e81dd60524d02fcdc35674178d03dcafc3cfe79679fdcded36d1755cca884",
+      "html/school/tokens.css": "6f3a8469353cd89b89cbfb27e14dbcc0e91e1a82ad4408311ed6693e0f215955",
+      "html/school/tokens.json": "20b8cf6f757cfec296def4535c8ba3e29c4e2ac405aa423ff7ec3b5b1a8cfd79"
     }
   },
   {
@@ -462,7 +462,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "229e6371c7d4a3e0c9aa15660e72c419c48d78b7378986e1f68ae0f7ae75261f",
+    "sourceSha256": "ca0c66fbff96e3e3d42ec49792272bf02f3940e9dc6ac79649244c02c37d153c",
     "preview": "previews/html-marketing.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -513,10 +513,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/marketing.html": "229e6371c7d4a3e0c9aa15660e72c419c48d78b7378986e1f68ae0f7ae75261f",
-      "html/marketing/styles.css": "f0ec008b90680b7e236fbe569855cbcfbdcc381db6a302992b8f1d51fe061c30",
-      "html/marketing/tokens.css": "2e7c24420dc5ae9544d5d633db833893ff8729a5824b498106da69389567f047",
-      "html/marketing/tokens.json": "ec8dee389f7bff9424d7cf78ce18bf5d221deb67f2611ec89492de0bdc60a45b"
+      "html/marketing.html": "ca0c66fbff96e3e3d42ec49792272bf02f3940e9dc6ac79649244c02c37d153c",
+      "html/marketing/styles.css": "3034e8480bcbfb1c9a8c0156750f219cd1d36ae746e3a6325f2aad8d47f114b7",
+      "html/marketing/tokens.css": "15eb51d971d6e8830353142bd2bce944ba5ac01b6fe76fa8cf004f67211ad1a2",
+      "html/marketing/tokens.json": "827f786fcaa660ecd4de3122fd7beb8eab7bec1b7baedf1c1ca581d098cc6a24"
     }
   },
   {
@@ -527,7 +527,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "928b81d92d5d876a3122cbf36e959a59899a0fad4639e89bc99a79c9f9ba6a08",
+    "sourceSha256": "f998d130fdd5307a0699257eb58bdccd2ae7995f53e847c4a752b0a7ae59f884",
     "preview": "previews/html-restaurant.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -578,10 +578,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/restaurant.html": "928b81d92d5d876a3122cbf36e959a59899a0fad4639e89bc99a79c9f9ba6a08",
-      "html/restaurant/styles.css": "e8c8f62b6065ae3b3cf20563730dd7b3b60cd4136851853d7e916557815868c0",
-      "html/restaurant/tokens.css": "42a0a5d2b22b9d6c1417b765c8be6ccb57cd74b4c4daea0a8293364c76acc3c2",
-      "html/restaurant/tokens.json": "0cbf58aa9aae4954775947e11ff105261fced40a19658b1cabaddf03cc64f2b6"
+      "html/restaurant.html": "f998d130fdd5307a0699257eb58bdccd2ae7995f53e847c4a752b0a7ae59f884",
+      "html/restaurant/styles.css": "f365f3e9c652a725499ac6cfd2e6c3e0c88337f49fca532cc18ed535689dd37e",
+      "html/restaurant/tokens.css": "4245c664e87aa08a0a89120131c45f4f500f206bc8546a48a3d9cbc2bd285224",
+      "html/restaurant/tokens.json": "9f0e294dcfbe64af85bb53a7d2bc5abab4d2a8436008a8722f7b82c8a157a280"
     }
   },
   {
@@ -592,7 +592,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "c4c2560e1e4339c5bd8a806f32a96eca252bdcbd3207d6aeb0a6fa00d4ed3d9b",
+    "sourceSha256": "19c4829660a0cf0e75000471d2d45a774c2e81d1ee5611ce7ba2a8c3fe5016ae",
     "preview": "previews/html-technical.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -643,10 +643,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/technical.html": "c4c2560e1e4339c5bd8a806f32a96eca252bdcbd3207d6aeb0a6fa00d4ed3d9b",
-      "html/technical/styles.css": "21cac2128f76a1a9295c2ac99ade056acf066c22f9b749987fdbf9920fae56d9",
-      "html/technical/tokens.css": "cc6dcc598c5ecee773054a3029a526035c20f880dd7c382f8766af21e6e57c79",
-      "html/technical/tokens.json": "3016eab67d73c7c9f5cea2bf75e625079b44f7a3332335b53a273fcaee337d2a"
+      "html/technical.html": "19c4829660a0cf0e75000471d2d45a774c2e81d1ee5611ce7ba2a8c3fe5016ae",
+      "html/technical/styles.css": "2ae6e38feead52f33fb596031679d6da6b15e111b61527662720b47795031356",
+      "html/technical/tokens.css": "d161602bdc47d8f228c261789eac3923a3fc8a29653dceb6c91d9bfac2f61bc7",
+      "html/technical/tokens.json": "1eafe657e030718e7f093ac8e25a46561be233da143a0904deca4644d1605a34"
     }
   },
   {
@@ -657,7 +657,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "78fca0f4b8fa31cab06749eb5d6185b95c1414a8c0d288ace01cf67f873a6847",
+    "sourceSha256": "b55ba485f7cc6a168454a1bb3c1d747aaedad8c94415cccb3c708d8e4dca9cac",
     "preview": "previews/webapp-workspace.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -708,11 +708,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/webapp-workspace/index.html": "78fca0f4b8fa31cab06749eb5d6185b95c1414a8c0d288ace01cf67f873a6847",
-      "ui/webapp-workspace/styles.css": "510ecb8907623ebf8087fa2db8a687daa1676722f4598b6f3ca04d7edf8734fe",
-      "ui/webapp-workspace/template.json": "ae2c5576bd881fadcf2ed1622446918ce290d7f900b19e725c2cf3036a218597",
-      "ui/webapp-workspace/tokens.css": "696c58f0d1c7d83ef3d9354f9f2823b5d88e0e8491474f48211db2aaf97e2223",
-      "ui/webapp-workspace/tokens.json": "4a2ab90ede3b62134ffd6355ab50037e1486879aeb9efc9e09924e0269fa2796"
+      "ui/webapp-workspace/index.html": "b55ba485f7cc6a168454a1bb3c1d747aaedad8c94415cccb3c708d8e4dca9cac",
+      "ui/webapp-workspace/styles.css": "f82d750060d26376f878ab93ceabdec1735e0c785110a425f3b430bba0d7e80b",
+      "ui/webapp-workspace/template.json": "0ffdff3b43268fcd1b1169d7a93f33bca715f889bfc81c5cb5368c3cf008cee9",
+      "ui/webapp-workspace/tokens.css": "ba846712a79e6ebad3dda3b3730f8a7a84412eaf81ab9bdaf6acb3c013a80f25",
+      "ui/webapp-workspace/tokens.json": "28955bf3a1da33e932eb65be8c4a0a9099ef0db47f31c3c468ba06ecde3539a1"
     }
   },
   {
@@ -723,7 +723,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "47901550b088e3b4cad97acca243a53242a8165a7de1120362f402021301c89d",
+    "sourceSha256": "66ee68405f2eef6e452a0f92bbf081ddbd0fb2e7c5d1f2ed9ed27bf0139ccfb4",
     "preview": "previews/webapp-board.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -774,11 +774,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/webapp-board/index.html": "47901550b088e3b4cad97acca243a53242a8165a7de1120362f402021301c89d",
-      "ui/webapp-board/styles.css": "8494da1c4dbcb79b5cf8f6d7466bf8898c89f3d1139746234c8b879fa81fe793",
-      "ui/webapp-board/template.json": "c5af3a399144e993b04b37b9dc1b73f3baf5343db86a7b228c77b17a399ffe98",
-      "ui/webapp-board/tokens.css": "c5a307c8cf8cf2b194833655deca0bf4d21ef6db06e5832dd0dd7b2ab627a649",
-      "ui/webapp-board/tokens.json": "b49223dfb83e95ae50447d4eca059735868dca15f993784b3b4f0e2bd37b9304"
+      "ui/webapp-board/index.html": "66ee68405f2eef6e452a0f92bbf081ddbd0fb2e7c5d1f2ed9ed27bf0139ccfb4",
+      "ui/webapp-board/styles.css": "dc95c3b8f4ab59861dd1f2826c754ef2e3e4bcbb286149a3b5b6230619785513",
+      "ui/webapp-board/template.json": "e8e964762643192e6b61a17e3ffac4a66d74a5ff2d63be0ad2bb2a5fd8013816",
+      "ui/webapp-board/tokens.css": "7036a96ed48097356f83e6cab81ffa51c4601d58eca5000cede09d7a18ca72ed",
+      "ui/webapp-board/tokens.json": "efaa92292fa1a45335e21f650090a2b88bb8fa02618c0954e0e2a80dd2496734"
     }
   },
   {
@@ -789,7 +789,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "c2aaced6c1a637c51d7c4fd7f1fe7fee43526698a09adf2665ead0466630df71",
+    "sourceSha256": "cba7c869eb6a8cc014f541abe0c550628a8c3607cb6b170c3f66cd5146c563b3",
     "preview": "previews/webapp-settings.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -840,11 +840,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/webapp-settings/index.html": "c2aaced6c1a637c51d7c4fd7f1fe7fee43526698a09adf2665ead0466630df71",
-      "ui/webapp-settings/styles.css": "a6edc9b3f050c7a33eb6c9edf4566bdc3da9d05ede1486f4930d434e8668a820",
-      "ui/webapp-settings/template.json": "f9711577c62a3e61679778ba2fece5a33e68ef3a2b39c30036eb45e3a2833a96",
-      "ui/webapp-settings/tokens.css": "2e52e038c24193d297a00de56226327ed631ba02a7fdc834b548897ee72af3bf",
-      "ui/webapp-settings/tokens.json": "a427343fcf97b59ed6ec330a3742a2dcf95f069603fbf25c871b2143d194569d"
+      "ui/webapp-settings/index.html": "cba7c869eb6a8cc014f541abe0c550628a8c3607cb6b170c3f66cd5146c563b3",
+      "ui/webapp-settings/styles.css": "02d16f491a3b5de836eb9ad870cc275c5d5f956052b9d08f72f94c07163a895d",
+      "ui/webapp-settings/template.json": "656d731d2aa3b0a05943a690fb2810b826c686c048b82be3af22091bd401494f",
+      "ui/webapp-settings/tokens.css": "bb80fd5b695c7594b92bb410098ccb66db4642cebe78b378a75a8bd2ebd99321",
+      "ui/webapp-settings/tokens.json": "41437d17f5beab4403717b45bb759072a01d5ac99f3575918c7011fe94e1cb60"
     }
   },
   {
@@ -855,7 +855,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "20bb90db50f9cdfcc9f5ad39b5c0723721cc814e7abfc3bd8a634eebca2fa1bd",
+    "sourceSha256": "e782c4743cf4c2a144a24b19ef24d81f1bb10c2b0e66580d0c168e3f1b91a2a0",
     "preview": "previews/data-revenue.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -906,11 +906,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/data-revenue/index.html": "20bb90db50f9cdfcc9f5ad39b5c0723721cc814e7abfc3bd8a634eebca2fa1bd",
-      "ui/data-revenue/styles.css": "e4844ab7bd98eff7a221a9e4726af15016d5560c420393f7bca45f535109bfa1",
-      "ui/data-revenue/template.json": "2a5eab526c9e7e699b4ccffe205574d58b1f5a27e03ca3e6dd1e8733198b71df",
-      "ui/data-revenue/tokens.css": "6d9827b17d5281c21798eb2d15f72f556112d6bfb19c03af351ec13d24cb2863",
-      "ui/data-revenue/tokens.json": "d6019f5d173618794b68f6216363688c383958d171d7c8a37f44539341738f26"
+      "ui/data-revenue/index.html": "e782c4743cf4c2a144a24b19ef24d81f1bb10c2b0e66580d0c168e3f1b91a2a0",
+      "ui/data-revenue/styles.css": "6801132fe1e919b54738e819de47b7f22e976c4818e828f2c50a2f3b1eeddea6",
+      "ui/data-revenue/template.json": "9fd4bd2640ca4b4f4d66c10de9c41de64aa6a5d20f77378495d6a817803a1780",
+      "ui/data-revenue/tokens.css": "d1b03256ec272a47c7b8eeb7fbd0afb3d877cfdb2c0e721cb6de97d51acf5f8f",
+      "ui/data-revenue/tokens.json": "a5e948618979d57d024807c475c38f25852c7b3584296eab748251ac64d7a00c"
     }
   },
   {
@@ -921,7 +921,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "afe2186e4270d1699771bca6f06d5b1b854f16f89eae5df837d7268cd949f1fd",
+    "sourceSha256": "78e640096012f7f4265ecbd5717e3980faaca5db9848b9ea891d6d0beaff4a89",
     "preview": "previews/data-operations.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -972,11 +972,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/data-operations/index.html": "afe2186e4270d1699771bca6f06d5b1b854f16f89eae5df837d7268cd949f1fd",
-      "ui/data-operations/styles.css": "7961e36eb5fc02098959e28fb4dd05e9c8616ae6498c7d7af01fbbd0d96025e0",
-      "ui/data-operations/template.json": "538090ac96be4b540faf0cab28fbc02d545c603c004dda1c2ae397e0e9cd03cc",
-      "ui/data-operations/tokens.css": "77d92a16698e7986622d4a6000a9c9d3b1aedffe11af817bdaf3fc20a6fda7f3",
-      "ui/data-operations/tokens.json": "b08213ad464f7e79a37829ee3c15a88aea4736a40990d3f484824778f27c7c95"
+      "ui/data-operations/index.html": "78e640096012f7f4265ecbd5717e3980faaca5db9848b9ea891d6d0beaff4a89",
+      "ui/data-operations/styles.css": "807340888b10e3df47ad512560063a08640bcf90b4e72446fdb4026e7cb66586",
+      "ui/data-operations/template.json": "55a14cb6bd347d1229cf8615742546d96a844c447c71adf4bea5450f84f8dc2b",
+      "ui/data-operations/tokens.css": "7e05fd8b681c3c7b38334969461651932b16c0f19834d58e8f6fa50e4d29bfd1",
+      "ui/data-operations/tokens.json": "7230aff9ea0fc725bea2f7cd10481150c1f42a91cd8f9076ea7270465d5de8e1"
     }
   },
   {
@@ -987,7 +987,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "fe5bb1c94a0b2045db84421c7bca10a3c02d51ee6476e069a21b7e05b29623ec",
+    "sourceSha256": "3887623c5e66e895e89dd42c6b12843f12449fe2f18a229e2fa0594a23304099",
     "preview": "previews/restaurant-fine-dining.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -1038,11 +1038,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/restaurant-fine-dining/index.html": "fe5bb1c94a0b2045db84421c7bca10a3c02d51ee6476e069a21b7e05b29623ec",
-      "ui/restaurant-fine-dining/styles.css": "42f0b01189e67f77a4c058e2b062e987aacc7357e4c11aa819cd1b5c7014d99b",
-      "ui/restaurant-fine-dining/template.json": "33e58bfc15696a03a0018a72fc1be5ee5f442c8ba9184f3473b09a504d78e585",
-      "ui/restaurant-fine-dining/tokens.css": "bd28f233b1ad1472ecfb1f6c9227c7e565f3b37aa8ad2eb04150ea165b0e7bd3",
-      "ui/restaurant-fine-dining/tokens.json": "db146e13c765319bba7d6a86fd7f9d2bfb84398dde6c14b5d75207560dbc0f16"
+      "ui/restaurant-fine-dining/index.html": "3887623c5e66e895e89dd42c6b12843f12449fe2f18a229e2fa0594a23304099",
+      "ui/restaurant-fine-dining/styles.css": "6a53d0e36dfb658eed638c9f47ad87cb5cf8dc8d165048a569e529caf32d3c41",
+      "ui/restaurant-fine-dining/template.json": "1e88f6abd1f7f62ee61d4051e9e4c4e89e9d74765a3b09bf4a9bdcaa6e708e97",
+      "ui/restaurant-fine-dining/tokens.css": "c3e1ef906e7c6c38a1e91002ba07981ba4d3f1ee90c8481835a8df8ba31f0099",
+      "ui/restaurant-fine-dining/tokens.json": "e81b297986f2d39b65c2710242f7dfb8fd96c769c02363d40103b5387da19f0a"
     }
   },
   {
@@ -1053,7 +1053,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "0cde6a7539548304fc620bc1eb2c7dc651b336dba726f290c7b39f1d14dfd4f9",
+    "sourceSha256": "1556d8258f0ac0b059cc3999af739e4ede8fe7676b49fb8bfb700bf2c61e7a6c",
     "preview": "previews/restaurant-cafe.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -1104,11 +1104,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/restaurant-cafe/index.html": "0cde6a7539548304fc620bc1eb2c7dc651b336dba726f290c7b39f1d14dfd4f9",
-      "ui/restaurant-cafe/styles.css": "c04044dc2b3a8b42927395b4c01bf0b01b8d4fc43ec50db21720d25a217330f6",
-      "ui/restaurant-cafe/template.json": "fff383b0c4fb96f62246c930ea1dce5b4f4fc4d907a9e3bc7bbb2edaad668aeb",
-      "ui/restaurant-cafe/tokens.css": "3c10d8d6c6feddee0eb9aa6c7905056fb84ae16cf45334caa6f131ef259c4ffe",
-      "ui/restaurant-cafe/tokens.json": "e7ab420b95ee650aceb11fcfd3b04e1d828d222edf0752e9557f80eea4c6a85a"
+      "ui/restaurant-cafe/index.html": "1556d8258f0ac0b059cc3999af739e4ede8fe7676b49fb8bfb700bf2c61e7a6c",
+      "ui/restaurant-cafe/styles.css": "dd8a4edbe824ad72cc0a8941955cd652c6ed28612f80bd2450dc05c3415426d0",
+      "ui/restaurant-cafe/template.json": "b582249eccfc15322adb77f0885421152bc58d50e003802c8819f0d106b2f6bf",
+      "ui/restaurant-cafe/tokens.css": "eaaf4c9719b6f9ed1dc282ebeab3e5b33b27e362f5c5c1528804c0b37b44f4d5",
+      "ui/restaurant-cafe/tokens.json": "fa410d25e7aa51c2543fd0e539b6b905a6d0ec27ad3ed920f270cfb4636ce8be"
     }
   },
   {
@@ -1119,7 +1119,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "a4265ce5a3290522767f63cf6e07f9f8df8b66953739fbecbb71de2576fbbf21",
+    "sourceSha256": "75306b877979dfd2efeda7afa33cd9d15bff95b0833b6a959413468eb1655e4c",
     "preview": "previews/restaurant-reservations.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -1170,11 +1170,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/restaurant-reservations/index.html": "a4265ce5a3290522767f63cf6e07f9f8df8b66953739fbecbb71de2576fbbf21",
-      "ui/restaurant-reservations/styles.css": "bdbea4737c1eb9690d7ca74c909e4dfa334c29ab402988c9a02bc785f962a9d9",
-      "ui/restaurant-reservations/template.json": "406e1a9ca66941ffb8c3b5b2887171bf2ad3dda0b26c3ceaba345c48aa8bc8d2",
-      "ui/restaurant-reservations/tokens.css": "638cfc9dd757bbb4c37333b213836e9ee72060bb4014c1579377f631eb76aeb1",
-      "ui/restaurant-reservations/tokens.json": "361eeb2b6e784fa869d729d19907e29a5b79cd4e6f622a0dd49c89af38e5513e"
+      "ui/restaurant-reservations/index.html": "75306b877979dfd2efeda7afa33cd9d15bff95b0833b6a959413468eb1655e4c",
+      "ui/restaurant-reservations/styles.css": "dbb56b895b4d8332ac12023c20979f86ac5d69466e787676fc1c1aabed6d0fb0",
+      "ui/restaurant-reservations/template.json": "e8291940addc7f187cb7c732b33eb5380cbcc511a65ab9fdd31658af4bd428f9",
+      "ui/restaurant-reservations/tokens.css": "59387aae2f5405b9f412958328ffd2b998072f52c3a769156867c6b8cce00865",
+      "ui/restaurant-reservations/tokens.json": "070653d379a19b5b8b6ae4ef81e9f48b5bc6222a84d0409b6c629655fbbc4f15"
     }
   },
   {
@@ -1185,7 +1185,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "2a3bbd18ee56075d24c187ba1ff018fe62ac4fda1e094a5b22d6deda46b3de10",
+    "sourceSha256": "3e0dd291bc6892435cc3c621e9642f6252359f97f25a02946629b35ccaffc1fa",
     "preview": "previews/restaurant-menu.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -1236,11 +1236,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/restaurant-menu/index.html": "2a3bbd18ee56075d24c187ba1ff018fe62ac4fda1e094a5b22d6deda46b3de10",
-      "ui/restaurant-menu/styles.css": "ffe6a7d3a5a3e9dd0e8e4f70d778c1d40f64e4181ec69d94a2493aaac2d3018b",
-      "ui/restaurant-menu/template.json": "1577860e1c952dd9030a92388624953fac444a8480722358679309708f918bb2",
-      "ui/restaurant-menu/tokens.css": "22f88f47e52a91bc959ca3ca42191673a639b6fcaf7c907b0f609412e153146f",
-      "ui/restaurant-menu/tokens.json": "6b8f6d3e600a6532d0fadce3afcacbe3897e40536187522d1c2ce5c97160a860"
+      "ui/restaurant-menu/index.html": "3e0dd291bc6892435cc3c621e9642f6252359f97f25a02946629b35ccaffc1fa",
+      "ui/restaurant-menu/styles.css": "406052e9118c572a83710c81880dd12d9d87a422dfe98b2e49930327997ecba7",
+      "ui/restaurant-menu/template.json": "a099c7160f3b338a3b5bde192b626f53a042a44b169e2d9ee56c0e31939452cc",
+      "ui/restaurant-menu/tokens.css": "027ad8c8162b47280f534b80875ce0707479a4ed8b3a2c9e35095fe7085bfb41",
+      "ui/restaurant-menu/tokens.json": "e0c6c1c8a323fdb7d17d22d9068f83631adbfb0434af5577986a3dba7c03fe2a"
     }
   },
   {
@@ -1251,7 +1251,7 @@
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "fc3d519936b2d760865493c1713aa5905eab2f8d707d0d1167e3c59482fab1c4",
+    "sourceSha256": "64cb97daf312be53ca54b84dd7972b799aedcbbda0552bae772cf93ca410bfaf",
     "preview": "previews/business-portal.jpg",
     "dependencies": {
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
@@ -1302,11 +1302,11 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/business-portal/index.html": "fc3d519936b2d760865493c1713aa5905eab2f8d707d0d1167e3c59482fab1c4",
-      "ui/business-portal/styles.css": "0c4c67d364b04771fef4171b742ee6543c87ff29f5a926b499eecf314d706fe6",
-      "ui/business-portal/template.json": "292920ed0a7edf22885bf7b166e979a969b458d537067b9aab0d81ccffa69572",
-      "ui/business-portal/tokens.css": "6ff5a47ee28777ea13dff1f1f84360e113304c187500059e012bb8579fbc5194",
-      "ui/business-portal/tokens.json": "0441952bd658684d36dfc967e12c7e841be26785eb344e1371887306933c7702"
+      "ui/business-portal/index.html": "64cb97daf312be53ca54b84dd7972b799aedcbbda0552bae772cf93ca410bfaf",
+      "ui/business-portal/styles.css": "a4a8044843431e98392cd70e899465817ab7b5e85ae66c57b1da19401369644e",
+      "ui/business-portal/template.json": "93694b2d370d9e1d1766330f43de14163a585a83f091de650810ebf61f0d01c5",
+      "ui/business-portal/tokens.css": "557ba334d8f116d7abc5dfb68705a8fbd6f415449cc9c843d2fead58cdb959a5",
+      "ui/business-portal/tokens.json": "1fe51cf864bf0b9fc768b837788bc3e5547bfc121a7fa048181d8082265f53ef"
     }
   }
 ]

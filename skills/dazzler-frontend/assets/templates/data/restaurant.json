@@ -4,9 +4,9 @@
   "short": "An Evening at Morrow",
   "tag": "MORROW / LATE SUMMER",
   "lead": "A short menu built around what is ready now. Choose a few dishes and share the table.",
-  "accent": "#F0B601",
-  "paper": "#082D26",
-  "font": "Libre Baskerville",
+  "accent": "#823B16",
+  "paper": "#FFF6DF",
+  "font": "Young Serif",
   "word": "Georgia",
   "layout": "menu",
   "stat": "18:00",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Sample menu · Tell the team about allergies before ordering.",
-  "prompt": "Design an original seasonal supper menu for fictional Morrow. Use a wine-colored vertical wordmark, elegant serif course hierarchy, aligned prices and a botanical line motif. Give ingredient and allergy information readable space; avoid a report shell or stock-food hero. Color direction: Midnight-green supper menu with warm luminous type and citrus course markers.",
+  "prompt": "Use Dazzler to create a fictional restaurant document for its real reader task: A short menu built around what is ready now. Choose a few dishes and share the table. Preserve the supplied numbers and qualifications. Develop a new at the shared table composition, with a typographic supper card groups dishes by their role in the meal and gives pairings a separate side rhythm. Use Young Serif in HTML and verified Georgia for native Word. Make print and mobile reading clear; use purposeful #823B16 color against #FFF6DF. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "libre-baskerville",
     "css_family": "Libre Baskerville",
@@ -61,12 +61,12 @@
   "colorDirection": "Midnight-green supper menu with warm luminous type and citrus course markers.",
   "fictional": true,
   "design": {
-    "accent": "#F0B601",
-    "secondary": "#F0B601",
-    "paper": "#082D26",
-    "text": "#F4F4F0",
-    "accentText": "#F0B601",
-    "onAccent": "#000000"
+    "accent": "#823B16",
+    "secondary": "#823B16",
+    "paper": "#FFF6DF",
+    "text": "#17212B",
+    "accentText": "#823B16",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

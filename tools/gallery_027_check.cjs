@@ -4,7 +4,9 @@ const fs = require("node:fs/promises"),
   assert = require("node:assert/strict");
 const { pathToFileURL } = require("node:url");
 (async () => {
-  const root = path.resolve("maintenance/gallery-production/v0.28.0"),
+  const root = path.resolve(
+      process.env.DAZZLER_GALLERY_STAGE || "maintenance/gallery-production/v0.29.0",
+    ),
     out = path.join(root, "renders");
   await fs.mkdir(out, { recursive: true });
   const source = process.env.DAZZLER_GALLERY_SOURCE || path.join(root, "artifacts");
@@ -91,7 +93,7 @@ const { pathToFileURL } = require("node:url");
           case "restaurant-reservations":
             await page.locator('[data-zone="Quiet Corner"]').click();
             await page.locator("#date").fill("2027-07-23");
-            await page.locator("#booking button").click();
+            await page.locator("#booking button[type=submit]").click();
             assert.match(await page.locator("#status").innerText(), /Quiet Corner.*Not confirmed/);
             break;
           case "restaurant-menu":

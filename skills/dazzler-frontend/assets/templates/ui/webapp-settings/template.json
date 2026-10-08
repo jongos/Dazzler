@@ -1,7 +1,7 @@
 {
   "id": "webapp-settings",
-  "title": "Still Notification Studio",
-  "prompt": "Design a fictional notification-settings interface centered on choosing a daily rhythm. . Support a digest-time selector, three channel toggles and a save confirmation. Color direction: Full royal-blue schedule studio with white controls and a luminous cyan clock.",
+  "title": "Your Notification Day",
+  "prompt": "Use Dazzler to build a fictional your notification day. A horizontal daily rhythm pairs a schedule band with a two-column preferences form and explicit urgent-message exception. Preserve all synthetic data and working local controls. Use Work Sans with #00534A on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "digestTimes": [
       "09:00",

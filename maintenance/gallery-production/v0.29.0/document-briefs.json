@@ -1,0 +1,222 @@
+[
+  {
+    "id": "professional",
+    "prompt": "Use Dazzler to create a fictional professional document for its real reader task: Release the exchange in two stages. Keep the settlement hold until reconciliation is complete. Preserve the supplied numbers and qualifications. Develop a new release gate map composition, with a release boundary, with the unresolved settlement gate separated from the two ready services. Use Archivo in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #004EC4 color against #FFFFFF. Do not copy the earlier gallery layout.",
+    "direction": "Release Gate Map",
+    "rationale": "A release boundary, with the unresolved settlement gate separated from the two ready services.",
+    "composition": "gates",
+    "font": "Archivo",
+    "word": "Arial",
+    "surface": "#FFFFFF / #004EC4",
+    "orientation": "portrait",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "Release Gate Map",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "A release boundary, with the unresolved settlement gate separated from the two ready services.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by Release Gate Map",
+      "Replaces the previous title-to-metric arrangement with gates reading order",
+      "Uses Archivo hierarchy and portrait native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "legal",
+    "prompt": "Use Dazzler to create a fictional legal document for its real reader task: The record supports delivery. It does not yet establish that the recipient accepted the revised terms. Preserve the supplied numbers and qualifications. Develop a new evidence and inference composition, with a counsel-facing evidence matrix followed by a compact issue and next-action register. Use Libre Baskerville in HTML and verified Georgia for native Word. Make print and mobile reading clear; use purposeful #702659 color against #FFF4FA. Do not copy the earlier gallery layout.",
+    "direction": "Evidence and Inference",
+    "rationale": "A counsel-facing evidence matrix followed by a compact issue and next-action register.",
+    "composition": "evidence",
+    "font": "Libre Baskerville",
+    "word": "Georgia",
+    "surface": "#FFF4FA / #702659",
+    "orientation": "portrait",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "Evidence and Inference",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "A counsel-facing evidence matrix followed by a compact issue and next-action register.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by Evidence and Inference",
+      "Replaces the previous title-to-metric arrangement with evidence reading order",
+      "Uses Libre Baskerville hierarchy and portrait native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "business",
+    "prompt": "Use Dazzler to create a fictional business document for its real reader task: Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages. Preserve the supplied numbers and qualifications. Develop a new the fee waterfall composition, with the three work stages carry the fee story, with commercial terms treated as a closing contract strip. Use Young Serif in HTML and verified Georgia for native Word. Make print and mobile reading clear; use purposeful #006548 color against #E5FF3D. Do not copy the earlier gallery layout.",
+    "direction": "The Fee Waterfall",
+    "rationale": "The three work stages carry the fee story, with commercial terms treated as a closing contract strip.",
+    "composition": "waterfall",
+    "font": "Young Serif",
+    "word": "Georgia",
+    "surface": "#E5FF3D / #006548",
+    "orientation": "portrait",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "The Fee Waterfall",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "The three work stages carry the fee story, with commercial terms treated as a closing contract strip.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by The Fee Waterfall",
+      "Replaces the previous title-to-metric arrangement with waterfall reading order",
+      "Uses Young Serif hierarchy and portrait native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "fun",
+    "prompt": "Use Dazzler to create a fictional fun document for its real reader task: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. Preserve the supplied numbers and qualifications. Develop a new the evening program composition, with a broad stage program makes time the navigation; practical arrival information occupies a distinct ticket panel. Use Oswald in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #8A183A color against #FFD950. Do not copy the earlier gallery layout.",
+    "direction": "The Evening Program",
+    "rationale": "A broad stage program makes time the navigation; practical arrival information occupies a distinct ticket panel.",
+    "composition": "program",
+    "font": "Oswald",
+    "word": "Arial",
+    "surface": "#FFD950 / #8A183A",
+    "orientation": "landscape",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "The Evening Program",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "A broad stage program makes time the navigation; practical arrival information occupies a distinct ticket panel.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by The Evening Program",
+      "Replaces the previous title-to-metric arrangement with program reading order",
+      "Uses Oswald hierarchy and landscape native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "family",
+    "prompt": "Use Dazzler to create a fictional family document for its real reader task: A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday. Preserve the supplied numbers and qualifications. Develop a new pack plan leave composition, with a packing-first household sheet with a compact weekend itinerary and an open change notice. Use Work Sans in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #173D8F color against #ADE0FF. Do not copy the earlier gallery layout.",
+    "direction": "Pack Plan Leave",
+    "rationale": "A packing-first household sheet with a compact weekend itinerary and an open change notice.",
+    "composition": "packing",
+    "font": "Work Sans",
+    "word": "Arial",
+    "surface": "#ADE0FF / #173D8F",
+    "orientation": "portrait",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "Pack Plan Leave",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "A packing-first household sheet with a compact weekend itinerary and an open change notice.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by Pack Plan Leave",
+      "Replaces the previous title-to-metric arrangement with packing reading order",
+      "Uses Work Sans hierarchy and portrait native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "presentation",
+    "prompt": "Use Dazzler to create a fictional presentation document for its real reader task: Test one late opening each week before committing to a permanent change. Preserve the supplied numbers and qualifications. Develop a new the speaker brief composition, with an annotated speaking brief separates the argument, the six-week test and the decision criteria. Use Archivo in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #5526A5 color against #FFFFFF. Do not copy the earlier gallery layout.",
+    "direction": "The Speaker Brief",
+    "rationale": "An annotated speaking brief separates the argument, the six-week test and the decision criteria.",
+    "composition": "speaker",
+    "font": "Archivo",
+    "word": "Arial",
+    "surface": "#FFFFFF / #5526A5",
+    "orientation": "portrait",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "The Speaker Brief",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "An annotated speaking brief separates the argument, the six-week test and the decision criteria.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by The Speaker Brief",
+      "Replaces the previous title-to-metric arrangement with speaker reading order",
+      "Uses Archivo hierarchy and portrait native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "school",
+    "prompt": "Use Dazzler to create a fictional school document for its real reader task: Compare drainage time in three soil samples. Record what happened before deciding why. Preserve the supplied numbers and qualifications. Develop a new the lab bench composition, with a wide observation bench aligns raw trial times with a truthful median comparison and a methods panel. Use Office Code Pro in HTML and verified Consolas for native Word. Make print and mobile reading clear; use purposeful #0B613D color against #D5FF8B. Do not copy the earlier gallery layout.",
+    "direction": "The Lab Bench",
+    "rationale": "A wide observation bench aligns raw trial times with a truthful median comparison and a methods panel.",
+    "composition": "lab",
+    "font": "Office Code Pro",
+    "word": "Consolas",
+    "surface": "#D5FF8B / #0B613D",
+    "orientation": "landscape",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "The Lab Bench",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "A wide observation bench aligns raw trial times with a truthful median comparison and a methods panel.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by The Lab Bench",
+      "Replaces the previous title-to-metric arrangement with lab reading order",
+      "Uses Office Code Pro hierarchy and landscape native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "marketing",
+    "prompt": "Use Dazzler to create a fictional marketing document for its real reader task: Make repair feel like a first choice. Show the work, explain the process and make booking simple. Preserve the supplied numbers and qualifications. Develop a new campaign dispatch composition, with a channel-to-action map presents the campaign as a working assignment with capacity qualified as planning. Use Poppins in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #861028 color against #FFAB91. Do not copy the earlier gallery layout.",
+    "direction": "Campaign Dispatch",
+    "rationale": "A channel-to-action map presents the campaign as a working assignment with capacity qualified as planning.",
+    "composition": "dispatch",
+    "font": "Poppins",
+    "word": "Arial",
+    "surface": "#FFAB91 / #861028",
+    "orientation": "landscape",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "Campaign Dispatch",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "A channel-to-action map presents the campaign as a working assignment with capacity qualified as planning.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by Campaign Dispatch",
+      "Replaces the previous title-to-metric arrangement with dispatch reading order",
+      "Uses Poppins hierarchy and landscape native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "restaurant",
+    "prompt": "Use Dazzler to create a fictional restaurant document for its real reader task: A short menu built around what is ready now. Choose a few dishes and share the table. Preserve the supplied numbers and qualifications. Develop a new at the shared table composition, with a typographic supper card groups dishes by their role in the meal and gives pairings a separate side rhythm. Use Young Serif in HTML and verified Georgia for native Word. Make print and mobile reading clear; use purposeful #823B16 color against #FFF6DF. Do not copy the earlier gallery layout.",
+    "direction": "At the Shared Table",
+    "rationale": "A typographic supper card groups dishes by their role in the meal and gives pairings a separate side rhythm.",
+    "composition": "menu",
+    "font": "Young Serif",
+    "word": "Georgia",
+    "surface": "#FFF6DF / #823B16",
+    "orientation": "portrait",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "At the Shared Table",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "A typographic supper card groups dishes by their role in the meal and gives pairings a separate side rhythm.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by At the Shared Table",
+      "Replaces the previous title-to-metric arrangement with menu reading order",
+      "Uses Young Serif hierarchy and portrait native geometry with newly grouped content"
+    ]
+  },
+  {
+    "id": "technical",
+    "prompt": "Use Dazzler to create a fictional technical document for its real reader task: Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch. Preserve the supplied numbers and qualifications. Develop a new recovery decision tree composition, with a stop-check-resume decision sequence makes the safe boundary visible before the reference matrix. Use Office Code Pro in HTML and verified Consolas for native Word. Make print and mobile reading clear; use purposeful #164BB5 color against #E7EFFF. Do not copy the earlier gallery layout.",
+    "direction": "Recovery Decision Tree",
+    "rationale": "A stop-check-resume decision sequence makes the safe boundary visible before the reference matrix.",
+    "composition": "tree",
+    "font": "Office Code Pro",
+    "word": "Consolas",
+    "surface": "#E7EFFF / #164BB5",
+    "orientation": "landscape",
+    "directionsConsidered": [
+      "Continuous narrative with a summary rail",
+      "Recovery Decision Tree",
+      "Image-led opening with appended evidence"
+    ],
+    "selectionReason": "A stop-check-resume decision sequence makes the safe boundary visible before the reference matrix.",
+    "structuralChanges": [
+      "Moves the evidence or action into the organizing position described by Recovery Decision Tree",
+      "Replaces the previous title-to-metric arrangement with tree reading order",
+      "Uses Office Code Pro hierarchy and landscape native geometry with newly grouped content"
+    ]
+  }
+]

@@ -3,46 +3,49 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Common Ground Membership Observatory</title
+  /><title>Annual Evidence Ledger</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
-      <header class="observatory">
-        <p class="kicker">COMMON GROUND / ANNUAL OBSERVATORY</p>
-        <h1>A Community<br />That Keeps Growing</h1>
-        <p class="lead">Six years of membership, seen through two measures.</p>
+    <main>
+      <header class="ledgerhead">
+        <div>
+          <p class="eyebrow">COMMON GROUND / 2021–2026</p>
+          <h1>Six Years,<br />Two Measures</h1>
+        </div>
+        <p class="lead">
+          Membership and revenue describe different parts of the same organization. Compare each on
+          its own scale.
+        </p>
       </header>
-      <div class="actions" aria-label="Chart Metric">
+      <div class="actions">
         <button data-metric="revenue" aria-pressed="true">Revenue</button
         ><button data-metric="members" aria-pressed="false">Members</button>
       </div>
-      <figure class="chart-field">
-        <figcaption id="chart-title">Membership Revenue · USD Thousands</figcaption>
-        <div id="chart"></div>
-      </figure>
-      <p id="status" role="status"></p>
-      <details open>
-        <summary>Exact Values and Notes</summary>
-        <div id="values"></div>
-        <p class="small">
-          Synthetic annual observations. Revenue and membership are separate measures; this chart
-          does not establish causality.
-        </p>
-      </details>
+      <div class="evidencegrid">
+        <figure>
+          <figcaption id="chart-title"></figcaption>
+          <div id="chart"></div>
+          <p id="status" role="status"></p>
+        </figure>
+        <section>
+          <h2>The Annual Record</h2>
+          <div id="values"></div>
+          <p>Synthetic observations. Separate measures, not evidence of causality.</p>
+        </section>
+      </div>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "data-revenue",
-        "title": "Common Ground Membership Observatory",
-        "prompt": "Build a fictional membership revenue explorer whose main surface is an annual chart, not KPI cards. . Switch between revenue and member counts with accurate axes, exact values and a data table. Make the selected metric visually and programmatically clear. Color direction: White analytical canvas with vivid violet bars and a black chart field; exact labels stay primary.",
+        "title": "Annual Evidence Ledger",
+        "prompt": "Use Dazzler to build a fictional annual evidence ledger. An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead. Preserve all synthetic data and working local controls. Use Archivo with #154A9B on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
         "data": {
           "years": [2021, 2022, 2023, 2024, 2025, 2026],
           "revenue": [84, 98, 121, 143, 168, 192],

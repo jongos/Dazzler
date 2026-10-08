@@ -1,7 +1,7 @@
 {
   "id": "webapp-workspace",
-  "title": "Margin Writing Room",
-  "prompt": "Build a fictional writing workspace around the manuscript itself, with a narrow chapter index and an editorial note rail. Warm paper and literary type should support sustained writing. Make word count and saving a local draft work; no fake collaborative service. Color direction: Quiet neutral writing paper with a precise orange editorial rail; the manuscript remains calm.",
+  "title": "The Revision Desk",
+  "prompt": "Use Dazzler to build a fictional the revision desk. A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk. Preserve all synthetic data and working local controls. Use Libre Baskerville with #79321A on #FFF4E9. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "chapter": "At the River",
     "mode": "local manuscript"

@@ -4,11 +4,11 @@
   "short": "Restore the Queue Safely",
   "tag": "RELAY / OPERATIONS RUNBOOK 07",
   "lead": "Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch.",
-  "accent": "#19DDE7",
-  "paper": "#091522",
+  "accent": "#164BB5",
+  "paper": "#E7EFFF",
   "font": "Office Code Pro",
   "word": "Consolas",
-  "layout": "runbook",
+  "layout": "tree",
   "stat": "50",
   "label": "events in the first recovery batch",
   "intro": "This fictional runbook handles a stalled delivery queue. It demonstrates a safe sequence; adapt commands and thresholds to the actual system before operational use.",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Synthetic operational example · Commands require environment-specific review.",
-  "prompt": "Create a fictional technical recovery runbook. Make the pause-replay-verify sequence the composition, with monospaced step labels, a cyan evidence rail and a high-contrast stop condition. Preserve exact operational language and provide a rollback branch, not a generic dashboard. Color direction: Night-mode recovery runbook with cyan steps and a separately labelled red stop condition.",
+  "prompt": "Use Dazzler to create a fictional technical document for its real reader task: Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch. Preserve the supplied numbers and qualifications. Develop a new recovery decision tree composition, with a stop-check-resume decision sequence makes the safe boundary visible before the reference matrix. Use Office Code Pro in HTML and verified Consolas for native Word. Make print and mobile reading clear; use purposeful #164BB5 color against #E7EFFF. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "office-code-pro",
     "css_family": "Office Code Pro",
@@ -61,12 +61,12 @@
   "colorDirection": "Night-mode recovery runbook with cyan steps and a separately labelled red stop condition.",
   "fictional": true,
   "design": {
-    "accent": "#19DDE7",
-    "secondary": "#19DDE7",
-    "paper": "#091522",
-    "text": "#F3F3F4",
-    "accentText": "#19DDE7",
-    "onAccent": "#000000"
+    "accent": "#164BB5",
+    "secondary": "#164BB5",
+    "paper": "#E7EFFF",
+    "text": "#17212B",
+    "accentText": "#164BB5",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

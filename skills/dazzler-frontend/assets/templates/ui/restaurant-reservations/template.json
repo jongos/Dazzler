@@ -1,7 +1,7 @@
 {
   "id": "restaurant-reservations",
-  "title": "Solstice Table Planner",
-  "prompt": "Design a fictional restaurant seating-request page around a simple original room plan and a request form. Use olive and cream, distinct named table zones and an accessible text equivalent. Choosing a zone must update the request; submission must clearly remain an unconfirmed local preview. Color direction: White room-planning canvas with vivid green selected tables and coral request panel.",
+  "title": "A Table That Fits",
+  "prompt": "Use Dazzler to build a fictional a table that fits. A request-first reservation sheet aligns date and party controls above three explicitly labeled atmosphere choices. Preserve all synthetic data and working local controls. Use Poppins with #215B38 on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "zones": [
       "Window Table",

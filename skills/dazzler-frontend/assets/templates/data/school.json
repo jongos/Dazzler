@@ -4,11 +4,11 @@
   "short": "Where Does the Water Go",
   "tag": "FIELD SCIENCE / YEAR 8",
   "lead": "Compare drainage time in three soil samples. Record what happened before deciding why.",
-  "accent": "#067433",
-  "paper": "#FFDE26",
-  "font": "Young Serif",
-  "word": "Georgia",
-  "layout": "notebook",
+  "accent": "#0B613D",
+  "paper": "#D5FF8B",
+  "font": "Office Code Pro",
+  "word": "Consolas",
+  "layout": "lab",
   "stat": "240 mL",
   "label": "the same water volume for every sample",
   "intro": "In this fictional classroom investigation, three equal containers hold sand, garden soil and clay-rich soil. Each receives the same water volume; students time the first 100 mL collected.",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Synthetic classroom observations · Follow your teacher's safety instructions.",
-  "prompt": "Make a fictional Year 8 science field notebook on soil drainage. Use botanical green, warm paper, ruled observations and a labeled experimental diagram. Keep methods, measurements and limitations distinct; invite a next question rather than dressing a generic report in green. Color direction: Sun-yellow field notebook with botanical green evidence and blue observations.",
+  "prompt": "Use Dazzler to create a fictional school document for its real reader task: Compare drainage time in three soil samples. Record what happened before deciding why. Preserve the supplied numbers and qualifications. Develop a new the lab bench composition, with a wide observation bench aligns raw trial times with a truthful median comparison and a methods panel. Use Office Code Pro in HTML and verified Consolas for native Word. Make print and mobile reading clear; use purposeful #0B613D color against #D5FF8B. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "young-serif",
     "css_family": "Young Serif",
@@ -61,11 +61,11 @@
   "colorDirection": "Sun-yellow field notebook with botanical green evidence and blue observations.",
   "fictional": true,
   "design": {
-    "accent": "#067433",
-    "secondary": "#067433",
-    "paper": "#FFDE26",
-    "text": "#151A17",
-    "accentText": "#000000",
+    "accent": "#0B613D",
+    "secondary": "#0B613D",
+    "paper": "#D5FF8B",
+    "text": "#17212B",
+    "accentText": "#0B613D",
     "onAccent": "#FFFFFF"
   },
   "document": [

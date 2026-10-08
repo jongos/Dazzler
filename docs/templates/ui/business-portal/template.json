@@ -1,7 +1,7 @@
 {
   "id": "business-portal",
-  "title": "Fieldwork Client Ledger",
-  "prompt": "Create a fictional client portal for a small architecture studio. Organize the page as a project ledger with milestone dates and a focused decision panel, rather than a generic dashboard. Use brick red and warm white. Document selection must show a useful preview; approval must be explicitly local and reversible. Color direction: White client ledger with a cobalt project masthead and green review evidence.",
+  "title": "The Review Folio",
+  "prompt": "Use Dazzler to build a fictional the review folio. A two-page-like review folio makes the document preview primary, with a bottom milestone ribbon and reversible approval state. Preserve all synthetic data and working local controls. Use Libre Baskerville with #174878 on #E7F1FF. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "milestones": [
       "06 Jun",

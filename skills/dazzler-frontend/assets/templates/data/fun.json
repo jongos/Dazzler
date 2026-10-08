@@ -4,11 +4,11 @@
   "short": "Meet After Sunset",
   "tag": "ALDER STREET / SATURDAY 17 JULY",
   "lead": "An evening of food, records and small discoveries. Bring a friend and leave room for dessert.",
-  "accent": "#4D00C2",
-  "paper": "#FF542E",
+  "accent": "#8A183A",
+  "paper": "#FFD950",
   "font": "Oswald",
   "word": "Arial",
-  "layout": "poster",
+  "layout": "program",
   "stat": "17 JUL",
   "label": "17:00–22:00 · free entry",
   "intro": "This fictional neighborhood night market fills the pedestrian block between Pine and Alder. No tickets are required; individual stalls set their own prices.",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Fictional event · No real booking or attendance service.",
-  "prompt": "Create a joyful fictional neighborhood night-market program. Use a typographic date poster, aubergine ink on warm yellow, a bold schedule ribbon and generous negative space. Make access, quiet seating and the rain plan as useful as the event headline. Color direction: Vermilion night-market poster with violet and lemon counterpoints.",
+  "prompt": "Use Dazzler to create a fictional fun document for its real reader task: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. Preserve the supplied numbers and qualifications. Develop a new the evening program composition, with a broad stage program makes time the navigation; practical arrival information occupies a distinct ticket panel. Use Oswald in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #8A183A color against #FFD950. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "oswald",
     "css_family": "Oswald",
@@ -61,11 +61,11 @@
   "colorDirection": "Vermilion night-market poster with violet and lemon counterpoints.",
   "fictional": true,
   "design": {
-    "accent": "#4D00C2",
-    "secondary": "#4D00C2",
-    "paper": "#FF542E",
-    "text": "#191818",
-    "accentText": "#000000",
+    "accent": "#8A183A",
+    "secondary": "#8A183A",
+    "paper": "#FFD950",
+    "text": "#17212B",
+    "accentText": "#8A183A",
     "onAccent": "#FFFFFF"
   },
   "document": [

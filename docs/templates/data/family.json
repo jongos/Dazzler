@@ -4,11 +4,11 @@
   "short": "One Weekend Together",
   "tag": "THE RIVER HOUSE / 23–25 JULY",
   "lead": "A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday.",
-  "accent": "#056182",
-  "paper": "#FFFFFF",
+  "accent": "#173D8F",
+  "paper": "#ADE0FF",
   "font": "Work Sans",
   "word": "Arial",
-  "layout": "planner",
+  "layout": "packing",
   "stat": "3 DAYS",
   "label": "one shared list · fewer messages",
   "intro": "A fictional family plan for two adults and two children. Keep food, travel and quiet time visible; check items as they are packed rather than assuming they are done.",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Fictional household · Adapt the plan to your family and access needs.",
-  "prompt": "Design a warm practical family weekend planner. Use three day columns, a packing checklist and a shared-notice strip. It should feel like a considered fridge sheet in cream, navy and coral, not a corporate report or a childish worksheet. Color direction: Bright sky-blue itinerary, sunny packing field and coral day markers on white.",
+  "prompt": "Use Dazzler to create a fictional family document for its real reader task: A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday. Preserve the supplied numbers and qualifications. Develop a new pack plan leave composition, with a packing-first household sheet with a compact weekend itinerary and an open change notice. Use Work Sans in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #173D8F color against #ADE0FF. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "work-sans",
     "css_family": "Work Sans",
@@ -61,11 +61,11 @@
   "colorDirection": "Bright sky-blue itinerary, sunny packing field and coral day markers on white.",
   "fictional": true,
   "design": {
-    "accent": "#056182",
-    "secondary": "#056182",
-    "paper": "#FFFFFF",
-    "text": "#15191B",
-    "accentText": "#056182",
+    "accent": "#173D8F",
+    "secondary": "#173D8F",
+    "paper": "#ADE0FF",
+    "text": "#17212B",
+    "accentText": "#173D8F",
     "onAccent": "#FFFFFF"
   },
   "document": [

@@ -1,28 +1,15 @@
 :root {
-  --accent: #fb7c52;
-  --paper: #4821ce;
+  --accent: #5526a5;
+  --paper: #ffffff;
   --display: "Archivo";
-  --ink: #f3f4f3;
-  --on-accent: #000000;
-  --signal: #fb7c52;
-  --counter: #22ae99;
-  --body-color: #17252b;
-  --button-background: transparent;
-  --button-hover-background: #ffffff30;
-  --input-select-border: #637079;
-  --input-select-background: #fff;
-  --input-select-color: #17252b;
-  --a-focus-visible-button-focus-visible-input-focus-visible-select-focus-visible-tabindex-foc-outline: #ae471d;
-  --top-border-bottom: #17252b40;
-  --th-td-border-bottom: #17252b40;
+  --body-color: #17212b;
+  --feature-color: white;
+  --th-td-border-bottom: #8b9299;
+  --thead-background: #17212b;
   --thead-color: white;
-  --footer-border-top: #17252b40;
-  --band-color: white;
+  --button-color: white;
+  --focus-visible-outline: #d84100;
   --body-background: white;
-  --beats-section-nth-child-2-color: white;
-  --beats-section-nth-child-2-beat-no-color: white;
-  --beat-no-color: #f4ff53;
-  --beats-section-nth-child-2-background: #f4ff53;
-  --beats-section-nth-child-2-color-2: #251367;
-  --beats-section-nth-child-2-beat-no-color-2: #251367;
+  --hero-border-left: #5526a5;
+  --note-before-color: #5526a5;
 }

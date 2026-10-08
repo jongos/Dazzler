@@ -3,56 +3,53 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Still Notification Studio</title
+  /><title>Your Notification Day</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
-      <div class="settings">
-        <header>
-          <p class="kicker">STILL / YOUR WORKING RHYTHM</p>
-          <h1>Make Room<br />for Focus</h1>
-          <p class="lead">Keep urgent messages visible.<br />Let the rest arrive together.</p>
-          <div class="clock"><span id="time">09:00</span><small>DAILY DIGEST</small></div>
-        </header>
-        <form id="settings">
-          <h2>Choose Your Rhythm</h2>
+    <main>
+      <header>
+        <p class="eyebrow">STILL / NOTIFICATION SETTINGS</p>
+        <h1>A Day With Fewer Interruptions</h1>
+        <p class="lead">Keep urgent mentions visible. Gather routine messages into one delivery.</p>
+      </header>
+      <section class="dayline">
+        <span>START</span><strong id="time">09:00</strong><span>ONE DAILY DIGEST</span
+        ><span>FINISH</span>
+      </section>
+      <form id="settings">
+        <div>
+          <h2>Set the Delivery Window</h2>
           <label for="digest">Digest Time</label
           ><select id="digest">
             <option value="09:00">09:00 · Start of Day</option>
             <option value="13:00">13:00 · After Lunch</option>
             <option value="17:00">17:00 · End of Day</option>
           </select>
-          <fieldset>
-            <legend>Delivery Channels</legend>
-            <label><input type="checkbox" checked /> Mentions and Replies</label
-            ><label><input type="checkbox" checked /> Weekly Summary</label
-            ><label><input type="checkbox" /> Product Announcements</label>
-          </fieldset>
-          <p class="small">
-            Times use your selected local schedule. This demo does not send notifications.
-          </p>
-          <button>Save Preferences</button>
-          <p role="status" id="status" class="status"></p>
-        </form>
-      </div>
+          <p>Urgent mentions remain separate from routine summaries.</p>
+        </div>
+        <fieldset>
+          <legend>Delivery Channels</legend>
+          <label><input type="checkbox" checked /> Mentions and Replies</label
+          ><label><input type="checkbox" checked /> Project Summaries</label
+          ><label><input type="checkbox" /> Product News</label>
+        </fieldset>
+        <button>Apply to This Preview</button>
+        <p id="status" role="status"></p>
+      </form>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "webapp-settings",
-        "title": "Still Notification Studio",
-        "prompt": "Design a fictional notification-settings interface centered on choosing a daily rhythm. . Support a digest-time selector, three channel toggles and a save confirmation. Color direction: Full royal-blue schedule studio with white controls and a luminous cyan clock.",
-        "data": {
-          "digestTimes": ["09:00", "13:00", "17:00"],
-          "channels": 3
-        },
+        "title": "Your Notification Day",
+        "prompt": "Use Dazzler to build a fictional your notification day. A horizontal daily rhythm pairs a schedule band with a two-column preferences form and explicit urgent-message exception. Preserve all synthetic data and working local controls. Use Work Sans with #00534A on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+        "data": { "digestTimes": ["09:00", "13:00", "17:00"], "channels": 3 },
         "action": "Save Preferences"
       }
     </script>

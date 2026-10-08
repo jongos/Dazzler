@@ -3,62 +3,66 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Solstice Table Planner</title
+  /><title>A Table That Fits</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
+    <main>
       <header>
-        <p class="kicker">SOLSTICE / A PLACE AT THE TABLE</p>
-        <h1>Choose Your Corner</h1>
-        <p class="lead">A room for conversation.<br />A preference, not a confirmed reservation.</p>
+        <p class="eyebrow">SOLSTICE / TABLE PREFERENCES</p>
+        <h1>Plan the Conversation</h1>
+        <p class="lead">
+          Start with your visit, then choose the atmosphere. A preference is not a confirmed
+          reservation.
+        </p>
       </header>
-      <div class="reservation">
-        <section class="room" aria-label="Room Preferences">
-          <div class="window-label">STREET WINDOWS</div>
-          <button data-zone="Window Table" class="window">
-            Window Table<br /><small>Bright · Seats 2</small></button
-          ><button data-zone="Quiet Corner" class="quiet">
-            Quiet Corner<br /><small>Lower Traffic · Seats 2</small></button
-          ><button data-zone="Shared Table" class="shared">
-            Shared Table<br /><small>Social · Seats 6</small>
+      <form id="booking">
+        <div class="requestline">
+          <label for="date">Preferred Date<input id="date" type="date" required /></label
+          ><label for="party"
+            >Party Size<select id="party">
+              <option>2 guests</option>
+              <option>4 guests</option>
+              <option>6 guests</option>
+            </select></label
+          ><label for="zone">Preferred Zone<input id="zone" value="Window Table" readonly /></label>
+        </div>
+        <section class="zones" aria-label="Table Preferences">
+          <button type="button" data-zone="Window Table">
+            <span class="zone-mark">☀</span>Window Table<br /><small
+              >Bright · Seats 2</small
+            ></button
+          ><button type="button" data-zone="Quiet Corner">
+            <span class="zone-mark">◌</span>Quiet Corner<br /><small
+              >Lower Traffic · Seats 2</small
+            ></button
+          ><button type="button" data-zone="Shared Table">
+            <span class="zone-mark">◎</span>Shared Table<br /><small>Social · Seats 6</small>
           </button>
-          <p class="door">Step-Free Entrance →</p>
         </section>
-        <form id="booking">
-          <h2>Your Request</h2>
-          <label for="zone">Preferred Area</label
-          ><input id="zone" value="Window Table" readonly /><label for="party">Party Size</label
-          ><select id="party">
-            <option>2 guests</option>
-            <option>4 guests</option>
-            <option>6 guests</option></select
-          ><label for="date">Preferred Date</label><input id="date" type="date" required /><button>
-            Preview Request
-          </button>
-          <p id="status" role="status" class="status"></p>
-          <p class="small">
-            No information is sent. Access, availability and dietary requirements must be confirmed
-            with the venue.
-          </p>
-        </form>
-      </div>
+        <button type="submit">Preview Request</button>
+        <p id="status" role="status"></p>
+      </form>
+      <aside class="access">
+        <h2>Make the Visit Work</h2>
+        <p>
+          Step-free entrance. Confirm access, availability and dietary needs with the venue. No
+          information leaves this demonstration.
+        </p>
+      </aside>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-reservations",
-        "title": "Solstice Table Planner",
-        "prompt": "Design a fictional restaurant seating-request page around a simple original room plan and a request form. Use olive and cream, distinct named table zones and an accessible text equivalent. Choosing a zone must update the request; submission must clearly remain an unconfirmed local preview. Color direction: White room-planning canvas with vivid green selected tables and coral request panel.",
-        "data": {
-          "zones": ["Window Table", "Quiet Corner", "Shared Table"]
-        },
+        "title": "A Table That Fits",
+        "prompt": "Use Dazzler to build a fictional a table that fits. A request-first reservation sheet aligns date and party controls above three explicitly labeled atmosphere choices. Preserve all synthetic data and working local controls. Use Poppins with #215B38 on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+        "data": { "zones": ["Window Table", "Quiet Corner", "Shared Table"] },
         "action": "Quiet Corner"
       }
     </script>

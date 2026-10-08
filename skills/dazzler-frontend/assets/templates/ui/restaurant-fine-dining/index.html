@@ -3,25 +3,34 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Vesper Tasting Room</title
+  /><title>The Seasonal Folio</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
-      <div class="vesper">
+    <main>
+      <div class="folio">
         <header>
-          <p class="kicker">VESPER / TWELVE SEATS</p>
-          <h1>Five Courses.<br />One Long Evening.</h1>
-          <p class="lead">A seasonal tasting menu, served at the pace of the table.</p>
-          <p>Wednesday–Saturday · 19:00<br />Sample menu price: $95 per person before tax.</p>
+          <p class="eyebrow">VESPER / TWELVE SEATS</p>
+          <h1>A Table for the Season</h1>
+          <p class="lead">Five courses, paced for conversation.</p>
+          <p>Wednesday–Saturday · 19:00<br />Sample price $95 per person before tax.</p>
           <button id="courses-button" aria-expanded="false" aria-controls="courses">
             Explore the Menu
           </button>
         </header>
-        <div class="course-number" aria-hidden="true">V</div>
+        <div class="botanical" aria-hidden="true">
+          <svg viewBox="0 0 400 430">
+            <path d="M200 400Q150 200 240 40" fill="none" stroke="#6B224B" stroke-width="5" />
+            <g fill="#6B224B">
+              <ellipse cx="180" cy="290" rx="65" ry="23" transform="rotate(25 180 290)" />
+              <ellipse cx="233" cy="230" rx="65" ry="23" transform="rotate(-30 233 230)" />
+              <ellipse cx="191" cy="160" rx="57" ry="20" transform="rotate(35 191 160)" />
+              <ellipse cx="241" cy="90" rx="43" ry="19" transform="rotate(-35 241 90)" />
+            </g>
+          </svg>
+        </div>
       </div>
       <section id="courses" hidden>
         <h2>The Five Courses</h2>
@@ -30,40 +39,28 @@
           <li>Roast Beet · Cultured Cream</li>
           <li>Market Fish · Fennel</li>
           <li>Summer Squash · Brown Butter</li>
-          <li>Plum · Almond · Vanilla</li>
+          <li>Plum · Almond</li>
         </ol>
+        <p>Tell the team about allergies before ordering. Menu and price are fictional.</p>
       </section>
-      <div class="columns">
-        <section>
-          <h2>At the Table</h2>
-          <p>
-            Arrive ten minutes before the seating. Tell the team about dietary needs before making a
-            request; substitutions and cross-contact controls require confirmation.
-          </p>
-        </section>
-        <section>
-          <h2>A Small Room</h2>
-          <p>
-            Step-free entrance. One shared counter and two small tables. This fictional website does
-            not accept reservations.
-          </p>
-        </section>
-      </div>
+      <section class="service">
+        <h2>At Your Pace</h2>
+        <p>
+          A small dining room, a long conversation and an unhurried sequence. This example does not
+          accept reservations.
+        </p>
+      </section>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-fine-dining",
-        "title": "Vesper Tasting Room",
-        "prompt": "Create a fictional intimate tasting-room website without stock photography. Use black plum, cream serif typography and an oversized course numeral. Let visitors reveal a five-course sequence and read seating details. Distinguish a request preview from a real reservation. Color direction: Aubergine dining theatre with a luminous apricot course numeral.",
-        "data": {
-          "courses": 5,
-          "seats": 12,
-          "price": 95
-        },
+        "title": "The Seasonal Folio",
+        "prompt": "Use Dazzler to build a fictional the seasonal folio. A botanical course folio replaces the numeral poster with a table-centered menu reveal and a small service ledger. Preserve all synthetic data and working local controls. Use Young Serif with #6B224B on #FFF1F6. Compose for desktop and mobile; do not imply a live service.",
+        "data": { "courses": 5, "seats": 12, "price": 95 },
         "action": "Explore the Menu"
       }
     </script>

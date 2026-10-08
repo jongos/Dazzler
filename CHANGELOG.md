@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-08 — 0.29.0: Reproducible Recipes and a New Gallery
+
+**Changed:** Re-imported the byte-identical recipe payload from the public source commit and retained customer-confirmed permission qualifications. Re-authored the full gallery from task-specific briefs with current Dazzler guidance. Earlier maintenance fixes remain in commit 96665da.
+
+**Added:** New gallery prompts, native and browser renders, comparative review evidence, and public source provenance.
+
+**Why:** Resolve the publication boundary without changing the retained study or treating model votes as aesthetic evidence; demonstrate the current skill through newly authored work.
+
+**Validation:** 101 Node tests passed; 83 Python tests completed with one skip. All 30 gallery records passed freshness validation; ten native Word documents rendered as ten pages, and twenty browser examples passed desktop/mobile overflow, axe and applicable interaction checks. Field-guide/gallery checks, 121 browser font loads, pinned GDC validation under optimized Python, integrity, links, formatting and all ten platform archives passed. Skill bundles are approximately 13.4 MB compressed / 23 MB unpacked. Actual authenticated host installation and implicit triggering remain separate open verification tasks. Recipe permission is customer-confirmed, not independently verified. Git push does not publish release assets or update an installed skill.
+
 ## 2026-10-08 — Audit Status and Issue Reconciliation
 
 **Changed:** README and onboarding now identify the October 2 Gen Agent Trust Hub Pass / SAFE report, verified October 8, instead of presenting the older failure as current. Historical reports are preserved.
@@ -10,7 +20,7 @@
 
 **Validation:** Checked the published audit and existing issue evidence, confirmed shipped branding and package guards, and checked local documentation links and diff whitespace. No release or installed skill change.
 
-## 2026-10-08 — Pending: Provenance and CI Maintenance (#41–44)
+## 2026-10-08 — Provenance and CI Maintenance (#41–44)
 
 **Changed:** GDC imports now read the recorded Git commit blobs rather than checkout line endings, with explicit per-file and metadata errors even under optimized Python. Personal-path scanning covers tracked UTF-8 text; maintenance paths and historical publication wording are corrected. Recipe documentation identifies the unpublished source honestly, and imports require clean committed inputs.
 

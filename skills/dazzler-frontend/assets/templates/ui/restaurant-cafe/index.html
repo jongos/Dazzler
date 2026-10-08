@@ -3,66 +3,51 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Daybreak Coffee Counter</title
+  /><title>The Counter Ledger</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
-      <header class="cafe">
+    <main>
+      <header class="cafehead">
         <div>
-          <p class="kicker">DAYBREAK / COFFEE COUNTER</p>
-          <h1>Your Morning,<br />Written to Order.</h1>
+          <p class="eyebrow">PAPER CUP / OPEN 07:00–15:00</p>
+          <h1>First Coffee.<br />Then Everything Else.</h1>
         </div>
-        <p>Open 07:00–15:00<br />Fictional Pickup Demo</p>
+        <p class="lead">Three good reasons to stop.<br />A fictional pickup counter.</p>
       </header>
-      <div class="counter">
-        <section>
-          <div class="actions">
-            <button data-filter="all" aria-pressed="true">All</button
-            ><button data-filter="coffee" aria-pressed="false">Coffee</button
-            ><button data-filter="bakery" aria-pressed="false">Bakery</button>
-          </div>
-          <div id="products"></div>
-        </section>
-        <aside class="ticket">
-          <p class="kicker">YOUR ORDER / 001</p>
-          <h2>The Morning Ticket</h2>
+      <section class="receipt">
+        <div>
+          <h2>Your Order</h2>
           <div id="cart">Your ticket is empty.</div>
-          <p class="total">Subtotal <strong id="total">$0.00</strong></p>
-          <p class="small">
-            Sample USD prices. Taxes and service fees are not included. No order is sent.
-          </p>
-          <button id="clear">Clear Ticket</button>
-          <p role="status" id="status"></p>
-        </aside>
+        </div>
+        <p>Subtotal <strong id="total">$0.00</strong></p>
+        <button id="clear">Clear Order</button>
+      </section>
+      <div class="actions">
+        <button data-filter="all" aria-pressed="true">All</button
+        ><button data-filter="coffee" aria-pressed="false">Coffee</button
+        ><button data-filter="bakery" aria-pressed="false">Bakery</button>
       </div>
+      <div id="products"></div>
+      <p id="status" role="status"></p>
+      <p>Sample prices before tax. No purchase or pickup request is submitted.</p>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-cafe",
-        "title": "Daybreak Coffee Counter",
-        "prompt": "Build a fictional cafe pickup interface centered on a large typographic order ticket. Use espresso brown and apricot, category filters, three products and an honest local cart total. Adding items must update quantities and totals; no checkout or real pickup promise. Color direction: Orange coffee counter with electric blue ordering controls and a white receipt.",
+        "title": "The Counter Ledger",
+        "prompt": "Use Dazzler to build a fictional the counter ledger. A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket. Preserve all synthetic data and working local controls. Use Oswald with #A52D10 on #FFC64D. Compose for desktop and mobile; do not imply a live service.",
         "data": {
           "products": [
-            {
-              "name": "Flat White",
-              "price": 4.5
-            },
-            {
-              "name": "Filter Coffee",
-              "price": 3.5
-            },
-            {
-              "name": "Almond Bun",
-              "price": 5
-            }
+            { "name": "Flat White", "price": 4.5 },
+            { "name": "Filter Coffee", "price": 3.5 },
+            { "name": "Almond Bun", "price": 5 }
           ]
         },
         "action": "Add Flat White"

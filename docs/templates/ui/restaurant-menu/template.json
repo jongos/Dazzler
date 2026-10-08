@@ -1,7 +1,7 @@
 {
   "id": "restaurant-menu",
-  "title": "Saffron Lunch Index",
-  "prompt": "Make a fictional lunch-menu interface that behaves like a searchable culinary index. Use saffron yellow, ink black and a bold condensed masthead. Search and vegetarian filtering must work without changing prices or claiming allergy safety. Avoid product-photo cards. Color direction: Lime lunch index with plum type, magenta category marks and clear prices.",
+  "title": "The Lunch Index",
+  "prompt": "Use Dazzler to build a fictional the lunch index. An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note. Preserve all synthetic data and working local controls. Use Work Sans with #9D2226 on #FFE154. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "dishes": [
       {

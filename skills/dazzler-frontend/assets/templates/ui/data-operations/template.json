@@ -1,7 +1,7 @@
 {
   "id": "data-operations",
-  "title": "Tide Water Operations",
-  "prompt": "Create a fictional water-operations console focused on four stations and one alert, with a clear spatial flow diagram, measured readings and a station inspector. Use dark navy with cyan signals, text status labels and a high-contrast alert. Station buttons must update the inspector; no live telemetry claims. Color direction: Dark instrument panel with electric mint readings and orange warning evidence.",
+  "title": "Station Inspection Log",
+  "prompt": "Use Dazzler to build a fictional station inspection log. A vertical station selector becomes an inspection instrument beside a large live reading and a separate exception log. Preserve all synthetic data and working local controls. Use Office Code Pro with #006A70 on #E0FFFF. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "stations": [
       "Intake",

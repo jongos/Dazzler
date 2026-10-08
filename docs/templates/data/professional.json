@@ -4,11 +4,11 @@
   "short": "The Launch Decision",
   "tag": "NORTHLINE / OPERATING REVIEW",
   "lead": "Release the exchange in two stages. Keep the settlement hold until reconciliation is complete.",
-  "accent": "#084DC0",
+  "accent": "#004EC4",
   "paper": "#FFFFFF",
   "font": "Archivo",
   "word": "Arial",
-  "layout": "decision",
+  "layout": "gates",
   "stat": "92%",
   "label": "of pilot transactions reconciled",
   "intro": "The six-week pilot processed 1,250 synthetic transactions. Reconciliation matched 1,150; the remaining 100 need manual review before settlement can be enabled.",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Decision due 10 July · Approve the limited scope, not settlement.",
-  "prompt": "Create a fictional executive launch-decision brief for an operations committee. Make the decision, unresolved gate and accountable owners unmistakable. Use a cobalt decision spread with precise numbers and a compact gate register; avoid a generic KPI dashboard. Color direction: Electric cobalt on white; the settlement decision owns the blue field.",
+  "prompt": "Use Dazzler to create a fictional professional document for its real reader task: Release the exchange in two stages. Keep the settlement hold until reconciliation is complete. Preserve the supplied numbers and qualifications. Develop a new release gate map composition, with a release boundary, with the unresolved settlement gate separated from the two ready services. Use Archivo in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #004EC4 color against #FFFFFF. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "archivo",
     "css_family": "Archivo",
@@ -61,11 +61,11 @@
   "colorDirection": "Electric cobalt on white; the settlement decision owns the blue field.",
   "fictional": true,
   "design": {
-    "accent": "#084DC0",
-    "secondary": "#084DC0",
+    "accent": "#004EC4",
+    "secondary": "#004EC4",
     "paper": "#FFFFFF",
-    "text": "#1A1719",
-    "accentText": "#084DC0",
+    "text": "#17212B",
+    "accentText": "#004EC4",
     "onAccent": "#FFFFFF"
   },
   "document": [

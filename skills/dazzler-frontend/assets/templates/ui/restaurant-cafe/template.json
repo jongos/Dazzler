@@ -1,7 +1,7 @@
 {
   "id": "restaurant-cafe",
-  "title": "Daybreak Coffee Counter",
-  "prompt": "Build a fictional cafe pickup interface centered on a large typographic order ticket. Use espresso brown and apricot, category filters, three products and an honest local cart total. Adding items must update quantities and totals; no checkout or real pickup promise. Color direction: Orange coffee counter with electric blue ordering controls and a white receipt.",
+  "title": "The Counter Ledger",
+  "prompt": "Use Dazzler to build a fictional the counter ledger. A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket. Preserve all synthetic data and working local controls. Use Oswald with #A52D10 on #FFC64D. Compose for desktop and mobile; do not imply a live service.",
   "data": {
     "products": [
       {

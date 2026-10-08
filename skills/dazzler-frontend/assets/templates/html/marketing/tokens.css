@@ -1,25 +1,15 @@
 :root {
-  --accent: #003931;
-  --paper: #ff3191;
-  --display: "Oswald";
-  --ink: #19171d;
-  --on-accent: #ffffff;
-  --signal: #0da293;
-  --counter: #921ffd;
-  --body-color: #17252b;
-  --button-background: transparent;
-  --button-hover-background: #ffffff30;
-  --input-select-border: #637079;
-  --input-select-background: #fff;
-  --input-select-color: #17252b;
-  --a-focus-visible-button-focus-visible-input-focus-visible-select-focus-visible-tabindex-foc-outline: #ae471d;
-  --top-border-bottom: #17252b40;
-  --th-td-border-bottom: #17252b40;
+  --accent: #861028;
+  --paper: #ffab91;
+  --display: "Poppins";
+  --body-color: #17212b;
+  --feature-color: white;
+  --th-td-border-bottom: #8b9299;
+  --thead-background: #17212b;
   --thead-color: white;
-  --footer-border-top: #17252b40;
-  --band-color: white;
+  --button-color: white;
+  --focus-visible-outline: #d84100;
   --body-background: white;
-  --campaign-border-bottom: #171717;
-  --campaign-mark-color: #111;
-  --thead-background: #172bc9;
+  --feature-background: #9c1632;
+  --table-wrap-border: #9c1632;
 }

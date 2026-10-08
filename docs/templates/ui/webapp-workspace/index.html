@@ -3,65 +3,55 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Margin Writing Room</title
+  /><title>The Revision Desk</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
-      <div class="writer">
-        <aside class="chapters">
-          <p class="kicker">MARGIN / DRAFT 04</p>
-          <h2>Chapter Index</h2>
-          <ol>
-            <li>At the River</li>
-            <li>The Returning Path</li>
-            <li>What We Kept</li>
-          </ol>
-          <p class="small">Local Writing Demo</p>
-        </aside>
-        <section class="manuscript">
-          <p class="kicker">CHAPTER 01</p>
-          <h1>At the River</h1>
-          <label for="draft">Manuscript</label
-          ><textarea id="draft" spellcheck="true">
+    <main>
+      <header>
+        <p class="eyebrow">MARGIN / REVISION DESK</p>
+        <h1>One Chapter,<br />One Clear Thought.</h1>
+        <p class="lead">A quiet place to draft, followed by a deliberate editing pass.</p>
+      </header>
+      <div class="chapterline">
+        <span>01 · At the River</span><span>02 · The Returning Path</span
+        ><span>03 · What We Kept</span>
+      </div>
+      <section class="writing">
+        <label for="draft">Chapter One Manuscript</label
+        ><textarea id="draft">
 The river had changed its course since we last walked this bank. Where the old path ended, a narrow bridge now joined the two neighborhoods. We crossed slowly, reading the marks left by the winter water.
 
 On the far side, someone had planted a row of willows. Their roots held the edge of the new path.</textarea>
-          <div class="actions">
-            <button id="save">Save Draft Locally</button><span id="count"></span>
-          </div>
-          <p id="status" role="status" class="status"></p>
-        </section>
-        <aside class="notes">
-          <h2>Editorial Note</h2>
-          <blockquote>Let the landscape carry the change.</blockquote>
+        <div class="actions">
+          <button id="save">Save Draft Locally</button><span id="count"></span>
+        </div>
+        <p id="status" role="status"></p>
+      </section>
+      <section class="revision">
+        <h2>The Next Revision</h2>
+        <blockquote>Let the landscape carry the change.</blockquote>
+        <details>
+          <summary>Open the Editing Checklist</summary>
           <p>
-            Keep the opening concrete. Introduce the narrator's reason for returning after the
-            bridge.
+            Clarify the time jump. Retain the willow image. Read the final sentence aloud. Keep a
+            separate copy of important work.
           </p>
-          <details>
-            <summary>Revision Checklist</summary>
-            <p>Clarify the time jump. Retain the willow image. Read the final sentence aloud.</p>
-          </details>
-        </aside>
-      </div>
+        </details>
+      </section>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "webapp-workspace",
-        "title": "Margin Writing Room",
-        "prompt": "Build a fictional writing workspace around the manuscript itself, with a narrow chapter index and an editorial note rail. Warm paper and literary type should support sustained writing. Make word count and saving a local draft work; no fake collaborative service. Color direction: Quiet neutral writing paper with a precise orange editorial rail; the manuscript remains calm.",
-        "data": {
-          "chapter": "At the River",
-          "mode": "local manuscript"
-        },
+        "title": "The Revision Desk",
+        "prompt": "Use Dazzler to build a fictional the revision desk. A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk. Preserve all synthetic data and working local controls. Use Libre Baskerville with #79321A on #FFF4E9. Compose for desktop and mobile; do not imply a live service.",
+        "data": { "chapter": "At the River", "mode": "local manuscript" },
         "action": "Save Draft Locally"
       }
     </script>

@@ -4,11 +4,11 @@
   "short": "Open Later for More People",
   "tag": "CIVIC LAB / THREE MINUTE BRIEF",
   "lead": "Test one late opening each week before committing to a permanent change.",
-  "accent": "#FB7C52",
-  "paper": "#4821CE",
+  "accent": "#5526A5",
+  "paper": "#FFFFFF",
   "font": "Archivo",
   "word": "Arial",
-  "layout": "storyboard",
+  "layout": "speaker",
   "stat": "6 WEEKS",
   "label": "a bounded pilot with a clear review point",
   "intro": "This fictional presentation handout proposes Thursday openings until 21:00. Attendance, staffing and quiet-study demand will determine the next decision.",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Pilot proposal only · Synthetic example, not a funded program.",
-  "prompt": "Create a landscape presentation handout for a fictional late-opening library pilot. Organize it as three visual beats: need, experiment, decision. Use large purple typographic numerals, concise evidence, and an evaluation strip rather than a report page or a fake slide deck. Color direction: Immersive violet presentation with luminous yellow numerals.",
+  "prompt": "Use Dazzler to create a fictional presentation document for its real reader task: Test one late opening each week before committing to a permanent change. Preserve the supplied numbers and qualifications. Develop a new the speaker brief composition, with an annotated speaking brief separates the argument, the six-week test and the decision criteria. Use Archivo in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #5526A5 color against #FFFFFF. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "archivo",
     "css_family": "Archivo",
@@ -61,12 +61,12 @@
   "colorDirection": "Immersive violet presentation with luminous yellow numerals.",
   "fictional": true,
   "design": {
-    "accent": "#FB7C52",
-    "secondary": "#FB7C52",
-    "paper": "#4821CE",
-    "text": "#F3F4F3",
-    "accentText": "#FFFFFF",
-    "onAccent": "#000000"
+    "accent": "#5526A5",
+    "secondary": "#5526A5",
+    "paper": "#FFFFFF",
+    "text": "#17212B",
+    "accentText": "#5526A5",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

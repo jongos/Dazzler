@@ -1,0 +1,1931 @@
+[
+  {
+    "id": "professional",
+    "context": "information",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1211",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-3",
+            "background": "#F9FAFB",
+            "text": "#1F212D",
+            "accent": "#501D86",
+            "surface": "#EFE7E7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0910",
+          "context": "information",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "complete"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2207",
+          "context": "information",
+          "style": "documentary",
+          "arrangement": "timeline",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A release boundary, with the unresolved settlement gate separated from the two ready services.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "legal",
+    "context": "editorial",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0461",
+          "context": "editorial",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Plum and Mint",
+            "background": "#FCF9FF",
+            "text": "#3D2346",
+            "accent": "#805099",
+            "surface": "#CDF3DF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "compact",
+              "libre",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "editorial"
+          }
+        },
+        {
+          "id": "R2259",
+          "context": "editorial",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "editorial"
+          }
+        },
+        {
+          "id": "R2006",
+          "context": "editorial",
+          "style": "expressive magazine",
+          "arrangement": "asymmetric-feature",
+          "palette": {
+            "name": "Spectrum 2-1",
+            "background": "#FAF9FB",
+            "text": "#2D1F2C",
+            "accent": "#861D24",
+            "surface": "#EDEFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "editorial"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A counsel-facing evidence matrix followed by a compact issue and next-action register.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "business",
+    "context": "commerce",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1421",
+          "context": "commerce",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Young Serif",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "serif",
+              "work",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R1665",
+          "context": "commerce",
+          "style": "archival",
+          "arrangement": "index-and-detail",
+          "palette": {
+            "name": "Spectrum 1-7",
+            "background": "#FBF9FA",
+            "text": "#2D1F20",
+            "accent": "#865C1D",
+            "surface": "#E7EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "serif",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R1210",
+          "context": "commerce",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Spectrum 1-3",
+            "background": "#F9FAFB",
+            "text": "#1F212D",
+            "accent": "#501D86",
+            "surface": "#EFE7E7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Junicode",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "serif",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: The three work stages carry the fee story, with commercial terms treated as a closing contract strip.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "fun",
+    "context": "culture",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1369",
+          "context": "culture",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Spectrum 1-4",
+            "background": "#F9F9FB",
+            "text": "#251F2D",
+            "accent": "#861D85",
+            "surface": "#EFEAE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "program",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "culture"
+          }
+        },
+        {
+          "id": "R0251",
+          "context": "culture",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Ink and Electric Yellow",
+            "background": "#181818",
+            "text": "#FAFAFA",
+            "accent": "#F4E84A",
+            "surface": "#303030",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "culture"
+          }
+        },
+        {
+          "id": "R2279",
+          "context": "culture",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Poppins",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "program",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "culture"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A broad stage program makes time the navigation; practical arrival information occupies a distinct ticket panel.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "family",
+    "context": "information",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0351",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Marine and Coral",
+            "background": "#F7FCFF",
+            "text": "#113C50",
+            "accent": "#B73545",
+            "surface": "#E5F3F8",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "open",
+              "reading",
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0293",
+          "context": "information",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Ink and Electric Yellow",
+            "background": "#181818",
+            "text": "#FAFAFA",
+            "accent": "#F4E84A",
+            "surface": "#303030",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Work Sans",
+            "Work Sans"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "family",
+              "first",
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0491",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Plum and Mint",
+            "background": "#FCF9FF",
+            "text": "#3D2346",
+            "accent": "#805099",
+            "surface": "#CDF3DF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Work Sans",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "family",
+              "reading",
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A packing-first household sheet with a compact weekend itinerary and an open change notice.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "presentation",
+    "context": "editorial",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1817",
+          "context": "editorial",
+          "style": "documentary",
+          "arrangement": "timeline",
+          "palette": {
+            "name": "Spectrum 1-9",
+            "background": "#FBFAF9",
+            "text": "#2D2D1F",
+            "accent": "#42861D",
+            "surface": "#E7EEEF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "editorial"
+          }
+        },
+        {
+          "id": "R0001",
+          "context": "editorial",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Paper and Carmine",
+            "background": "#FFFFFF",
+            "text": "#202020",
+            "accent": "#AF173B",
+            "surface": "#F0F2F2",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "editorial"
+          }
+        },
+        {
+          "id": "R1515",
+          "context": "editorial",
+          "style": "archival",
+          "arrangement": "index-and-detail",
+          "palette": {
+            "name": "Spectrum 1-6",
+            "background": "#FAF9FB",
+            "text": "#2D1F27",
+            "accent": "#86241D",
+            "surface": "#EAEFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "editorial"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: An annotated speaking brief separates the argument, the six-week test and the decision criteria.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "school",
+    "context": "information",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0932",
+          "context": "information",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "League Gothic",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "comparison",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1112",
+          "context": "information",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Spectrum 1-2",
+            "background": "#F9FBFA",
+            "text": "#1F292D",
+            "accent": "#1D2286",
+            "surface": "#EFE7EB",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "comparison",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1603",
+          "context": "information",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Spectrum 1-7",
+            "background": "#FBF9FA",
+            "text": "#2D1F20",
+            "accent": "#865C1D",
+            "surface": "#E7EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Junicode",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "compare",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A wide observation bench aligns raw trial times with a truthful median comparison and a methods panel.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "marketing",
+    "context": "commerce",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1363",
+          "context": "commerce",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Spectrum 1-4",
+            "background": "#F9F9FB",
+            "text": "#251F2D",
+            "accent": "#861D85",
+            "surface": "#EFEAE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "first",
+              "reading",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R2273",
+          "context": "commerce",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Poppins",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "first",
+              "poppins",
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R1421",
+          "context": "commerce",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Young Serif",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A channel-to-action map presents the campaign as a working assignment with capacity qualified as planning.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "restaurant",
+    "context": "commerce",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1421",
+          "context": "commerce",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Young Serif",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "serif",
+              "typographic",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R1809",
+          "context": "commerce",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Spectrum 1-9",
+            "background": "#FBFAF9",
+            "text": "#2D2D1F",
+            "accent": "#42861D",
+            "surface": "#E7EEEF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Junicode",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "choose",
+              "reading",
+              "serif"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R2101",
+          "context": "commerce",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 2-2",
+            "background": "#FBF9FA",
+            "text": "#2D1F25",
+            "accent": "#864E1D",
+            "surface": "#E9EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "serif",
+              "typographic"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A typographic supper card groups dishes by their role in the meal and gives pairings a separate side rhythm.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "technical",
+    "context": "software",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1951",
+          "context": "software",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-10",
+            "background": "#1C1D16",
+            "text": "#F5F7F3",
+            "accent": "#8AE59A",
+            "surface": "#252C37",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "EB Garamond",
+            "Cotham Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "reference"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R0901",
+          "context": "software",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "reference"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R0451",
+          "context": "software",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Plum and Mint",
+            "background": "#FCF9FF",
+            "text": "#3D2346",
+            "accent": "#805099",
+            "surface": "#CDF3DF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading",
+              "reference"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A stop-check-resume decision sequence makes the safe boundary visible before the reference matrix.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "webapp-workspace",
+    "context": "software",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R2055",
+          "context": "software",
+          "style": "archival",
+          "arrangement": "index-and-detail",
+          "palette": {
+            "name": "Spectrum 2-1",
+            "background": "#FAF9FB",
+            "text": "#2D1F2C",
+            "accent": "#861D24",
+            "surface": "#EDEFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R1212",
+          "context": "software",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Spectrum 1-3",
+            "background": "#F9FAFB",
+            "text": "#1F212D",
+            "accent": "#501D86",
+            "surface": "#EFE7E7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R2208",
+          "context": "software",
+          "style": "systematic",
+          "arrangement": "modular-directory",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "webapp-board",
+    "context": "software",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0951",
+          "context": "software",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R0753",
+          "context": "software",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Graphite and Aqua",
+            "background": "#F7FBFC",
+            "text": "#233338",
+            "accent": "#006C78",
+            "surface": "#C9F0ED",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A production rack puts four assignments into vertical ticket columns beneath a narrow deadline spine.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "webapp-settings",
+    "context": "software",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1861",
+          "context": "software",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-9",
+            "background": "#FBFAF9",
+            "text": "#2D2D1F",
+            "accent": "#42861D",
+            "surface": "#E7EEEF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "column",
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R0951",
+          "context": "software",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "column",
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R0150",
+          "context": "software",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Forest and Lemon",
+            "background": "#F8FCF9",
+            "text": "#16362B",
+            "accent": "#357346",
+            "surface": "#F2E64B",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A horizontal daily rhythm pairs a schedule band with a two-column preferences form and explicit urgent-message exception.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "data-revenue",
+    "context": "software",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1212",
+          "context": "software",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Spectrum 1-3",
+            "background": "#F9FAFB",
+            "text": "#1F212D",
+            "accent": "#501D86",
+            "surface": "#EFE7E7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "comparison"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R0302",
+          "context": "software",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Marine and Coral",
+            "background": "#F7FCFF",
+            "text": "#113C50",
+            "accent": "#B73545",
+            "surface": "#E5F3F8",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "comparison"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R0406",
+          "context": "software",
+          "style": "expressive magazine",
+          "arrangement": "asymmetric-feature",
+          "palette": {
+            "name": "Plum and Mint",
+            "background": "#FCF9FF",
+            "text": "#3D2346",
+            "accent": "#805099",
+            "surface": "#CDF3DF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "data-operations",
+    "context": "software",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1307",
+          "context": "software",
+          "style": "documentary",
+          "arrangement": "timeline",
+          "palette": {
+            "name": "Spectrum 1-4",
+            "background": "#F9F9FB",
+            "text": "#251F2D",
+            "accent": "#861D85",
+            "surface": "#EFEAE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Junicode",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R2208",
+          "context": "software",
+          "style": "systematic",
+          "arrangement": "modular-directory",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R1451",
+          "context": "software",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "EB Garamond",
+            "Cotham Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "reading"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A vertical station selector becomes an inspection instrument beside a large live reading and a separate exception log.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "context": "commerce",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0723",
+          "context": "commerce",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Graphite and Aqua",
+            "background": "#F7FBFC",
+            "text": "#233338",
+            "accent": "#006C78",
+            "surface": "#C9F0ED",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Young Serif",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "serif",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R1421",
+          "context": "commerce",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Young Serif",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "serif",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R1309",
+          "context": "commerce",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Spectrum 1-4",
+            "background": "#F9F9FB",
+            "text": "#251F2D",
+            "accent": "#861D85",
+            "surface": "#EFEAE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Junicode",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "poster",
+              "serif"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A botanical course folio replaces the numeral poster with a table-centered menu reveal and a small service ledger.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "restaurant-cafe",
+    "context": "commerce",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0453",
+          "context": "commerce",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Plum and Mint",
+            "background": "#FCF9FF",
+            "text": "#3D2346",
+            "accent": "#805099",
+            "surface": "#CDF3DF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald",
+              "product"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R2228",
+          "context": "commerce",
+          "style": "systematic",
+          "arrangement": "modular-directory",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Oswald",
+            "Roboto"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R0156",
+          "context": "commerce",
+          "style": "expressive magazine",
+          "arrangement": "asymmetric-feature",
+          "palette": {
+            "name": "Forest and Lemon",
+            "background": "#F8FCF9",
+            "text": "#16362B",
+            "accent": "#357346",
+            "surface": "#F2E64B",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "restaurant-reservations",
+    "context": "commerce",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0543",
+          "context": "commerce",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Cobalt and Chalk",
+            "background": "#FFFFFF",
+            "text": "#132349",
+            "accent": "#164AC6",
+            "surface": "#E8EFFC",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "first",
+              "poppins"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R2273",
+          "context": "commerce",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Poppins",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "first",
+              "poppins"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R1903",
+          "context": "commerce",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Spectrum 1-10",
+            "background": "#1C1D16",
+            "text": "#F5F7F3",
+            "accent": "#8AE59A",
+            "surface": "#252C37",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Junicode",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "first"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A request-first reservation sheet aligns date and party controls above three explicitly labeled atmosphere choices.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "restaurant-menu",
+    "context": "commerce",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R2255",
+          "context": "commerce",
+          "style": "archival",
+          "arrangement": "index-and-detail",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "index",
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R0151",
+          "context": "commerce",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Forest and Lemon",
+            "background": "#F8FCF9",
+            "text": "#16362B",
+            "accent": "#357346",
+            "surface": "#F2E64B",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "column",
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        },
+        {
+          "id": "R0115",
+          "context": "commerce",
+          "style": "archival",
+          "arrangement": "index-and-detail",
+          "palette": {
+            "name": "Forest and Lemon",
+            "background": "#F8FCF9",
+            "text": "#16362B",
+            "accent": "#357346",
+            "surface": "#F2E64B",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "EB Garamond",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "index",
+              "sans",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "commerce"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note.",
+    "adaptedFromRecipe": false
+  },
+  {
+    "id": "business-portal",
+    "context": "software",
+    "shortlist": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R2055",
+          "context": "software",
+          "style": "archival",
+          "arrangement": "index-and-detail",
+          "palette": {
+            "name": "Spectrum 2-1",
+            "background": "#FAF9FB",
+            "text": "#2D1F2C",
+            "accent": "#861D24",
+            "surface": "#EDEFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R2208",
+          "context": "software",
+          "style": "systematic",
+          "arrangement": "modular-directory",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        },
+        {
+          "id": "R1212",
+          "context": "software",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Spectrum 1-3",
+            "background": "#F9FAFB",
+            "text": "#1F212D",
+            "accent": "#501D86",
+            "surface": "#EFE7E7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre"
+            ],
+            "preferredArrangement": false,
+            "context": "software"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Retain the independently authored direction: A two-page-like review folio makes the document preview primary, with a bottom milestone ribbon and reversible approval state.",
+    "adaptedFromRecipe": false
+  }
+]

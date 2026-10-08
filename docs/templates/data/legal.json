@@ -4,11 +4,11 @@
   "short": "Notice and Evidence",
   "tag": "MATTER 026 / INTERNAL REVIEW",
   "lead": "The record supports delivery. It does not yet establish that the recipient accepted the revised terms.",
-  "accent": "#C25529",
-  "paper": "#FFFFFF",
+  "accent": "#702659",
+  "paper": "#FFF4FA",
   "font": "Libre Baskerville",
   "word": "Georgia",
-  "layout": "chronology",
+  "layout": "evidence",
   "stat": "03",
   "label": "events establish the sequence",
   "intro": "This fictional matter note separates the available correspondence from the questions counsel must resolve. It contains no jurisdiction-specific legal conclusion.",
@@ -49,7 +49,7 @@
     ]
   ],
   "closing": "Prepared for counsel · Fictional training material, not legal advice.",
-  "prompt": "Design a fictional legal evidence-review memorandum. Use a narrow plum chronology and a quiet cream reading field with serif hierarchy. Distinguish documented events from unresolved conclusions; no legal advice, invented authorities or decorative legal icons. Color direction: Black-letter evidence with vermilion marginal findings; restrained white is intentional.",
+  "prompt": "Use Dazzler to create a fictional legal document for its real reader task: The record supports delivery. It does not yet establish that the recipient accepted the revised terms. Preserve the supplied numbers and qualifications. Develop a new evidence and inference composition, with a counsel-facing evidence matrix followed by a compact issue and next-action register. Use Libre Baskerville in HTML and verified Georgia for native Word. Make print and mobile reading clear; use purposeful #702659 color against #FFF4FA. Do not copy the earlier gallery layout.",
   "fontSelection": {
     "id": "libre-baskerville",
     "css_family": "Libre Baskerville",
@@ -61,12 +61,12 @@
   "colorDirection": "Black-letter evidence with vermilion marginal findings; restrained white is intentional.",
   "fictional": true,
   "design": {
-    "accent": "#C25529",
-    "secondary": "#C25529",
-    "paper": "#FFFFFF",
-    "text": "#181818",
-    "accentText": "#C25529",
-    "onAccent": "#000000"
+    "accent": "#702659",
+    "secondary": "#702659",
+    "paper": "#FFF4FA",
+    "text": "#17212B",
+    "accentText": "#702659",
+    "onAccent": "#FFFFFF"
   },
   "document": [
     {

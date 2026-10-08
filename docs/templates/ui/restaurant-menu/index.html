@@ -3,60 +3,47 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Saffron Lunch Index</title
+  /><title>The Lunch Index</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a
-      ><span class="small">Fictional Interactive Example</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
-    <main class="canvas">
-      <header class="menu-head">
-        <p class="kicker">SAFFRON / LUNCH UNTIL 15:00</p>
-        <h1>Good Lunch.<br />No Guesswork.</h1>
-      </header>
-      <div class="menu-controls">
-        <label for="search"
-          >Find a Dish<input id="search" type="search" placeholder="Try lentil or chicken" /></label
-        ><label class="veg"><input id="veg" type="checkbox" /> Vegetarian Only</label>
+    <main>
+      <div class="lunch">
+        <header>
+          <p class="eyebrow">SAFFRON / UNTIL 15:00</p>
+          <h1>Find Your Lunch</h1>
+          <label for="search"
+            >Find a Dish<input id="search" type="search" placeholder="Lentil or chicken" /></label
+          ><label class="veg"><input id="veg" type="checkbox" /> Vegetarian Only</label>
+          <p id="result-count" role="status"></p>
+        </header>
+        <section aria-label="Lunch Dishes"><div id="menu-items"></div></section>
       </div>
-      <p id="result-count" role="status"></p>
-      <div id="menu-items"></div>
       <aside class="allergy">
         <h2>Before You Order</h2>
         <p>
           Vegetarian labels describe ingredients, not allergy safety. Ask about preparation and
-          cross-contact. Prices are sample USD amounts; this demo does not accept orders.
+          cross-contact. Sample USD prices; no orders are accepted.
         </p>
       </aside>
     </main>
     <footer>
-      Original Dazzler design · Apache-2.0. Local font licenses accompany these files. Synthetic
-      data; no live service.
+      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
+      service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-menu",
-        "title": "Saffron Lunch Index",
-        "prompt": "Make a fictional lunch-menu interface that behaves like a searchable culinary index. Use saffron yellow, ink black and a bold condensed masthead. Search and vegetarian filtering must work without changing prices or claiming allergy safety. Avoid product-photo cards. Color direction: Lime lunch index with plum type, magenta category marks and clear prices.",
+        "title": "The Lunch Index",
+        "prompt": "Use Dazzler to build a fictional the lunch index. An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note. Preserve all synthetic data and working local controls. Use Work Sans with #9D2226 on #FFE154. Compose for desktop and mobile; do not imply a live service.",
         "data": {
           "dishes": [
-            {
-              "name": "Roast Carrot Bowl",
-              "price": 14
-            },
-            {
-              "name": "Lemon Chicken Plate",
-              "price": 17
-            },
-            {
-              "name": "Green Lentil Soup",
-              "price": 11
-            },
-            {
-              "name": "Market Fish Sandwich",
-              "price": 18
-            }
+            { "name": "Roast Carrot Bowl", "price": 14 },
+            { "name": "Lemon Chicken Plate", "price": 17 },
+            { "name": "Green Lentil Soup", "price": 11 },
+            { "name": "Market Fish Sandwich", "price": 18 }
           ]
         },
         "action": "Vegetarian Only"
