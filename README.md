@@ -6,6 +6,8 @@
 
 **Turn a brief into a coherent, polished design.** Dazzler gives your AI agent practical tools for typography, color, layout, charts and print. Ask for the result you want; it chooses the details, builds the artifact and checks what it can render.
 
+Dazzler builds upon [Style Science](https://github.com/jongos/style-science), a design reasoning and mathematical framework for agents and systems.
+
 ```text
 Use $dazzler-frontend to redesign this dashboard so the important numbers stand out.
 ```
