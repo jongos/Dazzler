@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-08 — AI Agents Listing Ownership Badge
+
+**Changed:** Display the AI Agents Listing badge below the README title.
+
+**Added:** The listing-provided claim badge and link to Dazzler's directory page.
+
+**Why:** Allow the directory to verify repository control for the owner's listing claim.
+
+**Validation:** Matched the badge Markdown to the live claim page; checked the complete diff and whitespace. The existing gallery evidence validator passes for all 30 examples. This documentation-only update does not change the skill, runtime, packaging or gallery.
+
 ## 2026-10-07 — 0.28.1: Preserve Dependency Pins During Release Bumps
 
 **Changed:** Restore React DOM's scheduler requirement and scheduler 0.27.0 tarball from the last published lockfile. Only Dazzler's own version fields move to 0.28.1. The pushed 0.28.0 tag is preserved and its failed release remains unpublished.

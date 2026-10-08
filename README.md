@@ -2,6 +2,8 @@
 
 # Dazzler
 
+[![Dazzler on AI Agents Listing](https://aiagentslisting.com/dazzler/badge.svg?claim=28bc33cf9f063439d153fdbb037a7dcc)](https://aiagentslisting.com/mcp/dazzler)
+
 **Turn a brief into a coherent, polished design.** Dazzler gives your AI agent practical tools for typography, color, layout, charts and print. Ask for the result you want; it chooses the details, builds the artifact and checks what it can render.
 
 ```text
