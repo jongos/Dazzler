@@ -48,3 +48,5 @@ The initial gate correctly failed with **Regenerate after runtime changes**. Fol
 ## Notes
 
 Recipe data is adapted from Jon Gosier's Style Science under Apache-2.0. The skill's closing provenance note and bundled license retain attribution. The study is text-only and winner-targeted, based on a single minimalist reference directory; it supplies no rendered-site comparison, human preference finding or causal design law. Existing Dazzler art direction and explicit user requirements take precedence.
+
+Recipe source publication remains blocked by Style-Science issue #20. Recorded hashes identify an unpublished local snapshot; they do not enable reproduction from the recorded public commit. Model-output redistribution terms remain pending upstream review (#11). A new release must resolve these conditions before shipping this dataset.

@@ -56,3 +56,13 @@ The offline ZIP is a release asset with a matching manifest and SHA256SUMS; neve
 ## Notes and credits
 
 To refresh the curated catalog, review a new hue3 commit and license first. Update the explicit pin and parser in `tools/import_hue3.py`, then run it with a clean checkout. The current import accepts only a306210b7240e183366998ce39fbe7543cc09b41 and exactly 88 unique records. It extracts palette facts and editorial descriptions without importing upstream skill instructions. Its count/schema assertions intentionally require review when upstream changes.
+
+## Browser Coverage
+
+CI runs font loading, visualization exports/browser checks, hotspot exports/browser checks, native hotspot hardening, signature specimens and palette-space checks. Export generators run before their browser consumers. `test_color_preview.cjs` remains manual-only: it requires a task-specific generated directory containing `palette.json` and `preview.html`; run it against that actual preview when changing preview behavior. It is not evidence of CI coverage.
+
+## Pinned GDC Maintenance
+
+Import with `python tools/vendor_gdc.py --source /path/to/style-science --revision COMMIT_SHA`. The importer reads committed blobs, ignoring working-copy edits and line-ending settings. `python -O tools/vendor_gdc.py --source /path/to/style-science --check` checks the recorded revision by default, even when the upstream checkout is newer. An explicit `--revision` compares another reviewed revision and reports metadata drift separately from changed files. CI obtains the pinned source only during maintenance; skill invocation remains offline.
+
+Recipe release validation currently fails deliberately: the retained source snapshot is unpublished and output-terms review is pending. Do not clear `sourceWorkingTreeModified` manually. After upstream publication and review, re-import from a clean committed source into an explicitly reviewed migration, verify the public source hashes and generated index, resolve the terms record, then run the full release workflow. Local test packages are not approved release artifacts.

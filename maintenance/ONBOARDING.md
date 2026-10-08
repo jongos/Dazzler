@@ -42,7 +42,7 @@ This targets only Dazzler, not other skills. Verify that `.agents/skills/dazzler
 
 ### Directory status
 
-The public skill page and repository listing were verified on September 29, 2026; the repository badge reported one install. A listing is not a security endorsement. Gen Agent Trust Hub currently reports Critical/Fail, citing a font attribution domain and execution/import concerns; Socket reports zero alerts and Snyk reports low risk. Review the linked report before installing. The audit follow-up is tracked separately in issue 40.
+The public skill page and repository listing were verified on September 29, 2026; the repository badge reported one install. A listing is not a security endorsement. Gen Agent Trust Hub’s October 2, 2026 report shows Pass / SAFE, verified October 8, following the repairs tracked in issue 40. This is a dated scanner result, not a blanket security certification or verification of subsequent revisions. Consult the current [audit report](https://www.skills.sh/jongos/dazzler/dazzler-frontend/security/agent-trust-hub); other scanners have separate scopes and dates.
 
 Use the pinned source command in the closing notes. Omit `--global` for project scope and specify `--agent` rather than installing into all detected hosts. Avoid `--yes` until you have reviewed the selected destination. Direct archive mode's default 10 MiB download ceiling is too small for these packages; use the reviewed source route or the managed local installer.
 

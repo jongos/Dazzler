@@ -4,6 +4,7 @@ import io
 import json
 from pathlib import Path
 import tempfile
+import subprocess
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -51,6 +52,15 @@ class ReleaseMetadataTests(unittest.TestCase):
                 path = root / name
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_bytes((ROOT / name).read_bytes())
+            provenance = (
+                root / "skills/dazzler-frontend/references/recipes/provenance.json"
+            )
+            provenance.parent.mkdir(parents=True, exist_ok=True)
+            provenance.write_text(json.dumps({"sourceWorkingTreeModified": False}))
+            subprocess.run(["git", "init", str(root)], check=True, capture_output=True)
+            subprocess.run(
+                ["git", "-C", str(root), "add", "."], check=True, capture_output=True
+            )
             with contextlib.redirect_stdout(io.StringIO()):
                 module.validate()
             path = root / "maintenance/ONBOARDING.md"

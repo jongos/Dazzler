@@ -93,3 +93,9 @@ Adapted from Paul Bakaus's Impeccable `skill/reference/bolder.md` at `2a26f1c50b
 ## Recipe Starting Points
 
 Retained recipe knowledge from Jon Gosier's [Style Science](https://github.com/jongos/style-science), under Apache-2.0. Original license and exact source-file hashes are in `skills/dazzler-frontend/references/recipes/`. Dazzler omits study machinery, rejected recipes and repeated reference IDs, and adds its own discovery and adaptation workflow. Jev judgments are text-only heuristics, not rendered validation or human preference evidence. Dataset provenance does not grant licenses to named fonts or referenced websites.
+
+Recipe source publication remains blocked by Style-Science issue #20. Recorded hashes identify an unpublished local snapshot; they do not enable reproduction from the recorded public commit. Model-output redistribution terms remain pending upstream review (#11). A new release must resolve these conditions before shipping this dataset.
+
+## GDC Verifier
+
+The vendored GDC verifier in `skills/dazzler-frontend/scripts/gdc/` is by Jon Gosier and Style Science contributors, Apache-2.0. Its original LICENSE and committed-blob hashes accompany the pinned source revision in `provenance.json`. Source: https://github.com/jongos/style-science.

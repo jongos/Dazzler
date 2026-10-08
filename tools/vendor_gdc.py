@@ -4,7 +4,6 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
-import shutil
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,26 +18,26 @@ FILES = {
 }
 
 
-def vendor(source, check=False):
+def vendor(source, check=False, revision=None):
     source = source.resolve()
-    package = json.loads((source / "package.json").read_text(encoding="utf-8"))
+    target = ROOT / "skills/dazzler-frontend/scripts/gdc"
+    actual = json.loads((target / "provenance.json").read_text()) if check else None
+    ref = revision or (actual["sourceRevision"] if check else "HEAD")
+    revision = subprocess.check_output(
+        ["git", "-C", str(source), "rev-parse", "--verify", ref + "^{commit}"],
+        text=True,
+    ).strip()
+
+    def blob(name):
+        return subprocess.check_output(
+            ["git", "-C", str(source), "cat-file", "blob", revision + ":" + name]
+        )
+
+    package = json.loads(blob("package.json"))
     if package["name"] != "@style-science/gdc":
         raise ValueError("Expected Style Science GDC checkout")
-    target = ROOT / "skills/dazzler-frontend/scripts/gdc"
-    hashes = {
-        dest: hashlib.sha256((source / src).read_bytes()).hexdigest()
-        for src, dest in FILES.items()
-    }
-    revision = subprocess.check_output(
-        ["git", "-C", str(source), "rev-parse", "HEAD"], text=True
-    ).strip()
-    dirty = subprocess.check_output(
-        ["git", "-C", str(source), "status", "--porcelain"], text=True
-    ).strip()
-    if dirty:
-        raise ValueError(
-            "Commit the independent source before vendoring; do not label working changes as a revision"
-        )
+    data = {dest: blob(src) for src, dest in FILES.items()}
+    hashes = {name: hashlib.sha256(value).hexdigest() for name, value in data.items()}
     manifest = {
         "schemaVersion": 1,
         "repository": "https://github.com/jongos/style-science",
@@ -47,29 +46,47 @@ def vendor(source, check=False):
         "files": hashes,
     }
     if check:
-        actual = json.loads((target / "provenance.json").read_text(encoding="utf-8"))
-        assert actual == manifest, "GDC manifest drift"
-        assert set(p.name for p in target.iterdir() if p.is_file()) == set(hashes) | {
-            "provenance.json"
-        }, "Unexpected vendored file"
+        errors = []
+        for key in ("schemaVersion", "repository", "version", "sourceRevision"):
+            if actual.get(key) != manifest[key]:
+                errors.append(
+                    f"Metadata drift: {key}: {actual.get(key)} != {manifest[key]}"
+                )
+        if set(actual.get("files", {})) != set(hashes):
+            errors.append("Manifest file membership drift")
         for name, digest in hashes.items():
-            assert (
-                hashlib.sha256((target / name).read_bytes()).hexdigest() == digest
-            ), name
-        print("GDC consumer matches independent source")
+            if actual.get("files", {}).get(name) != digest:
+                errors.append(f"Upstream content drift: {name}")
+            path = target / name
+            if (
+                not path.is_file()
+                or hashlib.sha256(path.read_bytes()).hexdigest() != digest
+            ):
+                errors.append(f"Vendored content drift: {name}")
+        if {p.name for p in target.iterdir() if p.is_file()} != set(hashes) | {
+            "provenance.json"
+        }:
+            errors.append("Unexpected vendored file membership")
+        if errors:
+            raise ValueError("\n".join(errors))
+        print("GDC consumer matches committed upstream blobs", revision)
         return
     target.mkdir(parents=True, exist_ok=True)
-    for src, dest in FILES.items():
-        shutil.copy2(source / src, target / dest)
+    for name, value in data.items():
+        (target / name).write_bytes(value)
     (target / "provenance.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
     )
-    print("Vendored GDC", package["version"])
+    print("Vendored GDC", package["version"], revision)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True, type=Path)
     parser.add_argument("--check", action="store_true")
+    parser.add_argument(
+        "--revision",
+        help="Immutable source commit; --check defaults to the recorded pin",
+    )
     args = parser.parse_args()
-    vendor(args.source, args.check)
+    vendor(args.source, args.check, args.revision)

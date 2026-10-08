@@ -33,7 +33,22 @@ def build(source):
         *[f"guides/recipes/{c}.md" for c in CONTEXTS],
         "LICENSE",
     ]
-    inputs = {n: (source / n).read_bytes() for n in names}
+    dirty = subprocess.check_output(
+        ["git", "status", "--porcelain"], cwd=source
+    ).strip()
+    if dirty:
+        raise ValueError(
+            "Recipe import requires a clean committed source; unpublished working data is not release eligible"
+        )
+    commit = subprocess.check_output(
+        ["git", "rev-parse", "HEAD"], cwd=source, text=True
+    ).strip()
+    inputs = {
+        n: subprocess.check_output(
+            ["git", "cat-file", "blob", commit + ":" + n], cwd=source
+        )
+        for n in names
+    }
     winners = json.loads(inputs[names[0]])
     summary = json.loads(inputs[names[1]])
     assert len(winners) == summary["winners"] == 1000
@@ -104,16 +119,9 @@ def build(source):
         "schemaVersion": 1,
         "datasetRevision": revision,
         "repository": "https://github.com/jongos/style-science",
-        "sourceCommit": subprocess.check_output(
-            ["git", "rev-parse", "HEAD"], cwd=source
-        )
-        .decode()
-        .strip(),
-        "sourceWorkingTreeModified": bool(
-            subprocess.check_output(
-                ["git", "status", "--porcelain", "--", *names], cwd=source
-            ).strip()
-        ),
+        "sourceCommit": commit,
+        "sourceWorkingTreeModified": False,
+        "sourcePublicationStatus": "committed; verify public availability before release",
         "sourceFiles": {n: digest(data) for n, data in inputs.items()},
         "license": "Apache-2.0",
         "model": summary["model"],
@@ -124,7 +132,10 @@ def build(source):
         "unanimous": summary["unanimousWinners"],
         "contexts": dict(counts),
         "indexSha256": digest(outputs["index.json"]),
-        "limitations": summary["limitations"],
+        "limitations": [
+            v.replace("per user instruction", "by project policy")
+            for v in summary["limitations"]
+        ],
         "omitted": "Rejected recipes, study executables, source factor indices and reference URL IDs are not shipped. URLs were uninspected inspiration clues, not visual evidence.",
     }
     outputs["provenance.json"] = packed(provenance)
@@ -137,7 +148,11 @@ def build(source):
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
     assert all(
-        (source / n).read_bytes() == data for n, data in inputs.items()
+        subprocess.check_output(
+            ["git", "cat-file", "blob", commit + ":" + n], cwd=source
+        )
+        == data
+        for n, data in inputs.items()
     ), "Source changed during import"
     print(
         json.dumps(

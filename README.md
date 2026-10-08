@@ -144,7 +144,7 @@ Our original instructions, scripts, catalog annotations, and Dazzler artwork use
 
 [![skills.sh installs](https://skills.sh/b/jongos/dazzler)](https://skills.sh/jongos/dazzler/dazzler-frontend)
 
-The directory listing is live. Its Gen Agent Trust Hub audit currently reports Critical/Fail; [review the findings and follow-up](https://github.com/jongos/Dazzler/issues/40) before installing. See [installation and removal guidance](maintenance/ONBOARDING.md) for the shared-project-directory behavior of the skills CLI.
+The directory listing is live. Its Gen Agent Trust Hub report dated October 2, 2026 shows **Pass / SAFE**, verified October 8. This scanner result is not a blanket security certification or verification of every later release. [Read the audit](https://www.skills.sh/jongos/dazzler/dazzler-frontend/security/agent-trust-hub) and [repair history](https://github.com/jongos/Dazzler/issues/40). See [installation and removal guidance](maintenance/ONBOARDING.md) for the shared-project-directory behavior of the skills CLI.
 
 [Contributor source archive (unpinned main)](https://github.com/jongos/Dazzler/archive/refs/heads/main.zip). Maintainer remote: `git@github.com:jongos/Dazzler.git`.
 

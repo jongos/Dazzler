@@ -1,5 +1,25 @@
 # Developer change notes
 
+## 2026-10-08 — Audit Status and Issue Reconciliation
+
+**Changed:** README and onboarding now identify the October 2 Gen Agent Trust Hub Pass / SAFE report, verified October 8, instead of presenting the older failure as current. Historical reports are preserved.
+
+**Added:** Focused follow-up tracking for authenticated Claude upload verification and optional controlled demos. Implicit-trigger evaluation remains open without repeating completed implementation work.
+
+**Why:** Separate completed fixes from external verification and optional promotional work. A dated audit is not certification of all releases.
+
+**Validation:** Checked the published audit and existing issue evidence, confirmed shipped branding and package guards, and checked local documentation links and diff whitespace. No release or installed skill change.
+
+## 2026-10-08 — Pending: Provenance and CI Maintenance (#41–44)
+
+**Changed:** GDC imports now read the recorded Git commit blobs rather than checkout line endings, with explicit per-file and metadata errors even under optimized Python. Personal-path scanning covers tracked UTF-8 text; maintenance paths and historical publication wording are corrected. Recipe documentation identifies the unpublished source honestly, and imports require clean committed inputs.
+
+**Added:** Pinned upstream GDC verification and font, chart, hotspot, native, signature and palette browser checks in CI, with a browser timeout. Focused provenance/path regression tests and a recipe release blocker prevent shipping the current unpublished source or pending terms review. Color-preview QA is explicitly manual.
+
+**Why:** Make source claims reproducible, catch user-facing regressions, and prevent machine-specific details or unpublished provenance from silently entering another release. The GDC JSON changes normalize bytes only; no verifier behavior or template design changed.
+
+**Validation:** 101 Node tests and the expanded browser sequence passed locally; all 121 bundled font files loaded. Four new regression cases passed, pinned GDC validation passed with python -O, and the 1,699-file runtime inventory passed. All 83 Python cases completed successfully (one optional skip), and local links passed across 228 documents. Local test packages built, but platform validation also correctly stops at the source-release gate; no package approval is claimed. Release validation intentionally blocks on #41 until Style-Science #20 publishes the dataset and #11 resolves output terms. No new release, upstream research import, installation change or GitHub issue closure is included.
+
 ## 2026-10-08 — AI Agents Listing Ownership Badge
 
 **Changed:** Display the AI Agents Listing badge below the README title.
@@ -24,7 +44,7 @@
 
 **Changed:** Substantial design work can consider contextual recipes alongside original directions. Brand requirements, existing systems and Dazzler's design and delivery rules remain authoritative.
 
-**Added:** A hash-pinned, winner-only dataset with a compact local index, individual recipe lookup, varied brief-based shortlists and internal derivation records. Data and helper ship through existing platform packages without new runtime dependencies. Focused loading, filtering, fallback, evidence and cross-context tests accompany the integration.
+**Added:** A locally hash-recorded, winner-only dataset (source unpublished; see issue #41) with a compact local index, individual recipe lookup, varied brief-based shortlists and internal derivation records. Data and helper ship through existing platform packages without new runtime dependencies. Focused loading, filtering, fallback, evidence and cross-context tests accompany the integration.
 
 **Why:** Reuse useful color/type/layout relationships without turning a text-only study into a fixed template library or aesthetic score. Source agreement only breaks otherwise equal choices; adapted designs need their own rendered checks.
 
