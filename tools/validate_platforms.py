@@ -274,6 +274,24 @@ def validate(folder):
                 recipe_data = json.loads(recipe.stdout)
                 assert recipe_data["status"] == "ok"
                 assert recipe_data["recipe"]["checks"]["renderedStatus"] == "not-run"
+                science = subprocess.run(
+                    ["node", str(skill / "scripts/style-science.mjs")],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                    timeout=30,
+                )
+                science_report = json.loads(science.stdout)
+                node_major = int(
+                    subprocess.check_output(
+                        ["node", "-p", "process.versions.node.split('.')[0]"], text=True
+                    )
+                )
+                assert science_report["status"] == (
+                    "supported" if node_major >= 22 else "unsupported"
+                )
+                assert science_report["releaseEligible"] is False
+                assert science_report["networkRequired"] is False
                 brief = Path(temp) / "recipe-brief.json"
                 brief.write_text(
                     json.dumps(

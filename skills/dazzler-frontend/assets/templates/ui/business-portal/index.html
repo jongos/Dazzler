@@ -3,7 +3,7 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>The Review Folio</title
+  /><title>The Project Review Room</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
@@ -12,45 +12,47 @@
     <main>
       <header>
         <p class="eyebrow">FIELDWORK / CLIENT REVIEW</p>
-        <h1>The Courtyard Project</h1>
+        <h1>The Project Review Room</h1>
         <p class="lead">Review the material direction before detailed design begins.</p>
       </header>
-      <div class="folio-review">
-        <nav class="documents" aria-label="Project Documents">
-          <button data-doc="Materials">Materials</button
-          ><button data-doc="Schedule">Schedule</button>
-        </nav>
-        <article>
-          <p class="eyebrow">DOCUMENT PREVIEW</p>
-          <h2 id="preview-title">Materials</h2>
-          <p id="preview">
-            The proposal pairs reclaimed brick with pale timber and a permeable courtyard surface.
-            Final specifications and costs remain subject to confirmation.
-          </p>
-          <button id="approve">Mark Reviewed Locally</button>
-          <p id="status" role="status"></p>
-        </article>
+      <div class="review-room">
+        <section class="milestone-ribbon">
+          <h2>Project Sequence</h2>
+          <ol>
+            <li>06 Jun<br />Site Survey · Complete</li>
+            <li>20 Jun<br />Concept Review · Complete</li>
+            <li>04 Jul<br />Material Direction · Review</li>
+            <li>18 Jul<br />Detailed Design · Planned</li>
+          </ol>
+        </section>
+        <div class="review-sheet">
+          <nav class="documents" aria-label="Project Documents">
+            <button data-doc="Materials">Materials</button
+            ><button data-doc="Schedule">Schedule</button>
+          </nav>
+          <article>
+            <p class="eyebrow">DOCUMENT PREVIEW</p>
+            <h2 id="preview-title">Materials</h2>
+            <p id="preview">
+              The proposal pairs reclaimed brick with pale timber and a permeable courtyard surface.
+              Final specifications and costs remain subject to confirmation.
+            </p>
+            <button id="approve">Mark Reviewed Locally</button>
+            <p id="status" role="status"></p>
+          </article>
+        </div>
       </div>
-      <section class="milestone-ribbon">
-        <h2>Project Sequence</h2>
-        <ol>
-          <li>06 Jun<br />Site Survey · Complete</li>
-          <li>20 Jun<br />Concept Review · Complete</li>
-          <li>04 Jul<br />Material Direction · Review</li>
-          <li>18 Jul<br />Detailed Design · Planned</li>
-        </ol>
-      </section>
       <p>No approval or message is sent. Local review can be undone.</p>
     </main>
     <footer>
-      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
-      service.
+      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
+      no live service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "business-portal",
-        "title": "The Review Folio",
-        "prompt": "Use Dazzler to build a fictional the review folio. A two-page-like review folio makes the document preview primary, with a bottom milestone ribbon and reversible approval state. Preserve all synthetic data and working local controls. Use Libre Baskerville with #174878 on #E7F1FF. Compose for desktop and mobile; do not imply a live service.",
+        "title": "The Project Review Room",
+        "prompt": "Use Dazzler to design the project review room for its fictional reader task. A vertical milestone spine accompanies a document review sheet; document tabs sit across the sheet and the review action closes the evidence. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #3A5A13 and #E1F1C8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
         "data": {
           "milestones": ["06 Jun", "20 Jun", "04 Jul", "18 Jul"],
           "documents": ["Materials", "Schedule"]

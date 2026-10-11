@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: jongos/style-science
-          ref: 443f60c05385284548369057fa10fd4e9f1450a9
+          ref: 1b28e8e6cb4572e4aafc7814b65de0f576cc5907
           path: .upstream-style-science
       - run: python -O tools/vendor_gdc.py --source .upstream-style-science --check
       - run: python tools/validate_release.py

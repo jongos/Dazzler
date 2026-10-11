@@ -1,7 +1,7 @@
 {
   "id": "webapp-workspace",
-  "title": "The Revision Desk",
-  "prompt": "Use Dazzler to build a fictional the revision desk. A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk. Preserve all synthetic data and working local controls. Use Libre Baskerville with #79321A on #FFF4E9. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Author Notebook",
+  "prompt": "Use Dazzler to design the author notebook for its fictional reader task. A two-page writing notebook pairs a narrow revision margin with a broad editable manuscript; chapter context closes the desk. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #2544A0 and #D3DCFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "chapter": "At the River",
     "mode": "local manuscript"

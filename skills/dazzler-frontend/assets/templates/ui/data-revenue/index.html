@@ -3,49 +3,53 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>Annual Evidence Ledger</title
+  /><title>The Membership Observatory</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
       <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
     <main>
-      <header class="ledgerhead">
-        <div>
-          <p class="eyebrow">COMMON GROUND / 2021–2026</p>
-          <h1>Six Years,<br />Two Measures</h1>
-        </div>
-        <p class="lead">
-          Membership and revenue describe different parts of the same organization. Compare each on
-          its own scale.
-        </p>
-      </header>
-      <div class="actions">
-        <button data-metric="revenue" aria-pressed="true">Revenue</button
-        ><button data-metric="members" aria-pressed="false">Members</button>
-      </div>
-      <div class="evidencegrid">
-        <figure>
-          <figcaption id="chart-title"></figcaption>
-          <div id="chart"></div>
-          <p id="status" role="status"></p>
-        </figure>
-        <section>
-          <h2>The Annual Record</h2>
+      <div class="observatory">
+        <aside>
+          <header>
+            <p class="eyebrow">COMMON GROUND / 2021–2026</p>
+            <h1>The Membership Observatory</h1>
+            <p class="lead">
+              Membership and revenue describe different parts of the same organization. Compare each
+              on its own scale.
+            </p>
+          </header>
+          <div class="actions">
+            <button data-metric="revenue" aria-pressed="true">Revenue</button
+            ><button data-metric="members" aria-pressed="false">Members</button>
+          </div>
+        </aside>
+        <section class="plot">
+          <figure>
+            <figcaption id="chart-title"></figcaption>
+            <div id="chart"></div>
+            <p id="status" role="status"></p>
+          </figure>
+        </section>
+        <section class="wide">
+          <h2>The Exact Annual Record</h2>
           <div id="values"></div>
-          <p>Synthetic observations. Separate measures, not evidence of causality.</p>
+          <p>
+            Synthetic observations. Measures use separate scales and do not establish causality.
+          </p>
         </section>
       </div>
     </main>
     <footer>
-      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
-      service.
+      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
+      no live service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "data-revenue",
-        "title": "Annual Evidence Ledger",
-        "prompt": "Use Dazzler to build a fictional annual evidence ledger. An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead. Preserve all synthetic data and working local controls. Use Archivo with #154A9B on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+        "title": "The Membership Observatory",
+        "prompt": "Use Dazzler to design the membership observatory for its fictional reader task. A dark plotting wall gives the trend the full width; measure switches sit in a slim rail and the exact ledger follows below. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #8A274F and #FFF2B8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
         "data": {
           "years": [2021, 2022, 2023, 2024, 2025, 2026],
           "revenue": [84, 98, 121, 143, 168, 192],

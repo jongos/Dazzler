@@ -98,4 +98,4 @@ The retained recipe source is now public at Style Science commit `b29504abf762a4
 
 ## GDC Verifier
 
-The vendored GDC verifier in `skills/dazzler-frontend/scripts/gdc/` is by Jon Gosier and Style Science contributors, Apache-2.0. Its original LICENSE and committed-blob hashes accompany the pinned source revision in `provenance.json`. Source: https://github.com/jongos/style-science.
+The vendored GDC verifier, consumer contract, advisory decision and bounded comparison modules (upstream 0.3.0, commit `1b28e8e6cb4572e4aafc7814b65de0f576cc5907`) in `skills/dazzler-frontend/scripts/gdc/` is by Jon Gosier and Style Science contributors, Apache-2.0. Its original LICENSE and committed-blob hashes accompany the pinned source revision in `provenance.json`. Source: https://github.com/jongos/style-science.

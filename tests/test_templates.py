@@ -90,7 +90,8 @@ class TemplateTests(unittest.TestCase):
                 styles = ET.fromstring(z.read("word/styles.xml"))
                 self.assertFalse(styles.findall(".//w:pBdr", ns))
                 self.assertTrue(document.findall(".//w:tbl", ns))
-                self.assertTrue(document.findall(".//w:tblHeader", ns))
+                if t.get("dataPresentation") != "record-cards":
+                    self.assertTrue(document.findall(".//w:tblHeader", ns))
                 self.assertGreater(len("".join(document.itertext())), 700, t["id"])
                 sample = json.loads(
                     (templates.ROOT / t["dataset"]).read_text(encoding="utf8")
@@ -98,6 +99,9 @@ class TemplateTests(unittest.TestCase):
                 text = "".join(document.itertext())
                 self.assertIn(sample["lead"], text)
                 self.assertIn(sample["closing"], text)
+                for row in sample["rows"]:
+                    for value in row:
+                        self.assertIn(value, text, t["id"])
                 if t.get("architecture") == "service-proposal":
                     # Logical sections flow when edited; capture checks assert the sample page count.
                     self.assertFalse(document.findall('.//w:br[@w:type="page"]', ns))

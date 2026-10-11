@@ -15,6 +15,19 @@ FILES = {
     "schemas/plan.schema.json": "plan.schema.json",
     "examples/plan.json": "example-plan.json",
     "LICENSE": "LICENSE",
+    **{
+        name: name
+        for name in (
+            "decision.mjs",
+            "decision.py",
+            "canvas.mjs",
+            "canvas.py",
+            "consumer.mjs",
+            "consumer.py",
+            "consumer-contract.json",
+            "model-identity-policy.json",
+        )
+    },
 }
 
 
@@ -64,9 +77,17 @@ def vendor(source, check=False, revision=None):
             ):
                 errors.append(f"Vendored content drift: {name}")
         if {p.name for p in target.iterdir() if p.is_file()} != set(hashes) | {
-            "provenance.json"
+            "provenance.json",
+            "SOURCE.json",
         }:
             errors.append("Unexpected vendored file membership")
+        source_manifest = target / "SOURCE.json"
+        expected_source = {"sourceRevision": revision, "files": hashes}
+        if (
+            not source_manifest.is_file()
+            or json.loads(source_manifest.read_text()) != expected_source
+        ):
+            errors.append("Consumer source manifest drift")
         if errors:
             raise ValueError("\n".join(errors))
         print("GDC consumer matches committed upstream blobs", revision)
@@ -76,6 +97,10 @@ def vendor(source, check=False, revision=None):
         (target / name).write_bytes(value)
     (target / "provenance.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+    )
+    (target / "SOURCE.json").write_text(
+        json.dumps({"sourceRevision": revision, "files": hashes}, indent=2) + "\n",
+        encoding="utf-8",
     )
     print("Vendored GDC", package["version"], revision)
 

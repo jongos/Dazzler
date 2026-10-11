@@ -254,6 +254,12 @@ def export_document(content, system, destination, mode="document"):
             section.get("body", ""), str
         ):
             raise ValueError("Each section requires a string body")
+        rows = section.get("table")
+        if rows is not None and (
+            not isinstance(rows, list)
+            or any(not isinstance(row, list) or not row for row in rows)
+        ):
+            raise ValueError("Each table must be a list of nonempty row lists")
     sections = [
         {**section, "heading": case_heading(str(section.get("heading", "")), policy)}
         for section in sections
@@ -455,7 +461,7 @@ def export_document(content, system, destination, mode="document"):
                     raise ValueError(
                         "Split tables wider than six columns into separate slide tables"
                     )
-                for offset in range(1, len(rows), 6):
+                for offset in range(1, max(2, len(rows)), 6):
                     page_rows = [rows[0], *rows[offset : offset + 6]]
                     slide = prs.slides.add_slide(prs.slide_layouts[6])
                     slide.background.fill.solid()

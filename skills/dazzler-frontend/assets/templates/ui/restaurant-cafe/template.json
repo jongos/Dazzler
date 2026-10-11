@@ -1,7 +1,7 @@
 {
   "id": "restaurant-cafe",
-  "title": "The Counter Ledger",
-  "prompt": "Use Dazzler to build a fictional the counter ledger. A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket. Preserve all synthetic data and working local controls. Use Oswald with #A52D10 on #FFC64D. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Coffee Counter",
+  "prompt": "Use Dazzler to design the coffee counter for its fictional reader task. A numbered product counter sits beside a tall paper receipt; the cart remains visible beside the choices rather than above them. Retain the existing data and functional controls, with keyboard and mobile access. Use Oswald, #71224C and #FFE0EF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "products": [
       {

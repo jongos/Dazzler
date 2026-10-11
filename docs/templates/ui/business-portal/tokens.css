@@ -1,21 +1,17 @@
 :root {
-  --accent: #174878;
-  --paper: #e7f1ff;
-  --display: "Libre Baskerville";
+  --accent: #3a5a13;
+  --paper: #e1f1c8;
+  --display: "Poppins";
   --body-color: #17212b;
-  --feature-color: white;
-  --th-td-border-bottom: #8b9299;
-  --thead-background: #17212b;
+  --ink-color: white;
+  --sheet-background: white;
+  --th-td-border-bottom: #818b94;
   --thead-color: white;
   --button-color: white;
-  --focus-visible-outline: #d84100;
-  --body-background: white;
-  --input-not-type-checkbox-select-border: #66717a;
+  --button-aria-pressed-false-background: white;
   --input-not-type-checkbox-select-background: white;
   --input-not-type-checkbox-select-color: #17212b;
-  --button-aria-pressed-false-background: transparent;
-  --folio-review-background: white;
-  --folio-review-border: #174878;
-  --documents-background: #d1e4fc;
-  --milestone-ribbon-border-top: #174878;
+  --input-not-type-checkbox-select-border: #65747a;
+  --focus-visible-outline: #b02e00;
+  --review-sheet-background: white;
 }

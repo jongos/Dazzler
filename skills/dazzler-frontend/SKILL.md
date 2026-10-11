@@ -52,7 +52,7 @@ Use [local runtime guidance](references/local-runtime.md) for integrity, smalles
 - Clickable images, diagrams and floor plans: [interactive illustrations](references/interactive-illustrations.md). Provide named keyboard controls, useful region descriptions and a text equivalent.
 - Native documents/slides: use [generative document design](references/document-design-space.md) and [document craft](references/document-design.md). Develop distinctive page systems from the content; page color is deliberate, never assumed white. Verify actual Word/PDF renders and editing behavior.
 
-For reuse/performance, read [frontend engineering](references/frontend-engineering.md); for substantial task planning and evidence, [agent workflows](references/agent-workflows.md).
+Use [frontend engineering](references/frontend-engineering.md), [agent workflows](references/agent-workflows.md) and [GDC checks](references/gdc.md) as needed.
 
 ## Implement with available capabilities
 

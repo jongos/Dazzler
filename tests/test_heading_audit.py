@@ -14,6 +14,34 @@ from heading_audit import audit, collect, xml
 
 
 class HeadingAuditTests(unittest.TestCase):
+    def test_native_heading_breaks_and_tabs_preserve_word_boundaries(self):
+        with tempfile.TemporaryDirectory() as td:
+            word = Path(td) / "breaks.docx"
+            with zipfile.ZipFile(word, "w") as z:
+                z.writestr(
+                    "word/document.xml",
+                    '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:p><w:pPr><w:pStyle w:val="Heading1"/></w:pPr><w:r><w:t>Hello</w:t><w:br/><w:t>world</w:t><w:tab/><w:t>again</w:t></w:r></w:p></w:document>',
+                )
+            self.assertEqual(collect(word)[0]["text"], "Hello world again")
+            slides = Path(td) / "breaks.pptx"
+            with zipfile.ZipFile(slides, "w") as z:
+                z.writestr(
+                    "ppt/slides/slide1.xml",
+                    '<p:sld xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><p:sp><p:nvSpPr><p:nvPr><p:ph type="title"/></p:nvPr></p:nvSpPr><p:txBody><a:p><a:r><a:t>Hello</a:t></a:r><a:br/><a:r><a:t>world</a:t></a:r></a:p></p:txBody></p:sp></p:sld>',
+                )
+            self.assertEqual(collect(slides)[0]["text"], "Hello world")
+
+    def test_html_line_breaks_separate_words_but_inline_runs_do_not(self):
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "page.html"
+            path.write_text(
+                "<h1>Hello<br>world</h1><h2>Inter<em>national</em> Trade</h2>"
+            )
+            rows = collect(path)
+            self.assertEqual(rows[0]["text"], "Hello world")
+            self.assertEqual(rows[1]["text"], "International Trade")
+            self.assertEqual(audit(rows)["failures"][0]["expected"], "Hello World")
+
     def test_word_inheritance_tables_and_split_runs(self):
         ns = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
         with tempfile.TemporaryDirectory() as td:

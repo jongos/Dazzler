@@ -3,41 +3,49 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>The Lunch Index</title
+  /><title>The Lunch Bulletin</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
       <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
     <main>
-      <div class="lunch">
-        <header>
-          <p class="eyebrow">SAFFRON / UNTIL 15:00</p>
-          <h1>Find Your Lunch</h1>
-          <label for="search"
-            >Find a Dish<input id="search" type="search" placeholder="Lentil or chicken" /></label
-          ><label class="veg"><input id="veg" type="checkbox" /> Vegetarian Only</label>
-          <p id="result-count" role="status"></p>
-        </header>
-        <section aria-label="Lunch Dishes"><div id="menu-items"></div></section>
+      <header>
+        <p class="eyebrow">SAFFRON / UNTIL 15:00</p>
+        <h1>The Lunch Bulletin</h1>
+        <p class="lead">Explore the dishes and choose what suits your lunch.</p>
+      </header>
+      <div class="filterbar">
+        <label for="search"
+          >Find a Dish<input id="search" type="search" placeholder="Lentil or chicken" /></label
+        ><label class="veg"><input id="veg" type="checkbox" /> Vegetarian Only</label>
+        <p id="result-count" role="status"></p>
       </div>
-      <aside class="allergy">
-        <h2>Before You Order</h2>
-        <p>
-          Vegetarian labels describe ingredients, not allergy safety. Ask about preparation and
-          cross-contact. Sample USD prices; no orders are accepted.
-        </p>
-      </aside>
+      <div class="lunch-board">
+        <aside>
+          <aside class="allergy">
+            <h2>Before You Order</h2>
+            <p>
+              Vegetarian labels describe ingredients, not allergy safety. Ask about preparation and
+              cross-contact. Sample USD prices; no orders are accepted.
+            </p>
+          </aside>
+        </aside>
+        <section>
+          <h2>Today’s Dishes</h2>
+          <div id="menu-items"></div>
+        </section>
+      </div>
     </main>
     <footer>
-      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
-      service.
+      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
+      no live service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-menu",
-        "title": "The Lunch Index",
-        "prompt": "Use Dazzler to build a fictional the lunch index. An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note. Preserve all synthetic data and working local controls. Use Work Sans with #9D2226 on #FFE154. Compose for desktop and mobile; do not imply a live service.",
+        "title": "The Lunch Bulletin",
+        "prompt": "Use Dazzler to design the lunch bulletin for its fictional reader task. Search and dietary filters form a horizontal toolbar above a single-column illustrated-style dish ledger; the ingredient warning is a left margin note. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #203D9C and #BDEBFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
         "data": {
           "dishes": [
             { "name": "Roast Carrot Bowl", "price": 14 },

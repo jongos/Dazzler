@@ -1,7 +1,7 @@
 {
   "id": "data-revenue",
-  "title": "Annual Evidence Ledger",
-  "prompt": "Use Dazzler to build a fictional annual evidence ledger. An annual ledger puts the exact table beside a bounded comparison chart, with a compact measure-switching masthead. Preserve all synthetic data and working local controls. Use Archivo with #154A9B on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Membership Observatory",
+  "prompt": "Use Dazzler to design the membership observatory for its fictional reader task. A dark plotting wall gives the trend the full width; measure switches sit in a slim rail and the exact ledger follows below. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #8A274F and #FFF2B8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "years": [
       2021,

@@ -90,7 +90,8 @@ class ArchitectureTests(unittest.TestCase):
             ) as z:
                 doc = ET.fromstring(z.read("word/document.xml"))
                 self.assertTrue(doc.findall('.//w:pStyle[@w:val="Title"]', ns))
-                self.assertTrue(doc.findall(".//w:tblHeader", ns))
+                if item.get("dataPresentation") != "record-cards":
+                    self.assertTrue(doc.findall(".//w:tblHeader", ns))
                 self.assertFalse(
                     doc.findall(".//w:drawing", ns),
                     "Native copy, not a rasterized page",

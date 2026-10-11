@@ -1,7 +1,7 @@
 {
   "id": "restaurant-menu",
-  "title": "The Lunch Index",
-  "prompt": "Use Dazzler to build a fictional the lunch index. An indexed lunch board uses a narrow search column and a two-column dish field, followed by a clearly separated allergy note. Preserve all synthetic data and working local controls. Use Work Sans with #9D2226 on #FFE154. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Lunch Bulletin",
+  "prompt": "Use Dazzler to design the lunch bulletin for its fictional reader task. Search and dietary filters form a horizontal toolbar above a single-column illustrated-style dish ledger; the ingredient warning is a left margin note. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #203D9C and #BDEBFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "dishes": [
       {

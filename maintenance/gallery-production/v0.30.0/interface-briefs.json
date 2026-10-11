@@ -1,0 +1,202 @@
+[
+  {
+    "id": "webapp-workspace",
+    "prompt": "Use Dazzler to design the author notebook for its fictional reader task. A two-page writing notebook pairs a narrow revision margin with a broad editable manuscript; chapter context closes the desk. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #2544A0 and #D3DCFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Author Notebook",
+    "rationale": "A two-page writing notebook pairs a narrow revision margin with a broad editable manuscript; chapter context closes the desk.",
+    "font": "Young Serif",
+    "surface": "#D3DCFF / #2544A0",
+    "composition": "The Author Notebook",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Author Notebook",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A two-page writing notebook pairs a narrow revision margin with a broad editable manuscript; chapter context closes the desk.",
+    "structuralChanges": [
+      "A two-page writing notebook pairs a narrow revision margin with a broad editable manuscript; chapter context closes the desk.",
+      "Reorders controls and supporting evidence into the the author notebook sequence.",
+      "Uses Young Serif hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "webapp-board",
+    "prompt": "Use Dazzler to design the release staircase for its fictional reader task. A wide four-step production staircase leads from assignments to a separate publication checkpoint; the deadline is a lower closing band. Retain the existing data and functional controls, with keyboard and mobile access. Use Office Code Pro, #9C2A14 and #FFD74A. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Release Staircase",
+    "rationale": "A wide four-step production staircase leads from assignments to a separate publication checkpoint; the deadline is a lower closing band.",
+    "font": "Office Code Pro",
+    "surface": "#FFD74A / #9C2A14",
+    "composition": "The Release Staircase",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Release Staircase",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A wide four-step production staircase leads from assignments to a separate publication checkpoint; the deadline is a lower closing band.",
+    "structuralChanges": [
+      "A wide four-step production staircase leads from assignments to a separate publication checkpoint; the deadline is a lower closing band.",
+      "Reorders controls and supporting evidence into the the release staircase sequence.",
+      "Uses Office Code Pro hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "webapp-settings",
+    "prompt": "Use Dazzler to design the delivery switchboard for its fictional reader task. A compact settings console places delivery choices beside a tall confirmation clock and separates urgent-message policy beneath the form. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #442F89 and #E6D5FF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Delivery Switchboard",
+    "rationale": "A compact settings console places delivery choices beside a tall confirmation clock and separates urgent-message policy beneath the form.",
+    "font": "Poppins",
+    "surface": "#E6D5FF / #442F89",
+    "composition": "The Delivery Switchboard",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Delivery Switchboard",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A compact settings console places delivery choices beside a tall confirmation clock and separates urgent-message policy beneath the form.",
+    "structuralChanges": [
+      "A compact settings console places delivery choices beside a tall confirmation clock and separates urgent-message policy beneath the form.",
+      "Reorders controls and supporting evidence into the the delivery switchboard sequence.",
+      "Uses Poppins hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "data-revenue",
+    "prompt": "Use Dazzler to design the membership observatory for its fictional reader task. A dark plotting wall gives the trend the full width; measure switches sit in a slim rail and the exact ledger follows below. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #8A274F and #FFF2B8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Membership Observatory",
+    "rationale": "A dark plotting wall gives the trend the full width; measure switches sit in a slim rail and the exact ledger follows below.",
+    "font": "Young Serif",
+    "surface": "#FFF2B8 / #8A274F",
+    "composition": "The Membership Observatory",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Membership Observatory",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A dark plotting wall gives the trend the full width; measure switches sit in a slim rail and the exact ledger follows below.",
+    "structuralChanges": [
+      "A dark plotting wall gives the trend the full width; measure switches sit in a slim rail and the exact ledger follows below.",
+      "Reorders controls and supporting evidence into the the membership observatory sequence.",
+      "Uses Young Serif hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "data-operations",
+    "prompt": "Use Dazzler to design the station workbench for its fictional reader task. A horizontal station strip sits above a side-by-side reading and exception workbench; units and operating limits remain explicit. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #934100 and #FFFFFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Station Workbench",
+    "rationale": "A horizontal station strip sits above a side-by-side reading and exception workbench; units and operating limits remain explicit.",
+    "font": "Archivo",
+    "surface": "#FFFFFF / #934100",
+    "composition": "The Station Workbench",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Station Workbench",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A horizontal station strip sits above a side-by-side reading and exception workbench; units and operating limits remain explicit.",
+    "structuralChanges": [
+      "A horizontal station strip sits above a side-by-side reading and exception workbench; units and operating limits remain explicit.",
+      "Reorders controls and supporting evidence into the the station workbench sequence.",
+      "Uses Archivo hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "prompt": "Use Dazzler to design the garden invitation for its fictional reader task. A centered garden invitation introduces a narrow course trail with service notes alongside; the botanical drawing becomes a small stamp. Retain the existing data and functional controls, with keyboard and mobile access. Use Libre Baskerville, #173D2A and #CCFF79. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Garden Invitation",
+    "rationale": "A centered garden invitation introduces a narrow course trail with service notes alongside; the botanical drawing becomes a small stamp.",
+    "font": "Libre Baskerville",
+    "surface": "#CCFF79 / #173D2A",
+    "composition": "The Garden Invitation",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Garden Invitation",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A centered garden invitation introduces a narrow course trail with service notes alongside; the botanical drawing becomes a small stamp.",
+    "structuralChanges": [
+      "A centered garden invitation introduces a narrow course trail with service notes alongside; the botanical drawing becomes a small stamp.",
+      "Reorders controls and supporting evidence into the the garden invitation sequence.",
+      "Uses Libre Baskerville hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "restaurant-cafe",
+    "prompt": "Use Dazzler to design the coffee counter for its fictional reader task. A numbered product counter sits beside a tall paper receipt; the cart remains visible beside the choices rather than above them. Retain the existing data and functional controls, with keyboard and mobile access. Use Oswald, #71224C and #FFE0EF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Coffee Counter",
+    "rationale": "A numbered product counter sits beside a tall paper receipt; the cart remains visible beside the choices rather than above them.",
+    "font": "Oswald",
+    "surface": "#FFE0EF / #71224C",
+    "composition": "The Coffee Counter",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Coffee Counter",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A numbered product counter sits beside a tall paper receipt; the cart remains visible beside the choices rather than above them.",
+    "structuralChanges": [
+      "A numbered product counter sits beside a tall paper receipt; the cart remains visible beside the choices rather than above them.",
+      "Reorders controls and supporting evidence into the the coffee counter sequence.",
+      "Uses Oswald hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "restaurant-reservations",
+    "prompt": "Use Dazzler to design the seating request desk for its fictional reader task. A seating atlas occupies a wide left panel with a compact request form to its right; access guidance follows as a separate ribbon. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #6D370D and #FFEAA3. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Seating Request Desk",
+    "rationale": "A seating atlas occupies a wide left panel with a compact request form to its right; access guidance follows as a separate ribbon.",
+    "font": "Young Serif",
+    "surface": "#FFEAA3 / #6D370D",
+    "composition": "The Seating Request Desk",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Seating Request Desk",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A seating atlas occupies a wide left panel with a compact request form to its right; access guidance follows as a separate ribbon.",
+    "structuralChanges": [
+      "A seating atlas occupies a wide left panel with a compact request form to its right; access guidance follows as a separate ribbon.",
+      "Reorders controls and supporting evidence into the the seating request desk sequence.",
+      "Uses Young Serif hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "restaurant-menu",
+    "prompt": "Use Dazzler to design the lunch bulletin for its fictional reader task. Search and dietary filters form a horizontal toolbar above a single-column illustrated-style dish ledger; the ingredient warning is a left margin note. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #203D9C and #BDEBFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Lunch Bulletin",
+    "rationale": "Search and dietary filters form a horizontal toolbar above a single-column illustrated-style dish ledger; the ingredient warning is a left margin note.",
+    "font": "Archivo",
+    "surface": "#BDEBFF / #203D9C",
+    "composition": "The Lunch Bulletin",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Lunch Bulletin",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "Search and dietary filters form a horizontal toolbar above a single-column illustrated-style dish ledger; the ingredient warning is a left margin note.",
+    "structuralChanges": [
+      "Search and dietary filters form a horizontal toolbar above a single-column illustrated-style dish ledger; the ingredient warning is a left margin note.",
+      "Reorders controls and supporting evidence into the the lunch bulletin sequence.",
+      "Uses Archivo hierarchy with new control grouping and surface proportions."
+    ]
+  },
+  {
+    "id": "business-portal",
+    "prompt": "Use Dazzler to design the project review room for its fictional reader task. A vertical milestone spine accompanies a document review sheet; document tabs sit across the sheet and the review action closes the evidence. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #3A5A13 and #E1F1C8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "direction": "The Project Review Room",
+    "rationale": "A vertical milestone spine accompanies a document review sheet; document tabs sit across the sheet and the review action closes the evidence.",
+    "font": "Poppins",
+    "surface": "#E1F1C8 / #3A5A13",
+    "composition": "The Project Review Room",
+    "directionsConsidered": [
+      "A compact conventional dashboard",
+      "The Project Review Room",
+      "An immersive full-screen story"
+    ],
+    "selectionReason": "A vertical milestone spine accompanies a document review sheet; document tabs sit across the sheet and the review action closes the evidence.",
+    "structuralChanges": [
+      "A vertical milestone spine accompanies a document review sheet; document tabs sit across the sheet and the review action closes the evidence.",
+      "Reorders controls and supporting evidence into the the project review room sequence.",
+      "Uses Poppins hierarchy with new control grouping and surface proportions."
+    ]
+  }
+]

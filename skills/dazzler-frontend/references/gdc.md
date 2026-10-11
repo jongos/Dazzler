@@ -1,17 +1,44 @@
 # Generative Design Canvas
 
-Style Science owns the independent GDC core at [jongos/style-science](https://github.com/jongos/style-science). Dazzler consumes a versioned, hash-recorded copy in `scripts/gdc/`. The core supports JavaScript and Python. HTML is the initial rendering adapter, including React/Vue output; it is not the core implementation language.
+For substantial interfaces and HTML documents, use the offline consumer to check which instruments are available:
 
-For substantial HTML documents and interfaces, author a verification plan using [the example](../scripts/gdc/example-plan.json) and [schema](../scripts/gdc/plan.schema.json). Translate explicit content, style locks, contrast requirements and target viewports into requirements. Preserve the actual native implementation. Do not turn subjective preferences into hard constraints or routinely ask users for mathematical inputs.
+```shell
+node scripts/style-science.mjs
+node scripts/style-science.mjs --input review.json
+```
 
-Capture each declared environment with a host-provided Playwright Page and `capture(page, plan, environmentId)` from `scripts/gdc/html.mjs`. Set viewport/theme, render the actual artifact and exercise the relevant state before capture. The adapter does not navigate, launch a browser or install anything. Other collection tools may produce the same snapshot contract; disclose their provenance and coverage.
+This optional consumer requires Node 22+. Other Dazzler workflows keep their existing runtime requirements. Unsupported runtimes, missing modules and unknown checks fall back to existing design rules and native delivery gates. No network requests, model calls, browser installation or automatic design changes occur. Python 3.10+ consumers are also available in `scripts/gdc/`.
 
-Run `node scripts/gdc/engine.mjs plan.json snapshots.json` or `python scripts/gdc/gdc.py plan.json snapshots.json`. Both return pass, fail or unknown, with per-requirement measurements. Exit 0 means all declared checks passed; 2 is fail/unknown; 1 is invalid input. Missing environments, mismatched plan hashes and unsupported paint produce unknown, never pass. A failed required check excludes a candidate until repaired. Preserve the plan, observations and report with the artifact.
+## Measure the Actual Implementation
 
-Coverage is deliberately narrow: horizontal document overflow, declared text presence/layout visibility, explicit computed-style locks, and declared opaque sRGB text/background pairs. It does not prove absence of overlap or clipping, font glyph coverage, keyboard behavior, chart truth, page-break quality or complete accessibility. The contrast collector supports leaf text with its own opaque solid background and no detected effects; gradients, inherited fills and complex paint need other measurements. Do not redesign an artifact merely to satisfy the collector's limitations.
+Author a verification plan using [the example](../scripts/gdc/example-plan.json) and [schema](../scripts/gdc/plan.schema.json). Translate explicit content, style locks, contrast requirements and viewports into requirements. Do not turn preferences into hard constraints or ask users for mathematical inputs by default.
 
-Use the existing delivery gates for everything else. Record GDC reports as evidence for their specific measurements; they cannot pass distinction or replace final rendered review. Compare feasible candidates using the prompt and actual composition. There is no validated aesthetic ranking, universal weights, learned generator or demonstrated quality gain. DOCX, slides and motion retain their existing native workflows.
+Capture each declared environment with an existing Playwright Page and `capture(page, plan, environmentId)` from `scripts/gdc/html.mjs`. Render the real artifact and exercise its relevant state first. The adapter does not launch or navigate a browser. Other collectors can supply the same snapshot contract when their provenance and coverage are recorded.
 
-The external core preserves Dazzler reference knowledge with provenance and a curated executable registry. Imported guidance remains mixed guidance until individual claims are formalized. Existing mathematical palette exploration remains in the color engine; future migration must retain its numerical and legacy-output tests.
+Run `node scripts/gdc/engine.mjs plan.json snapshots.json` or `python scripts/gdc/gdc.py plan.json snapshots.json`. Missing environments, stale plan hashes and unsupported paint remain unknown. Required failures exclude a candidate until repaired. Preserve the plan, observations and report with the artifact.
 
-Research follows the core's evaluation protocol: compute-matched baseline, isolated representation/verification ablations, blinded human and task outcomes, and preregistration before data collection. Runtime portability and quality transfer are separate claims. Non-significance is not equivalence.
+Coverage is narrow: horizontal overflow, declared text presence/layout visibility, computed-style locks and opaque sRGB text/background pairs. It does not prove absence of overlap, font coverage, keyboard behavior, truthful charts, pagination or complete accessibility. Complex paint needs other measurements; do not redesign merely to satisfy a collector.
+
+## Compare Coherent Candidates
+
+Use `operation: "comparison"` with `plan`, `baseline`, `candidate` and `spec`. Each artifact supplies an ID, revision, snapshots and outcomes. Each outcome identifies the environment, metric, unit, instrument, context, artifact revision and lower/upper measurement bounds; its source must be `measurement`. The spec names the context and metrics with a direction and practical minimum effect.
+
+Use meaningful outcomes such as measured task duration or overflow under the same conditions. Missing observations, changed revisions and incompatible units stay unknown. Bounds yield improved, worsened, negligible or inconclusive results; they are not confidence intervals or aesthetic scores. A blocked candidate cannot win through another metric. Tradeoffs, visual craft and final selection remain with the agent and user.
+
+## Assess Existing Model Evidence
+
+Only when authorized observations already exist, use `operation: "decision"` with `plan`, `snapshots`, `contract` and `observations`. A contract names the decision, required textual context, complete design options and explicit abstention options. New contracts use `identityPolicy: "1.0.0"`.
+
+Bind baseline, reordered and relabeled observations to the exact contract fingerprint. Retain provider, requested model and resolved model separately. Aliases, bare digests and unknown providers are unpinned; mixed identities, stale bindings, ties, disagreement and missing context cannot become a confident recommendation. The reviewed identity policy is not a model recommendation or authentication mechanism. Never restamp historical judgments as new evidence.
+
+An upstream `releaseEligible` field describes version-pinned advisory evidence only. Dazzler's wrapper always leaves automatic action and release permission false. No model agreement establishes beauty or replaces a rendered check. Never transmit a brief or call a provider merely because this helper exists.
+
+## Keep Native Gates
+
+User and brand requirements remain first. Recipes remain adaptable starting points; the existing dataset has not changed. Keep typography, composition, content, responsive, accessibility and native Word/slide gates. These instruments do not select templates automatically or replace creative generation and visual review.
+
+The upstream consumer contract currently supports core verification, advisory decisions and bounded comparisons. Language, relations, retrieval, rendered inspection, token interchange, native DOCX adapters and constraint-repair experiments remain outside this shipped integration. Their research status does not justify default design rules.
+
+## Notes and Provenance
+
+Adapted from Jon Gosier's [Style Science](https://github.com/jongos/style-science), Apache-2.0, pinned to `1b28e8e6cb4572e4aafc7814b65de0f576cc5907`. Original module bytes and licenses are retained in `scripts/gdc/`; `provenance.json` records hashes and `SOURCE.json` supports capability inspection. Local inventory consistency is not independent authentication. Research and incomplete working-tree changes are not imported.

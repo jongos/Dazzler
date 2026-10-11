@@ -1,13 +1,16 @@
 :root {
-  --accent: #702659;
-  --paper: #fff4fa;
-  --display: "Libre Baskerville";
+  --accent: #183a71;
+  --paper: #ffffff;
+  --display: "Archivo";
   --body-color: #17212b;
-  --feature-color: white;
-  --th-td-border-bottom: #8b9299;
-  --thead-background: #17212b;
+  --ink-color: white;
+  --sheet-background: white;
+  --th-td-border-bottom: #818b94;
   --thead-color: white;
   --button-color: white;
-  --focus-visible-outline: #d84100;
-  --body-background: white;
+  --button-aria-pressed-false-background: white;
+  --input-not-type-checkbox-select-background: white;
+  --input-not-type-checkbox-select-color: #17212b;
+  --input-not-type-checkbox-select-border: #65747a;
+  --focus-visible-outline: #b02e00;
 }

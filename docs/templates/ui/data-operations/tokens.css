@@ -1,26 +1,19 @@
 :root {
-  --accent: #006a70;
-  --paper: #e0ffff;
-  --display: "Office Code Pro";
+  --accent: #934100;
+  --paper: #ffffff;
+  --display: "Archivo";
   --body-color: #17212b;
-  --feature-color: white;
-  --th-td-border-bottom: #8b9299;
-  --thead-background: #17212b;
+  --ink-color: white;
+  --sheet-background: white;
+  --th-td-border-bottom: #818b94;
   --thead-color: white;
   --button-color: white;
-  --focus-visible-outline: #d84100;
-  --body-background: white;
-  --input-not-type-checkbox-select-border: #66717a;
+  --button-aria-pressed-false-background: white;
   --input-not-type-checkbox-select-background: white;
   --input-not-type-checkbox-select-color: #17212b;
-  --button-aria-pressed-false-background: transparent;
-  --body-has-instrument-background: #062f36;
-  --body-has-instrument-color: #ffffff;
-  --instrument-color: #17212b;
-  --instrument-border: #006a70;
-  --stations-background: #c3ffff;
-  --inspector-background: white;
-  --exception-color: #17212b;
-  --exception-border-left: #ae1430;
-  --exception-background: white;
+  --input-not-type-checkbox-select-border: #65747a;
+  --focus-visible-outline: #b02e00;
+  --inspector-background: #ffe3b0;
+  --exception-border-left: #a5222b;
+  --exception-background: #fff0f1;
 }

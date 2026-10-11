@@ -1,0 +1,3 @@
+[tool.black]
+# Upstream files are verified byte-for-byte against their committed source.
+force-exclude = 'skills/dazzler-frontend/scripts/gdc/'

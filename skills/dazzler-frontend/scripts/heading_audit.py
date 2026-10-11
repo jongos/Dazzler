@@ -16,6 +16,14 @@ A = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
 P = "{http://schemas.openxmlformats.org/presentationml/2006/main}"
 
 
+def paragraph_text(element, namespace):
+    return "".join(
+        (node.text or "") if node.tag == namespace + "t" else " "
+        for node in element.iter()
+        if node.tag in {namespace + name for name in ("t", "br", "cr", "tab")}
+    )
+
+
 def xml(data):
     declarations = data.replace(b"\x00", b"").upper()
     if b"<!DOCTYPE" in declarations or b"<!ENTITY" in declarations:
@@ -79,9 +87,7 @@ def office(path):
                         rows.append(
                             {
                                 "location": f"{name}:p{i}",
-                                "text": "".join(
-                                    t.text or "" for t in para.iter(W + "t")
-                                ),
+                                "text": paragraph_text(para, W),
                             }
                         )
         else:
@@ -95,7 +101,7 @@ def office(path):
                             {
                                 "location": f"{name}:shape{i}",
                                 "text": " ".join(
-                                    "".join(t.text or "" for t in para.iter(A + "t"))
+                                    paragraph_text(para, A)
                                     for para in shape.iter(A + "p")
                                 ),
                             }
@@ -111,6 +117,8 @@ class WebHeadings(HTMLParser):
         self.ignore = 0
 
     def handle_starttag(self, tag, attrs):
+        if tag == "br" and not self.ignore:
+            self.handle_data(" ")
         if tag in ("script", "style", "template"):
             self.ignore += 1
         if self.ignore:

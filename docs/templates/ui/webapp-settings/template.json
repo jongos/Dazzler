@@ -1,7 +1,7 @@
 {
   "id": "webapp-settings",
-  "title": "Your Notification Day",
-  "prompt": "Use Dazzler to build a fictional your notification day. A horizontal daily rhythm pairs a schedule band with a two-column preferences form and explicit urgent-message exception. Preserve all synthetic data and working local controls. Use Work Sans with #00534A on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Delivery Switchboard",
+  "prompt": "Use Dazzler to design the delivery switchboard for its fictional reader task. A compact settings console places delivery choices beside a tall confirmation clock and separates urgent-message policy beneath the form. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #442F89 and #E6D5FF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "digestTimes": [
       "09:00",

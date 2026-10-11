@@ -6,6 +6,7 @@ import unittest
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "skills/dazzler-frontend/scripts"))
 
 
 def load(name):
@@ -22,6 +23,87 @@ evaluation = load("evaluate")
 
 
 class ProjectToolsTests(unittest.TestCase):
+    def test_document_rejects_malformed_table_rows_before_writing(self):
+        system = {
+            "fonts": {"body": "Arial", "heading": "Arial"},
+            "palette": {
+                "modes": {
+                    "light": {
+                        "tokens": {
+                            "text": "#111111",
+                            "background": "#FFFFFF",
+                            "border": "#666666",
+                        }
+                    }
+                }
+            },
+        }
+        for rows in (["abc"], [[]], {"column": "value"}, [["Header"], None]):
+            for mode in ("document", "docx", "pptx"):
+                with self.subTest(
+                    rows=rows, mode=mode
+                ), tempfile.TemporaryDirectory() as td:
+                    out = Path(td) / "output"
+                    with self.assertRaisesRegex(ValueError, "table"):
+                        project.export_document(
+                            {"sections": [{"body": "Text", "table": rows}]},
+                            system,
+                            out,
+                            mode,
+                        )
+                    self.assertFalse(out.exists())
+
+    def test_powerpoint_keeps_single_row_tables_and_paginated_rows(self):
+        try:
+            from pptx import Presentation
+        except ImportError:
+            self.skipTest("Native slide authoring dependency unavailable")
+        system = {
+            "fonts": {"body": "Arial", "heading": "Arial"},
+            "palette": {
+                "modes": {
+                    "light": {
+                        "tokens": {
+                            "text": "#111111",
+                            "background": "#FFFFFF",
+                            "border": "#666666",
+                        }
+                    }
+                }
+            },
+        }
+        with tempfile.TemporaryDirectory() as td:
+            for count in (0, 1, 2, 8):
+                with self.subTest(rows=count):
+                    rows = [[f"Row {i}"] for i in range(count)]
+                    out = Path(td) / f"rows-{count}.pptx"
+                    project.export_document(
+                        {"sections": [{"heading": "Data", "body": "", "table": rows}]},
+                        system,
+                        out,
+                        "pptx",
+                    )
+                    deck = Presentation(out)
+                    tables = [
+                        shape.table
+                        for slide in deck.slides
+                        for shape in slide.shapes
+                        if shape.has_table
+                    ]
+                    if count == 0:
+                        self.assertFalse(tables)
+                        continue
+                    self.assertTrue(tables)
+                    actual = [
+                        row.cells[0].text
+                        for table in tables
+                        for row in list(table.rows)[1:]
+                    ]
+                    self.assertEqual(actual, [row[0] for row in rows[1:]])
+                    self.assertTrue(
+                        all(table.cell(0, 0).text == "Row 0" for table in tables)
+                    )
+
     def test_css_import_omits_active_values_without_network_or_processes(self):
         from unittest.mock import patch
 

@@ -43,7 +43,7 @@ def create(output):
         "docs",
         "maintenance/phase6",
         "maintenance/recipe-integration",
-        "maintenance/gallery-production/v0.29.0/previous-v0.28.1",
+        "maintenance/gallery-production/v0.30.0/previous-v0.29.0",
     ):
         paths.extend(
             p
@@ -57,18 +57,22 @@ def create(output):
         for name in (
             ".npmrc",
             ".prettierrc.json",
+            "pyproject.toml",
             ".prettierignore",
             "AGENTS.md",
             "maintenance/MAINTENANCE.md",
             "maintenance/requirements.txt",
             "maintenance/GALLERY-GENERATION.md",
             "maintenance/gallery-release.json",
-            "maintenance/gallery-production/v0.29.0/document-briefs.json",
-            "maintenance/gallery-production/v0.29.0/interface-briefs.json",
-            "maintenance/gallery-production/v0.29.0/browser-checks.json",
-            "maintenance/gallery-production/v0.29.0/native-fonts.json",
-            "maintenance/gallery-production/v0.29.0/REVIEW.md",
-            "maintenance/gallery-production/v0.29.0/recipe-consideration.json",
+            "maintenance/gallery-production/v0.30.0/document-briefs.json",
+            "maintenance/gallery-production/v0.30.0/interface-briefs.json",
+            "maintenance/gallery-production/v0.30.0/browser-checks.json",
+            "maintenance/gallery-production/v0.30.0/native-fonts.json",
+            "maintenance/gallery-production/v0.30.0/REVIEW.md",
+            "maintenance/gallery-production/v0.30.0/recipe-consideration.json",
+            "maintenance/gallery-production/v0.30.0/font-consideration.json",
+            "maintenance/reports/adversarial-030.md",
+            "maintenance/reports/style-science-030.md",
             "maintenance/ONBOARDING.md",
             "maintenance/DESIGN-PHILOSOPHY.md",
             "maintenance/RELEASE-023.md",
@@ -151,16 +155,39 @@ def restore(source, target):
         names = [i.filename for i in entries]
         if len(set(names)) != len(names) or set(names) != set(manifest["files"]):
             raise ValueError("Archive inventory mismatch")
+        folded = {name.casefold() for name in names}
+        if len(folded) != len(names):
+            raise ValueError("Case-colliding archive entries")
         for info in entries:
             name = PurePosixPath(info.filename)
             if (
                 name.is_absolute()
+                or name.as_posix() != info.filename
+                or not name.parts
                 or ".." in name.parts
                 or "\\" in info.filename
-                or ":" in info.filename
-                or (info.external_attr >> 16) & 0o170000 == 0o120000
+                or any(c in info.filename for c in ':<>"|?*')
+                or any(ord(c) < 32 for c in info.filename)
+                or any(part.endswith((".", " ")) for part in name.parts)
+                or any(
+                    re.fullmatch(
+                        r"CON|PRN|AUX|NUL|COM[1-9\u00b9\u00b2\u00b3]|LPT[1-9\u00b9\u00b2\u00b3]",
+                        part.split(".")[0],
+                        re.I,
+                    )
+                    for part in name.parts
+                )
+                or (info.external_attr >> 16) & 0o170000 not in (0, 0o100000)
+                or info.is_dir()
+                or info.flag_bits & 1
             ):
                 raise ValueError("Unsafe archive entry")
+            if any(
+                parent.as_posix().casefold() in folded
+                for parent in name.parents
+                if parent != PurePosixPath(".")
+            ):
+                raise ValueError("Archive file/directory collision")
             if sha(z.read(info)) != manifest["files"][info.filename]:
                 raise ValueError("Modified archive entry")
         target.mkdir(parents=True)

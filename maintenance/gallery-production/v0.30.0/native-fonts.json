@@ -1,0 +1,42 @@
+{
+  "business": [
+    "/BAAAAA+ArialMT",
+    "/CAAAAA+Arial-BoldMT"
+  ],
+  "family": [
+    "/BAAAAA+Georgia",
+    "/CAAAAA+Georgia-Bold"
+  ],
+  "fun": [
+    "/BAAAAA+ArialMT",
+    "/CAAAAA+Arial-BoldMT"
+  ],
+  "legal": [
+    "/BAAAAA+ArialMT",
+    "/CAAAAA+Arial-BoldMT"
+  ],
+  "marketing": [
+    "/BAAAAA+ArialMT",
+    "/CAAAAA+Arial-BoldMT"
+  ],
+  "presentation": [
+    "/BAAAAA+Georgia",
+    "/CAAAAA+Georgia-Bold"
+  ],
+  "professional": [
+    "/BAAAAA+Consolas",
+    "/CAAAAA+Consolas-Bold"
+  ],
+  "restaurant": [
+    "/BAAAAA+Consolas",
+    "/CAAAAA+Consolas-Bold"
+  ],
+  "school": [
+    "/BAAAAA+Georgia",
+    "/CAAAAA+Georgia-Bold"
+  ],
+  "technical": [
+    "/BAAAAA+ArialMT",
+    "/CAAAAA+Arial-BoldMT"
+  ]
+}

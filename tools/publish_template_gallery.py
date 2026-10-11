@@ -57,12 +57,22 @@ Dazzler chooses the relevant typography, color, layout, chart and print treatmen
 """
     readme = ROOT / "README.md"
     text = readme.read_text(encoding="utf-8")
-    text = re.sub(
-        r"## ✦ Thirty templates.*?(?=## 🚀 Install Dazzler)",
-        lambda _: intro + "".join(markdown),
+    text, replacements = re.subn(
+        r"(?:## ✦ Thirty templates|## Thirty examples to build on).*?(?=## 🚀 Install Dazzler|## What runs locally)",
+        lambda _: intro.replace(
+            "## ✦ Thirty templates — the showcase collection",
+            "## Thirty examples to build on",
+        )
+        + "<details>\n<summary>View the complete snapshot gallery</summary>\n\n"
+        + "".join(markdown)
+        + "</details>\n\n",
         text,
         flags=re.S,
     )
+    if replacements != 1:
+        raise ValueError(
+            "Expected exactly one README gallery section; refusing a stale snapshot index"
+        )
     readme.write_text(text, encoding="utf-8")
     guide = ROOT / "docs/index.html"
     text = guide.read_text(encoding="utf-8")

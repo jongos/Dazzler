@@ -3,7 +3,7 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>The Revision Desk</title
+  /><title>The Author Notebook</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
@@ -12,45 +12,51 @@
     <main>
       <header>
         <p class="eyebrow">MARGIN / REVISION DESK</p>
-        <h1>One Chapter,<br />One Clear Thought.</h1>
+        <h1>The Author Notebook</h1>
         <p class="lead">A quiet place to draft, followed by a deliberate editing pass.</p>
       </header>
+      <div class="notebook-desk">
+        <aside>
+          <section class="revision">
+            <h2>The Next Revision</h2>
+            <blockquote>Let the landscape carry the change.</blockquote>
+            <details>
+              <summary>Open the Editing Checklist</summary>
+              <p>
+                Clarify the time jump. Retain the willow image. Read the final sentence aloud. Keep
+                a separate copy of important work.
+              </p>
+            </details>
+          </section>
+        </aside>
+        <div>
+          <section class="writing">
+            <label for="draft">Chapter One Manuscript</label
+            ><textarea id="draft">
+The river had changed its course since we last walked this bank. Where the old path ended, a narrow bridge now joined the two neighborhoods. We crossed slowly, reading the marks left by the winter water.
+
+On the far side, someone had planted a row of willows. Their roots held the edge of the new path.</textarea>
+            <div class="actions">
+              <button id="save">Save Draft Locally</button><span id="count"></span>
+            </div>
+            <p id="status" role="status"></p>
+          </section>
+        </div>
+      </div>
       <div class="chapterline">
         <span>01 · At the River</span><span>02 · The Returning Path</span
         ><span>03 · What We Kept</span>
       </div>
-      <section class="writing">
-        <label for="draft">Chapter One Manuscript</label
-        ><textarea id="draft">
-The river had changed its course since we last walked this bank. Where the old path ended, a narrow bridge now joined the two neighborhoods. We crossed slowly, reading the marks left by the winter water.
-
-On the far side, someone had planted a row of willows. Their roots held the edge of the new path.</textarea>
-        <div class="actions">
-          <button id="save">Save Draft Locally</button><span id="count"></span>
-        </div>
-        <p id="status" role="status"></p>
-      </section>
-      <section class="revision">
-        <h2>The Next Revision</h2>
-        <blockquote>Let the landscape carry the change.</blockquote>
-        <details>
-          <summary>Open the Editing Checklist</summary>
-          <p>
-            Clarify the time jump. Retain the willow image. Read the final sentence aloud. Keep a
-            separate copy of important work.
-          </p>
-        </details>
-      </section>
     </main>
     <footer>
-      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
-      service.
+      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
+      no live service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "webapp-workspace",
-        "title": "The Revision Desk",
-        "prompt": "Use Dazzler to build a fictional the revision desk. A top manuscript strip opens into a full-width writing sheet, followed by a horizontal revision desk. Preserve all synthetic data and working local controls. Use Libre Baskerville with #79321A on #FFF4E9. Compose for desktop and mobile; do not imply a live service.",
+        "title": "The Author Notebook",
+        "prompt": "Use Dazzler to design the author notebook for its fictional reader task. A two-page writing notebook pairs a narrow revision margin with a broad editable manuscript; chapter context closes the desk. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #2544A0 and #D3DCFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
         "data": { "chapter": "At the River", "mode": "local manuscript" },
         "action": "Save Draft Locally"
       }

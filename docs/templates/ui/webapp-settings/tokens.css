@@ -1,19 +1,17 @@
 :root {
-  --accent: #00534a;
-  --paper: #ffffff;
-  --display: "Work Sans";
+  --accent: #442f89;
+  --paper: #e6d5ff;
+  --display: "Poppins";
   --body-color: #17212b;
-  --feature-color: white;
-  --th-td-border-bottom: #8b9299;
-  --thead-background: #17212b;
+  --ink-color: white;
+  --sheet-background: white;
+  --th-td-border-bottom: #818b94;
   --thead-color: white;
   --button-color: white;
-  --focus-visible-outline: #d84100;
-  --body-background: white;
-  --input-not-type-checkbox-select-border: #66717a;
+  --button-aria-pressed-false-background: white;
   --input-not-type-checkbox-select-background: white;
   --input-not-type-checkbox-select-color: #17212b;
-  --button-aria-pressed-false-background: transparent;
-  --dayline-background: #00534a;
-  --dayline-color: white;
+  --input-not-type-checkbox-select-border: #65747a;
+  --focus-visible-outline: #b02e00;
+  --clock-color: white;
 }

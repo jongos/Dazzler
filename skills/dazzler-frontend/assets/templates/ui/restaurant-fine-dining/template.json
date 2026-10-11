@@ -1,7 +1,7 @@
 {
   "id": "restaurant-fine-dining",
-  "title": "The Seasonal Folio",
-  "prompt": "Use Dazzler to build a fictional the seasonal folio. A botanical course folio replaces the numeral poster with a table-centered menu reveal and a small service ledger. Preserve all synthetic data and working local controls. Use Young Serif with #6B224B on #FFF1F6. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Garden Invitation",
+  "prompt": "Use Dazzler to design the garden invitation for its fictional reader task. A centered garden invitation introduces a narrow course trail with service notes alongside; the botanical drawing becomes a small stamp. Retain the existing data and functional controls, with keyboard and mobile access. Use Libre Baskerville, #173D2A and #CCFF79. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "courses": 5,
     "seats": 12,

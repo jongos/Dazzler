@@ -1,0 +1,640 @@
+[
+  {
+    "id": "professional",
+    "family": "office-code-pro",
+    "representativeText": "Use Dazzler to create a fictional professional document and web edition for this task: Release the exchange in two stages. Keep the settlement hold until reconciliation is complete. Retain every supplied fact and qualification. Separate the 100 unresolved records in a narrow evidence column; lead with the explicit hold before the release register. Use Office Code Pro for the web and verified Consolas for native output, with #A52620 against #FFFFFF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "office-code-pro",
+        "name": "Office Code Pro",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+        "roles": [
+          "code",
+          "ui"
+        ],
+        "reference": "references/fonts/office-code-pro.md",
+        "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+        "license": "OFL-1.1",
+        "file": "OfficeCodePro-Regular.woff2",
+        "css_family": "Office Code Pro",
+        "css_weight": "400",
+        "css_style": "normal",
+        "bytes": 29216,
+        "alternatives": [
+          "OfficeCodePro-Regular.woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "legal",
+    "family": "archivo",
+    "representativeText": "Use Dazzler to create a fictional legal document and web edition for this task: The record supports delivery. It does not yet establish that the recipient accepted the revised terms. Retain every supplied fact and qualification. Read three dated records left to right, then distinguish the available record from the actions needed below. Use Archivo for the web and verified Arial for native output, with #183A71 against #FFFFFF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "archivo",
+        "name": "Archivo",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+        "roles": [
+          "ui",
+          "body",
+          "heading",
+          "display"
+        ],
+        "reference": "references/fonts/archivo.md",
+        "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+        "license": "OFL-1.1",
+        "file": "Archivo[wdth,wght].ttf",
+        "css_family": "Archivo",
+        "css_weight": "100 900",
+        "css_style": "normal",
+        "bytes": 658596,
+        "alternatives": [
+          "Archivo[wdth,wght].ttf"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "business",
+    "family": "poppins",
+    "representativeText": "Use Dazzler to create a fictional business document and web edition for this task: Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages. Retain every supplied fact and qualification. A proposal foldout separates fee and boundaries from the three staged deliverables; the fee is a side annotation, not the page opener. Use Poppins for the web and verified Arial for native output, with #4D2298 against #EAC7FF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "poppins",
+        "name": "Poppins",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+        "roles": [
+          "ui",
+          "heading",
+          "body"
+        ],
+        "reference": "references/fonts/poppins.md",
+        "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+        "license": "OFL-1.1",
+        "file": "Poppins-Regular.ttf",
+        "css_family": "Poppins",
+        "css_weight": "400",
+        "css_style": "normal",
+        "bytes": 160316,
+        "alternatives": [
+          "Poppins-Regular.ttf"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "fun",
+    "family": "archivo",
+    "representativeText": "Use Dazzler to create a fictional fun document and web edition for this task: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. Retain every supplied fact and qualification. A vertical event poster makes arrival details the top band and the program a stepped running order under a giant title. Use Archivo for the web and verified Arial for native output, with #452378 against #FF9068. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "archivo",
+        "name": "Archivo",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+        "roles": [
+          "ui",
+          "body",
+          "heading",
+          "display"
+        ],
+        "reference": "references/fonts/archivo.md",
+        "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+        "license": "OFL-1.1",
+        "file": "Archivo[wdth,wght].ttf",
+        "css_family": "Archivo",
+        "css_weight": "100 900",
+        "css_style": "normal",
+        "bytes": 658596,
+        "alternatives": [
+          "Archivo[wdth,wght].ttf"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "family",
+    "family": "young-serif",
+    "representativeText": "Use Dazzler to create a fictional family document and web edition for this task: A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday. Retain every supplied fact and qualification. A horizontal route joins the three days; packing and change instructions sit in separate bottom pockets. Use Young Serif for the web and verified Georgia for native output, with #145A3A against #FFF1AF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "young-serif",
+        "name": "Young Serif",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+        "roles": [
+          "heading",
+          "body",
+          "display"
+        ],
+        "reference": "references/fonts/young-serif.md",
+        "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+        "license": "OFL-1.1",
+        "file": "Young-Serif[wght].woff2",
+        "css_family": "Young Serif",
+        "css_weight": "300 700",
+        "css_style": "normal",
+        "bytes": 94656,
+        "alternatives": [
+          "Young-Serif[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "presentation",
+    "family": "libre-baskerville",
+    "representativeText": "Use Dazzler to create a fictional presentation document and web edition for this task: Test one late opening each week before committing to a permanent change. Retain every supplied fact and qualification. A two-panel argument pairs the proposed experiment with the decision criteria; supporting measures sit across the lower edge. Use Libre Baskerville for the web and verified Georgia for native output, with #173D75 against #C2E9FF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "libre-baskerville",
+        "name": "Libre Baskerville",
+        "score": 10,
+        "matched_moods": [],
+        "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+        "roles": [
+          "body",
+          "heading"
+        ],
+        "reference": "references/fonts/libre-baskerville.md",
+        "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+        "license": "OFL-1.1",
+        "file": "LibreBaskerville[wght].woff2",
+        "css_family": "Libre Baskerville",
+        "css_weight": "400 700",
+        "css_style": "normal",
+        "bytes": 63980,
+        "alternatives": [
+          "LibreBaskerville[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "school",
+    "family": "young-serif",
+    "representativeText": "Use Dazzler to create a fictional school document and web edition for this task: Compare drainage time in three soil samples. Record what happened before deciding why. Retain every supplied fact and qualification. A ruled field notebook starts with the experimental question, then nests the exact results between observations and limitations. Use Young Serif for the web and verified Georgia for native output, with #9A2D0B against #FFF5E4. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "young-serif",
+        "name": "Young Serif",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+        "roles": [
+          "heading",
+          "body",
+          "display"
+        ],
+        "reference": "references/fonts/young-serif.md",
+        "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+        "license": "OFL-1.1",
+        "file": "Young-Serif[wght].woff2",
+        "css_family": "Young Serif",
+        "css_weight": "300 700",
+        "css_style": "normal",
+        "bytes": 94656,
+        "alternatives": [
+          "Young-Serif[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "marketing",
+    "family": "oswald",
+    "representativeText": "Use Dazzler to create a fictional marketing document and web edition for this task: Make repair feel like a first choice. Show the work, explain the process and make booking simple. Retain every supplied fact and qualification. An oversized campaign statement leads into a narrow numbered channel register and an indented offer story. Use Oswald for the web and verified Arial for native output, with #1551A4 against #FFFFFF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "oswald",
+        "name": "Oswald",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+        "roles": [
+          "heading",
+          "display"
+        ],
+        "reference": "references/fonts/oswald.md",
+        "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+        "license": "OFL-1.1",
+        "file": "Oswald[wght].woff2",
+        "css_family": "Oswald",
+        "css_weight": "200 700",
+        "css_style": "normal",
+        "bytes": 71904,
+        "alternatives": [
+          "Oswald[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "restaurant",
+    "family": "office-code-pro",
+    "representativeText": "Use Dazzler to create a fictional restaurant document and web edition for this task: A short menu built around what is ready now. Choose a few dishes and share the table. Retain every supplied fact and qualification. Three course columns align dishes across a wide supper ledger; service time occupies a small running header and pairings close the page. Use Office Code Pro for the web and verified Consolas for native output, with #75243A against #F7D2DD. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "office-code-pro",
+        "name": "Office Code Pro",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+        "roles": [
+          "code",
+          "ui"
+        ],
+        "reference": "references/fonts/office-code-pro.md",
+        "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+        "license": "OFL-1.1",
+        "file": "OfficeCodePro-Regular.woff2",
+        "css_family": "Office Code Pro",
+        "css_weight": "400",
+        "css_style": "normal",
+        "bytes": 29216,
+        "alternatives": [
+          "OfficeCodePro-Regular.woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "technical",
+    "family": "archivo",
+    "representativeText": "Use Dazzler to create a fictional technical document and web edition for this task: Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch. Retain every supplied fact and qualification. A prominent stop strip precedes a sequential procedure with a separate right-hand verification register; evidence stays adjacent to the decision. Use Archivo for the web and verified Arial for native output, with #075866 against #D3FFF0. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+    "result": [
+      {
+        "id": "archivo",
+        "name": "Archivo",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+        "roles": [
+          "ui",
+          "body",
+          "heading",
+          "display"
+        ],
+        "reference": "references/fonts/archivo.md",
+        "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+        "license": "OFL-1.1",
+        "file": "Archivo[wdth,wght].ttf",
+        "css_family": "Archivo",
+        "css_weight": "100 900",
+        "css_style": "normal",
+        "bytes": 658596,
+        "alternatives": [
+          "Archivo[wdth,wght].ttf"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "webapp-workspace",
+    "family": "young-serif",
+    "representativeText": "Use Dazzler to design the author notebook for its fictional reader task. A two-page writing notebook pairs a narrow revision margin with a broad editable manuscript; chapter context closes the desk. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #2544A0 and #D3DCFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "young-serif",
+        "name": "Young Serif",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+        "roles": [
+          "heading",
+          "body",
+          "display"
+        ],
+        "reference": "references/fonts/young-serif.md",
+        "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+        "license": "OFL-1.1",
+        "file": "Young-Serif[wght].woff2",
+        "css_family": "Young Serif",
+        "css_weight": "300 700",
+        "css_style": "normal",
+        "bytes": 94656,
+        "alternatives": [
+          "Young-Serif[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "webapp-board",
+    "family": "office-code-pro",
+    "representativeText": "Use Dazzler to design the release staircase for its fictional reader task. A wide four-step production staircase leads from assignments to a separate publication checkpoint; the deadline is a lower closing band. Retain the existing data and functional controls, with keyboard and mobile access. Use Office Code Pro, #9C2A14 and #FFD74A. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "office-code-pro",
+        "name": "Office Code Pro",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+        "roles": [
+          "code",
+          "ui"
+        ],
+        "reference": "references/fonts/office-code-pro.md",
+        "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+        "license": "OFL-1.1",
+        "file": "OfficeCodePro-Regular.woff2",
+        "css_family": "Office Code Pro",
+        "css_weight": "400",
+        "css_style": "normal",
+        "bytes": 29216,
+        "alternatives": [
+          "OfficeCodePro-Regular.woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "webapp-settings",
+    "family": "poppins",
+    "representativeText": "Use Dazzler to design the delivery switchboard for its fictional reader task. A compact settings console places delivery choices beside a tall confirmation clock and separates urgent-message policy beneath the form. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #442F89 and #E6D5FF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "poppins",
+        "name": "Poppins",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+        "roles": [
+          "ui",
+          "heading",
+          "body"
+        ],
+        "reference": "references/fonts/poppins.md",
+        "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+        "license": "OFL-1.1",
+        "file": "Poppins-Regular.ttf",
+        "css_family": "Poppins",
+        "css_weight": "400",
+        "css_style": "normal",
+        "bytes": 160316,
+        "alternatives": [
+          "Poppins-Regular.ttf"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "data-revenue",
+    "family": "young-serif",
+    "representativeText": "Use Dazzler to design the membership observatory for its fictional reader task. A dark plotting wall gives the trend the full width; measure switches sit in a slim rail and the exact ledger follows below. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #8A274F and #FFF2B8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "young-serif",
+        "name": "Young Serif",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+        "roles": [
+          "heading",
+          "body",
+          "display"
+        ],
+        "reference": "references/fonts/young-serif.md",
+        "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+        "license": "OFL-1.1",
+        "file": "Young-Serif[wght].woff2",
+        "css_family": "Young Serif",
+        "css_weight": "300 700",
+        "css_style": "normal",
+        "bytes": 94656,
+        "alternatives": [
+          "Young-Serif[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "data-operations",
+    "family": "archivo",
+    "representativeText": "Use Dazzler to design the station workbench for its fictional reader task. A horizontal station strip sits above a side-by-side reading and exception workbench; units and operating limits remain explicit. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #934100 and #FFFFFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "archivo",
+        "name": "Archivo",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+        "roles": [
+          "ui",
+          "body",
+          "heading",
+          "display"
+        ],
+        "reference": "references/fonts/archivo.md",
+        "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+        "license": "OFL-1.1",
+        "file": "Archivo[wdth,wght].ttf",
+        "css_family": "Archivo",
+        "css_weight": "100 900",
+        "css_style": "normal",
+        "bytes": 658596,
+        "alternatives": [
+          "Archivo[wdth,wght].ttf"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "family": "libre-baskerville",
+    "representativeText": "Use Dazzler to design the garden invitation for its fictional reader task. A centered garden invitation introduces a narrow course trail with service notes alongside; the botanical drawing becomes a small stamp. Retain the existing data and functional controls, with keyboard and mobile access. Use Libre Baskerville, #173D2A and #CCFF79. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "libre-baskerville",
+        "name": "Libre Baskerville",
+        "score": 10,
+        "matched_moods": [],
+        "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+        "roles": [
+          "body",
+          "heading"
+        ],
+        "reference": "references/fonts/libre-baskerville.md",
+        "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+        "license": "OFL-1.1",
+        "file": "LibreBaskerville[wght].woff2",
+        "css_family": "Libre Baskerville",
+        "css_weight": "400 700",
+        "css_style": "normal",
+        "bytes": 63980,
+        "alternatives": [
+          "LibreBaskerville[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "restaurant-cafe",
+    "family": "oswald",
+    "representativeText": "Use Dazzler to design the coffee counter for its fictional reader task. A numbered product counter sits beside a tall paper receipt; the cart remains visible beside the choices rather than above them. Retain the existing data and functional controls, with keyboard and mobile access. Use Oswald, #71224C and #FFE0EF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "oswald",
+        "name": "Oswald",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+        "roles": [
+          "heading",
+          "display"
+        ],
+        "reference": "references/fonts/oswald.md",
+        "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+        "license": "OFL-1.1",
+        "file": "Oswald[wght].woff2",
+        "css_family": "Oswald",
+        "css_weight": "200 700",
+        "css_style": "normal",
+        "bytes": 71904,
+        "alternatives": [
+          "Oswald[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "restaurant-reservations",
+    "family": "young-serif",
+    "representativeText": "Use Dazzler to design the seating request desk for its fictional reader task. A seating atlas occupies a wide left panel with a compact request form to its right; access guidance follows as a separate ribbon. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #6D370D and #FFEAA3. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "young-serif",
+        "name": "Young Serif",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+        "roles": [
+          "heading",
+          "body",
+          "display"
+        ],
+        "reference": "references/fonts/young-serif.md",
+        "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+        "license": "OFL-1.1",
+        "file": "Young-Serif[wght].woff2",
+        "css_family": "Young Serif",
+        "css_weight": "300 700",
+        "css_style": "normal",
+        "bytes": 94656,
+        "alternatives": [
+          "Young-Serif[wght].woff2"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "restaurant-menu",
+    "family": "archivo",
+    "representativeText": "Use Dazzler to design the lunch bulletin for its fictional reader task. Search and dietary filters form a horizontal toolbar above a single-column illustrated-style dish ledger; the ingredient warning is a left margin note. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #203D9C and #BDEBFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "archivo",
+        "name": "Archivo",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+        "roles": [
+          "ui",
+          "body",
+          "heading",
+          "display"
+        ],
+        "reference": "references/fonts/archivo.md",
+        "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+        "license": "OFL-1.1",
+        "file": "Archivo[wdth,wght].ttf",
+        "css_family": "Archivo",
+        "css_weight": "100 900",
+        "css_style": "normal",
+        "bytes": 658596,
+        "alternatives": [
+          "Archivo[wdth,wght].ttf"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  },
+  {
+    "id": "business-portal",
+    "family": "poppins",
+    "representativeText": "Use Dazzler to design the project review room for its fictional reader task. A vertical milestone spine accompanies a document review sheet; document tabs sit across the sheet and the review action closes the evidence. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #3A5A13 and #E1F1C8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+    "result": [
+      {
+        "id": "poppins",
+        "name": "Poppins",
+        "score": 10,
+        "matched_moods": [],
+        "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+        "roles": [
+          "ui",
+          "heading",
+          "body"
+        ],
+        "reference": "references/fonts/poppins.md",
+        "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+        "license": "OFL-1.1",
+        "file": "Poppins-Regular.ttf",
+        "css_family": "Poppins",
+        "css_weight": "400",
+        "css_style": "normal",
+        "bytes": 160316,
+        "alternatives": [
+          "Poppins-Regular.ttf"
+        ],
+        "coverage_checked": true,
+        "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+      }
+    ]
+  }
+]

@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-11 — 0.30.0: Offline Design Checks and Reliable Exports
+
+**Changed:** Updated the pinned Style Science consumer to published commit 1b28e8e6cb4572e4aafc7814b65de0f576cc5907. Added an optional Node 22 offline wrapper for capabilities, advisory evidence and measured comparisons; it never calls a provider or authorizes a change. Recipe data and brand precedence are unchanged. Archive restore now rejects aliases, device names, case collisions and file/parent conflicts before writing. Document exports reject malformed rows, retain single-row PowerPoint tables and preserve heading boundaries across HTML, Word and PowerPoint breaks.
+
+**Added:** Thirty newly authored examples with editable native structure, themeable browser sources, exact fictional data and desktop/mobile review evidence. Refreshed the field guide and README gallery; its publisher now rejects a missing section rather than retaining stale captions. Regression fixtures cover hostile paths, malformed/empty/paginated tables, heading breaks, missing/stale model evidence, empty searches and repeated order clearing.
+
+**Why:** Keep design checks grounded in available evidence, prevent silent export errors and demonstrate the current skill through a varied new gallery.
+
+**Validation:** All 105 Node tests passed; 91 Python tests completed with one optional skip. Thirty gallery records passed freshness validation; ten Word files rendered as ten pages. Twenty browser examples passed heading, axe, overflow and applicable interaction checks at desktop/mobile widths. Field-guide/gallery checks, 121 browser font loads, font inventory, pinned-source verification, runtime integrity, links and formatting passed. All host archives are below 24 MB compressed and unpacked. Package extraction and offline restore are verified during shipment. Visual judgments remain agent observations; native pagination and actual host-upload acceptance remain host-dependent.
+
 ## 2026-10-08 — 0.29.0: Reproducible Recipes and a New Gallery
 
 **Changed:** Re-imported the byte-identical recipe payload from the public source commit and retained customer-confirmed permission qualifications. Re-authored the full gallery from task-specific briefs with current Dazzler guidance. Earlier maintenance fixes remain in commit 96665da.

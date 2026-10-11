@@ -3,46 +3,48 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  /><title>The Counter Ledger</title
+  /><title>The Coffee Counter</title
   ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
   <body>
     <nav class="top">
       <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
     </nav>
     <main>
-      <header class="cafehead">
-        <div>
-          <p class="eyebrow">PAPER CUP / OPEN 07:00–15:00</p>
-          <h1>First Coffee.<br />Then Everything Else.</h1>
-        </div>
-        <p class="lead">Three good reasons to stop.<br />A fictional pickup counter.</p>
+      <header>
+        <p class="eyebrow">PAPER CUP / OPEN 07:00–15:00</p>
+        <h1>The Coffee Counter</h1>
+        <p class="lead">Three good reasons to stop. A fictional pickup counter.</p>
       </header>
-      <section class="receipt">
-        <div>
-          <h2>Your Order</h2>
+      <div class="counter">
+        <section>
+          <h2>Choose Your Counter Order</h2>
+          <div class="actions">
+            <button data-filter="all" aria-pressed="true">All</button
+            ><button data-filter="coffee" aria-pressed="false">Coffee</button
+            ><button data-filter="bakery" aria-pressed="false">Bakery</button>
+          </div>
+          <div id="products"></div>
+          <p id="status" role="status"></p>
+          <p>Sample prices before tax. No purchase or pickup request is submitted.</p>
+        </section>
+        <aside class="receipt">
+          <h2>Your Sample Receipt</h2>
           <div id="cart">Your ticket is empty.</div>
-        </div>
-        <p>Subtotal <strong id="total">$0.00</strong></p>
-        <button id="clear">Clear Order</button>
-      </section>
-      <div class="actions">
-        <button data-filter="all" aria-pressed="true">All</button
-        ><button data-filter="coffee" aria-pressed="false">Coffee</button
-        ><button data-filter="bakery" aria-pressed="false">Bakery</button>
+          <p>Subtotal <strong id="total">$0.00</strong></p>
+          <button id="clear">Clear Order</button>
+          <p>Local demonstration. No order or payment is submitted.</p>
+        </aside>
       </div>
-      <div id="products"></div>
-      <p id="status" role="status"></p>
-      <p>Sample prices before tax. No purchase or pickup request is submitted.</p>
     </main>
     <footer>
-      Original design · Apache-2.0. Local font notices accompany the files. Synthetic data; no live
-      service.
+      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
+      no live service.
     </footer>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-cafe",
-        "title": "The Counter Ledger",
-        "prompt": "Use Dazzler to build a fictional the counter ledger. A horizontal receipt strip precedes a spacious product counter; the order remains visible without a sidebar ticket. Preserve all synthetic data and working local controls. Use Oswald with #A52D10 on #FFC64D. Compose for desktop and mobile; do not imply a live service.",
+        "title": "The Coffee Counter",
+        "prompt": "Use Dazzler to design the coffee counter for its fictional reader task. A numbered product counter sits beside a tall paper receipt; the cart remains visible beside the choices rather than above them. Retain the existing data and functional controls, with keyboard and mobile access. Use Oswald, #71224C and #FFE0EF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
         "data": {
           "products": [
             { "name": "Flat White", "price": 4.5 },

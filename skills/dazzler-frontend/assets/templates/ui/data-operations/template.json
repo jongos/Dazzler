@@ -1,7 +1,7 @@
 {
   "id": "data-operations",
-  "title": "Station Inspection Log",
-  "prompt": "Use Dazzler to build a fictional station inspection log. A vertical station selector becomes an inspection instrument beside a large live reading and a separate exception log. Preserve all synthetic data and working local controls. Use Office Code Pro with #006A70 on #E0FFFF. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Station Workbench",
+  "prompt": "Use Dazzler to design the station workbench for its fictional reader task. A horizontal station strip sits above a side-by-side reading and exception workbench; units and operating limits remain explicit. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #934100 and #FFFFFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "stations": [
       "Intake",

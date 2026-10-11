@@ -1,15 +1,23 @@
 {
   "schemaVersion": 1,
   "repository": "https://github.com/jongos/style-science",
-  "version": "0.1.0",
-  "sourceRevision": "443f60c05385284548369057fa10fd4e9f1450a9",
+  "version": "0.3.0",
+  "sourceRevision": "1b28e8e6cb4572e4aafc7814b65de0f576cc5907",
   "files": {
-    "engine.mjs": "cec18bfc39dcf7a512ce1e446024663e0534414907f3b04b27e7b9f679490f20",
+    "engine.mjs": "22240923ec5e537587c7220fb4f2de857a4f81ced2b578dfa0058295d2f287f0",
     "gdc.py": "74c3eadf09baa00d8be950cc504bf5d5add6ae0c8c8e7a2b66f4d1d06b5a242a",
     "html.mjs": "2751ee624cccac15cb6e64ef02844081806dad341f65720ff150cea1b365b1e3",
     "registry.json": "f02d13dfd0c4e46d419c8a2014b8c705210fe0f2117aee9f6c20d300b513b431",
     "plan.schema.json": "6890c305dc273635d1591cb93d67719f39809b65a542ab4a5d38968fbbe7a635",
     "example-plan.json": "4a35ae230795fc10744b2b745e519394b2dce867a1b496cccb4ce94b65dbac99",
-    "LICENSE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    "LICENSE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "decision.mjs": "3b41c1c81fed681337a554e7f03d100dedb6a09ff9b0e59bc8be41bdab2dbfbe",
+    "decision.py": "c388437d89987b2e3dd6f6cccd4c9b0f883721fbe83dfd35905134f814c47965",
+    "canvas.mjs": "d37f5064690eb7aac112f6e5939f3d64f66bf2fc9130dd3c90f0ab2484fa8241",
+    "canvas.py": "0ec55712196e3142725cd01f929c20aa04b9aca39c3da9352e243386ff854399",
+    "consumer.mjs": "706b7c51a567ec1473d4f1dbccc16f8a332631af2f26e880c902a2a25b49e5b9",
+    "consumer.py": "01c452bba825922b4a052104fa13250b187fb8a39f398fbb669e4fb549d1c834",
+    "consumer-contract.json": "d896ca36ec23f9785e60130e884df4fa78f41c0524062e948a6892e8c15bd31f",
+    "model-identity-policy.json": "1f051f238acd180fd0ed254fcdc26fbc6b1fee18b3433457d5c041ffc13c5942"
   }
 }

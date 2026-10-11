@@ -4,11 +4,11 @@
   "short": "Meet After Sunset",
   "tag": "ALDER STREET / SATURDAY 17 JULY",
   "lead": "An evening of food, records and small discoveries. Bring a friend and leave room for dessert.",
-  "accent": "#8A183A",
-  "paper": "#FFD950",
-  "font": "Oswald",
+  "accent": "#452378",
+  "paper": "#FF9068",
+  "font": "Archivo",
   "word": "Arial",
-  "layout": "program",
+  "layout": "The Neighborhood Poster",
   "stat": "17 JUL",
   "label": "17:00–22:00 · free entry",
   "intro": "This fictional neighborhood night market fills the pedestrian block between Pine and Alder. No tickets are required; individual stalls set their own prices.",
@@ -49,23 +49,23 @@
     ]
   ],
   "closing": "Fictional event · No real booking or attendance service.",
-  "prompt": "Use Dazzler to create a fictional fun document for its real reader task: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. Preserve the supplied numbers and qualifications. Develop a new the evening program composition, with a broad stage program makes time the navigation; practical arrival information occupies a distinct ticket panel. Use Oswald in HTML and verified Arial for native Word. Make print and mobile reading clear; use purposeful #8A183A color against #FFD950. Do not copy the earlier gallery layout.",
+  "prompt": "Use Dazzler to create a fictional fun document and web edition for this task: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. Retain every supplied fact and qualification. A vertical event poster makes arrival details the top band and the program a stepped running order under a giant title. Use Archivo for the web and verified Arial for native output, with #452378 against #FF9068. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
   "fontSelection": {
-    "id": "oswald",
-    "css_family": "Oswald",
-    "coverage_checked": true,
-    "license": "OFL-1.1"
+    "id": "archivo",
+    "css_family": "Archivo",
+    "license": "OFL-1.1",
+    "coverage_checked": false
   },
   "originalAccent": "#64204C",
   "originalPaper": "#FFE9A8",
   "colorDirection": "Vermilion night-market poster with violet and lemon counterpoints.",
   "fictional": true,
   "design": {
-    "accent": "#8A183A",
-    "secondary": "#8A183A",
-    "paper": "#FFD950",
+    "accent": "#452378",
+    "secondary": "#452378",
+    "paper": "#FF9068",
     "text": "#17212B",
-    "accentText": "#8A183A",
+    "accentText": "#452378",
     "onAccent": "#FFFFFF"
   },
   "document": [

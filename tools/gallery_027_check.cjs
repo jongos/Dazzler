@@ -5,7 +5,7 @@ const fs = require("node:fs/promises"),
 const { pathToFileURL } = require("node:url");
 (async () => {
   const root = path.resolve(
-      process.env.DAZZLER_GALLERY_STAGE || "maintenance/gallery-production/v0.29.0",
+      process.env.DAZZLER_GALLERY_STAGE || "maintenance/gallery-production/v0.30.0",
     ),
     out = path.join(root, "renders");
   await fs.mkdir(out, { recursive: true });
@@ -89,6 +89,12 @@ const { pathToFileURL } = require("node:url");
             assert.equal(await page.locator("#total").innerText(), "$9.00");
             await page.locator("#clear").click();
             assert.equal(await page.locator("#total").innerText(), "$0.00");
+            await page.locator("#clear").click();
+            assert.equal(await page.locator("#total").innerText(), "$0.00");
+            await page.locator('[data-filter="bakery"]').click();
+            assert.equal(await page.locator("#products article").count(), 1);
+            await page.locator('[data-filter="all"]').click();
+            assert.equal(await page.locator("#products article").count(), 3);
             break;
           case "restaurant-reservations":
             await page.locator('[data-zone="Quiet Corner"]').click();
@@ -97,6 +103,11 @@ const { pathToFileURL } = require("node:url");
             assert.match(await page.locator("#status").innerText(), /Quiet Corner.*Not confirmed/);
             break;
           case "restaurant-menu":
+            await page.locator("#search").fill("no-such-dish-030");
+            assert.equal(await page.locator("#menu-items article").count(), 0);
+            assert.match(await page.locator("#result-count").innerText(), /0 dishes/);
+            await page.locator("#search").fill("");
+            assert.equal(await page.locator("#menu-items article").count(), 4);
             await page.locator("#search").fill("lentil");
             assert.equal(await page.locator(".dish-row").count(), 2);
             await page.locator("#search").fill("zzzz");

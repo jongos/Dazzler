@@ -1,7 +1,7 @@
 {
   "id": "restaurant-reservations",
-  "title": "A Table That Fits",
-  "prompt": "Use Dazzler to build a fictional a table that fits. A request-first reservation sheet aligns date and party controls above three explicitly labeled atmosphere choices. Preserve all synthetic data and working local controls. Use Poppins with #215B38 on #FFFFFF. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Seating Request Desk",
+  "prompt": "Use Dazzler to design the seating request desk for its fictional reader task. A seating atlas occupies a wide left panel with a compact request form to its right; access guidance follows as a separate ribbon. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #6D370D and #FFEAA3. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "zones": [
       "Window Table",

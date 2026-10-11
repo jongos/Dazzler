@@ -1,16 +1,18 @@
 :root {
-  --accent: #164bb5;
-  --paper: #e7efff;
-  --display: "Office Code Pro";
+  --accent: #075866;
+  --paper: #d3fff0;
+  --display: "Archivo";
   --body-color: #17212b;
-  --feature-color: white;
-  --th-td-border-bottom: #8b9299;
-  --thead-background: #17212b;
+  --ink-color: white;
+  --sheet-background: white;
+  --th-td-border-bottom: #818b94;
   --thead-color: white;
   --button-color: white;
-  --focus-visible-outline: #d84100;
-  --body-background: white;
-  --note-background: white;
-  --note-border-top: #164bb5;
-  --note-first-child-border-color: #b7192f;
+  --button-aria-pressed-false-background: white;
+  --input-not-type-checkbox-select-background: white;
+  --input-not-type-checkbox-select-color: #17212b;
+  --input-not-type-checkbox-select-border: #65747a;
+  --focus-visible-outline: #b02e00;
+  --stop-background: #9e202c;
+  --stop-color: white;
 }

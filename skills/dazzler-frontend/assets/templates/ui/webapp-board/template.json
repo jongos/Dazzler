@@ -1,7 +1,7 @@
 {
   "id": "webapp-board",
-  "title": "The Production Rack",
-  "prompt": "Use Dazzler to build a fictional the production rack. A production rack puts four assignments into vertical ticket columns beneath a narrow deadline spine. Preserve all synthetic data and working local controls. Use Oswald with #4D21A3 on #F0E8FF. Compose for desktop and mobile; do not imply a live service.",
+  "title": "The Release Staircase",
+  "prompt": "Use Dazzler to design the release staircase for its fictional reader task. A wide four-step production staircase leads from assignments to a separate publication checkpoint; the deadline is a lower closing band. Retain the existing data and functional controls, with keyboard and mobile access. Use Office Code Pro, #9C2A14 and #FFD74A. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
   "data": {
     "tasks": [
       [
