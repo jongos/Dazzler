@@ -4,6 +4,12 @@ import path from "node:path";
 import { cli } from "./cli.mjs";
 import { readJSON } from "./runtime.mjs";
 const procedures = {
+  compact: [
+    "Review space use with density.mjs; respect explicit density locks",
+    "Remove empty wrappers, oversized hero/min-height regions and repeated padding before tuning gaps",
+    "Bring primary content and actions into useful view where the task calls for it; preserve required content, readable type and target sizes",
+    "Compare actual viewports, enlarged text and print before accepting; compact is an explicit request, never the automatic default",
+  ],
   audit: [
     "Read-only: inspect technical accessibility, responsive behavior and measured frontend performance within scope",
     "Return located findings, supporting evidence and unrun checks; keep design heuristics separate from verified failures",

@@ -20,7 +20,7 @@ Read `references/package-profile.json` when present and choose installed resourc
 
 Use [art direction](references/art-direction.md) for every output: push a bold, distinctive voice to the limits of the prompt, including basic professional work. Generic is unfinished. Use [open web composition](references/web-design-space.md); never ship helper defaults. Then use [the automatic workflow](references/automatic-workflow.md). Small fixes preserve the existing system. Consult [interface craft](references/interface-craft.md) for component details.
 
-Before substantial work, read the existing design record. [Persistent systems](references/persistent-systems.md) covers discovery, interchange and fluid type. Small edits need no new record.
+Before substantial work, read the existing design record. [Persistent systems](references/persistent-systems.md) covers discovery, interchange and fluid type.
 
 ## Typography, color and editorial craft
 
@@ -58,13 +58,15 @@ Use [frontend engineering](references/frontend-engineering.md), [agent workflows
 
 Follow [host routing](references/host-routing.md) when needed. Use the current project's framework and available capabilities. Do not install optional integrations, change platforms, deploy or perform other external actions without the user's authorization. This skill grants no commit, push or publishing permission.
 
+Review [space use](references/density.md) from the brief and rendered content; neither compact nor spacious is the default.
+
 ## Verify the result
 
 Apply [final artifact gates](references/delivery-gates.md) to **every Dazzler document and web page**, including output made by another skill or custom exporter. Audit final headings with `scripts/heading_audit.py`; repair failures before delivery. For dynamic pages or unsupported formats, audit a heading inventory and compare the rendered result. Preserve explicit user/brand/language exceptions; disclose unavailable coverage.
 
 Inspect narrow and wide layouts, font loading, content accuracy and the primary interactions. Check accessible names, keyboard/focus behavior, actual rendered contrast and relevant empty/error states. For print, inspect every rendered page and repair clipping, spillovers and inappropriate breaks. Run proportionate project tests. Use [the design audit](references/design-audit.md) for a substantial review; a build or screenshot alone proves neither usability nor complete accessibility.
 
-Deliver the artifact with a short explanation of what changed, what was checked and any unavailable verification. Do not imply backend behavior from a static/local demo. For authorized evaluation work use [the evaluation guide](references/evaluations.md); distinguish host observations from fixtures and unrun cases.
+Deliver the artifact with a short explanation of what changed, what was checked and any unavailable verification. Do not imply backend behavior from a static/local demo. For evaluations, distinguish observations from fixtures and unrun cases; see [guidance](references/evaluations.md).
 
 ## Notes and credits
 

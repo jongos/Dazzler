@@ -48,7 +48,7 @@
     "scripts/palette-space.mjs": "de2e29fd30370b5d50cfcf33d19fd191072f2dd8a017650b4a60b1b763f538f8",
     "scripts/project.py": "6ed33b0d310191293309cddbe27ccf013ae6dcde97f81dc486ff8f936e91e36a",
     "scripts/recipes.py": "5ed4f6b1b21aae5d9020967ef07513146c1057024ae1c9b7c82f193be2a84047",
-    "scripts/refinement.mjs": "7d3ec51c943eb01369a97b9f327a70126d87665f3c63bac0aa4c16ec099885fd",
+    "scripts/refinement.mjs": "ad815505a3a07e18e6f988ca772eb6bce9a1030c6a801fae047e6841130c81fb",
     "scripts/route.mjs": "d96c7030c0867180387314bf31185b9afa97ea483a0c70d9820f9bcf894c5256",
     "scripts/runtime.mjs": "69be947f7d6e7cc6443e9f3cb21f8949578bb9a2b7d1ab6d0e4feb66c3ada43c",
     "scripts/shadcn-theme.mjs": "23ba83a851254525407fc9330217a7d73d2251fbec88ef2f6713b20ae3d89bfd",
@@ -1709,6 +1709,8 @@
     "references/title-case.json": "d337c0d6e2aa7d55e35527715c38f13ae5cc7d17ea18e8026d1f83e9b202381a",
     "references/typography.md": "083fe29bf9dd2b42bb94d15caccfb1b39e4013ee604d6957030b6a129dbf2fc6",
     "references/visualization.md": "3af85c21533aea1c68f08e860af20dfb70ede9510f218886bba1fbe49871723f",
-    "references/web-design-space.md": "8ad6e8d90a7544df563038304e22cda92691dba51a5f96195f288e59bbe84ec2"
+    "references/web-design-space.md": "8ad6e8d90a7544df563038304e22cda92691dba51a5f96195f288e59bbe84ec2",
+    "scripts/density.mjs": "7b075db0113602172f74e439d82b646147bc28ed24b1a66385becf52ad7ba81f",
+    "references/density.md": "4f8c8c8fd4d5da96a4570e163499a1caa9fa95162c5e825a141975b05bd3c724"
   }
 }

@@ -55,7 +55,7 @@ const hosts = {
     "Then: /dazzler:dazzler-frontend …",
   ],
   gemini: [
-    "gemini extensions install https://github.com/jongos/Dazzler --ref v0.30.0",
+    "gemini extensions install https://github.com/jongos/Dazzler --ref v0.30.1",
     "Review consent, refresh Gemini, then ask it to use Dazzler.",
   ],
   cursor: [

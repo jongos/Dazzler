@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-18 — 0.30.1: Task-Led Density
+
+**Changed:** Density is decided from the brief and rendered content, without assuming compact or spacious output. The explicit compact refinement removes structural waste before tuning local gaps, while preserving content, readable type, targets and layout constraints.
+
+**Added:** A validated density planner with undecided automatic mode, tighter/roomier candidates, explicit choices and locked-layout handling; focused regression tests and skill guidance for viewport-height and print-space review.
+
+**Why:** Uniform spacing scaling does not address oversized heroes, empty wrappers or unnecessary distance from primary tasks. Useful whitespace must remain available when it serves the brief.
+
+**Validation:** All 110 JavaScript tests pass in the working tree; focused density tests verify neutral defaults, mixed evidence, explicit preferences, locks and invalid inputs. Templates and thumbnails were not regenerated. Earlier uncommitted gallery and policy work is excluded from this commit. Publication is not part of this update.
+
 ## 2026-10-11 — 0.30.0: Offline Design Checks and Reliable Exports
 
 **Changed:** Updated the pinned Style Science consumer to published commit 1b28e8e6cb4572e4aafc7814b65de0f576cc5907. Added an optional Node 22 offline wrapper for capabilities, advisory evidence and measured comparisons; it never calls a provider or authorizes a change. Recipe data and brand precedence are unchanged. Archive restore now rejects aliases, device names, case collisions and file/parent conflicts before writing. Document exports reject malformed rows, retain single-row PowerPoint tables and preserve heading boundaries across HTML, Word and PowerPoint breaks.
