@@ -171,3 +171,15 @@ Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with ru
 ### Comparison notes
 
 [Where Dazzler fits](docs/COMPARISON.md) compared to similar tools and resources out there.
+
+## Dazzler, Style Science and Longshot
+
+**Create with Dazzler. Reason with Style Science. Test with Longshot.**
+
+- [Dazzler](https://github.com/jongos/Dazzler) creates and refines interfaces and visual outputs.
+- [Style Science](https://github.com/jongos/style-science) makes design requirements, constraints and supporting evidence inspectable.
+- [Longshot](https://github.com/jongos/Longshot) independently walks rendered user tasks, challenges designer assumptions, and reports reproducible flaws and supported strengths.
+
+Carry the task and constraints through the process: create a design, check its declared requirements, then challenge the experience with Longshot. Use findings to guide separately authorized revisions and retest the same task. These are complementary tools, not a mandatory automated pipeline; passing checks or agent walkthroughs does not establish human usability.
+
+[Meet Longshot](https://jongos.github.io/Longshot/) · Skill: `longshot-human-centered-ui`.

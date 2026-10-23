@@ -509,3 +509,10 @@ Version 0.12.0 credits SVG.js 3.2.8, React Img Mapper 2.0.2, Vue Img Mapper 0.1.
 - **Added:** Versioned JavaScript/Python runtime copy, schema, example, provenance hashes and importer from the independent Style Science checkout.
 - **Why:** Separate portable executable knowledge from plugin prompts, while retaining native medium semantics and honest unknown outcomes.
 - **Validation:** Numerical, missing-evidence and cross-language conformance fixtures; actual browser adapter checks. Human quality benefits remain untested.
+
+## 2026-10-23 — Cross-Link the Design and Testing Companions
+
+- **Changed:** README and landing page explain Dazzler's creation role, Style Science's inspectable reasoning, and Longshot's independent task testing.
+- **Added:** Longshot repository and live website links, current skill identifier, and a bounded create/check/challenge/retest workflow.
+- **Why:** Make the three projects discoverable without implying automatic integration or human-validated usability.
+- **Validation:** Focused rendered checks at 1280px and 390px confirmed reciprocal repository and website links; screenshots inspected. Staged whitespace checked. Existing gallery-release validation fails on the unchanged baseline version mismatch; Jon explicitly approved a documentation-only publication exception on 2026-10-23. No runtime or gallery changes.
