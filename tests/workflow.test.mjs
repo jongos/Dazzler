@@ -64,6 +64,15 @@ test("Evidence coverage never converts omissions, failures or malformed claims t
   assert.equal(empty.missing.length, planWorkflow(task).checks.length);
   const observations = planWorkflow(task).checks.map((c) => ({
     id: c.id,
+    ...(c.requiredCases
+      ? {
+          cases: c.requiredCases.map((name) => ({
+            name,
+            status: "pass",
+            detail: "Synthetic test only",
+          })),
+        }
+      : {}),
     ...(c.id === "render"
       ? {
           renderReview: {

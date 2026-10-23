@@ -27,7 +27,7 @@ IDs are permanent identities, not severity numbers. Renames retain the ID; retir
 | DZ-015 | Editing resilience | Observed behavior |
 | DZ-101 | Text contrast | WCAG 2.2 SC 1.4.3 AA; 4.5:1 ordinary, 3:1 qualifying large text |
 | DZ-102 | Non-text contrast | WCAG 2.2 SC 1.4.11 AA; 3:1 for applicable identifying information |
-| DZ-103 | Pointer target size | WCAG 2.2 SC 2.5.8 AA; 24×24 CSS px, with exceptions |
+| DZ-103 | Pointer target size | WCAG 2.2 SC 2.5.8 AA; 24Ã—24 CSS px, with exceptions |
 | DZ-104 | Body measure | Existing Dazzler 60ch guidance, with overrides; not WCAG |
 | DZ-105 | Accessible name candidate | Requires semantic/interaction review |
 | DZ-106 | Form label candidate | Requires semantic/interaction review |
@@ -35,9 +35,9 @@ IDs are permanent identities, not severity numbers. Renames retain the ID; retir
 | DZ-108 | Image alternative candidate | Requires purpose/context review |
 | DZ-109 | Clipping candidate | Requires rendered review |
 
-Review applicability before declaring a standard failure. Target-size exceptions include sufficient spacing, equivalent controls, inline text, user-agent controls and essential presentation. The 44×44 target belongs to enhanced AAA guidance; a project may choose it, but it is not the AA minimum. Large text is at least 18pt or 14pt bold. Text and non-text contrast have distinct applicability and exceptions; do not apply 3:1 to every border. Do not round a failing ratio up to a pass. Unsupported compositing remains unmeasured.
+Review applicability before declaring a standard failure. Target-size exceptions include sufficient spacing, equivalent controls, inline text, user-agent controls and essential presentation. The 44Ã—44 target belongs to enhanced AAA guidance; a project may choose it, but it is not the AA minimum. Large text is at least 18pt or 14pt bold. Text and non-text contrast have distinct applicability and exceptions; do not apply 3:1 to every border. Do not round a failing ratio up to a pass. Unsupported compositing remains unmeasured.
 
-Browser body-measure candidates include a 0.5ch detection tolerance for approximate geometry. This is a screening tolerance, not a change to the existing 60ch design guidance. Actual character count varies with content and font; `ch` is not a universal characters-per-line measurement. Do not import a blanket 45–75-character rule or shrink typography to silence a warning.
+Browser body-measure candidates include a 0.5ch detection tolerance for approximate geometry. This is a screening tolerance, not a change to the existing 60ch design guidance. Actual character count varies with content and font; `ch` is not a universal characters-per-line measurement. Do not import a blanket 45â€“75-character rule or shrink typography to silence a warning.
 
 ## Impact and Evidence
 
@@ -53,11 +53,15 @@ Prioritize by tier, then shared-component/primary-task scope. Stable rule/locati
 
 `node scripts/review.mjs review.json` assesses a report with `target`, `revision` and `observations`. Each observation has `ruleId`, `location`, `status` (`pass`, `fail`, `not-run`, `excluded`), `source` (`measured`, `judged`), `verification` (`reproduced`, `observed`, `inferred`, `unavailable`), `evidence` (references) and `detail`. A failure additionally needs `fix` and `impact: {consequence, scope, reason}`. Consequence is `blocked-task`, `harm`, `degraded-task` or `presentation`; scope is `shared`, `primary` or `local`.
 
-For DZ-101–104, observed outcomes need `measurement` with `applicability` (`applies`, `exception`, `unknown`), a `reason`, and the appropriate values: `ratio` plus `largeText` boolean; `ratio`; `width` and `height` in CSS pixels; or `measureCh`. Unknown applicability requires `not-run`; a justified exception is `excluded`. Missing measurements cannot become measured passes. For qualitative reading concerns use DZ-004 or DZ-006 instead of inventing a number.
+For DZ-101â€“104, observed outcomes need `measurement` with `applicability` (`applies`, `exception`, `unknown`), a `reason`, and the appropriate values: `ratio` plus `largeText` boolean; `ratio`; `width` and `height` in CSS pixels; or `measureCh`. Unknown applicability requires `not-run`; a justified exception is `excluded`. Missing measurements cannot become measured passes. For qualitative reading concerns use DZ-004 or DZ-006 instead of inventing a number.
 
 The workflow assessor optionally accepts the same array as `reviewObservations`. Findings or not-run checks prevent an overall evidence-complete result. Existing reports without this field remain supported; their absence does not prove that detailed review occurred. Plans and results now carry stable rule IDs. Browser findings retain their legacy severity for compatibility and add rule/evidence labels; they require impact review before becoming prioritized findings. Unsupported contrast cases are explicitly listed as not-run.
 
 Neither helper opens evidence files, verifies truth, certifies accessibility nor authorizes release. Keep private evidence local. Agents construct the report from actual work; users need not fill JSON or answer aesthetic questionnaires.
+
+## Task-Specific Review IDs
+
+DZ-016: density (judgment). DZ-017: coordinatedViews (evidence). DZ-018: operationalState (evidence). DZ-019: expertSettings (evidence). These append to the existing registry without renumbering it. Density is not an accessibility standard or a universal compactness target.
 
 ## Notes and Sources
 

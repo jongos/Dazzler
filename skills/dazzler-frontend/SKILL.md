@@ -54,11 +54,11 @@ Use [local runtime guidance](references/local-runtime.md) for integrity, smalles
 
 Consult [engineering](references/frontend-engineering.md), [agents](references/agent-workflows.md) and [GDC](references/gdc.md) as needed.
 
+Choose [density](references/density.md) automatically by task and region, then revise from rendered evidence. Preserve preferences, readable type and usable controls.
+
 ## Implement with available capabilities
 
 Follow [host routing](references/host-routing.md) when needed. Use the project's framework and available tools. Do not install optional integrations, change platforms, deploy or perform other external actions without the user's authorization. This skill grants no commit, push or publishing permission.
-
-Review [space use](references/density.md) from the brief and rendered content; neither compact nor spacious is the default.
 
 ## Verify the result
 

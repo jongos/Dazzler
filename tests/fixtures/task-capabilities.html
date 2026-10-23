@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Synthetic Workbench</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:24px;font:16px/1.5 Arial;color:#14283d;background:#fff}h1{font-size:24px}button,input,select{font:inherit;min-height:44px}button{cursor:pointer}button:focus-visible{outline:3px solid #163fa3;outline-offset:2px}.toolbar{display:flex;gap:12px;flex-wrap:wrap}.views{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px}.views section{min-width:0;border:1px solid #8795a6;padding:16px}button[aria-pressed=true]{background:#173f8a;color:#fff}#rows,#plot{display:flex;flex-direction:column;gap:8px}.switch{display:none}.waste{padding-block:110px}body[data-density=tighter] .waste{padding-block:16px}p{max-width:60ch}fieldset{margin-top:20px;min-width:0}label{max-width:100%}input,select{max-width:100%}label{display:inline-block;margin:4px}#feedback{min-height:2em}
+@media(max-width:600px){body{padding:12px}.views{display:block}.views section{margin-top:12px}.switch{display:block}.views section:not(.visible){display:none}}
+</style><body>
+<h1>Synthetic Workbench</h1><p>Local fixture only. Actions simulate outcomes without a backend.</p>
+<div class="toolbar"><label>Workspace <select id="workspace"><option>A</option><option>B</option></select></label><label>Work scope <select id="scope"><option value="all">All jobs</option><option value="ready">Ready jobs</option></select></label><label>Search <input id="search"></label><button id="sort">Reverse Order</button><button id="clear">Clear Selection</button></div>
+<div class="switch"><button id="tableTab">Table View</button><button id="plotTab">Chart View</button></div>
+<div class="views"><section id="tableView" class="visible" aria-label="Job list"><h2>Jobs</h2><div id="rows"></div></section><section id="plotView" aria-label="Chart controls"><h2>Job Chart</h2><div id="plot"></div></section></div>
+<section class="waste"><h2>Decision Context</h2><p>This explanation deliberately starts with excessive wrapper padding, which the density test repairs without changing font or target size.</p><button id="apply">Process Selected Jobs</button></section><p id="feedback" role="status"></p>
+<fieldset><legend>Processing Settings</legend><label>Maximum wait (seconds) <input id="wait" type="number" min="0" max="60" value="15"></label><label><input id="retry" type="checkbox" checked> Retry failed jobs</label><label><input id="failSave" type="checkbox"> Simulate save failure</label><p id="settingStatus"></p><button id="preview">Apply for This Run</button><button id="save">Save as Default</button><button id="reset">Reset to Saved</button></fieldset>
+<script>
+const $=id=>document.getElementById(id);
+const data=[{id:'a',label:'Delivery',state:'ready'},{id:'b',label:'Delivery',state:'blocked'},{id:'c',label:'Inventory',state:'ready'}];
+let workspace='A',selected=new Set(),reverse=false,pending=false,settings={wait:15,retry:true},applied={...settings};
+const key=()=>`fixture:v1:user-1:${workspace}`;
+function write(){try{localStorage.setItem(key(),JSON.stringify({scope:$('scope').value,settings}));return true}catch{return false}}
+function load(){let stored;try{stored=JSON.parse(localStorage.getItem(key()))}catch{}settings={wait:15,retry:true};$('scope').value='all';
+ if(stored&&['all','ready'].includes(stored.scope))$('scope').value=stored.scope;
+ if(stored?.settings&&Number.isFinite(stored.settings.wait)&&stored.settings.wait>=0&&stored.settings.wait<=60&&typeof stored.settings.retry==='boolean')settings={wait:stored.settings.wait,retry:stored.settings.retry};
+ applied={...settings};reset();}
+function reset(){$('wait').value=settings.wait;$('retry').checked=settings.retry;$('settingStatus').textContent='Saved: '+settings.wait+' seconds; retry '+settings.retry}
+function visible(){return data.filter(d=>($('scope').value==='all'||d.state==='ready')&&d.label.toLowerCase().includes($('search').value.toLowerCase()))}
+function render(){const active=document.activeElement,focusId=active?.dataset?.id,focusContainer=active?.parentElement?.id;const rows=visible();selected=new Set([...selected].filter(id=>rows.some(d=>d.id===id)));if(reverse)rows.reverse();
+ for(const container of ['rows','plot']){$(container).replaceChildren();for(const row of rows){const b=document.createElement('button');b.dataset.id=row.id;b.textContent=`${row.label} ${row.id}: ${row.state}`;b.setAttribute('aria-pressed',String(selected.has(row.id)));b.onclick=()=>{selected.has(row.id)?selected.delete(row.id):selected.add(row.id);render()};$(container).append(b)}}
+ if(focusId&&["rows","plot"].includes(focusContainer)){const next=[...$(focusContainer).children].find(b=>b.dataset.id===focusId);next?.focus({preventScroll:true})}}
+$('scope').onchange=()=>{if(!write())$('feedback').textContent='Preferences not saved';render()};$('search').oninput=render;$('sort').onclick=()=>{reverse=!reverse;render()};$('clear').onclick=()=>{selected.clear();render()};
+$('workspace').onchange=()=>{workspace=$('workspace').value;selected.clear();$('search').value='';load();render()};
+for(const [button,view] of [['tableTab','tableView'],['plotTab','plotView']])$(button).onclick=()=>{for(const id of ['tableView','plotView'])$(id).classList.toggle('visible',id===view)};
+$('apply').onclick=async()=>{if(pending)return;pending=true;$('apply').disabled=true;const ids=[...selected],context=workspace;$('feedback').textContent='Processing '+ids.length+' jobs';await new Promise(r=>setTimeout(r,40));
+ if(context===workspace){const failed=ids.filter(id=>id==='b');selected=new Set(failed);$('feedback').textContent=`${ids.length-failed.length} completed; ${failed.length} failed`;render()}pending=false;$('apply').disabled=false};
+function draft(){const raw=$('wait').value,n=Number(raw);if(!raw.trim()||!Number.isFinite(n)||n<0||n>60){$('settingStatus').textContent='Enter 0 to 60 seconds';return null}return {wait:n,retry:$('retry').checked}}
+$('preview').onclick=()=>{const d=draft();if(d){applied=d;$('settingStatus').textContent=`This run: ${d.wait}; saved: ${settings.wait}`}};
+$('save').onclick=()=>{const d=draft();if(!d)return;if($('failSave').checked){$('settingStatus').textContent='Save failed; draft retained';return}const previous=settings;settings=d;if(!write()){settings=previous;$('settingStatus').textContent='Save failed; draft retained';return}applied={...d};reset()};$('reset').onclick=reset;
+load();render();
+</script></body></html>

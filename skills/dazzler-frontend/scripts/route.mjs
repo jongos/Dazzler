@@ -29,9 +29,11 @@ export function route(input = {}) {
       !input.workflow ||
       typeof input.workflow !== "object" ||
       Array.isArray(input.workflow) ||
-      Object.keys(input.workflow).some((k) => !["scope", "features"].includes(k))
+      Object.keys(input.workflow).some((k) => !["scope", "features", "density"].includes(k))
     )
-      throw Error("Workflow accepts scope and features; use route kind, framework and refinement");
+      throw Error(
+        "Workflow accepts scope, features and density; use route kind, framework and refinement",
+      );
     result.workflow = planWorkflow({
       ...input.workflow,
       kind,

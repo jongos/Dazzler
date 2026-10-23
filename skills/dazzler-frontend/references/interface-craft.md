@@ -6,6 +6,10 @@ Make grouping visible through relationships: tighter space within a unit, more s
 
 Use the [font workflow](typography.md) for actual font selection. Inspect long labels, empty data, large numbers and realistic paragraphs. For comparable numeric columns, use end/right alignment as appropriate to the content and locale, consistent precision, and supported tabular numerals; align headers with their values. Avoid layout shifts from weight changes unless space is reserved. Do not make secondary content unreadable to create hierarchy.
 
+## Task-Specific Interaction
+
+Infer relevant capabilities from the brief: use [coordinated views](coordinated-views.md) for linked representations, [operational state](operational-state.md) for persistent work context and bulk recovery, and [expert settings](expert-settings.md) for domain configuration. Add the corresponding workflow features internally; do not ask users to select them. Do not add capabilities the product does not need.
+
 ## Components and states
 
 Specify and exercise applicable states, rather than implementing only the resting appearance:

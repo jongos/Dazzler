@@ -70,6 +70,7 @@ jobs:
       - run: node tools/test_studio_browser.cjs dist/studio-browser
       - run: node tools/test_templates.cjs dist/browser --check-only
       - run: node tools/test_review_browser.cjs
+      - run: node tools/test_task_capabilities_browser.cjs dist/browser/task-capabilities
       - run: node tools/test_fieldguide.cjs dist/browser/fieldguide
       - run: node tools/test_template_gallery.cjs
       - run: python tools/recipe_smoke.py dist/browser/recipes

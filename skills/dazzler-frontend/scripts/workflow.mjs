@@ -7,8 +7,24 @@ import { cli } from "./cli.mjs";
 import { resolveRefinement } from "./refinement.mjs";
 import { ruleIdFor } from "./review-rules.mjs";
 import { reviewFindings } from "./review.mjs";
+import { planDensity } from "./density.mjs";
+
+export const CASE_REQUIREMENTS = Object.freeze({
+  density: Object.freeze(["task", "space", "access"]),
+  coordinatedViews: Object.freeze(["selection", "filter", "keyboard", "narrow"]),
+  operationalState: Object.freeze(["scope", "persistence", "recovery"]),
+  expertSettings: Object.freeze(["defaults", "validation", "save-reset"]),
+});
 
 const checks = {
+  density:
+    "Review primary task visibility and scrolling burden, structural waste versus local crowding, and reading/control access at representative sizes. Reconsider provisional region choices using actual rendered evidence.",
+  coordinatedViews:
+    "Exercise shared stable-ID selection from both views, filtering/removal, clear selection, keyboard access and narrow-screen view switching without losing context.",
+  operationalState:
+    "Exercise persistent scope versus transient search, account/workspace isolation, reload/reset, stale data and applicable partial bulk failures with recovery.",
+  expertSettings:
+    "Verify domain labels, units, defaults, invalid and dependent values, temporary overrides versus saved settings, save failure and reset scope.",
   edgeCases:
     "Before implementation select relevant failure cases; before delivery exercise them in the actual artifact, repair and recheck. Cover long/missing content, narrow layouts and zoom, font fallback, interaction recovery, and print breaks where applicable. Record cases, outcomes and exclusions; unavailable checks remain not-run.",
   distinction:
@@ -44,7 +60,7 @@ function text(value, label, limit = 2000) {
   return value;
 }
 export function planWorkflow(task = {}) {
-  object(task, ["kind", "framework", "scope", "intent", "features"], "workflow task");
+  object(task, ["kind", "framework", "scope", "intent", "features", "density"], "workflow task");
   const {
     kind = "interface",
     framework = "none",
@@ -58,19 +74,53 @@ export function planWorkflow(task = {}) {
   if (!["small", "substantial"].includes(scope)) throw Error("Unsupported scope");
   if (
     !Array.isArray(features) ||
-    features.length > 5 ||
+    features.length > 8 ||
     new Set(features).size !== features.length ||
-    features.some((f) => !["forms", "motion", "data", "print", "editable"].includes(f))
+    features.some(
+      (f) =>
+        ![
+          "forms",
+          "motion",
+          "data",
+          "print",
+          "editable",
+          "coordinatedViews",
+          "operationalState",
+          "expertSettings",
+        ].includes(f),
+    )
   )
     throw Error("Invalid workflow features");
   const refinement = resolveRefinement({ intent });
+  const densityInput = task.density === undefined ? {} : task.density;
+  planDensity(densityInput); // Validate before spreading; null is not omitted evidence.
+  const density = planDensity({
+    existingSystem: scope === "small",
+    ...(intent === "compact" ? { preference: "compact" } : {}),
+    ...densityInput,
+  });
   const ids = new Set(["content", "render", "headings", "distinction", "edgeCases"]);
   const references = new Set([
     "delivery-gates.md",
     "art-direction.md",
     "rendered-review.md",
     "review-rules.md",
+    "density.md",
   ]);
+  if (
+    scope === "substantial" ||
+    task.density !== undefined ||
+    ["compact", "layout", "adapt", "audit"].includes(intent)
+  )
+    ids.add("density");
+  for (const feature of features) {
+    const reference = {
+      coordinatedViews: "coordinated-views.md",
+      operationalState: "operational-state.md",
+      expertSettings: "expert-settings.md",
+    }[feature];
+    if (reference) references.add(reference);
+  }
   if (["interface", "document"].includes(kind)) references.add("gdc.md");
   if (scope === "substantial") {
     references.add("art-direction.md");
@@ -108,7 +158,15 @@ export function planWorkflow(task = {}) {
   for (const feature of features) ids.add(feature === "editable" ? "editability" : feature);
   return {
     schemaVersion: 1,
-    task: { kind, framework, scope, intent, features: [...features] },
+    task: {
+      kind,
+      framework,
+      scope,
+      intent,
+      features: [...features],
+      ...(task.density !== undefined ? { density: structuredClone(task.density) } : {}),
+    },
+    density,
     readOnly: refinement.readOnly,
     references: [...references],
     procedure: [
@@ -125,6 +183,7 @@ export function planWorkflow(task = {}) {
       ruleId: ruleIdFor(id),
       instruction: checks[id],
       status: "not-run",
+      ...(CASE_REQUIREMENTS[id] ? { requiredCases: [...CASE_REQUIREMENTS[id]] } : {}),
     })),
     limits:
       "A plan is not execution. Small scopes still require checks for any affected behavior. Add relevant features or use substantial scope when uncertain.",
@@ -197,7 +256,7 @@ export function assessEvidence(input) {
       throw Error("A render pass requires a revision-bound render review");
     if (observation.cases !== undefined) {
       if (
-        observation.id !== "edgeCases" ||
+        (observation.id !== "edgeCases" && !CASE_REQUIREMENTS[observation.id]) ||
         !Array.isArray(observation.cases) ||
         !observation.cases.length ||
         observation.cases.length > 32
@@ -220,6 +279,17 @@ export function assessEvidence(input) {
         observation.cases.some((c) => ["fail", "not-run"].includes(c.status)))
     )
       throw Error("An edge-case pass requires tested cases and no failed or unrun cases");
+    if (observation.status === "pass" && CASE_REQUIREMENTS[observation.id]) {
+      const cases = observation.cases ?? [];
+      if (
+        !cases.some((c) => c.status === "pass") ||
+        cases.some((c) => ["fail", "not-run"].includes(c.status)) ||
+        CASE_REQUIREMENTS[observation.id].some((name) => !cases.some((c) => c.name === name))
+      )
+        throw Error(
+          "A capability pass requires its named cases, tested coverage and no failed or unrun cases",
+        );
+    }
     if (observation.designReview !== undefined) {
       if (observation.id !== "distinction") throw Error("Design review belongs to distinction");
       const review = observation.designReview;

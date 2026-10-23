@@ -12,6 +12,47 @@ import tempfile
 import zipfile
 
 
+def validate_task_capabilities(skill, scratch):
+    task = Path(scratch) / "task-capabilities.json"
+    task.write_text(
+        json.dumps(
+            {
+                "features": ["coordinatedViews", "operationalState", "expertSettings"],
+                "density": {
+                    "regions": [
+                        {"id": "queue", "activities": ["scan", "compare"]},
+                        {"id": "explanation", "activities": ["read"]},
+                    ]
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    result = subprocess.run(
+        ["node", str(skill / "scripts/workflow.mjs"), "plan", str(task)],
+        capture_output=True,
+        encoding="utf-8",
+        check=True,
+        timeout=30,
+    )
+    plan = json.loads(result.stdout)
+    assert plan["density"]["selected"] == "mixed"
+    assert [r["selected"] for r in plan["density"]["regions"]] == ["tighter", "roomier"]
+    for name in ("density", "coordinatedViews", "operationalState", "expertSettings"):
+        check = next(c for c in plan["checks"] if c["id"] == name)
+        assert check["status"] == "not-run" and check["requiredCases"]
+    for reference in (
+        "coordinated-views.md",
+        "operational-state.md",
+        "expert-settings.md",
+    ):
+        assert reference in plan["references"]
+        assert (skill / "references" / reference).is_file()
+    assert "Copyright (c) 2026 Dembrandt" in (
+        skill / "references/dembrandt-LICENSE.txt"
+    ).read_text(encoding="utf-8")
+
+
 def validate(folder):
     from validate_release import validate as validate_source
     from install_skill import operate
@@ -545,6 +586,7 @@ def validate(folder):
                     check=True,
                 )
                 workflow_plan = json.loads(workflow_result.stdout)
+                validate_task_capabilities(skill, temp)
                 assert workflow_plan["readOnly"] is True
                 assert all(c["status"] == "not-run" for c in workflow_plan["checks"])
                 assert any(c["id"] == "forms" for c in workflow_plan["checks"])

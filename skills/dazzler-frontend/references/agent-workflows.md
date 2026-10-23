@@ -9,9 +9,13 @@ node scripts/workflow.mjs assess evidence.json
 
 Example task: `{"kind":"interface","framework":"react","scope":"substantial","intent":"adapt","features":["forms","motion"]}`.
 
-Kinds: interface, document, slides, chart, illustration. Frameworks: none, react, vue, other. Scopes: small, substantial. Intents use the shared refinement resolver. Optional features: forms, motion, data, print, editable. Infer these from the actual work; users do not need to supply JSON. `editable` requests edit-resilience checks for native output. A small scope still needs checks for affected functionality; select relevant features and broaden the scope when necessary.
+Kinds: interface, document, slides, chart, illustration. Frameworks: none, react, vue, other. Scopes: small, substantial. Intents use the shared refinement resolver. Optional features: forms, motion, data, print, editable, coordinatedViews, operationalState, expertSettings. Infer these from the actual work; users do not need to supply JSON. `editable` requests edit-resilience checks for native output. A small scope still needs checks for affected functionality; select relevant features and broaden the scope when necessary.
 
 For an existing route request, add `"workflow":{"scope":"substantial","features":["forms"]}`. The router uses its kind, framework and refinement intent to return a compatible workflow. Omitting workflow preserves the existing routing contract. The report names relevant reference files and starts every check as `not-run`.
+
+The optional `density` object uses [task-led density](density.md); infer it from actual content. Plans return a provisional density decision. Pass it under `workflow.density` when routing. The density check applies to substantial work, explicit density context and relevant layout intents. Feature-specific references load only when selected.
+
+For a pass on density or the three interaction capabilities, supply observation `cases` with each planned `requiredCases` name, status (pass/fail/not-run/excluded) and detail. At least one must be tested, none may fail or remain not-run; exclusions require reasons. Evidence references must identify actual tests/renders, not this schema.
 
 ## Focused Intents
 
@@ -40,6 +44,6 @@ The helper reports `findings`, `incomplete` or `evidence-complete`. The last mea
 
 ## Distinction Evidence
 
-Every planned scope includes distinction. For small edits, assess the affected area within the established voice; no surrounding redesign or standalone report is required. A `distinction` observation with `status: "pass"` requires `designReview` with nonempty `voice`, `promptFit`, `definingMove`, `restraint`, `supportingChoices` (1–8 concrete strings) and `verdict: "distinctive"`. Attach actual render references in the observation's `evidence`. A verdict of `generic` or `incoherent` cannot accompany a pass; record failure, revise the design and refresh the render. Missing reviews cannot establish completion. These are reported judgments, not machine-verified aesthetic quality.
+Every planned scope includes distinction. For small edits, assess the affected area within the established voice; no surrounding redesign or standalone report is required. A `distinction` observation with `status: "pass"` requires `designReview` with nonempty `voice`, `promptFit`, `definingMove`, `restraint`, `supportingChoices` (1â€“8 concrete strings) and `verdict: "distinctive"`. Attach actual render references in the observation's `evidence`. A verdict of `generic` or `incoherent` cannot accompany a pass; record failure, revise the design and refresh the render. Missing reviews cannot establish completion. These are reported judgments, not machine-verified aesthetic quality.
 
 The agent supplies this evidence from its work; users need not fill a form or approve an aesthetic. Do not add review metadata to the user-facing artifact. Keep read-only audits read-only.

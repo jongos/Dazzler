@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-23 — 0.31.1: Task-Led Density and Working Interfaces (Unreleased)
+
+**Changed:** Automatic density now chooses a provisional current/tighter/balanced/roomier/mixed direction from actual tasks and region evidence. Structural space, information relationships, components and reading remain separate; no global CSS compression is introduced. Existing systems, explicit preferences, brand locks and accessibility constraints retain precedence. Rendered waste/crowding can revise the decision.
+
+**Added:** Context-triggered guidance for coordinated views, operational state and expert settings, with named behavioral review cases and stable DZ-016–019 IDs. Dembrandt guidance is adapted with its pinned revision and MIT notice; no external runtime is added. Original synthetic fixtures exercise selection, filters, scoped persistence, partial failures and temporary versus saved settings. Platform editions inherit the canonical resources.
+
+**Why:** Automatic density previously remained undecided, while generic component guidance did not fully cover cross-view state and professional workflows. The new decisions remain contextual and provisional; expert users do not imply compactness, and long content does not imply wasted space.
+
+**Validation:** All 121 JavaScript tests pass. Synthetic browser scenarios cover shared selection, keyboard-focus retention, sorting/filtering, workspace isolation, reload/storage failures, partial bulk failure, invalid settings, zero/false persistence, temporary overrides and reset. Desktop/mobile/enlarged-text captures were inspected. Removing fixture wrapper waste moved the primary action up 94px without changing text or target size; this is not a design-quality benchmark. Earlier working-tree builds passed focused checks across ten archives (largest 22.32 MB unpacked). The isolated commit was separately rechecked with all 121 JavaScript tests, synthetic browser scenarios, integrity, version and links; the local full-catalog package is built from that snapshot. Source integrity covers 1,720 resources; links, version consistency and formatting pass. All 488 protected template/gallery files are byte-identical. Synthetic fixture captures are separate from the gallery. The full release/gallery freshness gate was not rerun or waived. This source push and local installation update exclude older uncommitted gallery work. Installation is built from the isolated committed source; the previous local skill is retained for recovery. No public release is published.
+
 ## 2026-10-23 — 0.31.0: Traceable Review Findings and Controlled Comparisons
 
 **Changed:** Workflow plans and assessed checks carry permanent rule IDs. Detailed findings distinguish measured evidence from judgment, derive confidence from evidence support, and rank blocking/important/polish by user impact. Browser candidates retain compatibility fields while exposing rule IDs, pending impact review and explicit unsupported contrast coverage. Existing design rules, palettes and density choices are unchanged.

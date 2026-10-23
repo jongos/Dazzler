@@ -1,11 +1,40 @@
 # Choose Density From the Task
 
-Neither compact nor spacious is the default. Interpret the brief, supplied documents, audience, content volume, interaction frequency, medium and existing system. Preserve explicit density and brand choices. Use `planDensity` from `scripts/density.mjs` to record candidate directions; automatic mode selects nothing. Its observations are supplied by the agent, not independent measurements.
+Automatically infer activities from the brief, supplied content and existing interface; users need not answer a density questionnaire. Explicit preferences, brand constraints and numeric token choices remain authoritative. Neither compactness nor whitespace is inherently better. Do not infer density solely from profession, industry, a small screen or a word such as professional.
 
-Review actual space use before delivery. Look for empty wrappers, oversized hero/min-height regions, stacked padding, unnecessarily separate cards and weak grouping that push useful content or controls down. Keep whitespace that supports comprehension, hierarchy, writing, imagery or touch interaction. Missing content is not permission to invent filler.
+## Provisional Selection
 
-Compare a tighter candidate when waste or displaced primary tasks justify it; compare a roomier candidate when crowding justifies it. Both can apply to different regions of one page. Reuse meaningful columns or inline relationships only when reading order and narrow-screen reflow remain clear. Remove structural waste before reducing gaps. Do not shrink body text, line spacing or targets, hide disclosures, truncate required content, or fill every pixel to achieve density.
+`planDensity` in `scripts/density.mjs` now selects a provisional direction instead of returning null in automatic mode. It does not change CSS. `workflow.mjs plan` includes the plan; pass optional `density` context there or through `route.mjs` under `workflow.density`. The agent supplies interpreted evidence, implements the appropriate relationships, renders, and revises the choice without routine user questions.
 
-The fold depends on viewport height, browser chrome and zoom. Inspect representative heights as well as widths, primary content/action visibility and scrolling burden. A long editorial page need not put everything above the fold. Native documents need real page renders, useful page fill and sensible breaks; avoid forcing everything onto one page.
+Inputs are optional and bounded:
 
-For an explicit request, use `refinement: {intent: "compact"}` or an existing numeric density control. The compact intent supplies a procedure without forcing a global spacing multiplier. Numeric controls remain optional and explicit token values win. Compare before/after content inventory, hierarchy, overflow, enlarged text, keyboard/focus, target sizes and print pagination. Repair regressions before delivery and report unavailable checks honestly.
+- `preference`: auto, compact, balanced or comfortable. `locked: true` preserves the current constraints even if observations suggest conflict.
+- `activities`: scan, compare, batch, read, learn, decide, showcase. Choose only actual tasks, not imagined user traits.
+- `contentVolume`: small, moderate or large; `inputMode`: pointer, touch or mixed. Unknown values are omitted rather than guessed.
+- `existingSystem`: retain established spacing unless explicit preference or observed problems justify a scoped change.
+- Observed `avoidableSpace`, `crowding`, `primaryTaskDisplaced`: booleans from actual review, not claims inferred from token values.
+- `regions`: 1–12 uniquely identified regions with the same fields except nested regions. Shared fields are inherited; region evidence can refine them. A shared explicit preference or lock cannot be overridden by a region.
+
+Repeated scanning/comparison/batch work favors bringing related information together. Reading, learning and consequential decisions favor useful separation. Mixed tasks start balanced or use region decisions. Sparse content alone never justifies stretching a page. With no evidence, start balanced for new work or preserve an existing system, then inspect. These are heuristics, not user-research findings.
+
+The output separates information organization, layout, component treatment and reading. It returns current, tighter, balanced, roomier or mixed, with rationale, candidates and not-run review status. No global spacing factor, font reduction, fixed row height or automatic content hiding is applied. Numeric density controls retain their existing explicit behavior.
+
+Example mixed screen:
+
+```json
+{"regions":[{"id":"queue","activities":["scan","compare"],"contentVolume":"large","inputMode":"mixed"},{"id":"decision","activities":["read","decide"]}]}
+```
+
+Keep the queue's comparisons close while giving the explanation deliberate grouping. Keep usable controls in both. A roomier reading region does not mean a giant title, oversized margins or a narrower page everywhere.
+
+## Render, Repair and Reconsider
+
+Inspect actual space use at representative viewport widths AND heights or printed page sizes. Identify empty wrappers, oversized hero/min-height areas, stacked padding, unnecessarily separate cards and repeated scrolling between related facts. Retain whitespace that supports comprehension, grouping, imagery, writing or interaction. Missing content is not permission to invent filler.
+
+Feed observed waste and crowding back into the planner. Both can coexist: remove wrapper waste while improving local separation. Displaced primary content alone does not prove waste; long documents and genuine content volume may need scrolling. Compare the same content and viewport before/after. Stop when the scoped task is accessible and observed problems are resolved, not when the screen reaches a target fill percentage.
+
+The `density` workflow check requires cases `task` (visibility, comparison and scrolling burden), `space` (waste versus crowding) and `access` (text, controls, reflow/zoom and applicable print behavior). Reference final-revision captures and actual tests. Preserve required content, disclosures, readable type/line spacing, the existing body-measure policy, focus, targets and logical reading order. An exclusion needs a reason; an unavailable check remains not-run. The helper validates reported coverage, not screenshot truth or aesthetic quality.
+
+## Notes and Credits
+
+Dazzler's planner and tests are original Apache-2.0 code. Context questions were informed by [Dembrandt operational guidance](https://github.com/dembrandt/dembrandt-skills/blob/c4ad177dea5b864f779f8c722f28cf04f760cb22/skills/operational-expert-tool-ui/SKILL.md), copyright 2026 Dembrandt, [MIT](dembrandt-LICENSE.txt). Its blanket compactness and fixed size prescriptions are not adopted.
