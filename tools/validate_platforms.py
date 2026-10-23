@@ -351,6 +351,7 @@ def validate(folder):
                         env=env,
                         capture_output=True,
                         text=True,
+                        encoding="utf-8",
                         timeout=30,
                     )
                     assert (
@@ -547,6 +548,39 @@ def validate(folder):
                 assert workflow_plan["readOnly"] is True
                 assert all(c["status"] == "not-run" for c in workflow_plan["checks"])
                 assert any(c["id"] == "forms" for c in workflow_plan["checks"])
+                assert all(
+                    c["ruleId"].startswith("DZ-") for c in workflow_plan["checks"]
+                )
+                finding_input = Path(temp) / "review-input.json"
+                finding_input.write_text(
+                    json.dumps(
+                        {
+                            "target": "synthetic package smoke test",
+                            "revision": "fixture",
+                            "observations": [
+                                {
+                                    "ruleId": "DZ-103",
+                                    "location": "fixture",
+                                    "status": "not-run",
+                                    "source": "measured",
+                                    "verification": "unavailable",
+                                    "evidence": [],
+                                    "detail": "No browser execution in this package fixture",
+                                }
+                            ],
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+                finding_result = subprocess.run(
+                    ["node", str(skill / "scripts/review.mjs"), str(finding_input)],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                )
+                finding_report = json.loads(finding_result.stdout)
+                assert finding_report["notRun"][0]["ruleId"] == "DZ-103"
+                assert finding_report["highestLeverage"] is None
                 subprocess.run(
                     [
                         sys.executable,

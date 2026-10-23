@@ -43,7 +43,7 @@ test("Open compositions export authored relationships and resume without mutatio
   assert.equal(result.status, "requires-render");
   assert(result.checks.every((x) => x.ratio >= 4.5));
   const built = tokens({ pageComposition: input, context: "enterprise finance" });
-  assert.equal(built.system.policy.tone, "expressive");
+  assert.equal(built.system.policy.tone, "auto");
   assert.deepEqual(built.system.pageComposition, input);
   assert.deepEqual(tokens(resumeConfig(built.system)), built);
   assert.throws(() => tokens({ schemaVersion: 2, pageComposition: input }));

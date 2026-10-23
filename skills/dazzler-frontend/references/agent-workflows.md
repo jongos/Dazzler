@@ -28,6 +28,10 @@ Existing bolder, quieter, typeset, colorize, polish, harden, critique and distil
 
 ## Record Only Observed Evidence
 
+Plans and results include permanent `ruleId` values. For prioritized findings, supply optional `reviewObservations` using [the finding-review schema](review-rules.md); its failures and not-run observations affect the overall evidence status. Existing observation IDs and reports remain compatible.
+
+Follow [rendered review](rendered-review.md) for the implementation/inspection loop and the required `renderReview` fields on a reported render pass. Generic evidence links alone cannot establish rendered review. No additional agents are required.
+
 An assessment input contains `task`, `target`, `revision` and `observations`. Target identifies the artifact or route; revision identifies the reviewed saved state (commit plus diff identifier, artifact hash, or another explicit snapshot). Each observation has a planned check `id`, `status` (pass, fail or not-run), `evidence` (an array of actual report/screenshot/test-log references) and `detail` (scope and finding). Pass and fail require at least one evidence reference. Missing observations remain not-run; unknown and duplicate check IDs are rejected.
 
 Use an empty observations array to see missing coverage. Never invent logs or use a screenshot as proof of untested interactions. An unavailable runtime is a not-run observation with a reason, not a pass. Keep evidence in the project's authorized review location; do not expose private content to an external service.

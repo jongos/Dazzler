@@ -119,7 +119,8 @@ async function boundedJSON(file) {
   }
 }
 async function collect(page) {
-  return page.evaluate(() => {
+  const { THRESHOLDS } = await import("./review-rules.mjs");
+  return page.evaluate((thresholds) => {
     const visible = (e) => {
       const r = e.getBoundingClientRect();
       const s = getComputedStyle(e);
@@ -154,13 +155,13 @@ async function collect(page) {
         const measureCh = ch
           ? (r.width - parseFloat(s.paddingLeft) - parseFloat(s.paddingRight)) / ch
           : 0;
-        if (measureCh > 60.5)
+        if (measureCh > thresholds.bodyMeasureCh + thresholds.bodyMeasureDetectionToleranceCh)
           designReview.push({
             check: "body-measure",
             selector,
             severity: "review",
             estimatedCh: +measureCh.toFixed(1),
-            recommendedMaxCh: 60,
+            recommendedMaxCh: thresholds.bodyMeasureCh,
             exception: "User width, grid/list structure, or short labels may justify retaining it",
           });
       }
@@ -185,7 +186,7 @@ async function collect(page) {
       }
       if (
         e.matches("button,a[href],[role=button]") &&
-        (r.width < 24 || r.height < 24) &&
+        (r.width < thresholds.targetMinimumCssPx || r.height < thresholds.targetMinimumCssPx) &&
         !e.closest("p,li,blockquote")
       )
         designReview.push({
@@ -321,7 +322,7 @@ async function collect(page) {
         "Repeated spacing values describe usage, not aesthetic correctness.",
       ],
     };
-  });
+  }, THRESHOLDS);
 }
 function rgb(s) {
   const m = /^rgb\((\d+),?\s+(\d+),?\s+(\d+)\)$/.exec(s);
@@ -334,6 +335,7 @@ function rgb(s) {
     : null;
 }
 async function inspect(page, engine, compositionContext = {}) {
+  const { THRESHOLDS, ruleIdFor } = await import("./review-rules.mjs");
   const report = await collect(page);
   const { reviewComposition } = await import(
     pathToFileURL(path.join(__dirname, "composition.mjs")).href
@@ -348,7 +350,10 @@ async function inspect(page, engine, compositionContext = {}) {
       continue;
     }
     t.ratio = engine.getContrastRatio(a, b);
-    t.minimum = t.fontSize >= 24 || (t.fontSize >= 18.66 && t.fontWeight >= 700) ? 3 : 4.5;
+    t.minimum =
+      t.fontSize >= 24 || (t.fontSize >= 18.66 && t.fontWeight >= 700)
+        ? THRESHOLDS.largeTextContrast
+        : THRESHOLDS.textContrast;
     t.status = t.ratio >= t.minimum ? "pass" : "fail";
     t.aaa = { minimum: t.minimum === 3 ? 4.5 : 7, informational: true };
     t.aaa.passes = t.ratio >= t.aaa.minimum;
@@ -361,6 +366,22 @@ async function inspect(page, engine, compositionContext = {}) {
         severity: "error",
       });
   }
+  for (const finding of [...report.findings, ...report.designReview]) {
+    finding.ruleId = ruleIdFor(finding.check);
+    finding.source = "measured";
+    finding.confidence = "medium";
+    finding.confidenceBasis =
+      "Single bounded DOM observation; applicability and impact need review";
+    finding.priorityStatus = "needs-impact-review";
+  }
+  report.notRun = report.texts
+    .filter((t) => t.status === "not-checked")
+    .map((t) => ({
+      ruleId: "DZ-101",
+      location: t.selector,
+      status: "not-run",
+      reason: "Unsupported color or background; inspect rendered compositing",
+    }));
   return report;
 }
 async function focusProbe(page) {

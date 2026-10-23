@@ -19,7 +19,7 @@ test("Protected heading cases share vectors with native document exports", () =>
     heading(repeated, { preserve: ["eBay"] }),
   );
 });
-test("New work is expressive across industries and explicit overrides survive resume", () => {
+test("New work defers art direction to the brief and saved explicit policies survive resume", () => {
   for (const context of [
     "legal memo",
     "finance dashboard",
@@ -28,7 +28,7 @@ test("New work is expressive across industries and explicit overrides survive re
     "enterprise admin",
     "compliance review",
   ])
-    assert.equal(resolvePolicy({ context }).tone, "expressive");
+    assert.equal(resolvePolicy({ context }).tone, "auto");
   for (const context of [
     "portfolio",
     "festival",
@@ -37,9 +37,10 @@ test("New work is expressive across industries and explicit overrides survive re
     "editorial story",
     "marketing site",
   ])
-    assert.equal(resolvePolicy({ context }).tone, "expressive");
+    assert.equal(resolvePolicy({ context }).tone, "auto");
   assert.equal(resolvePolicy({ context: "finance", tone: "reserved" }).tone, "reserved");
   assert.equal(resolvePolicy({ context: "finance", policyGeneration: 1 }).tone, "reserved");
+  assert.equal(resolvePolicy({ context: "legal memo", policyGeneration: 2 }).tone, "expressive");
   const legacy = tokens({ context: "finance", policyGeneration: 1 });
   delete legacy.system.configuration.policyGeneration;
   assert.equal(tokens(resumeConfig(legacy.system)).system.policy.tone, "reserved");

@@ -1,5 +1,7 @@
 # Evaluate behavior and implicit loading
 
+Design-output quality is separate from skill loading. Maintainers have a same-brief baseline/treatment protocol in the source checkout at `maintenance/value-study/README.md`, with synthetic website, dashboard and print-document briefs. It preserves all attempts, source hashes, host settings, budgets and unavailable outcomes. It is not part of normal skill invocation, does not authorize hosted spending, and must not turn fixture tests or failed host runs into quality claims.
+
 Use `scripts/evaluate.py` for artifact assertions with an authorized real host runner. Use `scripts/triggering.py --host HOST --out NEW_DIRECTORY --command-file argv.json` to compare the saved baseline description with the current one across 20 unnamed positive prompts and 10 near-miss negatives.
 
 The command file is a JSON argv array, never a shell expression. It may contain `{request_file}` and `{output_dir}` placeholders. Each request contains a prompt, candidate skill name/description and the required observation path. The adapter must start a fresh real host session, expose that candidate through the host's normal discovery mechanism, submit only the unnamed prompt, and record whether the host actually loaded it. Do not force invocation or show expected results to the model.

@@ -32,7 +32,7 @@ This helper exports CSS, not a complete website, prompt interpreter or aesthetic
 
 Inspect desktop and narrow renders at thumbnail and reading sizes. Can you identify the subject and main task before reading the explanation? Is the design distinguishable through structure, type and the main visual if its accent color is removed? Test the primary task by keyboard, verify the chart against its source, and check long content and reflow. Repair generic or incoherent output before delivery. Do not claim variety from random seeds, theoretical combination counts or changed screenshot hashes.
 
-New schema-3 work uses policy generation 2: expressive by default across industries. Explicit `tone: "reserved"` remains available. Older saved schema-3 configurations without a generation retain generation 1 on resume so existing projects do not silently change.
+New schema-3 work uses policy generation 3: `auto` leaves visual intensity to brief interpretation. Explicit tones win. Saved generations 1/2 retain their behavior; records without a generation resume generation 1. No policy prescribes a colored surface.
 
 ## Reference Observations and Credits
 

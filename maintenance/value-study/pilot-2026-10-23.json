@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "status": "blocked",
+  "hostVersion": "codex-cli 0.163.0-alpha.11.1",
+  "modelRequested": "gpt-6-astra",
+  "effortRequested": "low",
+  "timeoutSeconds": 240,
+  "suiteSha256": "e6b4d79eb405b394b615653278de01280aa076f8846a8d038e4314f4e5cde673",
+  "skillInventorySha256": "9580aa79414e7de7d07b0d0ae6d4398b3ce77a622ee67519a5e38859e62bd2f1",
+  "attempts": [
+    {
+      "id": "website",
+      "arm": "baseline",
+      "repetition": 1,
+      "seconds": 22.282,
+      "briefSha256": "9ab674a0138fbd02b898bea42d1df69acc35a28d876a90efa68f245b7609b938",
+      "promptSha256": "f88beca97f3e3544add0f395a453820dfbb7bffc1f2c8e913665adcd21105518",
+      "artifactPresent": false,
+      "eligibleForReview": false,
+      "status": "host-policy-blocked",
+      "skillReadObserved": false,
+      "usage": {
+        "input_tokens": 53413,
+        "cached_input_tokens": 39168,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 300,
+        "reasoning_output_tokens": 47
+      },
+      "traceSha256": "d7148b9e8e4798f863f297d3d32d8b8f63a798720fa09cbe98da8ccab0be0955",
+      "stderrSha256": "19e39e666f0896224870651c3034f326b4e3051e10477a595ee25ac8b58a2145"
+    },
+    {
+      "id": "website",
+      "arm": "dazzler",
+      "repetition": 1,
+      "seconds": 22.266,
+      "briefSha256": "9ab674a0138fbd02b898bea42d1df69acc35a28d876a90efa68f245b7609b938",
+      "promptSha256": "0ef311813bdd1eeaca30bd8bdecadac3a17620f27dcb7f97747e242554ed68d4",
+      "artifactPresent": false,
+      "eligibleForReview": false,
+      "status": "host-policy-blocked",
+      "skillReadObserved": false,
+      "usage": {
+        "input_tokens": 53470,
+        "cached_input_tokens": 41600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 369,
+        "reasoning_output_tokens": 38
+      },
+      "traceSha256": "7b3bb2ccc9bbb7092a84f0e922fb63fdd05a64639e5f82367802f8e84cb11f52",
+      "stderrSha256": "01933ca6126d03a7e4492a2055db41810088e207dfb4ecdeca93066ec54a04b5"
+    },
+    {
+      "id": "dashboard",
+      "arm": "dazzler",
+      "repetition": 1,
+      "seconds": 25.812,
+      "briefSha256": "1f45f7f9fc516e469d910255900cd14cf1d65521c784b636a39e33680eb471ee",
+      "promptSha256": "4b208a2422d8c30f4e142180ce47ab27f53cd261b9b6f5ee045f949daef34d00",
+      "artifactPresent": false,
+      "eligibleForReview": false,
+      "status": "host-policy-blocked",
+      "skillReadObserved": false,
+      "usage": {
+        "input_tokens": 78754,
+        "cached_input_tokens": 63616,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 356,
+        "reasoning_output_tokens": 24
+      },
+      "traceSha256": "e13ba360cf416b541411989794e0b5f396c9f4b573c2af7e545e0bd108d2a890",
+      "stderrSha256": "dd3a82f5ca216c89bea022c8ede41a87d19f803cec43824c86ea532ca754fa27"
+    },
+    {
+      "id": "dashboard",
+      "arm": "baseline",
+      "repetition": 1,
+      "seconds": 23.094,
+      "briefSha256": "1f45f7f9fc516e469d910255900cd14cf1d65521c784b636a39e33680eb471ee",
+      "promptSha256": "5503869c0b11cb4e419369cd6f2c34c9decb65da72ee92e9910c439b714d4753",
+      "artifactPresent": false,
+      "eligibleForReview": false,
+      "status": "host-policy-blocked",
+      "skillReadObserved": false,
+      "usage": {
+        "input_tokens": 53425,
+        "cached_input_tokens": 41344,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 314,
+        "reasoning_output_tokens": 56
+      },
+      "traceSha256": "dd9b849c9d05242831799a675fef073c09efb738bbc1a6e96a17a14d3547849b",
+      "stderrSha256": "70527ae67ba3ed5839e846ed24d1ece55827ee0896b9fa41d4439af7acceb294"
+    },
+    {
+      "id": "document",
+      "arm": "baseline",
+      "repetition": 1,
+      "seconds": 114.516,
+      "briefSha256": "9bad3c6809c85518e4047350262bbc3326b219503fb3e33a3f4029f34f7317c5",
+      "promptSha256": "3d45485fa86269de25ca7b17df196a8c188a80c30af988d1d0a33e8d9c995077",
+      "artifactPresent": false,
+      "eligibleForReview": false,
+      "status": "host-policy-blocked",
+      "skillReadObserved": false,
+      "usage": {
+        "input_tokens": 53329,
+        "cached_input_tokens": 41344,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3725,
+        "reasoning_output_tokens": 66
+      },
+      "traceSha256": "9d1f55edcb81d3718bb0b993ac0860d926d25cd61cbe55ddb2b260c9755ab6db",
+      "stderrSha256": "1141dd2e14d384faef22b20573bcedd1037a3448ba07f9abd3244eaed39d3b44"
+    },
+    {
+      "id": "document",
+      "arm": "dazzler",
+      "repetition": 1,
+      "seconds": 27.797,
+      "briefSha256": "9bad3c6809c85518e4047350262bbc3326b219503fb3e33a3f4029f34f7317c5",
+      "promptSha256": "e4cd9b4f7270d5f03b8551d9e45eb81c988fd6a54f759c56d3870db72705f183",
+      "artifactPresent": false,
+      "eligibleForReview": false,
+      "status": "host-policy-blocked",
+      "skillReadObserved": false,
+      "usage": {
+        "input_tokens": 53262,
+        "cached_input_tokens": 39424,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 353,
+        "reasoning_output_tokens": 44
+      },
+      "traceSha256": "bef61f76d617581b393b33390126395d238b7c90e0ca3a5eb20cf042dc083f63",
+      "stderrSha256": "6b6cc5ae4fcd02a032de606d3092fb73327ec4042ea7cbf3192af2ee50673531"
+    }
+  ],
+  "eligiblePairs": 0,
+  "qualityConclusion": null,
+  "humanReview": "not-run",
+  "generationDemo": "not-produced",
+  "reason": "Child-host execution policy denied commands and required skill reads. No artifacts were produced.",
+  "limits": [
+    "Requested model alias is not a provider snapshot pin.",
+    "Host catalog suppression and instructions reduce contamination but do not prove isolation of provider/system context.",
+    "Equal wall-clock caps are not equal token consumption; record actual usage.",
+    "HTML print document only; native Word behavior is not evaluated.",
+    "No human preference, task success or aesthetic superiority is inferred from captures or tests."
+  ]
+}

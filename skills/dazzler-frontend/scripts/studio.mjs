@@ -269,7 +269,7 @@ export function tokens(input = {}) {
     result.system.configuration = structuredClone({
       ...originalInput,
       schemaVersion: modern ? 3 : 2,
-      ...(modern ? { policyGeneration: input.policyGeneration ?? 2 } : {}),
+      ...(modern ? { policyGeneration: input.policyGeneration ?? 3 } : {}),
     });
   if (refinement.active) {
     result.system.refinement = refinement;

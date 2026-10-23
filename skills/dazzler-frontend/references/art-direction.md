@@ -6,7 +6,7 @@ For Word and PDF, use [the generative document workflow](document-design-space.m
 
 ## Dazzler's Creative Standard
 
-Every output should have a strong, prompt-specific design voice. Push the expressive possibilities to the furthest coherent point allowed by the brief. Prefer an interesting, committed direction that may divide taste over an interchangeable compromise. Do not deliberately seek dislike: aim for memorable conviction, then respond to user feedback. Dazzler's recognizable signature is the quality and specificity of the decisions, not a recurring palette, logo, typeface or layout.
+Every output should have a strong, prompt-specific design voice. Choose the degree of expression from the brief, source content, audience and medium. Do not add visual intensity to prove that design happened. Dazzler's recognizable signature is the quality and specificity of the decisions, not a recurring palette, logo, typeface or layout.
 
 “Basic professional” narrows the vocabulary, not the ambition. Pursue exceptional proportion, decisive hierarchy, precise alignment, beautiful table typography and confident whitespace within the requested simplicity. A one-page monochrome memo can be as authored as an immersive site. Explicit plain-text, exact-template, accessibility, brand and format requirements remain real constraints; maximize craft in the remaining freedom. Small edits strengthen or preserve the existing voice within their scope.
 
@@ -17,7 +17,7 @@ Every output should have a strong, prompt-specific design voice. Push the expres
 3. **Use type as composition.** Let real words shape proportion, alignment, scale and rhythm. Explore expressive axes, genuine italics, unusual scale relationships and editorial tension where supported. Keep reading text readable and verify actual files, glyphs and line breaks.
 4. **Turn the subject into a visual rule.** Derive a diagram, sequence, motif, interaction or material treatment from the content. A river, orchestra and legal chronology should not merely receive different colors on the same skeleton.
 5. **Choreograph density and release.** Compose packed versus open areas, long versus short beats, and surprising transitions. Design the entire page or document sequence, including ordinary tables and continuation pages. A spectacular cover does not rescue generic interiors.
-6. **Make surfaces intentional.** Explore luminous, dark, saturated, muted, monochrome and material-led fields. White is a decision, not a fallback. Respect exact color locks and test foregrounds against the actual rendered surface.
+6. **Make surfaces intentional.** Explore luminous, dark, saturated, muted, monochrome and material-led fields. White is an equally valid finished surface. Respect exact color locks and test foregrounds against the actual rendered surface.
 7. **Build a grammar, not a costume.** Repeat a few meaningful relationships while changing their expression with the content. Cohesion does not require identical sections; diversity does not require unrelated decoration.
 8. **Make interaction carry the idea.** Useful manipulation, exploration and feedback can establish identity. New spatial models need visible cues, labels and keyboard/touch equivalents. Do not demand adaptation through hidden actions, scroll traps, delays or broken conventions.
 9. **Let precision supply drama.** In constrained professional work, use editorial selection, beautiful numerals, strong measure, aligned comparisons and carefully judged rules. Boldness is conviction, not a compulsory bright palette or oversized headline.
@@ -73,3 +73,5 @@ Verify fonts loaded, chart marks/annotations are legible, values reconcile, prim
 - [Google's expressive-design research](https://design.google/library/expressive-material-design-google-research): the reported studies connect expressive hierarchy with preference and task visibility, while also documenting usability losses when labels and familiar interaction structures disappear. These findings are context-dependent, not evidence that everyone loves being forced to adapt or that Dazzler guarantees delight.
 
 These sources informed the principles; no artwork or implementation was copied. The desired ambition is a product policy. The source studies do not establish Dazzler's effectiveness.
+
+Plan and test relevant [edge cases](edge-cases.md) before delivery. The brief determines visual intensity; white, neutral and colored surfaces are equal options.

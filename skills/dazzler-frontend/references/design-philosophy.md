@@ -3,7 +3,7 @@
 Apply these defaults automatically when establishing a direction. Existing project records, user choices, language and brand rules take precedence. A small edit does not justify redesigning the surrounding project.
 
 1. **Make the next action clear.** Give the page one primary decision and use labels that describe its consequence. Review hierarchy and actual interaction; decoration is not a substitute for usefulness.
-2. **Fit the stakes.** Push a distinctive, committed voice across industries. High stakes require accurate, legible information, not an automatic reserved aesthetic. A basic professional request constrains the visual vocabulary, not the ambition: maximize typographic precision, proportion and editorial character. Explain the selected tone in the design record; explicit choices win.
+2. **Fit the stakes.** Infer the appropriate voice from the actual task. Neither industry nor a generic quality rule determines surface color or intensity. Use typographic precision, proportion and editorial character in service of that task. Explain the selected tone in the design record; explicit choices win.
 3. **Make reading comfortable.** Use a maximum 60ch body measure, never a fixed width. Paragraphs, prose lists, quotations, captions and descriptions inherit it. Headings, tables, code, navigation and layout containers are exempt. Narrow screens must reflow. Word uses an approximate measure and requires rendered review.
 4. **Make headings recognizable.** Default to protected English Title Case. Preserve acronyms, mixed-case brands, code, URLs, quoted material, units and names. Other languages retain authored casing. Buttons, body copy, table labels and eyebrow text are not headings. Sentence case and preservation are valid project overrides.
 5. **Build a visible hierarchy.** Use meaningful type roles, real weights and genuine italics. Prefer selective emphasis over all-over emphasis. Fluid screen sizes need stable print fallbacks and readable body text at every endpoint.
@@ -46,6 +46,11 @@ Import supports bounded TTF/OTF/WOFF metadata and rejects WOFF2/TTC with an acti
 | Font licensing and coverage | Bundled license/hash gate; bounded local import; cmap coverage filter |
 | Reading width, target size, heading style | Bounded browser review candidates with exceptions; not automatic certification |
 | Hierarchy, intent, usability and print | Human/agent rendered review plus relevant interaction tests; no aesthetic scoring claim |
+
+## Brief-Fit Boundary
+
+The user’s instructions, accepted design system, audience, content and output medium determine the design. Expressive options are capabilities, not requirements. Do not maximize decoration, saturation or colored page area by default. Preserve useful established structure. Choose restrained or expressive treatment deliberately; document the rationale separately from visible copy. Plan and test relevant [edge cases](edge-cases.md) before final delivery. This boundary takes precedence over suggestions to push visual intensity.
+
 
 ## Notes
 

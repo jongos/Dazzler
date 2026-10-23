@@ -1,5 +1,25 @@
 # Developer change notes
 
+## 2026-10-23 — 0.31.0: Traceable Review Findings and Controlled Comparisons
+
+**Changed:** Workflow plans and assessed checks carry permanent rule IDs. Detailed findings distinguish measured evidence from judgment, derive confidence from evidence support, and rank blocking/important/polish by user impact. Browser candidates retain compatibility fields while exposing rule IDs, pending impact review and explicit unsupported contrast coverage. Existing design rules, palettes and density choices are unchanged.
+
+**Added:** A shared rule/threshold registry, validated finding-review helper, impact-based first-fix recommendation, focused unit/browser checks and CI wiring. A separate synthetic website/dashboard/print-document comparison protocol records prompts, frozen source, host settings, timing, usage and all attempts without reusing gallery templates.
+
+**Why:** Addresses #50 and the corrected #48 without mistaking taste for standards: 24px AA targets include exception review; 44px enhanced guidance and Dazzler's 60ch body guidance remain distinct. #46 needs actual comparable outputs, not a curated gallery. The real-host pilot exposed policy-denied execution; the runner now stops on that condition instead of spending more trials.
+
+**Validation:** The isolated commit snapshot passes all 117 JavaScript tests, four comparison-parser tests, the synthetic real-browser review check, runtime integrity and version checks. Earlier ten-archive validation covered the broader working tree; it is not a release certification for this narrower source commit. Runtime integrity covers 1,716 resources; source links and release-version checks pass. Entrypoint guidance was condensed after packaging caught the 8 KB limit; all host entrypoints are now below it. All ten distribution archives pass extracted-package validation (largest 22.30 MB unpacked); the Windows validator now decodes browser diagnostics as UTF-8. The missing-dependency check was rerun outside the checkout to avoid inheriting its development dependencies. All 488 template/gallery files remain byte-identical. Six host attempts produced zero eligible artifacts because execution policy blocked commands; no comparative design-quality claim or generation demo is made. Raw attempts are retained locally, with a sanitized report under `maintenance/value-study/`. #46 remains incomplete. The gallery freshness release gate remains stale after runtime changes; it was not bypassed or refreshed. This source-only push excludes older uncommitted gallery changes. No release or installation is included. The committed integrity inventory is sealed against the committed assets. Brief-led visual choices and default edge-case checks are included as dependencies of the current skill and workflow; existing design constraints remain intact.
+
+## 2026-10-23 — Pending 0.31.0: Rendered Review Loop
+
+**Changed:** Scoped implementation now explicitly cycles through rendering, observed repairs and final-revision rechecks. A reported render pass requires revision-matched views and no open findings; resolved findings require repair descriptions and recheck evidence. Older reports need actual review details before reassessment. Existing design rules and user/brand precedence are unchanged.
+
+**Added:** A concise rendered-review reference, workflow routing, regression tests and project-record guidance distinguishing proposed, implemented and user-approved choices. References inform relationships without imposing a style or new global defaults.
+
+**Why:** A generic evidence link did not show which rendered state was inspected or whether a repair was rechecked. Existing project records and component guidance already cover the remaining useful ideas, so no competing system was added.
+
+**Validation:** All 112 JavaScript tests pass; runtime integrity passes for 1,713 resources. Release consistency, focused formatting and diff whitespace checks pass. All 488 template/gallery files are byte-identical to the pre-change inventory. Tests validate reported evidence, not screenshot truth or aesthetic quality. No templates, thumbnails, release archives or local installation were regenerated; no publication occurred. Remote fetch was unavailable because GitHub DNS resolution failed.
+
 ## 2026-10-18 — 0.30.1: Task-Led Density
 
 **Changed:** Density is decided from the brief and rendered content, without assuming compact or spacious output. The explicit compact refinement removes structural waste before tuning local gaps, while preserving content, readable type, targets and layout constraints.

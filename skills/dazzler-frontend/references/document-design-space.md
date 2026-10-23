@@ -1,6 +1,6 @@
 # Generate a Document System
 
-Apply this to new Word/PDF documents and substantial restyles. Preserve explicit user choices, supplied brand rules and required conventional structures. Small edits stay within the existing design. Apply the existing [art-direction standard](art-direction.md): push a decisive, distinctive voice through native document building blocks. Even basic professional work needs exceptional proportion, typography and editorial rhythm; users can redirect the look in ordinary language.
+Apply this to new Word/PDF documents and substantial restyles. Preserve explicit user choices, supplied brand rules and required conventional structures. Small edits stay within the existing design. Apply the existing [art-direction standard](art-direction.md): choose a voice from the task and use native document structure to support it. White paper, color panels and full-page color are options chosen for the audience and medium, never quotas.
 
 ## The Design Space Is Open
 

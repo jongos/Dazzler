@@ -6,6 +6,8 @@ For substantial projects, read the existing design document and token implementa
 
 Use only applicable sections; replace every example with actual decisions. Link to authoritative token files rather than maintaining duplicate value tables that will drift. Describe any unresolved disagreement between the record and implementation; neither silently overrides the user or an established design system.
 
+Distinguish proposed, implemented and user-approved decisions; do not infer approval from implementation. Record why a reference relationship fits this project rather than copying its entire style. Keep decisions project-specific. Link final-revision renders and repair/recheck evidence using the [rendered review loop](rendered-review.md), without duplicating the review log here.
+
 ```markdown
 # Design decisions — Project name
 

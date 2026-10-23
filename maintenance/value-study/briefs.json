@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "study": "Dazzler same-brief exploratory pilot",
+  "cases": [
+    {
+      "id": "website",
+      "prompt": "Create a responsive public website for the fictional Northbank Tool Library. Help a first-time visitor understand borrowing and choose a membership. Facts: annual membership $36; borrow up to 3 tools for 7 days; pickup Saturday 09:00–13:00 at 18 Alder Lane; members must be 18 or older; photo ID required at first pickup. Show a clear borrowing sequence and tool availability: cordless drill available, ladder available, orbital sander on loan until November 2. Include a functional local membership-interest form with name, email, validation, a clear demo-only confirmation and no network submission. Do not invent testimonials, discounts, availability guarantees or extra fees. Brand requirements: the name Northbank Tool Library and a #154734 brand accent. Choose a coherent visual direction suitable for a neighborhood service; no prescribed density or surface color. Deliver index.html with local CSS/JS if needed."
+    },
+    {
+      "id": "dashboard",
+      "prompt": "Create a responsive operational dashboard for the fictional Cedar Dispatch team. Help a dispatcher find delayed orders and decide which one to contact first. Rows: C-101, Oak Clinic, Medical kits, due 09:30, 25 minutes late, high priority; C-102, Maple School, Lab supplies, due 10:15, on time, normal priority; C-103, Birch Studio, Lighting, due 09:45, 10 minutes late, normal priority; C-104, Pine Pantry, Containers, due 11:00, on time, normal priority. Preserve every fact; do not invent delivery predictions. Provide functional local search, a delayed-only filter, clear empty results, and a detail view with a mock contact action labeled as a demo. Distinguish urgency without color alone. Keep all rows accessible on mobile. Brand accent #3446A8; use the same brand meaning across charts or indicators if added. Choose task-appropriate layout and density. Deliver index.html with local CSS/JS if needed."
+    },
+    {
+      "id": "document",
+      "prompt": "Create an editable HTML decision memo for the fictional Riverton Community Workshop, with screen layout and print CSS for US Letter. The board must decide whether to approve a six-week repair-clinic pilot. Facts: requested budget $2,400; venue $900, materials $600, insurance $450, volunteer training $450; maximum 60 appointments; two volunteers per session; six Saturday sessions; organizer Mara Chen. Risks: volunteer availability and unpredictable repair complexity. Recommendation: approve subject to insurance confirmation and two trained volunteers per session. Include the decision, reconciled budget, operational responsibilities, risks and approval conditions. Preserve uncertainty; do not claim funding, insurance or volunteer commitments are secured. Use a disciplined but deliberate visual direction with brand accent #8A3D22; surface color and emphasis should support reading and printing. Deliver index.html and any local CSS. This is a document-format comparison, not a native Word export."
+    }
+  ]
+}

@@ -64,6 +64,25 @@ test("Evidence coverage never converts omissions, failures or malformed claims t
   assert.equal(empty.missing.length, planWorkflow(task).checks.length);
   const observations = planWorkflow(task).checks.map((c) => ({
     id: c.id,
+    ...(c.id === "render"
+      ? {
+          renderReview: {
+            revision: "fixture-r1",
+            views: [
+              {
+                name: "fixture",
+                environment: "Synthetic renderer 800x600",
+                evidence: "fixture.png",
+                detail: "Synthetic test only",
+              },
+            ],
+            findings: [],
+          },
+        }
+      : {}),
+    ...(c.id === "edgeCases"
+      ? { cases: [{ name: "long label", status: "pass", detail: "Synthetic fixture only" }] }
+      : {}),
     status: "pass",
     evidence: ["fixture-review.txt"],
     detail: "Synthetic test observation, not a real artifact review",
@@ -189,4 +208,34 @@ test("Every format retains a distinction gate and generic claims cannot pass", (
   const missing = assessEvidence({ ...base, observations: [] });
   assert(missing.missing.includes("distinction"));
   assert(planWorkflow({ intent: "audit" }).readOnly);
+});
+
+test("Every output and small edit includes an unrun edge-case gate", () => {
+  for (const kind of ["interface", "document", "slides", "chart", "illustration"])
+    for (const scope of ["small", "substantial"]) {
+      const task = { kind, scope };
+      const plan = planWorkflow(task);
+      assert.equal(plan.checks.find((c) => c.id === "edgeCases").status, "not-run");
+      assert(
+        assessEvidence({
+          task,
+          target: "fixture",
+          revision: "r1",
+          observations: [],
+        }).missing.includes("edgeCases"),
+      );
+    }
+});
+
+test("Edge-case claims cannot hide failures, unrun cases or all-excluded coverage", () => {
+  const input = { task: {}, target: "fixture", revision: "r1", observations: [] };
+  const base = { id: "edgeCases", status: "pass", evidence: ["fixture.txt"], detail: "Fixture" };
+  for (const status of ["fail", "not-run", "excluded"])
+    assert.throws(() =>
+      assessEvidence({
+        ...input,
+        observations: [{ ...base, cases: [{ name: "narrow", status, detail: "Fixture" }] }],
+      }),
+    );
+  assert.throws(() => assessEvidence({ ...input, observations: [base] }));
 });
