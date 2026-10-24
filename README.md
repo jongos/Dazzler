@@ -26,7 +26,7 @@ Use $dazzler-frontend to refine this dashboard. Make the urgent work easy
 to find while keeping our brand, content and existing components.
 ```
 
-Bring a brief, existing work or a concrete goal. Dazzler can choose the visual details; your instructions take precedence. Rendering checks depend on the tools available to your agent and do not establish human usability.
+Bring a brief, existing work or a concrete goal. Dazzler can choose the visual details; your instructions take precedence.
 
 [Explore the field guide](https://jongos.github.io/Dazzler/) · [Browse fictional worked examples](https://jongos.github.io/Dazzler/templates/) · [Installation and rollback](maintenance/ONBOARDING.md)
 
@@ -39,7 +39,7 @@ Bring a brief, existing work or a concrete goal. Dazzler can choose the visual d
 | [Spiral](https://github.com/jongos/Spiral) | Trace multi-person workflows, handoffs and waiting states before building. |
 | [Shatterstar](https://github.com/jongos/Shatterstar) | Evaluate what to remove, combine, hide or defer while preserving important tasks. |
 
-[Hex Men](https://github.com/jongos/Hex-Men) brings the collection together. Choose the project your question needs; there is no required sequence. Spiral and Shatterstar are research-informed drafts and their repositories require access.
+[Hex Men](https://github.com/jongos/Hex-Men) brings the collection together. Choose the project your question needs; there is no required sequence.
 
 ## Further Reading
 
