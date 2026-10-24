@@ -2,6 +2,24 @@
 
 For substantial new work, use this with the existing composition and rendered-review workflow. Preserve brand, facts, accessibility, approved structure and all existing design rules. Small edits do not need a new concept or candidate round.
 
+## Carry Every Task Into the Output
+
+Before choosing a composition, extract the brief's required tasks, content, controls, deliverables and explicit constraints into the existing design record. Distinguish supplied requirements from inferred choices. For each task record its priority, where it will be supported, and what completion means. A supporting task is still required: choosing browsing as primary must not erase comparison or saving. Mark coverage unverified until inspected; do not invent evidence. Use clear visible action labels unless context makes the icon meaning apparent; accessible names alone do not establish visual clarity.
+
+`composition-plan.mjs` accepts optional `tasks`: up to 24 objects with unique `id`, `goal`, `activity`, `priority` (`primary` or `supporting`) and `completion`. Activities use the existing discover/compare/decide/operate/understand/read vocabulary. The host interprets the brief; the helper does not extract prose automatically. Keep facts, brand restrictions, output formats and other constraints in `requirements`. Its `contract` preserves tasks and suggests compatible structures for each, without claiming implementation coverage.
+
+Choose the primary organizing relationship before fonts, palette or decoration. Fit supporting tasks into that relationship explicitly. A grid can support browsing without providing an adequate comparison workflow; decide from the actual criteria and task, not the component name.
+
+## Allocate Space by Context
+
+Do not copy a desktop density decision onto mobile or an opener onto every interior page. The planner accepts optional `contexts`, each with a unique `id` and a `density` input using the existing density schema. Record wide/narrow interaction states, document opener/interior or slide roles only where relevant. Supply explicit preferences and brand locks consistently to each context. Missing context remains undecided; no implicit compactness preference is added. Preserved or read-only compositions lock these suggestions to the current design.
+
+Allocate space to required content and the next useful action. Keep explanatory space when it helps understanding; reduce it when it displaces the task without benefit. Preserve reading order, usable controls and readable type. Density choices remain provisional until reviewed in the actual medium.
+
+## Bound Optional Refinement
+
+Use the existing candidate round once, then at most one optional polish pass by default. Budget required tasks, structure, hierarchy and the scoped review before decorative exploration. Skip alternatives when an approved design or narrow task warrants it. Additional exploration requires a concrete unresolved design reason and room within the user's budget; do not repeatedly polish because more tools are available. This limit does not excuse known correctness or accessibility defects. If the user excludes checks, record them as not performed and make no verification claim.
+
 ## Make the Subject Visible
 
 Name the relationship the artifact must explain or enable, then show it in the composition: an itinerary, a handover, an approval tradeoff, a spatial route. These are examples, not required layouts. Record one visible consequence and one tradeoff in the existing design record. If changing names and colors would make the result equally suitable for an unrelated brief, inspect whether the subject needs a more specific representation. Familiar controls and restrained documents can still be the right answer; novelty is not a quota.

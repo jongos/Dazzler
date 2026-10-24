@@ -20,7 +20,7 @@ Use installed resources listed in `references/package-profile.json`, or the full
 
 Use [art direction](references/art-direction.md): interpret the brief, content and audience before choosing intensity. White, neutral, dark and colored surfaces are equal options, not defaults. Never impose a house palette or decorative treatment. Use [open web composition](references/web-design-space.md); never ship helper defaults. Then use [the automatic workflow](references/automatic-workflow.md). Small fixes preserve the existing system. Consult [interface craft](references/interface-craft.md) for component details.
 
-For substantial new designs, compare two rendered structures using [visual decisions](references/visual-decisions.md) and [execution review](references/execution-review.md).
+Use [execution review](references/execution-review.md) for task coverage, density and refinement budgets; [visual decisions](references/visual-decisions.md) for substantial-work structure comparisons.
 
 Read the existing [design record](references/persistent-systems.md) before substantial work.
 

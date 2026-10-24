@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-24 - 0.32.2: Keep task coverage ahead of polish
+
+**Changed:** Composition planning carries explicit task goals and completion conditions alongside constraints, suggests structures per task, and routes required-task reconciliation through the workflow.
+
+**Added:** Optional bounded task contracts and separate density contexts using existing density logic; a refinement budget prioritizes required behavior and hierarchy before optional polish. Execution guidance documents input fields and medium-specific decisions.
+
+**Why:** Stronger visual identity must not drop supporting tasks or copy desktop spacing choices onto other contexts. Optional refinement needs a stopping point.
+
+**Validation:** Source diff inspected only. Tests, runtime checks and comparison runs were not performed at the user's request. The Codex installation package was assembled without regenerating assets. Existing design rules, templates and thumbnails were not edited. Scope: source push and managed local update; no public release.
+
 ## 2026-10-24 — 0.32.1: Carry design decisions into reviewed output
 
 **Changed:** Substantial-design planning now calls for medium-specific native slices and separate correctness, task-support, craft and distinctiveness judgments. Existing style rules and small-edit behavior remain intact.

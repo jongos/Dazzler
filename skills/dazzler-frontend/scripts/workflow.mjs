@@ -30,7 +30,8 @@ const checks = {
     "Before implementation select relevant failure cases; before delivery exercise them in the actual artifact, repair and recheck. Cover long/missing content, narrow layouts and zoom, font fallback, interaction recovery, and print breaks where applicable. Record cases, outcomes and exclusions; unavailable checks remain not-run.",
   distinction:
     "For new substantial designs compare two focused rendered structures using the same content and constraints, then record the selected composition and visible reasons. Review defining move, supporting decisions and restraint. Preserve approved compositions and small-edit scope; generic or incoherent output needs revision.",
-  content: "Compare required facts, copy, controls and links with the brief",
+  content:
+    "Reconcile every required task, fact, control, link and deliverable with its implementation location and completion condition; appearance is not coverage",
   render:
     "Review the saved revision in representative rendered views, inspect affected neighbors, repair findings and capture fresh recheck evidence; see rendered-review.md",
   headings: "Audit final semantic headings and preserve explicit casing exceptions",

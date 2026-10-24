@@ -1,4 +1,6 @@
 // Original task-to-composition guidance. Apache-2.0. No aesthetic ranking or rendering.
+import { planDensity } from "./density.mjs";
+
 const activities = {
   discover: ["browse-and-focus", "guided-sequence"],
   compare: ["aligned-comparison", "overview-and-detail"],
@@ -47,7 +49,16 @@ export function planComposition(
     typeof input !== "object" ||
     Array.isArray(input) ||
     Object.keys(input).some(
-      (k) => !["medium", "activity", "content", "requirements", "existingSystem"].includes(k),
+      (k) =>
+        ![
+          "medium",
+          "activity",
+          "content",
+          "requirements",
+          "existingSystem",
+          "tasks",
+          "contexts",
+        ].includes(k),
     )
   )
     throw Error("Invalid composition input");
@@ -57,6 +68,8 @@ export function planComposition(
     content = [],
     requirements = [],
     existingSystem = false,
+    tasks = [],
+    contexts = [],
   } = input;
   if (
     medium !== undefined &&
@@ -80,12 +93,83 @@ export function planComposition(
   )
     throw Error("Invalid composition requirements");
   if (typeof existingSystem !== "boolean") throw Error("Invalid composition existingSystem");
+  if (!Array.isArray(tasks) || tasks.length > 24) throw Error("Invalid composition tasks");
+  const ids = new Set();
+  for (const task of tasks) {
+    if (
+      !task ||
+      typeof task !== "object" ||
+      Array.isArray(task) ||
+      Object.keys(task).some(
+        (k) => !["id", "goal", "activity", "priority", "completion"].includes(k),
+      ) ||
+      ["id", "goal", "completion"].some(
+        (k) =>
+          typeof task[k] !== "string" ||
+          !task[k].trim() ||
+          task[k].length > (k === "id" ? 80 : 1000),
+      ) ||
+      !Object.hasOwn(activities, task.activity) ||
+      !["primary", "supporting"].includes(task.priority) ||
+      ids.has(task.id)
+    )
+      throw Error("Invalid composition task");
+    ids.add(task.id);
+  }
+  if (!Array.isArray(contexts) || contexts.length > 8) throw Error("Invalid composition contexts");
+  const contextIds = new Set();
+  for (const context of contexts) {
+    if (
+      !context ||
+      typeof context !== "object" ||
+      Array.isArray(context) ||
+      Object.keys(context).some((k) => !["id", "density"].includes(k)) ||
+      typeof context.id !== "string" ||
+      !context.id.trim() ||
+      context.id.length > 80 ||
+      contextIds.has(context.id) ||
+      context.density === undefined
+    )
+      throw Error("Invalid composition context");
+    contextIds.add(context.id);
+    planDensity(context.density); // Validate each context without borrowing another viewport's evidence.
+  }
   const preserve = scope === "small" || existingSystem || readOnly;
   return {
     status: preserve ? "preserve" : medium && activity ? "provisional" : "needs-interpretation",
     medium: medium ?? null,
     activity: activity ?? null,
     requirements: [...requirements],
+    contract: {
+      status: tasks.length ? "host-interpreted" : "needs-interpretation",
+      constraints: [...requirements],
+      tasks: tasks.map((task) => ({
+        ...task,
+        coverage: "unverified",
+        structures: preserve
+          ? []
+          : activities[task.activity].map((id) => ({ id, relationship: organizations[id] })),
+      })),
+      handoff:
+        "Map every task to its content, control or document location and completion condition before styling. Keep supporting tasks when selecting the primary structure. Never infer coverage from appearance.",
+    },
+    densityContexts: contexts.map((context) => ({
+      id: context.id,
+      plan: planDensity({ ...context.density, ...(preserve ? { locked: true } : {}) }),
+    })),
+    refinementBudget: preserve
+      ? null
+      : {
+          order: [
+            "required tasks and constraints",
+            "structure and hierarchy",
+            "type and color",
+            "optional polish",
+          ],
+          candidateRounds: 1,
+          optionalRevisionPasses: 1,
+          stop: "Stop optional exploration when time is needed for required behavior and review. Do not waive correctness or accessibility; disclose unresolved issues and unperformed checks. User scope and time limits take precedence.",
+        },
     alternatives:
       preserve || !medium || !activity
         ? []
