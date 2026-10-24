@@ -1,35 +1,30 @@
 <!doctype html>
 <html lang="en">
-  <meta charset="utf-8" /><meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  /><title>The Project Review Room</title
-  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Review the Next Step</title>
+    <link rel="stylesheet" href="../../fonts/fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Example</span>
     </nav>
     <main>
       <header>
-        <p class="eyebrow">FIELDWORK / CLIENT REVIEW</p>
-        <h1>The Project Review Room</h1>
+        <p class="eyebrow">business / portal</p>
+        <h1>Review the Next Step</h1>
         <p class="lead">Review the material direction before detailed design begins.</p>
       </header>
-      <div class="review-room">
-        <section class="milestone-ribbon">
-          <h2>Project Sequence</h2>
-          <ol>
-            <li>06 Jun<br />Site Survey · Complete</li>
-            <li>20 Jun<br />Concept Review · Complete</li>
-            <li>04 Jul<br />Material Direction · Review</li>
-            <li>18 Jul<br />Detailed Design · Planned</li>
-          </ol>
-        </section>
-        <div class="review-sheet">
+      <div class="review">
+        <aside>
           <nav class="documents" aria-label="Project Documents">
             <button data-doc="Materials">Materials</button
             ><button data-doc="Schedule">Schedule</button>
           </nav>
+        </aside>
+        <section class="sheet">
           <article>
             <p class="eyebrow">DOCUMENT PREVIEW</p>
             <h2 id="preview-title">Materials</h2>
@@ -40,19 +35,25 @@
             <button id="approve">Mark Reviewed Locally</button>
             <p id="status" role="status"></p>
           </article>
-        </div>
+        </section>
       </div>
-      <p>No approval or message is sent. Local review can be undone.</p>
+      <section class="milestone-ribbon">
+        <h2>Project Sequence</h2>
+        <ol>
+          <li>06 Jun<br />Site Survey · Complete</li>
+          <li>20 Jun<br />Concept Review · Complete</li>
+          <li>04 Jul<br />Material Direction · Review</li>
+          <li>18 Jul<br />Detailed Design · Planned</li>
+        </ol>
+      </section>
+      <p>No approval or message is sent. Review marks apply only to this preview.</p>
     </main>
-    <footer>
-      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
-      no live service.
-    </footer>
+    <footer>Original Dazzler design · Apache-2.0 · Local font notices included.</footer>
     <script id="template-data" type="application/json">
       {
         "id": "business-portal",
-        "title": "The Project Review Room",
-        "prompt": "Use Dazzler to design the project review room for its fictional reader task. A vertical milestone spine accompanies a document review sheet; document tabs sit across the sheet and the review action closes the evidence. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #3A5A13 and #E1F1C8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+        "title": "Review the Next Step",
+        "prompt": "Design a fictional business-portal example for this task: Review the material direction before detailed design begins. The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Poppins and a #EEE9F6 page with #4D386A accents.",
         "data": {
           "milestones": ["06 Jun", "20 Jun", "04 Jul", "18 Jul"],
           "documents": ["Materials", "Schedule"]
@@ -67,21 +68,34 @@
         Schedule:
           "Detailed design is planned for 18 July. Procurement dates depend on the confirmed scope and supplier lead times.",
       };
+      let active = "Materials";
+      const reviewed = new Set();
+      const syncReview = () => {
+        document.querySelector("#approve").textContent = reviewed.has(active)
+          ? "Undo Local Review"
+          : "Mark Reviewed Locally";
+        document.querySelector("#status").textContent = reviewed.has(active)
+          ? active + " marked reviewed in this preview only."
+          : active + " awaits local review.";
+        document
+          .querySelectorAll("[data-doc]")
+          .forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.doc === active)));
+      };
       document.querySelectorAll("[data-doc]").forEach(
         (b) =>
           (b.onclick = () => {
-            document.querySelector("#preview-title").textContent = b.dataset.doc;
-            document.querySelector("#preview").textContent = docs[b.dataset.doc];
+            active = b.dataset.doc;
+            document.querySelector("#preview-title").textContent = active;
+            document.querySelector("#preview").textContent = docs[active];
+            syncReview();
           }),
       );
-      let reviewed = false;
-      document.querySelector("#approve").onclick = (e) => {
-        reviewed = !reviewed;
-        e.target.textContent = reviewed ? "Undo Local Review" : "Mark Reviewed Locally";
-        document.querySelector("#status").textContent = reviewed
-          ? "Marked reviewed in this preview only."
-          : "Local review removed.";
+      document.querySelector("#approve").onclick = () => {
+        if (reviewed.has(active)) reviewed.delete(active);
+        else reviewed.add(active);
+        syncReview();
       };
+      syncReview();
     </script>
   </body>
 </html>

@@ -1,5 +1,13 @@
 # Developer change notes
 
+## 2026-10-24 — 0.32.0: Refreshed Gallery and Version Alignment (Unreleased)
+
+- **Changed:** Reauthored all 30 gallery examples around their fictional reader tasks, refreshed editable Word/PDF and HTML/UI artifacts, and aligned the package, template catalog and gallery manifest at 0.32.0. The client-review demo now keeps separate review state for Materials and Schedule. Updated the public gallery captions from the actual catalog while preserving the concise README and current field-guide layout.
+- **Added:** New thumbnails and mobile previews, previous-gallery comparison evidence, recorded Hex Men review, Style Science observations, ten informed Longshot task replays, and a regression check rejecting a stale catalog version. Added reproducible authoring, rendering-check and assembly helpers for this gallery revision.
+- **Why:** The 0.31.1 package still carried a 0.30.0 gallery manifest. Merely relabelling it would leave stale artifact and runtime evidence. The refreshed examples exercise current design guidance and retain important tasks, source data, local-only behavior and recovery paths.
+- **Validation:** Gallery evidence validator passed for 30 examples. All 60 browser views passed heading, overflow and axe checks; ten interaction/recovery journeys passed. Ten native documents rendered to one page each and were visually inspected. Template structure/data/export tests (9), architecture tests (3), and gallery drift regression passed. Public gallery checks passed for 30 cards, four filters, desktop/mobile layouts and all linked examples/images. Package and final source validation are recorded in the gallery review.
+
+
 ## 2026-10-24 - Focused Marketing Copy
 
 **Changed:** Removed repeated maturity labels and research disclaimers from the README and landing page. Kept purpose, uses, companion roles and operational instructions. Existing follow-up-review explanations remain intact.

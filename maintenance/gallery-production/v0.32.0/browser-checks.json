@@ -1,0 +1,522 @@
+[
+  {
+    "id": "html-professional",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-legal",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-business",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-fun",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-family",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-presentation",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-school",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-marketing",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-restaurant",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "html-technical",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "not-applicable",
+    "keyboardFocus": {
+      "tag": "DIV",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "webapp-workspace",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "TEXTAREA",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "webapp-board",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "BUTTON",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "webapp-settings",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "SELECT",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "data-revenue",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "BUTTON",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "data-operations",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "BUTTON",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "BUTTON",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "restaurant-cafe",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "BUTTON",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "restaurant-reservations",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "INPUT",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "restaurant-menu",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "INPUT",
+      "outline": "solid"
+    }
+  },
+  {
+    "id": "business-portal",
+    "views": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "axe": []
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "axe": []
+      }
+    ],
+    "errors": [],
+    "interaction": "pass",
+    "keyboardFocus": {
+      "tag": "BUTTON",
+      "outline": "solid"
+    }
+  }
+]

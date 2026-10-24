@@ -10,92 +10,86 @@
   </head>
   <body>
     <nav class="top">
-      <a href="../index.html">Dazzler Design Gallery</a
-      ><span>Fictional Recovery Control Sheet</span>
+      <a href="../index.html">Dazzler Design Gallery</a><span>Fictional Example</span>
     </nav>
     <main>
-      <aside class="stop">
-        <strong>STOP / Preserve the Evidence</strong>
-        <p>Synthetic operational example · Commands require environment-specific review.</p>
-      </aside>
-      <header>
-        <p class="eyebrow">RELAY / OPERATIONS RUNBOOK 07</p>
-        <h1>Relay Queue Recovery Runbook</h1>
-        <p class="lead">
-          Pause delivery before replaying events. Confirm the checkpoint, then resume in a
-          controlled batch.
-        </p>
-      </header>
-      <div class="runbook">
-        <section>
-          <section class="note">
-            <h2>01 Stabilize</h2>
-            <p>
-              Pause the worker and record the last acknowledged event ID. Confirm that the consumer
-              is healthy before attempting a replay.
-            </p>
-          </section>
-          <section class="note">
-            <h2>02 Recover</h2>
-            <p>
-              Replay the next 50 events from the checkpoint. Check duplicate handling and compare
-              delivered IDs with acknowledgements.
-            </p>
-          </section>
-          <section class="note">
-            <h2>03 Verify</h2>
-            <p>
-              Resume only when the batch reconciles and error rate remains below the agreed
-              threshold. If it fails, pause again and retain the evidence.
-            </p>
-          </section>
-        </section>
-        <aside class="sheet">
-          <aside class="measure">
-            <strong class="stat">50</strong>
+      <div class="pair">
+        <header>
+          <p class="eyebrow">RELAY / OPERATIONS RUNBOOK 07</p>
+          <h1>Relay Queue Recovery Runbook</h1>
+          <p class="lead">
+            Pause delivery before replaying events. Confirm the checkpoint, then resume in a
+            controlled batch.
+          </p>
+        </header>
+        <aside class="stop">
+          <h2>Stop on Any Failed Check</h2>
+          <p>Pause again and retain the evidence if the batch fails.</p>
+          <aside class="metric">
+            <strong>50</strong>
             <p>events in the first recovery batch</p>
           </aside>
-          <p class="intro">
-            This fictional runbook handles a stalled delivery queue. It demonstrates a safe
-            sequence; adapt commands and thresholds to the actual system before operational use.
-          </p>
-          <h2>Verification Register</h2>
-          <div class="table-wrap" tabindex="0" role="region" aria-label="Data Table">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Signal</th>
-                  <th scope="col">Proceed</th>
-                  <th scope="col">Stop</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Acknowledgements</th>
-                  <td>50 of 50 matched</td>
-                  <td>Any missing ID</td>
-                </tr>
-                <tr>
-                  <th scope="row">Duplicates</th>
-                  <td>Handled idempotently</td>
-                  <td>Side effect repeated</td>
-                </tr>
-                <tr>
-                  <th scope="row">Consumer health</th>
-                  <td>Checks passing</td>
-                  <td>Timeout or error</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </aside>
       </div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Exact Data">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Signal</th>
+              <th scope="col">Proceed</th>
+              <th scope="col">Stop</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Acknowledgements</th>
+              <td>50 of 50 matched</td>
+              <td>Any missing ID</td>
+            </tr>
+            <tr>
+              <th scope="row">Duplicates</th>
+              <td>Handled idempotently</td>
+              <td>Side effect repeated</td>
+            </tr>
+            <tr>
+              <th scope="row">Consumer health</th>
+              <td>Checks passing</td>
+              <td>Timeout or error</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="thirds">
+        <section class="note">
+          <h2>01 Stabilize</h2>
+          <p>
+            Pause the worker and record the last acknowledged event ID. Confirm that the consumer is
+            healthy before attempting a replay.
+          </p>
+        </section>
+        <section class="note">
+          <h2>02 Recover</h2>
+          <p>
+            Replay the next 50 events from the checkpoint. Check duplicate handling and compare
+            delivered IDs with acknowledgements.
+          </p>
+        </section>
+        <section class="note">
+          <h2>03 Verify</h2>
+          <p>
+            Resume only when the batch reconciles and error rate remains below the agreed threshold.
+            If it fails, pause again and retain the evidence.
+          </p>
+        </section>
+      </div>
+      <p>
+        This fictional runbook handles a stalled delivery queue. It demonstrates a safe sequence;
+        adapt commands and thresholds to the actual system before operational use.
+      </p>
       <p class="closing">
         Synthetic operational example · Commands require environment-specific review.
       </p>
     </main>
-    <footer>
-      Original Dazzler design and synthetic facts. Apache-2.0. Font notices accompany the files.
-    </footer>
+    <footer>Original Dazzler design · Apache-2.0 · Local font notices included.</footer>
   </body>
 </html>

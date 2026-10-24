@@ -4,11 +4,11 @@
   "short": "Notice and Evidence",
   "tag": "MATTER 026 / INTERNAL REVIEW",
   "lead": "The record supports delivery. It does not yet establish that the recipient accepted the revised terms.",
-  "accent": "#183A71",
-  "paper": "#FFFFFF",
-  "font": "Archivo",
-  "word": "Arial",
-  "layout": "A Chronology for Counsel",
+  "accent": "#562B37",
+  "paper": "#F6F0E5",
+  "font": "Libre Baskerville",
+  "word": "Georgia",
+  "layout": "The Evidence Brief",
   "stat": "03",
   "label": "events establish the sequence",
   "intro": "This fictional matter note separates the available correspondence from the questions counsel must resolve. It contains no jurisdiction-specific legal conclusion.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Prepared for counsel · Fictional training material, not legal advice.",
-  "prompt": "Use Dazzler to create a fictional legal document and web edition for this task: The record supports delivery. It does not yet establish that the recipient accepted the revised terms. Retain every supplied fact and qualification. Read three dated records left to right, then distinguish the available record from the actions needed below. Use Archivo for the web and verified Arial for native output, with #183A71 against #FFFFFF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional legal document and HTML edition: The record supports delivery. It does not yet establish that the recipient accepted the revised terms. A portrait brief gives the conclusion and evidence register priority; dated records remain in one comparison table above the legal questions. Preserve every source number and qualification. Use Libre Baskerville for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "archivo",
-    "css_family": "Archivo",
+    "id": "libre-baskerville",
+    "css_family": "Libre Baskerville",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Black-letter evidence with vermilion marginal findings; restrained white is intentional.",
   "fictional": true,
   "design": {
-    "accent": "#183A71",
-    "secondary": "#183A71",
-    "paper": "#FFFFFF",
+    "accent": "#562B37",
+    "secondary": "#562B37",
+    "paper": "#F6F0E5",
     "text": "#17212B",
-    "accentText": "#183A71",
+    "accentText": "#562B37",
     "onAccent": "#FFFFFF"
   },
   "document": [

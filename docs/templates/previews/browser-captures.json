@@ -1,15 +1,16 @@
 [
   {
     "id": "html-professional",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "7f02e3c84b5b45bc78e12aeba39c739164d43376d568b5eb92a051b7430e3bdb",
+    "sourceSha256": "06059174760bcb076c4eddcd1fb79d115fce15019826cf89444e99b54f6bc657",
     "preview": "previews/html-professional.jpg",
     "dependencies": {
+      "html/professional.html": "06059174760bcb076c4eddcd1fb79d115fce15019826cf89444e99b54f6bc657",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -58,23 +59,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/professional.html": "7f02e3c84b5b45bc78e12aeba39c739164d43376d568b5eb92a051b7430e3bdb",
-      "html/professional/styles.css": "654c483d2876217b74a7e0e18df55697a1667f45d1c38f88a2c650f58798578a",
-      "html/professional/tokens.css": "9e901ea995a06b14d0a687cd28d8599e72dc12e107663658738eae5c7c82a95d",
-      "html/professional/tokens.json": "00f0204e9b06b0f93dc0739650b92773eb819a7691fabb62802fbabb7638b426"
+      "html/professional/styles.css": "09f52b381948f9ca439b1d5486f2ef6ee68b8affb10ad85a362e19c66560dcfe",
+      "html/professional/tokens.css": "fc7ae136bb53408a326c50104eecb5a2ebb19760056ec6bc5b7c8a4d02a41a9e",
+      "html/professional/tokens.json": "90f06ab428a4470e3b9f6018691d2db19c9b01eca2610fdfb4aa5b7194e0e5e1"
     }
   },
   {
     "id": "html-legal",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "fd62aee1092f5b7ab49b27e81c80fd499f80d9caa8278b0c47b4c660e2c36e13",
+    "sourceSha256": "c884750794f4d62b80d1dbb0e3965dab07937b4990bb229d8850d42844d36a93",
     "preview": "previews/html-legal.jpg",
     "dependencies": {
+      "html/legal.html": "c884750794f4d62b80d1dbb0e3965dab07937b4990bb229d8850d42844d36a93",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -123,23 +124,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/legal.html": "fd62aee1092f5b7ab49b27e81c80fd499f80d9caa8278b0c47b4c660e2c36e13",
-      "html/legal/styles.css": "976ba492874ff60757695ac5344820ea814edd3ca416c29810db50de1b80c4cd",
-      "html/legal/tokens.css": "97aa3abcd62732b3b392f8f9fa6a1e4aa086a6c5b341cbac39d61a61c7bad765",
-      "html/legal/tokens.json": "5ff4551fd58f78cf849999cc0abf86c2d5e1e0f0450bac3286d5faf10f1b060b"
+      "html/legal/styles.css": "9b92c1d1b8ab8fee7b0a33ac31fbb39f10604549e0a70e4b4e30ecb5ecff8cc0",
+      "html/legal/tokens.css": "29f245684b4b97e6f9378e1ec1c93c929e40e52ea53c08c4e9d15123b92740b9",
+      "html/legal/tokens.json": "9dddd9f539589888b08586990e491f25aef1c1c9b2170b74c1dd1c0aaed98009"
     }
   },
   {
     "id": "html-business",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "8388e9442738fd385aedb0bd6a2ec7d52ab0f01e53c4df0a680b710770a2dfc0",
+    "sourceSha256": "06fa6ea97674c273f39bf6d4905c9301472d07da880d6dd1f36508e0b2e68b8b",
     "preview": "previews/html-business.jpg",
     "dependencies": {
+      "html/business.html": "06fa6ea97674c273f39bf6d4905c9301472d07da880d6dd1f36508e0b2e68b8b",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -188,23 +189,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/business.html": "8388e9442738fd385aedb0bd6a2ec7d52ab0f01e53c4df0a680b710770a2dfc0",
-      "html/business/styles.css": "05144388fe4dfbdb989e0d569b078bdc023f2d9167dbc01ce82d387b78df55be",
-      "html/business/tokens.css": "cfdea692b43d8a4a2fb039d76fe137f2241042267a7a52f0398b3ce8c79bba8d",
-      "html/business/tokens.json": "7c09f4f9b50bbc1182021c7a50b24b173fd3d681db12d2affe2e4470dc5702a3"
+      "html/business/styles.css": "d8539b3f85bc8b0404a7cf994cad8fab3a8cf6939eff43b2c6271d95e0f56e18",
+      "html/business/tokens.css": "e26bfcdc1d683a06d355336ec6b438332391a2b2a61d55691ad6f5c578e6433c",
+      "html/business/tokens.json": "30e6f4d1e2def72f0651c2db5ee66a1d52dc6e88c32f968f7d0c43dca813376e"
     }
   },
   {
     "id": "html-fun",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "dfbe48302998fdb5ea231c04f64712367f1300dd91058b070a8d6b5f6426042a",
+    "sourceSha256": "3f6615a8cc4420b8dd832940c60be69a4df4469a7ef9cb4b0ca0636faca1ae1c",
     "preview": "previews/html-fun.jpg",
     "dependencies": {
+      "html/fun.html": "3f6615a8cc4420b8dd832940c60be69a4df4469a7ef9cb4b0ca0636faca1ae1c",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -253,23 +254,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/fun.html": "dfbe48302998fdb5ea231c04f64712367f1300dd91058b070a8d6b5f6426042a",
-      "html/fun/styles.css": "28e69a93b4d728fc6cdc50b53403d0565eb0fe869ee86520d83bfa0d92431708",
-      "html/fun/tokens.css": "253b649daca97af78958d7a9fe59b40e3145e773356e57958f7d372b75f92661",
-      "html/fun/tokens.json": "054981451979c8e5df2b89493637f7419eab504cfcb3fc84c70b788dcf693c6d"
+      "html/fun/styles.css": "f1f1c01301f2671ba548ef910e40d497edd645ce70b5169da67e9fd937578c85",
+      "html/fun/tokens.css": "2b81598efcd4bc68d86b1b2026e5ba4940525fa2d21cc3c43eceec6f0e753b97",
+      "html/fun/tokens.json": "65f99487105b8768cc57a8314372f3a5eb1e7fdc8534896b22bb86f30135deb8"
     }
   },
   {
     "id": "html-family",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "62371bceac8f4f6090d5878fa595cf660f85ddbd38c6ada5eb0fbe63b8bd51dc",
+    "sourceSha256": "f39bae395d33c3309dbe71c5285ecefc6ddb03ddf133984854dfd57b1d54ec56",
     "preview": "previews/html-family.jpg",
     "dependencies": {
+      "html/family.html": "f39bae395d33c3309dbe71c5285ecefc6ddb03ddf133984854dfd57b1d54ec56",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -318,23 +319,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/family.html": "62371bceac8f4f6090d5878fa595cf660f85ddbd38c6ada5eb0fbe63b8bd51dc",
-      "html/family/styles.css": "746e24082939955d2c33fd5cba73a3565e012c45062160c12272cb287d39010c",
-      "html/family/tokens.css": "dea5e6c265aa9beee86e139aa474c85857974fb36b35455ef62cd30ae00b5593",
-      "html/family/tokens.json": "41dc6e76ad02499e695dc24c3acfce9a3d3865562bb0708c4d78dc9e89176f26"
+      "html/family/styles.css": "ae59b7b56ab1b9cbe0f0eeb536644634db6169e47e97d5d9ac651e58f411780d",
+      "html/family/tokens.css": "2e9e030eff80c488a1c535f39728d540a21a4c1ff8d05097e8ba85f1480f4740",
+      "html/family/tokens.json": "30513a2ecbb388b45abb3d6e82ee6537a8b081ef451312084d6c3aae193f69ec"
     }
   },
   {
     "id": "html-presentation",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "1b62bd5d9bb9e198d5c5c0221180182d182e90289b58f106a7da2c2976bbc4ad",
+    "sourceSha256": "b0398b8e87d245e0a18e16964ebee5ee870c09c362ec702fb432f4c6f295828b",
     "preview": "previews/html-presentation.jpg",
     "dependencies": {
+      "html/presentation.html": "b0398b8e87d245e0a18e16964ebee5ee870c09c362ec702fb432f4c6f295828b",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -383,23 +384,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/presentation.html": "1b62bd5d9bb9e198d5c5c0221180182d182e90289b58f106a7da2c2976bbc4ad",
-      "html/presentation/styles.css": "7a5e6c206d15c8f64eb9317b8d7b73482a86189c25a067b51abd759603c0844b",
-      "html/presentation/tokens.css": "fc411aa66fb43eb34e47d0847642ef9872ae5e90bff21f04ccc55144167cf73b",
-      "html/presentation/tokens.json": "03d21d3c5283bfd951f00a09aad71acdfc61e2b6d7a1c9049407e5a3d7cf5266"
+      "html/presentation/styles.css": "f5fbcd983985b0b78cd50f67f33bb48ad2c09212d81b0ae8b71e2f1c1752f948",
+      "html/presentation/tokens.css": "aa4e3423e189b87f4a7861f826416f70bcb847f9623b1d940b9ce23aa6b598d8",
+      "html/presentation/tokens.json": "5df534abac1edd4e50c3b7ddb3ac216fa3a73a95718c4b317f33ad3d5737c2d3"
     }
   },
   {
     "id": "html-school",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "98c486e3d855ddfb9fa899011cbc0c1c17b8354cf572a3b8dc7c8087b45f53a3",
+    "sourceSha256": "5a0bee96fe8a15a025719f090171fab385fe020c099474e2c1fb51fae6549607",
     "preview": "previews/html-school.jpg",
     "dependencies": {
+      "html/school.html": "5a0bee96fe8a15a025719f090171fab385fe020c099474e2c1fb51fae6549607",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -448,23 +449,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/school.html": "98c486e3d855ddfb9fa899011cbc0c1c17b8354cf572a3b8dc7c8087b45f53a3",
-      "html/school/styles.css": "1d7651368f074e1199c731dfbf82f276dc8c238b81c6d012bd9330629af4aebc",
-      "html/school/tokens.css": "b67595b0ad0770bb3f69f9604b0b7ea26815d506d668d8e62ed72c1f88a51d9a",
-      "html/school/tokens.json": "6256fe778831524d75e9589f195ad6cdfe655aceab38754c01869408a97d8872"
+      "html/school/styles.css": "f487b4ada55e1cb72a9046cfc433b76968ac39e5930a51b73d664105d5881a33",
+      "html/school/tokens.css": "b469f93cfc50c9c817382101ab7f102417447c20c565291f3c77098562bda095",
+      "html/school/tokens.json": "c73fcaccb1f8462e4191967a00303c5bd78c9ecf87a5fa8da58ba9285064fd15"
     }
   },
   {
     "id": "html-marketing",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "9d889720268280ac0c67d763081a1a0f8bbcca40a1945c8789b12a1088eeffb9",
+    "sourceSha256": "17e4e5541c462de92101f592df9a52794786d085b6445124cbc540ece27bf078",
     "preview": "previews/html-marketing.jpg",
     "dependencies": {
+      "html/marketing.html": "17e4e5541c462de92101f592df9a52794786d085b6445124cbc540ece27bf078",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -513,23 +514,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/marketing.html": "9d889720268280ac0c67d763081a1a0f8bbcca40a1945c8789b12a1088eeffb9",
-      "html/marketing/styles.css": "26a5bd916345c3a2b43d51d80c6c6af878a7caff91c702f722d98098c8993f2a",
-      "html/marketing/tokens.css": "2d037e1ab3725948f36ebf248a748e6d6371662c76e52085ae6e2529953314a6",
-      "html/marketing/tokens.json": "1b87104e4ad95c9fe0b219a9f9b57b3b2d9a011978ddbc464f04d2851695e808"
+      "html/marketing/styles.css": "57e88e3279f7a5b33cae5860a56ee6e25fc20a1712716cd45ffee1ae02a91cbd",
+      "html/marketing/tokens.css": "a009d04859715330412d4e1e2a7e83a2614b57ce4bcfc130676e99466010b019",
+      "html/marketing/tokens.json": "ace27b3f7b0f08827b055b411e7fb703a60fd650160249b30dd65ceaed065bdf"
     }
   },
   {
     "id": "html-restaurant",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "039b04bdf847b3623d55c8358ff889eb974b0479dbaad675a4825ec58dd0300d",
+    "sourceSha256": "6a1591c64cbb47c3d01f279e1ecf978e3767e8e0e5eb6f64c63aea66385ea56c",
     "preview": "previews/html-restaurant.jpg",
     "dependencies": {
+      "html/restaurant.html": "6a1591c64cbb47c3d01f279e1ecf978e3767e8e0e5eb6f64c63aea66385ea56c",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -578,23 +579,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/restaurant.html": "039b04bdf847b3623d55c8358ff889eb974b0479dbaad675a4825ec58dd0300d",
-      "html/restaurant/styles.css": "3657574d77f8470ba8cd92185b86f2eab805238df76a772288f263c74985802b",
-      "html/restaurant/tokens.css": "96bd19d3dc135c82e555b74b1daaedb1746e8b417014a2821456720ae0de0a2e",
-      "html/restaurant/tokens.json": "1e557d8e7c0a230893e969e03f961fa230dc43d8f6bc542d0d590b16df4d049c"
+      "html/restaurant/styles.css": "46a654e67f583d43fc4494a644a96669b2c1f18b9fc27714c748f9e1e5e96613",
+      "html/restaurant/tokens.css": "f0b6d969f59ade1a96b9465356b7c79605389014084c3b8ac9312ddc9e0c5d06",
+      "html/restaurant/tokens.json": "abf6ebc0479e431d966d4b3daff5fdae944db300429d7ad7e33700234f903915"
     }
   },
   {
     "id": "html-technical",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "ad52388f2e252653602d213e0560d7cc634b641e98d56c225087bf77a8b59ea7",
+    "sourceSha256": "728c6ecb85f40f16a5835cb8595edc16aaf44ab02f503074fd7e34a6c57ec49b",
     "preview": "previews/html-technical.jpg",
     "dependencies": {
+      "html/technical.html": "728c6ecb85f40f16a5835cb8595edc16aaf44ab02f503074fd7e34a6c57ec49b",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -643,23 +644,23 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "html/technical.html": "ad52388f2e252653602d213e0560d7cc634b641e98d56c225087bf77a8b59ea7",
-      "html/technical/styles.css": "4a3f0fd8ddc000f0629d15fcc73c3f8b91b201e4e00ca3079ded6f42006e7469",
-      "html/technical/tokens.css": "765887a22dae46c6705392dd7b704ff1ac613dc18b2a0e5b79e795a13ce71d4f",
-      "html/technical/tokens.json": "866ce53794ea6c19ad2ddad58c66f064881438bd39747757184a93010d64d083"
+      "html/technical/styles.css": "0b96d163b11418916610452fea56fda740e06fbe18e2aec3f10f4edbbdcddb09",
+      "html/technical/tokens.css": "ba1a9b85b5606fde7e9d708a8327b85c7db19dcc88a23691cd13ee1d73493f3f",
+      "html/technical/tokens.json": "6a87876190fd4090d870a6200a87e70f03da42031f7b8dee9ad5969f05a39044"
     }
   },
   {
     "id": "webapp-workspace",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "0ff433a17699568d8c8d30a9f3a7c7c79172512be4b683fb424ca7fc8c492d58",
+    "sourceSha256": "ad555329a98374d8320350e00308e9a40372d759e1f40859678e004590e90899",
     "preview": "previews/webapp-workspace.jpg",
     "dependencies": {
+      "ui/webapp-workspace/index.html": "ad555329a98374d8320350e00308e9a40372d759e1f40859678e004590e90899",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -708,24 +709,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/webapp-workspace/index.html": "0ff433a17699568d8c8d30a9f3a7c7c79172512be4b683fb424ca7fc8c492d58",
-      "ui/webapp-workspace/styles.css": "a7b1d2d6cd0f0f56534654e3674923a311a4557f8cdcf5c4bd5bd3f72ff9593b",
-      "ui/webapp-workspace/template.json": "542b45d933b1862506ac98a1460b1ebb2e33873877af125e139902547a1bf943",
-      "ui/webapp-workspace/tokens.css": "50c8e6cf939fac9c3d7f19c34a56c6e1a29b2e3177a84794602f5d1a8d1a1e43",
-      "ui/webapp-workspace/tokens.json": "7fab5d28e025c1aaae3dcbf38e6d3473be5bc2a5aa391247e05027f047e29575"
+      "ui/webapp-workspace/styles.css": "97fbc78c5421d9bc2b549dd19587458c6d2b239acf2f4e08bff846bbe109e3ee",
+      "ui/webapp-workspace/template.json": "fcc994cf885ddc52a3e49ca61db37e534562f1ca3685152c49e738257f34a6c9",
+      "ui/webapp-workspace/tokens.css": "86fdb7f262474f7ba79f3f6dd7fe368354af4c82659a67037eaff537217532b0",
+      "ui/webapp-workspace/tokens.json": "c279d0aba7b0304f3d3064d16b9a286c2e7dc850d200db2df8f210a813d6f69e"
     }
   },
   {
     "id": "webapp-board",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "d8734b8e531552ac565feeab2d2661833182ed7657aba8f14e3bc8d4834ed325",
+    "sourceSha256": "feade31844d2e93dafe39be6405b4546cf574a52a444608c76caca5d5b114ad1",
     "preview": "previews/webapp-board.jpg",
     "dependencies": {
+      "ui/webapp-board/index.html": "feade31844d2e93dafe39be6405b4546cf574a52a444608c76caca5d5b114ad1",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -774,24 +775,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/webapp-board/index.html": "d8734b8e531552ac565feeab2d2661833182ed7657aba8f14e3bc8d4834ed325",
-      "ui/webapp-board/styles.css": "b5e72661e0df8d46b22447d99feaa24bd6e1b0dfe78ad6547edd29338172028f",
-      "ui/webapp-board/template.json": "1e3fa5789c0c7ea755053c2bf99b4be0700539cf227ac296dfd2690a2e2ca47d",
-      "ui/webapp-board/tokens.css": "4a6e2663bc64501c995aaa7eeb65df488fd145cd7861b01ee76b61469ca97702",
-      "ui/webapp-board/tokens.json": "f32448e05444bffb6a60c6cf6fa828059e63e9967e583ed45aa08ca73313b610"
+      "ui/webapp-board/styles.css": "67229800d68af72fc3262a180d6c309e275f4e404051bdf899ac6ea6ccfe65d0",
+      "ui/webapp-board/template.json": "66e05653adbe3ffbbe0ab1c4dbf9381aef7fd88fc1c179f95032c3ecd36975f8",
+      "ui/webapp-board/tokens.css": "9a4116827d328c386a9a295a428a09ae7399ff3204fe288a81d13bf81b4f4f99",
+      "ui/webapp-board/tokens.json": "c2c8e4b0b38c573f0e211d0fdcd4477926808b323fbcdab7f2d3463d9553436d"
     }
   },
   {
     "id": "webapp-settings",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "c15a1644c2709dcd506442859915e9e7a09e38fa977b2a5b0a88335fff738a79",
+    "sourceSha256": "dd85abcd13412f3b8fe38057b7a5f68c23229a0ef65b8d9651b99a3932c8c5f4",
     "preview": "previews/webapp-settings.jpg",
     "dependencies": {
+      "ui/webapp-settings/index.html": "dd85abcd13412f3b8fe38057b7a5f68c23229a0ef65b8d9651b99a3932c8c5f4",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -840,24 +841,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/webapp-settings/index.html": "c15a1644c2709dcd506442859915e9e7a09e38fa977b2a5b0a88335fff738a79",
-      "ui/webapp-settings/styles.css": "d21d5ffa07b7fa5fc8ff22ef117b964e8da5124ee9c7fc8cff3d588ecc7fff4c",
-      "ui/webapp-settings/template.json": "b8256fc9b094d1a94fd342f98a792236db7b5a944be7a01683517fc1762831f7",
-      "ui/webapp-settings/tokens.css": "223708134865344090d098b79c609ede7185f4d85de5c31998b9f7b53d3b39de",
-      "ui/webapp-settings/tokens.json": "5e5f86ef735a3be36d17368df2aeedf6eb19578d883c2ffa7172f67da9d63af2"
+      "ui/webapp-settings/styles.css": "1125c6c6609f8c4b7bc2a34b9785122f27737e7c1edc338ac5f0e572ccfbc442",
+      "ui/webapp-settings/template.json": "da01d9296adf1716525a1c9b25261b0fcd06417693b1a57003071c338bb9e270",
+      "ui/webapp-settings/tokens.css": "bd6f80e5cd638fba12501cf86cd457caebddde776dcc836083570b8fc86bf97a",
+      "ui/webapp-settings/tokens.json": "17f215b310025043974c39b223c1ecbb867ef1ed1b9cb43643df657e482444e9"
     }
   },
   {
     "id": "data-revenue",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "1af111e15fdb02878cc0a0b5b18e2c0d496ed53fdfaa195325984cc3170b8b02",
+    "sourceSha256": "cf94c80fbd85553ba5c901d7e1f342674a336bb1381902787f96c18eda0008ff",
     "preview": "previews/data-revenue.jpg",
     "dependencies": {
+      "ui/data-revenue/index.html": "cf94c80fbd85553ba5c901d7e1f342674a336bb1381902787f96c18eda0008ff",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -906,24 +907,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/data-revenue/index.html": "1af111e15fdb02878cc0a0b5b18e2c0d496ed53fdfaa195325984cc3170b8b02",
-      "ui/data-revenue/styles.css": "9cbff322a3c81bf7f17262950f99fee28a88eb4bc774ec4534973dd4aea0674e",
-      "ui/data-revenue/template.json": "55e87ddbe6d1f91fe41be3d824cb4184e2130cb4fde7e045a2a4b925ca1ec63c",
-      "ui/data-revenue/tokens.css": "e8a22266f377aef7a48709a396bf9858a9f760235061b919ad6218a697cf208d",
-      "ui/data-revenue/tokens.json": "41da1ccbaab0e1eb048abdae229eec3c063cadb7c6282a4d3dcc0bb1c4fdb4a7"
+      "ui/data-revenue/styles.css": "9ecc2e053372a216118438811651818a6f5a0f9d88cd51aeb5fea3e43b95c888",
+      "ui/data-revenue/template.json": "7164959851f92b4338a11f1bf87b6e82cfcaf839896bab2f1f69aab7a27281da",
+      "ui/data-revenue/tokens.css": "f51af398b35825b27cdefa3c30998ee88b2970b17bae74770dc877cda8efa73a",
+      "ui/data-revenue/tokens.json": "151d32f9b99f7dd950946db15e9fc3e07b2a18b76790359a575eb2f273d8ab37"
     }
   },
   {
     "id": "data-operations",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "fbe0c2d0f593249e2664d1b8ab28cccee11a7fa8270a06b148f833d64b68253b",
+    "sourceSha256": "fec1923eca93c12b3b2617f3f3504f017081b2ede0db628e142fb9ce408d5d97",
     "preview": "previews/data-operations.jpg",
     "dependencies": {
+      "ui/data-operations/index.html": "fec1923eca93c12b3b2617f3f3504f017081b2ede0db628e142fb9ce408d5d97",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -972,24 +973,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/data-operations/index.html": "fbe0c2d0f593249e2664d1b8ab28cccee11a7fa8270a06b148f833d64b68253b",
-      "ui/data-operations/styles.css": "cbf91057c523274a4caf1d4997d86f715c7b24ae3a8bbdc11c6f70e9d71484a3",
-      "ui/data-operations/template.json": "c2566f00fc2ec6385d357b671a7c4c123e331f01f26b35be66661ed3868ff828",
-      "ui/data-operations/tokens.css": "02f438758647daf052620e024061cf04cfdba5795c88f7a88e9bee4022207ed3",
-      "ui/data-operations/tokens.json": "e91feafd9f9d81f1cb633419be8f102b2878a74cc3d08b44574ae8ad7967da19"
+      "ui/data-operations/styles.css": "f6ce4424471c43b4372a2d6eac689dd50bf5197a8804874bb7e1a80cf9d22921",
+      "ui/data-operations/template.json": "590c1cc5c00926e3ae06c3f38ae9d773578f94f08e8aa57e809214fd77bc834f",
+      "ui/data-operations/tokens.css": "ff68facb8c0c6ce374bf0d08a5164a6bbaa5b6e0405e5fd3149ae5b60b4ccc63",
+      "ui/data-operations/tokens.json": "7280f9846a0d304580ace52a271f5fde5bf175301a473745c8cd36fd7237d8e7"
     }
   },
   {
     "id": "restaurant-fine-dining",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "f4d18f5ed4baa49fce633224e2288f7b56738253391eb989facba0439c52e78d",
+    "sourceSha256": "ddb04de98f4a84f732b9a02117855dbffd76354f922af3cbd71545dca6d1315b",
     "preview": "previews/restaurant-fine-dining.jpg",
     "dependencies": {
+      "ui/restaurant-fine-dining/index.html": "ddb04de98f4a84f732b9a02117855dbffd76354f922af3cbd71545dca6d1315b",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -1038,24 +1039,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/restaurant-fine-dining/index.html": "f4d18f5ed4baa49fce633224e2288f7b56738253391eb989facba0439c52e78d",
-      "ui/restaurant-fine-dining/styles.css": "571239ae72c1d0bdd36b301ff2d31f0f5e37a2322d816dc3064180dc4d4a462c",
-      "ui/restaurant-fine-dining/template.json": "7da71063d1b1c5517a812167af869054099dcee501f5e0e5d3f428a6bc48845a",
-      "ui/restaurant-fine-dining/tokens.css": "78ac833cfeb592fd738fabf444a5190479b9ed8ca9e3fc1996c1ada0e5d5eb94",
-      "ui/restaurant-fine-dining/tokens.json": "3b5660f69dbd00d7ff6ee3f4e9a4115da2b82c06f3724bb91ca5fa25c437fcd6"
+      "ui/restaurant-fine-dining/styles.css": "1366b8c81dbd5a933e523f9df7c447d12ad1373447350c159e976b6f524f8a6b",
+      "ui/restaurant-fine-dining/template.json": "539e82f3990bbde41552cfeeefcf7fd6684bd2b0e48e9150beba092ca76bfb91",
+      "ui/restaurant-fine-dining/tokens.css": "b27bf585a16e77549d00057de6d58910d6c3e6313fa82dce3d98715fa197cd3e",
+      "ui/restaurant-fine-dining/tokens.json": "1c96ee4bc9e97acc83b041891002d6c67de3442b5055b8cb1e3cf9792c4281b2"
     }
   },
   {
     "id": "restaurant-cafe",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "3238b92a2ad9b9121c888dd97eba2fd1aa210ea611073ed2366ef24977c84600",
+    "sourceSha256": "969f55346705940c8c6f7c1aa96484b5530bd125d50ed7e0635f4a76c11e1447",
     "preview": "previews/restaurant-cafe.jpg",
     "dependencies": {
+      "ui/restaurant-cafe/index.html": "969f55346705940c8c6f7c1aa96484b5530bd125d50ed7e0635f4a76c11e1447",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -1104,24 +1105,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/restaurant-cafe/index.html": "3238b92a2ad9b9121c888dd97eba2fd1aa210ea611073ed2366ef24977c84600",
-      "ui/restaurant-cafe/styles.css": "10de307663661f930d17724aefba3bbcae72f7d92eebdac2b4b248ab1d1895fc",
-      "ui/restaurant-cafe/template.json": "c92fb1598f12a58d3de8c68570d2d8877aaa19195e3bacb0d1bf4c271af974ea",
-      "ui/restaurant-cafe/tokens.css": "9d6b9836089ff840ac29dff0c88bfca0718021b4325e54e71f66107f7ae0607b",
-      "ui/restaurant-cafe/tokens.json": "0dedb2ad52ce4d8254ec6480f5897abe39a9937ef5a5c4ee5aeca24798d321d1"
+      "ui/restaurant-cafe/styles.css": "e40eead3d5102ac60ac38f256c90402e8989c110e16270302a852beaf077c849",
+      "ui/restaurant-cafe/template.json": "21dfda451c7e018e67e550cec0144ce3a46000409223bb5cf0bb3e45f2d46c87",
+      "ui/restaurant-cafe/tokens.css": "0bfc2eeb7021183260e03f6c0f630878068d261d4294c7da360cea1193528f82",
+      "ui/restaurant-cafe/tokens.json": "47d7caff1af9a3a198d380864c6719738bab6157a01ca02d0f1937d70fb89b2a"
     }
   },
   {
     "id": "restaurant-reservations",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "08603a97ac324b70a90d3a3b0500d4a1b3346ca9795f309cc65310819b1bf2ef",
+    "sourceSha256": "1e525927fe1b4a4651d663d7b3cb7edac3d6c482fb482f225d42f32c7b567683",
     "preview": "previews/restaurant-reservations.jpg",
     "dependencies": {
+      "ui/restaurant-reservations/index.html": "1e525927fe1b4a4651d663d7b3cb7edac3d6c482fb482f225d42f32c7b567683",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -1170,24 +1171,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/restaurant-reservations/index.html": "08603a97ac324b70a90d3a3b0500d4a1b3346ca9795f309cc65310819b1bf2ef",
-      "ui/restaurant-reservations/styles.css": "c65d76c94fd2de72646e8d243bbdfd7f4e9c62bb53435ddbd93a3fbe384e5e5e",
-      "ui/restaurant-reservations/template.json": "f1ed8e52d174af75ea31ccb69135d6a2addc219d7b566d0a92366ca34f219975",
-      "ui/restaurant-reservations/tokens.css": "eee5a49dcb9d1fde2c42f4e28fa6005943918ad4fd2d1ab9ebcc417f46301404",
-      "ui/restaurant-reservations/tokens.json": "c9572c665ba3117e76878c4215613fa153fd5cc73aa967982bbc06eb5a1a945d"
+      "ui/restaurant-reservations/styles.css": "e3ea3d26a934cdaa62441f1520772f3c84beb5cae220cc9e01154ffbf35e2883",
+      "ui/restaurant-reservations/template.json": "394c343992542a1bfa8e77c59b7e76ce4dc5c65635e5ee4c6b0924e1eb7c163a",
+      "ui/restaurant-reservations/tokens.css": "364e71292a741eee9f44a8095769f97a63bd2b0eed7e649d602b4a42a76f53b1",
+      "ui/restaurant-reservations/tokens.json": "c53e84ec4e3b081fc6678f2f978c45371e8a6e6dcd35febc0ae7c53468655d9e"
     }
   },
   {
     "id": "restaurant-menu",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "710d46db562d694afa5efc96f0aa915f89c0b5fe648c1172d94b286ed9370f09",
+    "sourceSha256": "fb3af379251fb1635fdd346956f17f933ae26ec61a7cfb4a403336354ddbef39",
     "preview": "previews/restaurant-menu.jpg",
     "dependencies": {
+      "ui/restaurant-menu/index.html": "fb3af379251fb1635fdd346956f17f933ae26ec61a7cfb4a403336354ddbef39",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -1236,24 +1237,24 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/restaurant-menu/index.html": "710d46db562d694afa5efc96f0aa915f89c0b5fe648c1172d94b286ed9370f09",
-      "ui/restaurant-menu/styles.css": "c4f836322ba0c8d6853c60966bad02b9b1e6126a8f5c24fcb7947f6a52aa1d5c",
-      "ui/restaurant-menu/template.json": "cbbaf9fab0743f70bdbb541ef644e213b8b842b6bf1ea739a49194e5ea6ecf24",
-      "ui/restaurant-menu/tokens.css": "8ae94e5d0d9cad976dfd79f74df1a09b2e5f5fe8eb62075c5208f8b965d1cc72",
-      "ui/restaurant-menu/tokens.json": "644fa7acf0097777f96675a92978b35bf42103397974479fbb9db7a72996ac4b"
+      "ui/restaurant-menu/styles.css": "629b416bcb7c7bf272ce9a8703847b4c886b3fab546fab05cdecb6ad3847034a",
+      "ui/restaurant-menu/template.json": "9ff07e8a217a142e51c28527d0680d541294fb0c5d6ed3d0bbaaa7834a959e9f",
+      "ui/restaurant-menu/tokens.css": "fb59e36008b6f122eac387a660b7774e5f7e7dcb30a4e8d0a55018c64724945c",
+      "ui/restaurant-menu/tokens.json": "3c2ab84257c4a50faed4eae7fa5dbb1b1436ac574842ccb17593efe101cb5bc9"
     }
   },
   {
     "id": "business-portal",
-    "engine": "Chromium / Playwright",
+    "engine": "Chrome / Playwright",
     "fullPage": true,
     "viewport": {
       "width": 1440,
       "height": 1000
     },
-    "sourceSha256": "55a2be51bb00616861edf7d1b54fcc7358445d25ff0705c7a7ac3b980283e533",
+    "sourceSha256": "23188e06f5f963be61e3b9c59485dc89ba9563ee3cc7d6d4567c021b36904de4",
     "preview": "previews/business-portal.jpg",
     "dependencies": {
+      "ui/business-portal/index.html": "23188e06f5f963be61e3b9c59485dc89ba9563ee3cc7d6d4567c021b36904de4",
       "fonts/fonts.css": "aae3d451bb3c73b602d36da6135a0cdf481aae58d991a8811623d451f94c81ef",
       "fonts/archivo/Archivo-Italic[wdth,wght].ttf": "99e6e9a40bc1af881cfce9229e3285e6b35fbeabb7bfb3b42f8899f8d9aba12b",
       "fonts/archivo/Archivo[wdth,wght].ttf": "664bbeb10522dac35c174a3860aaecad7b1ad3a0fc8b0d26888e26c824ec556d",
@@ -1302,11 +1303,10 @@
       "fonts/young-serif/SOURCE.md": "e1eaa7a3cda25b77ee05371d82a528ffbdf8992988710b4a94a6e932f8321ecc",
       "fonts/young-serif/Young-Serif-Italic[wght].woff2": "dee6fbb05cfc13238bdce2c421134c0536d979499a8bf3871f3fa293c77ec0c6",
       "fonts/young-serif/Young-Serif[wght].woff2": "3a01be242b16256e84e402a7309de54add7c813bd47fd4313d6b70d1208ca783",
-      "ui/business-portal/index.html": "55a2be51bb00616861edf7d1b54fcc7358445d25ff0705c7a7ac3b980283e533",
-      "ui/business-portal/styles.css": "4f173f5cd58478c1beda997feb4e70a32bd7ce0f437eb3c456e606b09d94349e",
-      "ui/business-portal/template.json": "9107764e4b812e01a37e457bc9f157afca07bc8ad03f5daeb98f063404bd2699",
-      "ui/business-portal/tokens.css": "87ae7c3ba63ac36964592f73bc77d588165dfb6288b908b6986b1a8c01c878e3",
-      "ui/business-portal/tokens.json": "0f146bd17f2d9b82720577ea9109aa439f76a00a67e41774940d96da991bbc29"
+      "ui/business-portal/styles.css": "12798a2233ac4411e93b53cc6ddfa8840e1fde14aa591f4280afc3ef4d73219a",
+      "ui/business-portal/template.json": "d003478f0bb7a787e74a2e3a38f364e911f4c1ee9c69ad990215dd4852cd4f91",
+      "ui/business-portal/tokens.css": "09def1348e2736e9c7f95e52a626b515c6347570a2224aa1412589a1c2c58426",
+      "ui/business-portal/tokens.json": "40e9d56b87da34801139ab0cb97437b19ce2a38c36315e203d37d5a55f7f18cd"
     }
   }
 ]

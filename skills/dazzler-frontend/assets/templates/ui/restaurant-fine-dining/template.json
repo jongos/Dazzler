@@ -1,7 +1,7 @@
 {
   "id": "restaurant-fine-dining",
-  "title": "The Garden Invitation",
-  "prompt": "Use Dazzler to design the garden invitation for its fictional reader task. A centered garden invitation introduces a narrow course trail with service notes alongside; the botanical drawing becomes a small stamp. Retain the existing data and functional controls, with keyboard and mobile access. Use Libre Baskerville, #173D2A and #CCFF79. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "Supper in the Garden",
+  "prompt": "Design a fictional restaurant-fine-dining example for this task: Five courses, paced for conversation. An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Young Serif and a #173E2C page with #254C36 accents.",
   "data": {
     "courses": 5,
     "seats": 12,

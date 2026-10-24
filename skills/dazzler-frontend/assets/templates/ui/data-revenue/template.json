@@ -1,7 +1,7 @@
 {
   "id": "data-revenue",
-  "title": "The Membership Observatory",
-  "prompt": "Use Dazzler to design the membership observatory for its fictional reader task. A dark plotting wall gives the trend the full width; measure switches sit in a slim rail and the exact ledger follows below. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #8A274F and #FFF2B8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "Six Years of Membership",
+  "prompt": "Design a fictional data-revenue example for this task: \n              Membership and revenue describe different parts of the same organization. Compare each\n              on its own scale.\n             A wide chart leads a white analytical spread; measure controls sit above it and the exact values move beside the chart. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #FFFFFF page with #334BA0 accents.",
   "data": {
     "years": [
       2021,

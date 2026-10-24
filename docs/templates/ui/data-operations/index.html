@@ -1,47 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <meta charset="utf-8" /><meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  /><title>The Station Workbench</title
-  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Station Readings</title>
+    <link rel="stylesheet" href="../../fonts/fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Example</span>
     </nav>
     <main>
       <header>
-        <p class="eyebrow">TIDE / FICTIONAL FACILITY</p>
-        <h1>The Station Workbench</h1>
+        <p class="eyebrow">data / operations</p>
+        <h1>Station Readings</h1>
         <p class="lead">
           Four stations report different units. Select a station to read its own operating context.
         </p>
       </header>
-      <nav aria-label="Stations" class="stations">
-        <button data-station="0">01 · Intake</button><button data-station="1">02 · Filter</button
-        ><button data-station="2">03 · Storage</button><button data-station="3">04 · Outlet</button>
-      </nav>
-      <div class="workbench">
+      <div class="instrument">
+        <nav aria-label="Stations" class="stations">
+          <button data-station="0">01 · Intake</button><button data-station="1">02 · Filter</button
+          ><button data-station="2">03 · Storage</button
+          ><button data-station="3">04 · Outlet</button>
+        </nav>
         <section id="inspector" aria-live="polite"></section>
-        <section class="exception">
-          <h2>Exception Log</h2>
-          <strong>Attention · Filter Pressure</strong>
-          <p>
-            2.8 bar is above the illustrative 1.5–2.5 bar band. Inspect the filter before changing a
-            setting. This is synthetic telemetry, not an operational control.
-          </p>
-        </section>
       </div>
+      <section class="exception">
+        <h2>Exception Log</h2>
+        <strong>Attention · Filter Pressure</strong>
+        <p>
+          2.8 bar is above the illustrative 1.5–2.5 bar band. Inspect the filter before changing a
+          setting. This is synthetic telemetry, not an operational control.
+        </p>
+      </section>
     </main>
-    <footer>
-      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
-      no live service.
-    </footer>
+    <footer>Original Dazzler design · Apache-2.0 · Local font notices included.</footer>
     <script id="template-data" type="application/json">
       {
         "id": "data-operations",
-        "title": "The Station Workbench",
-        "prompt": "Use Dazzler to design the station workbench for its fictional reader task. A horizontal station strip sits above a side-by-side reading and exception workbench; units and operating limits remain explicit. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #934100 and #FFFFFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+        "title": "Station Readings",
+        "prompt": "Design a fictional data-operations example for this task: \n          Four stations report different units. Select a station to read its own operating context.\n         A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Office Code Pro and a #EED6B3 page with #713B0F accents.",
         "data": {
           "stations": ["Intake", "Filter", "Storage", "Outlet"],
           "values": [18.4, 2.8, 72, 17.9]

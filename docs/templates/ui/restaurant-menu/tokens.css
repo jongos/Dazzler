@@ -1,18 +1,21 @@
 :root {
-  --accent: #203d9c;
-  --paper: #bdebff;
   --display: "Archivo";
+  --accent: #38512b;
+  --paper: #ffffff;
   --body-color: #17212b;
-  --ink-color: white;
-  --sheet-background: white;
-  --th-td-border-bottom: #818b94;
-  --thead-color: white;
+  --top-border-bottom: #79858b;
+  --band-color: white;
+  --sheet-background: #fff;
+  --closing-border-top: #79858b;
+  --th-td-border-bottom: #899398;
+  --thead-color: #fff;
   --button-color: white;
   --button-aria-pressed-false-background: white;
   --input-not-type-checkbox-select-background: white;
   --input-not-type-checkbox-select-color: #17212b;
   --input-not-type-checkbox-select-border: #65747a;
-  --focus-visible-outline: #b02e00;
-  --filterbar-background: white;
-  --allergy-border-left: #a52332;
+  --focus-visible-outline: #b03b00;
+  --allergy-border-left: #9c2934;
+  --search-rail-background: #253629;
+  --search-rail-color: white;
 }

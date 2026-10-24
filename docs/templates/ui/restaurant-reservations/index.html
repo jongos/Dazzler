@@ -1,41 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <meta charset="utf-8" /><meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  /><title>The Seating Request Desk</title
-  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Choose Your Evening</title>
+    <link rel="stylesheet" href="../../fonts/fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Example</span>
     </nav>
     <main>
       <header>
-        <p class="eyebrow">SOLSTICE / TABLE PREFERENCES</p>
-        <h1>The Seating Request Desk</h1>
+        <p class="eyebrow">restaurant / reservations</p>
+        <h1>Choose Your Evening</h1>
         <p class="lead">
           Start with your visit, then choose the atmosphere. A preference is not a confirmed
           reservation.
         </p>
       </header>
-      <div class="atlas">
-        <section>
-          <h2>Find Your Place</h2>
-          <section class="zones" aria-label="Table Preferences">
-            <button type="button" data-zone="Window Table">
-              <span class="zone-mark">☀</span>Window Table<br /><small
-                >Bright · Seats 2</small
-              ></button
-            ><button type="button" data-zone="Quiet Corner">
-              <span class="zone-mark">◌</span>Quiet Corner<br /><small
-                >Lower Traffic · Seats 2</small
-              ></button
-            ><button type="button" data-zone="Shared Table">
-              <span class="zone-mark">◎</span>Shared Table<br /><small>Social · Seats 6</small>
-            </button>
-          </section>
-        </section>
-        <div class="request-sheet">
+      <div class="reservation">
+        <div class="sheet">
           <form id="booking">
             <div class="requestline">
               <label for="date">Preferred Date<input id="date" type="date" required /></label
@@ -53,24 +39,37 @@
             <p id="status" role="status"></p>
           </form>
         </div>
+        <aside>
+          <h2>Seating Preference</h2>
+          <section class="zones" aria-label="Table Preferences">
+            <button type="button" data-zone="Window Table">
+              <span class="zone-mark">☀</span>Window Table<br /><small
+                >Bright · Seats 2</small
+              ></button
+            ><button type="button" data-zone="Quiet Corner">
+              <span class="zone-mark">◌</span>Quiet Corner<br /><small
+                >Lower Traffic · Seats 2</small
+              ></button
+            ><button type="button" data-zone="Shared Table">
+              <span class="zone-mark">◎</span>Shared Table<br /><small>Social · Seats 6</small>
+            </button>
+          </section>
+          <aside class="access">
+            <h2>Make the Visit Work</h2>
+            <p>
+              Step-free entrance. Confirm access, availability and dietary needs with the venue. No
+              information leaves this demonstration.
+            </p>
+          </aside>
+        </aside>
       </div>
-      <aside class="access">
-        <h2>Make the Visit Work</h2>
-        <p>
-          Step-free entrance. Confirm access, availability and dietary needs with the venue. No
-          information leaves this demonstration.
-        </p>
-      </aside>
     </main>
-    <footer>
-      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
-      no live service.
-    </footer>
+    <footer>Original Dazzler design · Apache-2.0 · Local font notices included.</footer>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-reservations",
-        "title": "The Seating Request Desk",
-        "prompt": "Use Dazzler to design the seating request desk for its fictional reader task. A seating atlas occupies a wide left panel with a compact request form to its right; access guidance follows as a separate ribbon. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #6D370D and #FFEAA3. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+        "title": "Choose Your Evening",
+        "prompt": "Design a fictional restaurant-reservations example for this task: \n          Start with your visit, then choose the atmosphere. A preference is not a confirmed\n          reservation.\n         A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Poppins and a #F4EAF5 page with #58345C accents.",
         "data": { "zones": ["Window Table", "Quiet Corner", "Shared Table"] },
         "action": "Quiet Corner"
       }

@@ -4,11 +4,11 @@
   "short": "A Better Booking Journey",
   "tag": "JUNIPER / SCOPE 014",
   "lead": "Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages.",
-  "accent": "#4D2298",
-  "paper": "#EAC7FF",
-  "font": "Poppins",
-  "word": "Arial",
-  "layout": "Scope Across Three Stages",
+  "accent": "#22573D",
+  "paper": "#FFFFFF",
+  "font": "Young Serif",
+  "word": "Georgia",
+  "layout": "The Scope Letter",
   "stat": "$24,000",
   "label": "fixed fee for the defined scope",
   "intro": "The fictional engagement covers research synthesis, interaction design and a tested frontend prototype for a neighborhood arts venue. Production integration is a separate engagement.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Offer valid for 30 days · Start date follows written acceptance.",
-  "prompt": "Use Dazzler to create a fictional business document and web edition for this task: Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages. Retain every supplied fact and qualification. A proposal foldout separates fee and boundaries from the three staged deliverables; the fee is a side annotation, not the page opener. Use Poppins for the web and verified Arial for native output, with #4D2298 against #EAC7FF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional business document and HTML edition: Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages. A restrained portrait offer pairs the fee with the proposal title; the phase register separates scope from commercial terms. Preserve every source number and qualification. Use Young Serif for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "poppins",
-    "css_family": "Poppins",
+    "id": "young-serif",
+    "css_family": "Young Serif",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Acid-lime proposal with deep green delivery ledger; optimistic commercial energy.",
   "fictional": true,
   "design": {
-    "accent": "#4D2298",
-    "secondary": "#4D2298",
-    "paper": "#EAC7FF",
+    "accent": "#22573D",
+    "secondary": "#22573D",
+    "paper": "#FFFFFF",
     "text": "#17212B",
-    "accentText": "#4D2298",
+    "accentText": "#22573D",
     "onAccent": "#FFFFFF"
   },
   "document": [

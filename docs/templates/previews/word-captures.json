@@ -3,100 +3,100 @@
     "id": "docx-professional",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "e4df27b6defc74848d52ce65793021f2fee584ff14fb82473a6ee4df32a404d6",
+    "sourceSha256": "e6813df89ba9d62719eaa405a8aca0c0909d4f1868a3cfe086de1a3d37291207",
     "preview": "previews/docx-professional.jpg",
     "dependencies": {
-      "docx/professional.docx": "e4df27b6defc74848d52ce65793021f2fee584ff14fb82473a6ee4df32a404d6"
+      "docx/professional.docx": "e6813df89ba9d62719eaa405a8aca0c0909d4f1868a3cfe086de1a3d37291207"
     }
   },
   {
     "id": "docx-legal",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "97405080a224c43f8e13b784bdf73e26352425b50c197879f0f86dbfdbf1f38b",
+    "sourceSha256": "85cbbb6987aaa4f2c54493d2013f04f5dcc95889e1a8ce477ec2934e3172ad2a",
     "preview": "previews/docx-legal.jpg",
     "dependencies": {
-      "docx/legal.docx": "97405080a224c43f8e13b784bdf73e26352425b50c197879f0f86dbfdbf1f38b"
+      "docx/legal.docx": "85cbbb6987aaa4f2c54493d2013f04f5dcc95889e1a8ce477ec2934e3172ad2a"
     }
   },
   {
     "id": "docx-business",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "c5956e5e483a1e39a85c13281f6965fa99f0ebefeaa5b449399ca7612eb18df4",
+    "sourceSha256": "2bc24daab537aecb8068a559b976793724eb17ec030aae9eb1348a485fe8f3f3",
     "preview": "previews/docx-business.jpg",
     "dependencies": {
-      "docx/business.docx": "c5956e5e483a1e39a85c13281f6965fa99f0ebefeaa5b449399ca7612eb18df4"
+      "docx/business.docx": "2bc24daab537aecb8068a559b976793724eb17ec030aae9eb1348a485fe8f3f3"
     }
   },
   {
     "id": "docx-fun",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "03bdc197bd7668b6354276cfbf3c5a9bc46507b3c39e4831cff89f5d923ad768",
+    "sourceSha256": "8c6a268caecad984ae2ad1eb67984a6cbc60c5dcbf461818283b5fe1e08357dc",
     "preview": "previews/docx-fun.jpg",
     "dependencies": {
-      "docx/fun.docx": "03bdc197bd7668b6354276cfbf3c5a9bc46507b3c39e4831cff89f5d923ad768"
+      "docx/fun.docx": "8c6a268caecad984ae2ad1eb67984a6cbc60c5dcbf461818283b5fe1e08357dc"
     }
   },
   {
     "id": "docx-family",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "52a2cea63d738ff693ec07216be1d9ead0ee481021f12ccc7461d1238aaa8422",
+    "sourceSha256": "7e6b17c4d2cc3c28c8bb85deacaa4e2ced4405ce4566d7b3ef01c10e72585944",
     "preview": "previews/docx-family.jpg",
     "dependencies": {
-      "docx/family.docx": "52a2cea63d738ff693ec07216be1d9ead0ee481021f12ccc7461d1238aaa8422"
+      "docx/family.docx": "7e6b17c4d2cc3c28c8bb85deacaa4e2ced4405ce4566d7b3ef01c10e72585944"
     }
   },
   {
     "id": "docx-presentation",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "1cb54a59610faedad4979a064b1b631a1ca690a823ee5dd9da8c1bf8b95a28ae",
+    "sourceSha256": "344540452232078056ea51459ac017c380c1a6fda4a8afa9bb73766086e9f1bc",
     "preview": "previews/docx-presentation.jpg",
     "dependencies": {
-      "docx/presentation.docx": "1cb54a59610faedad4979a064b1b631a1ca690a823ee5dd9da8c1bf8b95a28ae"
+      "docx/presentation.docx": "344540452232078056ea51459ac017c380c1a6fda4a8afa9bb73766086e9f1bc"
     }
   },
   {
     "id": "docx-school",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "f18af1ddf6cb83df8d641e3fda1cbed944c6a5180dd24a4255d2b4067a50537d",
+    "sourceSha256": "a9ce97f315b678feec6e6c34dd1d1aad9c64f162902e33971e28d4aacb3695fa",
     "preview": "previews/docx-school.jpg",
     "dependencies": {
-      "docx/school.docx": "f18af1ddf6cb83df8d641e3fda1cbed944c6a5180dd24a4255d2b4067a50537d"
+      "docx/school.docx": "a9ce97f315b678feec6e6c34dd1d1aad9c64f162902e33971e28d4aacb3695fa"
     }
   },
   {
     "id": "docx-marketing",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "bcd5caf01555da83bcb29e76f4a5a8c113817f54d786c828348fedcc670689ca",
+    "sourceSha256": "ad5b16fd949d8ff3394a9d569e14294e81931ebfdce484836b9e0be0830653e0",
     "preview": "previews/docx-marketing.jpg",
     "dependencies": {
-      "docx/marketing.docx": "bcd5caf01555da83bcb29e76f4a5a8c113817f54d786c828348fedcc670689ca"
+      "docx/marketing.docx": "ad5b16fd949d8ff3394a9d569e14294e81931ebfdce484836b9e0be0830653e0"
     }
   },
   {
     "id": "docx-restaurant",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "82cb97d0215b55401b5717d25625f7ef7d7effd9912cd17dc805e2d5db6b00f3",
+    "sourceSha256": "3a4cf67890518a55413175c67856cc85b67b31681527d334ae1438c7f9412e99",
     "preview": "previews/docx-restaurant.jpg",
     "dependencies": {
-      "docx/restaurant.docx": "82cb97d0215b55401b5717d25625f7ef7d7effd9912cd17dc805e2d5db6b00f3"
+      "docx/restaurant.docx": "3a4cf67890518a55413175c67856cc85b67b31681527d334ae1438c7f9412e99"
     }
   },
   {
     "id": "docx-technical",
     "engine": "LibreOffice",
     "pages": 1,
-    "sourceSha256": "a00c561d1271d8b9ad6da5b83d2b857d5d98bb1b6a4f1f6412d0a4aa768444c9",
+    "sourceSha256": "03ef96545ae558dde2aeb354d1cc717bc7b920b412804c76cf9782cb651dd433",
     "preview": "previews/docx-technical.jpg",
     "dependencies": {
-      "docx/technical.docx": "a00c561d1271d8b9ad6da5b83d2b857d5d98bb1b6a4f1f6412d0a4aa768444c9"
+      "docx/technical.docx": "03ef96545ae558dde2aeb354d1cc717bc7b920b412804c76cf9782cb651dd433"
     }
   }
 ]

@@ -1,0 +1,2139 @@
+{
+  "records": [
+    {
+      "id": "professional",
+      "input": {
+        "brief": "A wide decision banner leads into a full-width reconciliation register; three ownership notes close the decision.",
+        "seed": "gallery-032-professional",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#FFFFFF",
+            "surface": "#FFFFFF",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#32846E",
+          "secondary": "#6E91D0",
+          "accent": "#C24F74",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#465662",
+          "border": "#627482",
+          "action": "#811E43",
+          "actionHover": "#5E052C",
+          "focus": "#811E43",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#F06B63",
+          "secondary": "#1E5A57",
+          "accent": "#7AACF0",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#595348",
+          "border": "#777164",
+          "action": "#365A8B",
+          "actionHover": "#0D315E",
+          "focus": "#365A8B",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#994677",
+          "secondary": "#C9C253",
+          "accent": "#4EB6A0",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#595251",
+          "border": "#786F6E",
+          "action": "#006051",
+          "actionHover": "#004D3E",
+          "focus": "#006051",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 16.293495425950333,
+        "controlText": 11.212948956647235
+      },
+      "rationale": "A wide decision banner leads into a full-width reconciliation register; three ownership notes close the decision."
+    },
+    {
+      "id": "legal",
+      "input": {
+        "brief": "A portrait brief gives the conclusion and evidence register priority; dated records remain in one comparison table above the legal questions.",
+        "seed": "gallery-032-legal",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#F6F0E5",
+            "surface": "#F6F0E5",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#795A35",
+          "secondary": "#38676E",
+          "accent": "#888ED9",
+          "background": "#F6F0E5",
+          "surface": "#F6F0E5",
+          "text": "#17212B",
+          "muted": "#4E5940",
+          "border": "#6B775A",
+          "action": "#3E4176",
+          "actionHover": "#2D2F62",
+          "focus": "#3E4176",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#8BC7D7",
+          "secondary": "#B088CA",
+          "accent": "#3D5E3E",
+          "background": "#F6F0E5",
+          "surface": "#F6F0E5",
+          "text": "#17212B",
+          "muted": "#455A47",
+          "border": "#607963",
+          "action": "#3D5E3E",
+          "actionHover": "#244025",
+          "focus": "#3D5E3E",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#A7C85C",
+          "secondary": "#767FBB",
+          "accent": "#D7A2E1",
+          "background": "#F6F0E5",
+          "surface": "#F6F0E5",
+          "text": "#17212B",
+          "muted": "#4E574C",
+          "border": "#6B7568",
+          "action": "#68436F",
+          "actionHover": "#512D58",
+          "focus": "#68436F",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 14.36467911622057,
+        "controlText": 11.690016844369266
+      },
+      "rationale": "A portrait brief gives the conclusion and evidence register priority; dated records remain in one comparison table above the legal questions."
+    },
+    {
+      "id": "business",
+      "input": {
+        "brief": "A restrained portrait offer pairs the fee with the proposal title; the phase register separates scope from commercial terms.",
+        "seed": "gallery-032-business",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#FFFFFF",
+            "surface": "#FFFFFF",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#39793F",
+          "secondary": "#57ABA4",
+          "accent": "#DFB86B",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#4D5849",
+          "border": "#697665",
+          "action": "#6F5315",
+          "actionHover": "#583D00",
+          "focus": "#6F5315",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#7E3C8F",
+          "secondary": "#813427",
+          "accent": "#3769B0",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#53535A",
+          "border": "#707179",
+          "action": "#204B88",
+          "actionHover": "#093772",
+          "focus": "#204B88",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#C8C36E",
+          "secondary": "#6AB8D1",
+          "accent": "#5E428D",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#485945",
+          "border": "#647860",
+          "action": "#5E428D",
+          "actionHover": "#412868",
+          "focus": "#5E428D",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 16.293495425950333,
+        "controlText": 8.404442162021892
+      },
+      "rationale": "A restrained portrait offer pairs the fee with the proposal title; the phase register separates scope from commercial terms."
+    },
+    {
+      "id": "fun",
+      "input": {
+        "brief": "A horizontal ticket places the event title beside the running order; a bright arrival band and three practical columns anchor the lower half.",
+        "seed": "gallery-032-fun",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#FFD85A",
+            "surface": "#FFD85A",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#386F86",
+          "secondary": "#8D3258",
+          "accent": "#488C99",
+          "background": "#FFD85A",
+          "surface": "#FFD85A",
+          "text": "#17212B",
+          "muted": "#515458",
+          "border": "#6E7276",
+          "action": "#175762",
+          "actionHover": "#003C46",
+          "focus": "#175762",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#BA6623",
+          "secondary": "#35B3A9",
+          "accent": "#F99FCF",
+          "background": "#FFD85A",
+          "surface": "#FFD85A",
+          "text": "#17212B",
+          "muted": "#53554B",
+          "border": "#717367",
+          "action": "#804164",
+          "actionHover": "#672B4E",
+          "focus": "#804164",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#83B4F2",
+          "secondary": "#CD5CCB",
+          "accent": "#86C95B",
+          "background": "#FFD85A",
+          "surface": "#FFD85A",
+          "text": "#17212B",
+          "muted": "#4E5173",
+          "border": "#6A6E96",
+          "action": "#2D5D00",
+          "actionHover": "#174600",
+          "focus": "#2D5D00",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 11.810443950349224,
+        "controlText": 10.57302045817823
+      },
+      "rationale": "A horizontal ticket places the event title beside the running order; a bright arrival band and three practical columns anchor the lower half."
+    },
+    {
+      "id": "family",
+      "input": {
+        "brief": "A portrait itinerary puts packing and contingency notes before the day-by-day register so the reader can prepare before travelling.",
+        "seed": "gallery-032-family",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#E3EDF7",
+            "surface": "#E3EDF7",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#5FB096",
+          "secondary": "#5344BF",
+          "accent": "#3D7651",
+          "background": "#E3EDF7",
+          "surface": "#E3EDF7",
+          "text": "#17212B",
+          "muted": "#53573A",
+          "border": "#707554",
+          "action": "#245737",
+          "actionHover": "#0D4224",
+          "focus": "#245737",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#E2A2B8",
+          "secondary": "#A7AB38",
+          "accent": "#A298ED",
+          "background": "#E3EDF7",
+          "surface": "#E3EDF7",
+          "text": "#17212B",
+          "muted": "#69485B",
+          "border": "#8B647A",
+          "action": "#534B87",
+          "actionHover": "#2E225B",
+          "focus": "#534B87",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#3C5A47",
+          "secondary": "#A2A1CF",
+          "accent": "#B1AA77",
+          "background": "#E3EDF7",
+          "surface": "#E3EDF7",
+          "text": "#17212B",
+          "muted": "#3C5D44",
+          "border": "#567C5F",
+          "action": "#5E5933",
+          "actionHover": "#36310B",
+          "focus": "#5E5933",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 13.750882632522735,
+        "controlText": 8.23316117637481
+      },
+      "rationale": "A portrait itinerary puts packing and contingency notes before the day-by-day register so the reader can prepare before travelling."
+    },
+    {
+      "id": "presentation",
+      "input": {
+        "brief": "A portrait argument uses a narrow six-week marker, a central proposal, and a full-width measurement register before the decision conditions.",
+        "seed": "gallery-032-presentation",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#F7EBDD",
+            "surface": "#F7EBDD",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#BE6CAC",
+          "secondary": "#726239",
+          "accent": "#CCA9E4",
+          "background": "#F7EBDD",
+          "surface": "#F7EBDD",
+          "text": "#17212B",
+          "muted": "#56515F",
+          "border": "#746E7F",
+          "action": "#614871",
+          "actionHover": "#4B335A",
+          "focus": "#614871",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#436730",
+          "secondary": "#894FBA",
+          "accent": "#7B2E52",
+          "background": "#F7EBDD",
+          "surface": "#F7EBDD",
+          "text": "#17212B",
+          "muted": "#4D5945",
+          "border": "#697760",
+          "action": "#7B2E52",
+          "actionHover": "#571536",
+          "focus": "#7B2E52",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#73C7C0",
+          "secondary": "#5EA2B3",
+          "accent": "#A5513D",
+          "background": "#F7EBDD",
+          "surface": "#F7EBDD",
+          "text": "#17212B",
+          "muted": "#4F564E",
+          "border": "#6C746B",
+          "action": "#7F3726",
+          "actionHover": "#682211",
+          "focus": "#7F3726",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 13.8744973727639,
+        "controlText": 9.737508776864104
+      },
+      "rationale": "A portrait argument uses a narrow six-week marker, a central proposal, and a full-width measurement register before the decision conditions."
+    },
+    {
+      "id": "school",
+      "input": {
+        "brief": "A wide laboratory sheet puts raw measurements first beside the research question; method and interpretation occupy a lower three-column band.",
+        "seed": "gallery-032-school",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#FFFFFF",
+            "surface": "#FFFFFF",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#637B50",
+          "secondary": "#BEA9D6",
+          "accent": "#A76ABE",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#5C5336",
+          "border": "#7B714F",
+          "action": "#6E3A81",
+          "actionHover": "#502360",
+          "focus": "#6E3A81",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#AE42A2",
+          "secondary": "#635125",
+          "accent": "#54A0E5",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#5B5154",
+          "border": "#7A6E72",
+          "action": "#104E7F",
+          "actionHover": "#003B6B",
+          "focus": "#104E7F",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#F2A95B",
+          "secondary": "#28658D",
+          "accent": "#EF836B",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#535646",
+          "border": "#707461",
+          "action": "#883A2A",
+          "actionHover": "#590E00",
+          "focus": "#883A2A",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 16.293495425950333,
+        "controlText": 9.691075408887853
+      },
+      "rationale": "A wide laboratory sheet puts raw measurements first beside the research question; method and interpretation occupy a lower three-column band."
+    },
+    {
+      "id": "marketing",
+      "input": {
+        "brief": "A wide channel-first dispatch pairs the message with a tall capacity strip, then gives the launch channels the entire lower width.",
+        "seed": "gallery-032-marketing",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#D9E4FF",
+            "surface": "#D9E4FF",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#386055",
+          "secondary": "#84577C",
+          "accent": "#757646",
+          "background": "#D9E4FF",
+          "surface": "#D9E4FF",
+          "text": "#17212B",
+          "muted": "#535550",
+          "border": "#70736D",
+          "action": "#57582E",
+          "actionHover": "#43441A",
+          "focus": "#57582E",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#DD8DE9",
+          "secondary": "#D39A30",
+          "accent": "#52BE97",
+          "background": "#D9E4FF",
+          "surface": "#D9E4FF",
+          "text": "#17212B",
+          "muted": "#535359",
+          "border": "#717177",
+          "action": "#04664B",
+          "actionHover": "#003C26",
+          "focus": "#04664B",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#2E936A",
+          "secondary": "#45CCB4",
+          "accent": "#EF9E5B",
+          "background": "#D9E4FF",
+          "surface": "#D9E4FF",
+          "text": "#17212B",
+          "muted": "#4A5851",
+          "border": "#66766E",
+          "action": "#763E00",
+          "actionHover": "#5E2800",
+          "focus": "#763E00",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 12.795595211951543,
+        "controlText": 10.402903553908095
+      },
+      "rationale": "A wide channel-first dispatch pairs the message with a tall capacity strip, then gives the launch channels the entire lower width."
+    },
+    {
+      "id": "restaurant",
+      "input": {
+        "brief": "A narrow portrait menu alternates course headings and descriptions, followed by a quiet pairing register and service details.",
+        "seed": "gallery-032-restaurant",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#F5F2E7",
+            "surface": "#F5F2E7",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#2E5773",
+          "secondary": "#59457E",
+          "accent": "#6EC7B7",
+          "background": "#F5F2E7",
+          "surface": "#F5F2E7",
+          "text": "#17212B",
+          "muted": "#365A62",
+          "border": "#4F7982",
+          "action": "#115C51",
+          "actionHover": "#00463C",
+          "focus": "#115C51",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#E7AF8C",
+          "secondary": "#4D8B46",
+          "accent": "#943E64",
+          "background": "#F5F2E7",
+          "surface": "#F5F2E7",
+          "text": "#17212B",
+          "muted": "#614D55",
+          "border": "#816A73",
+          "action": "#6E2547",
+          "actionHover": "#580E34",
+          "focus": "#6E2547",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#516F3C",
+          "secondary": "#7D549F",
+          "accent": "#883145",
+          "background": "#F5F2E7",
+          "surface": "#F5F2E7",
+          "text": "#17212B",
+          "muted": "#4D5753",
+          "border": "#697570",
+          "action": "#883145",
+          "actionHover": "#63172B",
+          "focus": "#883145",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 14.537872922612218,
+        "controlText": 8.52771804666408
+      },
+      "rationale": "A narrow portrait menu alternates course headings and descriptions, followed by a quiet pairing register and service details."
+    },
+    {
+      "id": "technical",
+      "input": {
+        "brief": "A wide operations sheet puts the proceed-or-stop matrix before the three recovery steps; a red stop rule and batch size remain adjacent to the procedure.",
+        "seed": "gallery-032-technical",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#FFFFFF",
+            "surface": "#FFFFFF",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#D69395",
+          "secondary": "#614933",
+          "accent": "#E1AFC8",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#605141",
+          "border": "#806E5C",
+          "action": "#704D5F",
+          "actionHover": "#593849",
+          "focus": "#704D5F",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#5F3B9A",
+          "secondary": "#853744",
+          "accent": "#47542B",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#664C52",
+          "border": "#87686F",
+          "action": "#47542B",
+          "actionHover": "#2D3714",
+          "focus": "#47542B",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#6ED4DE",
+          "secondary": "#5496DF",
+          "accent": "#788D43",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#425B4A",
+          "border": "#5D7A66",
+          "action": "#475815",
+          "actionHover": "#303D00",
+          "focus": "#475815",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 16.293495425950333,
+        "controlText": 8.594384421768375
+      },
+      "rationale": "A wide operations sheet puts the proceed-or-stop matrix before the three recovery steps; a red stop rule and batch size remain adjacent to the procedure."
+    },
+    {
+      "id": "webapp-workspace",
+      "input": {
+        "brief": "A wide manuscript leads; revision guidance moves into a labelled disclosure below the editor, with chapter context across the top.",
+        "seed": "gallery-032-webapp-workspace",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#F5F0E6",
+            "surface": "#F5F0E6",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#924FDD",
+          "secondary": "#AA2F3C",
+          "accent": "#48CDC7",
+          "background": "#F5F0E6",
+          "surface": "#F5F0E6",
+          "text": "#17212B",
+          "muted": "#4E5269",
+          "border": "#6B6F8B",
+          "action": "#00605D",
+          "actionHover": "#004846",
+          "focus": "#00605D",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#6C7428",
+          "secondary": "#3A98B6",
+          "accent": "#A92B57",
+          "background": "#F5F0E6",
+          "surface": "#F5F0E6",
+          "text": "#17212B",
+          "muted": "#5E5147",
+          "border": "#7D6E63",
+          "action": "#800E3C",
+          "actionHover": "#680029",
+          "focus": "#800E3C",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#C8C28D",
+          "secondary": "#537389",
+          "accent": "#DDB9AB",
+          "background": "#F5F0E6",
+          "surface": "#F5F0E6",
+          "text": "#17212B",
+          "muted": "#545739",
+          "border": "#727552",
+          "action": "#573F36",
+          "actionHover": "#573F36",
+          "focus": "#573F36",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 14.345386895610211,
+        "controlText": 10.444747485333265
+      },
+      "rationale": "A wide manuscript leads; revision guidance moves into a labelled disclosure below the editor, with chapter context across the top."
+    },
+    {
+      "id": "webapp-board",
+      "input": {
+        "brief": "A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work.",
+        "seed": "gallery-032-webapp-board",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#E9E1F6",
+            "surface": "#E9E1F6",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#8A7950",
+          "secondary": "#75B2B3",
+          "accent": "#AF93D3",
+          "background": "#E9E1F6",
+          "surface": "#E9E1F6",
+          "text": "#17212B",
+          "muted": "#4F583B",
+          "border": "#6C7755",
+          "action": "#5B4775",
+          "actionHover": "#34204A",
+          "focus": "#5B4775",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#496EAD",
+          "secondary": "#7A4B3A",
+          "accent": "#4E5436",
+          "background": "#E9E1F6",
+          "surface": "#E9E1F6",
+          "text": "#17212B",
+          "muted": "#4B5465",
+          "border": "#677286",
+          "action": "#4E5436",
+          "actionHover": "#33381E",
+          "focus": "#4E5436",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#F7ADAB",
+          "secondary": "#3E5E19",
+          "accent": "#6AD4E7",
+          "background": "#E9E1F6",
+          "surface": "#E9E1F6",
+          "text": "#17212B",
+          "muted": "#614E52",
+          "border": "#816B6F",
+          "action": "#00515E",
+          "actionHover": "#00515E",
+          "focus": "#00515E",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 12.852912279656103,
+        "controlText": 10.266229182308685
+      },
+      "rationale": "A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work."
+    },
+    {
+      "id": "webapp-settings",
+      "input": {
+        "brief": "A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy.",
+        "seed": "gallery-032-webapp-settings",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "dark": {
+            "background": "#17363C",
+            "surface": "#17363C",
+            "text": "#FFFFFF"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#5D4C8F",
+          "secondary": "#AC6631",
+          "accent": "#429CAB",
+          "background": "#17363C",
+          "surface": "#17363C",
+          "text": "#FFFFFF",
+          "muted": "#94A3AC",
+          "border": "#94A3AC",
+          "action": "#429CAB",
+          "actionHover": "#8CCAD5",
+          "focus": "#429CAB",
+          "danger": "#FF948C",
+          "info": "#83B7FF",
+          "success": "#22C55E",
+          "warning": "#F59E0B",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        },
+        {
+          "brand": "#D3AC69",
+          "secondary": "#76CEA0",
+          "accent": "#2342A6",
+          "background": "#17363C",
+          "surface": "#17363C",
+          "text": "#FFFFFF",
+          "muted": "#AD9C97",
+          "border": "#AD9C97",
+          "action": "#87A9FA",
+          "actionHover": "#A2BCF9",
+          "focus": "#87A9FA",
+          "danger": "#FF948C",
+          "info": "#83B7FF",
+          "success": "#22C55E",
+          "warning": "#F59E0B",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        },
+        {
+          "brand": "#389448",
+          "secondary": "#50C5B4",
+          "accent": "#CBBF4E",
+          "background": "#17363C",
+          "surface": "#17363C",
+          "text": "#FFFFFF",
+          "muted": "#A59F96",
+          "border": "#A59F96",
+          "action": "#A89E3A",
+          "actionHover": "#CBBF4E",
+          "focus": "#A89E3A",
+          "danger": "#FF948C",
+          "info": "#83B7FF",
+          "success": "#22C55E",
+          "warning": "#F59E0B",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 12.8885969693551,
+        "controlText": 9.144599770471466
+      },
+      "rationale": "A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy."
+    },
+    {
+      "id": "data-revenue",
+      "input": {
+        "brief": "A wide chart leads a white analytical spread; measure controls sit above it and the exact values move beside the chart.",
+        "seed": "gallery-032-data-revenue",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#FFFFFF",
+            "surface": "#FFFFFF",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#6F3E7B",
+          "secondary": "#DB9CA2",
+          "accent": "#89B8D9",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#58515D",
+          "border": "#766E7C",
+          "action": "#2F5168",
+          "actionHover": "#1A3C51",
+          "focus": "#2F5168",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#A6CF86",
+          "secondary": "#466972",
+          "accent": "#78553F",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#5E5334",
+          "border": "#7D714D",
+          "action": "#78553F",
+          "actionHover": "#432714",
+          "focus": "#78553F",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#91A05E",
+          "secondary": "#8EC6E3",
+          "accent": "#D3BC76",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#495849",
+          "border": "#657765",
+          "action": "#675621",
+          "actionHover": "#504005",
+          "focus": "#675621",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 16.293495425950333,
+        "controlText": 7.910184451052593
+      },
+      "rationale": "A wide chart leads a white analytical spread; measure controls sit above it and the exact values move beside the chart."
+    },
+    {
+      "id": "data-operations",
+      "input": {
+        "brief": "A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence.",
+        "seed": "gallery-032-data-operations",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#EED6B3",
+            "surface": "#EED6B3",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#919146",
+          "secondary": "#85A0E5",
+          "accent": "#6C5229",
+          "background": "#EED6B3",
+          "surface": "#EED6B3",
+          "text": "#17212B",
+          "muted": "#52554F",
+          "border": "#6F736C",
+          "action": "#6C5229",
+          "actionHover": "#4C3612",
+          "focus": "#6C5229",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#E093EB",
+          "secondary": "#98402A",
+          "accent": "#45946E",
+          "background": "#EED6B3",
+          "surface": "#EED6B3",
+          "text": "#17212B",
+          "muted": "#68485E",
+          "border": "#89647D",
+          "action": "#125E3E",
+          "actionHover": "#004228",
+          "focus": "#125E3E",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#824D38",
+          "secondary": "#34575A",
+          "accent": "#A85187",
+          "background": "#EED6B3",
+          "surface": "#EED6B3",
+          "text": "#17212B",
+          "muted": "#694B4C",
+          "border": "#8A6768",
+          "action": "#823766",
+          "actionHover": "#4B0C37",
+          "focus": "#823766",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 11.564494711979256,
+        "controlText": 8.995017260282069
+      },
+      "rationale": "A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence."
+    },
+    {
+      "id": "restaurant-fine-dining",
+      "input": {
+        "brief": "An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet.",
+        "seed": "gallery-032-restaurant-fine-dining",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "dark": {
+            "background": "#173E2C",
+            "surface": "#173E2C",
+            "text": "#FFFFFF"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#346726",
+          "secondary": "#859AE3",
+          "accent": "#D29168",
+          "background": "#173E2C",
+          "surface": "#173E2C",
+          "text": "#FFFFFF",
+          "muted": "#86A9A2",
+          "border": "#86A9A2",
+          "action": "#D29168",
+          "actionHover": "#FBC7A8",
+          "focus": "#D29168",
+          "danger": "#FF948C",
+          "info": "#83B7FF",
+          "success": "#22C55E",
+          "warning": "#F59E0B",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        },
+        {
+          "brand": "#692C87",
+          "secondary": "#515726",
+          "accent": "#28576A",
+          "background": "#173E2C",
+          "surface": "#173E2C",
+          "text": "#FFFFFF",
+          "muted": "#A99BAA",
+          "border": "#A99BAA",
+          "action": "#92B5C5",
+          "actionHover": "#ABC6D1",
+          "focus": "#92B5C5",
+          "danger": "#FF948C",
+          "info": "#83B7FF",
+          "success": "#22C55E",
+          "warning": "#F59E0B",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        },
+        {
+          "brand": "#47C6C3",
+          "secondary": "#812268",
+          "accent": "#5B4D18",
+          "background": "#173E2C",
+          "surface": "#173E2C",
+          "text": "#FFFFFF",
+          "muted": "#90A6A5",
+          "border": "#90A6A5",
+          "action": "#B7AC85",
+          "actionHover": "#D3CAAD",
+          "focus": "#B7AC85",
+          "danger": "#FF948C",
+          "info": "#83B7FF",
+          "success": "#22C55E",
+          "warning": "#F59E0B",
+          "onAction": "#000000",
+          "onActionHover": "#000000",
+          "onDanger": "#000000"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 11.919280797111044,
+        "controlText": 9.696598715345464
+      },
+      "rationale": "An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet."
+    },
+    {
+      "id": "restaurant-cafe",
+      "input": {
+        "brief": "A full-width receipt strip precedes a horizontal product shelf; the selected items and clear action stay beside the running subtotal.",
+        "seed": "gallery-032-restaurant-cafe",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#F2CB9C",
+            "surface": "#F2CB9C",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#60A8E9",
+          "secondary": "#5F49B8",
+          "accent": "#5CAC51",
+          "background": "#F2CB9C",
+          "surface": "#F2CB9C",
+          "text": "#17212B",
+          "muted": "#45585B",
+          "border": "#60767A",
+          "action": "#18560F",
+          "actionHover": "#004300",
+          "focus": "#18560F",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#005510",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#DAB584",
+          "secondary": "#A3AD76",
+          "accent": "#4B52A8",
+          "background": "#F2CB9C",
+          "surface": "#F2CB9C",
+          "text": "#17212B",
+          "muted": "#5E5240",
+          "border": "#7D6F5A",
+          "action": "#4B52A8",
+          "actionHover": "#222169",
+          "focus": "#4B52A8",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#005510",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#A65528",
+          "secondary": "#2D8037",
+          "accent": "#EC72AA",
+          "background": "#F2CB9C",
+          "surface": "#F2CB9C",
+          "text": "#17212B",
+          "muted": "#654E45",
+          "border": "#866B60",
+          "action": "#842C58",
+          "actionHover": "#6F1645",
+          "focus": "#842C58",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#005510",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 10.705511982742042,
+        "controlText": 10.481454599601065
+      },
+      "rationale": "A full-width receipt strip precedes a horizontal product shelf; the selected items and clear action stay beside the running subtotal."
+    },
+    {
+      "id": "restaurant-reservations",
+      "input": {
+        "brief": "A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices.",
+        "seed": "gallery-032-restaurant-reservations",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#F4EAF5",
+            "surface": "#F4EAF5",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#5AA8A0",
+          "secondary": "#8761B9",
+          "accent": "#458666",
+          "background": "#F4EAF5",
+          "surface": "#F4EAF5",
+          "text": "#17212B",
+          "muted": "#4F5653",
+          "border": "#6C7470",
+          "action": "#2C664A",
+          "actionHover": "#003621",
+          "focus": "#2C664A",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#F68F9B",
+          "secondary": "#93D841",
+          "accent": "#BAA6F5",
+          "background": "#F4EAF5",
+          "surface": "#F4EAF5",
+          "text": "#17212B",
+          "muted": "#5E514E",
+          "border": "#7D6E6B",
+          "action": "#54457C",
+          "actionHover": "#3F2F64",
+          "focus": "#54457C",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#6F4579",
+          "secondary": "#CF8439",
+          "accent": "#5394E4",
+          "background": "#F4EAF5",
+          "surface": "#F4EAF5",
+          "text": "#17212B",
+          "muted": "#674C4D",
+          "border": "#886869",
+          "action": "#11447D",
+          "actionHover": "#003168",
+          "focus": "#11447D",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 13.914847751935936,
+        "controlText": 10.190813978510292
+      },
+      "rationale": "A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices."
+    },
+    {
+      "id": "restaurant-menu",
+      "input": {
+        "brief": "A dark search rail accompanies a two-column dish catalog; the allergy instruction spans the page above the results.",
+        "seed": "gallery-032-restaurant-menu",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#FFFFFF",
+            "surface": "#FFFFFF",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#6A34C1",
+          "secondary": "#962440",
+          "accent": "#2F7E6D",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#44585F",
+          "border": "#5F767F",
+          "action": "#155E50",
+          "actionHover": "#004A3C",
+          "focus": "#155E50",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#DAB165",
+          "secondary": "#8E9950",
+          "accent": "#E38966",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#634E4C",
+          "border": "#836B68",
+          "action": "#7F3F25",
+          "actionHover": "#521600",
+          "focus": "#7F3F25",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#56551E",
+          "secondary": "#388A9D",
+          "accent": "#C9729D",
+          "background": "#FFFFFF",
+          "surface": "#FFFFFF",
+          "text": "#17212B",
+          "muted": "#505650",
+          "border": "#6D746D",
+          "action": "#692C4C",
+          "actionHover": "#55193A",
+          "focus": "#692C4C",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 16.293495425950333,
+        "controlText": 8.823506958396807
+      },
+      "rationale": "A dark search rail accompanies a two-column dish catalog; the allergy instruction spans the page above the results."
+    },
+    {
+      "id": "business-portal",
+      "input": {
+        "brief": "The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately.",
+        "seed": "gallery-032-business-portal",
+        "count": 3,
+        "ranges": {
+          "hue": [
+            0,
+            360
+          ],
+          "chroma": [
+            0.08,
+            0.22
+          ],
+          "gamutFraction": [
+            0.4,
+            0.9
+          ]
+        },
+        "locked": {
+          "light": {
+            "background": "#EEE9F6",
+            "surface": "#EEE9F6",
+            "text": "#17212B"
+          }
+        }
+      },
+      "attempted": 24,
+      "passing": 24,
+      "alternatives": [
+        {
+          "brand": "#47A854",
+          "secondary": "#2B6570",
+          "accent": "#98587C",
+          "background": "#EEE9F6",
+          "surface": "#EEE9F6",
+          "text": "#17212B",
+          "muted": "#485854",
+          "border": "#647672",
+          "action": "#743D5D",
+          "actionHover": "#5E2A49",
+          "focus": "#743D5D",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#785CC6",
+          "secondary": "#BB79D6",
+          "accent": "#6BB2C0",
+          "background": "#EEE9F6",
+          "surface": "#EEE9F6",
+          "text": "#17212B",
+          "muted": "#5C5057",
+          "border": "#7B6D75",
+          "action": "#275E68",
+          "actionHover": "#00353F",
+          "focus": "#275E68",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        },
+        {
+          "brand": "#F19CB7",
+          "secondary": "#59A43E",
+          "accent": "#49A6DF",
+          "background": "#EEE9F6",
+          "surface": "#EEE9F6",
+          "text": "#17212B",
+          "muted": "#5A5251",
+          "border": "#796F6E",
+          "action": "#00537C",
+          "actionHover": "#004067",
+          "focus": "#00537C",
+          "danger": "#A70017",
+          "info": "#0B4CAF",
+          "success": "#006B1D",
+          "warning": "#754100",
+          "onAction": "#FFFFFF",
+          "onActionHover": "#FFFFFF",
+          "onDanger": "#FFFFFF"
+        }
+      ],
+      "decision": "Keep the authored page and control colors; proposals confirm compatible page roles. White panels have their own dark ink and accent controls.",
+      "actualPairs": {
+        "pageText": 13.672382649431375,
+        "controlText": 10.050987443274709
+      },
+      "rationale": "The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately."
+    }
+  ],
+  "collection": {
+    "rows": [
+      {
+        "id": "professional",
+        "background": "#FFFFFF",
+        "lightness": 1.0000000000000002,
+        "chroma": 0,
+        "treatment": "white-or-neutral"
+      },
+      {
+        "id": "legal",
+        "background": "#F6F0E5",
+        "lightness": 0.9568040833752125,
+        "chroma": 0.01596501957268576,
+        "treatment": "light-tinted"
+      },
+      {
+        "id": "business",
+        "background": "#FFFFFF",
+        "lightness": 1.0000000000000002,
+        "chroma": 0,
+        "treatment": "white-or-neutral"
+      },
+      {
+        "id": "fun",
+        "background": "#FFD85A",
+        "lightness": 0.8927341147514902,
+        "chroma": 0.14797456431149206,
+        "treatment": "chromatic"
+      },
+      {
+        "id": "family",
+        "background": "#E3EDF7",
+        "lightness": 0.9415098932030977,
+        "chroma": 0.017253392349689044,
+        "treatment": "light-tinted"
+      },
+      {
+        "id": "presentation",
+        "background": "#F7EBDD",
+        "lightness": 0.9457626729168835,
+        "chroma": 0.022737334534319077,
+        "treatment": "light-tinted"
+      },
+      {
+        "id": "school",
+        "background": "#FFFFFF",
+        "lightness": 1.0000000000000002,
+        "chroma": 0,
+        "treatment": "white-or-neutral"
+      },
+      {
+        "id": "marketing",
+        "background": "#D9E4FF",
+        "lightness": 0.9188958559271088,
+        "chroma": 0.03871380393432897,
+        "treatment": "light-tinted"
+      },
+      {
+        "id": "restaurant",
+        "background": "#F5F2E7",
+        "lightness": 0.9604662601146317,
+        "chroma": 0.014910596837490398,
+        "treatment": "white-or-neutral"
+      },
+      {
+        "id": "technical",
+        "background": "#FFFFFF",
+        "lightness": 1.0000000000000002,
+        "chroma": 0,
+        "treatment": "white-or-neutral"
+      },
+      {
+        "id": "webapp-workspace",
+        "background": "#F5F0E6",
+        "lightness": 0.9562826731968926,
+        "chroma": 0.014327120170908451,
+        "treatment": "white-or-neutral"
+      },
+      {
+        "id": "webapp-board",
+        "background": "#E9E1F6",
+        "lightness": 0.9222744255146426,
+        "chroma": 0.029418187889209926,
+        "treatment": "light-tinted"
+      },
+      {
+        "id": "webapp-settings",
+        "background": "#17363C",
+        "lightness": 0.3120479281826928,
+        "chroma": 0.038099537126546595,
+        "treatment": "dark"
+      },
+      {
+        "id": "data-revenue",
+        "background": "#FFFFFF",
+        "lightness": 1.0000000000000002,
+        "chroma": 0,
+        "treatment": "white-or-neutral"
+      },
+      {
+        "id": "data-operations",
+        "background": "#EED6B3",
+        "lightness": 0.8870799278648094,
+        "chroma": 0.05338214978322125,
+        "treatment": "light-tinted"
+      },
+      {
+        "id": "restaurant-fine-dining",
+        "background": "#173E2C",
+        "lightness": 0.32979412298411476,
+        "chroma": 0.05507559275412771,
+        "treatment": "dark"
+      },
+      {
+        "id": "restaurant-cafe",
+        "background": "#F2CB9C",
+        "lightness": 0.8645054465550515,
+        "chroma": 0.07552345347822917,
+        "treatment": "light-tinted"
+      },
+      {
+        "id": "restaurant-reservations",
+        "background": "#F4EAF5",
+        "lightness": 0.9480349328330914,
+        "chroma": 0.018060438500382123,
+        "treatment": "light-tinted"
+      },
+      {
+        "id": "restaurant-menu",
+        "background": "#FFFFFF",
+        "lightness": 1.0000000000000002,
+        "chroma": 0,
+        "treatment": "white-or-neutral"
+      },
+      {
+        "id": "business-portal",
+        "background": "#EEE9F6",
+        "lightness": 0.941681443715226,
+        "chroma": 0.01812085492416369,
+        "treatment": "light-tinted"
+      }
+    ],
+    "counts": {
+      "dark": 2,
+      "chromatic": 1,
+      "white-or-neutral": 8,
+      "light-tinted": 9
+    },
+    "flags": [
+      "16/20 surfaces are pale and low-chroma, regardless of hue; inspect color area across the rendered collection."
+    ],
+    "requiresVisualReview": true,
+    "limits": "Background coordinates omit color area, typography, images and nested surfaces. Related format variants should be counted once. Flags can be justified by a shared brand; they never force recoloring or certify beauty."
+  }
+}

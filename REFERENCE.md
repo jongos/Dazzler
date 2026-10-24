@@ -56,7 +56,7 @@ Requires Node 22.20+. Select your agent in the installer. This downloads the lar
 Download the host ZIP, `install_skill.py` and `SHA256SUMS.txt` from the release linked below. With Python 3.10+ available, run this from the download folder for an existing project:
 
 ```sh
-python install_skill.py install --host codex --scope project --root /absolute/project --version 0.31.1 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
+python install_skill.py install --host codex --scope project --root /absolute/project --version 0.32.0 --archive dazzler-codex.zip --checksums SHA256SUMS.txt
 ```
 
 Restart or refresh the agent, then ask it to use `$dazzler-frontend`. Add `--dry-run` to inspect an installation first. The installer checks hashes and resource completeness without executing downloaded scripts; updates preserve one previous version and refuse local edits.
@@ -113,11 +113,11 @@ Dazzler chooses the relevant typography, color, layout, chart and print treatmen
 ### Interactive interfaces
 
 <table>
-<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-workspace/index.html"><img src="docs/templates/previews/webapp-workspace.jpg" alt="The Author Notebook — UI snapshot" width="100%"></a><br><strong>The Author Notebook</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-board/index.html"><img src="docs/templates/previews/webapp-board.jpg" alt="The Release Staircase — UI snapshot" width="100%"></a><br><strong>The Release Staircase</strong> · UI</td></tr>
-<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-settings/index.html"><img src="docs/templates/previews/webapp-settings.jpg" alt="The Delivery Switchboard — UI snapshot" width="100%"></a><br><strong>The Delivery Switchboard</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/data-revenue/index.html"><img src="docs/templates/previews/data-revenue.jpg" alt="The Membership Observatory — UI snapshot" width="100%"></a><br><strong>The Membership Observatory</strong> · UI</td></tr>
-<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/data-operations/index.html"><img src="docs/templates/previews/data-operations.jpg" alt="The Station Workbench — UI snapshot" width="100%"></a><br><strong>The Station Workbench</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-fine-dining/index.html"><img src="docs/templates/previews/restaurant-fine-dining.jpg" alt="The Garden Invitation — UI snapshot" width="100%"></a><br><strong>The Garden Invitation</strong> · UI</td></tr>
-<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-cafe/index.html"><img src="docs/templates/previews/restaurant-cafe.jpg" alt="The Coffee Counter — UI snapshot" width="100%"></a><br><strong>The Coffee Counter</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-reservations/index.html"><img src="docs/templates/previews/restaurant-reservations.jpg" alt="The Seating Request Desk — UI snapshot" width="100%"></a><br><strong>The Seating Request Desk</strong> · UI</td></tr>
-<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-menu/index.html"><img src="docs/templates/previews/restaurant-menu.jpg" alt="The Lunch Bulletin — UI snapshot" width="100%"></a><br><strong>The Lunch Bulletin</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/business-portal/index.html"><img src="docs/templates/previews/business-portal.jpg" alt="The Project Review Room — UI snapshot" width="100%"></a><br><strong>The Project Review Room</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-workspace/index.html"><img src="docs/templates/previews/webapp-workspace.jpg" alt="The Manuscript Desk — UI snapshot" width="100%"></a><br><strong>The Manuscript Desk</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-board/index.html"><img src="docs/templates/previews/webapp-board.jpg" alt="The Production Register — UI snapshot" width="100%"></a><br><strong>The Production Register</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/webapp-settings/index.html"><img src="docs/templates/previews/webapp-settings.jpg" alt="Your Daily Digest — UI snapshot" width="100%"></a><br><strong>Your Daily Digest</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/data-revenue/index.html"><img src="docs/templates/previews/data-revenue.jpg" alt="Six Years of Membership — UI snapshot" width="100%"></a><br><strong>Six Years of Membership</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/data-operations/index.html"><img src="docs/templates/previews/data-operations.jpg" alt="Station Readings — UI snapshot" width="100%"></a><br><strong>Station Readings</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-fine-dining/index.html"><img src="docs/templates/previews/restaurant-fine-dining.jpg" alt="Supper in the Garden — UI snapshot" width="100%"></a><br><strong>Supper in the Garden</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-cafe/index.html"><img src="docs/templates/previews/restaurant-cafe.jpg" alt="At the Coffee Counter — UI snapshot" width="100%"></a><br><strong>At the Coffee Counter</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-reservations/index.html"><img src="docs/templates/previews/restaurant-reservations.jpg" alt="Choose Your Evening — UI snapshot" width="100%"></a><br><strong>Choose Your Evening</strong> · UI</td></tr>
+<tr><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/restaurant-menu/index.html"><img src="docs/templates/previews/restaurant-menu.jpg" alt="Lunch at the Market — UI snapshot" width="100%"></a><br><strong>Lunch at the Market</strong> · UI</td><td width="50%"><a href="https://jongos.github.io/Dazzler/templates/ui/business-portal/index.html"><img src="docs/templates/previews/business-portal.jpg" alt="Review the Next Step — UI snapshot" width="100%"></a><br><strong>Review the Next Step</strong> · UI</td></tr>
 </table>
 
 </details>
@@ -164,13 +164,13 @@ The directory listing is live. Its Gen Agent Trust Hub report dated October 2, 2
 Visualization credits: Vega/Vega-Lite, D3, Microcharts, React, and the optional mschart/officer runtime; see [third-party notices](THIRD_PARTY_NOTICES.md). Resource discovery: [bkrsln/dataviz](https://github.com/bkrsln/dataviz); no collection content was copied.
 
 - [Browse the live gallery](https://jongos.github.io/Dazzler/templates/)
-- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.31.1/dazzler-templates.zip)
+- [Download the template library](https://github.com/jongos/Dazzler/releases/download/v0.32.0/dazzler-templates.zip)
 - [open an issue](https://github.com/jongos/Dazzler/issues)
 
 Interactive illustrations use SVG.js and React/Vue Img Mapper under MIT, with runtime/parser notices retained. [Live examples](https://jongos.github.io/Dazzler/illustrations/).
 
-- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.31.1/dazzler-codex.zip)
-- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.31.1/dazzler-claude-compact.zip)
+- [Native Codex ZIP](https://github.com/jongos/Dazzler/releases/download/v0.32.0/dazzler-codex.zip)
+- [Compact Claude ZIP](https://github.com/jongos/Dazzler/releases/download/v0.32.0/dazzler-claude-compact.zip)
 
 ### Comparison notes
 

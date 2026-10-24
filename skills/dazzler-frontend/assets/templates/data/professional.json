@@ -4,11 +4,11 @@
   "short": "The Launch Decision",
   "tag": "NORTHLINE / OPERATING REVIEW",
   "lead": "Release the exchange in two stages. Keep the settlement hold until reconciliation is complete.",
-  "accent": "#A52620",
+  "accent": "#173D60",
   "paper": "#FFFFFF",
-  "font": "Office Code Pro",
-  "word": "Consolas",
-  "layout": "The Exception Dossier",
+  "font": "Archivo",
+  "word": "Arial",
+  "layout": "The Release Gate",
   "stat": "92%",
   "label": "of pilot transactions reconciled",
   "intro": "The six-week pilot processed 1,250 synthetic transactions. Reconciliation matched 1,150; the remaining 100 need manual review before settlement can be enabled.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Decision due 10 July · Approve the limited scope, not settlement.",
-  "prompt": "Use Dazzler to create a fictional professional document and web edition for this task: Release the exchange in two stages. Keep the settlement hold until reconciliation is complete. Retain every supplied fact and qualification. Separate the 100 unresolved records in a narrow evidence column; lead with the explicit hold before the release register. Use Office Code Pro for the web and verified Consolas for native output, with #A52620 against #FFFFFF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional professional document and HTML edition: Release the exchange in two stages. Keep the settlement hold until reconciliation is complete. A wide decision banner leads into a full-width reconciliation register; three ownership notes close the decision. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "office-code-pro",
-    "css_family": "Office Code Pro",
+    "id": "archivo",
+    "css_family": "Archivo",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Electric cobalt on white; the settlement decision owns the blue field.",
   "fictional": true,
   "design": {
-    "accent": "#A52620",
-    "secondary": "#A52620",
+    "accent": "#173D60",
+    "secondary": "#173D60",
     "paper": "#FFFFFF",
     "text": "#17212B",
-    "accentText": "#A52620",
+    "accentText": "#173D60",
     "onAccent": "#FFFFFF"
   },
   "document": [

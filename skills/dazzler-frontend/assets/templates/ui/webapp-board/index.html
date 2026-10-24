@@ -1,46 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <meta charset="utf-8" /><meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  /><title>The Release Staircase</title
-  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Production Register</title>
+    <link rel="stylesheet" href="../../fonts/fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Example</span>
     </nav>
     <main>
       <header>
-        <p class="eyebrow">SIGNAL / EPISODE 08</p>
-        <h1>The Release Staircase</h1>
+        <p class="eyebrow">webapp / board</p>
+        <h1>The Production Register</h1>
         <p class="lead">Four assignments between the recording and the release.</p>
       </header>
-      <section>
-        <h2>Advance Each Assignment</h2>
-        <div id="tasks"></div>
-        <p id="status" role="status"></p>
-      </section>
-      <div class="finish">
-        <p class="deadline">FRIDAY<br /><strong>16:00</strong></p>
-        <p id="done"></p>
-        <aside class="release-note">
-          <h2>Before Publication</h2>
-          <p>
-            Fact check and transcript approval are required. Each button advances only this local
-            demonstration; no production system changes.
-          </p>
+      <div class="production">
+        <section>
+          <div id="tasks"></div>
+          <p id="status" role="status"></p>
+        </section>
+        <aside class="release">
+          <p class="deadline">FRIDAY<br /><strong>16:00</strong></p>
+          <p id="done"></p>
+          <aside class="release-note">
+            <h2>Before Publication</h2>
+            <p>
+              Fact check and transcript approval are required. Each button advances only this local
+              demonstration; no production system changes.
+            </p>
+          </aside>
         </aside>
       </div>
     </main>
-    <footer>
-      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
-      no live service.
-    </footer>
+    <footer>Original Dazzler design · Apache-2.0 · Local font notices included.</footer>
     <script id="template-data" type="application/json">
       {
         "id": "webapp-board",
-        "title": "The Release Staircase",
-        "prompt": "Use Dazzler to design the release staircase for its fictional reader task. A wide four-step production staircase leads from assignments to a separate publication checkpoint; the deadline is a lower closing band. Retain the existing data and functional controls, with keyboard and mobile access. Use Office Code Pro, #9C2A14 and #FFD74A. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+        "title": "The Production Register",
+        "prompt": "Design a fictional webapp-board example for this task: Four assignments between the recording and the release. A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #E9E1F6 page with #4B3768 accents.",
         "data": {
           "tasks": [
             ["Opening Mix", "Ari", "Edit"],

@@ -4,11 +4,11 @@
   "short": "Meet After Sunset",
   "tag": "ALDER STREET / SATURDAY 17 JULY",
   "lead": "An evening of food, records and small discoveries. Bring a friend and leave room for dessert.",
-  "accent": "#452378",
-  "paper": "#FF9068",
-  "font": "Archivo",
+  "accent": "#6C2449",
+  "paper": "#FFD85A",
+  "font": "Oswald",
   "word": "Arial",
-  "layout": "The Neighborhood Poster",
+  "layout": "The Evening Ticket",
   "stat": "17 JUL",
   "label": "17:00–22:00 · free entry",
   "intro": "This fictional neighborhood night market fills the pedestrian block between Pine and Alder. No tickets are required; individual stalls set their own prices.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Fictional event · No real booking or attendance service.",
-  "prompt": "Use Dazzler to create a fictional fun document and web edition for this task: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. Retain every supplied fact and qualification. A vertical event poster makes arrival details the top band and the program a stepped running order under a giant title. Use Archivo for the web and verified Arial for native output, with #452378 against #FF9068. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional fun document and HTML edition: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. A horizontal ticket places the event title beside the running order; a bright arrival band and three practical columns anchor the lower half. Preserve every source number and qualification. Use Oswald for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "archivo",
-    "css_family": "Archivo",
+    "id": "oswald",
+    "css_family": "Oswald",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Vermilion night-market poster with violet and lemon counterpoints.",
   "fictional": true,
   "design": {
-    "accent": "#452378",
-    "secondary": "#452378",
-    "paper": "#FF9068",
+    "accent": "#6C2449",
+    "secondary": "#6C2449",
+    "paper": "#FFD85A",
     "text": "#17212B",
-    "accentText": "#452378",
+    "accentText": "#6C2449",
     "onAccent": "#FFFFFF"
   },
   "document": [

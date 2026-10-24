@@ -4,11 +4,11 @@
   "short": "An Evening at Morrow",
   "tag": "MORROW / LATE SUMMER",
   "lead": "A short menu built around what is ready now. Choose a few dishes and share the table.",
-  "accent": "#75243A",
-  "paper": "#F7D2DD",
-  "font": "Office Code Pro",
-  "word": "Consolas",
-  "layout": "The Supper Ledger",
+  "accent": "#385338",
+  "paper": "#F5F2E7",
+  "font": "Libre Baskerville",
+  "word": "Georgia",
+  "layout": "The Seasonal Menu",
   "stat": "18:00",
   "label": "first seating · Wednesday to Sunday",
   "intro": "A fictional neighborhood supper room. Prices are sample USD amounts before tax. Ask the team about ingredients and cross-contact; dietary labels are not safety guarantees.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Sample menu · Tell the team about allergies before ordering.",
-  "prompt": "Use Dazzler to create a fictional restaurant document and web edition for this task: A short menu built around what is ready now. Choose a few dishes and share the table. Retain every supplied fact and qualification. Three course columns align dishes across a wide supper ledger; service time occupies a small running header and pairings close the page. Use Office Code Pro for the web and verified Consolas for native output, with #75243A against #F7D2DD. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional restaurant document and HTML edition: A short menu built around what is ready now. Choose a few dishes and share the table. A narrow portrait menu alternates course headings and descriptions, followed by a quiet pairing register and service details. Preserve every source number and qualification. Use Libre Baskerville for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "office-code-pro",
-    "css_family": "Office Code Pro",
+    "id": "libre-baskerville",
+    "css_family": "Libre Baskerville",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Midnight-green supper menu with warm luminous type and citrus course markers.",
   "fictional": true,
   "design": {
-    "accent": "#75243A",
-    "secondary": "#75243A",
-    "paper": "#F7D2DD",
+    "accent": "#385338",
+    "secondary": "#385338",
+    "paper": "#F5F2E7",
     "text": "#17212B",
-    "accentText": "#75243A",
+    "accentText": "#385338",
     "onAccent": "#FFFFFF"
   },
   "document": [

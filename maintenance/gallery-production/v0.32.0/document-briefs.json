@@ -1,0 +1,222 @@
+[
+  {
+    "id": "professional",
+    "prompt": "Create a fictional professional document and HTML edition: Release the exchange in two stages. Keep the settlement hold until reconciliation is complete. A wide decision banner leads into a full-width reconciliation register; three ownership notes close the decision. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Release Gate",
+    "rationale": "A wide decision banner leads into a full-width reconciliation register; three ownership notes close the decision.",
+    "font": "Archivo",
+    "word": "Arial",
+    "orientation": "landscape",
+    "surface": "#FFFFFF",
+    "accent": "#173D60",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Release Gate",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A wide decision banner leads into a full-width reconciliation register; three ownership notes close the decision.",
+    "structuralChanges": [
+      "A wide decision banner leads into a full-width reconciliation register; three ownership notes close the decision.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "legal",
+    "prompt": "Create a fictional legal document and HTML edition: The record supports delivery. It does not yet establish that the recipient accepted the revised terms. A portrait brief gives the conclusion and evidence register priority; dated records remain in one comparison table above the legal questions. Preserve every source number and qualification. Use Libre Baskerville for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Evidence Brief",
+    "rationale": "A portrait brief gives the conclusion and evidence register priority; dated records remain in one comparison table above the legal questions.",
+    "font": "Libre Baskerville",
+    "word": "Georgia",
+    "orientation": "portrait",
+    "surface": "#F6F0E5",
+    "accent": "#562B37",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Evidence Brief",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A portrait brief gives the conclusion and evidence register priority; dated records remain in one comparison table above the legal questions.",
+    "structuralChanges": [
+      "A portrait brief gives the conclusion and evidence register priority; dated records remain in one comparison table above the legal questions.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "business",
+    "prompt": "Create a fictional business document and HTML edition: Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages. A restrained portrait offer pairs the fee with the proposal title; the phase register separates scope from commercial terms. Preserve every source number and qualification. Use Young Serif for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Scope Letter",
+    "rationale": "A restrained portrait offer pairs the fee with the proposal title; the phase register separates scope from commercial terms.",
+    "font": "Young Serif",
+    "word": "Georgia",
+    "orientation": "portrait",
+    "surface": "#FFFFFF",
+    "accent": "#22573D",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Scope Letter",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A restrained portrait offer pairs the fee with the proposal title; the phase register separates scope from commercial terms.",
+    "structuralChanges": [
+      "A restrained portrait offer pairs the fee with the proposal title; the phase register separates scope from commercial terms.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "fun",
+    "prompt": "Create a fictional fun document and HTML edition: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. A horizontal ticket places the event title beside the running order; a bright arrival band and three practical columns anchor the lower half. Preserve every source number and qualification. Use Oswald for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Evening Ticket",
+    "rationale": "A horizontal ticket places the event title beside the running order; a bright arrival band and three practical columns anchor the lower half.",
+    "font": "Oswald",
+    "word": "Arial",
+    "orientation": "landscape",
+    "surface": "#FFD85A",
+    "accent": "#6C2449",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Evening Ticket",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A horizontal ticket places the event title beside the running order; a bright arrival band and three practical columns anchor the lower half.",
+    "structuralChanges": [
+      "A horizontal ticket places the event title beside the running order; a bright arrival band and three practical columns anchor the lower half.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "family",
+    "prompt": "Create a fictional family document and HTML edition: A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday. A portrait itinerary puts packing and contingency notes before the day-by-day register so the reader can prepare before travelling. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Weekend Checklist",
+    "rationale": "A portrait itinerary puts packing and contingency notes before the day-by-day register so the reader can prepare before travelling.",
+    "font": "Archivo",
+    "word": "Arial",
+    "orientation": "portrait",
+    "surface": "#E3EDF7",
+    "accent": "#264F87",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Weekend Checklist",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A portrait itinerary puts packing and contingency notes before the day-by-day register so the reader can prepare before travelling.",
+    "structuralChanges": [
+      "A portrait itinerary puts packing and contingency notes before the day-by-day register so the reader can prepare before travelling.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "presentation",
+    "prompt": "Create a fictional presentation document and HTML edition: Test one late opening each week before committing to a permanent change. A portrait argument uses a narrow six-week marker, a central proposal, and a full-width measurement register before the decision conditions. Preserve every source number and qualification. Use Poppins for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Experiment Prospectus",
+    "rationale": "A portrait argument uses a narrow six-week marker, a central proposal, and a full-width measurement register before the decision conditions.",
+    "font": "Poppins",
+    "word": "Arial",
+    "orientation": "portrait",
+    "surface": "#F7EBDD",
+    "accent": "#633A20",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Experiment Prospectus",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A portrait argument uses a narrow six-week marker, a central proposal, and a full-width measurement register before the decision conditions.",
+    "structuralChanges": [
+      "A portrait argument uses a narrow six-week marker, a central proposal, and a full-width measurement register before the decision conditions.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "school",
+    "prompt": "Create a fictional school document and HTML edition: Compare drainage time in three soil samples. Record what happened before deciding why. A wide laboratory sheet puts raw measurements first beside the research question; method and interpretation occupy a lower three-column band. Preserve every source number and qualification. Use Office Code Pro for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Trial Bench",
+    "rationale": "A wide laboratory sheet puts raw measurements first beside the research question; method and interpretation occupy a lower three-column band.",
+    "font": "Office Code Pro",
+    "word": "Consolas",
+    "orientation": "landscape",
+    "surface": "#FFFFFF",
+    "accent": "#713124",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Trial Bench",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A wide laboratory sheet puts raw measurements first beside the research question; method and interpretation occupy a lower three-column band.",
+    "structuralChanges": [
+      "A wide laboratory sheet puts raw measurements first beside the research question; method and interpretation occupy a lower three-column band.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "marketing",
+    "prompt": "Create a fictional marketing document and HTML edition: Make repair feel like a first choice. Show the work, explain the process and make booking simple. A wide channel-first dispatch pairs the message with a tall capacity strip, then gives the launch channels the entire lower width. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Campaign Dispatch",
+    "rationale": "A wide channel-first dispatch pairs the message with a tall capacity strip, then gives the launch channels the entire lower width.",
+    "font": "Archivo",
+    "word": "Arial",
+    "orientation": "landscape",
+    "surface": "#D9E4FF",
+    "accent": "#223E76",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Campaign Dispatch",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A wide channel-first dispatch pairs the message with a tall capacity strip, then gives the launch channels the entire lower width.",
+    "structuralChanges": [
+      "A wide channel-first dispatch pairs the message with a tall capacity strip, then gives the launch channels the entire lower width.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "restaurant",
+    "prompt": "Create a fictional restaurant document and HTML edition: A short menu built around what is ready now. Choose a few dishes and share the table. A narrow portrait menu alternates course headings and descriptions, followed by a quiet pairing register and service details. Preserve every source number and qualification. Use Libre Baskerville for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Seasonal Menu",
+    "rationale": "A narrow portrait menu alternates course headings and descriptions, followed by a quiet pairing register and service details.",
+    "font": "Libre Baskerville",
+    "word": "Georgia",
+    "orientation": "portrait",
+    "surface": "#F5F2E7",
+    "accent": "#385338",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Seasonal Menu",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A narrow portrait menu alternates course headings and descriptions, followed by a quiet pairing register and service details.",
+    "structuralChanges": [
+      "A narrow portrait menu alternates course headings and descriptions, followed by a quiet pairing register and service details.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  },
+  {
+    "id": "technical",
+    "prompt": "Create a fictional technical document and HTML edition: Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch. A wide operations sheet puts the proceed-or-stop matrix before the three recovery steps; a red stop rule and batch size remain adjacent to the procedure. Preserve every source number and qualification. Use Office Code Pro for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "direction": "The Recovery Checkpoint",
+    "rationale": "A wide operations sheet puts the proceed-or-stop matrix before the three recovery steps; a red stop rule and batch size remain adjacent to the procedure.",
+    "font": "Office Code Pro",
+    "word": "Consolas",
+    "orientation": "landscape",
+    "surface": "#FFFFFF",
+    "accent": "#13545A",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Recovery Checkpoint",
+      "Linear plain-text reference"
+    ],
+    "selectionReason": "A wide operations sheet puts the proceed-or-stop matrix before the three recovery steps; a red stop rule and batch size remain adjacent to the procedure.",
+    "structuralChanges": [
+      "A wide operations sheet puts the proceed-or-stop matrix before the three recovery steps; a red stop rule and batch size remain adjacent to the procedure.",
+      "Changes page orientation and reading sequence from the previous gallery.",
+      "Moves the evidence register relative to the title and supporting notes."
+    ]
+  }
+]

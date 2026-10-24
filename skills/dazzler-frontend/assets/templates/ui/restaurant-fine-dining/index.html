@@ -1,67 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <meta charset="utf-8" /><meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  /><title>The Garden Invitation</title
-  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Supper in the Garden</title>
+    <link rel="stylesheet" href="../../fonts/fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Example</span>
     </nav>
     <main>
-      <div class="invitation">
-        <div class="botanical" aria-hidden="true">
-          <svg viewbox="0 0 400 430">
-            <path d="M200 400Q150 200 240 40" fill="none" stroke="#6B224B" stroke-width="5"></path>
-            <g fill="#6B224B">
-              <ellipse cx="180" cy="290" rx="65" ry="23" transform="rotate(25 180 290)"></ellipse>
-              <ellipse cx="233" cy="230" rx="65" ry="23" transform="rotate(-30 233 230)"></ellipse>
-              <ellipse cx="191" cy="160" rx="57" ry="20" transform="rotate(35 191 160)"></ellipse>
-              <ellipse cx="241" cy="90" rx="43" ry="19" transform="rotate(-35 241 90)"></ellipse>
-            </g>
-          </svg>
-        </div>
-        <header>
-          <p class="eyebrow">VESPER / TWELVE SEATS</p>
-          <h1>The Garden Invitation</h1>
-          <p class="lead">Five courses, paced for conversation.</p>
+      <div class="dining">
+        <aside>
+          <div class="botanical" aria-hidden="true">
+            <svg viewbox="0 0 400 430">
+              <path
+                d="M200 400Q150 200 240 40"
+                fill="none"
+                stroke="#6B224B"
+                stroke-width="5"
+              ></path>
+              <g fill="#6B224B">
+                <ellipse cx="180" cy="290" rx="65" ry="23" transform="rotate(25 180 290)"></ellipse>
+                <ellipse
+                  cx="233"
+                  cy="230"
+                  rx="65"
+                  ry="23"
+                  transform="rotate(-30 233 230)"
+                ></ellipse>
+                <ellipse cx="191" cy="160" rx="57" ry="20" transform="rotate(35 191 160)"></ellipse>
+                <ellipse cx="241" cy="90" rx="43" ry="19" transform="rotate(-35 241 90)"></ellipse>
+              </g>
+            </svg>
+          </div>
+          <section class="service">
+            <h2>At Your Pace</h2>
+            <p>
+              A small dining room, a long conversation and an unhurried sequence. This example does
+              not accept reservations.
+            </p>
+          </section>
+        </aside>
+        <section class="sheet">
+          <header>
+            <p class="eyebrow">restaurant / fine / dining</p>
+            <h1>Supper in the Garden</h1>
+            <p class="lead">Five courses, paced for conversation.</p>
+          </header>
           <p>Wednesday–Saturday · 19:00<br />Sample price $95 per person before tax.</p>
-        </header>
-        <button id="courses-button" aria-expanded="false" aria-controls="courses">
-          Explore the Menu
-        </button>
-      </div>
-      <div class="supper-trail">
-        <section id="courses" hidden>
-          <h2>The Five Courses</h2>
-          <ol class="courses">
-            <li>Tomato Water · Basil Oil</li>
-            <li>Roast Beet · Cultured Cream</li>
-            <li>Market Fish · Fennel</li>
-            <li>Summer Squash · Brown Butter</li>
-            <li>Plum · Almond</li>
-          </ol>
-          <p>Tell the team about allergies before ordering. Menu and price are fictional.</p>
-        </section>
-        <section class="service">
-          <h2>At Your Pace</h2>
-          <p>
-            A small dining room, a long conversation and an unhurried sequence. This example does
-            not accept reservations.
-          </p>
+          <button id="courses-button" aria-expanded="false" aria-controls="courses">
+            Explore the Menu
+          </button>
+          <section id="courses" hidden>
+            <h2>The Five Courses</h2>
+            <ol class="courses">
+              <li>Tomato Water · Basil Oil</li>
+              <li>Roast Beet · Cultured Cream</li>
+              <li>Market Fish · Fennel</li>
+              <li>Summer Squash · Brown Butter</li>
+              <li>Plum · Almond</li>
+            </ol>
+            <p>Tell the team about allergies before ordering. Menu and price are fictional.</p>
+          </section>
         </section>
       </div>
     </main>
-    <footer>
-      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
-      no live service.
-    </footer>
+    <footer>Original Dazzler design · Apache-2.0 · Local font notices included.</footer>
     <script id="template-data" type="application/json">
       {
         "id": "restaurant-fine-dining",
-        "title": "The Garden Invitation",
-        "prompt": "Use Dazzler to design the garden invitation for its fictional reader task. A centered garden invitation introduces a narrow course trail with service notes alongside; the botanical drawing becomes a small stamp. Retain the existing data and functional controls, with keyboard and mobile access. Use Libre Baskerville, #173D2A and #CCFF79. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+        "title": "Supper in the Garden",
+        "prompt": "Design a fictional restaurant-fine-dining example for this task: Five courses, paced for conversation. An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Young Serif and a #173E2C page with #254C36 accents.",
         "data": { "courses": 5, "seats": 12, "price": 95 },
         "action": "Explore the Menu"
       }

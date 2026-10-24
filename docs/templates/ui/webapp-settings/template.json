@@ -1,7 +1,7 @@
 {
   "id": "webapp-settings",
-  "title": "The Delivery Switchboard",
-  "prompt": "Use Dazzler to design the delivery switchboard for its fictional reader task. A compact settings console places delivery choices beside a tall confirmation clock and separates urgent-message policy beneath the form. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #442F89 and #E6D5FF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "Your Daily Digest",
+  "prompt": "Design a fictional webapp-settings example for this task: Keep urgent mentions visible. Gather routine messages into one delivery. A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Office Code Pro and a #17363C page with #254E54 accents.",
   "data": {
     "digestTimes": [
       "09:00",

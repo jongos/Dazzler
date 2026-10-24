@@ -4,11 +4,11 @@
   "short": "Keep the Good Things",
   "tag": "SECOND LIFE / CAMPAIGN EDITION 01",
   "lead": "Make repair feel like a first choice. Show the work, explain the process and make booking simple.",
-  "accent": "#1551A4",
-  "paper": "#FFFFFF",
-  "font": "Oswald",
+  "accent": "#223E76",
+  "paper": "#D9E4FF",
+  "font": "Archivo",
   "word": "Arial",
-  "layout": "The Repair Broadside",
+  "layout": "The Campaign Dispatch",
   "stat": "120",
   "label": "illustrative repair slots over four weeks",
   "intro": "A fictional campaign for a local repair collective. The offer covers a 20-minute assessment; repair price and turnaround are confirmed after inspection.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Fictional campaign · Capacity figures are planning assumptions.",
-  "prompt": "Use Dazzler to create a fictional marketing document and web edition for this task: Make repair feel like a first choice. Show the work, explain the process and make booking simple. Retain every supplied fact and qualification. An oversized campaign statement leads into a narrow numbered channel register and an indented offer story. Use Oswald for the web and verified Arial for native output, with #1551A4 against #FFFFFF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional marketing document and HTML edition: Make repair feel like a first choice. Show the work, explain the process and make booking simple. A wide channel-first dispatch pairs the message with a tall capacity strip, then gives the launch channels the entire lower width. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "oswald",
-    "css_family": "Oswald",
+    "id": "archivo",
+    "css_family": "Archivo",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Hot-pink repair campaign with a cobalt evidence band and black typography.",
   "fictional": true,
   "design": {
-    "accent": "#1551A4",
-    "secondary": "#1551A4",
-    "paper": "#FFFFFF",
+    "accent": "#223E76",
+    "secondary": "#223E76",
+    "paper": "#D9E4FF",
     "text": "#17212B",
-    "accentText": "#1551A4",
+    "accentText": "#223E76",
     "onAccent": "#FFFFFF"
   },
   "document": [

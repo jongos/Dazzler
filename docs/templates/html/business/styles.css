@@ -7,28 +7,29 @@ body {
   color: var(--body-color);
   font:
     17px/1.6 "Work Sans",
-    Arial;
+    Arial,
+    sans-serif;
 }
 main {
-  max-width: 1320px;
-  padding: 50px 5vw 65px;
+  max-width: 1300px;
   margin: auto;
+  padding: 45px 5vw 70px;
 }
 h1,
 h2,
 h3 {
   font-family: var(--display);
-  line-height: 1.12;
+  line-height: 1.15;
 }
 h1 {
-  font-size: clamp(2.5rem, 5.8vw, 5.8rem);
-  letter-spacing: -0.035em;
-  margin: 0 0 28px;
-  max-width: 20ch;
+  font-size: clamp(2.2rem, 4.8vw, 4.6rem);
+  letter-spacing: -0.025em;
+  margin: 0 0 22px;
+  max-width: 23ch;
 }
 h2 {
-  font-size: 1.6rem;
-  margin: 0 0 14px;
+  font-size: 1.4rem;
+  margin: 0 0 12px;
 }
 p {
   max-width: 60ch;
@@ -38,62 +39,72 @@ a {
 }
 .top,
 footer {
-  padding: 18px 5vw;
+  padding: 16px 5vw;
   font-size: 13px;
-  border-bottom: 1px solid currentColor;
 }
 .top {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
+  border-bottom: 1px solid var(--top-border-bottom);
 }
 .eyebrow {
   font-size: 12px;
-  font-weight: 700;
   letter-spacing: 0.12em;
+  font-weight: 700;
   text-transform: uppercase;
 }
 .lead {
-  font-size: 1.3rem;
-  max-width: 50ch;
+  font-size: 1.2rem;
+  max-width: 55ch;
 }
-.spread {
+.pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 35px;
+  align-items: start;
 }
-.wide {
-  grid-column: 1/-1;
+.thirds {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
-.ink {
+.band {
+  margin: 28px 0;
+  padding: 24px;
   background: var(--accent);
-  color: var(--ink-color);
-  padding: 30px;
+  color: var(--band-color);
 }
 .sheet {
   background: var(--sheet-background);
-  padding: 28px;
-}
-.notes {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-  margin: 30px 0;
+  padding: 30px;
 }
 .note {
-  padding-top: 18px;
   border-top: 2px solid var(--accent);
+  padding-top: 18px;
+  margin: 22px 0;
 }
 .note p {
   white-space: pre-line;
 }
-.stat {
-  font-family: var(--display);
-  font-size: clamp(2.3rem, 5vw, 4.8rem);
-  line-height: 1.1;
+.metric {
+  padding: 20px 0;
 }
-.table-wrap,
-.table-scroll {
+.metric strong {
+  display: block;
+  font: clamp(2.2rem, 4vw, 4rem)/1.1 var(--display);
+  font-variant-numeric: tabular-nums;
+}
+.metric p {
+  margin: 8px 0;
+}
+.closing {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid var(--closing-border-top);
+  font-size: 14px;
+}
+.table-wrap {
   overflow: auto;
 }
 table {
@@ -104,19 +115,13 @@ table {
 }
 th,
 td {
-  padding: 14px 12px;
+  padding: 12px 10px;
   border-bottom: 1px solid var(--th-td-border-bottom);
   vertical-align: top;
 }
 thead {
   background: var(--accent);
   color: var(--thead-color);
-}
-.closing {
-  margin-top: 30px;
-  border-top: 3px solid var(--accent);
-  padding-top: 18px;
-  font-weight: 600;
 }
 button,
 input,
@@ -134,6 +139,9 @@ button {
 button[aria-pressed="false"] {
   background: var(--button-aria-pressed-false-background);
   color: var(--accent);
+}
+button:disabled {
+  opacity: 0.65;
 }
 label {
   display: block;
@@ -178,44 +186,43 @@ svg {
   outline: 3px solid var(--focus-visible-outline);
   outline-offset: 4px;
 }
-blockquote {
-  font: italic 1.25rem/1.6 "Libre Baskerville";
-  margin: 25px 0;
-}
 small {
   font-size: 14px;
 }
 [hidden] {
   display: none !important;
 }
-button:disabled {
-  opacity: 0.65;
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 16px 0;
+}
+section,
+aside,
+article,
+div {
+  min-width: 0;
 }
 @media (max-width: 750px) {
   main {
-    padding: 28px 22px;
+    padding: 28px 20px;
   }
-  .spread,
-  .notes {
+  .pair,
+  .thirds {
     display: block;
   }
-  .note,
-  .sheet,
-  .ink {
-    margin-bottom: 22px;
-  }
-  h1 {
-    font-size: 2.65rem;
+  .sheet {
+    padding: 22px;
   }
   .top {
     flex-wrap: wrap;
   }
+  h1 {
+    font-size: 2.4rem;
+  }
   th,
   td {
     padding: 10px 8px;
-  }
-  .stat {
-    font-size: 3rem;
   }
 }
 @media print {
@@ -225,64 +232,48 @@ button:disabled {
   main {
     padding: 0;
   }
-  .notes {
-    break-inside: avoid;
-  }
   h1 {
-    font-size: 32pt;
+    font-size: 30pt;
   }
   footer {
     font-size: 9pt;
   }
 }
-.proposal {
+.letter {
+  max-width: 900px;
+  margin: auto;
+}
+.fee {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 35px;
+  border-block: 2px solid var(--accent);
+  margin: 30px 0;
 }
-.proposal h1 {
-  font-size: clamp(2.4rem, 4.6vw, 4.7rem);
-}
-.ink .note {
-  border-color: var(--ink-note-border-color);
-}
-.proposal .stat {
-  font-size: 3.4rem;
+.fee .note {
+  border: 0;
 }
 @media (max-width: 750px) {
-  .dossier,
-  .proposal,
-  .running,
-  .argument,
-  .broadside,
-  .runbook,
-  .chronology,
-  .courses-ledger {
+  .ticket,
+  .packing,
+  .prospectus,
+  .lab,
+  .dispatch,
+  .fee {
     display: block;
   }
-  .chronology article {
-    margin: 24px 0;
+  .brief h1,
+  .menu h1,
+  .lab h1 {
+    font-size: 2.4rem;
   }
-  .arrival,
-  .journey,
-  .service-time,
-  .service-time .measure {
+  .brief .note {
+    margin-left: 0;
+  }
+  .band .metric {
     display: block;
   }
-  .journey article {
-    margin: 18px 0;
-  }
-  .exceptions {
-    margin: 25px 0;
-  }
-  .notebook {
-    padding-left: 20px;
-  }
-  .channels {
-    margin: 20px 0;
-    padding-left: 15px;
-  }
-  .poster h1 {
-    font-size: 3.3rem;
+  .lab .sheet {
+    margin-bottom: 25px;
   }
 }

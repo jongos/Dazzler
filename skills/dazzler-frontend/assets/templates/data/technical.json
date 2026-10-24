@@ -4,11 +4,11 @@
   "short": "Restore the Queue Safely",
   "tag": "RELAY / OPERATIONS RUNBOOK 07",
   "lead": "Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch.",
-  "accent": "#075866",
-  "paper": "#D3FFF0",
-  "font": "Archivo",
-  "word": "Arial",
-  "layout": "Recovery Control Sheet",
+  "accent": "#13545A",
+  "paper": "#FFFFFF",
+  "font": "Office Code Pro",
+  "word": "Consolas",
+  "layout": "The Recovery Checkpoint",
   "stat": "50",
   "label": "events in the first recovery batch",
   "intro": "This fictional runbook handles a stalled delivery queue. It demonstrates a safe sequence; adapt commands and thresholds to the actual system before operational use.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Synthetic operational example · Commands require environment-specific review.",
-  "prompt": "Use Dazzler to create a fictional technical document and web edition for this task: Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch. Retain every supplied fact and qualification. A prominent stop strip precedes a sequential procedure with a separate right-hand verification register; evidence stays adjacent to the decision. Use Archivo for the web and verified Arial for native output, with #075866 against #D3FFF0. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional technical document and HTML edition: Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch. A wide operations sheet puts the proceed-or-stop matrix before the three recovery steps; a red stop rule and batch size remain adjacent to the procedure. Preserve every source number and qualification. Use Office Code Pro for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "archivo",
-    "css_family": "Archivo",
+    "id": "office-code-pro",
+    "css_family": "Office Code Pro",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Night-mode recovery runbook with cyan steps and a separately labelled red stop condition.",
   "fictional": true,
   "design": {
-    "accent": "#075866",
-    "secondary": "#075866",
-    "paper": "#D3FFF0",
+    "accent": "#13545A",
+    "secondary": "#13545A",
+    "paper": "#FFFFFF",
     "text": "#17212B",
-    "accentText": "#075866",
+    "accentText": "#13545A",
     "onAccent": "#FFFFFF"
   },
   "document": [

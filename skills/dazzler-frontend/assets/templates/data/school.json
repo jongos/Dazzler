@@ -4,11 +4,11 @@
   "short": "Where Does the Water Go",
   "tag": "FIELD SCIENCE / YEAR 8",
   "lead": "Compare drainage time in three soil samples. Record what happened before deciding why.",
-  "accent": "#9A2D0B",
-  "paper": "#FFF5E4",
-  "font": "Young Serif",
-  "word": "Georgia",
-  "layout": "Drainage Field Notes",
+  "accent": "#713124",
+  "paper": "#FFFFFF",
+  "font": "Office Code Pro",
+  "word": "Consolas",
+  "layout": "The Trial Bench",
   "stat": "240 mL",
   "label": "the same water volume for every sample",
   "intro": "In this fictional classroom investigation, three equal containers hold sand, garden soil and clay-rich soil. Each receives the same water volume; students time the first 100 mL collected.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Synthetic classroom observations · Follow your teacher's safety instructions.",
-  "prompt": "Use Dazzler to create a fictional school document and web edition for this task: Compare drainage time in three soil samples. Record what happened before deciding why. Retain every supplied fact and qualification. A ruled field notebook starts with the experimental question, then nests the exact results between observations and limitations. Use Young Serif for the web and verified Georgia for native output, with #9A2D0B against #FFF5E4. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional school document and HTML edition: Compare drainage time in three soil samples. Record what happened before deciding why. A wide laboratory sheet puts raw measurements first beside the research question; method and interpretation occupy a lower three-column band. Preserve every source number and qualification. Use Office Code Pro for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "young-serif",
-    "css_family": "Young Serif",
+    "id": "office-code-pro",
+    "css_family": "Office Code Pro",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Sun-yellow field notebook with botanical green evidence and blue observations.",
   "fictional": true,
   "design": {
-    "accent": "#9A2D0B",
-    "secondary": "#9A2D0B",
-    "paper": "#FFF5E4",
+    "accent": "#713124",
+    "secondary": "#713124",
+    "paper": "#FFFFFF",
     "text": "#17212B",
-    "accentText": "#9A2D0B",
+    "accentText": "#713124",
     "onAccent": "#FFFFFF"
   },
   "document": [

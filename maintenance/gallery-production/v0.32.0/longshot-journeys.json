@@ -1,0 +1,145 @@
+{
+  "review": "informed agent inspection, not a human participant study",
+  "records": [
+    {
+      "id": "webapp-workspace",
+      "goal": "Write a draft, save it and return to it. Open the revision guidance.",
+      "expected": "Saved text survives reload in this browser; revision notes remain reachable.",
+      "observed": "Keyboard save persisted after reload; keyboard opened Revision Notes.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/webapp-workspace.png"
+    },
+    {
+      "id": "webapp-board",
+      "goal": "Finish the four local assignments.",
+      "expected": "Every assignment reaches Ready and completed actions stop advancing.",
+      "observed": "All four tasks reached Ready; completed buttons disabled; no publication occurred.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/webapp-board.png"
+    },
+    {
+      "id": "webapp-settings",
+      "goal": "Change the digest time and apply the preview.",
+      "expected": "Selected time and local confirmation agree.",
+      "observed": "Keyboard submission confirmed 17:00 in the preview.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/webapp-settings.png"
+    },
+    {
+      "id": "data-revenue",
+      "goal": "Compare members with revenue and return to revenue.",
+      "expected": "Each measure keeps its own labelled scale and exact values.",
+      "observed": "Members shows 480; returning to Revenue shows 192 with its currency scale.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/data-revenue.png"
+    },
+    {
+      "id": "data-operations",
+      "goal": "Read a normal station, then inspect the warning station.",
+      "expected": "The selected station has its own units and operating context.",
+      "observed": "Keyboard selected Intake 18.4; Filter returned 2.8 bar and its warning context.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/data-operations.png"
+    },
+    {
+      "id": "restaurant-fine-dining",
+      "goal": "Inspect the courses, then close the menu.",
+      "expected": "The menu disclosure supports keyboard opening and closing.",
+      "observed": "Keyboard opened and closed all five courses.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/restaurant-fine-dining.png"
+    },
+    {
+      "id": "restaurant-cafe",
+      "goal": "Add two flat whites, filter products and clear the order twice.",
+      "expected": "Subtotal is $9.00; filters preserve the ticket; repeated clear remains $0.00.",
+      "observed": "Ticket survived filtering; repeated clearing kept the subtotal at zero.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/restaurant-cafe.png"
+    },
+    {
+      "id": "restaurant-reservations",
+      "goal": "Preview a seating request with missing input, then supply a date.",
+      "expected": "Missing date blocks submission; valid input produces a request preview, not a confirmed booking.",
+      "observed": "Required date blocked the empty form; completed form explicitly reported Not confirmed.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/restaurant-reservations.png"
+    },
+    {
+      "id": "restaurant-menu",
+      "goal": "Search for an absent dish, then restore vegetarian choices.",
+      "expected": "Empty search has a useful result message; clearing and filtering restore valid options.",
+      "observed": "Empty search recovered to two vegetarian dishes after clearing and filtering.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/restaurant-menu.png"
+    },
+    {
+      "id": "business-portal",
+      "goal": "Review Materials, switch to Schedule, then undo Materials review.",
+      "expected": "A review mark belongs only to its document and can be undone.",
+      "observed": "Document switching preserved separate review states; undo restored Materials to awaiting review.",
+      "execution": "completed",
+      "assistance": "informed diagnostic replay; source and earlier captures known",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "evidenceChannel": "rendered controls, keyboard and DOM assertions",
+      "capture": "review/business-portal.png"
+    }
+  ]
+}

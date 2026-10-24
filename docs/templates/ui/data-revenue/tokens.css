@@ -1,19 +1,18 @@
 :root {
-  --accent: #8a274f;
-  --paper: #fff2b8;
-  --display: "Young Serif";
+  --display: "Archivo";
+  --accent: #334ba0;
+  --paper: #ffffff;
   --body-color: #17212b;
-  --ink-color: white;
-  --sheet-background: white;
-  --th-td-border-bottom: #818b94;
-  --thead-color: white;
+  --top-border-bottom: #79858b;
+  --band-color: white;
+  --sheet-background: #fff;
+  --closing-border-top: #79858b;
+  --th-td-border-bottom: #899398;
+  --thead-color: #fff;
   --button-color: white;
   --button-aria-pressed-false-background: white;
   --input-not-type-checkbox-select-background: white;
   --input-not-type-checkbox-select-color: #17212b;
   --input-not-type-checkbox-select-border: #65747a;
-  --focus-visible-outline: #b02e00;
-  --plot-background: #271725;
-  --plot-color: white;
-  --bar-i-background: #f59ac8;
+  --focus-visible-outline: #b03b00;
 }

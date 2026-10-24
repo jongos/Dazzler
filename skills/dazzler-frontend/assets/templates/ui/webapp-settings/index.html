@@ -1,63 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <meta charset="utf-8" /><meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  /><title>The Delivery Switchboard</title
-  ><link rel="stylesheet" href="../../fonts/fonts.css" /><link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your Daily Digest</title>
+    <link rel="stylesheet" href="../../fonts/fonts.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <nav class="top">
-      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Local Demo</span>
+      <a href="../../index.html">Dazzler Design Gallery</a><span>Fictional Example</span>
     </nav>
     <main>
-      <header>
-        <p class="eyebrow">STILL / NOTIFICATION SETTINGS</p>
-        <h1>The Delivery Switchboard</h1>
-        <p class="lead">Keep urgent mentions visible. Gather routine messages into one delivery.</p>
-      </header>
-      <div class="switchboard">
-        <div>
-          <form id="settings">
-            <div>
-              <h2>Set the Delivery Window</h2>
-              <label for="digest">Digest Time</label
-              ><select id="digest">
-                <option value="09:00">09:00 · Start of Day</option>
-                <option value="13:00">13:00 · After Lunch</option>
-                <option value="17:00">17:00 · End of Day</option>
-              </select>
-              <p>Urgent mentions remain separate from routine summaries.</p>
-            </div>
-            <fieldset>
-              <legend>Delivery Channels</legend>
-              <label><input type="checkbox" checked /> Mentions and Replies</label
-              ><label><input type="checkbox" checked /> Project Summaries</label
-              ><label><input type="checkbox" /> Product News</label>
-            </fieldset>
-            <button>Apply to This Preview</button>
-            <p id="status" role="status"></p>
-          </form>
+      <div class="settings-sheet">
+        <header>
+          <p class="eyebrow">webapp / settings</p>
+          <h1>Your Daily Digest</h1>
+          <p class="lead">
+            Keep urgent mentions visible. Gather routine messages into one delivery.
+          </p>
+        </header>
+        <div class="selected">
+          <span>Selected Digest Time</span><strong id="time">09:00</strong>
         </div>
-        <aside class="clock">
-          <p class="eyebrow">NEXT ROUTINE DELIVERY</p>
-          <strong id="time">09:00</strong>
-          <p>One daily digest, at your selected time.</p>
-        </aside>
+        <form id="settings">
+          <div>
+            <h2>Set the Delivery Window</h2>
+            <label for="digest">Digest Time</label
+            ><select id="digest">
+              <option value="09:00">09:00 · Start of Day</option>
+              <option value="13:00">13:00 · After Lunch</option>
+              <option value="17:00">17:00 · End of Day</option>
+            </select>
+            <p>Urgent mentions remain separate from routine summaries.</p>
+          </div>
+          <fieldset>
+            <legend>Delivery Channels</legend>
+            <label><input type="checkbox" checked /> Mentions and Replies</label
+            ><label><input type="checkbox" checked /> Project Summaries</label
+            ><label><input type="checkbox" /> Product News</label>
+          </fieldset>
+          <button>Apply to This Preview</button>
+          <p id="status" role="status"></p>
+        </form>
       </div>
-      <aside class="policy">
-        <h2>Urgent Mentions Stay Separate</h2>
-        <p>This preview groups routine messages. Important mentions remain outside the digest.</p>
-      </aside>
     </main>
-    <footer>
-      Original Dazzler design. Apache-2.0. Local font notices accompany the files. Synthetic data;
-      no live service.
-    </footer>
+    <footer>Original Dazzler design · Apache-2.0 · Local font notices included.</footer>
     <script id="template-data" type="application/json">
       {
         "id": "webapp-settings",
-        "title": "The Delivery Switchboard",
-        "prompt": "Use Dazzler to design the delivery switchboard for its fictional reader task. A compact settings console places delivery choices beside a tall confirmation clock and separates urgent-message policy beneath the form. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #442F89 and #E6D5FF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+        "title": "Your Daily Digest",
+        "prompt": "Design a fictional webapp-settings example for this task: Keep urgent mentions visible. Gather routine messages into one delivery. A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Office Code Pro and a #17363C page with #254E54 accents.",
         "data": { "digestTimes": ["09:00", "13:00", "17:00"], "channels": 3 },
         "action": "Save Preferences"
       }

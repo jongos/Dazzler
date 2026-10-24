@@ -1,18 +1,19 @@
 :root {
-  --accent: #71224c;
-  --paper: #ffe0ef;
   --display: "Oswald";
+  --accent: #63321c;
+  --paper: #f2cb9c;
   --body-color: #17212b;
-  --ink-color: white;
-  --sheet-background: white;
-  --th-td-border-bottom: #818b94;
-  --thead-color: white;
+  --top-border-bottom: #79858b;
+  --band-color: white;
+  --sheet-background: #fff;
+  --closing-border-top: #79858b;
+  --th-td-border-bottom: #899398;
+  --thead-color: #fff;
   --button-color: white;
   --button-aria-pressed-false-background: white;
   --input-not-type-checkbox-select-background: white;
   --input-not-type-checkbox-select-color: #17212b;
   --input-not-type-checkbox-select-border: #65747a;
-  --focus-visible-outline: #b02e00;
-  --products-article-background: white;
-  --receipt-background: white;
+  --focus-visible-outline: #b03b00;
+  --products-article-background: #fff9f0;
 }

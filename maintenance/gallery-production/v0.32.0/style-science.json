@@ -1,0 +1,3202 @@
+[
+  {
+    "id": "html-professional",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-professional",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Harbor Exchange Launch Decision"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "cd6e95857288f6d2b0f6bb9974b0272ddb423a68184367c7df543aaf750d91aa",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Harbor Exchange Launch Decision"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:40.865Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "cd6e95857288f6d2b0f6bb9974b0272ddb423a68184367c7df543aaf750d91aa",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Harbor Exchange Launch Decision"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:41.135Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "cd6e95857288f6d2b0f6bb9974b0272ddb423a68184367c7df543aaf750d91aa",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Harbor Exchange Launch Decision"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:41.272Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "cd6e95857288f6d2b0f6bb9974b0272ddb423a68184367c7df543aaf750d91aa",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-legal",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-legal",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Orchard Lane Notice Review"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "5841fde19afb5bacdf9670d87ebd8ed3f5e53e02b2f076a04e6cab21b2d0d74d",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Orchard Lane Notice Review"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:41.780Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "5841fde19afb5bacdf9670d87ebd8ed3f5e53e02b2f076a04e6cab21b2d0d74d",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Orchard Lane Notice Review"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:42.043Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "5841fde19afb5bacdf9670d87ebd8ed3f5e53e02b2f076a04e6cab21b2d0d74d",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Orchard Lane Notice Review"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:42.248Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "5841fde19afb5bacdf9670d87ebd8ed3f5e53e02b2f076a04e6cab21b2d0d74d",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-business",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-business",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Juniper Studio Service Proposal"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "1f105d5c8e92ef2334802b6a644c6519025a2d99b73bffc54f606260634b4bd5",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Juniper Studio Service Proposal"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:42.718Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "1f105d5c8e92ef2334802b6a644c6519025a2d99b73bffc54f606260634b4bd5",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Juniper Studio Service Proposal"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:42.990Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "1f105d5c8e92ef2334802b6a644c6519025a2d99b73bffc54f606260634b4bd5",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Juniper Studio Service Proposal"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:43.156Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "1f105d5c8e92ef2334802b6a644c6519025a2d99b73bffc54f606260634b4bd5",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-fun",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-fun",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Night Market on Alder Street"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "542f326d1ed2c64f0b768a78884577e6cc96b91c0bc01e20ba5a5e909c6fe461",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Night Market on Alder Street"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:43.634Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "542f326d1ed2c64f0b768a78884577e6cc96b91c0bc01e20ba5a5e909c6fe461",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Night Market on Alder Street"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:43.874Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "542f326d1ed2c64f0b768a78884577e6cc96b91c0bc01e20ba5a5e909c6fe461",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Night Market on Alder Street"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:44.022Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "542f326d1ed2c64f0b768a78884577e6cc96b91c0bc01e20ba5a5e909c6fe461",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-family",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-family",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "River House Weekend Plan"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "b360894c88177971f227326978d1300be2902fc469ea79c300ffd9e9ad049672",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "River House Weekend Plan"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:44.496Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "b360894c88177971f227326978d1300be2902fc469ea79c300ffd9e9ad049672",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "River House Weekend Plan"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:44.769Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "b360894c88177971f227326978d1300be2902fc469ea79c300ffd9e9ad049672",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "River House Weekend Plan"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:44.926Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "b360894c88177971f227326978d1300be2902fc469ea79c300ffd9e9ad049672",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-presentation",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-presentation",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Library After Hours Pilot"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "4834736375795cf9a6e88c70dbb7a48514cf48c009807e4d881330b4fc6dd544",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Library After Hours Pilot"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:45.375Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "4834736375795cf9a6e88c70dbb7a48514cf48c009807e4d881330b4fc6dd544",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Library After Hours Pilot"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:45.642Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "4834736375795cf9a6e88c70dbb7a48514cf48c009807e4d881330b4fc6dd544",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Library After Hours Pilot"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:45.795Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "4834736375795cf9a6e88c70dbb7a48514cf48c009807e4d881330b4fc6dd544",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-school",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-school",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Rain Garden Observation Notebook"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "472a13fd8837b503c8b3701291bd5efecda883a49ad752e5220aaa3fca950673",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Rain Garden Observation Notebook"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:46.342Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "472a13fd8837b503c8b3701291bd5efecda883a49ad752e5220aaa3fca950673",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Rain Garden Observation Notebook"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:46.605Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "472a13fd8837b503c8b3701291bd5efecda883a49ad752e5220aaa3fca950673",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Rain Garden Observation Notebook"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:46.778Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "472a13fd8837b503c8b3701291bd5efecda883a49ad752e5220aaa3fca950673",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-marketing",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-marketing",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Second Life Repair Campaign"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "39f0e5981d0f50d2429ec030531e575a714a557435dcfdbdf0c760dc4fff7f58",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Second Life Repair Campaign"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:47.293Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "39f0e5981d0f50d2429ec030531e575a714a557435dcfdbdf0c760dc4fff7f58",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Second Life Repair Campaign"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:47.544Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "39f0e5981d0f50d2429ec030531e575a714a557435dcfdbdf0c760dc4fff7f58",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Second Life Repair Campaign"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:47.702Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "39f0e5981d0f50d2429ec030531e575a714a557435dcfdbdf0c760dc4fff7f58",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-restaurant",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-restaurant",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Morrow Seasonal Supper Menu"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "924c766c647e2c2b4fcf97830c655b0460ad1cf2cdcc202f58b63e9374af001a",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Morrow Seasonal Supper Menu"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:48.141Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "924c766c647e2c2b4fcf97830c655b0460ad1cf2cdcc202f58b63e9374af001a",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Morrow Seasonal Supper Menu"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:48.379Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "924c766c647e2c2b4fcf97830c655b0460ad1cf2cdcc202f58b63e9374af001a",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Morrow Seasonal Supper Menu"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:48.510Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "924c766c647e2c2b4fcf97830c655b0460ad1cf2cdcc202f58b63e9374af001a",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "html-technical",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "html-technical",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Relay Queue Recovery Runbook"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "4aa817807b053164e49a23534074f7dbbf46d51b3d7a3eb3ab2d09611e099f4c",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Relay Queue Recovery Runbook"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:48.958Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "4aa817807b053164e49a23534074f7dbbf46d51b3d7a3eb3ab2d09611e099f4c",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Relay Queue Recovery Runbook"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:49.195Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "4aa817807b053164e49a23534074f7dbbf46d51b3d7a3eb3ab2d09611e099f4c",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Relay Queue Recovery Runbook"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:49.403Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "4aa817807b053164e49a23534074f7dbbf46d51b3d7a3eb3ab2d09611e099f4c",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "webapp-workspace",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "webapp-workspace",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "The Manuscript Desk"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "8344426f185cf6cc1e1a7735abe0f082c0cbffe48fc270c772130aa5aff773e0",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "The Manuscript Desk"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:49.940Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "8344426f185cf6cc1e1a7735abe0f082c0cbffe48fc270c772130aa5aff773e0",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "The Manuscript Desk"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:50.145Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "8344426f185cf6cc1e1a7735abe0f082c0cbffe48fc270c772130aa5aff773e0",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "The Manuscript Desk"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:50.286Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "8344426f185cf6cc1e1a7735abe0f082c0cbffe48fc270c772130aa5aff773e0",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "webapp-board",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "webapp-board",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "The Production Register"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "3d8e56c1421a93ba51eda8da9032aa6c429f0bff72174d376389e9bf476f4a7b",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "The Production Register"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:50.806Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "3d8e56c1421a93ba51eda8da9032aa6c429f0bff72174d376389e9bf476f4a7b",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "The Production Register"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:50.990Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "3d8e56c1421a93ba51eda8da9032aa6c429f0bff72174d376389e9bf476f4a7b",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "The Production Register"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:51.120Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "3d8e56c1421a93ba51eda8da9032aa6c429f0bff72174d376389e9bf476f4a7b",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "webapp-settings",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "webapp-settings",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Your Daily Digest"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "960a94f5810f88c3044a2c15414fe764846af4d202fca25f1bd6f6b4d74e6d13",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Your Daily Digest"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:51.594Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "960a94f5810f88c3044a2c15414fe764846af4d202fca25f1bd6f6b4d74e6d13",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Your Daily Digest"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:51.824Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "960a94f5810f88c3044a2c15414fe764846af4d202fca25f1bd6f6b4d74e6d13",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Your Daily Digest"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:51.943Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "960a94f5810f88c3044a2c15414fe764846af4d202fca25f1bd6f6b4d74e6d13",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "data-revenue",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "data-revenue",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Six Years of Membership"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "45b05ff4d0ba04cb6489fc53141b5b268bbc6fa9b3045b0b27e566637aa56e09",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Six Years of Membership"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:52.518Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "45b05ff4d0ba04cb6489fc53141b5b268bbc6fa9b3045b0b27e566637aa56e09",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Six Years of Membership"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:52.789Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "45b05ff4d0ba04cb6489fc53141b5b268bbc6fa9b3045b0b27e566637aa56e09",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Six Years of Membership"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:52.951Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "45b05ff4d0ba04cb6489fc53141b5b268bbc6fa9b3045b0b27e566637aa56e09",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "data-operations",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "data-operations",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Station Readings"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "35f2a36ed2ec21d41cf6e9873d4bb6bec456afaa7210447db0d38022ab0f1013",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Station Readings"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:53.487Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "35f2a36ed2ec21d41cf6e9873d4bb6bec456afaa7210447db0d38022ab0f1013",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Station Readings"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:53.695Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "35f2a36ed2ec21d41cf6e9873d4bb6bec456afaa7210447db0d38022ab0f1013",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Station Readings"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:53.818Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "35f2a36ed2ec21d41cf6e9873d4bb6bec456afaa7210447db0d38022ab0f1013",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "restaurant-fine-dining",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Supper in the Garden"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "32dc1c57116189e77006e515457c0354d42993bace7b00f4b08632bb53d4694f",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Supper in the Garden"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:54.260Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "32dc1c57116189e77006e515457c0354d42993bace7b00f4b08632bb53d4694f",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Supper in the Garden"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:54.441Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "32dc1c57116189e77006e515457c0354d42993bace7b00f4b08632bb53d4694f",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Supper in the Garden"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:54.541Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "32dc1c57116189e77006e515457c0354d42993bace7b00f4b08632bb53d4694f",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "restaurant-cafe",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "restaurant-cafe",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "At the Coffee Counter"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "d11240d93451abb0e941287c9044ed1db1bb935e008a00d0c92cf2bc589fbfe9",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "At the Coffee Counter"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:54.978Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "d11240d93451abb0e941287c9044ed1db1bb935e008a00d0c92cf2bc589fbfe9",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "At the Coffee Counter"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:55.202Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "d11240d93451abb0e941287c9044ed1db1bb935e008a00d0c92cf2bc589fbfe9",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "At the Coffee Counter"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:55.319Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "d11240d93451abb0e941287c9044ed1db1bb935e008a00d0c92cf2bc589fbfe9",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "restaurant-reservations",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "restaurant-reservations",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Choose Your Evening"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "27b0f88e59dab5cda48f065910f00d0eba3fa74d773bc3eab3a20a838057571b",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Choose Your Evening"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:56.031Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "27b0f88e59dab5cda48f065910f00d0eba3fa74d773bc3eab3a20a838057571b",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Choose Your Evening"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:56.238Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "27b0f88e59dab5cda48f065910f00d0eba3fa74d773bc3eab3a20a838057571b",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Choose Your Evening"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:56.368Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "27b0f88e59dab5cda48f065910f00d0eba3fa74d773bc3eab3a20a838057571b",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "restaurant-menu",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "restaurant-menu",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Lunch at the Market"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "92c8396d7b4a450e9e5a3645a45f49d9eada6929d244b467be6a65d8d78fa24f",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Lunch at the Market"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:56.931Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "92c8396d7b4a450e9e5a3645a45f49d9eada6929d244b467be6a65d8d78fa24f",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Lunch at the Market"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:57.127Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "92c8396d7b4a450e9e5a3645a45f49d9eada6929d244b467be6a65d8d78fa24f",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Lunch at the Market"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:57.273Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "92c8396d7b4a450e9e5a3645a45f49d9eada6929d244b467be6a65d8d78fa24f",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  },
+  {
+    "id": "business-portal",
+    "plan": {
+      "schemaVersion": 1,
+      "id": "business-portal",
+      "revision": "0.32.0",
+      "medium": "html",
+      "environments": [
+        {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "overflow",
+          "check": "viewport-overflow"
+        },
+        {
+          "id": "title",
+          "check": "visible-text",
+          "selector": "h1",
+          "text": "Review the Next Step"
+        }
+      ]
+    },
+    "snapshots": [
+      {
+        "schemaVersion": 1,
+        "planHash": "40a8ab26e61d531b27bed033b478e580041ccd2d7420ee74849bf6945ec42989",
+        "environment": {
+          "id": "1440",
+          "width": 1440,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440
+          },
+          "title": {
+            "visible": true,
+            "text": "Review the Next Step"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:57.804Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "40a8ab26e61d531b27bed033b478e580041ccd2d7420ee74849bf6945ec42989",
+        "environment": {
+          "id": "390",
+          "width": 390,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 390,
+            "clientWidth": 390
+          },
+          "title": {
+            "visible": true,
+            "text": "Review the Next Step"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:58.014Z"
+      },
+      {
+        "schemaVersion": 1,
+        "planHash": "40a8ab26e61d531b27bed033b478e580041ccd2d7420ee74849bf6945ec42989",
+        "environment": {
+          "id": "320",
+          "width": 320,
+          "height": 1000,
+          "colorScheme": "light"
+        },
+        "measurements": {
+          "overflow": {
+            "scrollWidth": 320,
+            "clientWidth": 320
+          },
+          "title": {
+            "visible": true,
+            "text": "Review the Next Step"
+          }
+        },
+        "adapter": "gdc-html/0.1.0",
+        "capturedAt": "2026-10-24T06:45:58.138Z"
+      }
+    ],
+    "result": {
+      "schemaVersion": 1,
+      "engineVersion": "0.1.0",
+      "planHash": "40a8ab26e61d531b27bed033b478e580041ccd2d7420ee74849bf6945ec42989",
+      "status": "pass",
+      "results": [
+        {
+          "environment": "1440",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "1440",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "390",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "390",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        },
+        {
+          "environment": "320",
+          "requirement": "overflow",
+          "check": "viewport-overflow",
+          "status": "pass",
+          "value": 0
+        },
+        {
+          "environment": "320",
+          "requirement": "title",
+          "check": "visible-text",
+          "status": "pass",
+          "value": true
+        }
+      ],
+      "scope": "Declared checks and captured states only; not accessibility certification or design quality. Supplied observations are not authenticated."
+    }
+  }
+]

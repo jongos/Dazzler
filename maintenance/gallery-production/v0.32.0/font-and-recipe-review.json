@@ -1,0 +1,3068 @@
+[
+  {
+    "id": "professional",
+    "family": "archivo",
+    "text": "Create a fictional professional document and HTML edition: Release the exchange in two stages. Keep the settlement hold until reconciliation is complete. A wide decision banner leads into a full-width reconciliation register; three ownership notes close the decision. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0910",
+          "context": "information",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "complete",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0554",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Cobalt and Chalk",
+            "background": "#FFFFFF",
+            "text": "#132349",
+            "accent": "#164AC6",
+            "surface": "#E8EFFC",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1464",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "legal",
+    "family": "libre-baskerville",
+    "text": "Create a fictional legal document and HTML edition: The record supports delivery. It does not yet establish that the recipient accepted the revised terms. A portrait brief gives the conclusion and evidence register priority; dated records remain in one comparison table above the legal questions. Preserve every source number and qualification. Use Libre Baskerville for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "libre-baskerville",
+          "name": "Libre Baskerville",
+          "score": 10,
+          "matched_moods": [],
+          "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+          "roles": [
+            "body",
+            "heading"
+          ],
+          "reference": "references/fonts/libre-baskerville.md",
+          "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+          "license": "OFL-1.1",
+          "file": "LibreBaskerville[wght].woff2",
+          "css_family": "Libre Baskerville",
+          "css_weight": "400 700",
+          "css_style": "normal",
+          "bytes": 63980,
+          "alternatives": [
+            "LibreBaskerville[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "libre-baskerville",
+          "name": "Libre Baskerville",
+          "score": 10,
+          "matched_moods": [],
+          "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+          "roles": [
+            "body",
+            "heading"
+          ],
+          "reference": "references/fonts/libre-baskerville.md",
+          "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+          "license": "OFL-1.1",
+          "file": "LibreBaskerville[wght].woff2",
+          "css_family": "Libre Baskerville",
+          "css_weight": "400 700",
+          "css_style": "normal",
+          "bytes": 63980,
+          "alternatives": [
+            "LibreBaskerville[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R2054",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 2-1",
+            "background": "#FAF9FB",
+            "text": "#2D1F2C",
+            "accent": "#861D24",
+            "surface": "#EDEFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "inspect",
+              "libre",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1162",
+          "context": "information",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Spectrum 1-2",
+            "background": "#F9FBFA",
+            "text": "#1F292D",
+            "accent": "#1D2286",
+            "surface": "#EFE7EB",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "comparison",
+              "libre",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1914",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-10",
+            "background": "#1C1D16",
+            "text": "#F5F7F3",
+            "accent": "#8AE59A",
+            "surface": "#252C37",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "inspect",
+              "libre"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "business",
+    "family": "young-serif",
+    "text": "Create a fictional business document and HTML edition: Replace the fragmented booking journey with one accessible flow, delivered in three reviewable stages. A restrained portrait offer pairs the fee with the proposal title; the phase register separates scope from commercial terms. Preserve every source number and qualification. Use Young Serif for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "young-serif",
+          "name": "Young Serif",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+          "roles": [
+            "heading",
+            "body",
+            "display"
+          ],
+          "reference": "references/fonts/young-serif.md",
+          "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+          "license": "OFL-1.1",
+          "file": "Young-Serif[wght].woff2",
+          "css_family": "Young Serif",
+          "css_weight": "300 700",
+          "css_style": "normal",
+          "bytes": 94656,
+          "alternatives": [
+            "Young-Serif[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "young-serif",
+          "name": "Young Serif",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+          "roles": [
+            "heading",
+            "body",
+            "display"
+          ],
+          "reference": "references/fonts/young-serif.md",
+          "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+          "license": "OFL-1.1",
+          "file": "Young-Serif[wght].woff2",
+          "css_family": "Young Serif",
+          "css_weight": "300 700",
+          "css_style": "normal",
+          "bytes": 94656,
+          "alternatives": [
+            "Young-Serif[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0928",
+          "context": "information",
+          "style": "systematic",
+          "arrangement": "modular-directory",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Young Serif",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "serif",
+              "text",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1324",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-4",
+            "background": "#F9F9FB",
+            "text": "#251F2D",
+            "accent": "#861D85",
+            "surface": "#EFEAE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Young Serif",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "serif",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0716",
+          "context": "information",
+          "style": "expressive magazine",
+          "arrangement": "asymmetric-feature",
+          "palette": {
+            "name": "Graphite and Aqua",
+            "background": "#F7FBFC",
+            "text": "#233338",
+            "accent": "#006C78",
+            "surface": "#C9F0ED",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "EB Garamond",
+            "Work Sans"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "restrained",
+              "serif",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "fun",
+    "family": "oswald",
+    "text": "Create a fictional fun document and HTML edition: An evening of food, records and small discoveries. Bring a friend and leave room for dessert. A horizontal ticket places the event title beside the running order; a bright arrival band and three practical columns anchor the lower half. Preserve every source number and qualification. Use Oswald for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "oswald",
+          "name": "Oswald",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+          "roles": [
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/oswald.md",
+          "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+          "license": "OFL-1.1",
+          "file": "Oswald[wght].woff2",
+          "css_family": "Oswald",
+          "css_weight": "200 700",
+          "css_style": "normal",
+          "bytes": 71904,
+          "alternatives": [
+            "Oswald[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "oswald",
+          "name": "Oswald",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+          "roles": [
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/oswald.md",
+          "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+          "license": "OFL-1.1",
+          "file": "Oswald[wght].woff2",
+          "css_family": "Oswald",
+          "css_weight": "200 700",
+          "css_style": "normal",
+          "bytes": 71904,
+          "alternatives": [
+            "Oswald[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0559",
+          "context": "information",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Cobalt and Chalk",
+            "background": "#FFFFFF",
+            "text": "#132349",
+            "accent": "#164AC6",
+            "surface": "#E8EFFC",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "event",
+              "oswald",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2054",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 2-1",
+            "background": "#FAF9FB",
+            "text": "#2D1F2C",
+            "accent": "#861D24",
+            "surface": "#EDEFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2225",
+          "context": "information",
+          "style": "archival",
+          "arrangement": "index-and-detail",
+          "palette": {
+            "name": "Spectrum 2-3",
+            "background": "#FBF9FA",
+            "text": "#2D211F",
+            "accent": "#86851D",
+            "surface": "#E7EFE8",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Oswald",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "family",
+    "family": "archivo",
+    "text": "Create a fictional family document and HTML edition: A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday. A portrait itinerary puts packing and contingency notes before the day-by-day register so the reader can prepare before travelling. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0004",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Paper and Carmine",
+            "background": "#FFFFFF",
+            "text": "#202020",
+            "accent": "#AF173B",
+            "surface": "#F0F2F2",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "inspect",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0509",
+          "context": "information",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Cobalt and Chalk",
+            "background": "#FFFFFF",
+            "text": "#132349",
+            "accent": "#164AC6",
+            "surface": "#E8EFFC",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0202",
+          "context": "information",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Ink and Electric Yellow",
+            "background": "#181818",
+            "text": "#FAFAFA",
+            "accent": "#F4E84A",
+            "surface": "#303030",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "presentation",
+    "family": "poppins",
+    "text": "Create a fictional presentation document and HTML edition: Test one late opening each week before committing to a permanent change. A portrait argument uses a narrow six-week marker, a central proposal, and a full-width measurement register before the decision conditions. Preserve every source number and qualification. Use Poppins for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "poppins",
+          "name": "Poppins",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+          "roles": [
+            "ui",
+            "heading",
+            "body"
+          ],
+          "reference": "references/fonts/poppins.md",
+          "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+          "license": "OFL-1.1",
+          "file": "Poppins-Regular.ttf",
+          "css_family": "Poppins",
+          "css_weight": "400",
+          "css_style": "normal",
+          "bytes": 160316,
+          "alternatives": [
+            "Poppins-Regular.ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "poppins",
+          "name": "Poppins",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+          "roles": [
+            "ui",
+            "heading",
+            "body"
+          ],
+          "reference": "references/fonts/poppins.md",
+          "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+          "license": "OFL-1.1",
+          "file": "Poppins-Bold.ttf",
+          "css_family": "Poppins",
+          "css_weight": "700",
+          "css_style": "normal",
+          "bytes": 155996,
+          "alternatives": [
+            "Poppins-Bold.ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1194",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-2",
+            "background": "#F9FBFA",
+            "text": "#1F292D",
+            "accent": "#1D2286",
+            "surface": "#EFE7EB",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "League Gothic",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "narrow",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0644",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Burgundy and Rose",
+            "background": "#FFF8FA",
+            "text": "#48232E",
+            "accent": "#9D244E",
+            "surface": "#F7DBE5",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "poppins",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2086",
+          "context": "information",
+          "style": "expressive magazine",
+          "arrangement": "asymmetric-feature",
+          "palette": {
+            "name": "Spectrum 2-1",
+            "background": "#FAF9FB",
+            "text": "#2D1F2C",
+            "accent": "#861D24",
+            "surface": "#EDEFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "League Gothic",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "narrow",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "school",
+    "family": "office-code-pro",
+    "text": "Create a fictional school document and HTML edition: Compare drainage time in three soil samples. Record what happened before deciding why. A wide laboratory sheet puts raw measurements first beside the research question; method and interpretation occupy a lower three-column band. Preserve every source number and qualification. Use Office Code Pro for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "office-code-pro",
+          "name": "Office Code Pro",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+          "roles": [
+            "code",
+            "ui"
+          ],
+          "reference": "references/fonts/office-code-pro.md",
+          "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+          "license": "OFL-1.1",
+          "file": "OfficeCodePro-Regular.woff2",
+          "css_family": "Office Code Pro",
+          "css_weight": "400",
+          "css_style": "normal",
+          "bytes": 29216,
+          "alternatives": [
+            "OfficeCodePro-Regular.woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "office-code-pro",
+          "name": "Office Code Pro",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+          "roles": [
+            "code",
+            "ui"
+          ],
+          "reference": "references/fonts/office-code-pro.md",
+          "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+          "license": "OFL-1.1",
+          "file": "OfficeCodePro-Bold.woff2",
+          "css_family": "Office Code Pro",
+          "css_weight": "700",
+          "css_style": "normal",
+          "bytes": 28984,
+          "alternatives": [
+            "OfficeCodePro-Bold.woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1603",
+          "context": "information",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Spectrum 1-7",
+            "background": "#FBF9FA",
+            "text": "#2D1F20",
+            "accent": "#865C1D",
+            "surface": "#E7EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Junicode",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "compare",
+              "first",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0743",
+          "context": "information",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Graphite and Aqua",
+            "background": "#F7FBFC",
+            "text": "#233338",
+            "accent": "#006C78",
+            "surface": "#C9F0ED",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "compare",
+              "first",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1441",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Cooper Hewitt",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "column",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "marketing",
+    "family": "archivo",
+    "text": "Create a fictional marketing document and HTML edition: Make repair feel like a first choice. Show the work, explain the process and make booking simple. A wide channel-first dispatch pairs the message with a tall capacity strip, then gives the launch channels the entire lower width. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0554",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Cobalt and Chalk",
+            "background": "#FFFFFF",
+            "text": "#132349",
+            "accent": "#164AC6",
+            "surface": "#E8EFFC",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "text",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0910",
+          "context": "information",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "text",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1464",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "text",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "restaurant",
+    "family": "libre-baskerville",
+    "text": "Create a fictional restaurant document and HTML edition: A short menu built around what is ready now. Choose a few dishes and share the table. A narrow portrait menu alternates course headings and descriptions, followed by a quiet pairing register and service details. Preserve every source number and qualification. Use Libre Baskerville for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "libre-baskerville",
+          "name": "Libre Baskerville",
+          "score": 10,
+          "matched_moods": [],
+          "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+          "roles": [
+            "body",
+            "heading"
+          ],
+          "reference": "references/fonts/libre-baskerville.md",
+          "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+          "license": "OFL-1.1",
+          "file": "LibreBaskerville[wght].woff2",
+          "css_family": "Libre Baskerville",
+          "css_weight": "400 700",
+          "css_style": "normal",
+          "bytes": 63980,
+          "alternatives": [
+            "LibreBaskerville[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "libre-baskerville",
+          "name": "Libre Baskerville",
+          "score": 10,
+          "matched_moods": [],
+          "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+          "roles": [
+            "body",
+            "heading"
+          ],
+          "reference": "references/fonts/libre-baskerville.md",
+          "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+          "license": "OFL-1.1",
+          "file": "LibreBaskerville[wght].woff2",
+          "css_family": "Libre Baskerville",
+          "css_weight": "400 700",
+          "css_style": "normal",
+          "bytes": 63980,
+          "alternatives": [
+            "LibreBaskerville[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1464",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "inspect",
+              "libre",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2059",
+          "context": "information",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Spectrum 2-1",
+            "background": "#FAF9FB",
+            "text": "#2D1F2C",
+            "accent": "#861D24",
+            "surface": "#EDEFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "choose",
+              "libre",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0761",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Graphite and Aqua",
+            "background": "#F7FBFC",
+            "text": "#233338",
+            "accent": "#006C78",
+            "surface": "#C9F0ED",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "technical",
+    "family": "office-code-pro",
+    "text": "Create a fictional technical document and HTML edition: Pause delivery before replaying events. Confirm the checkpoint, then resume in a controlled batch. A wide operations sheet puts the proceed-or-stop matrix before the three recovery steps; a red stop rule and batch size remain adjacent to the procedure. Preserve every source number and qualification. Use Office Code Pro for the web; keep the Word text and tables editable and inspect every rendered page.",
+    "weights": {
+      "400": [
+        {
+          "id": "office-code-pro",
+          "name": "Office Code Pro",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+          "roles": [
+            "code",
+            "ui"
+          ],
+          "reference": "references/fonts/office-code-pro.md",
+          "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+          "license": "OFL-1.1",
+          "file": "OfficeCodePro-Regular.woff2",
+          "css_family": "Office Code Pro",
+          "css_weight": "400",
+          "css_style": "normal",
+          "bytes": 29216,
+          "alternatives": [
+            "OfficeCodePro-Regular.woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "office-code-pro",
+          "name": "Office Code Pro",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+          "roles": [
+            "code",
+            "ui"
+          ],
+          "reference": "references/fonts/office-code-pro.md",
+          "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+          "license": "OFL-1.1",
+          "file": "OfficeCodePro-Bold.woff2",
+          "css_family": "Office Code Pro",
+          "css_weight": "700",
+          "css_style": "normal",
+          "bytes": 28984,
+          "alternatives": [
+            "OfficeCodePro-Bold.woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1374",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-4",
+            "background": "#F9F9FB",
+            "text": "#251F2D",
+            "accent": "#861D85",
+            "surface": "#EFEAE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Bagnard",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0144",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Forest and Lemon",
+            "background": "#F8FCF9",
+            "text": "#16362B",
+            "accent": "#357346",
+            "surface": "#F2E64B",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1144",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-2",
+            "background": "#F9FBFA",
+            "text": "#1F292D",
+            "accent": "#1D2286",
+            "surface": "#EFE7EB",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Cooper Hewitt",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "inspect",
+              "text"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "webapp-workspace",
+    "family": "libre-baskerville",
+    "text": "Design a fictional webapp-workspace example for this task: A quiet place to draft, followed by a deliberate editing pass. A wide manuscript leads; revision guidance moves into a labelled disclosure below the editor, with chapter context across the top. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Libre Baskerville and a #F5F0E6 page with #303E67 accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "libre-baskerville",
+          "name": "Libre Baskerville",
+          "score": 10,
+          "matched_moods": [],
+          "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+          "roles": [
+            "body",
+            "heading"
+          ],
+          "reference": "references/fonts/libre-baskerville.md",
+          "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+          "license": "OFL-1.1",
+          "file": "LibreBaskerville[wght].woff2",
+          "css_family": "Libre Baskerville",
+          "css_weight": "400 700",
+          "css_style": "normal",
+          "bytes": 63980,
+          "alternatives": [
+            "LibreBaskerville[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "libre-baskerville",
+          "name": "Libre Baskerville",
+          "score": 10,
+          "matched_moods": [],
+          "description": "An open, sturdy transitional serif suited to sustained screen reading. Adds editorial authority without extreme stroke contrast.",
+          "roles": [
+            "body",
+            "heading"
+          ],
+          "reference": "references/fonts/libre-baskerville.md",
+          "cautions": "Current bundled variable files offer more styles than the three historically listed by Open Foundry.",
+          "license": "OFL-1.1",
+          "file": "LibreBaskerville[wght].woff2",
+          "css_family": "Libre Baskerville",
+          "css_weight": "400 700",
+          "css_style": "normal",
+          "bytes": 63980,
+          "alternatives": [
+            "LibreBaskerville[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1784",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-8",
+            "background": "#FBF9F9",
+            "text": "#2D261F",
+            "accent": "#79861D",
+            "surface": "#E7EFEB",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Poppins",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre",
+              "place"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1914",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-10",
+            "background": "#1C1D16",
+            "text": "#F5F7F3",
+            "accent": "#8AE59A",
+            "surface": "#252C37",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre",
+              "place"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1464",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-5",
+            "background": "#19161D",
+            "text": "#F6F3F7",
+            "accent": "#E58AB4",
+            "surface": "#373725",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "baskerville",
+              "libre",
+              "place"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "webapp-board",
+    "family": "archivo",
+    "text": "Design a fictional webapp-board example for this task: Four assignments between the recording and the release. A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #E9E1F6 page with #4B3768 accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0910",
+          "context": "information",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Apricot and Cypress",
+            "background": "#FFF9F3",
+            "text": "#293C32",
+            "accent": "#A84218",
+            "surface": "#E4EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1324",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-4",
+            "background": "#F9F9FB",
+            "text": "#251F2D",
+            "accent": "#861D85",
+            "surface": "#EFEAE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Young Serif",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1162",
+          "context": "information",
+          "style": "precise utilitarian",
+          "arrangement": "comparison-grid",
+          "palette": {
+            "name": "Spectrum 1-2",
+            "background": "#F9FBFA",
+            "text": "#1F292D",
+            "accent": "#1D2286",
+            "surface": "#EFE7EB",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "work"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "webapp-settings",
+    "family": "office-code-pro",
+    "text": "Design a fictional webapp-settings example for this task: Keep urgent mentions visible. Gather routine messages into one delivery. A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Office Code Pro and a #17363C page with #254E54 accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "office-code-pro",
+          "name": "Office Code Pro",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+          "roles": [
+            "code",
+            "ui"
+          ],
+          "reference": "references/fonts/office-code-pro.md",
+          "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+          "license": "OFL-1.1",
+          "file": "OfficeCodePro-Regular.woff2",
+          "css_family": "Office Code Pro",
+          "css_weight": "400",
+          "css_style": "normal",
+          "bytes": 29216,
+          "alternatives": [
+            "OfficeCodePro-Regular.woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "office-code-pro",
+          "name": "Office Code Pro",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+          "roles": [
+            "code",
+            "ui"
+          ],
+          "reference": "references/fonts/office-code-pro.md",
+          "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+          "license": "OFL-1.1",
+          "file": "OfficeCodePro-Bold.woff2",
+          "css_family": "Office Code Pro",
+          "css_weight": "700",
+          "css_style": "normal",
+          "bytes": 28984,
+          "alternatives": [
+            "OfficeCodePro-Bold.woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0491",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Plum and Mint",
+            "background": "#FCF9FF",
+            "text": "#3D2346",
+            "accent": "#805099",
+            "surface": "#CDF3DF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Work Sans",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "column",
+              "single"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0761",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Graphite and Aqua",
+            "background": "#F7FBFC",
+            "text": "#233338",
+            "accent": "#006C78",
+            "surface": "#C9F0ED",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Libre Baskerville",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "column",
+              "compact"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1671",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-7",
+            "background": "#FBF9FA",
+            "text": "#2D1F20",
+            "accent": "#865C1D",
+            "surface": "#E7EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Bagnard",
+            "Aileron"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "column"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "data-revenue",
+    "family": "archivo",
+    "text": "Design a fictional data-revenue example for this task: \n              Membership and revenue describe different parts of the same organization. Compare each\n              on its own scale.\n             A wide chart leads a white analytical spread; measure controls sit above it and the exact values move beside the chart. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #FFFFFF page with #334BA0 accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R2103",
+          "context": "information",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Spectrum 2-2",
+            "background": "#FBF9FA",
+            "text": "#2D1F25",
+            "accent": "#864E1D",
+            "surface": "#E9EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "compare"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0410",
+          "context": "information",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Plum and Mint",
+            "background": "#FCF9FF",
+            "text": "#3D2346",
+            "accent": "#805099",
+            "surface": "#CDF3DF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2306",
+          "context": "information",
+          "style": "expressive magazine",
+          "arrangement": "asymmetric-feature",
+          "palette": {
+            "name": "Spectrum 2-4",
+            "background": "#1D1716",
+            "text": "#F7F5F3",
+            "accent": "#B6E58A",
+            "surface": "#253733",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "data-operations",
+    "family": "office-code-pro",
+    "text": "Design a fictional data-operations example for this task: \n          Four stations report different units. Select a station to read its own operating context.\n         A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Office Code Pro and a #EED6B3 page with #713B0F accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "office-code-pro",
+          "name": "Office Code Pro",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+          "roles": [
+            "code",
+            "ui"
+          ],
+          "reference": "references/fonts/office-code-pro.md",
+          "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+          "license": "OFL-1.1",
+          "file": "OfficeCodePro-Regular.woff2",
+          "css_family": "Office Code Pro",
+          "css_weight": "400",
+          "css_style": "normal",
+          "bytes": 29216,
+          "alternatives": [
+            "OfficeCodePro-Regular.woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "office-code-pro",
+          "name": "Office Code Pro",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A crisp programmer-oriented monospace, adapted from Source Code Pro. Useful for code, logs, and carefully aligned technical data.",
+          "roles": [
+            "code",
+            "ui"
+          ],
+          "reference": "references/fonts/office-code-pro.md",
+          "cautions": "The original nathco repository returns 404. The bundle uses the explicitly labeled case community mirror with OFL notices; only the standard family is bundled, not the dotted-zero D variant.",
+          "license": "OFL-1.1",
+          "file": "OfficeCodePro-Bold.woff2",
+          "css_family": "Office Code Pro",
+          "css_weight": "700",
+          "css_style": "normal",
+          "bytes": 28984,
+          "alternatives": [
+            "OfficeCodePro-Bold.woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0410",
+          "context": "information",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Plum and Mint",
+            "background": "#FCF9FF",
+            "text": "#3D2346",
+            "accent": "#805099",
+            "surface": "#CDF3DF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "operational"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1991",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-10",
+            "background": "#1C1D16",
+            "text": "#F5F7F3",
+            "accent": "#8AE59A",
+            "surface": "#252C37",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "League Gothic",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "narrow"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0050",
+          "context": "information",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Paper and Carmine",
+            "background": "#FFFFFF",
+            "text": "#202020",
+            "accent": "#AF173B",
+            "surface": "#F0F2F2",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "operational"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "family": "young-serif",
+    "text": "Design a fictional restaurant-fine-dining example for this task: Five courses, paced for conversation. An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Young Serif and a #173E2C page with #254C36 accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "young-serif",
+          "name": "Young Serif",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+          "roles": [
+            "heading",
+            "body",
+            "display"
+          ],
+          "reference": "references/fonts/young-serif.md",
+          "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+          "license": "OFL-1.1",
+          "file": "Young-Serif[wght].woff2",
+          "css_family": "Young Serif",
+          "css_weight": "300 700",
+          "css_style": "normal",
+          "bytes": 94656,
+          "alternatives": [
+            "Young-Serif[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "young-serif",
+          "name": "Young Serif",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A generous, rounded old-style serif with a warm, substantial voice. Useful for food, lifestyle, cultural, and personable editorial work.",
+          "roles": [
+            "heading",
+            "body",
+            "display"
+          ],
+          "reference": "references/fonts/young-serif.md",
+          "cautions": "The site's specimen lists regular only. The bundle uses the newer upstream variable roman and italic files; confirm the desired version before matching an older brand specimen.",
+          "license": "OFL-1.1",
+          "file": "Young-Serif[wght].woff2",
+          "css_family": "Young Serif",
+          "css_weight": "300 700",
+          "css_style": "normal",
+          "bytes": 94656,
+          "alternatives": [
+            "Young-Serif[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0121",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Forest and Lemon",
+            "background": "#F8FCF9",
+            "text": "#16362B",
+            "accent": "#357346",
+            "surface": "#F2E64B",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Young Serif",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "serif",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1824",
+          "context": "information",
+          "style": "immersive editorial",
+          "arrangement": "image-led",
+          "palette": {
+            "name": "Spectrum 1-9",
+            "background": "#FBFAF9",
+            "text": "#2D2D1F",
+            "accent": "#42861D",
+            "surface": "#E7EEEF",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Young Serif",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "serif",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1121",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-2",
+            "background": "#F9FBFA",
+            "text": "#1F292D",
+            "accent": "#1D2286",
+            "surface": "#EFE7EB",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Young Serif",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "serif",
+              "young"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "restaurant-cafe",
+    "family": "oswald",
+    "text": "Design a fictional restaurant-cafe example for this task: Three good reasons to stop. A fictional pickup counter. A full-width receipt strip precedes a horizontal product shelf; the selected items and clear action stay beside the running subtotal. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Oswald and a #F2CB9C page with #63321C accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "oswald",
+          "name": "Oswald",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+          "roles": [
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/oswald.md",
+          "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+          "license": "OFL-1.1",
+          "file": "Oswald[wght].woff2",
+          "css_family": "Oswald",
+          "css_weight": "200 700",
+          "css_style": "normal",
+          "bytes": 71904,
+          "alternatives": [
+            "Oswald[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "oswald",
+          "name": "Oswald",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A compact gothic sans with a strong vertical rhythm. Works for economical headlines, navigation accents, and assertive editorial layouts.",
+          "roles": [
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/oswald.md",
+          "cautions": "The current variable bundle is upright only. Do not manufacture italics or infer the legacy italic source designs are bundled.",
+          "license": "OFL-1.1",
+          "file": "Oswald[wght].woff2",
+          "css_family": "Oswald",
+          "css_weight": "200 700",
+          "css_style": "normal",
+          "bytes": 71904,
+          "alternatives": [
+            "Oswald[wght].woff2"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0856",
+          "context": "information",
+          "style": "expressive magazine",
+          "arrangement": "asymmetric-feature",
+          "palette": {
+            "name": "Monochrome Signal",
+            "background": "#FFFFFF",
+            "text": "#111111",
+            "accent": "#494949",
+            "surface": "#E8E8E8",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Oswald",
+            "Work Sans"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1937",
+          "context": "information",
+          "style": "documentary",
+          "arrangement": "timeline",
+          "palette": {
+            "name": "Spectrum 1-10",
+            "background": "#1C1D16",
+            "text": "#F5F7F3",
+            "accent": "#8AE59A",
+            "surface": "#252C37",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Oswald",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "oswald"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0293",
+          "context": "information",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Ink and Electric Yellow",
+            "background": "#181818",
+            "text": "#FAFAFA",
+            "accent": "#F4E84A",
+            "surface": "#303030",
+            "accentText": "#111111"
+          },
+          "fonts": [
+            "Work Sans",
+            "Work Sans"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "product"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "restaurant-reservations",
+    "family": "poppins",
+    "text": "Design a fictional restaurant-reservations example for this task: \n          Start with your visit, then choose the atmosphere. A preference is not a confirmed\n          reservation.\n         A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Poppins and a #F4EAF5 page with #58345C accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "poppins",
+          "name": "Poppins",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+          "roles": [
+            "ui",
+            "heading",
+            "body"
+          ],
+          "reference": "references/fonts/poppins.md",
+          "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+          "license": "OFL-1.1",
+          "file": "Poppins-Regular.ttf",
+          "css_family": "Poppins",
+          "css_weight": "400",
+          "css_style": "normal",
+          "bytes": 160316,
+          "alternatives": [
+            "Poppins-Regular.ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "poppins",
+          "name": "Poppins",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+          "roles": [
+            "ui",
+            "heading",
+            "body"
+          ],
+          "reference": "references/fonts/poppins.md",
+          "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+          "license": "OFL-1.1",
+          "file": "Poppins-Bold.ttf",
+          "css_family": "Poppins",
+          "css_weight": "700",
+          "css_style": "normal",
+          "bytes": 155996,
+          "alternatives": [
+            "Poppins-Bold.ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0743",
+          "context": "information",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Graphite and Aqua",
+            "background": "#F7FBFC",
+            "text": "#233338",
+            "accent": "#006C78",
+            "surface": "#C9F0ED",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "first",
+              "poppins"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0149",
+          "context": "information",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Forest and Lemon",
+            "background": "#F8FCF9",
+            "text": "#16362B",
+            "accent": "#357346",
+            "surface": "#F2E64B",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "choose",
+              "poppins"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2171",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 2-2",
+            "background": "#FBF9FA",
+            "text": "#2D1F25",
+            "accent": "#864E1D",
+            "surface": "#E9EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "poppins"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "restaurant-menu",
+    "family": "archivo",
+    "text": "Design a fictional restaurant-menu example for this task: Explore the dishes and choose what suits your lunch. A dark search rail accompanies a two-column dish catalog; the allergy instruction spans the page above the results. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #FFFFFF page with #38512B accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "archivo",
+          "name": "Archivo",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A sturdy grotesque with an industrial, editorial voice. Width variation helps adapt dense headlines and information layouts.",
+          "roles": [
+            "ui",
+            "body",
+            "heading",
+            "display"
+          ],
+          "reference": "references/fonts/archivo.md",
+          "cautions": "Open Foundry describes Archivo Black while listing Archivo styles. The bundle is Archivo, not the separate Archivo Black family.",
+          "license": "OFL-1.1",
+          "file": "Archivo[wdth,wght].ttf",
+          "css_family": "Archivo",
+          "css_weight": "100 900",
+          "css_style": "normal",
+          "bytes": 658596,
+          "alternatives": [
+            "Archivo[wdth,wght].ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R1211",
+          "context": "information",
+          "style": "typographic editorial",
+          "arrangement": "reading-column",
+          "palette": {
+            "name": "Spectrum 1-3",
+            "background": "#F9FAFB",
+            "text": "#1F212D",
+            "accent": "#501D86",
+            "surface": "#EFE7E7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "column"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R0009",
+          "context": "information",
+          "style": "event-driven",
+          "arrangement": "poster-and-program",
+          "palette": {
+            "name": "Paper and Carmine",
+            "background": "#FFFFFF",
+            "text": "#202020",
+            "accent": "#AF173B",
+            "surface": "#F0F2F2",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Inter"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "choose"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2103",
+          "context": "information",
+          "style": "product-first",
+          "arrangement": "catalog-grid",
+          "palette": {
+            "name": "Spectrum 2-2",
+            "background": "#FBF9FA",
+            "text": "#2D1F25",
+            "accent": "#864E1D",
+            "surface": "#E9EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Archivo",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "2/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "archivo",
+              "catalog"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  },
+  {
+    "id": "business-portal",
+    "family": "poppins",
+    "text": "Design a fictional business-portal example for this task: Review the material direction before detailed design begins. The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Poppins and a #EEE9F6 page with #4D386A accents.",
+    "weights": {
+      "400": [
+        {
+          "id": "poppins",
+          "name": "Poppins",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+          "roles": [
+            "ui",
+            "heading",
+            "body"
+          ],
+          "reference": "references/fonts/poppins.md",
+          "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+          "license": "OFL-1.1",
+          "file": "Poppins-Regular.ttf",
+          "css_family": "Poppins",
+          "css_weight": "400",
+          "css_style": "normal",
+          "bytes": 160316,
+          "alternatives": [
+            "Poppins-Regular.ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ],
+      "700": [
+        {
+          "id": "poppins",
+          "name": "Poppins",
+          "score": 10,
+          "matched_moods": [],
+          "description": "A circular geometric sans with a friendly, orderly voice and Devanagari support. Suits approachable products and bilingual identities.",
+          "roles": [
+            "ui",
+            "heading",
+            "body"
+          ],
+          "reference": "references/fonts/poppins.md",
+          "cautions": "The Open Foundry description mistakenly discusses Bagnard. This entry instead uses the ITF/Google distribution and inspected font data. Stable static files are bundled rather than the upstream beta variable files.",
+          "license": "OFL-1.1",
+          "file": "Poppins-Bold.ttf",
+          "css_family": "Poppins",
+          "css_weight": "700",
+          "css_style": "normal",
+          "bytes": 155996,
+          "alternatives": [
+            "Poppins-Bold.ttf"
+          ],
+          "coverage_checked": true,
+          "reason": "Matches role and requested file-level constraints; compare visually before final selection."
+        }
+      ]
+    },
+    "recipeAlternatives": {
+      "status": "ok",
+      "datasetRevision": "sha256:686eb8f4a8bb2457b43add204e89d9fc0c017eb7f49c494aaa5cdd71fac4f567",
+      "notice": "Text-only model heuristics, not aesthetic probabilities or rendered validation. Adapted output is derived and untested until reviewed.",
+      "candidates": [
+        {
+          "id": "R0050",
+          "context": "information",
+          "style": "work-focused",
+          "arrangement": "workspace",
+          "palette": {
+            "name": "Paper and Carmine",
+            "background": "#FFFFFF",
+            "text": "#202020",
+            "accent": "#AF173B",
+            "surface": "#F0F2F2",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Roboto"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "poppins",
+              "workspace"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R1185",
+          "context": "information",
+          "style": "archival",
+          "arrangement": "index-and-detail",
+          "palette": {
+            "name": "Spectrum 1-2",
+            "background": "#F9FBFA",
+            "text": "#1F292D",
+            "accent": "#1D2286",
+            "surface": "#EFE7EB",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "poppins"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        },
+        {
+          "id": "R2176",
+          "context": "information",
+          "style": "expressive magazine",
+          "arrangement": "asymmetric-feature",
+          "palette": {
+            "name": "Spectrum 2-2",
+            "background": "#FBF9FA",
+            "text": "#2D1F25",
+            "accent": "#864E1D",
+            "surface": "#E9EFE7",
+            "accentText": "#FFFFFF"
+          },
+          "fonts": [
+            "Poppins",
+            "Libre Baskerville"
+          ],
+          "sourceAgreement": "3/3 correlated model presentations",
+          "rationale": {
+            "matchedTerms": [
+              "poppins"
+            ],
+            "preferredArrangement": false,
+            "context": "information"
+          }
+        }
+      ],
+      "selectionMethod": "Lexical retrieval and structural diversity; agent must judge actual task fit. No popularity, context-count weighting or calibrated confidence.",
+      "constraints": "Brand, audience, content, interaction requirements and existing system remain authoritative. Suggestions do not alter tokens or apply fonts.",
+      "fallback": "Use fewer candidates or the normal font/color/composition workflow when no suitable recipe fits; never relax explicit constraints."
+    },
+    "decision": "Use the authored composition in the brief; no fixed recipe layout was adopted."
+  }
+]

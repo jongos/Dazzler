@@ -1,0 +1,82 @@
+[
+  {
+    "id": "business",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+Georgia",
+      "/CAAAAA+Georgia-Bold"
+    ]
+  },
+  {
+    "id": "family",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+ArialMT",
+      "/CAAAAA+Arial-BoldMT"
+    ]
+  },
+  {
+    "id": "fun",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+ArialMT",
+      "/CAAAAA+Arial-BoldMT"
+    ]
+  },
+  {
+    "id": "legal",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+Georgia",
+      "/CAAAAA+Georgia-Bold"
+    ]
+  },
+  {
+    "id": "marketing",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+ArialMT",
+      "/CAAAAA+Arial-BoldMT"
+    ]
+  },
+  {
+    "id": "presentation",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+ArialMT",
+      "/CAAAAA+Arial-BoldMT"
+    ]
+  },
+  {
+    "id": "professional",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+ArialMT",
+      "/CAAAAA+Arial-BoldMT"
+    ]
+  },
+  {
+    "id": "restaurant",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+Georgia",
+      "/CAAAAA+Georgia-Bold"
+    ]
+  },
+  {
+    "id": "school",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+Consolas",
+      "/CAAAAA+Consolas-Bold"
+    ]
+  },
+  {
+    "id": "technical",
+    "pages": 1,
+    "fonts": [
+      "/BAAAAA+Consolas",
+      "/CAAAAA+Consolas-Bold"
+    ]
+  }
+]

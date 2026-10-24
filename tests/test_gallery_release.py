@@ -30,7 +30,7 @@ class GalleryReleaseTests(unittest.TestCase):
             skill = save(prefix + "SKILL.md", "current skill")
             save(
                 prefix + "assets/templates/catalog.json",
-                '{"templates":[{"id":"sample","path":"sample.html"}]}',
+                '{"version":"1.0.0","templates":[{"id":"sample","path":"sample.html"}]}',
             )
             artifact = save(prefix + "assets/templates/sample.html", "original design")
             current = save("review/current.png", "current render fixture")
@@ -89,6 +89,15 @@ class GalleryReleaseTests(unittest.TestCase):
                 return gate.validate(manifest, root)
 
             self.assertEqual(run(data), 1)
+            stale_catalog = '{"version":"0.9.0","templates":[{"id":"sample","path":"sample.html"}]}'
+            save(prefix + "assets/templates/catalog.json", stale_catalog)
+            with self.assertRaisesRegex(AssertionError, "Template catalog"):
+                run(data)
+            save(prefix + "assets/templates/catalog.json", stale_catalog.replace('0.9.0', '1.0.0'))
+            stale_manifest = copy.deepcopy(data)
+            stale_manifest["version"] = "0.9.0"
+            with self.assertRaisesRegex(AssertionError, "Gallery must"):
+                run(stale_manifest)
             refinement = copy.deepcopy(data)
             refined = refinement["examples"][0]
             refined["reviewScope"] = "color-system-refinement"

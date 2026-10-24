@@ -1,16 +1,19 @@
 :root {
-  --accent: #1551a4;
-  --paper: #ffffff;
-  --display: "Oswald";
+  --display: "Archivo";
+  --accent: #223e76;
+  --paper: #d9e4ff;
   --body-color: #17212b;
-  --ink-color: white;
-  --sheet-background: white;
-  --th-td-border-bottom: #818b94;
-  --thead-color: white;
+  --top-border-bottom: #79858b;
+  --band-color: white;
+  --sheet-background: #fff;
+  --closing-border-top: #79858b;
+  --th-td-border-bottom: #899398;
+  --thead-color: #fff;
   --button-color: white;
   --button-aria-pressed-false-background: white;
   --input-not-type-checkbox-select-background: white;
   --input-not-type-checkbox-select-color: #17212b;
   --input-not-type-checkbox-select-border: #65747a;
-  --focus-visible-outline: #b02e00;
+  --focus-visible-outline: #b03b00;
+  --dispatch-note-border-color: white;
 }

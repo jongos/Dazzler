@@ -1,7 +1,7 @@
 {
   "id": "restaurant-cafe",
-  "title": "The Coffee Counter",
-  "prompt": "Use Dazzler to design the coffee counter for its fictional reader task. A numbered product counter sits beside a tall paper receipt; the cart remains visible beside the choices rather than above them. Retain the existing data and functional controls, with keyboard and mobile access. Use Oswald, #71224C and #FFE0EF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "At the Coffee Counter",
+  "prompt": "Design a fictional restaurant-cafe example for this task: Three good reasons to stop. A fictional pickup counter. A full-width receipt strip precedes a horizontal product shelf; the selected items and clear action stay beside the running subtotal. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Oswald and a #F2CB9C page with #63321C accents.",
   "data": {
     "products": [
       {

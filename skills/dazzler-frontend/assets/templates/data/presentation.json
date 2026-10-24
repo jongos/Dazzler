@@ -4,11 +4,11 @@
   "short": "Open Later for More People",
   "tag": "CIVIC LAB / THREE MINUTE BRIEF",
   "lead": "Test one late opening each week before committing to a permanent change.",
-  "accent": "#173D75",
-  "paper": "#C2E9FF",
-  "font": "Libre Baskerville",
-  "word": "Georgia",
-  "layout": "Experiment and Decision",
+  "accent": "#633A20",
+  "paper": "#F7EBDD",
+  "font": "Poppins",
+  "word": "Arial",
+  "layout": "The Experiment Prospectus",
   "stat": "6 WEEKS",
   "label": "a bounded pilot with a clear review point",
   "intro": "This fictional presentation handout proposes Thursday openings until 21:00. Attendance, staffing and quiet-study demand will determine the next decision.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Pilot proposal only · Synthetic example, not a funded program.",
-  "prompt": "Use Dazzler to create a fictional presentation document and web edition for this task: Test one late opening each week before committing to a permanent change. Retain every supplied fact and qualification. A two-panel argument pairs the proposed experiment with the decision criteria; supporting measures sit across the lower edge. Use Libre Baskerville for the web and verified Georgia for native output, with #173D75 against #C2E9FF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional presentation document and HTML edition: Test one late opening each week before committing to a permanent change. A portrait argument uses a narrow six-week marker, a central proposal, and a full-width measurement register before the decision conditions. Preserve every source number and qualification. Use Poppins for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "libre-baskerville",
-    "css_family": "Libre Baskerville",
+    "id": "poppins",
+    "css_family": "Poppins",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Immersive violet presentation with luminous yellow numerals.",
   "fictional": true,
   "design": {
-    "accent": "#173D75",
-    "secondary": "#173D75",
-    "paper": "#C2E9FF",
+    "accent": "#633A20",
+    "secondary": "#633A20",
+    "paper": "#F7EBDD",
     "text": "#17212B",
-    "accentText": "#173D75",
+    "accentText": "#633A20",
     "onAccent": "#FFFFFF"
   },
   "document": [

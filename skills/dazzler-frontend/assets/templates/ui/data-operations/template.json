@@ -1,7 +1,7 @@
 {
   "id": "data-operations",
-  "title": "The Station Workbench",
-  "prompt": "Use Dazzler to design the station workbench for its fictional reader task. A horizontal station strip sits above a side-by-side reading and exception workbench; units and operating limits remain explicit. Retain the existing data and functional controls, with keyboard and mobile access. Use Archivo, #934100 and #FFFFFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "Station Readings",
+  "prompt": "Design a fictional data-operations example for this task: \n          Four stations report different units. Select a station to read its own operating context.\n         A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Office Code Pro and a #EED6B3 page with #713B0F accents.",
   "data": {
     "stations": [
       "Intake",

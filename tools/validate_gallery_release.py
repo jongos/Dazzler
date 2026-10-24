@@ -26,6 +26,7 @@ def validate(manifest, root=ROOT):
         (skill / "assets/templates/catalog.json").read_text(encoding="utf-8")
     )
     assert data["version"] == version, "Gallery must use the release version"
+    assert catalog.get("version") == version, "Template catalog must use the release version"
     assert data["runtimeSha256"] == digest(
         skill / "references/integrity.json"
     ), "Regenerate after runtime changes"

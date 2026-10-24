@@ -1,7 +1,7 @@
 {
   "id": "restaurant-reservations",
-  "title": "The Seating Request Desk",
-  "prompt": "Use Dazzler to design the seating request desk for its fictional reader task. A seating atlas occupies a wide left panel with a compact request form to its right; access guidance follows as a separate ribbon. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #6D370D and #FFEAA3. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "Choose Your Evening",
+  "prompt": "Design a fictional restaurant-reservations example for this task: \n          Start with your visit, then choose the atmosphere. A preference is not a confirmed\n          reservation.\n         A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Poppins and a #F4EAF5 page with #58345C accents.",
   "data": {
     "zones": [
       "Window Table",

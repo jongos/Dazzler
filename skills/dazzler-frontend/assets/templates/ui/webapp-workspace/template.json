@@ -1,7 +1,7 @@
 {
   "id": "webapp-workspace",
-  "title": "The Author Notebook",
-  "prompt": "Use Dazzler to design the author notebook for its fictional reader task. A two-page writing notebook pairs a narrow revision margin with a broad editable manuscript; chapter context closes the desk. Retain the existing data and functional controls, with keyboard and mobile access. Use Young Serif, #2544A0 and #D3DCFF. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "The Manuscript Desk",
+  "prompt": "Design a fictional webapp-workspace example for this task: A quiet place to draft, followed by a deliberate editing pass. A wide manuscript leads; revision guidance moves into a labelled disclosure below the editor, with chapter context across the top. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Libre Baskerville and a #F5F0E6 page with #303E67 accents.",
   "data": {
     "chapter": "At the River",
     "mode": "local manuscript"

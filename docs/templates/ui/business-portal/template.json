@@ -1,7 +1,7 @@
 {
   "id": "business-portal",
-  "title": "The Project Review Room",
-  "prompt": "Use Dazzler to design the project review room for its fictional reader task. A vertical milestone spine accompanies a document review sheet; document tabs sit across the sheet and the review action closes the evidence. Retain the existing data and functional controls, with keyboard and mobile access. Use Poppins, #3A5A13 and #E1F1C8. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "Review the Next Step",
+  "prompt": "Design a fictional business-portal example for this task: Review the material direction before detailed design begins. The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Poppins and a #EEE9F6 page with #4D386A accents.",
   "data": {
     "milestones": [
       "06 Jun",

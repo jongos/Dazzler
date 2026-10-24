@@ -4,11 +4,11 @@
   "short": "One Weekend Together",
   "tag": "THE RIVER HOUSE / 23–25 JULY",
   "lead": "A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday.",
-  "accent": "#145A3A",
-  "paper": "#FFF1AF",
-  "font": "Young Serif",
-  "word": "Georgia",
-  "layout": "The Weekend Route",
+  "accent": "#264F87",
+  "paper": "#E3EDF7",
+  "font": "Archivo",
+  "word": "Arial",
+  "layout": "The Weekend Checklist",
   "stat": "3 DAYS",
   "label": "one shared list · fewer messages",
   "intro": "A fictional family plan for two adults and two children. Keep food, travel and quiet time visible; check items as they are packed rather than assuming they are done.",
@@ -49,10 +49,10 @@
     ]
   ],
   "closing": "Fictional household · Adapt the plan to your family and access needs.",
-  "prompt": "Use Dazzler to create a fictional family document and web edition for this task: A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday. Retain every supplied fact and qualification. A horizontal route joins the three days; packing and change instructions sit in separate bottom pockets. Use Young Serif for the web and verified Georgia for native output, with #145A3A against #FFF1AF. Author a distinct composition rather than recoloring the previous release. Keep native text and tables editable and verify narrow layouts.",
+  "prompt": "Create a fictional family document and HTML edition: A shared plan with room to change it. The only fixed appointment is lunch with Nana on Saturday. A portrait itinerary puts packing and contingency notes before the day-by-day register so the reader can prepare before travelling. Preserve every source number and qualification. Use Archivo for the web; keep the Word text and tables editable and inspect every rendered page.",
   "fontSelection": {
-    "id": "young-serif",
-    "css_family": "Young Serif",
+    "id": "archivo",
+    "css_family": "Archivo",
     "license": "OFL-1.1",
     "coverage_checked": false
   },
@@ -61,11 +61,11 @@
   "colorDirection": "Bright sky-blue itinerary, sunny packing field and coral day markers on white.",
   "fictional": true,
   "design": {
-    "accent": "#145A3A",
-    "secondary": "#145A3A",
-    "paper": "#FFF1AF",
+    "accent": "#264F87",
+    "secondary": "#264F87",
+    "paper": "#E3EDF7",
     "text": "#17212B",
-    "accentText": "#145A3A",
+    "accentText": "#264F87",
     "onAccent": "#FFFFFF"
   },
   "document": [

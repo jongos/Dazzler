@@ -1,7 +1,7 @@
 {
   "id": "webapp-board",
-  "title": "The Release Staircase",
-  "prompt": "Use Dazzler to design the release staircase for its fictional reader task. A wide four-step production staircase leads from assignments to a separate publication checkpoint; the deadline is a lower closing band. Retain the existing data and functional controls, with keyboard and mobile access. Use Office Code Pro, #9C2A14 and #FFD74A. Preserve factual caveats and local-only behavior; do not imply real booking, payment, publication or account changes.",
+  "title": "The Production Register",
+  "prompt": "Design a fictional webapp-board example for this task: Four assignments between the recording and the release. A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #E9E1F6 page with #4B3768 accents.",
   "data": {
     "tasks": [
       [

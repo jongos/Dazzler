@@ -1,0 +1,202 @@
+[
+  {
+    "id": "webapp-workspace",
+    "prompt": "Design a fictional webapp-workspace example for this task: A quiet place to draft, followed by a deliberate editing pass. A wide manuscript leads; revision guidance moves into a labelled disclosure below the editor, with chapter context across the top. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Libre Baskerville and a #F5F0E6 page with #303E67 accents.",
+    "direction": "The Manuscript Desk",
+    "rationale": "A wide manuscript leads; revision guidance moves into a labelled disclosure below the editor, with chapter context across the top.",
+    "font": "Libre Baskerville",
+    "surface": "#F5F0E6",
+    "accent": "#303E67",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Manuscript Desk",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "A wide manuscript leads; revision guidance moves into a labelled disclosure below the editor, with chapter context across the top.",
+    "structuralChanges": [
+      "A wide manuscript leads; revision guidance moves into a labelled disclosure below the editor, with chapter context across the top.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "webapp-board",
+    "prompt": "Design a fictional webapp-board example for this task: Four assignments between the recording and the release. A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #E9E1F6 page with #4B3768 accents.",
+    "direction": "The Production Register",
+    "rationale": "A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work.",
+    "font": "Archivo",
+    "surface": "#E9E1F6",
+    "accent": "#4B3768",
+    "alternatives": [
+      "Retain the prior composition",
+      "The Production Register",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work.",
+    "structuralChanges": [
+      "A dense vertical assignment register replaces the staircase; a right-hand release rail keeps deadline and completion beside the work.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "webapp-settings",
+    "prompt": "Design a fictional webapp-settings example for this task: Keep urgent mentions visible. Gather routine messages into one delivery. A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Office Code Pro and a #17363C page with #254E54 accents.",
+    "direction": "Your Daily Digest",
+    "rationale": "A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy.",
+    "font": "Office Code Pro",
+    "surface": "#17363C",
+    "accent": "#254E54",
+    "alternatives": [
+      "Retain the prior composition",
+      "Your Daily Digest",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy.",
+    "structuralChanges": [
+      "A single-column settings form sits in a white sheet on a dark field; a compact selected-time strip replaces the tall clock and duplicated policy.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "data-revenue",
+    "prompt": "Design a fictional data-revenue example for this task: \n              Membership and revenue describe different parts of the same organization. Compare each\n              on its own scale.\n             A wide chart leads a white analytical spread; measure controls sit above it and the exact values move beside the chart. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #FFFFFF page with #334BA0 accents.",
+    "direction": "Six Years of Membership",
+    "rationale": "A wide chart leads a white analytical spread; measure controls sit above it and the exact values move beside the chart.",
+    "font": "Archivo",
+    "surface": "#FFFFFF",
+    "accent": "#334BA0",
+    "alternatives": [
+      "Retain the prior composition",
+      "Six Years of Membership",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "A wide chart leads a white analytical spread; measure controls sit above it and the exact values move beside the chart.",
+    "structuralChanges": [
+      "A wide chart leads a white analytical spread; measure controls sit above it and the exact values move beside the chart.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "data-operations",
+    "prompt": "Design a fictional data-operations example for this task: \n          Four stations report different units. Select a station to read its own operating context.\n         A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Office Code Pro and a #EED6B3 page with #713B0F accents.",
+    "direction": "Station Readings",
+    "rationale": "A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence.",
+    "font": "Office Code Pro",
+    "surface": "#EED6B3",
+    "accent": "#713B0F",
+    "alternatives": [
+      "Retain the prior composition",
+      "Station Readings",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence.",
+    "structuralChanges": [
+      "A narrow station rail controls a dark instrument panel; a full-width exception strip closes the operational sequence.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "restaurant-fine-dining",
+    "prompt": "Design a fictional restaurant-fine-dining example for this task: Five courses, paced for conversation. An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Young Serif and a #173E2C page with #254C36 accents.",
+    "direction": "Supper in the Garden",
+    "rationale": "An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet.",
+    "font": "Young Serif",
+    "surface": "#173E2C",
+    "accent": "#254C36",
+    "alternatives": [
+      "Retain the prior composition",
+      "Supper in the Garden",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet.",
+    "structuralChanges": [
+      "An asymmetrical dark dining folio pairs a large botanical drawing with service information and an expandable menu on a pale sheet.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "restaurant-cafe",
+    "prompt": "Design a fictional restaurant-cafe example for this task: Three good reasons to stop. A fictional pickup counter. A full-width receipt strip precedes a horizontal product shelf; the selected items and clear action stay beside the running subtotal. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Oswald and a #F2CB9C page with #63321C accents.",
+    "direction": "At the Coffee Counter",
+    "rationale": "A full-width receipt strip precedes a horizontal product shelf; the selected items and clear action stay beside the running subtotal.",
+    "font": "Oswald",
+    "surface": "#F2CB9C",
+    "accent": "#63321C",
+    "alternatives": [
+      "Retain the prior composition",
+      "At the Coffee Counter",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "A full-width receipt strip precedes a horizontal product shelf; the selected items and clear action stay beside the running subtotal.",
+    "structuralChanges": [
+      "A full-width receipt strip precedes a horizontal product shelf; the selected items and clear action stay beside the running subtotal.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "restaurant-reservations",
+    "prompt": "Design a fictional restaurant-reservations example for this task: \n          Start with your visit, then choose the atmosphere. A preference is not a confirmed\n          reservation.\n         A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Poppins and a #F4EAF5 page with #58345C accents.",
+    "direction": "Choose Your Evening",
+    "rationale": "A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices.",
+    "font": "Poppins",
+    "surface": "#F4EAF5",
+    "accent": "#58345C",
+    "alternatives": [
+      "Retain the prior composition",
+      "Choose Your Evening",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices.",
+    "structuralChanges": [
+      "A form-first booking desk puts the request beside a vertical seating preference rail; access details remain directly below the zone choices.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "restaurant-menu",
+    "prompt": "Design a fictional restaurant-menu example for this task: Explore the dishes and choose what suits your lunch. A dark search rail accompanies a two-column dish catalog; the allergy instruction spans the page above the results. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Archivo and a #FFFFFF page with #38512B accents.",
+    "direction": "Lunch at the Market",
+    "rationale": "A dark search rail accompanies a two-column dish catalog; the allergy instruction spans the page above the results.",
+    "font": "Archivo",
+    "surface": "#FFFFFF",
+    "accent": "#38512B",
+    "alternatives": [
+      "Retain the prior composition",
+      "Lunch at the Market",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "A dark search rail accompanies a two-column dish catalog; the allergy instruction spans the page above the results.",
+    "structuralChanges": [
+      "A dark search rail accompanies a two-column dish catalog; the allergy instruction spans the page above the results.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  },
+  {
+    "id": "business-portal",
+    "prompt": "Design a fictional business-portal example for this task: Review the material direction before detailed design begins. The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately. Preserve the supplied data, keyboard controls, recovery actions and local-only behavior. Use Poppins and a #EEE9F6 page with #4D386A accents.",
+    "direction": "Review the Next Step",
+    "rationale": "The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately.",
+    "font": "Poppins",
+    "surface": "#EEE9F6",
+    "accent": "#4D386A",
+    "alternatives": [
+      "Retain the prior composition",
+      "Review the Next Step",
+      "Single-column linear interface"
+    ],
+    "selectionReason": "The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately.",
+    "structuralChanges": [
+      "The active document leads the review workspace; a compact milestone strip follows it, and review state belongs to each document separately.",
+      "Regroups the primary control and its feedback into a new reading sequence.",
+      "Changes the balance of content, navigation and supporting information."
+    ]
+  }
+]
