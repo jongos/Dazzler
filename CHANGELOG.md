@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-24 - Project Overviews and Companion Roles
+
+**Changed:** README and landing-page copy lead with purpose, concrete uses and the distinct roles of the related projects. Existing visual designs and canonical skill behavior are preserved.
+
+**Added:** Linked detailed reference documentation retains setup, research, credits and supporting records outside the overview. Companion links help readers choose the next relevant project.
+
+**Why:** Keep first-time reading focused on what the project does and when to use it.
+
+**Validation:** Local README/reference/site links and anchors checked. Desktop (1440px) and mobile (390px) browser views reviewed with no horizontal page overflow. The existing full-gallery release gate remains stale; this source-only editorial update does not certify a release. This is editorial/layout validation, not human efficacy testing.
+
 ## 2026-10-24 - Portable Documentation Privacy Cleanup
 
 **Changed:** Replaced host-specific workflow locations with a configurable workflow-directory reference in the public guide and Grokbot documentation. Replaced a personal-path test literal with a general Windows user-directory regression check.
