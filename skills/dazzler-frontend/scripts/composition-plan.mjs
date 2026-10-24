@@ -93,6 +93,23 @@ export function planComposition(
     craft: medium
       ? craft[medium]
       : "Infer website versus application from the task, not its industry or palette.",
+    execution:
+      preserve || !medium || !activity
+        ? null
+        : {
+            idea: "Name the subject-specific relationship and show one visible consequence; preserve explicit constraints separately from inferred choices.",
+            slice:
+              medium === "slides"
+                ? "Compare a native middle sequence of three slides, including evidence and explanation."
+                : medium === "document"
+                  ? "Compare a native dense interior page with realistic unequal columns and a longer-edit copy."
+                  : medium === "application"
+                    ? "Compare selection-to-action states with realistic records on desktop and narrow screens."
+                    : "Compare arrival-to-exploration with substantive content and access details on narrow screens.",
+            judgments: ["correctness", "taskSupport", "craft", "distinctiveness"],
+            evidence:
+              "Regenerate captures and contact sheets from the saved revision; optionally seal their hashes with review-bundle.mjs inside the existing runner.",
+          },
     material: [
       ...(content.includes("data")
         ? [

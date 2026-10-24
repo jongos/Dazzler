@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-24 — 0.32.1: Carry design decisions into reviewed output
+
+**Changed:** Substantial-design planning now calls for medium-specific native slices and separate correctness, task-support, craft and distinctiveness judgments. Existing style rules and small-edit behavior remain intact.
+
+**Added:** An offline review-bundle helper binds source dependencies and captures to SHA-256 digests, detects later changes, and validates judgment evidence references. Execution guidance covers content-specific representations, realistic fixtures and task placement across states.
+
+**Why:** Working controls and clean renders did not establish strong design. Weak structural alternatives and stale contact sheets made the earlier specimens less useful as evidence.
+
+**Validation:** 129 Node tests passed; 104 Python tests passed; four optional tests were skipped. Release metadata, links, integrity and platform-package validation passed. Four separate synthetic specimens were rendered and exercised, including mobile task placement and native edit stress. Protected template and design-rule hashes are unchanged. Scope: source push and local installation only; no gallery regeneration, baseline comparison or release.
+
 ## 2026-10-24 — Source Push and Local Skill Update
 
 **Changed:** Integrated the rendered-review, native-editing and task-led composition work onto the current remote without changing its gallery. Applied formatting-only fixes to six existing gallery maintenance files for CI.

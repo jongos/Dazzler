@@ -140,6 +140,7 @@ export function planWorkflow(task = {}) {
   if (scope === "substantial") {
     references.add("art-direction.md");
     if (compositionSupported) references.add("composition-decisions.md");
+    if (compositionSupported && !refinement.readOnly) references.add("execution-review.md");
     ids.add("distinction");
   }
   if (kind === "interface") {

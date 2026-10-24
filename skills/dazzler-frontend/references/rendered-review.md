@@ -13,6 +13,8 @@ Use this loop for the affected scope, preserving Dazzler's design rules and the 
 
 Deterministic checks support this loop; they do not judge the whole composition. Text-only classifiers can assess textual constraints but cannot inspect screenshots. Visual judgments remain reported observations, not proof of aesthetic quality.
 
+For substantial new work, [execution review](execution-review.md) separates craft judgments from functional checks and optionally binds the final evidence bundle to file hashes. Rebuild contact sheets after corrections; old summaries are not final evidence.
+
 ## Reported Render Evidence
 
 When using `workflow.mjs assess`, a passing `render` observation requires `renderReview`:
