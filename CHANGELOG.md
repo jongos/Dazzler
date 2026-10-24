@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-24 - Portable Documentation Privacy Cleanup
+
+**Changed:** Replaced host-specific workflow locations with a configurable workflow-directory reference in the public guide and Grokbot documentation. Replaced a personal-path test literal with a general Windows user-directory regression check.
+
+**Added:** No runtime features or dependencies.
+
+**Why:** Published guidance and tests should not retain machine-specific user or host locations. Public author attribution remains intact.
+
+**Validation:** Six maintenance tests and the guide JavaScript syntax check pass. Tracked-text privacy-pattern review and diff whitespace checks pass for this scope. The existing full-gallery release validator fails its release-version freshness check; this is a source-only privacy cleanup, not release certification. Gallery assets and canonical skill behavior are unchanged. Historical commits were inspected read-only and were not rewritten.
+
 ## 2026-10-23 — 0.31.1: Task-Led Density and Working Interfaces (Unreleased)
 
 **Changed:** Automatic density now chooses a provisional current/tighter/balanced/roomier/mixed direction from actual tasks and region evidence. Structural space, information relationships, components and reading remain separate; no global CSS compression is introduced. Existing systems, explicit preferences, brand locks and accessibility constraints retain precedence. Rendered waste/crowding can revise the decision.

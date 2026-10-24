@@ -1,6 +1,6 @@
 # Dazzler for Grok Bot
 
-Download `dazzler-grokbot.zip` from the release below. Inspect it, then extract its `dazzler/` folder into `/home/box/agent-data/workflows/` in your own Grok Bot workspace. The result is `/home/box/agent-data/workflows/dazzler/SKILL.md`. Refresh the workflow list and ask Grok Bot to use Dazzler on a small local page.
+Download `dazzler-grokbot.zip` from the release below. Inspect it, then locate your host's configured workflow directory. Extract the ZIP's `dazzler/` folder there; the result is `<workflow-directory>/dazzler/SKILL.md`. Replace `<workflow-directory>` with your own host setting rather than copying another machine's absolute path. Refresh the workflow list and ask Grok Bot to use Dazzler on a small local page.
 
 This is a manual installation based on the reported host layout. Local extraction, resource hashes and helpers are tested; host indexing and a fresh end-to-end Grok Bot install are not verified. Do not copy it into a disposable plugin cache. The managed five-host installer does not target this host.
 

@@ -124,7 +124,7 @@ class MaintenanceTests(unittest.TestCase):
         for file in [skill / "SKILL.md", *list((skill / "references").rglob("*.md"))]:
             self.assertLessEqual(file.stat().st_size, 12000, str(file))
             text = file.read_text(encoding="utf-8").lower()
-            self.assertNotIn("c:\\users\\jongo", text)
+            self.assertNotRegex(text, r"(?i)[a-z]:[\\/]+users[\\/]+")
             self.assertNotIn("owner explicitly authorized", text)
 
 

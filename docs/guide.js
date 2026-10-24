@@ -67,8 +67,8 @@ const hosts = {
     "Choose GitHub Copilot in the installer, refresh, then ask it to use Dazzler.",
   ],
   grokbot: [
-    "/home/box/agent-data/workflows/dazzler/SKILL.md",
-    "Extract the Grok Bot ZIP to this workflow path. Host indexing remains unverified; see the platform guide.",
+    "<workflow-directory>/dazzler/SKILL.md",
+    "Replace <workflow-directory> with your host's configured workflow directory, then extract the Grok Bot ZIP there. Host indexing remains unverified; see the platform guide.",
   ],
   portable: [
     "Use the portable Dazzler prompt with your project brief.",
