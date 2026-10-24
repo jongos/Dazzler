@@ -8,7 +8,7 @@
 
 **Why:** Ship the tested implementation and make the local Codex installation match it while preserving unfinished work in the original checkout.
 
-**Validation:** 126 JavaScript tests and 108 Python tests (four optional skips) passed; local documentation links and release metadata pass. Template and thumbnail paths have no diff from the remote base. This source update is not a tagged release; the published marketplace pointer remains unchanged.
+**Validation:** 126 JavaScript tests and 108 Python tests (four optional skips) passed; local documentation links and release metadata pass. Template and thumbnail paths have no diff from the remote base. This source update is not a tagged release; the published marketplace pointer remains unchanged. CI checks that published archive pin on release tags, while source pushes still build and validate all packages.
 
 ## 2026-10-24 — Context-Driven Composition (Unreleased 0.32.0)
 
