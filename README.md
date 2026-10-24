@@ -4,7 +4,7 @@
 
 **Turn a Brief Into a Design With Character.**
 
-Dazzler helps your agent create and refine websites, interfaces, reports and slides. It connects typography, color and composition to what people need to understand or do, while respecting your brand and existing project.
+Dazzler gives your agent the tools to create and refine websites, interfaces, reports and slides. It shapes typography, color and layout around your audience, brand and content.
 
 ## Put It to Work
 
@@ -26,7 +26,7 @@ Use $dazzler-frontend to refine this dashboard. Make the urgent work easy
 to find while keeping our brand, content and existing components.
 ```
 
-Bring a brief, existing work or a concrete goal. Dazzler can choose the visual details; your instructions take precedence.
+Bring a brief, existing work or a goal. Dazzler chooses the visual details within your requirements.
 
 [Explore the field guide](https://jongos.github.io/Dazzler/) · [Browse fictional worked examples](https://jongos.github.io/Dazzler/templates/) · [Installation and rollback](maintenance/ONBOARDING.md)
 
@@ -34,12 +34,13 @@ Bring a brief, existing work or a concrete goal. Dazzler can choose the visual d
 
 | Project | How It Complements This Work |
 |---|---|
-| [Longshot](https://github.com/jongos/Longshot) | Independently attempt rendered interface tasks and return reproducible evidence. |
-| [Style Science](https://github.com/jongos/style-science) | Make design requirements, constraints and evidence inspectable. |
-| [Spiral](https://github.com/jongos/Spiral) | Trace multi-person workflows, handoffs and waiting states before building. |
-| [Shatterstar](https://github.com/jongos/Shatterstar) | Evaluate what to remove, combine, hide or defer while preserving important tasks. |
+| [Longshot](https://github.com/jongos/Longshot) | Test interface tasks and report reproducible findings. |
+| [Style Science](https://github.com/jongos/style-science) | Connect design requirements to measurable checks and evidence. |
+| [Spiral](https://github.com/jongos/Spiral) | Find gaps in workflow handoffs, ownership and recovery. |
+| [Shatterstar](https://github.com/jongos/Shatterstar) | Simplify products while preserving important tasks. |
+| [Mojo](https://github.com/jongos/Mojo) | Make AI outputs clear and direct. |
 
-[Hex Men](https://github.com/jongos/Hex-Men) brings the collection together. Choose the project your question needs; there is no required sequence.
+[Explore Hex Men](https://github.com/jongos/Hex-Men) for tools that complement your task.
 
 ## Further Reading
 

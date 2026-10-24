@@ -546,3 +546,13 @@ Version 0.12.0 credits SVG.js 3.2.8, React Img Mapper 2.0.2, Vue Img Mapper 0.1.
 - **Added:** Longshot repository and live website links, current skill identifier, and a bounded create/check/challenge/retest workflow.
 - **Why:** Make the three projects discoverable without implying automatic integration or human-validated usability.
 - **Validation:** Focused rendered checks at 1280px and 390px confirmed reciprocal repository and website links; screenshots inspected. Staged whitespace checked. Existing gallery-release validation fails on the unchanged baseline version mismatch; Jon explicitly approved a documentation-only publication exception on 2026-10-23. No runtime or gallery changes.
+
+## 2026-10-24 — Mojo Marketing Copy Review
+
+**Changed:** Tightened product introductions and removed repeated qualifications and explanations. Preserved setup requirements, commands, material claims and each project’s voice.
+
+**Added:** Mojo links in the companion lists.
+
+**Why:** Help readers understand the product and choose their next action with less reading.
+
+**Validation:** Local links and command preservation checked. Landing pages checked in Chrome at 1440, 390 and 320 pixels: no horizontal overflow, broken in-page anchors or script errors. Rendered desktop/mobile copy reviewed. Canonical skill instructions and runtime behavior are unchanged.
