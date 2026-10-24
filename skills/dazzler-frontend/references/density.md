@@ -1,5 +1,7 @@
 # Choose Density From the Task
 
+Use [visual decisions](visual-decisions.md) to identify the primary task, inspect its actual placement and reuse the host review entry point. The optional `render-focus.mjs` helper measures an existing Playwright page; it does not select density or certify usability.
+
 Automatically infer activities from the brief, supplied content and existing interface; users need not answer a density questionnaire. Explicit preferences, brand constraints and numeric token choices remain authoritative. Neither compactness nor whitespace is inherently better. Do not infer density solely from profession, industry, a small screen or a word such as professional.
 
 ## Provisional Selection

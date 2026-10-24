@@ -87,13 +87,22 @@ Dazzler chooses the relevant typography, color, layout, chart and print treatmen
             return card
         item = by_id[image[1]]
         title = html.escape(item["title"])
-        card = re.sub(r'<h3>.*?</h3>', lambda _: '<h3>' + title + '</h3>', card, flags=re.S)
-        card = re.sub(r'alt="[^"]*"', lambda _: 'alt="' + title + ' — ' + item["format"].upper() + ' snapshot"', card, count=1)
+        card = re.sub(
+            r"<h3>.*?</h3>", lambda _: "<h3>" + title + "</h3>", card, flags=re.S
+        )
+        card = re.sub(
+            r'alt="[^"]*"',
+            lambda _: 'alt="' + title + " — " + item["format"].upper() + ' snapshot"',
+            card,
+            count=1,
+        )
         return card
 
-    matching_cards = re.findall(r'<article\b[^>]*>.*?</article>', text, re.S)
-    if sum('templates/previews/' in c for c in matching_cards) != 30:
-        raise ValueError("Expected 30 existing guide cards; preserve the guide structure")
-    text = re.sub(r'<article\b[^>]*>.*?</article>', update_card, text, flags=re.S)
+    matching_cards = re.findall(r"<article\b[^>]*>.*?</article>", text, re.S)
+    if sum("templates/previews/" in c for c in matching_cards) != 30:
+        raise ValueError(
+            "Expected 30 existing guide cards; preserve the guide structure"
+        )
+    text = re.sub(r"<article\b[^>]*>.*?</article>", update_card, text, flags=re.S)
     guide.write_text(text, encoding="utf-8")
     print("Synced 30 gallery artifacts and current reference/guide captions.")

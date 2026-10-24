@@ -17,7 +17,7 @@ JSON CLI inputs are bounded to 8 MB, 64 levels and 150,000 visited values in the
 | Fonts, templates, assets, HTML documents | Python standard library | Use an available host Python runtime |
 | Colors, charts, interaction exports | Node (tested with the maintenance host's version) | Use an available host Node runtime |
 | Browser inspection | Host browser or existing Playwright/Chromium | Report inspection as not run |
-| Native editable Office charts | Existing R and approved chart packages | Export clearly labelled SVG/HTML; do not claim native editing |
+| Native editable Office charts | Existing python-pptx for slide charts; R/chart packages for supported Word charts | Keep source data and regeneration; label static graphics honestly |
 | Native DOCX/PPTX composition | Existing document libraries | Use HTML edition or bundled templates where appropriate |
 
 These optional native integrations are not contained in the core JavaScript build kit. No automatic installation, telemetry, background updater or network service is part of routine use. A user's project may still intentionally depend on its own framework, assets and backend.

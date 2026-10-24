@@ -35,6 +35,8 @@ There is no quota of techniques. Start with the content hierarchy; use complemen
 
 ## Implement in the Actual Format
 
+Use [native editing](native-editing.md) to verify actual font use and keep chart values and geometry synchronized. Choose native data-linked slide charts when later data edits matter; retain source-driven regeneration when Word chart support is unavailable.
+
 In Word use native paragraph styles, run-level bold/color/italics, paragraph or cell shading, controlled spacing, keep-with-next and deliberate page breaks. Keep essential text in reading order. Use native sections and columns for reading structure. Anchored artwork and layout tables require explicit checks of overlap, reading order and reflow; keep essential text in the document flow. Do not reject richer composition simply because the exporter takes more care. Prefer section/callout shading over relying on a page background that may not print. For web output use semantic sections and responsive grids, genuine heading elements and print styles.
 
 Measure text/background contrast. Verify font availability and genuine styles in the target renderer. Check dark or saturated panels in print preview, chart labels at final size, table headers, section breaks and every page's overflow. Keep an ink-friendly print treatment when relevant. Use actual content; never fabricate quotations, statistics or assertions to justify a visual treatment.

@@ -25,6 +25,8 @@ Every output should have a strong, prompt-specific design voice. Choose the degr
 
 ## Decide, Build, Then Challenge
 
+Use [composition decisions](composition-decisions.md) for task-led structure, format-specific craft and final editing. Infer context; preserve constraints and existing token tools.
+
 For new or substantial work, explore contrasting directions internally: change the organizing idea, information sequence and spatial relationships, not only tokens. Include a direction beyond the first comfortable solution. Choose the strongest prompt fit without an aesthetic questionnaire; deliver one resolved artifact unless alternatives were requested.
 
 Write a concise voice statement in the existing design record: subject, emotional register, defining move and the deliberate restraint that makes it work. Identify the strongest conventional assumption to challenge within scope. Use relevant capabilities because they express the idea, not to meet a feature quota.

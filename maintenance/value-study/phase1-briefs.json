@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Eight development briefs; not a held-out benchmark after use",
+  "cases": [
+    {
+      "id": "website-night-school", "format": "website",
+      "outputs": ["index.html"],
+      "prompt": "Create a distinctive, welcoming website for fictional After Hours ceramics school. Adults new to ceramics must be able to compare classes and choose one. Facts: Handbuilding Basics, Tuesdays 18:30–20:30, four weeks, $160, materials included; Wheel Foundations, Saturdays 10:00–12:30, six weeks, $290, materials included; Open Studio, Sundays 14:00–17:00, $35 per visit, prior induction required. Location: 18 Lantern Lane, fictional Bellwick. Step-free ground floor; ask before booking about access needs. Allow filtering beginner-friendly classes, opening class details and choosing a class in a local-only enquiry form. Validate name and email; show an honest local demo confirmation, not a sent booking. No invented reviews or photographs. Deliver index.html and local assets, working at desktop and mobile widths. Express a recognizable cultural identity without prescribing a palette or layout.",
+      "checks": ["All three durations and prices retained", "Beginner filter excludes induction-only Open Studio", "Selected class survives enquiry validation error", "Confirmation does not claim a real booking"]
+    },
+    {
+      "id": "website-instrument-service", "format": "website",
+      "outputs": ["index.html"],
+      "prompt": "Build the fictional Northline instrument calibration service website for laboratory procurement staff. Convey precision and trust with restrained design. Existing brand accent #174A63 must remain available as the brand color; supporting colors are your choice. Services: temperature probes, $85 each, 5 business days; pressure gauges, $120 each, 7 business days; scales, quote required, 10 business days. These are fictional planning estimates, not certifications. Explain intake, inspection, calibration report and return shipping; shipping is additional. Provide an accessible service comparison and local quote-request form with service, quantity, contact email and a deadline note. Reject quantity below one and malformed email, preserve entries after errors, and show a local-only confirmation. Never invent accreditation, guarantees or clients. Deliver index.html with local assets, responsive on desktop/mobile.",
+      "checks": ["Brand accent preserved", "All prices and turnaround units retained", "No invented accreditation", "Quantity and email errors recover without losing data"]
+    },
+    {
+      "id": "app-repair-dispatch", "format": "application",
+      "outputs": ["index.html"],
+      "prompt": "Create a local working repair-dispatch application for fictional Hearth Works. Dispatchers need to identify overdue jobs, assign a technician and understand the selected job. Data: R101 pump inspection, North, overdue, unassigned, 90 min; R102 valve replacement, East, today, Ada, 120 min; R103 sensor test, North, tomorrow, Luis, 45 min; R104 leak survey, West, overdue, Luis, 60 min; R105 meter check, East, today, unassigned, 30 min; R106 filter change, West, tomorrow, Ada, 45 min. Support status and region filters, job selection and assignment to Ada/Luis/unassigned. Keep selected-job detail consistent with the list; handle zero matches and selection removed by filters clearly. Persist assignments locally and provide a reset to original data with confirmation. Label local-only persistence. Use task-appropriate information density without assuming compact or spacious is always right. Deliver index.html and local assets with keyboard operation and mobile adaptation.",
+      "checks": ["All six jobs and durations correct", "Assignment updates list and detail", "Filter exclusion leaves no misleading detail", "Reload and reset behave as described"]
+    },
+    {
+      "id": "app-watershed-observatory", "format": "application",
+      "outputs": ["index.html"],
+      "prompt": "Create a local watershed-monitoring application for fictional school researchers. Help a learner compare monthly nitrate observations at two sites without confusing missing data with zero. Data in mg/L, Jan through Jun: Willow [1.2,1.8,null,2.4,1.9,1.4]; Quarry [2.1,2.3,2.0,2.8,2.6,2.2]. These are synthetic observations; provide no health or regulatory conclusions. Include a chart, accessible data table and observation detail. Allow site selection and month-range selection; chart, table and summary must agree. Show missing Willow March explicitly, exclude missing values from averages and state the available observation count. Provide a reset. An exploratory, approachable visual character should support accurate comparison. Deliver index.html and local assets, responsive and keyboard accessible.",
+      "checks": ["Missing March remains missing", "Units and synthetic status visible", "Filters coordinate chart/table/summary", "Averages exclude missing data and expose counts"]
+    },
+    {
+      "id": "document-library-decision", "format": "document",
+      "outputs": ["artifact.docx", "artifact.pdf"],
+      "prompt": "Create an editable Word decision brief and matching PDF for a fictional library board choosing a reading-room upgrade. Use 3–5 pages, readable when printed; restrained and exceptionally well organized. Required facts: budget ceiling $48,000; Option A lighting $12,000, seating $16,000, acoustic panels $8,000, total $36,000, 2 weeks closure; Option B lighting $16,000, seating $18,000, acoustic panels $12,000, total $46,000, 3 weeks closure. Recommend A as the lower-cost, shorter-closure option; explain that B allocates more to lighting and acoustics but has no measured outcome advantage. Survey of 120 fictional visitors: 54 cite noise, 42 seating, 24 lighting as the main issue. Include an executive recommendation, aligned option comparison, clear survey graphic with source table, tradeoffs, implementation steps and unresolved questions. Do not invent quotes or benefits. Write useful concise narrative rather than padding. Deliver artifact.docx and artifact.pdf with real editable text/tables, page numbers and coherent interior pages. Preserve document content when testing a longer heading and two extra comparison rows in a separate stress copy.",
+      "checks": ["Totals and budget correct", "No measured benefit invented", "Survey counts total 120", "Native text/tables editable", "Interior pages and stress copy render"]
+    },
+    {
+      "id": "document-repair-festival", "format": "document",
+      "outputs": ["artifact.docx", "artifact.pdf"],
+      "prompt": "Design an expressive, practical editable Word guide and matching PDF for fictional Mend Together repair festival, 14 June 2027, 10:00–16:00, Foundry Hall. Make 3–5 pages useful both on screen and in print. Entry free; repairs subject to volunteer assessment, parts extra, no guaranteed repair. Schedule: 10:00 welcome; 10:30 clothing repair; 11:30 bicycle basics; 13:00 small-appliance assessment; 14:30 toy repair; 15:30 closing exchange. Do not give electrical repair instructions. Include an at-a-glance schedule, arrival/access information (step-free entrance on Mill Street, quiet room upstairs with lift), what to bring, clear repair limitations and a usable item-intake checklist. Families and older residents are the audience. Distinguish clothing, bicycles, appliances and toys with words as well as visual cues. Use original graphics if useful; no fabricated sponsors or photos. Deliver artifact.docx and artifact.pdf with editable text, coherent page roles and useful interior typography. Test a longer workshop title and extra schedule entry in a separate stress copy.",
+      "checks": ["All six times retained", "Access details accurate", "Repair limits visible", "Native text editable", "Extended schedule remains readable"]
+    },
+    {
+      "id": "slides-shade-pilot", "format": "slides",
+      "outputs": ["artifact.pptx", "artifact.pdf"],
+      "prompt": "Create a six-slide editable presentation and PDF for a fictional municipal shade pilot decision. Audience: budget committee, five-minute presentation. Facts: 24 candidate stops, 8 proposed pilot shelters, $18,000 per shelter, $144,000 capital total, $12,000 annual maintenance. Synthetic midday observations: Stop A 31C shaded / 36C exposed; B 32/37; C 30/34; D 33/38. These are four observations, not causal proof or city-wide estimates. Present the decision requested, need, evidence graphic, budget, delivery sequence and evaluation plan across six slides. Make the presentation visually compelling while keeping uncertainty clear. Do not invent emissions, medical or ridership benefits. Use editable text and native shapes/charts where possible, include underlying numbers, and retain logical reading order. Deliver artifact.pptx and artifact.pdf; check every slide and a separate copy with one expanded chart label.",
+      "checks": ["Six slides", "Capital total correct", "All four paired observations retained", "Evidence limits visible", "Native objects editable"]
+    },
+    {
+      "id": "slides-audio-exhibition", "format": "slides",
+      "outputs": ["artifact.pptx", "artifact.pdf"],
+      "prompt": "Create a six-slide editable proposal and PDF for fictional Echo Rooms, a community audio-history exhibition. Audience: cultural venue team deciding whether to host. Give it a distinctive expressive identity and a persuasive content sequence. Facts: six listening stations; 18 volunteer-recorded stories; 12-minute average story length; 4-week proposed run; capacity 24 visitors at a time. Budget: equipment rental $4,800, installation $3,200, transcription $1,800, facilitation $2,200, total $12,000. Include the exhibition idea, visitor journey, installation diagram, accessibility approach (transcripts, seating and adjustable volume), budget and decision/next steps. All material is fictional; do not invent testimonials, partner commitments or audience projections. There are no supplied photos: use original diagrams or graphics rather than unrelated stock. Deliver artifact.pptx and artifact.pdf with editable text/objects and readable details. Inspect all six slides and a separate version with an expanded story title.",
+      "checks": ["Six slides", "Budget reconciles to $12,000", "Capacity and duration preserved", "All three access provisions included", "No invented commitments"]
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import { resolveRefinement } from "./refinement.mjs";
 import { ruleIdFor } from "./review-rules.mjs";
 import { reviewFindings } from "./review.mjs";
 import { planDensity } from "./density.mjs";
+import { planComposition } from "./composition-plan.mjs";
 
 export const CASE_REQUIREMENTS = Object.freeze({
   density: Object.freeze(["task", "space", "access"]),
@@ -18,7 +19,7 @@ export const CASE_REQUIREMENTS = Object.freeze({
 
 const checks = {
   density:
-    "Review primary task visibility and scrolling burden, structural waste versus local crowding, and reading/control access at representative sizes. Reconsider provisional region choices using actual rendered evidence.",
+    "Name the primary task and justify initial-view versus later placement. Measure its actual position at representative widths and heights with the host runner or render-focus.mjs; inspect crowding, overlays and control access. Revise provisional density from rendered evidence, not a compactness quota.",
   coordinatedViews:
     "Exercise shared stable-ID selection from both views, filtering/removal, clear selection, keyboard access and narrow-screen view switching without losing context.",
   operationalState:
@@ -28,7 +29,7 @@ const checks = {
   edgeCases:
     "Before implementation select relevant failure cases; before delivery exercise them in the actual artifact, repair and recheck. Cover long/missing content, narrow layouts and zoom, font fallback, interaction recovery, and print breaks where applicable. Record cases, outcomes and exclusions; unavailable checks remain not-run.",
   distinction:
-    "Review the strongest coherent prompt-specific voice: defining move, supporting decisions and restraint. Generic or incoherent output needs revision. For small edits preserve the established voice within scope.",
+    "For new substantial designs compare two focused rendered structures using the same content and constraints, then record the selected composition and visible reasons. Review defining move, supporting decisions and restraint. Preserve approved compositions and small-edit scope; generic or incoherent output needs revision.",
   content: "Compare required facts, copy, controls and links with the brief",
   render:
     "Review the saved revision in representative rendered views, inspect affected neighbors, repair findings and capture fresh recheck evidence; see rendered-review.md",
@@ -43,7 +44,7 @@ const checks = {
   data: "Reconcile chart/table values, units, missing values and text alternatives",
   print: "Inspect every rendered page for clipping, breaks and readable labels",
   editability:
-    "Test longer copy and extra rows in an editable copy; inspect native styles and reading order",
+    "Test longer copy and extra rows in an editable copy; verify rendered fonts, native styles and reading order. For data-linked charts edit a source value and confirm labels and geometry update together; disclose static or manual graphics.",
 };
 function object(value, allowed, label) {
   if (
@@ -60,7 +61,11 @@ function text(value, label, limit = 2000) {
   return value;
 }
 export function planWorkflow(task = {}) {
-  object(task, ["kind", "framework", "scope", "intent", "features", "density"], "workflow task");
+  object(
+    task,
+    ["kind", "framework", "scope", "intent", "features", "density", "composition"],
+    "workflow task",
+  );
   const {
     kind = "interface",
     framework = "none",
@@ -92,6 +97,16 @@ export function planWorkflow(task = {}) {
   )
     throw Error("Invalid workflow features");
   const refinement = resolveRefinement({ intent });
+  const compositionSupported = ["interface", "document", "slides"].includes(kind);
+  if (!compositionSupported && task.composition !== undefined)
+    throw Error("Composition planning supports interfaces, documents and slides");
+  const composition = compositionSupported
+    ? planComposition(task.composition === undefined ? {} : task.composition, {
+        kind,
+        scope,
+        readOnly: refinement.readOnly,
+      })
+    : undefined;
   const densityInput = task.density === undefined ? {} : task.density;
   planDensity(densityInput); // Validate before spreading; null is not omitted evidence.
   const density = planDensity({
@@ -124,6 +139,7 @@ export function planWorkflow(task = {}) {
   if (["interface", "document"].includes(kind)) references.add("gdc.md");
   if (scope === "substantial") {
     references.add("art-direction.md");
+    if (compositionSupported) references.add("composition-decisions.md");
     ids.add("distinction");
   }
   if (kind === "interface") {
@@ -165,8 +181,10 @@ export function planWorkflow(task = {}) {
       intent,
       features: [...features],
       ...(task.density !== undefined ? { density: structuredClone(task.density) } : {}),
+      ...(task.composition !== undefined ? { composition: structuredClone(task.composition) } : {}),
     },
     density,
+    ...(composition ? { composition } : {}),
     readOnly: refinement.readOnly,
     references: [...references],
     procedure: [

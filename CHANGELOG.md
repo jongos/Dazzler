@@ -1,5 +1,67 @@
 # Developer change notes
 
+## 2026-10-24 — Source Push and Local Skill Update
+
+**Changed:** Integrated the rendered-review, native-editing and task-led composition work onto the current remote without changing its gallery. Applied formatting-only fixes to six existing gallery maintenance files for CI.
+
+**Added:** Six existing synthetic comparison captures accompany the published review so its evidence links resolve outside the author workspace.
+
+**Why:** Ship the tested implementation and make the local Codex installation match it while preserving unfinished work in the original checkout.
+
+**Validation:** 126 JavaScript tests and 108 Python tests (four optional skips) passed; local documentation links and release metadata pass. Template and thumbnail paths have no diff from the remote base. This source update is not a tagged release; the published marketplace pointer remains unchanged.
+
+## 2026-10-24 — Context-Driven Composition (Unreleased 0.32.0)
+
+**Changed:** Art direction now connects reader activity to composition, format-specific craft and a final editing pass. Brand, explicit constraints, established systems and existing density/type/color rules remain authoritative.
+
+**Added:** Optional composition context in workflow plans; two unranked organizing relationships for interpreted tasks across websites, apps, documents and slides. Missing context remains unresolved; small edits, accepted systems and audits suppress new alternatives. Slide guidance addresses narrative pacing and evidence beyond the opener.
+
+**Why:** Existing creative principles did not consistently translate task context into structural choices. The planner supports agent judgment without imposing palettes, grids, industry styles or an aesthetic score.
+
+**Validation:** All 126 JavaScript tests passed; 108 Python tests ran successfully with four optional skips. The slide workflow CLI, runtime integrity and release-version checks passed. Protected inventories confirm unchanged templates, thumbnails and core design rules. Comparative quality evaluation remains deferred at the user's direction.
+
+
+## 2026-10-24 — 0.32.0: Rendered Decisions and Native Editing
+
+**Changed:** Substantial new designs compare two focused rendered structures and assess primary-task placement; small fixes and approved compositions retain their scope. Host review checks are reused before optional adapters. Existing design rules, brand locks and density preferences remain authoritative.
+
+**Added:** A dependency-free Playwright-page probe, bounded native Office inspection, editable PowerPoint charts with embedded data, fresh paired briefs, repeated-run preparation and neutral human-review packs. Native Word guidance keeps source tables and regeneration explicit when linked charts are unavailable.
+
+**Why:** The eight-brief pilot showed useful contrast and dispatch improvements but little consistent creative advantage and 29% longer generation. Changes target those observed gaps without imposing compactness, color or novelty.
+
+**Validation:** 123 JavaScript tests passed; 108 Python tests ran with four optional skips. All three native Office tests passed in the Office-capable runtime. Real browser and independent chart renders passed. Nine skill/plugin archives and the unchanged 30-template archive passed isolated package validation. Human preference and the fresh repeated comparison remain pending; no superiority claim or gallery regeneration.
+
+## 2026-10-24 — Comparison Progress Visibility
+
+**Changed:** New runner invocations persist running/start/finish state and write manifests atomically. A resumed run preserves attempted trials.
+
+**Added:** A live observer reports last activity, output presence, completed trials and review-ready pairs without disturbing an active legacy worker. Partial log lines are tolerated; unfinished or merely present artifacts never count as completed comparisons.
+
+**Why:** The old manifest remained at not-run until a trial ended, obscuring active work.
+
+**Validation:** Focused regression covers queued, running, finalizing and timeout states. Twelve focused tests pass. The observer completed at 16/16 trials and 8/8 pairs; completed informed-agent review is tracked separately from generation and human review. Independent review, resource totals and recommendations are recorded in maintenance/value-study/PHASE1-RESULTS.md. Frozen inputs, prompts and original outputs match their inventories; canonical design rules and gallery assets remain unchanged. Human preference testing remains pending.
+
+## 2026-10-24 — Authorized Comparison Execution
+
+**Changed:** The comparison runner supports the documented automatic-approval route with workspace-write sandboxing instead of rejecting approval-needed commands under `never`. Both arms use the same mode; attempted trials are preserved on resume.
+
+**Added:** A preflight-gated runner verifying tool evidence, an actual write/read result and frozen inputs, plus regression checks for failed or unsupported preflight claims.
+
+**Why:** The child host could authenticate but its commands were rejected. The approved preflight demonstrated that reviewed execution works without changing global policy or bypassing sandboxing.
+
+**Validation:** Successful traced write/read and actual file verified. The new sixteen-trial run started with successful child command execution. Generation and comparative review are not yet complete. Design rules and gallery assets are unchanged.
+
+## 2026-10-24 — Eight-Brief Comparison Preparation
+
+**Changed:** Comparison preparation accepts a frozen skill source, alternate suite, shared fonts and native-format output requirements. Generation stops at an explicit preflight block.
+
+**Added:** Eight synthetic briefs across websites, applications, Word/PDF and slides/PDF; a Git-revision snapshot preparer; protocol and focused regression checks.
+
+**Why:** Test Dazzler against the same host on realistic, varied tasks without confusing gallery checks with comparative design evidence.
+
+**Validation:** Seven focused tests pass. Sixteen trials were prepared against published revision 89895d0. The child-host file-write preflight was rejected by execution policy; no design trials ran and no quality conclusion is claimed. Skill and gallery inventories remain unchanged. No templates or thumbnails were regenerated.
+
+
 ## 2026-10-24 — 0.32.0: Refreshed Gallery and Version Alignment (Unreleased)
 
 - **Changed:** Reauthored all 30 gallery examples around their fictional reader tasks, refreshed editable Word/PDF and HTML/UI artifacts, and aligned the package, template catalog and gallery manifest at 0.32.0. The client-review demo now keeps separate review state for Materials and Schedule. Updated the public gallery captions from the actual catalog while preserving the concise README and current field-guide layout.

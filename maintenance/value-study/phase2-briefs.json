@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Fresh development briefs; exposed when used, never a permanent holdout",
+  "cases": [
+    {
+      "id": "website-local-archive",
+      "format": "website",
+      "outputs": [
+        "index.html"
+      ],
+      "prompt": "Build an expressive public website for fictional Thread Archive. Visitors need to browse and compare six catalog records: P1 Street Parade, 1984, poster; P2 Night Bus, 1992, poster; A1 Market Voices, 1988, audio transcript; A2 Workshop Stories, 2001, audio transcript; M1 Canal Walk, 1976, map; M2 Garden Routes, 2004, map. All records are synthetic; no photos/audio supplied. Provide search, type and decade filters, a clear empty result, record detail with its ID/date/type, and a local saved-record list. Preserve filters after opening and closing a record. Use original abstract graphics or typography, never imply real archival provenance. Include an explanation of the collection without displacing the browsing task. Deliver responsive index.html and local assets; keyboard operation required.",
+      "checks": [
+        "Six IDs/dates/types correct",
+        "Filters retained through details",
+        "Saved list local-only",
+        "No invented provenance"
+      ]
+    },
+    {
+      "id": "website-materials-testing",
+      "format": "website",
+      "outputs": [
+        "index.html"
+      ],
+      "prompt": "Build a fictional Fieldline materials-testing service site for purchasing teams. Preserve brand accent #254B63. Services: tensile sample $95, 4 business days; hardness sample $70, 3 business days; custom analysis quote required, 8 business days. Shipping extra. No accreditation supplied. Compare service, price and timing; quote form accepts quantity, email and delivery note, rejects zero/invalid email while preserving inputs. Label confirmations local-only and prices planning estimates. Prioritize the purchasing task.",
+      "checks": [
+        "Price/time units correct",
+        "Brand retained",
+        "Errors preserve data"
+      ]
+    },
+    {
+      "id": "app-equipment-loans",
+      "format": "application",
+      "outputs": [
+        "index.html"
+      ],
+      "prompt": "Build a local equipment-loan desk for a fictional makerspace. Items: E1 drill available Shelf A; E2 saw overdue Alex Shelf B; E3 meter due-today Robin Shelf C; E4 sander available Shelf B; E5 clamps overdue Robin Shelf A; E6 camera due-today Alex Shelf C. Filter state/location; select item and assign borrower Alex/Robin/unassigned without changing the supplied state. Keep table and details synchronized; clearly handle selection removed by filters and no matches. Persist borrower changes locally; confirmed reset restores supplied data. Explicitly label local persistence. Prioritize repeated desk work with a mobile adaptation.",
+      "checks": [
+        "No stale details",
+        "Persist/reload/reset",
+        "Six items preserved"
+      ]
+    },
+    {
+      "id": "app-exhibition-budget",
+      "format": "application",
+      "outputs": [
+        "index.html"
+      ],
+      "prompt": "Build a local budget-planning app for a fictional exhibition team. Editable line items: display hire quantity 6 unit cost $400; labels quantity 32 unit cost $15; transport quantity 2 unit cost $350; facilitation quantity 4 unit cost $250. Budget ceiling $5,000. Show editable source rows, category allocation chart, total and remaining amount; use deterministic arithmetic in implementation. Validate nonnegative unit costs and whole quantities, show invalid text without treating it as zero, and keep the last valid calculated result clearly labeled while an edit is invalid. Allow a hypothetical scenario copy and reset with confirmation. Primary and scenario must remain distinct. No backend or financial forecasts. Use an exploratory identity with legible data and keyboard editing; deliver responsive index.html and local assets.",
+      "checks": [
+        "Initial total $4580 and remaining $420",
+        "Invalid entry never becomes zero silently",
+        "Chart and rows agree",
+        "Scenario and original remain distinct"
+      ]
+    },
+    {
+      "id": "document-workshop-decision",
+      "format": "document",
+      "outputs": [
+        "artifact.docx",
+        "artifact.pdf"
+      ],
+      "prompt": "Create a 3\u20135-page editable Word brief and PDF for a fictional community workshop board. Ceiling $60,000. Option A: ventilation $18,000, benches $14,000, storage $10,000, total $42,000, closure 2 weeks. Option B: $24,000/$18,000/$12,000, total $54,000, closure 4 weeks. Recommend A for lower cost/shorter closure; no measured outcome advantage supplied for B. Survey 100 people: 46 ventilation, 34 benches, 20 storage. Include recommendation, comparison, survey chart/source table, proposed implementation and unresolved scope questions. Restrained print-ready design, actual page numbers, editable text/tables. Test a longer heading and two additional rows in a separate stress copy; preserve original facts.",
+      "checks": [
+        "Totals/ceiling correct",
+        "No invented advantage",
+        "Stress copy retains content"
+      ]
+    },
+    {
+      "id": "document-river-day",
+      "format": "document",
+      "outputs": [
+        "artifact.docx",
+        "artifact.pdf"
+      ],
+      "prompt": "Create an expressive practical 3\u20135-page editable Word guide and PDF for fictional River Day, 22 May 2027, 09:00\u201315:00, Canal Hall. Free entry. Schedule: 09:00 welcome; 09:30 map-making; 10:30 water stories; 12:00 picnic break; 13:00 habitat drawing; 14:30 closing display. Step-free entrance on East Road; quiet room on ground floor. Include a useful schedule, arrival/access, what to bring and a printable activity checklist. Families and older residents; no claims of supervised water access, swimming safety or supplied food. Explicitly say activities take place in the hall; bring your own lunch. Test longer activity title/extra entry separately.",
+      "checks": [
+        "Six times correct",
+        "Access and lunch clear",
+        "No invented safety promises"
+      ]
+    },
+    {
+      "id": "slides-bike-parking",
+      "format": "slides",
+      "outputs": [
+        "artifact.pptx",
+        "artifact.pdf"
+      ],
+      "prompt": "Create six editable slides and PDF for a fictional civic bicycle-parking pilot. 20 candidate sites; 6 proposed racks at $4,000 each = $24,000 capital; $2,000 annual upkeep. Synthetic one-day counts of bikes/available spaces at sites A 12/8, B 9/6, C 5/8, D 14/10. Four observations only, not demand forecasts or causal evidence. Cover decision, need, paired evidence chart, budget, delivery sequence and evaluation. Editable chart data preferred; keep numbers available. Test an expanded site label and changed source value in a separate native copy; main facts stay unchanged.",
+      "checks": [
+        "Six slides",
+        "Costs correct",
+        "Limits clear",
+        "Chart update remains synchronized"
+      ]
+    },
+    {
+      "id": "slides-visitor-orientation",
+      "format": "slides",
+      "outputs": [
+        "artifact.pptx",
+        "artifact.pdf"
+      ],
+      "prompt": "Create six expressive editable slides and PDF for fictional Lantern Museum visitor orientation, shown in a five-minute welcome. Facts: three galleries on ground floor, reading room upstairs via lift, two scheduled talks at 11:00 and 14:00 in Gallery 2, closing at 17:00; admission free, photography without flash allowed, no food in galleries. Quiet seating in Gallery 3; large-print guides at entry. Organize arrival, route choices, a conceptual floor diagram, talk schedule, access/visitor rules and a clear final navigation cue. Invent no collection history, room dimensions, emergency instructions or visitor testimonials. Original diagrams welcome; no supplied photos. Use readable editable text/objects and a consistent wayfinding vocabulary. Test a longer gallery label in a separate copy.",
+      "checks": [
+        "Six slides",
+        "Times and locations retained",
+        "Access and visitor rules correct",
+        "Expanded label fits",
+        "No invented safety or history claims"
+      ]
+    }
+  ]
+}

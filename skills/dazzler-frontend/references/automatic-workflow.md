@@ -4,9 +4,9 @@ See [composition and refinement](composition.md) for layout contracts and bounde
 
 Use [persistent systems](persistent-systems.md) for records, fluid type and token interchange. Read the existing record first.
 
-The agent handles design choices and tools; the user supplies the task. Helpers are internal tools, not user setup requirements.
+Choose and operate helpers internally; the user supplies the task.
 
-For a new design or substantial restyle, begin with [art direction](art-direction.md): choose and implement the content-specific idea directly from the prompt. Examples demonstrate possibilities; reuse one only when explicitly selected. Helper output alone is not a finished design.
+For new designs or substantial restyles, use [art direction](art-direction.md) to implement the brief. Reuse examples only when selected; helper output is not a finished design.
 
 ## 1. Read the situation
 
@@ -34,6 +34,8 @@ For document sections, infer sustained reading, comparison or reference lookup f
 Map the brief to each catalog's actual vocabulary. Font tags and color moods are different vocabularies; never pass the same arbitrary mood to both and assume they agree. No-match results call for better mapping or a suitable custom seed, not a preference questionnaire or silent relaxation of hard constraints.
 
 ## Check Structure Before Styling
+
+Compare two structural previews with [visual decisions](visual-decisions.md) on substantial new work.
 
 For a new or substantially reshaped artifact, identify what the reader must understand or do first. Choose the order of content and the representation of its evidence before fonts or colors. A legal issue, purchasing offer and operational decision need not share a hero/three-metric/callout skeleton. Reuse a component because the behavior fits, not because it is the easiest available example.
 
@@ -83,4 +85,4 @@ Automatic aesthetic choices do not authorize purchases, accepting new terms, OS 
 
 ## Executable Design Knowledge
 
-For substantial browser-rendered documents and interfaces, use the [GDC workflow](gdc.md) for scoped measurements in JavaScript or Python. Keep native generation and final visual review. Report unsupported measurements as unknown; no aesthetic score overrides a required constraint.
+Reuse reliable host checks. Add [GDC](gdc.md) only for a needed measurement; avoid redundant adapters. Keep native generation and final visual review. Report unsupported measurements as unknown; no aesthetic score overrides a required constraint.

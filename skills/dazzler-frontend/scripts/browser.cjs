@@ -408,6 +408,14 @@ async function focusProbe(page) {
   });
 }
 async function audit(command, input, out, config = {}) {
+  const height = config.height ?? 900;
+  if (!Number.isInteger(height) || height < 240 || height > 2160)
+    throw Error("Viewport height must be 240–2160");
+  if (
+    config.primaryTargets !== undefined &&
+    (typeof config.revision !== "string" || !config.revision.trim())
+  )
+    throw Error("Primary-task review needs the saved revision");
   const { chromium } = runtime(),
     browser = await chromium.launch({ headless: true });
   const engine = await import(pathToFileURL(path.join(__dirname, "vendor/color-engine.mjs")).href);
@@ -425,9 +433,11 @@ async function audit(command, input, out, config = {}) {
         : ["baseline"];
     for (const width of widths(config))
       for (const scenario of cases) {
-        await page.setViewportSize({ width, height: 900 });
+        await page.setViewportSize({ width, height });
         await page.goto(destination);
-        await page.evaluate(() => document.fonts.ready);
+        await page.evaluate(() =>
+          Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 5000))]),
+        );
         const modified = await page.evaluate(
           ({ scenario, selectors }) => {
             const measureCanvas = document.createElement("canvas").getContext("2d");
@@ -469,6 +479,16 @@ async function audit(command, input, out, config = {}) {
           { scenario, selectors: config.selectors },
         );
         const report = await inspect(page, engine, config.composition ?? {});
+        if (config.primaryTargets !== undefined) {
+          const { captureFocus } = await import(
+            pathToFileURL(path.join(__dirname, "render-focus.mjs")).href
+          );
+          report.primaryTask = await captureFocus(page, {
+            targets: config.primaryTargets,
+            revision: config.revision,
+            screenshot: path.join(out, `${width}-${scenario}-focus.png`),
+          });
+        }
         report.scenario = scenario;
         report.modifiedElements = modified;
         report.scenarioStatus =

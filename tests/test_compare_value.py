@@ -12,6 +12,48 @@ spec.loader.exec_module(study)
 
 
 class ComparisonEvidenceTests(unittest.TestCase):
+    def test_phase1_has_two_native_cases_per_format(self):
+        data = json.loads(
+            (ROOT / "maintenance/value-study/phase1-briefs.json").read_text()
+        )
+        study.validate_suite(data)
+        from collections import Counter
+
+        self.assertEqual(
+            Counter(c["format"] for c in data["cases"]),
+            {"website": 2, "application": 2, "document": 2, "slides": 2},
+        )
+        for case in data["cases"]:
+            if case["format"] in ["document", "slides"]:
+                self.assertIn("artifact.pdf", case["outputs"])
+                self.assertIn(
+                    (
+                        "artifact.docx"
+                        if case["format"] == "document"
+                        else "artifact.pptx"
+                    ),
+                    case["outputs"],
+                )
+
+    def test_bad_trial_paths_rejected(self):
+        for name, outputs in [
+            ("../escape", ["index.html"]),
+            ("valid", ["../escape"]),
+            ("valid", []),
+        ]:
+            with self.assertRaises(ValueError):
+                study.validate_suite(
+                    {"cases": [{"id": name, "prompt": "test", "outputs": outputs}]}
+                )
+
+    def test_preflight_block_stops_before_host_launch(self):
+        with self.assertRaisesRegex(ValueError, "preflight"):
+            study.run(
+                Path("unused"),
+                {"generationGate": "blocked-pending-successful-host-preflight"},
+                "codex",
+            )
+
     def test_self_report_does_not_prove_skill_loaded(self):
         raw = "\n".join(
             json.dumps(e)

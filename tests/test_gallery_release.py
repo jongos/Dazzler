@@ -89,11 +89,16 @@ class GalleryReleaseTests(unittest.TestCase):
                 return gate.validate(manifest, root)
 
             self.assertEqual(run(data), 1)
-            stale_catalog = '{"version":"0.9.0","templates":[{"id":"sample","path":"sample.html"}]}'
+            stale_catalog = (
+                '{"version":"0.9.0","templates":[{"id":"sample","path":"sample.html"}]}'
+            )
             save(prefix + "assets/templates/catalog.json", stale_catalog)
             with self.assertRaisesRegex(AssertionError, "Template catalog"):
                 run(data)
-            save(prefix + "assets/templates/catalog.json", stale_catalog.replace('0.9.0', '1.0.0'))
+            save(
+                prefix + "assets/templates/catalog.json",
+                stale_catalog.replace("0.9.0", "1.0.0"),
+            )
             stale_manifest = copy.deepcopy(data)
             stale_manifest["version"] = "0.9.0"
             with self.assertRaisesRegex(AssertionError, "Gallery must"):

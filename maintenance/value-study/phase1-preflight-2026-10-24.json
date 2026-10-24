@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-24",
+  "status": "host-policy-blocked",
+  "designTrialsRun": 0,
+  "plannedTrials": 16,
+  "eligiblePairs": 0,
+  "sourceRevision": "89895d07234cde830b20cb02ce9f6ad5a1744730",
+  "hostVersion": "0.163.0-alpha.11.2",
+  "modelRequested": "gpt-6-astra",
+  "effortRequested": "low",
+  "parentRendererChecks": {
+    "docxPdf": "one-page-text-and-raster-pass",
+    "pptxPdf": "one-page-text-and-raster-pass"
+  },
+  "childWriteProbe": "blocked by policy; file absent",
+  "evidenceHashes": {
+    "elevated-events.jsonl": "b4cb26f4d0e926df44d0bf86b182443d1f449453d0250c0a040ff9fdd64d46f8",
+    "events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "limitations": [
+    "Parent renderer checks do not establish child host execution capability.",
+    "No paired artifacts or quality judgments."
+  ]
+}

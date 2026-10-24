@@ -1,5 +1,7 @@
 # Render, Review and Refine
 
+Use [visual decisions](visual-decisions.md) to identify the primary task, inspect its actual placement and reuse the host review entry point. The optional `render-focus.mjs` helper measures an existing Playwright page; it does not select density or certify usability.
+
 Use this loop for the affected scope, preserving Dazzler's design rules and the user's constraints. It does not require multiple agents, new tools or a separate report for small edits.
 
 1. **Establish context.** Read the existing design record, tokens and affected components. Inspect actual variants, font assets and the installed framework version before using its APIs. Consult relevant local documentation first; do not install another component library to imitate a reference.
