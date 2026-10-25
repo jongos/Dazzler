@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-10-25 — 0.32.3: Preserve density constraints across contexts (unreleased)
+
+**Changed:** Composition contexts inherit explicit workflow density preferences and locks, including nested regions, while keeping viewport-specific observations separate. Unknown composition context no longer allocates an optional candidate round.
+
+**Added:** Regression coverage for task contracts across all four media, supporting-task retention, density precedence, preserved scopes, refinement bounds and malformed inputs.
+
+**Why:** Validation of 0.32.2 reproduced context recommendations that contradicted shared locks and preferences, plus premature refinement budgets for uninterpreted tasks.
+
+**Validation:** All 133 Node tests passed; 108 Python tests ran successfully with one optional skip. Source integrity, release metadata, formatting, 198 local documentation links and all ten platform archives passed. All 489 protected files match their pre-work hashes. Stale installation-version references and the download label were aligned with this unpublished patch. Existing design rules, templates and thumbnails are preserved. Source shipment and managed local update authorized after validation; no baseline comparison or public release.
+
 ## 2026-10-24 - 0.32.2: Keep task coverage ahead of polish
 
 **Changed:** Composition planning carries explicit task goals and completion conditions alongside constraints, suggests structures per task, and routes required-task reconciliation through the workflow.

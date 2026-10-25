@@ -101,15 +101,20 @@ export function planWorkflow(task = {}) {
   const compositionSupported = ["interface", "document", "slides"].includes(kind);
   if (!compositionSupported && task.composition !== undefined)
     throw Error("Composition planning supports interfaces, documents and slides");
+  const densityInput = task.density === undefined ? {} : task.density;
+  planDensity(densityInput);
+  const sharedDensity = {
+    ...(intent === "compact" ? { preference: "compact" } : {}),
+    ...densityInput,
+  };
   const composition = compositionSupported
     ? planComposition(task.composition === undefined ? {} : task.composition, {
         kind,
         scope,
         readOnly: refinement.readOnly,
+        sharedDensity,
       })
     : undefined;
-  const densityInput = task.density === undefined ? {} : task.density;
-  planDensity(densityInput); // Validate before spreading; null is not omitted evidence.
   const density = planDensity({
     existingSystem: scope === "small",
     ...(intent === "compact" ? { preference: "compact" } : {}),

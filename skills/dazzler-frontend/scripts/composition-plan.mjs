@@ -42,7 +42,7 @@ const craft = {
 };
 export function planComposition(
   input = {},
-  { kind = "interface", scope = "substantial", readOnly = false } = {},
+  { kind = "interface", scope = "substantial", readOnly = false, sharedDensity = {} } = {},
 ) {
   if (
     !input ||
@@ -134,6 +134,7 @@ export function planComposition(
     contextIds.add(context.id);
     planDensity(context.density); // Validate each context without borrowing another viewport's evidence.
   }
+  planDensity(sharedDensity);
   const preserve = scope === "small" || existingSystem || readOnly;
   return {
     status: preserve ? "preserve" : medium && activity ? "provisional" : "needs-interpretation",
@@ -155,21 +156,29 @@ export function planComposition(
     },
     densityContexts: contexts.map((context) => ({
       id: context.id,
-      plan: planDensity({ ...context.density, ...(preserve ? { locked: true } : {}) }),
+      plan: planDensity({
+        ...context.density,
+        ...(sharedDensity.preference && sharedDensity.preference !== "auto"
+          ? { preference: sharedDensity.preference }
+          : {}),
+        ...(sharedDensity.existingSystem ? { existingSystem: true } : {}),
+        ...(preserve || sharedDensity.locked ? { locked: true } : {}),
+      }),
     })),
-    refinementBudget: preserve
-      ? null
-      : {
-          order: [
-            "required tasks and constraints",
-            "structure and hierarchy",
-            "type and color",
-            "optional polish",
-          ],
-          candidateRounds: 1,
-          optionalRevisionPasses: 1,
-          stop: "Stop optional exploration when time is needed for required behavior and review. Do not waive correctness or accessibility; disclose unresolved issues and unperformed checks. User scope and time limits take precedence.",
-        },
+    refinementBudget:
+      preserve || !medium || !activity
+        ? null
+        : {
+            order: [
+              "required tasks and constraints",
+              "structure and hierarchy",
+              "type and color",
+              "optional polish",
+            ],
+            candidateRounds: 1,
+            optionalRevisionPasses: 1,
+            stop: "Stop optional exploration when time is needed for required behavior and review. Do not waive correctness or accessibility; disclose unresolved issues and unperformed checks. User scope and time limits take precedence.",
+          },
     alternatives:
       preserve || !medium || !activity
         ? []

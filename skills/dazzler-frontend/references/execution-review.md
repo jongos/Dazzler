@@ -12,7 +12,7 @@ Choose the primary organizing relationship before fonts, palette or decoration. 
 
 ## Allocate Space by Context
 
-Do not copy a desktop density decision onto mobile or an opener onto every interior page. The planner accepts optional `contexts`, each with a unique `id` and a `density` input using the existing density schema. Record wide/narrow interaction states, document opener/interior or slide roles only where relevant. Supply explicit preferences and brand locks consistently to each context. Missing context remains undecided; no implicit compactness preference is added. Preserved or read-only compositions lock these suggestions to the current design.
+Do not copy a desktop density decision onto mobile or an opener onto every interior page. The planner accepts optional `contexts`, each with a unique `id` and a `density` input using the existing density schema. Record wide/narrow interaction states, document opener/interior or slide roles only where relevant. Workflow-level explicit density preferences and locks carry into every context; locks also protect nested regions. Context-specific observations stay local and are not copied from another viewport. Missing context remains undecided; no implicit compactness preference is added. Preserved or read-only compositions lock these suggestions to the current design.
 
 Allocate space to required content and the next useful action. Keep explanatory space when it helps understanding; reduce it when it displaces the task without benefit. Preserve reading order, usable controls and readable type. Density choices remain provisional until reviewed in the actual medium.
 
