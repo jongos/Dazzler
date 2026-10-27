@@ -1,5 +1,17 @@
 # Developer change notes
 
+
+## 2026-10-27 — 0.32.4: Context-Aware Component Foundations (unreleased)
+
+**Changed:** Substantial interface plans now route to a component-foundation workflow. Existing systems and native HTML take precedence; richer React work chooses among source components, direct primitives and internationalized interaction components without imposing their styling defaults.
+
+**Added:** Scoped selection guidance, a routing regression test and a bounded local comparison report covering three foundations, two visual directions and desktop/mobile tasks. External UI libraries remain optional project dependencies, outside the skill package.
+
+**Why:** Reusable controls should improve implementation consistency without deciding Dazzler's visual direction. Rendered testing exposed CSS reset and dialog-positioning integration risks that package reputation alone would miss.
+
+**Validation:** The local browser matrix exercised 144 checks across 12 cases with zero final axe findings or page exceptions. Full source and package validation results are recorded in the [component-foundation trial report](maintenance/COMPONENT-FOUNDATION-TRIAL.md). Existing design rules, templates, assets and thumbnails are protected by a pre/post hash inventory. Trial validation did not publish a release, deploy or replace an installed skill.
+
+
 ## 2026-10-25 — 0.32.3: Preserve density constraints across contexts (unreleased)
 
 **Changed:** Composition contexts inherit explicit workflow density preferences and locks, including nested regions, while keeping viewport-specific observations separate. Unknown composition context no longer allocates an optional candidate round.

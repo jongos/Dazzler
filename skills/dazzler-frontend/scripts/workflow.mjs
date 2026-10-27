@@ -151,7 +151,10 @@ export function planWorkflow(task = {}) {
   }
   if (kind === "interface") {
     references.add("frontend-engineering.md");
-    if (scope === "substantial") references.add("web-design-space.md");
+    if (scope === "substantial") {
+      references.add("web-design-space.md");
+      references.add("component-foundations.md");
+    }
     if (scope === "substantial" || ["audit", "adapt", "layout", "harden"].includes(intent)) {
       ids.add("responsive");
       ids.add("accessibility");

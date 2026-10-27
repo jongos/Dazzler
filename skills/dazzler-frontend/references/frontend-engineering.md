@@ -2,6 +2,8 @@
 
 Use this for substantial interface work, component extraction, adaptation or performance work. Small visual fixes need only the relevant parts. Keep the project's framework, styling conventions, tokens and supported browser targets.
 
+For a new component foundation, follow [component selection](component-foundations.md). Choose automatically from project evidence and required behavior; preserve the visual direction and existing stack.
+
 ## Reuse Before Adding
 
 Read the affected route, adjacent components, package manifest and existing design record. Find an existing primitive, pattern or composition before creating another button, dialog, table or form. Check its actual variants, focus handling and styling contract; a similar name is not compatibility evidence. Extend an appropriate existing variant rather than wrapping repeated exceptions around it.

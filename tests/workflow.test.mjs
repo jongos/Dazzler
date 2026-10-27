@@ -248,3 +248,19 @@ test("Edge-case claims cannot hide failures, unrun cases or all-excluded coverag
     );
   assert.throws(() => assessEvidence({ ...input, observations: [base] }));
 });
+
+test("Component selection is scoped to substantial interfaces", () => {
+  for (const framework of ["none", "react", "vue", "other"]) {
+    const plan = planWorkflow({ framework });
+    assert(plan.references.includes("component-foundations.md"));
+    assert(plan.checks.some((c) => c.id === "reuse" && c.status === "not-run"));
+  }
+  for (const task of [
+    { scope: "small" },
+    { kind: "document" },
+    { kind: "slides" },
+    { kind: "chart" },
+  ])
+    assert(!planWorkflow(task).references.includes("component-foundations.md"));
+  assert(planWorkflow({ intent: "audit" }).readOnly);
+});

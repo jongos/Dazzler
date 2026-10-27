@@ -8,4 +8,4 @@ Before updating, save any changes and keep the old folder outside the workflow d
 
 ## Notes and downloads
 
-[Release](https://github.com/jongos/Dazzler/releases/tag/v0.32.3). Apache-2.0; included fonts and libraries retain their notices. Installation path and display-name convention were supplied by the host user in issue 19; they are not a vendor compatibility certification.
+[Release](https://github.com/jongos/Dazzler/releases/tag/v0.32.4). Apache-2.0; included fonts and libraries retain their notices. Installation path and display-name convention were supplied by the host user in issue 19; they are not a vendor compatibility certification.
