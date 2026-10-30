@@ -2,7 +2,7 @@
 
 Use this for substantial interface work, component extraction, adaptation or performance work. Small visual fixes need only the relevant parts. Keep the project's framework, styling conventions, tokens and supported browser targets.
 
-For a new component foundation, follow [component selection](component-foundations.md). Choose automatically from project evidence and required behavior; preserve the visual direction and existing stack.
+For implementation work needing a new component foundation, follow [component selection](component-foundations.md). Audit and critique remain read-only and do not write a design record. Choose automatically from project evidence and required behavior; preserve the visual direction and existing stack.
 
 ## Reuse Before Adding
 

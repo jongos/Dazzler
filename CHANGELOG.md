@@ -1,6 +1,17 @@
 # Developer change notes
 
 
+## 2026-10-30 — 0.32.5: Local issue remediation (unreleased)
+
+**Changed:** Public install links use the verified published release independently of the source version. Read-only plans omit component selection; scanner and assessor apply the same 60ch body rule without rounding away failures.
+
+**Added:** Published-release metadata, online tag/asset validation and regression coverage. Dependency advisory exposure is assessed separately from a verified fix.
+
+**Why:** Prevent broken installs, review-driven writes and contradictory measured findings. Preserve design rules, templates and thumbnails.
+
+**Validation:** Local checks and remaining gates are recorded in maintenance/ISSUE-REMEDIATION-20261030.md. Source commit/push and local installation authorized separately; no release publication or issue closure.
+
+
 ## 2026-10-27 — 0.32.4: Context-Aware Component Foundations (unreleased)
 
 **Changed:** Substantial interface plans now route to a component-foundation workflow. Existing systems and native HTML take precedence; richer React work chooses among source components, direct primitives and internationalized interaction components without imposing their styling defaults.

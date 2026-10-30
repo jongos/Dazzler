@@ -216,7 +216,11 @@ test("Every format retains a distinction gate and generic claims cannot pass", (
   assert(failed.failures.includes("distinction"));
   const missing = assessEvidence({ ...base, observations: [] });
   assert(missing.missing.includes("distinction"));
-  assert(planWorkflow({ intent: "audit" }).readOnly);
+  for (const intent of ["audit", "critique"]) {
+    const plan = planWorkflow({ intent });
+    assert(plan.readOnly);
+    assert(!plan.references.includes("component-foundations.md"));
+  }
 });
 
 test("Every output and small edit includes an unrun edge-case gate", () => {
@@ -262,5 +266,9 @@ test("Component selection is scoped to substantial interfaces", () => {
     { kind: "chart" },
   ])
     assert(!planWorkflow(task).references.includes("component-foundations.md"));
-  assert(planWorkflow({ intent: "audit" }).readOnly);
+  for (const intent of ["audit", "critique"]) {
+    const plan = planWorkflow({ intent });
+    assert(plan.readOnly);
+    assert(!plan.references.includes("component-foundations.md"));
+  }
 });

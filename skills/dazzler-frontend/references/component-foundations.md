@@ -2,6 +2,8 @@
 
 Use this during substantial interface work or when a new behavior needs a component. The agent makes the choice from the project and task; the user need not select a library. This workflow does not install dependencies or authorize migration. Documents and slides do not need a UI foundation.
 
+For audit or critique, inspect and report only. Do not select or install a new foundation or write to the design record. For hardening, retain the existing foundation unless a demonstrated behavior gap requires a scoped change.
+
 ## Inspect Before Choosing
 
 Read the package manifest, lockfile, existing components, framework, styling system and design record. Identify required behaviors: selection, validation, editable data, modal focus, touch interaction, localization and supported browsers. Reuse a compatible existing implementation. A missing behavior is a scoped gap, not a reason to replace a working system.

@@ -45,6 +45,7 @@ class ReleaseMetadataTests(unittest.TestCase):
                 "CHANGELOG.md",
                 "README.md",
                 "maintenance/ONBOARDING.md",
+                "maintenance/published-release.json",
                 "docs/index.html",
                 "docs/guide.js",
                 "skills/dazzler-frontend/SKILL.md",
@@ -65,7 +66,12 @@ class ReleaseMetadataTests(unittest.TestCase):
                 module.validate()
             path = root / "maintenance/ONBOARDING.md"
             original = path.read_text(encoding="utf8")
-            for value in ("tree/v0.0.1", "--version 0.0.1", "releases/download/v0.0.1"):
+            for value in (
+                "tree/v0.0.1",
+                "--ref v0.0.1",
+                "--version 0.0.1",
+                "releases/download/v0.0.1",
+            ):
                 path.write_text(original + "\n" + value, encoding="utf8")
                 with self.assertRaises(AssertionError):
                     module.validate()

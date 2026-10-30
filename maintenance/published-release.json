@@ -1,0 +1,22 @@
+{
+  "version": "0.30.0",
+  "verifiedAt": "2026-10-30",
+  "assets": [
+    "dazzler-claude-compact.zip",
+    "dazzler-claude-plugin.zip",
+    "dazzler-claude.zip",
+    "dazzler-codex.zip",
+    "dazzler-copilot.zip",
+    "dazzler-cursor.zip",
+    "dazzler-gemini-extension.zip",
+    "dazzler-gemini.zip",
+    "dazzler-grokbot.zip",
+    "DAZZLER-PROMPT.md",
+    "dazzler-templates.zip",
+    "install_skill.py",
+    "manifest.json",
+    "offline-build-windows-x64.zip",
+    "PACKAGE-SIZES.json",
+    "SHA256SUMS.txt"
+  ]
+}

@@ -27,6 +27,35 @@ const { inspect } = require("../skills/dazzler-frontend/scripts/browser.cjs");
     }
     await page.setContent('<button style="width:24px;height:24px;padding:0">X</button>');
     assert(!(await inspect(page, engine)).designReview.some((f) => f.check === "target-size"));
+    const { assessMeasurement } = await import("../skills/dazzler-frontend/scripts/review.mjs");
+    for (const width of [59.9, 60, 60.1, 60.3, 60.5, 60.6]) {
+      await page.setContent(
+        `<p style="font:16px monospace;width:${width}ch">${"Reading text. ".repeat(30)}</p>`,
+      );
+      const value = await page.locator("p").evaluate((e) => {
+        const canvas = document.createElement("canvas").getContext("2d");
+        canvas.font = getComputedStyle(e).font;
+        return e.getBoundingClientRect().width / canvas.measureText("0").width;
+      });
+      const finding = (await inspect(page, engine)).designReview.find((f) => f.ruleId === "DZ-104");
+      assert.equal(
+        Boolean(finding),
+        assessMeasurement("DZ-104", {
+          applicability: "applies",
+          reason: "Synthetic body",
+          measureCh: value,
+        }).status === "fail",
+      );
+      if (finding)
+        assert.equal(
+          assessMeasurement("DZ-104", {
+            applicability: "applies",
+            reason: "Scanner result",
+            measureCh: finding.estimatedCh,
+          }).status,
+          "fail",
+        );
+    }
     console.log("Synthetic rendered review IDs, thresholds and not-run coverage passed");
   } finally {
     await browser.close();

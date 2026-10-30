@@ -153,7 +153,7 @@ export function planWorkflow(task = {}) {
     references.add("frontend-engineering.md");
     if (scope === "substantial") {
       references.add("web-design-space.md");
-      references.add("component-foundations.md");
+      if (!refinement.readOnly) references.add("component-foundations.md");
     }
     if (scope === "substantial" || ["audit", "adapt", "layout", "harden"].includes(intent)) {
       ids.add("responsive");

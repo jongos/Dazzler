@@ -42,7 +42,7 @@ export const THRESHOLDS = Object.freeze({
   targetMinimumCssPx: 24,
   targetEnhancedCssPx: 44,
   bodyMeasureCh: 60,
-  bodyMeasureDetectionToleranceCh: 0.5,
+  bodyMeasureDetectionToleranceCh: 0, // Compatibility field; the 60ch rule is strict.
 });
 
 export function ruleIdFor(check) {

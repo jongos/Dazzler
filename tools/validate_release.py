@@ -75,6 +75,9 @@ def validate():
         re.M,
     )
     assert first and first[1] == version
+    published = json.loads((ROOT / "maintenance/published-release.json").read_text())[
+        "version"
+    ]
     for file in [
         ROOT / "README.md",
         ROOT / "maintenance/ONBOARDING.md",
@@ -84,12 +87,16 @@ def validate():
     ]:
         text = file.read_text(encoding="utf-8")
         for found in re.findall(
-            r"(?:releases/(?:download|tag)/v|tree/v|--version )(\d+\.\d+\.\d+)", text
+            r"(?:releases/(?:download|tag)/v|tree/v|--ref v|--version )(\d+\.\d+\.\d+)",
+            text,
         ):
-            assert found == version, (file, found)
+            assert found == published, (file, found)
         assert not re.search(r"dist/platforms-\d+\.\d+\.\d+", text), file
     skill = ROOT / "skills/dazzler-frontend"
     assert not (skill / "MAINTENANCE.md").exists()
+    published = json.loads((ROOT / "maintenance/published-release.json").read_text())[
+        "version"
+    ]
     for file in [skill / "SKILL.md", *list((skill / "references").rglob("*.md"))]:
         text = file.read_text(encoding="utf-8")
         assert not re.search(

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { lint } from "@google/design.md/linter";
+import { lint } from "../tools/lint_design_record.mjs";
 import { tokens } from "../skills/dazzler-frontend/scripts/studio.mjs";
 import {
   parseDesign,
@@ -116,4 +116,9 @@ test("shadcn proposals pair colors in both modes and respect existing syntax", (
     assert.match(result.css, /--ring:/);
   }
   assert.equal(shadcnTheme(system, { shadcn: { supported: false } }), null);
+});
+
+test("Maintenance lint rejects oversized UTF-8 input before execution", () => {
+  assert.throws(() => lint("é".repeat(131073)), /256 KiB/);
+  assert.throws(() => lint(null), /256 KiB/);
 });

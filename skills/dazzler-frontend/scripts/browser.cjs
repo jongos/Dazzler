@@ -155,12 +155,12 @@ async function collect(page) {
         const measureCh = ch
           ? (r.width - parseFloat(s.paddingLeft) - parseFloat(s.paddingRight)) / ch
           : 0;
-        if (measureCh > thresholds.bodyMeasureCh + thresholds.bodyMeasureDetectionToleranceCh)
+        if (measureCh > thresholds.bodyMeasureCh)
           designReview.push({
             check: "body-measure",
             selector,
             severity: "review",
-            estimatedCh: +measureCh.toFixed(1),
+            estimatedCh: measureCh,
             recommendedMaxCh: thresholds.bodyMeasureCh,
             exception: "User width, grid/list structure, or short labels may justify retaining it",
           });
