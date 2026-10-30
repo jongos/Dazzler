@@ -36,17 +36,15 @@ jobs:
           path: .upstream-style-science
       - run: python -O tools/vendor_gdc.py --source .upstream-style-science --check
       - run: python tools/validate_release.py
-      - name: Require fresh gallery evidence for release tags
-        if: startsWith(github.ref, 'refs/tags/')
-        run: python tools/validate_gallery_release.py maintenance/gallery-release.json
+      - name: Verify gallery release evidence or authorized preservation
+        run: python tools/check_release_gallery.py
       - run: python tools/check_links.py
       - name: Check advertised release tag and assets
         if: matrix.os == 'ubuntu-latest' && matrix.node == 20
         run: python tools/check_release_links.py --online
       - run: python tools/build_platforms.py --out dist/ci-platforms
       - run: python tools/validate_platforms.py dist/ci-platforms
-      - name: Verify published marketplace pin for release tags
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Verify release marketplace pin
         run: python tools/claude_marketplace.py dist/ci-platforms --check
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
