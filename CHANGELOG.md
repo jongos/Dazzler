@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-11-01 — 0.32.6: Executed Review and Visible Findings (unreleased)
+
+**Changed:** Web review uses the existing workflow planner and browser scanner through one source-revision-bound command. Audit reports expose numbered capture locations and repair guidance while preserving read-only intent and existing design rules.
+
+**Added:** A local feedback page, before/after source hashes, blocked/stale records, explicit remaining review checks and regression tests. Impeccable is credited for workflow inspiration; no upstream implementation is imported.
+
+**Why:** Make actual check execution and observed problems visible without presenting a clean scan as design approval.
+
+**Validation:** See maintenance/REVIEW-LOOP-0326.md for actual results and limitations. Templates and thumbnails are preserved under renewed owner authorization. Source-push CI verifies the published marketplace archive separately from tag-only candidate matching, so unreleased source does not advertise a nonexistent download. Release publication remains deferred.
+
 ## 2026-10-30 — 0.32.5: Release-Check Correction
 
 **Changed:** Gallery and marketplace release checks now run on ordinary pushes. The marketplace points to the published 0.32.5 archive. The immutable 0.32.5 tag is unchanged.
@@ -9,8 +19,6 @@
 **Why:** The original commit CI skipped tag-only gates. Preserved 0.32.0 gallery evidence failed the fresh-gallery gate at publication; this correction verifies preservation without pretending regeneration occurred.
 
 **Validation:** Seven targeted tests passed, including fresh-gallery and preservation rejection cases; both release gates pass locally. Remote CI reports the correction separately from the historical failed tag run. Templates and thumbnails are unchanged.
-
-
 
 ## 2026-10-30 — 0.32.5: Local issue remediation (unreleased)
 
@@ -22,7 +30,6 @@
 
 **Validation:** Local checks and remaining gates are recorded in maintenance/ISSUE-REMEDIATION-20261030.md. Source commit/push and local installation authorized separately; no release publication or issue closure.
 
-
 ## 2026-10-27 — 0.32.4: Context-Aware Component Foundations (unreleased)
 
 **Changed:** Substantial interface plans now route to a component-foundation workflow. Existing systems and native HTML take precedence; richer React work chooses among source components, direct primitives and internationalized interaction components without imposing their styling defaults.
@@ -32,7 +39,6 @@
 **Why:** Reusable controls should improve implementation consistency without deciding Dazzler's visual direction. Rendered testing exposed CSS reset and dialog-positioning integration risks that package reputation alone would miss.
 
 **Validation:** The local browser matrix exercised 144 checks across 12 cases with zero final axe findings or page exceptions. Full source and package validation results are recorded in the [component-foundation trial report](maintenance/COMPONENT-FOUNDATION-TRIAL.md). Existing design rules, templates, assets and thumbnails are protected by a pre/post hash inventory. Trial validation did not publish a release, deploy or replace an installed skill.
-
 
 ## 2026-10-25 — 0.32.3: Preserve density constraints across contexts (unreleased)
 
@@ -84,7 +90,6 @@
 
 **Validation:** All 126 JavaScript tests passed; 108 Python tests ran successfully with four optional skips. The slide workflow CLI, runtime integrity and release-version checks passed. Protected inventories confirm unchanged templates, thumbnails and core design rules. Comparative quality evaluation remains deferred at the user's direction.
 
-
 ## 2026-10-24 — 0.32.0: Rendered Decisions and Native Editing
 
 **Changed:** Substantial new designs compare two focused rendered structures and assess primary-task placement; small fixes and approved compositions retain their scope. Host review checks are reused before optional adapters. Existing design rules, brand locks and density preferences remain authoritative.
@@ -125,14 +130,12 @@
 
 **Validation:** Seven focused tests pass. Sixteen trials were prepared against published revision 89895d0. The child-host file-write preflight was rejected by execution policy; no design trials ran and no quality conclusion is claimed. Skill and gallery inventories remain unchanged. No templates or thumbnails were regenerated.
 
-
 ## 2026-10-24 — 0.32.0: Refreshed Gallery and Version Alignment (Unreleased)
 
 - **Changed:** Reauthored all 30 gallery examples around their fictional reader tasks, refreshed editable Word/PDF and HTML/UI artifacts, and aligned the package, template catalog and gallery manifest at 0.32.0. The client-review demo now keeps separate review state for Materials and Schedule. Updated the public gallery captions from the actual catalog while preserving the concise README and current field-guide layout.
 - **Added:** New thumbnails and mobile previews, previous-gallery comparison evidence, recorded Hex Men review, Style Science observations, ten informed Longshot task replays, and a regression check rejecting a stale catalog version. Added reproducible authoring, rendering-check and assembly helpers for this gallery revision.
 - **Why:** The 0.31.1 package still carried a 0.30.0 gallery manifest. Merely relabelling it would leave stale artifact and runtime evidence. The refreshed examples exercise current design guidance and retain important tasks, source data, local-only behavior and recovery paths.
 - **Validation:** Gallery evidence validator passed for 30 examples. All 60 browser views passed heading, overflow and axe checks; ten interaction/recovery journeys passed. Ten native documents rendered to one page each and were visually inspected. Template structure/data/export tests (9), architecture tests (3), and gallery drift regression passed. Public gallery checks passed for 30 cards, four filters, desktop/mobile layouts and all linked examples/images. Package and final source validation are recorded in the gallery review.
-
 
 ## 2026-10-24 - Focused Marketing Copy
 
@@ -404,7 +407,6 @@
 
 **Validation:** One official skills@1.7.0 project install with default telemetry passed the 701-file health check. Reproduced agent-specific retention; removal without an agent filter cleared the directory, lock entry and list result. The wildcard agent option was rejected. Public skill content, repository listing and one-install badge were observed. The audit remains Critical/Fail and is not claimed resolved. Documentation links and release guards pass; no runtime or release package changed.
 
-
 ## 2026-09-28 — 0.23.0: A redesigned field guide and portable distribution
 
 **Changed:** Rebuilt the field guide around an editorial introduction, local prompt builder, searchable 30-example gallery, host setup and concise verification guidance. Source installs are prominent; compact downloads retain integrity checks and rollback.
@@ -562,7 +564,6 @@
 - **Added:** Git attributes for documentation license files.
 - **Why:** Preserve upstream license bytes while keeping authored HTML clean; the initial publishing check identified upstream trailing spaces.
 - **Validation:** License content retained and staged whitespace checks passed. No rendered content or interaction changes.
-
 
 ## 2026-09-28 — Publish the Dazzler field manual
 

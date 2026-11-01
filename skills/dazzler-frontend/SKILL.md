@@ -64,7 +64,7 @@ Follow [host routing](references/host-routing.md) when needed. Use the project's
 
 ## Verify the result
 
-Use [rendered review](references/rendered-review.md) to inspect, repair and recheck the final revision. Use [traceable findings](references/review-rules.md) to separate measurements from judgments, prioritize user impact and report unavailable checks.
+For web UI, run the [execution loop](references/review-loop.md). Follow [rendered review](references/rendered-review.md) and [traceable findings](references/review-rules.md); repair and recheck the final revision, prioritize task impact and disclose unavailable checks.
 
 Apply [final artifact gates](references/delivery-gates.md) across authoring tools. Audit headings with `scripts/heading_audit.py`, or compare a heading inventory with dynamic/unsupported renders. Repair failures; preserve user/brand/language exceptions and disclose coverage gaps.
 

@@ -1,10 +1,10 @@
 {
-  "version": "0.32.5",
+  "version": "0.32.6",
   "baselineCommit": "bf88bca3f41a63ccc2433a665d925c07f9f6cdeb",
-  "ownerInstruction": "Fix tag-only CI failures and stale marketplace pin; preserve templates and thumbnails; do not move published 0.32.5 tag.",
+  "ownerInstruction": "Commit and push the 0.32.6 changes and update my local Dazzler skill. Preserve templates and thumbnails, and don't publish a release yet.",
   "galleryVersion": "0.32.0",
-  "runtimeSha256": "820116193b4844a117177a8bd443a96ee7c59516565a77b56b14c5a241bb8dcf",
-  "skillSha256": "fe624087217af3cdf08b22f5b8dacaca442496db5f8ab92a201c4aa0851e1301",
+  "runtimeSha256": "f89116f3b6336f409a07db75e7318e68c4497ba5d4b378d45e2b5571b074d050",
+  "skillSha256": "09d226ea56976f3205a431913d02f6aea974d6fedfffd166e2a3a59186f4eb85",
   "files": {
     "skills/dazzler-frontend/assets/art-direction/atlas-chart.json": "d25e99c318505b33deb58e58be834fec1227b48eca6107ca74221b3d6d9fab17",
     "skills/dazzler-frontend/assets/art-direction/atlas-tokens.css": "77eb83431204b67584adab2382324111b939b7db84a28e22fbe2ff1283e45e6b",

@@ -151,6 +151,7 @@ export function planWorkflow(task = {}) {
   }
   if (kind === "interface") {
     references.add("frontend-engineering.md");
+    references.add("review-loop.md");
     if (scope === "substantial") {
       references.add("web-design-space.md");
       if (!refinement.readOnly) references.add("component-foundations.md");
