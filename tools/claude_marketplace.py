@@ -70,13 +70,28 @@ def check_published():
     print("Published Claude marketplace archive verified")
 
 
+def check_ci(packages):
+    manifest = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text())
+    version = json.loads((ROOT / "package.json").read_text())["version"]
+    expected = f"https://github.com/jongos/Dazzler/releases/download/v{version}/dazzler-claude-plugin.zip"
+    if manifest["plugins"][0]["source"]["url"] == expected:
+        generate(packages, check=True)
+    else:
+        check_published()
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("packages", type=Path, nargs="?")
     parser.add_argument("--published", action="store_true")
+    parser.add_argument("--ci", action="store_true")
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    if args.published:
+    if args.ci:
+        if not args.packages or args.published or args.check:
+            parser.error("--ci requires packages and no other mode")
+        check_ci(args.packages)
+    elif args.published:
         if args.packages or args.check:
             parser.error("--published cannot be combined with packages or --check")
         check_published()

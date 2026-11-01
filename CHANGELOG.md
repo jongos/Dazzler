@@ -1,6 +1,6 @@
 # Developer change notes
 
-## 2026-11-01 — 0.32.6: Executed Review and Visible Findings (unreleased)
+## 2026-11-01 — 0.32.6: Executed Review and Visible Findings
 
 **Changed:** Web review uses the existing workflow planner and browser scanner through one source-revision-bound command. Audit reports expose numbered capture locations and repair guidance while preserving read-only intent and existing design rules.
 
@@ -8,7 +8,7 @@
 
 **Why:** Make actual check execution and observed problems visible without presenting a clean scan as design approval.
 
-**Validation:** See maintenance/REVIEW-LOOP-0326.md for actual results and limitations. Templates and thumbnails are preserved under renewed owner authorization. Source-push CI verifies the published marketplace archive separately from tag-only candidate matching, so unreleased source does not advertise a nonexistent download. Release publication remains deferred.
+**Validation:** See maintenance/REVIEW-LOOP-0326.md for actual results and limitations. Templates and thumbnails are preserved under renewed owner authorization. Source-push CI verifies the published marketplace archive separately from tag-only candidate matching, so unreleased source does not advertise a nonexistent download. Release preparation pins the exact 0.32.6 archive. CI verifies a matching candidate locally before publication and verifies older advertised archives online; the published archive is checked again after release.
 
 ## 2026-10-30 — 0.32.5: Release-Check Correction
 

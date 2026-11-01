@@ -41,3 +41,36 @@ class PublishedMarketplaceTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "versioned"):
                     marketplace.check_published()
                 fetch.assert_not_called()
+
+    def test_ci_routes_candidate_and_published_versions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / ".claude-plugin").mkdir()
+            (root / "package.json").write_text(json.dumps({"version": "0.32.6"}))
+            path = root / ".claude-plugin/marketplace.json"
+            for version, candidate in [("0.32.6", True), ("0.32.5", False)]:
+                path.write_text(
+                    json.dumps(
+                        {
+                            "plugins": [
+                                {
+                                    "source": {
+                                        "url": f"https://github.com/jongos/Dazzler/releases/download/v{version}/dazzler-claude-plugin.zip"
+                                    }
+                                }
+                            ]
+                        }
+                    )
+                )
+                with patch.object(marketplace, "ROOT", root), patch.object(
+                    marketplace, "generate"
+                ) as generate, patch.object(
+                    marketplace, "check_published"
+                ) as published:
+                    marketplace.check_ci(Path("packages"))
+                    if candidate:
+                        generate.assert_called_once_with(Path("packages"), check=True)
+                        published.assert_not_called()
+                    else:
+                        published.assert_called_once_with()
+                        generate.assert_not_called()

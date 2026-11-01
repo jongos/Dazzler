@@ -10,7 +10,7 @@ Validation passed: 138 JavaScript tests; 112 Python tests with four environment-
 
 ## Boundaries
 
-This increment connects existing checks and provides a read-only captured-artifact review UI. It does not install editor hooks, implement a live source editor, or establish comparative visual quality against Impeccable. Native Office rendering keeps its existing host workflow. For the authorized source push, the preservation record was renewed after all 554 hashes matched. CI verifies the published marketplace download while retaining strict source/archive matching on tags. The marketplace stays on published 0.32.5; no release or tag is created.
+This increment connects existing checks and provides a read-only captured-artifact review UI. It does not install editor hooks, implement a live source editor, or establish comparative visual quality against Impeccable. Native Office rendering keeps its existing host workflow. For the authorized source push, the preservation record was renewed after all 554 hashes matched. CI verifies the published marketplace download while retaining strict source/archive matching on tags. Release preparation pins the validated 0.32.6 candidate and retains strict tag/archive matching. Public download verification follows publication. Templates and thumbnails remain under the same preservation authorization.
 
 ## Notes and Credits
 
