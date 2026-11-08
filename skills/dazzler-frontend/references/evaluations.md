@@ -20,3 +20,7 @@ Use `evals/design-principles.json` for six realistic briefs covering tone, measu
 ## Editorial and Design Conflicts
 
 Use `evals/editorial-cases.json` to review design-first choices, protected facts, visual-only scope, technical terms, critique-only requests, truthful controls, required summaries and author voice. Record actual host outputs before claiming success; package checks only establish that the guidance and notices ship together.
+
+## Color Appearance and Math
+
+Use `evals/color-appearance.json` for observer-boundary, source-space, mixing, equal-lightness and locked-neutral briefs. The mathematical regression tests verify examples and the existing engine's assumptions; they do not run these agent scenarios or prove display matching. Record actual artifacts and observed behavior before assigning outcomes.

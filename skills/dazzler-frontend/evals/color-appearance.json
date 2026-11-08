@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "behavioral-review-briefs",
+  "status": "Fixtures; a real-host run must supply its own artifact evidence",
+  "cases": [
+    {
+      "id": "observer-boundary",
+      "brief": "Apply what Apple CMF 2026 teaches to this interface palette. We only have hex tokens and a screenshot, and cannot change displays.",
+      "review": [
+        "Uses color-space identity, perceptual structure and final contrast checks",
+        "Explains that ordinary color conversion is distinct from changing physiological observers",
+        "Does not reconstruct spectra, Apple CMFs or universal correction matrices",
+        "Does not promise display matching or calibration"
+      ]
+    },
+    {
+      "id": "source-space-conversion",
+      "brief": "Adapt our color(display-p3 0.6 0.3 0.2) accent for an sRGB-only report. Preserve the source and explain the fallback.",
+      "review": [
+        "Converts the actual color rather than relabeling its three components",
+        "Records source space and destination mapping",
+        "Uses opaque sRGB hex with the current helper",
+        "Measures final quantized role pairs and does not silently replace an exact brand lock"
+      ]
+    },
+    {
+      "id": "mixing-objective",
+      "brief": "Explain the difference between a 50/50 light mixture of black and white and an even-looking UI gradient, then implement a suitable gradient in the existing stack.",
+      "review": [
+        "Distinguishes encoded RGB, linear-light and perceptual interpolation",
+        "Uses an explicit supported interpolation space",
+        "Does not assume the renderer composites alpha in linear light",
+        "Checks intermediate gradient regions and actual text adjacency"
+      ]
+    },
+    {
+      "id": "equal-lightness-contrast",
+      "brief": "Build status colors from OKLCH L=0.6, C=0.08, h=30 and h=150. They share lightness, so check whether white labels work equally well.",
+      "review": [
+        "Does not equate OKLCH L with WCAG relative luminance",
+        "Converts and measures each final exported pair separately",
+        "Repairs unlocked roles if needed without relaxing text thresholds",
+        "Adds labels or other non-color cues"
+      ]
+    },
+    {
+      "id": "locked-warm-neutral",
+      "brief": "Our screenshot looks warmer than another team's screen. Refine hierarchy while retaining our approved warm background #FFF2E0 and brand #345678; do not change display settings.",
+      "review": [
+        "Preserves both locked values and the deliberate warm character",
+        "Reviews actual typography, surfaces and color area rather than inferring hardware error",
+        "Uses measured semantic foregrounds and redundant state meaning",
+        "Reports unverified viewing conditions without applying a global inverse tint"
+      ]
+    }
+  ]
+}

@@ -35,7 +35,7 @@ node scripts/colors.mjs explore --config color-intent.json --out NEW_DIRECTORY
 
 Filter fonts by actual text coverage, weights, genuine italics, numeric features and loading budget. Read `references/fonts/<id>.md` only for a shortlisted family; use [the font index](references/font-catalog.md) to browse. [Typography](references/typography.md) covers export, fallbacks and licensing. Export needed files with their notices; do not relax script/style requirements or install OS fonts silently.
 
-Use [the color workflow](references/color-workflow.md) to explore continuous palettes from the prompt, preserve brand locks and measure contrast. Choose type, emphasis and accents that serve the content. Review collection-wide color area with the color workflow. Match the artifact: disciplined memo, printable planner, exuberant invitation.
+Use [the color workflow](references/color-workflow.md) and [appearance math](references/color-appearance.md) for palette exploration, color-space identity, gamut mapping and measured contrast. Preserve brand locks; review collection-wide color area, typography and actual context. Match the artifact without claiming display calibration.
 
 Use [composition and refinement](references/composition.md) for layouts and bolder/quieter/typeset/colorize/polish/harden/critique/distill requests. Critique is read-only; distill preserves required content. Review candidates never establish AI authorship.
 

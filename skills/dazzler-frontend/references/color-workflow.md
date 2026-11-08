@@ -20,6 +20,8 @@ Use the [relationship knowledge](color-relationships.json) for formulas, coordin
 
 ### Mathematical Exploration
 
+For matching, neutrals and ramps, apply [appearance math](color-appearance.md). Keep color identity, perceptual structure and contrast distinct; the helper remains opaque sRGB hex only.
+
 `colors.mjs explore` uses a seed-rotated Halton sequence to distribute candidates across continuous coordinates instead of drawing only random triples. For each requested lightness and hue, a 24-step bisection estimates the maximum in-gamut sRGB chroma along that OKLCH ray. The sampled `gamutFraction` caps chroma relative to that boundary; absolute chroma ranges remain caps too. This reduces clipping-driven convergence between different requests. Final mapping and quantization still use the existing Culori/Ankhorage engine.
 
 Each candidate goes through the established semantic-role generator, brand-lock precedence and unrounded contrast checks. Failed candidates are not exported as CSS. A farthest-first selection then maximizes the minimum RMS OKLab distance across brand/secondary/accent and both background/surface pairs. A 0.025 separation threshold prevents padding the results with near-duplicates. This is a geometric diversity heuristic, not an aesthetic score or a proven perceptual just-noticeable difference. The first candidate is not the best design.

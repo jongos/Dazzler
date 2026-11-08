@@ -1,10 +1,10 @@
 {
   "version": "0.32.6",
-  "baselineCommit": "bf88bca3f41a63ccc2433a665d925c07f9f6cdeb",
-  "ownerInstruction": "Commit and push the 0.32.6 changes and update my local Dazzler skill. Preserve templates and thumbnails, and don't publish a release yet.",
+  "baselineCommit": "121f098156b2d17aff7fb40c0d017c83309edf22",
+  "ownerInstruction": "2026-11-08: User answered \"Yes\" to \"May I commit and push the color guidance to Dazzler, keeping its existing gallery unchanged? This would update the repository without publishing a new release.\"",
   "galleryVersion": "0.32.0",
-  "runtimeSha256": "f89116f3b6336f409a07db75e7318e68c4497ba5d4b378d45e2b5571b074d050",
-  "skillSha256": "09d226ea56976f3205a431913d02f6aea974d6fedfffd166e2a3a59186f4eb85",
+  "runtimeSha256": "598d748561220163fe2b7f2291207d60ce4b4109352fabcfcd78c322a96562fc",
+  "skillSha256": "b2230587b36ed667db61f6bc201adfd19edc8e2f70597f4a4a9705d97e275d52",
   "files": {
     "skills/dazzler-frontend/assets/art-direction/atlas-chart.json": "d25e99c318505b33deb58e58be834fec1227b48eca6107ca74221b3d6d9fab17",
     "skills/dazzler-frontend/assets/art-direction/atlas-tokens.css": "77eb83431204b67584adab2382324111b939b7db84a28e22fbe2ff1283e45e6b",

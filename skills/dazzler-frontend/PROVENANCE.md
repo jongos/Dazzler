@@ -4,6 +4,8 @@ This file contains attribution and licensing notes accompanying Dazzler.
 
 ## Notes and credits
 
+Color appearance guidance, 2026-11-08: original Dazzler synthesis of Apple's September 2026 CMF calibration overview, Zhu et al.'s CIC 2025 paper (CC BY 4.0), CSS Color 4, Ottosson's OKLab work and WCAG contrast guidance. Full source links and scope are retained in `references/color-appearance.md`. No Apple CMF curves, calibration targets, source code, figures, spectral datasets or runtime dependency were imported. The existing opaque-sRGB helper and licensed engine are unchanged; new tests verify mathematical examples and guidance routing, not hardware calibration or real-host design quality.
+
 Task-led interaction guidance, 2026-10-23: adapted coordinated-data-views, operational-expert-tool-ui and domain-expert-configuration from Dembrandt at `c4ad177dea5b864f779f8c722f28cf04f760cb22`. Copyright 2026 Dembrandt, MIT; notice retained in `references/dembrandt-LICENSE.txt`. Dazzler retains its own design rules and task-led density selection. No runtime code, package, network dependency or fixed compactness prescriptions were imported. Planner and tests are original Dazzler code.
 
 Focused amplification, 2026-10-06 (0.25.1): the MCP Market Design Boldness & Impact listing linked an unavailable fork. Reviewed and adapted only `skill/reference/bolder.md` from Paul Bakaus's primary Impeccable project at `2a26f1c50b9c4f86d10c0fec8f74cf523a2236e7`, under Apache-2.0. Dazzler's existing rules take precedence; the adaptation adds document context, keeps automatic decisions and introduces no runtime dependency. `references/bolder-provenance.json` records source hashes; `references/bolder-LICENSE.txt` retains the license.

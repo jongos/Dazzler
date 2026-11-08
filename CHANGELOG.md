@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-11-08 — Color Appearance Guidance (unreleased)
+
+**Changed:** The skill entrypoint and automatic color workflow now route to source-backed appearance guidance. Keep color-space identity, perceptual structure and accessibility separate; preserve profiles, choose linear-light versus perceptual operations deliberately, budget chroma by output gamut and validate final exported/composited pairs. Existing opaque-sRGB helper behavior and dependency versions are unchanged.
+
+**Added:** An appearance-math reference, six mathematical/routing regression tests and five explicitly unrun behavioral review briefs. Source notes distinguish Apple's 2025 spectral study from its 2026 calibration overview and prohibit invented CMF curves, display corrections and universal matching claims.
+
+**Why:** Incorporate useful color theory and mathematics from Apple's research without pretending Dazzler can calibrate or optimize displays. This is a guidance-only source update, not a new color engine or published release.
+
+**Validation:** All 144 Node tests and 113 Python tests passed, including six new mathematical/routing tests. Prettier, Black, release metadata, 204-file local-link checks, 1,733-file integrity, font validation and all ten platform archives passed. Independent source/math review found no required corrections. All 554 protected assets match the prior inventory; gallery preservation was renewed after explicit owner approval for this source update. No real-host behavioral evaluation, display measurement, browser/Office visual comparison, local installation or release is claimed. Scope: authorized source commit/push with the existing gallery unchanged.
+
 ## 2026-11-01 — 0.32.6: Executed Review and Visible Findings
 
 **Changed:** Web review uses the existing workflow planner and browser scanner through one source-revision-bound command. Audit reports expose numbered capture locations and repair guidance while preserving read-only intent and existing design rules.

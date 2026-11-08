@@ -53,6 +53,8 @@ When an approved existing brand font is already available, preserve it; the bund
 
 Read [color-workflow.md](color-workflow.md). Use `scripts/colors.mjs` internally to shortlist palette inspiration when useful and generate a role system from the chosen palette or brand seed. Pick the actual palette/harmony yourself; do not expose CLI arguments or IDs as required user decisions. Preserve locked brand values and inspect diagnostic warnings as well as pass/fail status.
 
+Apply [appearance math](color-appearance.md): preserve color-space identity, measure final exported/composited pairs and review neutrals in context. Never infer display calibration or Apple CMF corrections from a palette or screenshot.
+
 For a successful generated system, integrate its semantic CSS into the existing stack and retain its report and notices in a suitable project location. Use action/on-action for controls, measured text roles for copy, and raw brand/accent values only in contexts where they are appropriate. The catalog's first match is a starting point, not the final aesthetic decision.
 
 If constraints fail, revise unlocked choices and re-run the checks yourself. Keep locked colors fixed and try a compliant role variant, allowed surface treatment, or non-color cue. If hard requirements genuinely cannot coexist, explain the specific conflict and ask for the minimum necessary decision. Never ask “which palette?” merely because a generated candidate failed.
