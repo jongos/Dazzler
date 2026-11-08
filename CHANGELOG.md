@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-11-08 — 0.32.7: Preserve the Published Archive Pin (unreleased)
+
+**Changed:** Advanced source package/manifests to 0.32.7 and bound the approved gallery-preservation record to that source version. The published 0.32.6 Claude marketplace URL and checksum remain unchanged.
+
+**Added:** None.
+
+**Why:** Source-push CI compared the changed guidance archive with the already-published 0.32.6 archive because both used the same version. A separate unreleased source version lets the existing gate verify the published bytes without weakening validation or changing a released artifact.
+
+**Validation:** All 144 Node tests, 113 Python tests and ten platform archive checks passed again. Release metadata and the 554-file preservation gate passed. The existing CI marketplace command successfully downloaded and verified the published 0.32.6 archive against its unchanged checksum. No release, published-archive replacement, local installation or gallery change was performed.
+
 ## 2026-11-08 — Color Appearance Guidance (unreleased)
 
 **Changed:** The skill entrypoint and automatic color workflow now route to source-backed appearance guidance. Keep color-space identity, perceptual structure and accessibility separate; preserve profiles, choose linear-light versus perceptual operations deliberately, budget chroma by output gamut and validate final exported/composited pairs. Existing opaque-sRGB helper behavior and dependency versions are unchanged.

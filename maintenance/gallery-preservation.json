@@ -1,6 +1,6 @@
 {
-  "version": "0.32.6",
-  "baselineCommit": "121f098156b2d17aff7fb40c0d017c83309edf22",
+  "version": "0.32.7",
+  "baselineCommit": "477bf3336ea1674c63ea1093d230db2fe3dfc16b",
   "ownerInstruction": "2026-11-08: User answered \"Yes\" to \"May I commit and push the color guidance to Dazzler, keeping its existing gallery unchanged? This would update the repository without publishing a new release.\"",
   "galleryVersion": "0.32.0",
   "runtimeSha256": "598d748561220163fe2b7f2291207d60ce4b4109352fabcfcd78c322a96562fc",
