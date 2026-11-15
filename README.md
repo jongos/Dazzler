@@ -6,6 +6,20 @@
 
 Dazzler gives your agent the tools to create and refine websites, interfaces, reports and slides. It shapes typography, color and layout around your audience, brand and content.
 
+## The Problem
+
+You know what a web page, report or slide deck should help people do. You may not know how it should look. A legal brief and a festival poster should not look alike.
+
+If you ask an AI agent to build it, the agent has to make those choices too.
+
+## What This Does About It
+
+Dazzler is a skill: a folder of instructions you add to an AI agent. You describe what people should understand or do. Dazzler then picks fonts, colors and layout that fit your audience. It keeps your facts and your brand.
+
+After building, it checks what people will actually receive: the layout, how the page works, and how it prints where that matters. It tells you about any check it could not do.
+
+**Example.** Ask: “Build a welcoming website for an independent bookshop. Help visitors find new arrivals and upcoming events.” You do not have to name fonts or colors. Dazzler chooses them.
+
 ## Put It to Work
 
 - **Give a product a visual voice.** Build a landing page that explains the offer and makes the next step clear.
@@ -30,17 +44,20 @@ Bring a brief, existing work or a goal. Dazzler chooses the visual details withi
 
 [Explore the field guide](https://jongos.github.io/Dazzler/) · [Browse fictional worked examples](https://jongos.github.io/Dazzler/templates/) · [Installation and rollback](maintenance/ONBOARDING.md)
 
-## In the Hex Men Family
+## Part of the Hex Men Collection
 
-| Project | How It Complements This Work |
+[Hex Men](https://github.com/jongos/Hex-Men) is a directory of independent projects by Jon Gosier. Each project stands on its own; these are its members.
+
+| Project | What It Does |
 |---|---|
-| [Longshot](https://github.com/jongos/Longshot) | Test interface tasks and report reproducible findings. |
-| [Style Science](https://github.com/jongos/style-science) | Connect design requirements to measurable checks and evidence. |
-| [Spiral](https://github.com/jongos/Spiral) | Find gaps in workflow handoffs, ownership and recovery. |
-| [Shatterstar](https://github.com/jongos/Shatterstar) | Simplify products while preserving important tasks. |
-| [Mojo](https://github.com/jongos/Mojo) | Make AI outputs clear and direct. |
-
-[Explore Hex Men](https://github.com/jongos/Hex-Men) for tools that complement your task.
+| [Hex Men](https://github.com/jongos/Hex-Men) | Directory of independent projects |
+| **Dazzler** (this repository) | Create and refine expressive visual interfaces |
+| [Longshot](https://github.com/jongos/Longshot) | Independently test rendered UI tasks and provide replayable evidence |
+| [Style Science](https://github.com/jongos/style-science) | Provide inspectable design reasoning, constraints and evidence |
+| [Spiral](https://github.com/jongos/Spiral) | Rehearse role-limited asynchronous workflows before building |
+| [Shatterstar](https://github.com/jongos/Shatterstar) | Propose reversible evidence-backed simplification while preserving important tasks |
+| [Mojo](https://github.com/jongos/Mojo) | Remove repetition, needless nuance and overly cautious language from AI outputs |
+| [Colossus](https://github.com/jongos/Colossus) | Inventory selected developer workspaces read-only and surface evidence-backed questions |
 
 ## Further Reading
 
