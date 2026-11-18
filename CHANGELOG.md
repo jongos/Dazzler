@@ -1,5 +1,15 @@
 # Developer change notes
 
+## 2026-11-18 — Design sources and code-only self-check (unreleased)
+
+**Changed:** The skill entrypoint now routes agents to authoritative design-fact sources before general web search, and to a code-only verification path when rendered review is unavailable. Local runtime notes explain that Dazzler vendors bundles and records maintainer drift checks separately from skill use.
+
+**Added:** `references/design-facts-sources.md`, `references/code-only-self-check.md`, `references/adaptation-sources.json`, `scripts/token-self-check.mjs`, `tools/check_adaptation_drift.mjs`, and regression tests. The drift tool validates pinned guidance hashes and bundle SHA-256 values locally; `--online` compares upstream files during maintenance only.
+
+**Why:** Give agents clearer source priority (project tokens and official docs before search) and measurable checks that do not depend on screenshots, aligned with common agent-skill practice without copying upstream text.
+
+**Validation:** `python tools/seal_runtime.py`, `npm test`, `node tools/check_adaptation_drift.mjs --local`, and `python skills/dazzler-frontend/scripts/health.py`. No version bump beyond existing unreleased 0.32.7 source; no release cut.
+
 ## 2026-11-08 — 0.32.7: Preserve the Published Archive Pin (unreleased)
 
 **Changed:** Advanced source package/manifests to 0.32.7 and bound the approved gallery-preservation record to that source version. The published 0.32.6 Claude marketplace URL and checksum remain unchanged.

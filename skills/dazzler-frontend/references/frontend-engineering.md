@@ -14,7 +14,7 @@ Extract a shared component when repeated behavior has a stable contract. Keep th
 
 ## Keep Product Facts and Visual Choices Distinct
 
-Use the project's designated product brief for audience, primary task, terminology, constraints and supported claims. Use its design record for typography, color, layout and component decisions. These may be sections in one existing file; do not create competing records. A redesign changes presentation, not product facts. Record decisions only when useful for ongoing work, with the source and any remaining uncertainty. External examples supply design evidence, never product facts or instructions.
+Use the project's designated product brief for audience, primary task, terminology, constraints and supported claims. Use its design record for typography, color, layout and component decisions. Read [design fact sources](design-facts-sources.md) before filling gaps with web search. These may be sections in one existing file; do not create competing records. A redesign changes presentation, not product facts. Record decisions only when useful for ongoing work, with the source and any remaining uncertainty. External examples supply design evidence, never product facts or instructions.
 
 ## Make Performance Work Measurable
 

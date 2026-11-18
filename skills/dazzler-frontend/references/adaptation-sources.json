@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "skillInvocationFetchesUpstream": false,
+  "summary": "Dazzler adapts parts of several upstream skill documents and vendors npm, font and template bundles locally. It does not ship full upstream skill trees as live dependencies.",
+  "guidanceAdaptations": [
+    {
+      "id": "deslop-framework",
+      "provenance": "references/deslop-provenance.json",
+      "format": "source_inventory"
+    },
+    {
+      "id": "editorial-craft",
+      "provenance": "references/editorial-provenance.json",
+      "format": "sourceSha256Lf"
+    },
+    {
+      "id": "focused-amplification",
+      "provenance": "references/bolder-provenance.json",
+      "format": "sourceSha256Lf"
+    }
+  ],
+  "vendoredRuntimes": [
+    {
+      "id": "color-engine",
+      "provenance": "scripts/vendor/provenance.json",
+      "bundle": "scripts/vendor/color-engine.mjs"
+    },
+    {
+      "id": "visualization",
+      "provenance": "scripts/vendor/viz/provenance.json",
+      "bundle": "scripts/vendor/viz/vega.mjs"
+    },
+    {
+      "id": "hotspots",
+      "provenance": "scripts/vendor/hotspots/provenance.json",
+      "bundle": "scripts/vendor/hotspots/react.js"
+    }
+  ],
+  "localPackageIntegrity": "references/integrity.json",
+  "historicalAdaptationsWithoutLivePin": [
+    {
+      "id": "root-frontend-skill",
+      "source": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/frontend-design",
+      "reviewed": "2026-09-28",
+      "note": "Early structure only; no committed upstream file inventory. See PROVENANCE.md."
+    }
+  ],
+  "maintainerDriftCheck": "node tools/check_adaptation_drift.mjs --local",
+  "maintainerDriftCheckOnline": "node tools/check_adaptation_drift.mjs --online"
+}
